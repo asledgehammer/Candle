@@ -49,17 +49,17 @@ function IsoBuilding:ScoreBuildingPersonSpecific(arg0, arg1) end
 function IsoBuilding:TriggerAlarm() end
 
 --- @public
---- @overload fun(arg0: IsoDoor, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding)
 --- @param arg0 IsoDoor
 --- @param arg1 boolean
 --- @return void
+--- @overload fun(arg0: IsoDoor, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding)
 function IsoBuilding:addDoor(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: IsoWindow, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding)
 --- @param arg0 IsoWindow
 --- @param arg1 boolean
 --- @return void
+--- @overload fun(arg0: IsoWindow, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding)
 function IsoBuilding:addWindow(arg0, arg1) end
 
 --- @public
@@ -98,8 +98,8 @@ function IsoBuilding:getRandomContainer(arg0) end
 function IsoBuilding:getRandomFirstFloorWindow() end
 
 --- @public
---- @overload fun(arg0: String)
 --- @return IsoRoom
+--- @overload fun(arg0: String)
 function IsoBuilding:getRandomRoom() end
 
 --- @public
@@ -142,6 +142,6 @@ function IsoBuilding:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell)
 --- @return IsoBuilding
+--- @overload fun(arg0: IsoCell)
 function IsoBuilding.new() end

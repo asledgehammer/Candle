@@ -333,15 +333,13 @@ function GameTime:isRainingToday() end
 function GameTime:isThunderDay() end
 
 --- @public
---- @overload fun(arg0: DataInputStream)
---- @overload fun(arg0: ByteBuffer)
 --- @return void
+--- @overload fun(arg0: DataInputStream)
 function GameTime:load() end
 
 --- @public
---- @overload fun(arg0: ByteBuffer)
---- @overload fun(arg0: DataOutputStream)
 --- @return void
+--- @overload fun(arg0: DataOutputStream)
 function GameTime:save() end
 
 --- @public

@@ -114,7 +114,7 @@ function BSFurnace:updateLight() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String)
 --- @param arg0 IsoCell
 --- @return BSFurnace
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String)
 function BSFurnace.new(arg0) end

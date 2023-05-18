@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class BaseVehicle: IsoMovingObject
+--- @implement Thumpable
+--- @implement IFMODParameterUpdater
 --- @field public CENTER_OF_MASS_MAGIC float
 --- @field public FADE_DISTANCE int
 --- @field public MASK1_DOOR_LEFT_FRONT int
@@ -58,9 +60,9 @@ function BaseVehicle.LoadAllVehicleTextures() end
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: int)
 --- @param arg0 String
 --- @return Texture
+--- @overload fun(arg0: String, arg1: int)
 function BaseVehicle.LoadVehicleTexture(arg0) end
 
 --- @public
@@ -169,12 +171,12 @@ function BaseVehicle:addKeyToSquare(arg0) end
 function BaseVehicle:addKeyToWorld() end
 
 --- @public
---- @overload fun(arg0: IsoPlayer, arg1: BaseVehicle, arg2: String, arg3: String, arg4: Boolean)
 --- @param arg0 IsoPlayer
 --- @param arg1 BaseVehicle
 --- @param arg2 String
 --- @param arg3 String
 --- @return void
+--- @overload fun(arg0: IsoPlayer, arg1: BaseVehicle, arg2: String, arg3: String, arg4: Boolean)
 function BaseVehicle:addPointConstraint(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -192,15 +194,15 @@ function BaseVehicle:addToWorld() end
 function BaseVehicle:areAllDoorsLocked() end
 
 --- @public
---- @overload fun(arg0: Area, arg1: Vector2)
 --- @param arg0 Area
 --- @return Vector2
+--- @overload fun(arg0: Area, arg1: Vector2)
 function BaseVehicle:areaPositionWorld(arg0) end
 
 --- @public
---- @overload fun(arg0: Area, arg1: Vector2)
 --- @param arg0 Area
 --- @return Vector2
+--- @overload fun(arg0: Area, arg1: Vector2)
 function BaseVehicle:areaPositionWorld4PlayerInteract(arg0) end
 
 --- @public
@@ -259,11 +261,11 @@ function BaseVehicle:calculateDamageWithCharacter(arg0) end
 function BaseVehicle:canAccessContainer(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: BaseVehicle, arg1: String, arg2: String, arg3: boolean)
 --- @param arg0 BaseVehicle
 --- @param arg1 String
 --- @param arg2 String
 --- @return boolean
+--- @overload fun(arg0: BaseVehicle, arg1: String, arg2: String, arg3: boolean)
 function BaseVehicle:canAttachTrailer(arg0, arg1, arg2) end
 
 --- @public
@@ -432,10 +434,10 @@ function BaseVehicle:engineDoStartingFailedNoPower() end
 function BaseVehicle:engineDoStartingSuccess() end
 
 --- @public
---- @overload fun(arg0: int, arg1: IsoGameCharacter, arg2: Vector3f)
 --- @param arg0 int
 --- @param arg1 IsoGameCharacter
 --- @return boolean
+--- @overload fun(arg0: int, arg1: IsoGameCharacter, arg2: Vector3f)
 function BaseVehicle:enter(arg0, arg1) end
 
 --- @public
@@ -482,9 +484,9 @@ function BaseVehicle:getAngleZ() end
 function BaseVehicle:getAnimationPlayer() end
 
 --- @public
---- @overload fun(arg0: String, arg1: Vector2)
 --- @param arg0 String
 --- @return Vector2
+--- @overload fun(arg0: String, arg1: Vector2)
 function BaseVehicle:getAreaCenter(arg0) end
 
 --- @public
@@ -699,10 +701,10 @@ function BaseVehicle:getLightbarSirenMode() end
 function BaseVehicle:getLinearVelocity(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f)
 --- @param arg0 Vector3f
 --- @param arg1 Vector3f
 --- @return Vector3f
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f)
 function BaseVehicle:getLocalPos(arg0, arg1) end
 
 --- @public
@@ -804,10 +806,10 @@ function BaseVehicle:getPassengerLocalPos(arg0, arg1) end
 function BaseVehicle:getPassengerPosition(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f)
 --- @param arg0 Position
 --- @param arg1 Vector3f
 --- @return Vector3f
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f)
 function BaseVehicle:getPassengerPositionWorldPos(arg0, arg1) end
 
 --- @public
@@ -991,9 +993,9 @@ function BaseVehicle:getUpVector(arg0) end
 function BaseVehicle:getUpVectorDot() end
 
 --- @public
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
 --- @param arg0 IsoGameCharacter
 --- @return VehiclePart
+--- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
 function BaseVehicle:getUseablePart(arg0) end
 
 --- @public
@@ -1023,12 +1025,12 @@ function BaseVehicle:getWheelForwardVector(arg0, arg1) end
 function BaseVehicle:getWindowLightsOn() end
 
 --- @public
---- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: VehicleScript)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f, arg4: VehicleScript)
 --- @param arg0 Vector3f
 --- @param arg1 Vector3f
 --- @return Vector3f
+--- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: VehicleScript)
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f)
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f, arg4: VehicleScript)
 function BaseVehicle:getWorldPos(arg0, arg1) end
 
 --- @public
@@ -1071,9 +1073,9 @@ function BaseVehicle:hasRoof(arg0) end
 function BaseVehicle:haveOneDoorUnlocked() end
 
 --- @public
---- @overload fun(arg0: IsoGameCharacter, arg1: HitVars)
 --- @param arg0 IsoZombie
 --- @return void
+--- @overload fun(arg0: IsoGameCharacter, arg1: HitVars)
 function BaseVehicle:hitCharacter(arg0) end
 
 --- @public
@@ -1118,6 +1120,10 @@ function BaseVehicle:isCollided(arg0) end
 
 --- @public
 --- @return boolean
+function BaseVehicle:isDestroyed() end
+
+--- @public
+--- @return boolean
 function BaseVehicle:isDoColor() end
 
 --- @public
@@ -1158,9 +1164,9 @@ function BaseVehicle:isEnterBlocked(arg0, arg1) end
 function BaseVehicle:isEnterBlocked2(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: IsoGameCharacter, arg1: int)
 --- @param arg0 int
 --- @return boolean
+--- @overload fun(arg0: IsoGameCharacter, arg1: int)
 function BaseVehicle:isExitBlocked(arg0) end
 
 --- @public
@@ -1215,8 +1221,8 @@ function BaseVehicle:isIntersectingSquareWithShadow(arg0, arg1, arg2) end
 function BaseVehicle:isInvalidChunkAhead() end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: boolean, arg2: boolean, arg3: boolean)
 --- @return boolean
+--- @overload fun(arg0: boolean, arg1: boolean, arg2: boolean, arg3: boolean)
 function BaseVehicle:isInvalidChunkAround() end
 
 --- @public
@@ -1377,10 +1383,10 @@ function BaseVehicle:playPartAnim(arg0, arg1) end
 function BaseVehicle:playPartSound(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: int, arg1: String, arg2: IsoGameCharacter)
 --- @param arg0 int
 --- @param arg1 String
 --- @return void
+--- @overload fun(arg0: int, arg1: String, arg2: IsoGameCharacter)
 function BaseVehicle:playPassengerAnim(arg0, arg1) end
 
 --- @public
@@ -1724,8 +1730,8 @@ function BaseVehicle:setRegulatorSpeed(arg0) end
 function BaseVehicle:setRust(arg0) end
 
 --- @public
---- @overload fun(arg0: String)
 --- @return void
+--- @overload fun(arg0: String)
 function BaseVehicle:setScript() end
 
 --- @public
@@ -1744,9 +1750,9 @@ function BaseVehicle:setSirenStartTime(arg0) end
 function BaseVehicle:setSkinIndex(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: boolean)
 --- @param arg0 String
 --- @return BaseVehicle
+--- @overload fun(arg0: String, arg1: boolean)
 function BaseVehicle:setSmashed(arg0) end
 
 --- @public
@@ -1814,8 +1820,7 @@ function BaseVehicle:shouldCollideWithCharacters() end
 function BaseVehicle:shouldCollideWithObjects() end
 
 --- @public
---- @overload fun(arg0: int)
---- @param arg0 IsoGameCharacter
+--- @param arg0 int
 --- @return boolean
 function BaseVehicle:showPassenger(arg0) end
 
@@ -1884,10 +1889,10 @@ function BaseVehicle:testCollisionWithCorpse(arg0, arg1) end
 function BaseVehicle:testCollisionWithObject(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: IsoMovingObject, arg1: float, arg2: float, arg3: boolean)
 --- @param arg0 IsoGameCharacter
 --- @param arg1 boolean
 --- @return int
+--- @overload fun(arg0: IsoMovingObject, arg1: float, arg2: float, arg3: boolean)
 function BaseVehicle:testCollisionWithProneCharacter(arg0, arg1) end
 
 --- @public
@@ -1972,8 +1977,8 @@ function BaseVehicle:tryHotwire(arg0) end
 function BaseVehicle:trySpawnKey() end
 
 --- @public
---- @overload fun(arg0: boolean)
 --- @return void
+--- @overload fun(arg0: boolean)
 function BaseVehicle:tryStartEngine() end
 
 --- @public

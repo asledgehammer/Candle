@@ -21,7 +21,6 @@ function DummyCharacterSoundEmitter:hasSustainPoints(arg0) end
 function DummyCharacterSoundEmitter:isClear() end
 
 --- @public
---- @overload fun(arg0: String)
 --- @param arg0 long
 --- @return boolean
 function DummyCharacterSoundEmitter:isPlaying(arg0) end
@@ -33,9 +32,9 @@ function DummyCharacterSoundEmitter:isPlaying(arg0) end
 function DummyCharacterSoundEmitter:playFootsteps(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: String, arg1: IsoObject)
 --- @param arg0 String
 --- @return long
+--- @overload fun(arg0: String, arg1: IsoObject)
 function DummyCharacterSoundEmitter:playSound(arg0) end
 
 --- @public

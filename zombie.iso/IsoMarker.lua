@@ -69,8 +69,6 @@ function IsoMarker:getZ() end
 function IsoMarker:hasTempSquareObject() end
 
 --- @public
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable, arg2: int, arg3: int, arg4: int, arg5: IsoGridSquare)
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable, arg2: int, arg3: int, arg4: int, arg5: IsoGridSquare, arg6: boolean)
 --- @param arg0 String
 --- @param arg1 int
 --- @param arg2 int
@@ -78,6 +76,7 @@ function IsoMarker:hasTempSquareObject() end
 --- @param arg4 IsoGridSquare
 --- @param arg5 boolean
 --- @return void
+--- @overload fun(arg0: KahluaTable, arg1: KahluaTable, arg2: int, arg3: int, arg4: int, arg5: IsoGridSquare, arg6: boolean)
 function IsoMarker:init(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public

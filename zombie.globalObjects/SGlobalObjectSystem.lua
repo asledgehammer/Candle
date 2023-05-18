@@ -32,8 +32,8 @@ function SGlobalObjectSystem:chunkLoaded(arg0, arg1) end
 function SGlobalObjectSystem:getInitialStateForClient() end
 
 --- @public
---- @overload fun(arg0: ByteBuffer, arg1: int)
 --- @return void
+--- @overload fun(arg0: ByteBuffer, arg1: int)
 function SGlobalObjectSystem:load() end
 
 --- @public
@@ -53,8 +53,8 @@ function SGlobalObjectSystem:receiveClientCommand(arg0, arg1, arg2) end
 function SGlobalObjectSystem:removeGlobalObjectOnClient(arg0) end
 
 --- @public
---- @overload fun(arg0: ByteBuffer)
 --- @return void
+--- @overload fun(arg0: ByteBuffer)
 function SGlobalObjectSystem:save() end
 
 --- @public

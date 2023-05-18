@@ -28,8 +28,8 @@ function IsoHeatSource:getY() end
 function IsoHeatSource:getZ() end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @return boolean
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 function IsoHeatSource:isInBounds() end
 
 --- @public

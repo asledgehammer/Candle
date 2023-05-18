@@ -70,7 +70,6 @@ function ThunderStorm:readNetThunderEvent(arg0) end
 function ThunderStorm:save(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: double, arg6: boolean, arg7: float)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
@@ -79,6 +78,7 @@ function ThunderStorm:save(arg0) end
 --- @param arg5 double
 --- @param arg6 boolean
 --- @return void
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: double, arg6: boolean, arg7: float)
 function ThunderStorm:startThunderCloud(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public

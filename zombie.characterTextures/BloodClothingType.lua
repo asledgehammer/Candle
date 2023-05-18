@@ -40,32 +40,31 @@ function BloodClothingType.addBasicPatch(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: HumanVisual, arg2: ArrayList, arg3: boolean)
---- @overload fun(arg0: BloodBodyPartType, arg1: float, arg2: HumanVisual, arg3: ArrayList, arg4: boolean)
---- @param arg0 BloodBodyPartType
+--- @param arg0 int
 --- @param arg1 HumanVisual
 --- @param arg2 ArrayList
 --- @param arg3 boolean
 --- @return void
+--- @overload fun(arg0: BloodBodyPartType, arg1: float, arg2: HumanVisual, arg3: ArrayList, arg4: boolean)
 function BloodClothingType.addBlood(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @overload fun(arg0: BloodBodyPartType, arg1: float, arg2: HumanVisual, arg3: ArrayList, arg4: boolean)
 --- @param arg0 BloodBodyPartType
 --- @param arg1 HumanVisual
 --- @param arg2 ArrayList
 --- @param arg3 boolean
 --- @return void
+--- @overload fun(arg0: BloodBodyPartType, arg1: float, arg2: HumanVisual, arg3: ArrayList, arg4: boolean)
 function BloodClothingType.addDirt(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @overload fun(arg0: BloodBodyPartType, arg1: HumanVisual, arg2: ArrayList, arg3: boolean)
 --- @param arg0 BloodBodyPartType
 --- @param arg1 HumanVisual
 --- @param arg2 ArrayList
 --- @return void
+--- @overload fun(arg0: BloodBodyPartType, arg1: HumanVisual, arg2: ArrayList, arg3: boolean)
 function BloodClothingType.addHole(arg0, arg1, arg2) end
 
 --- @public
@@ -94,9 +93,9 @@ function BloodClothingType.getCoveredPartCount(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: ArrayList, arg1: ArrayList)
 --- @param arg0 ArrayList
 --- @return ArrayList
+--- @overload fun(arg0: ArrayList, arg1: ArrayList)
 function BloodClothingType.getCoveredParts(arg0) end
 
 --- @public

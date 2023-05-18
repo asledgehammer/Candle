@@ -63,9 +63,9 @@ function GlobalObject.SendCommandToServer(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: double, arg1: double)
 --- @param arg0 double
 --- @return double
+--- @overload fun(arg0: double, arg1: double)
 function GlobalObject.ZombRand(arg0) end
 
 --- @public
@@ -143,8 +143,8 @@ function GlobalObject.addAllSmashedVehicles() end
 
 --- @public
 --- @static
---- @overload fun(arg0: Predicate)
 --- @return void
+--- @overload fun(arg0: Predicate)
 function GlobalObject.addAllVehicles() end
 
 --- @public
@@ -205,7 +205,6 @@ function GlobalObject.addWarningPoint(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: String, arg5: Integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: float)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
@@ -213,6 +212,7 @@ function GlobalObject.addWarningPoint(arg0, arg1, arg2) end
 --- @param arg4 String
 --- @param arg5 Integer
 --- @return ArrayList
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: String, arg5: Integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: float)
 function GlobalObject.addZombiesInOutfit(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -324,9 +324,9 @@ function GlobalObject.connectionManagerLog(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable)
 --- @param arg0 KahluaTable
 --- @return KahluaTable
+--- @overload fun(arg0: KahluaTable, arg1: KahluaTable)
 function GlobalObject.copyTable(arg0) end
 
 --- @public
@@ -420,9 +420,9 @@ function GlobalObject.debugFullyStreamedIn(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: Object, arg1: int)
 --- @param arg0 Object
 --- @return void
+--- @overload fun(arg0: Object, arg1: int)
 function GlobalObject.debugLuaTable(arg0) end
 
 --- @public
@@ -1624,12 +1624,12 @@ function GlobalObject.getTableResult(arg0, arg1) end
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return String
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @param arg0 String
---- @return String
 function GlobalObject.getText(arg0) end
 
 --- @public
@@ -1645,12 +1645,12 @@ function GlobalObject.getTextMediaEN(arg0) end
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return String
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @param arg0 String
---- @return String
 function GlobalObject.getTextOrNull(arg0) end
 
 --- @public
@@ -1789,8 +1789,7 @@ function GlobalObject.initUISystem() end
 
 --- @public
 --- @static
---- @overload fun(arg0: Item)
---- @param arg0 String
+--- @param arg0 Item
 --- @return InventoryItem
 function GlobalObject.instanceItem(arg0) end
 
@@ -2476,11 +2475,11 @@ function GlobalObject.sendCleanBurn(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 KahluaTable
 --- @return void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
 function GlobalObject.sendClientCommand(arg0, arg1, arg2) end
 
 --- @public
@@ -2579,11 +2578,11 @@ function GlobalObject.sendSafehouseInvite(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 KahluaTable
 --- @return void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
 function GlobalObject.sendServerCommand(arg0, arg1, arg2) end
 
 --- @public
@@ -2926,8 +2925,8 @@ function GlobalObject.tabToX(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: String)
 --- @return void
+--- @overload fun(arg0: String)
 function GlobalObject.takeScreenshot() end
 
 --- @public
@@ -3060,12 +3059,12 @@ function GlobalObject.translatePointYInOverheadMapToWorld(arg0, arg1, arg2, arg3
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return void
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @param arg0 String
---- @return void
 function GlobalObject.triggerEvent(arg0) end
 
 --- @public

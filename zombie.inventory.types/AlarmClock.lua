@@ -136,7 +136,6 @@ function AlarmClock:updateSound(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: Item)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 String

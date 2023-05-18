@@ -80,8 +80,7 @@ function SimpleDateFormat:toPattern() end
 ------------------------------------
 
 --- @public
+--- @return SimpleDateFormat
 --- @overload fun(arg0: String)
 --- @overload fun(arg0: String, arg1: DateFormatSymbols)
---- @overload fun(arg0: String, arg1: Locale)
---- @return SimpleDateFormat
 function SimpleDateFormat.new() end

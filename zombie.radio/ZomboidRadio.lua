@@ -91,13 +91,13 @@ function ZomboidRadio:Reset() end
 function ZomboidRadio:Save() end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: String, arg4: String, arg5: String, arg6: float, arg7: float, arg8: float, arg9: int, arg10: boolean)
---- @overload fun(arg0: long, arg1: int, arg2: int, arg3: int, arg4: String, arg5: String, arg6: String, arg7: float, arg8: float, arg9: float, arg10: int, arg11: boolean)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 ChatMessage
 --- @param arg3 int
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: String, arg4: String, arg5: String, arg6: float, arg7: float, arg8: float, arg9: int, arg10: boolean)
+--- @overload fun(arg0: long, arg1: int, arg2: int, arg3: int, arg4: String, arg5: String, arg6: String, arg7: float, arg8: float, arg9: float, arg10: int, arg11: boolean)
 function ZomboidRadio:SendTransmission(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -117,11 +117,11 @@ function ZomboidRadio:UpdateScripts(arg0, arg1) end
 function ZomboidRadio:WriteRadioServerDataPacket(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: int, arg2: String, arg3: boolean)
 --- @param arg0 String
 --- @param arg1 int
 --- @param arg2 String
 --- @return void
+--- @overload fun(arg0: String, arg1: int, arg2: String, arg3: boolean)
 function ZomboidRadio:addChannelName(arg0, arg1, arg2) end
 
 --- @public
@@ -171,8 +171,8 @@ function ZomboidRadio:getGameMode() end
 function ZomboidRadio:getRandomBzztFzzt() end
 
 --- @public
---- @overload fun(arg0: int, arg1: int)
 --- @return int
+--- @overload fun(arg0: int, arg1: int)
 function ZomboidRadio:getRandomFrequency() end
 
 --- @public

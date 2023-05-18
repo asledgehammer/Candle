@@ -9,13 +9,13 @@ TextManager = {};
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: double, arg1: double, arg2: String, arg3: double, arg4: double, arg5: double, arg6: double)
---- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
---- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: double, arg4: String, arg5: double, arg6: double, arg7: double, arg8: double)
 --- @param arg0 double
 --- @param arg1 double
 --- @param arg2 String
 --- @return void
+--- @overload fun(arg0: double, arg1: double, arg2: String, arg3: double, arg4: double, arg5: double, arg6: double)
+--- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
+--- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: double, arg4: String, arg5: double, arg6: double, arg7: double, arg8: double)
 function TextManager:DrawString(arg0, arg1, arg2) end
 
 --- @public
@@ -31,7 +31,6 @@ function TextManager:DrawString(arg0, arg1, arg2) end
 function TextManager:DrawStringBBcode(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
 --- @param arg0 double
 --- @param arg1 double
 --- @param arg2 String
@@ -40,6 +39,7 @@ function TextManager:DrawStringBBcode(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
 --- @param arg5 double
 --- @param arg6 double
 --- @return void
+--- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
 function TextManager:DrawStringCentre(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -55,7 +55,6 @@ function TextManager:DrawStringCentre(arg0, arg1, arg2, arg3, arg4, arg5, arg6) 
 function TextManager:DrawStringCentreDefered(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
 --- @param arg0 double
 --- @param arg1 double
 --- @param arg2 String
@@ -64,6 +63,7 @@ function TextManager:DrawStringCentreDefered(arg0, arg1, arg2, arg3, arg4, arg5,
 --- @param arg5 double
 --- @param arg6 double
 --- @return void
+--- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
 function TextManager:DrawStringRight(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public

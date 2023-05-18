@@ -206,21 +206,21 @@ function IsoMetaGrid:getZoneAt(arg0, arg1, arg2) end
 function IsoMetaGrid:getZoneWithBoundsAndType(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: ArrayList)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
 --- @return ArrayList
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: ArrayList)
 function IsoMetaGrid:getZonesAt(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int, arg5: ArrayList)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
 --- @param arg3 int
 --- @param arg4 int
 --- @return ArrayList
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int, arg5: ArrayList)
 function IsoMetaGrid:getZonesIntersecting(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
@@ -245,8 +245,8 @@ function IsoMetaGrid:isValidSquare(arg0, arg1) end
 function IsoMetaGrid:isZoneAbove(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @overload fun(arg0: ByteBuffer)
 --- @return void
+--- @overload fun(arg0: ByteBuffer)
 function IsoMetaGrid:load() end
 
 --- @public
@@ -310,7 +310,6 @@ function IsoMetaGrid:registerRoomTone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
 function IsoMetaGrid:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @overload fun(arg0: String, arg1: String, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: ZoneGeometryType, arg8: TIntArrayList, arg9: int)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 int
@@ -319,6 +318,7 @@ function IsoMetaGrid:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, ar
 --- @param arg5 int
 --- @param arg6 int
 --- @return Zone
+--- @overload fun(arg0: String, arg1: String, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: ZoneGeometryType, arg8: TIntArrayList, arg9: int)
 function IsoMetaGrid:registerZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -349,8 +349,8 @@ function IsoMetaGrid:removeZonesForCell(arg0, arg1) end
 function IsoMetaGrid:removeZonesForLotDirectory(arg0) end
 
 --- @public
---- @overload fun(arg0: ByteBuffer)
 --- @return void
+--- @overload fun(arg0: ByteBuffer)
 function IsoMetaGrid:save() end
 
 --- @public

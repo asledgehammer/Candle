@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class UIServerToolbox: NewWindow
+--- @implement ICoopServerMessageListener
+--- @implement UIEventHandler
 --- @field public instance UIServerToolbox
 UIServerToolbox = {};
 

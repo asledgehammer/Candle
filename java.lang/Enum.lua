@@ -1,6 +1,9 @@
 --- @meta
 
 --- @class Enum: Object
+--- @implement Constable
+--- @implement Comparable
+--- @implement Serializable
 Enum = {};
 
 ------------------------------------
@@ -20,7 +23,6 @@ function Enum.valueOf(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Enum)
 --- @param arg0 Object
 --- @return int
 function Enum:compareTo(arg0) end

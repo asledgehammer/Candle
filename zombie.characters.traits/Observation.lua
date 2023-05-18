@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Observation: Object
+--- @implement IListBoxItem
 Observation = {};
 
 ------------------------------------

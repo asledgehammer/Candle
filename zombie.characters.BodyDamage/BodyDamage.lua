@@ -20,7 +20,6 @@ function BodyDamage.getSicknessFromCorpsesRate(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: int, arg1: float)
 --- @param arg0 BodyPartType
 --- @param arg1 float
 --- @return void
@@ -78,32 +77,27 @@ function BodyDamage:IncreasePanic(arg0) end
 function BodyDamage:IncreasePanicFloat(arg0) end
 
 --- @public
---- @overload fun(arg0: BodyPartType)
---- @param arg0 int
+--- @param arg0 BodyPartType
 --- @return boolean
 function BodyDamage:IsBandaged(arg0) end
 
 --- @public
---- @overload fun(arg0: BodyPartType)
 --- @param arg0 int
 --- @return boolean
 function BodyDamage:IsBitten(arg0) end
 
 --- @public
---- @overload fun(arg0: BodyPartType)
 --- @param arg0 int
 --- @return boolean
 function BodyDamage:IsBleeding(arg0) end
 
 --- @public
---- @overload fun(arg0: BodyPartType)
---- @param arg0 int
+--- @param arg0 BodyPartType
 --- @return boolean
 function BodyDamage:IsBleedingStemmed(arg0) end
 
 --- @public
---- @overload fun(arg0: BodyPartType)
---- @param arg0 int
+--- @param arg0 BodyPartType
 --- @return boolean
 function BodyDamage:IsCortorised(arg0) end
 
@@ -118,14 +112,13 @@ function BodyDamage:IsCut(arg0) end
 function BodyDamage:IsDeepWounded(arg0) end
 
 --- @public
---- @overload fun(arg0: int)
 --- @return boolean
+--- @overload fun(arg0: int)
 function BodyDamage:IsFakeInfected() end
 
 --- @public
---- @overload fun(arg0: int)
---- @overload fun(arg0: BodyPartType)
 --- @return boolean
+--- @overload fun(arg0: int)
 function BodyDamage:IsInfected() end
 
 --- @public
@@ -133,7 +126,6 @@ function BodyDamage:IsInfected() end
 function BodyDamage:IsOnFire() end
 
 --- @public
---- @overload fun(arg0: int)
 --- @param arg0 BodyPartType
 --- @return boolean
 function BodyDamage:IsScratched(arg0) end
@@ -143,21 +135,19 @@ function BodyDamage:IsScratched(arg0) end
 function BodyDamage:IsSneezingCoughing() end
 
 --- @public
---- @overload fun(arg0: int)
---- @param arg0 BodyPartType
+--- @param arg0 int
 --- @return boolean
 function BodyDamage:IsStitched(arg0) end
 
 --- @public
---- @overload fun(arg0: BodyPartType)
---- @param arg0 int
+--- @param arg0 BodyPartType
 --- @return boolean
 function BodyDamage:IsWounded(arg0) end
 
 --- @public
---- @overload fun(arg0: Food, arg1: float)
 --- @param arg0 Food
 --- @return void
+--- @overload fun(arg0: Food, arg1: float)
 function BodyDamage:JustAteFood(arg0) end
 
 --- @public
@@ -208,29 +198,25 @@ function BodyDamage:RestoreToFullHealth() end
 function BodyDamage:SetBandaged(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
---- @overload fun(arg0: int, arg1: boolean, arg2: boolean)
---- @param arg0 BodyPartType
+--- @param arg0 int
 --- @param arg1 boolean
 --- @return void
+--- @overload fun(arg0: int, arg1: boolean, arg2: boolean)
 function BodyDamage:SetBitten(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
 --- @param arg0 BodyPartType
 --- @param arg1 boolean
 --- @return void
 function BodyDamage:SetBleeding(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: BodyPartType, arg1: boolean)
---- @param arg0 int
+--- @param arg0 BodyPartType
 --- @param arg1 boolean
 --- @return void
 function BodyDamage:SetBleedingStemmed(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
 --- @param arg0 BodyPartType
 --- @param arg1 boolean
 --- @return void
@@ -243,7 +229,6 @@ function BodyDamage:SetCortorised(arg0, arg1) end
 function BodyDamage:SetCut(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
 --- @param arg0 BodyPartType
 --- @param arg1 boolean
 --- @return void
@@ -256,8 +241,7 @@ function BodyDamage:SetScratched(arg0, arg1) end
 function BodyDamage:SetScratchedFromWeapon(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
---- @param arg0 BodyPartType
+--- @param arg0 int
 --- @param arg1 boolean
 --- @return void
 function BodyDamage:SetWounded(arg0, arg1) end
@@ -334,13 +318,11 @@ function BodyDamage:getApparentInfectionLevel() end
 function BodyDamage:getBodyPart(arg0) end
 
 --- @public
---- @overload fun(arg0: int)
 --- @param arg0 BodyPartType
 --- @return float
 function BodyDamage:getBodyPartHealth(arg0) end
 
 --- @public
---- @overload fun(arg0: BodyPartType)
 --- @param arg0 int
 --- @return String
 function BodyDamage:getBodyPartName(arg0) end

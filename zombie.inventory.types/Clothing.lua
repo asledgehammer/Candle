@@ -395,8 +395,8 @@ function Clothing:toString() end
 function Clothing:update() end
 
 --- @public
---- @overload fun(arg0: boolean)
 --- @return void
+--- @overload fun(arg0: boolean)
 function Clothing:updateWetness() end
 
 
@@ -405,7 +405,6 @@ function Clothing:updateWetness() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: String, arg4: String, arg5: String)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 String

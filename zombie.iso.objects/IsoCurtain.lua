@@ -68,9 +68,9 @@ function IsoCurtain:getOppositeSquare() end
 function IsoCurtain:getSoundPrefix() end
 
 --- @public
---- @overload fun(arg0: IsoGridSquare, arg1: IsoGridSquare)
 --- @param arg0 IsoGridSquare
 --- @return boolean
+--- @overload fun(arg0: IsoGridSquare, arg1: IsoGridSquare)
 function IsoCurtain:isAdjacentToSquare(arg0) end
 
 --- @public
@@ -109,11 +109,11 @@ function IsoCurtain:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 function IsoCurtain:save(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: byte, arg2: UdpConnection, arg3: ByteBuffer)
 --- @param arg0 boolean
 --- @param arg1 byte
 --- @param arg2 UdpConnection
 --- @return void
+--- @overload fun(arg0: boolean, arg1: byte, arg2: UdpConnection, arg3: ByteBuffer)
 function IsoCurtain:syncIsoObject(arg0, arg1, arg2) end
 
 --- @public
@@ -127,8 +127,8 @@ function IsoCurtain:syncIsoObjectSend(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean, arg4: boolean)
 --- @param arg0 IsoCell
 --- @return IsoCurtain
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean)
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean, arg4: boolean)
 function IsoCurtain.new(arg0) end

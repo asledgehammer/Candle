@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StringServerOption: StringConfigOption
+--- @implement ServerOption
 StringServerOption = {};
 
 ------------------------------------

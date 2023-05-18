@@ -49,10 +49,10 @@ function HumanVisual:clear() end
 function HumanVisual:copyFrom(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: ItemVisuals, arg2: boolean)
 --- @param arg0 String
 --- @param arg1 ItemVisuals
 --- @return void
+--- @overload fun(arg0: String, arg1: ItemVisuals, arg2: boolean)
 function HumanVisual:dressInClothingItem(arg0, arg1) end
 
 --- @public

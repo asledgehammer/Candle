@@ -1,6 +1,9 @@
 --- @meta
 
 --- @class IsoWaveSignal: IsoObject
+--- @implement WaveSignalDevice
+--- @implement ChatElementOwner
+--- @implement Talker
 IsoWaveSignal = {};
 
 ------------------------------------
@@ -18,17 +21,15 @@ function IsoWaveSignal.Reset() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: float, arg2: float, arg3: float, arg4: String, arg5: String, arg6: int)
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: String, arg5: String, arg6: int, arg7: boolean)
---- @overload fun(arg0: String, arg1: float, arg2: float, arg3: float, arg4: String, arg5: String, arg6: int, arg7: boolean)
 --- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param arg1 float
+--- @param arg2 float
+--- @param arg3 float
 --- @param arg4 String
 --- @param arg5 String
 --- @param arg6 int
 --- @return void
+--- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: String, arg5: String, arg6: int, arg7: boolean)
 function IsoWaveSignal:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -70,8 +71,24 @@ function IsoWaveSignal:getDeviceData() end
 function IsoWaveSignal:getSayLine() end
 
 --- @public
+--- @return IsoGridSquare
+function IsoWaveSignal:getSquare() end
+
+--- @public
 --- @return String
 function IsoWaveSignal:getTalkerType() end
+
+--- @public
+--- @return float
+function IsoWaveSignal:getX() end
+
+--- @public
+--- @return float
+function IsoWaveSignal:getY() end
+
+--- @public
+--- @return float
+function IsoWaveSignal:getZ() end
 
 --- @public
 --- @return boolean
@@ -141,7 +158,7 @@ function IsoWaveSignal:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
 --- @param arg0 IsoCell
 --- @return IsoWaveSignal
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
 function IsoWaveSignal.new(arg0) end

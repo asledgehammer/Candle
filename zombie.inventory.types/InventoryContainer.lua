@@ -8,9 +8,9 @@ InventoryContainer = {};
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: ObjectTooltip, arg1: Layout)
 --- @param arg0 ObjectTooltip
 --- @return void
+--- @overload fun(arg0: ObjectTooltip, arg1: Layout)
 function InventoryContainer:DoTooltip(arg0) end
 
 --- @public

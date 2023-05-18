@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class IsoDoor: IsoObject
+--- @implement BarricadeAble
+--- @implement Thumpable
 --- @field public tempo Vector2
 IsoDoor = {};
 
@@ -150,9 +152,9 @@ function IsoDoor:WeaponHit(arg0, arg1) end
 function IsoDoor:addRandomBarricades() end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: IsoGameCharacter)
 --- @param arg0 IsoGameCharacter
 --- @return void
+--- @overload fun(arg0: boolean, arg1: IsoGameCharacter)
 function IsoDoor:addSheet(arg0) end
 
 --- @public
@@ -246,6 +248,10 @@ function IsoDoor:getSheetSquare() end
 --- @param arg0 boolean
 --- @return IsoDirections
 function IsoDoor:getSpriteEdge(arg0) end
+
+--- @public
+--- @return IsoGridSquare
+function IsoDoor:getSquare() end
 
 --- @public
 --- @return float
@@ -457,9 +463,8 @@ function IsoDoor:transmitSetCurtainOpen(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable)
 --- @param arg0 IsoCell
 --- @return IsoDoor
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean)
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable)
 function IsoDoor.new(arg0) end

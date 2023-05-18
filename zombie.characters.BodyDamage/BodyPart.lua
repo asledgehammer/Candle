@@ -55,9 +55,9 @@ function BodyPart:ReduceHealth(arg0) end
 function BodyPart:RestoreToFullHealth() end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: boolean)
 --- @param arg0 boolean
 --- @return void
+--- @overload fun(arg0: boolean, arg1: boolean)
 function BodyPart:SetBitten(arg0) end
 
 --- @public
@@ -134,8 +134,8 @@ function BodyPart:generateDeepWound() end
 function BodyPart:generateZombieInfection(arg0) end
 
 --- @public
---- @overload fun(arg0: boolean)
 --- @return float
+--- @overload fun(arg0: boolean)
 function BodyPart:getAdditionalPain() end
 
 --- @public
@@ -343,10 +343,10 @@ function BodyPart:setBandageLife(arg0) end
 function BodyPart:setBandageType(arg0) end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: float, arg2: boolean, arg3: String)
 --- @param arg0 boolean
 --- @param arg1 float
 --- @return void
+--- @overload fun(arg0: boolean, arg1: float, arg2: boolean, arg3: String)
 function BodyPart:setBandaged(arg0, arg1) end
 
 --- @public
@@ -384,9 +384,9 @@ function BodyPart:setBurned() end
 function BodyPart:setComfreyFactor(arg0) end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: boolean)
 --- @param arg0 boolean
 --- @return void
+--- @overload fun(arg0: boolean, arg1: boolean)
 function BodyPart:setCut(arg0) end
 
 --- @public
@@ -532,9 +532,8 @@ function BodyPart:setWoundInfectionLevel(arg0) end
 function BodyPart:stitched() end
 
 --- @public
---- @overload fun(arg0: ByteBuffer, arg1: byte)
---- @param arg0 BodyPart
---- @param arg1 Updater
+--- @param arg0 ByteBuffer
+--- @param arg1 byte
 --- @return void
 function BodyPart:sync(arg0, arg1) end
 

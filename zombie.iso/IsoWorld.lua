@@ -109,14 +109,12 @@ function IsoWorld.isAnimRecorderDiscardTriggered() end
 
 --- @public
 --- @static
---- @overload fun(arg0: InputStream)
---- @param arg0 RandomAccessFile
+--- @param arg0 InputStream
 --- @return int
 function IsoWorld.readInt(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: InputStream)
 --- @param arg0 RandomAccessFile
 --- @return String
 function IsoWorld.readString(arg0) end
@@ -178,8 +176,8 @@ function IsoWorld:addLuaTrait(arg0) end
 function IsoWorld:checkVehiclesZones() end
 
 --- @public
---- @overload fun(arg0: String)
 --- @return HashMap
+--- @overload fun(arg0: String)
 function IsoWorld:getAllTiles() end
 
 --- @public
@@ -203,8 +201,8 @@ function IsoWorld:getDifficulty() end
 function IsoWorld:getFrameNo() end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float)
 --- @return BaseSoundEmitter
+--- @overload fun(arg0: float, arg1: float, arg2: float)
 function IsoWorld:getFreeEmitter() end
 
 --- @public

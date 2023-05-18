@@ -15,11 +15,11 @@ function ObjectRenderEffects.alloc() end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoObject, arg1: RenderEffectType, arg2: boolean, arg3: boolean)
 --- @param arg0 IsoObject
 --- @param arg1 RenderEffectType
 --- @param arg2 boolean
 --- @return ObjectRenderEffects
+--- @overload fun(arg0: IsoObject, arg1: RenderEffectType, arg2: boolean, arg3: boolean)
 function ObjectRenderEffects.getNew(arg0, arg1, arg2) end
 
 --- @public

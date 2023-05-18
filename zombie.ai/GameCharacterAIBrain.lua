@@ -33,8 +33,8 @@ function GameCharacterAIBrain:getCharacter() end
 function GameCharacterAIBrain:getCloseZombieCount() end
 
 --- @public
---- @overload fun(arg0: boolean)
 --- @return IsoZombie
+--- @overload fun(arg0: boolean)
 function GameCharacterAIBrain:getClosestChasingZombie() end
 
 --- @public

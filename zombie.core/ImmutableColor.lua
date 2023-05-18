@@ -54,13 +54,13 @@ function ImmutableColor.random() end
 function ImmutableColor:add(arg0) end
 
 --- @public
---- @overload fun(arg0: float)
 --- @return ImmutableColor
+--- @overload fun(arg0: float)
 function ImmutableColor:brighter() end
 
 --- @public
---- @overload fun(arg0: float)
 --- @return ImmutableColor
+--- @overload fun(arg0: float)
 function ImmutableColor:darker() end
 
 --- @public
@@ -150,13 +150,8 @@ function ImmutableColor:toString() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: ImmutableColor)
---- @overload fun(arg0: Color)
---- @overload fun(arg0: Color, arg1: Color, arg2: float)
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @overload fun(arg0: float, arg1: float, arg2: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @param arg0 int
 --- @return ImmutableColor
+--- @overload fun(arg0: Color, arg1: Color, arg2: float)
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 function ImmutableColor.new(arg0) end

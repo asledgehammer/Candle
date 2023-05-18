@@ -58,7 +58,6 @@ function LayoutItem:setValue(arg0, arg1, arg2, arg3, arg4) end
 function LayoutItem:setValueRight(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: float)
 --- @param arg0 int
 --- @return void
 function LayoutItem:setValueRightNoPlus(arg0) end

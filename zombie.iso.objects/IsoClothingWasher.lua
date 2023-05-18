@@ -76,7 +76,7 @@ function IsoClothingWasher:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
 --- @param arg0 IsoCell
 --- @return IsoClothingWasher
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
 function IsoClothingWasher.new(arg0) end

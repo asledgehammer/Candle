@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DataInputStream: FilterInputStream
+--- @implement DataInput
 DataInputStream = {};
 
 ------------------------------------
@@ -19,9 +20,9 @@ function DataInputStream.readUTF(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
 --- @param arg0 byte[]
 --- @return int
+--- @overload fun(arg0: byte[], arg1: int, arg2: int)
 function DataInputStream:read(arg0) end
 
 --- @public
@@ -45,9 +46,9 @@ function DataInputStream:readDouble() end
 function DataInputStream:readFloat() end
 
 --- @public
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
 --- @param arg0 byte[]
 --- @return void
+--- @overload fun(arg0: byte[], arg1: int, arg2: int)
 function DataInputStream:readFully(arg0) end
 
 --- @public

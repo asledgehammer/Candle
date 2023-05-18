@@ -52,8 +52,8 @@ function Moodle:setChevron(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: MoodleType, arg1: IsoGameCharacter, arg2: int)
 --- @param arg0 MoodleType
 --- @param arg1 IsoGameCharacter
 --- @return Moodle
+--- @overload fun(arg0: MoodleType, arg1: IsoGameCharacter, arg2: int)
 function Moodle.new(arg0, arg1) end

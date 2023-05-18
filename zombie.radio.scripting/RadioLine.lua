@@ -51,10 +51,10 @@ function RadioLine:setText(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: float, arg2: float, arg3: float, arg4: String)
 --- @param arg0 String
 --- @param arg1 float
 --- @param arg2 float
 --- @param arg3 float
 --- @return RadioLine
+--- @overload fun(arg0: String, arg1: float, arg2: float, arg3: float, arg4: String)
 function RadioLine.new(arg0, arg1, arg2, arg3) end

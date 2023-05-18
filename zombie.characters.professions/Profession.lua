@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Profession: Object
+--- @implement IListBoxItem
 Profession = {};
 
 ------------------------------------

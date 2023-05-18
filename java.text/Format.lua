@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class Format: Object
+--- @implement Serializable
+--- @implement Cloneable
 Format = {};
 
 ------------------------------------
@@ -12,9 +14,9 @@ Format = {};
 function Format:clone() end
 
 --- @public
---- @overload fun(arg0: Object, arg1: StringBuffer, arg2: FieldPosition)
 --- @param arg0 Object
 --- @return String
+--- @overload fun(arg0: Object, arg1: StringBuffer, arg2: FieldPosition)
 function Format:format(arg0) end
 
 --- @public
@@ -23,9 +25,9 @@ function Format:format(arg0) end
 function Format:formatToCharacterIterator(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: ParsePosition)
 --- @param arg0 String
 --- @return Object
+--- @overload fun(arg0: String, arg1: ParsePosition)
 function Format:parseObject(arg0) end
 
 

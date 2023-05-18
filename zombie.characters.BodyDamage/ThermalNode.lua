@@ -113,10 +113,10 @@ function ThermalNode:isCore() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Thermoregulator, arg1: boolean, arg2: float, arg3: BodyPart, arg4: float)
 --- @param arg0 Thermoregulator
 --- @param arg1 float
 --- @param arg2 BodyPart
 --- @param arg3 float
 --- @return ThermalNode
+--- @overload fun(arg0: Thermoregulator, arg1: boolean, arg2: float, arg3: BodyPart, arg4: float)
 function ThermalNode.new(arg0, arg1, arg2, arg3) end

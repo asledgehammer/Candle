@@ -99,10 +99,10 @@ function RadioChannel:isTimeSynced() end
 function RadioChannel:isVanilla() end
 
 --- @public
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
 --- @param arg0 String
 --- @param arg1 int
 --- @return void
+--- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
 function RadioChannel:setActiveScript(arg0, arg1) end
 
 --- @public
@@ -144,9 +144,9 @@ function RadioChannel:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: int, arg2: ChannelCategory, arg3: String)
 --- @param arg0 String
 --- @param arg1 int
 --- @param arg2 ChannelCategory
 --- @return RadioChannel
+--- @overload fun(arg0: String, arg1: int, arg2: ChannelCategory, arg3: String)
 function RadioChannel.new(arg0, arg1, arg2) end

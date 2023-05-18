@@ -21,7 +21,6 @@ function LosUtil.init(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: boolean, arg8: int)
 --- @param arg0 IsoCell
 --- @param arg1 int
 --- @param arg2 int
@@ -31,6 +30,7 @@ function LosUtil.init(arg0, arg1) end
 --- @param arg6 int
 --- @param arg7 boolean
 --- @return TestResults
+--- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: boolean, arg8: int)
 function LosUtil.lineClear(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public

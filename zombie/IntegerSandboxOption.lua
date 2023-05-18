@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IntegerSandboxOption: IntegerConfigOption
+--- @implement SandboxOption
 IntegerSandboxOption = {};
 
 ------------------------------------

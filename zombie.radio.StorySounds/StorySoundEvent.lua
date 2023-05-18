@@ -31,6 +31,6 @@ function StorySoundEvent:setName(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String)
 --- @return StorySoundEvent
+--- @overload fun(arg0: String)
 function StorySoundEvent.new() end

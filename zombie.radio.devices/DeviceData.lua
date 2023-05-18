@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DeviceData: Object
+--- @implement Cloneable
 DeviceData = {};
 
 ------------------------------------
@@ -265,9 +266,9 @@ function DeviceData:save(arg0, arg1) end
 function DeviceData:setBaseVolumeRange(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
 --- @param arg0 int
 --- @return void
+--- @overload fun(arg0: int, arg1: boolean)
 function DeviceData:setChannel(arg0) end
 
 --- @public
@@ -431,6 +432,6 @@ function DeviceData:updateSimple() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: WaveSignalDevice)
 --- @return DeviceData
+--- @overload fun(arg0: WaveSignalDevice)
 function DeviceData.new() end

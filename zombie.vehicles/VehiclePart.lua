@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class VehiclePart: Object
+--- @implement ChatElementOwner
+--- @implement WaveSignalDevice
 VehiclePart = {};
 
 ------------------------------------
@@ -29,6 +31,7 @@ function VehiclePart.getNumberByCondition(arg0, arg1, arg2) end
 --- @param arg5 String
 --- @param arg6 int
 --- @return void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int)
 function VehiclePart:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -104,8 +107,8 @@ function VehiclePart:getChildWindow() end
 function VehiclePart:getCondition() end
 
 --- @public
---- @overload fun(arg0: IsoGameCharacter)
 --- @return int
+--- @overload fun(arg0: IsoGameCharacter)
 function VehiclePart:getContainerCapacity() end
 
 --- @public
@@ -302,9 +305,9 @@ function VehiclePart:setCondition(arg0) end
 function VehiclePart:setContainerCapacity(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: boolean, arg2: boolean)
 --- @param arg0 float
 --- @return void
+--- @overload fun(arg0: float, arg1: boolean, arg2: boolean)
 function VehiclePart:setContainerContentAmount(arg0) end
 
 --- @public
@@ -330,9 +333,9 @@ function VehiclePart:setEngineLoudness(arg0) end
 function VehiclePart:setGeneralCondition(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: InventoryItem, arg1: int)
 --- @param arg0 InventoryItem
 --- @return void
+--- @overload fun(arg0: InventoryItem, arg1: int)
 function VehiclePart:setInventoryItem(arg0) end
 
 --- @public

@@ -57,8 +57,8 @@ function IsoLightSource:isActive() end
 function IsoLightSource:isHydroPowered() end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @return boolean
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 function IsoLightSource:isInBounds() end
 
 --- @public
@@ -125,8 +125,6 @@ function IsoLightSource:wasActive() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: int, arg7: int)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: int, arg7: IsoBuilding)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
@@ -135,4 +133,5 @@ function IsoLightSource:wasActive() end
 --- @param arg5 float
 --- @param arg6 int
 --- @return IsoLightSource
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: int, arg7: int)
 function IsoLightSource.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end

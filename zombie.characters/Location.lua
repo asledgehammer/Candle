@@ -37,6 +37,6 @@ function Location:set(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int)
 --- @return Location
+--- @overload fun(arg0: int, arg1: int, arg2: int)
 function Location.new() end

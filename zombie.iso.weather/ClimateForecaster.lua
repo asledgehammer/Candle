@@ -12,8 +12,8 @@ ClimateForecaster = {};
 function ClimateForecaster:getDaysTillFirstWeather() end
 
 --- @public
---- @overload fun(arg0: int)
 --- @return DayForecast
+--- @overload fun(arg0: int)
 function ClimateForecaster:getForecast() end
 
 --- @public

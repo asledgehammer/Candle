@@ -9,10 +9,10 @@ InventoryItem = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: ByteBuffer, arg1: int, arg2: boolean)
 --- @param arg0 ByteBuffer
 --- @param arg1 int
 --- @return InventoryItem
+--- @overload fun(arg0: ByteBuffer, arg1: int, arg2: boolean)
 function InventoryItem.loadItem(arg0, arg1) end
 
 
@@ -31,9 +31,9 @@ function InventoryItem:CanStack(arg0) end
 function InventoryItem:CopyModData(arg0) end
 
 --- @public
---- @overload fun(arg0: ObjectTooltip, arg1: Layout)
 --- @param arg0 ObjectTooltip
 --- @return void
+--- @overload fun(arg0: ObjectTooltip, arg1: Layout)
 function InventoryItem:DoTooltip(arg0) end
 
 --- @public
@@ -84,9 +84,9 @@ function InventoryItem:ModDataMatches(arg0) end
 function InventoryItem:SetContainerPosition(arg0, arg1) end
 
 --- @public
+--- @return void
 --- @overload fun(arg0: boolean)
 --- @overload fun(arg0: boolean, arg1: boolean)
---- @return void
 function InventoryItem:Use() end
 
 --- @public
@@ -1160,9 +1160,9 @@ function InventoryItem:setColorGreen(arg0) end
 function InventoryItem:setColorRed(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
 --- @param arg0 int
 --- @return void
+--- @overload fun(arg0: int, arg1: boolean)
 function InventoryItem:setCondition(arg0) end
 
 --- @public
@@ -1683,10 +1683,9 @@ function InventoryItem:updateSound(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: String)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 String
---- @param arg3 Item
+--- @param arg3 String
 --- @return InventoryItem
 function InventoryItem.new(arg0, arg1, arg2, arg3) end

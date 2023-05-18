@@ -1,6 +1,9 @@
 --- @meta
 
 --- @class Writer: Object
+--- @implement Appendable
+--- @implement Closeable
+--- @implement Flushable
 Writer = {};
 
 ------------------------------------
@@ -18,13 +21,9 @@ function Writer.nullWriter() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: CharSequence)
---- @overload fun(arg0: char)
---- @overload fun(arg0: CharSequence)
---- @overload fun(arg0: CharSequence, arg1: int, arg2: int)
---- @overload fun(arg0: CharSequence, arg1: int, arg2: int)
 --- @param arg0 char
 --- @return Writer
+--- @overload fun(arg0: CharSequence, arg1: int, arg2: int)
 function Writer:append(arg0) end
 
 --- @public
@@ -36,12 +35,9 @@ function Writer:close() end
 function Writer:flush() end
 
 --- @public
---- @overload fun(arg0: String)
---- @overload fun(arg0: char[])
---- @overload fun(arg0: String, arg1: int, arg2: int)
---- @overload fun(arg0: char[], arg1: int, arg2: int)
 --- @param arg0 int
 --- @return void
+--- @overload fun(arg0: String, arg1: int, arg2: int)
 function Writer:write(arg0) end
 
 

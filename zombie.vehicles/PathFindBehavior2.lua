@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PathFindBehavior2: Object
+--- @implement IPathfinder
 PathFindBehavior2 = {};
 
 ------------------------------------

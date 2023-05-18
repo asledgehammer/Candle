@@ -1,6 +1,9 @@
 --- @meta
 
 --- @class Texture: Asset
+--- @implement IDestroyable
+--- @implement ITexture
+--- @implement Serializable
 --- @field public ASSET_TYPE AssetType
 --- @field public bDoingQuad boolean
 --- @field public BindCount int
@@ -62,11 +65,10 @@ function Texture.getErrorTexture() end
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: int)
---- @overload fun(arg0: String, arg1: String)
---- @overload fun(arg0: String, arg1: int[], arg2: String)
 --- @param arg0 String
 --- @return Texture
+--- @overload fun(arg0: String, arg1: String)
+--- @overload fun(arg0: String, arg1: int[], arg2: String)
 function Texture.getSharedTexture(arg0) end
 
 --- @public
@@ -121,8 +123,8 @@ function Texture.trygetTexture(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: int)
 --- @return void
+--- @overload fun(arg0: int)
 function Texture:bind() end
 
 --- @public
@@ -135,10 +137,8 @@ function Texture:bind() end
 function Texture:copyMaskRegion(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @overload fun(arg0: WrappedBuffer)
---- @overload fun(arg0: BooleanGrid)
---- @overload fun(arg0: boolean[])
 --- @return void
+--- @overload fun(arg0: WrappedBuffer)
 function Texture:createMask() end
 
 --- @public
@@ -277,12 +277,12 @@ function Texture:onBeforeReady() end
 function Texture:reloadFromFile(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: Consumer)
---- @overload fun(arg0: ObjectRenderEffects, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: Consumer)
 --- @param arg0 float
 --- @param arg1 float
 --- @return void
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: Consumer)
+--- @overload fun(arg0: ObjectRenderEffects, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: Consumer)
 function Texture:render(arg0, arg1) end
 
 --- @public
@@ -465,13 +465,13 @@ function Texture:setUseAlphaChannel(arg0) end
 function Texture:setWidth(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: int)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
 --- @param arg3 int
 --- @return Texture
+--- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: int)
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int)
 function Texture:split(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -494,18 +494,9 @@ function Texture:toString() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Texture)
---- @overload fun(arg0: String)
---- @overload fun(arg0: String, arg1: boolean)
---- @overload fun(arg0: TextureID, arg1: String)
---- @overload fun(arg0: String, arg1: int[])
---- @overload fun(arg0: String, arg1: String)
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @overload fun(arg0: AssetPath, arg1: AssetManager, arg2: TextureAssetParams)
---- @overload fun(arg0: String, arg1: BufferedInputStream, arg2: boolean)
---- @overload fun(arg0: String, arg1: boolean, arg2: boolean)
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
---- @overload fun(arg0: int, arg1: int, arg2: String, arg3: int)
---- @overload fun(arg0: String, arg1: BufferedInputStream, arg2: boolean, arg3: PZFileformat)
 --- @return Texture
+--- @overload fun(arg0: Texture)
+--- @overload fun(arg0: String, arg1: boolean)
+--- @overload fun(arg0: int, arg1: int, arg2: int)
+--- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
 function Texture.new() end

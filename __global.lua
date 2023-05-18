@@ -55,9 +55,9 @@ function SendCommandToServer(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: double, arg1: double)
 --- @param arg0 double
 --- @return double
+--- @overload fun(arg0: double, arg1: double)
 function ZombRand(arg0) end
 
 --- @public
@@ -135,8 +135,8 @@ function addAllSmashedVehicles() end
 
 --- @public
 --- @static
---- @overload fun(arg0: Predicate)
 --- @return void
+--- @overload fun(arg0: Predicate)
 function addAllVehicles() end
 
 --- @public
@@ -197,7 +197,6 @@ function addWarningPoint(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: String, arg5: Integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: float)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
@@ -205,6 +204,7 @@ function addWarningPoint(arg0, arg1, arg2) end
 --- @param arg4 String
 --- @param arg5 Integer
 --- @return ArrayList
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: String, arg5: Integer, arg6: boolean, arg7: boolean, arg8: boolean, arg9: boolean, arg10: float)
 function addZombiesInOutfit(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -316,9 +316,9 @@ function connectionManagerLog(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable)
 --- @param arg0 KahluaTable
 --- @return KahluaTable
+--- @overload fun(arg0: KahluaTable, arg1: KahluaTable)
 function copyTable(arg0) end
 
 --- @public
@@ -412,9 +412,9 @@ function debugFullyStreamedIn(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: Object, arg1: int)
 --- @param arg0 Object
 --- @return void
+--- @overload fun(arg0: Object, arg1: int)
 function debugLuaTable(arg0) end
 
 --- @public
@@ -1616,12 +1616,12 @@ function getTableResult(arg0, arg1) end
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return String
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @param arg0 String
---- @return String
 function getText(arg0) end
 
 --- @public
@@ -1637,12 +1637,12 @@ function getTextMediaEN(arg0) end
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return String
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @param arg0 String
---- @return String
 function getTextOrNull(arg0) end
 
 --- @public
@@ -1781,8 +1781,7 @@ function initUISystem() end
 
 --- @public
 --- @static
---- @overload fun(arg0: Item)
---- @param arg0 String
+--- @param arg0 Item
 --- @return InventoryItem
 function instanceItem(arg0) end
 
@@ -2468,11 +2467,11 @@ function sendCleanBurn(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 KahluaTable
 --- @return void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
 function sendClientCommand(arg0, arg1, arg2) end
 
 --- @public
@@ -2571,11 +2570,11 @@ function sendSafehouseInvite(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 KahluaTable
 --- @return void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
 function sendServerCommand(arg0, arg1, arg2) end
 
 --- @public
@@ -2918,8 +2917,8 @@ function tabToX(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: String)
 --- @return void
+--- @overload fun(arg0: String)
 function takeScreenshot() end
 
 --- @public
@@ -3052,12 +3051,12 @@ function translatePointYInOverheadMapToWorld(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return void
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @param arg0 String
---- @return void
 function triggerEvent(arg0) end
 
 --- @public

@@ -248,12 +248,12 @@ function SpriteRenderer:glDoEndFrame() end
 function SpriteRenderer:glDoEndFrameFx(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: float, arg3: int, arg4: boolean)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 float
 --- @param arg3 int
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: float, arg3: int, arg4: boolean)
 function SpriteRenderer:glDoStartFrame(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -350,11 +350,6 @@ function SpriteRenderer:prePopulating() end
 function SpriteRenderer:pushFrameDown() end
 
 --- @public
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: int, arg10: int, arg11: int, arg12: int)
---- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double, arg9: float, arg10: float, arg11: float, arg12: float, arg13: Consumer)
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float)
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: Consumer)
---- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: float, arg18: float, arg19: float, arg20: float, arg21: float, arg22: float, arg23: float, arg24: float, arg25: Consumer)
 --- @param arg0 Texture
 --- @param arg1 float
 --- @param arg2 float
@@ -366,6 +361,11 @@ function SpriteRenderer:pushFrameDown() end
 --- @param arg8 float
 --- @param arg9 Consumer
 --- @return void
+--- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: int, arg10: int, arg11: int, arg12: int)
+--- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double, arg9: float, arg10: float, arg11: float, arg12: float, arg13: Consumer)
+--- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float)
+--- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: Consumer)
+--- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: float, arg18: float, arg19: float, arg20: float, arg21: float, arg22: float, arg23: float, arg24: float, arg25: Consumer)
 function SpriteRenderer:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @public
@@ -387,8 +387,6 @@ function SpriteRenderer:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, a
 function SpriteRenderer:renderClamped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13) end
 
 --- @public
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float)
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: float, arg18: float, arg19: float, arg20: float)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
@@ -402,6 +400,8 @@ function SpriteRenderer:renderClamped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
 --- @param arg10 float
 --- @param arg11 float
 --- @return void
+--- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float)
+--- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: float, arg18: float, arg19: float, arg20: float)
 function SpriteRenderer:renderPoly(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
 
 --- @public
@@ -475,7 +475,6 @@ function SpriteRenderer:renderflipped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
 function SpriteRenderer:renderi(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @public
---- @overload fun(arg0: Texture, arg1: int, arg2: int, arg3: int, arg4: int, arg5: float, arg6: float, arg7: float, arg8: float, arg9: int)
 --- @param arg0 Texture
 --- @param arg1 int
 --- @param arg2 int
@@ -486,6 +485,7 @@ function SpriteRenderer:renderi(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, 
 --- @param arg7 float
 --- @param arg8 float
 --- @return void
+--- @overload fun(arg0: Texture, arg1: int, arg2: int, arg3: int, arg4: int, arg5: float, arg6: float, arg7: float, arg8: float, arg9: int)
 function SpriteRenderer:renderline(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public

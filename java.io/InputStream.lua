@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class InputStream: Object
+--- @implement Closeable
 InputStream = {};
 
 ------------------------------------
@@ -35,9 +36,9 @@ function InputStream:mark(arg0) end
 function InputStream:markSupported() end
 
 --- @public
+--- @return int
 --- @overload fun(arg0: byte[])
 --- @overload fun(arg0: byte[], arg1: int, arg2: int)
---- @return int
 function InputStream:read() end
 
 --- @public
@@ -45,9 +46,9 @@ function InputStream:read() end
 function InputStream:readAllBytes() end
 
 --- @public
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
 --- @param arg0 int
 --- @return byte[]
+--- @overload fun(arg0: byte[], arg1: int, arg2: int)
 function InputStream:readNBytes(arg0) end
 
 --- @public

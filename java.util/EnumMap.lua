@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class EnumMap: AbstractMap
+--- @implement Serializable
+--- @implement Cloneable
 EnumMap = {};
 
 ------------------------------------
@@ -12,7 +14,6 @@ EnumMap = {};
 function EnumMap:clear() end
 
 --- @public
---- @overload fun()
 --- @return Object
 function EnumMap:clone() end
 
@@ -49,7 +50,6 @@ function EnumMap:hashCode() end
 function EnumMap:keySet() end
 
 --- @public
---- @overload fun(arg0: Enum, arg1: Object)
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
@@ -79,8 +79,6 @@ function EnumMap:values() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Map)
---- @overload fun(arg0: EnumMap)
 --- @param arg0 Class
 --- @return EnumMap
 function EnumMap.new(arg0) end

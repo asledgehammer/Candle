@@ -22,20 +22,19 @@ function RandomizedWorldBase.createBodyFromZombie(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: IsoDirections, arg4: int)
---- @overload fun(arg0: IsoGridSquare, arg1: IsoDirections, arg2: int, arg3: int, arg4: String)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: IsoDirections, arg4: int, arg5: int)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: boolean, arg5: int, arg6: int, arg7: String)
 --- @param arg0 RoomDef
 --- @param arg1 int
 --- @return IsoDeadBody
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: IsoDirections, arg4: int)
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: IsoDirections, arg4: int, arg5: int)
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: boolean, arg5: int, arg6: int, arg7: String)
 function RandomizedWorldBase.createRandomDeadBody(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int, arg2: int)
 --- @param arg0 RoomDef
 --- @return IsoGameCharacter
+--- @overload fun(arg0: int, arg1: int, arg2: int)
 function RandomizedWorldBase.createRandomZombie(arg0) end
 
 --- @public
@@ -98,9 +97,8 @@ function RandomizedWorldBase.removeAllVehiclesOnZone(arg0) end
 function RandomizedWorldBase:addBloodSplat(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: IsoGridSquare, arg1: InventoryItem)
 --- @param arg0 IsoGridSquare
---- @param arg1 String
+--- @param arg1 InventoryItem
 --- @return InventoryItem
 function RandomizedWorldBase:addItemOnGround(arg0, arg1) end
 
@@ -111,9 +109,8 @@ function RandomizedWorldBase:addItemOnGround(arg0, arg1) end
 function RandomizedWorldBase:addRandomItemOnGround(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: RoomDef, arg1: String, arg2: int)
 --- @param arg0 RoomDef
---- @param arg1 ArrayList
+--- @param arg1 String
 --- @param arg2 int
 --- @return void
 function RandomizedWorldBase:addRandomItemsOnGround(arg0, arg1, arg2) end
@@ -133,10 +130,10 @@ function RandomizedWorldBase:addTentNorthSouth(arg0, arg1, arg2) end
 function RandomizedWorldBase:addTentWestEast(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: String)
 --- @param arg0 IsoGridSquare
 --- @param arg1 String
 --- @return IsoObject
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: String)
 function RandomizedWorldBase:addTileObject(arg0, arg1) end
 
 --- @public
@@ -168,8 +165,6 @@ function RandomizedWorldBase:addTrailer(arg0, arg1, arg2, arg3, arg4, arg5) end
 function RandomizedWorldBase:addTraitOfBlood(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @overload fun(arg0: Zone, arg1: IsoGridSquare, arg2: IsoChunk, arg3: String, arg4: String, arg5: Integer, arg6: IsoDirections, arg7: String)
---- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String)
 --- @param arg0 Zone
 --- @param arg1 IsoGridSquare
 --- @param arg2 IsoChunk
@@ -177,10 +172,11 @@ function RandomizedWorldBase:addTraitOfBlood(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg4 String
 --- @param arg5 IsoDirections
 --- @return BaseVehicle
+--- @overload fun(arg0: Zone, arg1: IsoGridSquare, arg2: IsoChunk, arg3: String, arg4: String, arg5: Integer, arg6: IsoDirections, arg7: String)
+--- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String)
 function RandomizedWorldBase:addVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String)
 --- @param arg0 Zone
 --- @param arg1 IsoGridSquare
 --- @param arg2 IsoChunk
@@ -190,6 +186,7 @@ function RandomizedWorldBase:addVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @param arg6 IsoDirections
 --- @param arg7 String
 --- @return BaseVehicle
+--- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String)
 function RandomizedWorldBase:addVehicleFlipped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public

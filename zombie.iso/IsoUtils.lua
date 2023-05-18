@@ -9,12 +9,12 @@ IsoUtils = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
 --- @param arg3 float
 --- @return float
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float)
 function IsoUtils.DistanceManhatten(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -28,12 +28,12 @@ function IsoUtils.DistanceManhattenSquare(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
 --- @param arg3 float
 --- @return float
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float)
 function IsoUtils.DistanceTo(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -47,12 +47,12 @@ function IsoUtils.DistanceTo2D(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
 --- @param arg3 float
 --- @return float
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float)
 function IsoUtils.DistanceToSquared(arg0, arg1, arg2, arg3) end
 
 --- @public

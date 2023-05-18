@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DoubleServerOption: DoubleConfigOption
+--- @implement ServerOption
 DoubleServerOption = {};
 
 ------------------------------------

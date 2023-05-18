@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DataOutputStream: FilterOutputStream
+--- @implement DataOutput
 DataOutputStream = {};
 
 ------------------------------------
@@ -16,9 +17,9 @@ function DataOutputStream:flush() end
 function DataOutputStream:size() end
 
 --- @public
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
 --- @param arg0 int
 --- @return void
+--- @overload fun(arg0: byte[], arg1: int, arg2: int)
 function DataOutputStream:write(arg0) end
 
 --- @public

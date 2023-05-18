@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoChunkRegion: Object
+--- @implement IChunkRegion
 IsoChunkRegion = {};
 
 ------------------------------------

@@ -1,22 +1,52 @@
 --- @meta
 
 --- @class ArrayList: AbstractList
+--- @implement List
+--- @implement RandomAccess
+--- @implement Cloneable
+--- @implement Serializable
 ArrayList = {};
+
+------------------------------------
+---------- STATIC METHODS ----------
+------------------------------------
+
+--- @public
+--- @static
+--- @param arg0 Collection
+--- @return List
+function ArrayList.copyOf(arg0) end
+
+--- @public
+--- @static
+--- @return List
+--- @overload fun(arg0: Object)
+--- @overload fun(arg0: Object, arg1: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object)
+function ArrayList.of() end
+
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: int, arg1: Object)
 --- @param arg0 Object
 --- @return boolean
+--- @overload fun(arg0: int, arg1: Object)
 function ArrayList:add(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: Collection)
 --- @param arg0 Collection
 --- @return boolean
+--- @overload fun(arg0: int, arg1: Collection)
 function ArrayList:addAll(arg0) end
 
 --- @public
@@ -31,6 +61,11 @@ function ArrayList:clone() end
 --- @param arg0 Object
 --- @return boolean
 function ArrayList:contains(arg0) end
+
+--- @public
+--- @param arg0 Collection
+--- @return boolean
+function ArrayList:containsAll(arg0) end
 
 --- @public
 --- @param arg0 int
@@ -75,12 +110,11 @@ function ArrayList:iterator() end
 function ArrayList:lastIndexOf(arg0) end
 
 --- @public
---- @overload fun(arg0: int)
 --- @return ListIterator
+--- @overload fun(arg0: int)
 function ArrayList:listIterator() end
 
 --- @public
---- @overload fun(arg0: int)
 --- @param arg0 Object
 --- @return boolean
 function ArrayList:remove(arg0) end
@@ -131,8 +165,8 @@ function ArrayList:spliterator() end
 function ArrayList:subList(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: Object[])
 --- @return Object[]
+--- @overload fun(arg0: Object[])
 function ArrayList:toArray() end
 
 --- @public
@@ -145,7 +179,6 @@ function ArrayList:trimToSize() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Collection)
---- @overload fun(arg0: int)
 --- @return ArrayList
+--- @overload fun(arg0: Collection)
 function ArrayList.new() end

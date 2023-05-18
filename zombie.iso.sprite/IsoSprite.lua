@@ -46,11 +46,10 @@ function IsoSprite.getSheetGridIdFromName(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoSpriteManager, arg1: IsoSprite, arg2: int)
---- @overload fun(arg0: IsoSpriteManager, arg1: String, arg2: int)
 --- @param arg0 IsoSpriteManager
 --- @param arg1 int
 --- @return IsoSprite
+--- @overload fun(arg0: IsoSpriteManager, arg1: IsoSprite, arg2: int)
 function IsoSprite.getSprite(arg0, arg1) end
 
 --- @public
@@ -145,7 +144,6 @@ function IsoSprite:LoadFramesPcx(arg0, arg1, arg2) end
 function IsoSprite:LoadFramesReverseAltName(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @overload fun(arg0: String)
 --- @param arg0 IsoAnim
 --- @return void
 function IsoSprite:PlayAnim(arg0) end
@@ -163,7 +161,6 @@ function IsoSprite:PlayAnimUnlooped(arg0) end
 function IsoSprite:RenderGhostTile(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
@@ -172,6 +169,7 @@ function IsoSprite:RenderGhostTile(arg0, arg1, arg2) end
 --- @param arg5 float
 --- @param arg6 float
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float)
 function IsoSprite:RenderGhostTileColor(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -242,11 +240,11 @@ function IsoSprite:getType() end
 function IsoSprite:hasActiveModel() end
 
 --- @public
---- @overload fun(arg0: IsoDirections, arg1: int, arg2: int, arg3: boolean)
 --- @param arg0 IsoDirections
 --- @param arg1 int
 --- @param arg2 int
 --- @return boolean
+--- @overload fun(arg0: IsoDirections, arg1: int, arg2: int, arg3: boolean)
 function IsoSprite:isMaskClicked(arg0, arg1, arg2) end
 
 --- @public
@@ -263,9 +261,6 @@ function IsoSprite:load(arg0) end
 function IsoSprite:newInstance() end
 
 --- @public
---- @overload fun(arg0: IsoSpriteInstance, arg1: IsoObject, arg2: float, arg3: float, arg4: float, arg5: IsoDirections, arg6: float, arg7: float, arg8: ColorInfo, arg9: boolean)
---- @overload fun(arg0: IsoObject, arg1: float, arg2: float, arg3: float, arg4: IsoDirections, arg5: float, arg6: float, arg7: ColorInfo, arg8: boolean, arg9: Consumer)
---- @overload fun(arg0: IsoSpriteInstance, arg1: IsoObject, arg2: float, arg3: float, arg4: float, arg5: IsoDirections, arg6: float, arg7: float, arg8: ColorInfo, arg9: boolean, arg10: Consumer)
 --- @param arg0 IsoObject
 --- @param arg1 float
 --- @param arg2 float
@@ -276,6 +271,8 @@ function IsoSprite:newInstance() end
 --- @param arg7 ColorInfo
 --- @param arg8 boolean
 --- @return void
+--- @overload fun(arg0: IsoObject, arg1: float, arg2: float, arg3: float, arg4: IsoDirections, arg5: float, arg6: float, arg7: ColorInfo, arg8: boolean, arg9: Consumer)
+--- @overload fun(arg0: IsoSpriteInstance, arg1: IsoObject, arg2: float, arg3: float, arg4: float, arg5: IsoDirections, arg6: float, arg7: float, arg8: ColorInfo, arg9: boolean, arg10: Consumer)
 function IsoSprite:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
@@ -372,8 +369,8 @@ function IsoSprite:setTintMod(arg0) end
 function IsoSprite:setType(arg0) end
 
 --- @public
---- @overload fun(arg0: IsoSpriteInstance)
 --- @return void
+--- @overload fun(arg0: IsoSpriteInstance)
 function IsoSprite:update() end
 
 
@@ -382,6 +379,6 @@ function IsoSprite:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoSpriteManager)
 --- @return IsoSprite
+--- @overload fun(arg0: IsoSpriteManager)
 function IsoSprite.new() end

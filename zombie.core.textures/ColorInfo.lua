@@ -36,9 +36,9 @@ function ColorInfo:getR() end
 function ColorInfo:interp(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 --- @param arg0 ColorInfo
 --- @return ColorInfo
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 function ColorInfo:set(arg0) end
 
 --- @public
@@ -59,6 +59,6 @@ function ColorInfo:toString() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 --- @return ColorInfo
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 function ColorInfo.new() end

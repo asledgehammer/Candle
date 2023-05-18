@@ -45,10 +45,10 @@ function GameWindow.InitGameThread() end
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: int, arg2: String)
 --- @param arg0 String
 --- @param arg1 int
 --- @return void
+--- @overload fun(arg0: String, arg1: int, arg2: String)
 function GameWindow.LoadTexturePack(arg0, arg1) end
 
 --- @public
@@ -59,8 +59,7 @@ function GameWindow.LoadTexturePackDDS(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: ByteBuffer)
---- @param arg0 DataInputStream
+--- @param arg0 ByteBuffer
 --- @return String
 function GameWindow.ReadString(arg0) end
 
@@ -72,7 +71,6 @@ function GameWindow.ReadStringUTF(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: DataOutputStream, arg1: String)
 --- @param arg0 ByteBuffer
 --- @param arg1 String
 --- @return void

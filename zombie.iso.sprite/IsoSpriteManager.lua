@@ -9,9 +9,9 @@ IsoSpriteManager = {};
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: int)
 --- @param arg0 String
 --- @return IsoSprite
+--- @overload fun(arg0: String, arg1: int)
 function IsoSpriteManager:AddSprite(arg0) end
 
 --- @public
@@ -19,13 +19,12 @@ function IsoSpriteManager:AddSprite(arg0) end
 function IsoSpriteManager:Dispose() end
 
 --- @public
---- @overload fun(arg0: String, arg1: Color)
 --- @param arg0 String
 --- @return IsoSprite
+--- @overload fun(arg0: String, arg1: Color)
 function IsoSpriteManager:getOrAddSpriteCache(arg0) end
 
 --- @public
---- @overload fun(arg0: String)
 --- @param arg0 int
 --- @return IsoSprite
 function IsoSpriteManager:getSprite(arg0) end

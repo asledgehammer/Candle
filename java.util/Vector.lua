@@ -1,22 +1,52 @@
 --- @meta
 
 --- @class Vector: AbstractList
+--- @implement List
+--- @implement RandomAccess
+--- @implement Cloneable
+--- @implement Serializable
 Vector = {};
+
+------------------------------------
+---------- STATIC METHODS ----------
+------------------------------------
+
+--- @public
+--- @static
+--- @param arg0 Collection
+--- @return List
+function Vector.copyOf(arg0) end
+
+--- @public
+--- @static
+--- @return List
+--- @overload fun(arg0: Object)
+--- @overload fun(arg0: Object, arg1: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object)
+function Vector.of() end
+
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: int, arg1: Object)
 --- @param arg0 Object
 --- @return boolean
+--- @overload fun(arg0: int, arg1: Object)
 function Vector:add(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: Collection)
 --- @param arg0 Collection
 --- @return boolean
+--- @overload fun(arg0: int, arg1: Collection)
 function Vector:addAll(arg0) end
 
 --- @public
@@ -89,9 +119,9 @@ function Vector:get(arg0) end
 function Vector:hashCode() end
 
 --- @public
---- @overload fun(arg0: Object, arg1: int)
 --- @param arg0 Object
 --- @return int
+--- @overload fun(arg0: Object, arg1: int)
 function Vector:indexOf(arg0) end
 
 --- @public
@@ -113,18 +143,17 @@ function Vector:iterator() end
 function Vector:lastElement() end
 
 --- @public
---- @overload fun(arg0: Object, arg1: int)
 --- @param arg0 Object
 --- @return int
+--- @overload fun(arg0: Object, arg1: int)
 function Vector:lastIndexOf(arg0) end
 
 --- @public
---- @overload fun(arg0: int)
 --- @return ListIterator
+--- @overload fun(arg0: int)
 function Vector:listIterator() end
 
 --- @public
---- @overload fun(arg0: Object)
 --- @param arg0 int
 --- @return Object
 function Vector:remove(arg0) end
@@ -200,8 +229,8 @@ function Vector:spliterator() end
 function Vector:subList(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: Object[])
 --- @return Object[]
+--- @overload fun(arg0: Object[])
 function Vector:toArray() end
 
 --- @public
@@ -218,8 +247,7 @@ function Vector:trimToSize() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Collection)
---- @overload fun(arg0: int)
---- @overload fun(arg0: int, arg1: int)
 --- @return Vector
+--- @overload fun(arg0: Collection)
+--- @overload fun(arg0: int, arg1: int)
 function Vector.new() end

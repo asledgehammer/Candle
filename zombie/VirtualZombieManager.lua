@@ -30,10 +30,10 @@ function VirtualZombieManager:Reset() end
 function VirtualZombieManager:addDeadZombiesToMap(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: IsoChunk, arg1: IsoRoom, arg2: int, arg3: ArrayList)
 --- @param arg0 IsoChunk
 --- @param arg1 IsoRoom
 --- @return void
+--- @overload fun(arg0: IsoChunk, arg1: IsoRoom, arg2: int, arg3: ArrayList)
 function VirtualZombieManager:addIndoorZombiesToChunk(arg0, arg1) end
 
 --- @public
@@ -42,10 +42,10 @@ function VirtualZombieManager:addIndoorZombiesToChunk(arg0, arg1) end
 function VirtualZombieManager:addToReusable(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: RoomDef, arg2: boolean)
 --- @param arg0 int
 --- @param arg1 RoomDef
 --- @return ArrayList
+--- @overload fun(arg0: int, arg1: RoomDef, arg2: boolean)
 function VirtualZombieManager:addZombiesToMap(arg0, arg1) end
 
 --- @public
@@ -78,11 +78,10 @@ function VirtualZombieManager:createHordeFromTo(arg0, arg1, arg2, arg3, arg4) en
 function VirtualZombieManager:createRealZombie(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean, arg2: int)
---- @overload fun(arg0: int, arg1: int, arg2: boolean)
 --- @param arg0 int
 --- @param arg1 boolean
 --- @return IsoZombie
+--- @overload fun(arg0: int, arg1: int, arg2: boolean)
 function VirtualZombieManager:createRealZombieAlways(arg0, arg1) end
 
 --- @public

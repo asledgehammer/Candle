@@ -13,13 +13,12 @@ MainScreenState = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: Texture, arg1: int, arg2: int, arg3: int, arg4: int, arg5: Color)
 --- @param arg0 Texture
 --- @param arg1 int
 --- @param arg2 int
 --- @param arg3 int
 --- @param arg4 int
---- @param arg5 float
+--- @param arg5 Color
 --- @return void
 function MainScreenState.DrawTexture(arg0, arg1, arg2, arg3, arg4, arg5) end
 

@@ -25,7 +25,6 @@ function ErosionSeason.Reset() end
 ------------------------------------
 
 --- @public
---- @overload fun()
 --- @return Object
 function ErosionSeason:clone() end
 

@@ -74,9 +74,9 @@ function IsoWindowFrame.haveSheetRope(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoObject, arg1: boolean)
 --- @param arg0 IsoObject
 --- @return boolean
+--- @overload fun(arg0: IsoObject, arg1: boolean)
 function IsoWindowFrame.isWindowFrame(arg0) end
 
 --- @public

@@ -216,8 +216,7 @@ function Thermoregulator:reset() end
 function Thermoregulator:save(arg0) end
 
 --- @public
---- @overload fun(arg0: float)
---- @param arg0 Metabolics
+--- @param arg0 float
 --- @return void
 function Thermoregulator:setMetabolicTarget(arg0) end
 

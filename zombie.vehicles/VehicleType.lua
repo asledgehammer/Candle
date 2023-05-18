@@ -16,9 +16,9 @@ function VehicleType.Reset() end
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: Boolean)
 --- @param arg0 String
 --- @return VehicleType
+--- @overload fun(arg0: String, arg1: Boolean)
 function VehicleType.getRandomVehicleType(arg0) end
 
 --- @public

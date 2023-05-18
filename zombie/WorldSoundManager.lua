@@ -13,9 +13,6 @@ WorldSoundManager = {};
 function WorldSoundManager:KillCell() end
 
 --- @public
---- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean)
---- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float)
---- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float, arg9: boolean, arg10: boolean, arg11: boolean)
 --- @param arg0 Object
 --- @param arg1 int
 --- @param arg2 int
@@ -23,6 +20,9 @@ function WorldSoundManager:KillCell() end
 --- @param arg4 int
 --- @param arg5 int
 --- @return WorldSound
+--- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean)
+--- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float)
+--- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float, arg9: boolean, arg10: boolean, arg11: boolean)
 function WorldSoundManager:addSound(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -46,8 +46,7 @@ function WorldSoundManager:addSoundRepeating(arg0, arg1, arg2, arg3, arg4, arg5,
 function WorldSoundManager:getBiggestSoundZomb(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @overload fun(arg0: IsoZombie)
---- @param arg0 int
+--- @param arg0 IsoZombie
 --- @return float
 function WorldSoundManager:getHearingMultiplier(arg0) end
 

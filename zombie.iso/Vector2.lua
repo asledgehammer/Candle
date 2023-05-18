@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Vector2: Object
+--- @implement Cloneable
 Vector2 = {};
 
 ------------------------------------
@@ -78,7 +79,6 @@ function Vector2:angleBetween(arg0) end
 function Vector2:angleTo(arg0) end
 
 --- @public
---- @overload fun()
 --- @return Object
 function Vector2:clone() end
 
@@ -136,9 +136,9 @@ function Vector2:rotate(arg0) end
 function Vector2:scale(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float)
 --- @param arg0 Vector2
 --- @return Vector2
+--- @overload fun(arg0: float, arg1: float)
 function Vector2:set(arg0) end
 
 --- @public
@@ -189,7 +189,7 @@ function Vector2:toString() end
 ------------------------------------
 
 --- @public
+--- @return Vector2
 --- @overload fun(arg0: Vector2)
 --- @overload fun(arg0: float, arg1: float)
---- @return Vector2
 function Vector2.new() end

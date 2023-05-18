@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class OutputStream: Object
+--- @implement Closeable
+--- @implement Flushable
 OutputStream = {};
 
 ------------------------------------
@@ -26,10 +28,9 @@ function OutputStream:close() end
 function OutputStream:flush() end
 
 --- @public
---- @overload fun(arg0: int)
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
 --- @param arg0 byte[]
 --- @return void
+--- @overload fun(arg0: byte[], arg1: int, arg2: int)
 function OutputStream:write(arg0) end
 
 

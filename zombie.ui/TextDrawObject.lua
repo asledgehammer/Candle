@@ -25,13 +25,13 @@ function TextDrawObject.RenderBatch(arg0) end
 ------------------------------------
 
 --- @public
+--- @param arg0 double
+--- @param arg1 double
+--- @return void
 --- @overload fun(arg0: double, arg1: double, arg2: boolean)
 --- @overload fun(arg0: double, arg1: double, arg2: boolean, arg3: float)
 --- @overload fun(arg0: double, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: boolean)
 --- @overload fun(arg0: TextDrawHorizontal, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: boolean)
---- @param arg0 double
---- @param arg1 double
---- @return void
 function TextDrawObject:AddBatchedDraw(arg0, arg1) end
 
 --- @public
@@ -39,13 +39,13 @@ function TextDrawObject:AddBatchedDraw(arg0, arg1) end
 function TextDrawObject:Clear() end
 
 --- @public
+--- @param arg0 double
+--- @param arg1 double
+--- @return void
 --- @overload fun(arg0: double, arg1: double, arg2: boolean)
 --- @overload fun(arg0: double, arg1: double, arg2: boolean, arg3: float)
 --- @overload fun(arg0: double, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: boolean)
 --- @overload fun(arg0: TextDrawHorizontal, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: boolean)
---- @param arg0 double
---- @param arg1 double
---- @return void
 function TextDrawObject:Draw(arg0, arg1) end
 
 --- @public
@@ -61,10 +61,10 @@ function TextDrawObject:Draw(arg0, arg1) end
 function TextDrawObject:DrawRaw(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @overload fun(arg0: String, arg1: int)
---- @overload fun(arg0: UIFont, arg1: String, arg2: int)
 --- @param arg0 String
 --- @return void
+--- @overload fun(arg0: String, arg1: int)
+--- @overload fun(arg0: UIFont, arg1: String, arg2: int)
 function TextDrawObject:ReadString(arg0) end
 
 --- @public
@@ -169,13 +169,11 @@ function TextDrawObject:setCustomImageMaxDimensions(arg0) end
 function TextDrawObject:setCustomTag(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 function TextDrawObject:setDefaultColors(arg0, arg1, arg2) end
 
 --- @public
@@ -204,7 +202,6 @@ function TextDrawObject:setEqualizeLineHeights(arg0) end
 function TextDrawObject:setHearRange(arg0) end
 
 --- @public
---- @overload fun(arg0: TextDrawHorizontal)
 --- @param arg0 String
 --- @return void
 function TextDrawObject:setHorizontalAlign(arg0) end
@@ -220,13 +217,11 @@ function TextDrawObject:setInternalTickClock(arg0) end
 function TextDrawObject:setMaxCharsPerLine(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 function TextDrawObject:setOutlineColors(arg0, arg1, arg2) end
 
 --- @public
@@ -260,8 +255,8 @@ function TextDrawObject:setValidImages(arg0) end
 function TextDrawObject:setVisibleRadius(arg0) end
 
 --- @public
---- @overload fun(arg0: float)
 --- @return float
+--- @overload fun(arg0: float)
 function TextDrawObject:updateInternalTickClock() end
 
 
@@ -270,7 +265,7 @@ function TextDrawObject:updateInternalTickClock() end
 ------------------------------------
 
 --- @public
+--- @return TextDrawObject
 --- @overload fun(arg0: int, arg1: int, arg2: int, arg3: boolean)
 --- @overload fun(arg0: int, arg1: int, arg2: int, arg3: boolean, arg4: boolean, arg5: boolean, arg6: boolean, arg7: boolean, arg8: boolean)
---- @return TextDrawObject
 function TextDrawObject.new() end

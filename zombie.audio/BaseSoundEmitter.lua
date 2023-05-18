@@ -21,8 +21,7 @@ function BaseSoundEmitter:hasSustainPoints(arg0) end
 function BaseSoundEmitter:isEmpty() end
 
 --- @public
---- @overload fun(arg0: String)
---- @param arg0 long
+--- @param arg0 String
 --- @return boolean
 function BaseSoundEmitter:isPlaying(arg0) end
 
@@ -43,21 +42,17 @@ function BaseSoundEmitter:playAmbientSound(arg0) end
 function BaseSoundEmitter:playClip(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: String, arg1: IsoGameCharacter)
---- @overload fun(arg0: String, arg1: IsoGridSquare)
---- @overload fun(arg0: String, arg1: boolean)
---- @overload fun(arg0: String, arg1: IsoObject)
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
 --- @param arg0 String
 --- @return long
+--- @overload fun(arg0: String, arg1: IsoGameCharacter)
+--- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
 function BaseSoundEmitter:playSound(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: IsoObject)
---- @overload fun(arg0: String, arg1: boolean, arg2: IsoObject)
 --- @param arg0 String
 --- @param arg1 IsoGridSquare
 --- @return long
+--- @overload fun(arg0: String, arg1: boolean, arg2: IsoObject)
 function BaseSoundEmitter:playSoundImpl(arg0, arg1) end
 
 --- @public

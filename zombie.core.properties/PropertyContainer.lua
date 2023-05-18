@@ -23,22 +23,18 @@ function PropertyContainer:Clear() end
 function PropertyContainer:CreateKeySet() end
 
 --- @public
---- @overload fun(arg0: IsoFlagType)
---- @overload fun(arg0: String)
 --- @param arg0 Double
 --- @return boolean
 function PropertyContainer:Is(arg0) end
 
 --- @public
---- @overload fun(arg0: IsoFlagType, arg1: String)
---- @overload fun(arg0: String, arg1: String)
---- @overload fun(arg0: String, arg1: String, arg2: boolean)
 --- @param arg0 IsoFlagType
 --- @return void
+--- @overload fun(arg0: IsoFlagType, arg1: String)
+--- @overload fun(arg0: String, arg1: String, arg2: boolean)
 function PropertyContainer:Set(arg0) end
 
 --- @public
---- @overload fun(arg0: IsoFlagType)
 --- @param arg0 String
 --- @return void
 function PropertyContainer:UnSet(arg0) end

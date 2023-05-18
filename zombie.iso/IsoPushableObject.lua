@@ -52,8 +52,8 @@ function IsoPushableObject:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int)
 --- @param arg0 IsoCell
 --- @return IsoPushableObject
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
+--- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int)
 function IsoPushableObject.new(arg0) end

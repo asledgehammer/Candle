@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class TextServerOption: StringConfigOption
+--- @implement ServerOption
 TextServerOption = {};
 
 ------------------------------------

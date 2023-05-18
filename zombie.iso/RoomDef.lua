@@ -31,9 +31,9 @@ function RoomDef:forEachChunk(arg0) end
 function RoomDef:getArea() end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @param arg0 IsoChunk
 --- @return float
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 function RoomDef:getAreaOverlapping(arg0) end
 
 --- @public

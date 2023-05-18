@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoPlayer: IsoLivingCharacter
+--- @implement IHumanVisual
 --- @field public assumedPlayer int
 --- @field public DEATH_MUSIC_NAME String
 --- @field public isTestAIMode boolean
@@ -137,9 +138,9 @@ function IsoPlayer.setLocalPlayer(arg0, arg1) end
 function IsoPlayer:AttemptAttack() end
 
 --- @public
---- @overload fun(arg0: float, arg1: boolean, arg2: String)
 --- @param arg0 float
 --- @return boolean
+--- @overload fun(arg0: float, arg1: boolean, arg2: String)
 function IsoPlayer:DoAttack(arg0) end
 
 --- @public
@@ -247,7 +248,6 @@ function IsoPlayer:canClimbOverWall(arg0) end
 function IsoPlayer:canSeePlayerStats() end
 
 --- @public
---- @overload fun(arg0: UdpConnection)
 --- @param arg0 IsoPlayer
 --- @return boolean
 function IsoPlayer:checkCanSeeClient(arg0) end
@@ -427,8 +427,8 @@ function IsoPlayer:getInvAimingMod() end
 function IsoPlayer:getInvAimingRangeMod() end
 
 --- @public
---- @overload fun(arg0: ItemVisuals)
 --- @return ItemVisuals
+--- @overload fun(arg0: ItemVisuals)
 function IsoPlayer:getItemVisuals() end
 
 --- @public
@@ -606,8 +606,8 @@ function IsoPlayer:getTurnDelta() end
 function IsoPlayer:getUseableVehicle() end
 
 --- @public
---- @overload fun(arg0: Boolean)
 --- @return String
+--- @overload fun(arg0: Boolean)
 function IsoPlayer:getUsername() end
 
 --- @public
@@ -726,6 +726,10 @@ function IsoPlayer:isDoingActionThatCanBeCancelled() end
 --- @public
 --- @return boolean
 function IsoPlayer:isFactionPvp() end
+
+--- @public
+--- @return boolean
+function IsoPlayer:isFemale() end
 
 --- @public
 --- @return boolean
@@ -896,6 +900,10 @@ function IsoPlayer:isWearingNightVisionGoggles() end
 
 --- @public
 --- @return boolean
+function IsoPlayer:isZombie() end
+
+--- @public
+--- @return boolean
 function IsoPlayer:isbChangeCharacterDebounce() end
 
 --- @public
@@ -907,9 +915,9 @@ function IsoPlayer:isbCouldBeSeenThisFrame() end
 function IsoPlayer:isbSeenThisFrame() end
 
 --- @public
---- @overload fun(arg0: ByteBuffer, arg1: int, arg2: boolean)
 --- @param arg0 String
 --- @return void
+--- @overload fun(arg0: ByteBuffer, arg1: int, arg2: boolean)
 function IsoPlayer:load(arg0) end
 
 --- @public
@@ -976,9 +984,9 @@ function IsoPlayer:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 function IsoPlayer:renderlast() end
 
 --- @public
+--- @return void
 --- @overload fun(arg0: String)
 --- @overload fun(arg0: ByteBuffer, arg1: boolean)
---- @return void
 function IsoPlayer:save() end
 
 --- @public
@@ -1191,7 +1199,6 @@ function IsoPlayer:setLastSpotted(arg0) end
 function IsoPlayer:setMaxWeightDelta(arg0) end
 
 --- @public
---- @overload fun(arg0: Material)
 --- @param arg0 String
 --- @return void
 function IsoPlayer:setMeleeHitSurface(arg0) end
@@ -1419,7 +1426,7 @@ function IsoPlayer:zombiesSwitchOwnershipEachUpdate() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: int, arg3: int, arg4: int)
 --- @param arg0 IsoCell
 --- @return IsoPlayer
+--- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: int, arg3: int, arg4: int)
 function IsoPlayer.new(arg0) end

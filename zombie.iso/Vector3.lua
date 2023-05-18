@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Vector3: Object
+--- @implement Cloneable
 Vector3 = {};
 
 ------------------------------------
@@ -48,8 +49,7 @@ function Vector3.sub(arg0, arg1, arg2) end
 function Vector3:add(arg0) end
 
 --- @public
---- @overload fun(arg0: Vector2)
---- @param arg0 Vector3
+--- @param arg0 Vector2
 --- @return Vector3
 function Vector3:addToThis(arg0) end
 
@@ -64,7 +64,6 @@ function Vector3:aimAt(arg0) end
 function Vector3:angleTo(arg0) end
 
 --- @public
---- @overload fun()
 --- @return Object
 function Vector3:clone() end
 
@@ -120,9 +119,9 @@ function Vector3:rotate(arg0) end
 function Vector3:rotatey(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float)
 --- @param arg0 Vector3
 --- @return Vector3
+--- @overload fun(arg0: float, arg1: float, arg2: float)
 function Vector3:set(arg0) end
 
 --- @public
@@ -165,7 +164,7 @@ function Vector3:toString() end
 ------------------------------------
 
 --- @public
+--- @return Vector3
 --- @overload fun(arg0: Vector3)
 --- @overload fun(arg0: float, arg1: float, arg2: float)
---- @return Vector3
 function Vector3.new() end

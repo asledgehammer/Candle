@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoZombie: IsoGameCharacter
+--- @implement IHumanVisual
 --- @field public AllowRepathDelayMax int
 --- @field public AttackAnimTimeMax int
 --- @field public CRAWLER_DAMAGE_DOT float
@@ -34,8 +35,7 @@ IsoZombie = {};
 function IsoZombie:DoCorpseInventory() end
 
 --- @public
---- @overload fun(arg0: String)
---- @param arg0 float
+--- @param arg0 String
 --- @return void
 function IsoZombie:DoFootstepSound(arg0) end
 
@@ -57,24 +57,24 @@ function IsoZombie:DoZombieStats() end
 function IsoZombie:GetAnimSetName() end
 
 --- @public
---- @overload fun(arg0: BaseVehicle, arg1: float, arg2: boolean, arg3: float, arg4: float)
---- @overload fun(arg0: HandWeapon, arg1: IsoGameCharacter, arg2: float, arg3: boolean, arg4: float, arg5: boolean)
 --- @param arg0 BaseVehicle
 --- @param arg1 float
 --- @param arg2 boolean
 --- @param arg3 Vector2
 --- @return float
+--- @overload fun(arg0: BaseVehicle, arg1: float, arg2: boolean, arg3: float, arg4: float)
+--- @overload fun(arg0: HandWeapon, arg1: IsoGameCharacter, arg2: float, arg3: boolean, arg4: float, arg5: boolean)
 function IsoZombie:Hit(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @overload fun(arg0: SurvivorDesc)
 --- @return void
+--- @overload fun(arg0: SurvivorDesc)
 function IsoZombie:InitSpritePartsZombie() end
 
 --- @public
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
 --- @param arg0 IsoGameCharacter
 --- @return void
+--- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
 function IsoZombie:Kill(arg0) end
 
 --- @public
@@ -238,8 +238,8 @@ function IsoZombie:getHitTime() end
 function IsoZombie:getHumanVisual() end
 
 --- @public
---- @overload fun(arg0: ItemVisuals)
 --- @return ItemVisuals
+--- @overload fun(arg0: ItemVisuals)
 function IsoZombie:getItemVisuals() end
 
 --- @public
@@ -370,6 +370,10 @@ function IsoZombie:isFakeDead() end
 
 --- @public
 --- @return boolean
+function IsoZombie:isFemale() end
+
+--- @public
+--- @return boolean
 function IsoZombie:isForceEatingAnimation() end
 
 --- @public
@@ -478,8 +482,8 @@ function IsoZombie:isVehicleCollisionActive(arg0) end
 function IsoZombie:isZombie() end
 
 --- @public
---- @overload fun(arg0: IsoMovingObject)
 --- @return boolean
+--- @overload fun(arg0: IsoMovingObject)
 function IsoZombie:isZombieAttacking() end
 
 --- @public
@@ -605,10 +609,10 @@ function IsoZombie:setCrawlerType(arg0) end
 function IsoZombie:setDressInRandomOutfit(arg0) end
 
 --- @public
---- @overload fun(arg0: IsoMovingObject, arg1: boolean, arg2: float)
 --- @param arg0 IsoMovingObject
 --- @param arg1 boolean
 --- @return void
+--- @overload fun(arg0: IsoMovingObject, arg1: boolean, arg2: float)
 function IsoZombie:setEatBodyTarget(arg0, arg1) end
 
 --- @public
@@ -717,9 +721,9 @@ function IsoZombie:setTarget(arg0) end
 function IsoZombie:setTargetSeenTime(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int)
 --- @param arg0 float
 --- @return void
+--- @overload fun(arg0: int, arg1: int)
 function IsoZombie:setThumpCondition(arg0) end
 
 --- @public
@@ -827,7 +831,7 @@ function IsoZombie:writeInventory(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: int)
 --- @param arg0 IsoCell
 --- @return IsoZombie
+--- @overload fun(arg0: IsoCell, arg1: SurvivorDesc, arg2: int)
 function IsoZombie.new(arg0) end

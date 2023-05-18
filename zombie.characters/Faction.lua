@@ -40,15 +40,13 @@ function Faction.getFactions() end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoPlayer)
 --- @param arg0 String
 --- @return Faction
 function Faction.getPlayerFaction(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: String)
---- @param arg0 IsoPlayer
+--- @param arg0 String
 --- @return boolean
 function Faction.isAlreadyInFaction(arg0) end
 
@@ -163,6 +161,6 @@ function Faction:writeToBuffer(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: String)
 --- @return Faction
+--- @overload fun(arg0: String, arg1: String)
 function Faction.new() end

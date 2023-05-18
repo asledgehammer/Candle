@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class IsoWindow: IsoObject
+--- @implement BarricadeAble
+--- @implement Thumpable
 IsoWindow = {};
 
 ------------------------------------
@@ -53,9 +55,9 @@ function IsoWindow.isSheetRopeHere(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoGridSquare, arg1: boolean)
 --- @param arg0 IsoGridSquare
 --- @return boolean
+--- @overload fun(arg0: IsoGridSquare, arg1: boolean)
 function IsoWindow.isTopOfSheetRopeHere(arg0) end
 
 --- @public
@@ -77,10 +79,9 @@ function IsoWindow.removeSheetRope(arg0, arg1, arg2) end
 function IsoWindow:AttackObject(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: IsoMovingObject)
---- @overload fun(arg0: float, arg1: boolean)
 --- @param arg0 float
 --- @return void
+--- @overload fun(arg0: float, arg1: boolean)
 function IsoWindow:Damage(arg0) end
 
 --- @public
@@ -127,8 +128,7 @@ function IsoWindow:WeaponHit(arg0, arg1) end
 function IsoWindow:addBarricadesDebug(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: boolean)
---- @param arg0 IsoMovingObject
+--- @param arg0 boolean
 --- @return void
 function IsoWindow:addBrokenGlass(arg0) end
 
@@ -193,13 +193,13 @@ function IsoWindow:getBarricadeOppositeCharacter(arg0) end
 function IsoWindow:getFacingPosition(arg0) end
 
 --- @public
---- @overload fun(arg0: IsoGridSquare)
 --- @return IsoGameCharacter
+--- @overload fun(arg0: IsoGridSquare)
 function IsoWindow:getFirstCharacterClimbingThrough() end
 
 --- @public
---- @overload fun(arg0: IsoGridSquare)
 --- @return IsoGameCharacter
+--- @overload fun(arg0: IsoGridSquare)
 function IsoWindow:getFirstCharacterClosing() end
 
 --- @public
@@ -229,6 +229,10 @@ function IsoWindow:getOppositeSquare() end
 --- @public
 --- @return IsoSprite
 function IsoWindow:getSmashedSprite() end
+
+--- @public
+--- @return IsoGridSquare
+function IsoWindow:getSquare() end
 
 --- @public
 --- @return float
@@ -373,9 +377,9 @@ function IsoWindow:setSmashed(arg0) end
 function IsoWindow:setSmashedSprite(arg0) end
 
 --- @public
+--- @return void
 --- @overload fun(arg0: boolean)
 --- @overload fun(arg0: boolean, arg1: boolean)
---- @return void
 function IsoWindow:smashWindow() end
 
 --- @public
@@ -397,7 +401,7 @@ function IsoWindow:syncIsoObjectSend(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean)
 --- @param arg0 IsoCell
 --- @return IsoWindow
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean)
 function IsoWindow.new(arg0) end

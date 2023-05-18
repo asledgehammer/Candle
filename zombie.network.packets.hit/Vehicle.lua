@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class Vehicle: Instance
+--- @implement IPositional
+--- @implement INetworkPacket
 Vehicle = {};
 
 ------------------------------------
@@ -10,6 +12,10 @@ Vehicle = {};
 --- @public
 --- @return String
 function Vehicle:getDescription() end
+
+--- @public
+--- @return int
+function Vehicle:getPacketSizeBytes() end
 
 --- @public
 --- @return float
@@ -22,6 +28,12 @@ function Vehicle:getY() end
 --- @public
 --- @return boolean
 function Vehicle:isConsistent() end
+
+--- @public
+--- @param arg0 UdpConnection
+--- @param arg1 String
+--- @return void
+function Vehicle:log(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer

@@ -44,7 +44,7 @@ function IsoMolotovCocktail:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: HandWeapon, arg7: IsoGameCharacter)
 --- @param arg0 IsoCell
 --- @return IsoMolotovCocktail
+--- @overload fun(arg0: IsoCell, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: HandWeapon, arg7: IsoGameCharacter)
 function IsoMolotovCocktail.new(arg0) end

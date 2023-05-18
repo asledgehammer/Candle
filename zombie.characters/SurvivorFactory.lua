@@ -18,9 +18,9 @@ function SurvivorFactory.CreateFamily(arg0) end
 
 --- @public
 --- @static
+--- @return SurvivorDesc
 --- @overload fun(arg0: SurvivorType)
 --- @overload fun(arg0: SurvivorType, arg1: boolean)
---- @return SurvivorDesc
 function SurvivorFactory.CreateSurvivor() end
 
 --- @public

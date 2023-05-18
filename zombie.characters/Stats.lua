@@ -121,9 +121,9 @@ function Stats:getVisibleZombies() end
 function Stats:isTripping() end
 
 --- @public
---- @overload fun(arg0: ByteBuffer, arg1: int)
 --- @param arg0 DataInputStream
 --- @return void
+--- @overload fun(arg0: ByteBuffer, arg1: int)
 function Stats:load(arg0) end
 
 --- @public
@@ -131,8 +131,7 @@ function Stats:load(arg0) end
 function Stats:resetStats() end
 
 --- @public
---- @overload fun(arg0: ByteBuffer)
---- @param arg0 DataOutputStream
+--- @param arg0 ByteBuffer
 --- @return void
 function Stats:save(arg0) end
 

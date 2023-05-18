@@ -101,14 +101,12 @@ function ChatBase:packMessage(arg0, arg1) end
 function ChatBase:removeMember(arg0) end
 
 --- @public
---- @overload fun(arg0: ChatMessage)
 --- @param arg0 ServerChatMessage
 --- @return void
 function ChatBase:sendMessageToChatMembers(arg0) end
 
 --- @public
---- @overload fun(arg0: UdpConnection, arg1: ChatMessage)
---- @param arg0 short
+--- @param arg0 UdpConnection
 --- @param arg1 ChatMessage
 --- @return void
 function ChatBase:sendMessageToPlayer(arg0, arg1) end
@@ -119,7 +117,6 @@ function ChatBase:sendMessageToPlayer(arg0, arg1) end
 function ChatBase:sendPlayerJoinChatPacket(arg0) end
 
 --- @public
---- @overload fun(arg0: short)
 --- @param arg0 UdpConnection
 --- @return void
 function ChatBase:sendPlayerLeaveChatPacket(arg0) end
@@ -151,9 +148,9 @@ function ChatBase:setShowTimestamp(arg0) end
 function ChatBase:setShowTitle(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: String)
 --- @param arg0 ChatMessage
 --- @return void
+--- @overload fun(arg0: String, arg1: String)
 function ChatBase:showMessage(arg0) end
 
 --- @public
@@ -172,9 +169,9 @@ function ChatBase:unpackMessage(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: ByteBuffer, arg1: ChatType, arg2: ChatTab, arg3: IsoPlayer)
 --- @param arg0 int
 --- @param arg1 ChatType
 --- @param arg2 ChatTab
 --- @return ChatBase
+--- @overload fun(arg0: ByteBuffer, arg1: ChatType, arg2: ChatTab, arg3: IsoPlayer)
 function ChatBase.new(arg0, arg1, arg2) end

@@ -49,6 +49,6 @@ function EventSound:setStorySounds(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String)
 --- @return EventSound
+--- @overload fun(arg0: String)
 function EventSound.new() end

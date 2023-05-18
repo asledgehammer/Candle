@@ -9,10 +9,10 @@ SafeHouse = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: String, arg5: boolean)
 --- @param arg0 IsoGridSquare
 --- @param arg1 IsoPlayer
 --- @return SafeHouse
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: String, arg5: boolean)
 function SafeHouse.addSafeHouse(arg0, arg1) end
 
 --- @public
@@ -35,9 +35,9 @@ function SafeHouse.clearSafehouseList() end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @param arg0 IsoGridSquare
 --- @return SafeHouse
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 function SafeHouse.getSafeHouse(arg0) end
 
 --- @public
@@ -47,8 +47,7 @@ function SafeHouse.getSafehouseList() end
 
 --- @public
 --- @static
---- @overload fun(arg0: String)
---- @param arg0 IsoPlayer
+--- @param arg0 String
 --- @return SafeHouse
 function SafeHouse.hasSafehouse(arg0) end
 
@@ -95,7 +94,6 @@ function SafeHouse.updateSafehousePlayersConnected() end
 function SafeHouse:addPlayer(arg0) end
 
 --- @public
---- @overload fun(arg0: String)
 --- @param arg0 IsoPlayer
 --- @return SafeHouse
 function SafeHouse:alreadyHaveSafehouse(arg0) end
@@ -179,7 +177,6 @@ function SafeHouse:isRespawnInSafehouse(arg0) end
 function SafeHouse:kickOutOfSafehouse(arg0) end
 
 --- @public
---- @overload fun(arg0: String)
 --- @param arg0 IsoPlayer
 --- @return boolean
 function SafeHouse:playerAllowed(arg0) end
@@ -190,9 +187,9 @@ function SafeHouse:playerAllowed(arg0) end
 function SafeHouse:removePlayer(arg0) end
 
 --- @public
---- @overload fun(arg0: IsoPlayer, arg1: boolean)
 --- @param arg0 IsoPlayer
 --- @return void
+--- @overload fun(arg0: IsoPlayer, arg1: boolean)
 function SafeHouse:removeSafeHouse(arg0) end
 
 --- @public

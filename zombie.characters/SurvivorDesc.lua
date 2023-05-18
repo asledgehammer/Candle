@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SurvivorDesc: Object
+--- @implement IHumanVisual
 --- @field public HairCommonColors ArrayList
 --- @field public TrouserCommonColors ArrayList
 SurvivorDesc = {};
@@ -122,8 +123,8 @@ function SurvivorDesc:getLoner() end
 function SurvivorDesc:getLoyalty() end
 
 --- @public
---- @overload fun(arg0: SurvivorDesc)
 --- @return HashMap
+--- @overload fun(arg0: SurvivorDesc)
 function SurvivorDesc:getMetCount() end
 
 --- @public
@@ -329,7 +330,6 @@ function SurvivorDesc:setWornItem(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: SurvivorDesc)
---- @overload fun(arg0: boolean)
 --- @return SurvivorDesc
+--- @overload fun(arg0: SurvivorDesc)
 function SurvivorDesc.new() end

@@ -99,7 +99,7 @@ function Perk:toString() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: Perk)
 --- @param arg0 String
 --- @return Perk
+--- @overload fun(arg0: String, arg1: Perk)
 function Perk.new(arg0) end

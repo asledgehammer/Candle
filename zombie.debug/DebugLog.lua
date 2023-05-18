@@ -48,6 +48,12 @@ function DebugLog.enableLog(arg0, arg1) end
 
 --- @public
 --- @static
+--- @param arg0 DebugType
+--- @param arg1 LogSeverity
+--- @param arg2 String
+--- @param arg3 Object
+--- @param arg4 String
+--- @return String
 --- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object)
 --- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object)
 --- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object)
@@ -57,12 +63,6 @@ function DebugLog.enableLog(arg0, arg1) end
 --- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object)
 --- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object)
 --- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object)
---- @param arg0 DebugType
---- @param arg1 LogSeverity
---- @param arg2 String
---- @param arg3 Object
---- @param arg4 String
---- @return String
 function DebugLog.formatString(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
@@ -100,9 +100,8 @@ function DebugLog.isEnabled(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: LogSeverity, arg1: DebugType)
---- @param arg0 DebugType
---- @param arg1 LogSeverity
+--- @param arg0 LogSeverity
+--- @param arg1 DebugType
 --- @return boolean
 function DebugLog.isLogEnabled(arg0, arg1) end
 
@@ -113,10 +112,9 @@ function DebugLog.load() end
 
 --- @public
 --- @static
---- @overload fun(arg0: Object)
---- @overload fun(arg0: DebugType, arg1: String)
---- @param arg0 String
+--- @param arg0 Object
 --- @return void
+--- @overload fun(arg0: DebugType, arg1: String)
 function DebugLog.log(arg0) end
 
 --- @public

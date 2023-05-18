@@ -123,6 +123,6 @@ function NonPvpZone:syncNonPvpZone(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: int)
 --- @return NonPvpZone
+--- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: int)
 function NonPvpZone.new() end

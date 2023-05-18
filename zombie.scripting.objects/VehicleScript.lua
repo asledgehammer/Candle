@@ -188,9 +188,9 @@ function VehicleScript:getMechanicType() end
 function VehicleScript:getModel() end
 
 --- @public
---- @overload fun(arg0: String, arg1: ArrayList)
 --- @param arg0 String
 --- @return Model
+--- @overload fun(arg0: String, arg1: ArrayList)
 function VehicleScript:getModelById(arg0) end
 
 --- @public
@@ -363,7 +363,6 @@ function VehicleScript:getWheelFriction() end
 function VehicleScript:globMatch(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: int)
 --- @param arg0 ModelAttachment
 --- @return ModelAttachment
 function VehicleScript:removeAttachment(arg0) end

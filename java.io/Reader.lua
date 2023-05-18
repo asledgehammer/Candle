@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class Reader: Object
+--- @implement Readable
+--- @implement Closeable
 Reader = {};
 
 ------------------------------------
@@ -31,10 +33,9 @@ function Reader:mark(arg0) end
 function Reader:markSupported() end
 
 --- @public
---- @overload fun(arg0: char[])
---- @overload fun(arg0: CharBuffer)
---- @overload fun(arg0: char[], arg1: int, arg2: int)
 --- @return int
+--- @overload fun(arg0: char[])
+--- @overload fun(arg0: char[], arg1: int, arg2: int)
 function Reader:read() end
 
 --- @public

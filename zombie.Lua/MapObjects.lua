@@ -9,7 +9,6 @@ MapObjects = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: int)
 --- @param arg0 KahluaTable
 --- @param arg1 LuaClosure
 --- @param arg2 int
@@ -18,7 +17,6 @@ function MapObjects.OnLoadWithSprite(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @overload fun(arg0: KahluaTable, arg1: LuaClosure, arg2: int)
 --- @param arg0 String
 --- @param arg1 LuaClosure
 --- @param arg2 int

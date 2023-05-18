@@ -36,10 +36,9 @@ function IsoDirections.cardinalFromAngle(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: Vector2)
---- @overload fun(arg0: float, arg1: float)
---- @param arg0 float
+--- @param arg0 Vector2
 --- @return IsoDirections
+--- @overload fun(arg0: float, arg1: float)
 function IsoDirections.fromAngle(arg0) end
 
 --- @public
@@ -87,13 +86,13 @@ function IsoDirections.values() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: int)
 --- @return IsoDirections
+--- @overload fun(arg0: int)
 function IsoDirections:RotLeft() end
 
 --- @public
---- @overload fun(arg0: int)
 --- @return IsoDirections
+--- @overload fun(arg0: int)
 function IsoDirections:RotRight() end
 
 --- @public

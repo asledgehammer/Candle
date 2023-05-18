@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMannequin: IsoObject
+--- @implement IHumanVisual
 IsoMannequin = {};
 
 ------------------------------------
@@ -198,7 +199,7 @@ function IsoMannequin:wearItem(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
 --- @param arg0 IsoCell
 --- @return IsoMannequin
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
 function IsoMannequin.new(arg0) end

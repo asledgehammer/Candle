@@ -37,16 +37,16 @@ function DateFormat.getAvailableLocales() end
 
 --- @public
 --- @static
+--- @return DateFormat
 --- @overload fun(arg0: int)
 --- @overload fun(arg0: int, arg1: Locale)
---- @return DateFormat
 function DateFormat.getDateInstance() end
 
 --- @public
 --- @static
+--- @return DateFormat
 --- @overload fun(arg0: int, arg1: int)
 --- @overload fun(arg0: int, arg1: int, arg2: Locale)
---- @return DateFormat
 function DateFormat.getDateTimeInstance() end
 
 --- @public
@@ -56,9 +56,9 @@ function DateFormat.getInstance() end
 
 --- @public
 --- @static
+--- @return DateFormat
 --- @overload fun(arg0: int)
 --- @overload fun(arg0: int, arg1: Locale)
---- @return DateFormat
 function DateFormat.getTimeInstance() end
 
 
@@ -76,10 +76,9 @@ function DateFormat:clone() end
 function DateFormat:equals(arg0) end
 
 --- @public
---- @overload fun(arg0: Object, arg1: StringBuffer, arg2: FieldPosition)
---- @overload fun(arg0: Date, arg1: StringBuffer, arg2: FieldPosition)
 --- @param arg0 Date
 --- @return String
+--- @overload fun(arg0: Object, arg1: StringBuffer, arg2: FieldPosition)
 function DateFormat:format(arg0) end
 
 --- @public
@@ -103,9 +102,9 @@ function DateFormat:hashCode() end
 function DateFormat:isLenient() end
 
 --- @public
---- @overload fun(arg0: String, arg1: ParsePosition)
 --- @param arg0 String
 --- @return Date
+--- @overload fun(arg0: String, arg1: ParsePosition)
 function DateFormat:parse(arg0) end
 
 --- @public

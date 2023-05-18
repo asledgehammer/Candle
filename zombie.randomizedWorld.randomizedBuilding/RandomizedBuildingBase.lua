@@ -38,12 +38,12 @@ function RandomizedBuildingBase:addBarricade(arg0, arg1) end
 function RandomizedBuildingBase:addRandomRangedWeapon(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float)
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int)
 --- @param arg0 String
 --- @param arg1 IsoGridSquare
 --- @param arg2 IsoObject
 --- @return InventoryItem
+--- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float)
+--- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int)
 function RandomizedBuildingBase:addWorldItem(arg0, arg1, arg2) end
 
 --- @public

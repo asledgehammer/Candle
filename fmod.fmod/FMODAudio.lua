@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FMODAudio: Object
+--- @implement Audio
 FMODAudio = {};
 
 ------------------------------------

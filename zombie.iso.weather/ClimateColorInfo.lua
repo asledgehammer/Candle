@@ -63,15 +63,15 @@ function ClimateColorInfo:save(arg0) end
 function ClimateColorInfo:scale(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 --- @param arg0 Color
 --- @return void
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 function ClimateColorInfo:setExterior(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 --- @param arg0 Color
 --- @return void
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 function ClimateColorInfo:setInterior(arg0) end
 
 --- @public
@@ -90,7 +90,7 @@ function ClimateColorInfo:write(arg0) end
 ------------------------------------
 
 --- @public
+--- @return ClimateColorInfo
 --- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 --- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float)
---- @return ClimateColorInfo
 function ClimateColorInfo.new() end

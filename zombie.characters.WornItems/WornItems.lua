@@ -90,7 +90,6 @@ function WornItems:size() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: WornItems)
 --- @param arg0 BodyLocationGroup
 --- @return WornItems
 function WornItems.new(arg0) end

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ChatMessage: Object
+--- @implement Cloneable
 ChatMessage = {};
 
 ------------------------------------
@@ -8,7 +9,6 @@ ChatMessage = {};
 ------------------------------------
 
 --- @public
---- @overload fun()
 --- @return ChatMessage
 function ChatMessage:clone() end
 
@@ -180,8 +180,8 @@ function ChatMessage:toString() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: ChatBase, arg1: LocalDateTime, arg2: String)
 --- @param arg0 ChatBase
 --- @param arg1 String
 --- @return ChatMessage
+--- @overload fun(arg0: ChatBase, arg1: LocalDateTime, arg2: String)
 function ChatMessage.new(arg0, arg1) end

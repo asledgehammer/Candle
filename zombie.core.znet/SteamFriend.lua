@@ -29,6 +29,6 @@ function SteamFriend:getSteamID() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: long)
 --- @return SteamFriend
+--- @overload fun(arg0: String, arg1: long)
 function SteamFriend.new() end

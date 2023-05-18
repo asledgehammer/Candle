@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class IsoDeadBody: IsoMovingObject
+--- @implement Talker
+--- @implement IHumanVisual
 --- @field public MAX_ROT_STAGES int
 IsoDeadBody = {};
 
@@ -332,8 +334,7 @@ function IsoDeadBody:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell)
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
 --- @param arg0 IsoGameCharacter
 --- @return IsoDeadBody
+--- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
 function IsoDeadBody.new(arg0) end

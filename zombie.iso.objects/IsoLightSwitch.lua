@@ -139,10 +139,10 @@ function IsoLightSwitch:removeLightBulb(arg0) end
 function IsoLightSwitch:save(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: boolean)
---- @overload fun(arg0: boolean, arg1: boolean, arg2: boolean)
 --- @param arg0 boolean
 --- @return boolean
+--- @overload fun(arg0: boolean, arg1: boolean)
+--- @overload fun(arg0: boolean, arg1: boolean, arg2: boolean)
 function IsoLightSwitch:setActive(arg0) end
 
 --- @public
@@ -201,11 +201,11 @@ function IsoLightSwitch:switchLight(arg0) end
 function IsoLightSwitch:syncCustomizedSettings(arg0) end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: byte, arg2: UdpConnection, arg3: ByteBuffer)
 --- @param arg0 boolean
 --- @param arg1 byte
 --- @param arg2 UdpConnection
 --- @return void
+--- @overload fun(arg0: boolean, arg1: byte, arg2: UdpConnection, arg3: ByteBuffer)
 function IsoLightSwitch:syncIsoObject(arg0, arg1, arg2) end
 
 --- @public
@@ -227,7 +227,7 @@ function IsoLightSwitch:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: int)
 --- @param arg0 IsoCell
 --- @return IsoLightSwitch
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: int)
 function IsoLightSwitch.new(arg0) end

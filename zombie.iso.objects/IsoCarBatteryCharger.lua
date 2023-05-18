@@ -109,7 +109,7 @@ function IsoCarBatteryCharger:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: InventoryItem, arg1: IsoCell, arg2: IsoGridSquare)
 --- @param arg0 IsoCell
 --- @return IsoCarBatteryCharger
+--- @overload fun(arg0: InventoryItem, arg1: IsoCell, arg2: IsoGridSquare)
 function IsoCarBatteryCharger.new(arg0) end

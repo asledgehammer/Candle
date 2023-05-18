@@ -16,10 +16,9 @@ function FilterOutputStream:close() end
 function FilterOutputStream:flush() end
 
 --- @public
---- @overload fun(arg0: int)
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
 --- @param arg0 byte[]
 --- @return void
+--- @overload fun(arg0: byte[], arg1: int, arg2: int)
 function FilterOutputStream:write(arg0) end
 
 

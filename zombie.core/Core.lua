@@ -232,12 +232,12 @@ function Core:DoPushIsoParticleStuff(arg0, arg1, arg2) end
 function Core:DoPushIsoStuff(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: float, arg3: int, arg4: boolean)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 float
 --- @param arg3 int
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: float, arg3: int, arg4: boolean)
 function Core:DoStartFrameStuff(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -248,8 +248,8 @@ function Core:DoStartFrameStuff(arg0, arg1, arg2, arg3) end
 function Core:DoStartFrameStuffSmartTextureFx(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: int)
 --- @return void
+--- @overload fun(arg0: int)
 function Core:EndFrame() end
 
 --- @public
@@ -270,15 +270,14 @@ function Core:MoveMethodToggle() end
 function Core:RenderOffScreenBuffer() end
 
 --- @public
---- @overload fun(arg0: boolean, arg1: String)
 --- @param arg0 String
 --- @param arg1 String
 --- @return void
 function Core:ResetLua(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
 --- @return void
+--- @overload fun(arg0: int, arg1: boolean)
 function Core:StartFrame() end
 
 --- @public
@@ -296,9 +295,9 @@ function Core:StartFrameUI() end
 function Core:TakeFullScreenshot(arg0) end
 
 --- @public
+--- @return void
 --- @overload fun(arg0: int, arg1: int, arg2: int)
 --- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int)
---- @return void
 function Core:TakeScreenshot() end
 
 --- @public
@@ -432,8 +431,8 @@ function Core:getNextZoom(arg0, arg1) end
 function Core:getObjectHighlitedColor() end
 
 --- @public
---- @overload fun(arg0: int)
 --- @return TextureFBO
+--- @overload fun(arg0: int)
 function Core:getOffscreenBuffer() end
 
 --- @public

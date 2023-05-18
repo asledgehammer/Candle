@@ -148,14 +148,13 @@ function IsoCell:IsPlayerWindowPeeking(arg0) end
 function IsoCell:LoadPlayer(arg0) end
 
 --- @public
---- @overload fun(arg0: IsoLot, arg1: int, arg2: int, arg3: int, arg4: boolean)
---- @overload fun(arg0: IsoLot, arg1: int, arg2: int, arg3: int, arg4: IsoChunk, arg5: int, arg6: int)
 --- @param arg0 String
 --- @param arg1 int
 --- @param arg2 int
 --- @param arg3 int
 --- @param arg4 boolean
 --- @return void
+--- @overload fun(arg0: IsoLot, arg1: int, arg2: int, arg3: int, arg4: IsoChunk, arg5: int, arg6: int)
 function IsoCell:PlaceLot(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public
@@ -183,9 +182,9 @@ function IsoCell:RenderTiles(arg0) end
 function IsoCell:addHeatSource(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: int)
 --- @param arg0 IsoLightSource
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: int)
 function IsoCell:addLamppost(arg0) end
 
 --- @public
@@ -204,14 +203,12 @@ function IsoCell:addToProcessIsoObject(arg0) end
 function IsoCell:addToProcessIsoObjectRemove(arg0) end
 
 --- @public
---- @overload fun(arg0: ArrayList)
---- @param arg0 InventoryItem
+--- @param arg0 ArrayList
 --- @return void
 function IsoCell:addToProcessItems(arg0) end
 
 --- @public
---- @overload fun(arg0: ArrayList)
---- @param arg0 InventoryItem
+--- @param arg0 ArrayList
 --- @return void
 function IsoCell:addToProcessItemsRemove(arg0) end
 
@@ -348,11 +345,9 @@ function IsoCell:getFakeZombieForHit() end
 function IsoCell:getFreeTile(arg0) end
 
 --- @public
---- @overload fun(arg0: Double, arg1: Double, arg2: Double)
---- @overload fun(arg0: double, arg1: double, arg2: double)
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param arg0 double
+--- @param arg1 double
+--- @param arg2 double
 --- @return IsoGridSquare
 function IsoCell:getGridSquare(arg0, arg1, arg2) end
 
@@ -618,9 +613,9 @@ function IsoCell:removeFromWindowList(arg0) end
 function IsoCell:removeHeatSource(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int)
 --- @param arg0 IsoLightSource
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: int)
 function IsoCell:removeLamppost(arg0) end
 
 --- @public
@@ -648,9 +643,9 @@ function IsoCell:save(arg0, arg1) end
 function IsoCell:savePlayer() end
 
 --- @public
---- @overload fun(arg0: IsoChunk, arg1: int)
 --- @param arg0 IsoChunk
 --- @return void
+--- @overload fun(arg0: IsoChunk, arg1: int)
 function IsoCell:setCacheChunk(arg0) end
 
 --- @public

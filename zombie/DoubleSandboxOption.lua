@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DoubleSandboxOption: DoubleConfigOption
+--- @implement SandboxOption
 DoubleSandboxOption = {};
 
 ------------------------------------

@@ -70,12 +70,11 @@ function ModelScript:getName() end
 function ModelScript:getShaderName() end
 
 --- @public
---- @overload fun(arg0: boolean)
 --- @return String
+--- @overload fun(arg0: boolean)
 function ModelScript:getTextureName() end
 
 --- @public
---- @overload fun(arg0: ModelAttachment)
 --- @param arg0 int
 --- @return ModelAttachment
 function ModelScript:removeAttachment(arg0) end

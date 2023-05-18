@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AbstractCollection: Object
+--- @implement Collection
 AbstractCollection = {};
 
 ------------------------------------
@@ -32,12 +33,25 @@ function AbstractCollection:contains(arg0) end
 function AbstractCollection:containsAll(arg0) end
 
 --- @public
+--- @param arg0 Object
+--- @return boolean
+function AbstractCollection:equals(arg0) end
+
+--- @public
+--- @return int
+function AbstractCollection:hashCode() end
+
+--- @public
 --- @return boolean
 function AbstractCollection:isEmpty() end
 
 --- @public
 --- @return Iterator
 function AbstractCollection:iterator() end
+
+--- @public
+--- @return Stream
+function AbstractCollection:parallelStream() end
 
 --- @public
 --- @param arg0 Object
@@ -50,6 +64,11 @@ function AbstractCollection:remove(arg0) end
 function AbstractCollection:removeAll(arg0) end
 
 --- @public
+--- @param arg0 Predicate
+--- @return boolean
+function AbstractCollection:removeIf(arg0) end
+
+--- @public
 --- @param arg0 Collection
 --- @return boolean
 function AbstractCollection:retainAll(arg0) end
@@ -59,8 +78,16 @@ function AbstractCollection:retainAll(arg0) end
 function AbstractCollection:size() end
 
 --- @public
---- @overload fun(arg0: Object[])
+--- @return Spliterator
+function AbstractCollection:spliterator() end
+
+--- @public
+--- @return Stream
+function AbstractCollection:stream() end
+
+--- @public
 --- @return Object[]
+--- @overload fun(arg0: Object[])
 function AbstractCollection:toArray() end
 
 --- @public

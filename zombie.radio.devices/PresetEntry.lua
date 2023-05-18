@@ -31,6 +31,6 @@ function PresetEntry:setName(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: int)
 --- @return PresetEntry
+--- @overload fun(arg0: String, arg1: int)
 function PresetEntry.new() end

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoBarricade: IsoObject
+--- @implement Thumpable
 --- @field public MAX_PLANKS int
 --- @field public METAL_BAR_HEALTH int
 --- @field public METAL_HEALTH int
@@ -14,7 +15,6 @@ IsoBarricade = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: BarricadeAble, arg1: IsoGameCharacter)
 --- @param arg0 BarricadeAble
 --- @param arg1 boolean
 --- @return IsoBarricade
@@ -202,7 +202,7 @@ function IsoBarricade:saveChange(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoDirections)
 --- @param arg0 IsoCell
 --- @return IsoBarricade
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoDirections)
 function IsoBarricade.new(arg0) end

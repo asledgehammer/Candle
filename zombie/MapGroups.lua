@@ -23,9 +23,9 @@ function MapGroups.addMissingVanillaDirectories(arg0) end
 function MapGroups:checkMapConflicts() end
 
 --- @public
+--- @return void
 --- @overload fun(arg0: ActiveMods, arg1: boolean)
 --- @overload fun(arg0: ActiveMods, arg1: boolean, arg2: boolean)
---- @return void
 function MapGroups:createGroups() end
 
 --- @public

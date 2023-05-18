@@ -182,12 +182,12 @@ function IsoRegionsRenderer:renderSquare(arg0, arg1, arg2, arg3, arg4, arg5) end
 function IsoRegionsRenderer:renderString(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: String, arg3: double, arg4: double, arg5: double, arg6: double)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 String
 --- @param arg3 Color
 --- @return void
+--- @overload fun(arg0: float, arg1: float, arg2: String, arg3: double, arg4: double, arg5: double, arg6: double)
 function IsoRegionsRenderer:renderStringUI(arg0, arg1, arg2, arg3) end
 
 --- @public

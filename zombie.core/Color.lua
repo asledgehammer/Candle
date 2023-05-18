@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Color: Object
+--- @implement Serializable
 --- @field public black Color
 --- @field public blue Color
 --- @field public cyan Color
@@ -26,11 +27,11 @@ Color = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Color)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
 --- @return Color
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Color)
 function Color.HSBtoRGB(arg0, arg1, arg2) end
 
 --- @public
@@ -56,9 +57,9 @@ function Color.blendBGR(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 --- @param arg0 Color
 --- @return int
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 function Color.colorToABGR(arg0) end
 
 --- @public
@@ -169,8 +170,8 @@ function Color:add(arg0) end
 function Color:addToCopy(arg0) end
 
 --- @public
---- @overload fun(arg0: float)
 --- @return Color
+--- @overload fun(arg0: float)
 function Color:brighter() end
 
 --- @public
@@ -181,8 +182,8 @@ function Color:brighter() end
 function Color:changeHSBValue(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: float)
 --- @return Color
+--- @overload fun(arg0: float)
 function Color:darker() end
 
 --- @public
@@ -282,10 +283,10 @@ function Color:scale(arg0) end
 function Color:scaleCopy(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float, arg2: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 --- @param arg0 Color
 --- @return Color
+--- @overload fun(arg0: float, arg1: float, arg2: float)
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 function Color:set(arg0) end
 
 --- @public
@@ -310,12 +311,8 @@ function Color:toString() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Color)
---- @overload fun(arg0: int)
---- @overload fun(arg0: float, arg1: float, arg2: float)
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @overload fun(arg0: Color, arg1: Color, arg2: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @return Color
+--- @overload fun(arg0: Color)
+--- @overload fun(arg0: float, arg1: float, arg2: float)
+--- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
 function Color.new() end

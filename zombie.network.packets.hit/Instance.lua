@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Instance: Object
+--- @implement INetworkPacket
 Instance = {};
 
 ------------------------------------
@@ -12,8 +13,18 @@ Instance = {};
 function Instance:getDescription() end
 
 --- @public
+--- @return int
+function Instance:getPacketSizeBytes() end
+
+--- @public
 --- @return boolean
 function Instance:isConsistent() end
+
+--- @public
+--- @param arg0 UdpConnection
+--- @param arg1 String
+--- @return void
+function Instance:log(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer

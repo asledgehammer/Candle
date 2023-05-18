@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DebugOptions: Object
+--- @implement IDebugOptionGroup
 --- @field public instance DebugOptions
 --- @field public VERSION int
 DebugOptions = {};

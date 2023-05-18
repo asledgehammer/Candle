@@ -27,11 +27,11 @@ function DataChunk:getIsoChunkRegion(arg0, arg1, arg2) end
 function DataChunk:getLastUpdateStamp() end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: boolean)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 int
 --- @return byte
+--- @overload fun(arg0: int, arg1: int, arg2: int, arg3: boolean)
 function DataChunk:getSquare(arg0, arg1, arg2) end
 
 --- @public

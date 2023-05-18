@@ -23,9 +23,9 @@ function HandWeapon:DoTooltip(arg0, arg1) end
 function HandWeapon:IsWeapon() end
 
 --- @public
---- @overload fun(arg0: WeaponPart, arg1: boolean)
 --- @param arg0 WeaponPart
 --- @return void
+--- @overload fun(arg0: WeaponPart, arg1: boolean)
 function HandWeapon:attachWeaponPart(arg0) end
 
 --- @public
@@ -70,8 +70,8 @@ function HandWeapon:getAimingPerkRangeModifier() end
 function HandWeapon:getAimingTime() end
 
 --- @public
---- @overload fun(arg0: ArrayList)
 --- @return ArrayList
+--- @overload fun(arg0: ArrayList)
 function HandWeapon:getAllWeaponParts() end
 
 --- @public
@@ -267,8 +267,8 @@ function HandWeapon:getMaxDamage() end
 function HandWeapon:getMaxHitCount() end
 
 --- @public
---- @overload fun(arg0: IsoGameCharacter)
 --- @return float
+--- @overload fun(arg0: IsoGameCharacter)
 function HandWeapon:getMaxRange() end
 
 --- @public
@@ -465,7 +465,6 @@ function HandWeapon:getTriggerExplosionTimer() end
 function HandWeapon:getWeaponPart(arg0) end
 
 --- @public
---- @overload fun(arg0: WeaponPart)
 --- @param arg0 String
 --- @return float
 function HandWeapon:getWeaponPartWeightModifier(arg0) end
@@ -1161,7 +1160,6 @@ function HandWeapon:setZombieHitSound(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: String, arg2: String, arg3: String)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 String

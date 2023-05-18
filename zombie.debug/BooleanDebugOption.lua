@@ -1,11 +1,16 @@
 --- @meta
 
 --- @class BooleanDebugOption: BooleanConfigOption
+--- @implement IDebugOption
 BooleanDebugOption = {};
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
+
+--- @public
+--- @return String
+function BooleanDebugOption:getName() end
 
 --- @public
 --- @return IDebugOptionGroup

@@ -57,11 +57,10 @@ function ClimateManager.ToMph(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return float
+--- @param arg0 int
+--- @param arg1 int
+--- @param arg2 int
+--- @return int
 function ClimateManager.clamp(arg0, arg1, arg2) end
 
 --- @public
@@ -150,8 +149,8 @@ function ClimateManager:CalculateWeatherFrontStrength(arg0, arg1, arg2, arg3) en
 function ClimateManager:CopyClimateValues(arg0) end
 
 --- @public
---- @overload fun(arg0: int)
 --- @return void
+--- @overload fun(arg0: int)
 function ClimateManager:execute_Simulation() end
 
 --- @public
@@ -171,16 +170,16 @@ function ClimateManager:getAirMassDaily() end
 function ClimateManager:getAirMassTemperature() end
 
 --- @public
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
 --- @param arg0 IsoGameCharacter
 --- @return float
+--- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
 function ClimateManager:getAirTemperatureForCharacter(arg0) end
 
 --- @public
---- @overload fun(arg0: IsoGridSquare, arg1: BaseVehicle)
---- @overload fun(arg0: IsoGridSquare, arg1: BaseVehicle, arg2: boolean)
 --- @param arg0 IsoGridSquare
 --- @return float
+--- @overload fun(arg0: IsoGridSquare, arg1: BaseVehicle)
+--- @overload fun(arg0: IsoGridSquare, arg1: BaseVehicle, arg2: boolean)
 function ClimateManager:getAirTemperatureForSquare(arg0) end
 
 --- @public
@@ -689,7 +688,6 @@ function ClimateManager:triggerCustomWeather(arg0, arg1) end
 function ClimateManager:triggerCustomWeatherStage(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: int, arg1: int, arg2: double, arg3: float, arg4: float, arg5: float, arg6: float, arg7: ClimateColorInfo)
 --- @param arg0 int
 --- @param arg1 int
 --- @param arg2 double
@@ -698,6 +696,7 @@ function ClimateManager:triggerCustomWeatherStage(arg0, arg1) end
 --- @param arg5 float
 --- @param arg6 float
 --- @return void
+--- @overload fun(arg0: int, arg1: int, arg2: double, arg3: float, arg4: float, arg5: float, arg6: float, arg7: ClimateColorInfo)
 function ClimateManager:triggerKateBobIntroStorm(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public

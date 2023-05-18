@@ -49,8 +49,8 @@ function ChatTab:setEnabled(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: short, arg1: String, arg2: int)
 --- @param arg0 short
 --- @param arg1 String
 --- @return ChatTab
+--- @overload fun(arg0: short, arg1: String, arg2: int)
 function ChatTab.new(arg0, arg1) end

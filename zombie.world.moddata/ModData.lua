@@ -16,8 +16,8 @@ function ModData.add(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: String)
 --- @return String
+--- @overload fun(arg0: String)
 function ModData.create() end
 
 --- @public

@@ -50,8 +50,7 @@ function Moodles:getMoodleDescriptionString(arg0) end
 function Moodles:getMoodleDisplayString(arg0) end
 
 --- @public
---- @overload fun(arg0: int)
---- @param arg0 MoodleType
+--- @param arg0 int
 --- @return int
 function Moodles:getMoodleLevel(arg0) end
 

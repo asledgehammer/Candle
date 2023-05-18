@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWorldRegion: Object
+--- @implement IWorldRegion
 IsoWorldRegion = {};
 
 ------------------------------------

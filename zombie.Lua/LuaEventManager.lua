@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LuaEventManager: Object
+--- @implement JavaFunction
 --- @field public OnTickCallbacks ArrayList
 LuaEventManager = {};
 
@@ -45,6 +46,8 @@ function LuaEventManager.reroute(arg0, arg1) end
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return void
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
@@ -53,18 +56,16 @@ function LuaEventManager.reroute(arg0, arg1) end
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object)
---- @param arg0 String
---- @return void
 function LuaEventManager.triggerEvent(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: Object, arg2: Object)
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
 --- @param arg0 String
 --- @param arg1 Object
 --- @return void
+--- @overload fun(arg0: String, arg1: Object, arg2: Object)
+--- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
+--- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
 function LuaEventManager.triggerEventGarbage(arg0, arg1) end
 
 --- @public

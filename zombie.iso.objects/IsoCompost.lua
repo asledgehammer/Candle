@@ -64,7 +64,7 @@ function IsoCompost:updateSprite() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare)
 --- @param arg0 IsoCell
 --- @return IsoCompost
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare)
 function IsoCompost.new(arg0) end

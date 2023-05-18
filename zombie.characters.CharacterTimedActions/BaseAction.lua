@@ -72,13 +72,11 @@ function BaseAction:reset() end
 function BaseAction:resetJobDelta() end
 
 --- @public
---- @overload fun(arg0: String)
 --- @param arg0 CharacterActionAnims
 --- @return void
 function BaseAction:setActionAnim(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: String)
 --- @param arg0 String
 --- @param arg1 boolean
 --- @return void
@@ -100,10 +98,10 @@ function BaseAction:setLoopedAction(arg0) end
 function BaseAction:setOverrideAnimation(arg0) end
 
 --- @public
---- @overload fun(arg0: InventoryItem, arg1: InventoryItem, arg2: boolean)
 --- @param arg0 InventoryItem
 --- @param arg1 InventoryItem
 --- @return void
+--- @overload fun(arg0: InventoryItem, arg1: InventoryItem, arg2: boolean)
 function BaseAction:setOverrideHandModels(arg0, arg1) end
 
 --- @public
@@ -114,10 +112,10 @@ function BaseAction:setOverrideHandModels(arg0, arg1) end
 function BaseAction:setOverrideHandModelsObject(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: String, arg1: String, arg2: boolean)
 --- @param arg0 String
 --- @param arg1 String
 --- @return void
+--- @overload fun(arg0: String, arg1: String, arg2: boolean)
 function BaseAction:setOverrideHandModelsString(arg0, arg1) end
 
 --- @public

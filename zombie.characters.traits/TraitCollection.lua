@@ -22,7 +22,6 @@ function TraitCollection:addAll(arg0) end
 function TraitCollection:clear() end
 
 --- @public
---- @overload fun(arg0: Object)
 --- @param arg0 String
 --- @return boolean
 function TraitCollection:contains(arg0) end
@@ -42,7 +41,6 @@ function TraitCollection:getTraitSlot(arg0) end
 function TraitCollection:isEmpty() end
 
 --- @public
---- @overload fun(arg0: Object)
 --- @param arg0 String
 --- @return boolean
 function TraitCollection:remove(arg0) end

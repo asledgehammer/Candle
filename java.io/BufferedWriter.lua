@@ -20,10 +20,9 @@ function BufferedWriter:flush() end
 function BufferedWriter:newLine() end
 
 --- @public
---- @overload fun(arg0: char[], arg1: int, arg2: int)
---- @overload fun(arg0: String, arg1: int, arg2: int)
 --- @param arg0 int
 --- @return void
+--- @overload fun(arg0: char[], arg1: int, arg2: int)
 function BufferedWriter:write(arg0) end
 
 
@@ -32,7 +31,7 @@ function BufferedWriter:write(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Writer, arg1: int)
 --- @param arg0 Writer
 --- @return BufferedWriter
+--- @overload fun(arg0: Writer, arg1: int)
 function BufferedWriter.new(arg0) end

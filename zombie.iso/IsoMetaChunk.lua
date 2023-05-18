@@ -67,8 +67,8 @@ function IsoMetaChunk:getRoomsIntersecting(arg0, arg1, arg2, arg3, arg4) end
 function IsoMetaChunk:getUnadjustedZombieIntensity() end
 
 --- @public
---- @overload fun(arg0: boolean)
 --- @return float
+--- @overload fun(arg0: boolean)
 function IsoMetaChunk:getZombieIntensity() end
 
 --- @public

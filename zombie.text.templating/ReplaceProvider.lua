@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ReplaceProvider: Object
+--- @implement IReplaceProvider
 ReplaceProvider = {};
 
 ------------------------------------
@@ -8,7 +9,6 @@ ReplaceProvider = {};
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: String)
 --- @param arg0 String
 --- @param arg1 KahluaTableImpl
 --- @return void

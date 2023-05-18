@@ -200,7 +200,7 @@ function IsoTrap:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: HandWeapon, arg1: IsoCell, arg2: IsoGridSquare)
 --- @param arg0 IsoCell
 --- @return IsoTrap
+--- @overload fun(arg0: HandWeapon, arg1: IsoCell, arg2: IsoGridSquare)
 function IsoTrap.new(arg0) end

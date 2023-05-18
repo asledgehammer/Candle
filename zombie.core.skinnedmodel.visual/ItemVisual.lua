@@ -53,8 +53,8 @@ function ItemVisual:copyPatches(arg0) end
 function ItemVisual:getAlternateModelName() end
 
 --- @public
---- @overload fun(arg0: ClothingItem)
 --- @return int
+--- @overload fun(arg0: ClothingItem)
 function ItemVisual:getBaseTexture() end
 
 --- @public
@@ -135,13 +135,13 @@ function ItemVisual:getLeatherPatch(arg0) end
 function ItemVisual:getScriptItem() end
 
 --- @public
---- @overload fun(arg0: ClothingItem)
 --- @return int
+--- @overload fun(arg0: ClothingItem)
 function ItemVisual:getTextureChoice() end
 
 --- @public
---- @overload fun(arg0: ClothingItem)
 --- @return ImmutableColor
+--- @overload fun(arg0: ClothingItem)
 function ItemVisual:getTint() end
 
 --- @public
@@ -274,6 +274,6 @@ function ItemVisual:toString() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: ItemVisual)
 --- @return ItemVisual
+--- @overload fun(arg0: ItemVisual)
 function ItemVisual.new() end

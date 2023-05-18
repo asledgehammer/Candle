@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AmbientSoundEffect: Object
+--- @implement Audio
 AmbientSoundEffect = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class CharacterSoundEmitter: BaseCharacterSoundEmitter
+--- @implement ICommonSoundEmitter
 CharacterSoundEmitter = {};
 
 ------------------------------------
@@ -25,7 +26,6 @@ function CharacterSoundEmitter:isClear() end
 function CharacterSoundEmitter:isEmpty() end
 
 --- @public
---- @overload fun(arg0: String)
 --- @param arg0 long
 --- @return boolean
 function CharacterSoundEmitter:isPlaying(arg0) end
@@ -37,10 +37,9 @@ function CharacterSoundEmitter:isPlaying(arg0) end
 function CharacterSoundEmitter:playFootsteps(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: String, arg1: IsoObject)
---- @overload fun(arg0: String, arg1: boolean)
 --- @param arg0 String
 --- @return long
+--- @overload fun(arg0: String, arg1: boolean)
 function CharacterSoundEmitter:playSound(arg0) end
 
 --- @public

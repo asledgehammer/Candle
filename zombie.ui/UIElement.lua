@@ -44,9 +44,6 @@ function UIElement:ClearChildren() end
 function UIElement:DrawSubTextureRGBA(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12) end
 
 --- @public
---- @overload fun(arg0: UIFont, arg1: String, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double)
---- @overload fun(arg0: UIFont, arg1: String, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double)
---- @overload fun(arg0: String, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double)
 --- @param arg0 String
 --- @param arg1 double
 --- @param arg2 double
@@ -55,10 +52,11 @@ function UIElement:DrawSubTextureRGBA(arg0, arg1, arg2, arg3, arg4, arg5, arg6, 
 --- @param arg5 double
 --- @param arg6 double
 --- @return void
+--- @overload fun(arg0: UIFont, arg1: String, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double)
+--- @overload fun(arg0: UIFont, arg1: String, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double)
 function UIElement:DrawText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @overload fun(arg0: UIFont, arg1: String, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double)
 --- @param arg0 String
 --- @param arg1 double
 --- @param arg2 double
@@ -67,10 +65,10 @@ function UIElement:DrawText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @param arg5 double
 --- @param arg6 double
 --- @return void
+--- @overload fun(arg0: UIFont, arg1: String, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double)
 function UIElement:DrawTextCentre(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
---- @overload fun(arg0: UIFont, arg1: String, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double)
 --- @param arg0 String
 --- @param arg1 double
 --- @param arg2 double
@@ -79,6 +77,7 @@ function UIElement:DrawTextCentre(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 --- @param arg5 double
 --- @param arg6 double
 --- @return void
+--- @overload fun(arg0: UIFont, arg1: String, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double)
 function UIElement:DrawTextRight(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
@@ -94,21 +93,21 @@ function UIElement:DrawTextRight(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 function UIElement:DrawTextUntrimmed(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double, arg9: double, arg10: double, arg11: double, arg12: double)
 --- @param arg0 Texture
 --- @param arg1 double
 --- @param arg2 double
 --- @param arg3 double
 --- @return void
+--- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double, arg9: double, arg10: double, arg11: double, arg12: double)
 function UIElement:DrawTexture(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double)
 --- @param arg0 Texture
 --- @param arg1 double
 --- @param arg2 double
 --- @param arg3 double
 --- @return void
+--- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double)
 function UIElement:DrawTextureAngle(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -177,7 +176,6 @@ function UIElement:DrawTextureScaledAspect(arg0, arg1, arg2, arg3, arg4, arg5, a
 function UIElement:DrawTextureScaledAspect2(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
---- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double)
 --- @param arg0 Texture
 --- @param arg1 double
 --- @param arg2 double
@@ -185,6 +183,7 @@ function UIElement:DrawTextureScaledAspect2(arg0, arg1, arg2, arg3, arg4, arg5, 
 --- @param arg4 double
 --- @param arg5 Color
 --- @return void
+--- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double)
 function UIElement:DrawTextureScaledCol(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -770,6 +769,6 @@ function UIElement:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: KahluaTable)
 --- @return UIElement
+--- @overload fun(arg0: KahluaTable)
 function UIElement.new() end

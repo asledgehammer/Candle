@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ScriptManager: Object
+--- @implement IScriptObjectStore
 --- @field public instance ScriptManager
 --- @field public VanillaID String
 ScriptManager = {};
@@ -35,9 +36,9 @@ function ScriptManager.getItemName(arg0) end
 function ScriptManager:CheckExitPoints() end
 
 --- @public
---- @overload fun(arg0: String, arg1: boolean)
 --- @param arg0 String
 --- @return Item
+--- @overload fun(arg0: String, arg1: boolean)
 function ScriptManager:FindItem(arg0) end
 
 --- @public
@@ -154,9 +155,9 @@ function ScriptManager:getMannequinScript(arg0) end
 function ScriptManager:getModelScript(arg0) end
 
 --- @public
---- @overload fun(arg0: String, arg1: boolean)
 --- @param arg0 String
 --- @return ScriptModule
+--- @overload fun(arg0: String, arg1: boolean)
 function ScriptManager:getModule(arg0) end
 
 --- @public

@@ -20,9 +20,9 @@ function IsoChunk.FileExists(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoGridSquare, arg1: int)
 --- @param arg0 String
 --- @return String
+--- @overload fun(arg0: IsoGridSquare, arg1: int)
 function IsoChunk.Fix2x(arg0) end
 
 --- @public
@@ -141,9 +141,9 @@ function IsoChunk:LoadOrCreate(arg0, arg1, arg2) end
 function IsoChunk:RandomizeModel(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @overload fun(arg0: ByteBuffer, arg1: CRC32)
 --- @param arg0 boolean
 --- @return void
+--- @overload fun(arg0: ByteBuffer, arg1: CRC32)
 function IsoChunk:Save(arg0) end
 
 --- @public

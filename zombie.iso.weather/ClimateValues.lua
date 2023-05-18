@@ -149,11 +149,11 @@ function ClimateValues:isDayDoFog() end
 function ClimateValues:isTemperatureIsSnow() end
 
 --- @public
+--- @param arg0 GregorianCalendar
+--- @return void
 --- @overload fun(arg0: int, arg1: int, arg2: int)
 --- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
 --- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int)
---- @param arg0 GregorianCalendar
---- @return void
 function ClimateValues:pollDate(arg0) end
 
 --- @public

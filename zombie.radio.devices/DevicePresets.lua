@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DevicePresets: Object
+--- @implement Cloneable
 DevicePresets = {};
 
 ------------------------------------

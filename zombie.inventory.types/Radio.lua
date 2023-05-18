@@ -1,6 +1,9 @@
 --- @meta
 
 --- @class Radio: Moveable
+--- @implement Talker
+--- @implement IUpdater
+--- @implement WaveSignalDevice
 Radio = {};
 
 ------------------------------------
@@ -8,7 +11,6 @@ Radio = {};
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: ChatMessage, arg1: float, arg2: float, arg3: float, arg4: String, arg5: String, arg6: int)
 --- @param arg0 String
 --- @param arg1 float
 --- @param arg2 float
@@ -17,6 +19,7 @@ Radio = {};
 --- @param arg5 String
 --- @param arg6 int
 --- @return void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int)
 function Radio:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public

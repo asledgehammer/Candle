@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMovingObject: IsoObject
+--- @implement Mover
 --- @field public MAX_ZOMBIES_EATING int
 --- @field public treeSoundMgr TreeSoundManager
 IsoMovingObject = {};
@@ -37,9 +38,9 @@ function IsoMovingObject.setIDCount(arg0) end
 function IsoMovingObject:Despawn() end
 
 --- @public
---- @overload fun(arg0: int, arg1: int)
 --- @param arg0 IsoMovingObject
 --- @return float
+--- @overload fun(arg0: int, arg1: int)
 function IsoMovingObject:DistTo(arg0) end
 
 --- @public
@@ -48,9 +49,9 @@ function IsoMovingObject:DistTo(arg0) end
 function IsoMovingObject:DistToProper(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float)
 --- @param arg0 IsoMovingObject
 --- @return float
+--- @overload fun(arg0: float, arg1: float)
 function IsoMovingObject:DistToSquared(arg0) end
 
 --- @public
@@ -163,8 +164,8 @@ function IsoMovingObject:getFeelersize() end
 function IsoMovingObject:getFuturWalkedSquare() end
 
 --- @public
---- @overload fun(arg0: boolean)
 --- @return float
+--- @overload fun(arg0: boolean)
 function IsoMovingObject:getGlobalMovementMod() end
 
 --- @public
@@ -298,8 +299,8 @@ function IsoMovingObject:getTimeSinceZombieAttack() end
 function IsoMovingObject:getVectorFromDirection(arg0) end
 
 --- @public
---- @overload fun(arg0: float, arg1: float)
 --- @return float
+--- @overload fun(arg0: float, arg1: float)
 function IsoMovingObject:getWeight() end
 
 --- @public
@@ -725,8 +726,8 @@ function IsoMovingObject:update() end
 ------------------------------------
 
 --- @public
+--- @return IsoMovingObject
 --- @overload fun(arg0: IsoCell)
 --- @overload fun(arg0: IsoCell, arg1: boolean)
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean)
---- @return IsoMovingObject
 function IsoMovingObject.new() end

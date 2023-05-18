@@ -15,13 +15,13 @@ function TraitFactory.Reset() end
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: String, arg2: int, arg3: String, arg4: boolean, arg5: boolean)
 --- @param arg0 String
 --- @param arg1 String
 --- @param arg2 int
 --- @param arg3 String
 --- @param arg4 boolean
 --- @return Trait
+--- @overload fun(arg0: String, arg1: String, arg2: int, arg3: String, arg4: boolean, arg5: boolean)
 function TraitFactory.addTrait(arg0, arg1, arg2, arg3, arg4) end
 
 --- @public

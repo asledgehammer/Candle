@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LuaTimedActionNew: BaseAction
+--- @implement IPathfinder
 LuaTimedActionNew = {};
 
 ------------------------------------

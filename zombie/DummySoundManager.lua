@@ -15,10 +15,10 @@ DummySoundManager = {};
 function DummySoundManager:BlendThenStart(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: Audio, arg1: float, arg2: float)
 --- @param arg0 Audio
 --- @param arg1 float
 --- @return void
+--- @overload fun(arg0: Audio, arg1: float, arg2: float)
 function DummySoundManager:BlendVolume(arg0, arg1) end
 
 --- @public
@@ -47,7 +47,6 @@ function DummySoundManager:FadeOutMusic(arg0, arg1) end
 function DummySoundManager:IsMusicPlaying() end
 
 --- @public
---- @overload fun(arg0: String, arg1: Audio, arg2: boolean, arg3: float)
 --- @param arg0 String
 --- @param arg1 Audio
 --- @param arg2 float
@@ -71,11 +70,11 @@ function DummySoundManager:PlayJukeboxSound(arg0, arg1, arg2) end
 function DummySoundManager:PlayMusic(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @overload fun(arg0: String, arg1: boolean, arg2: float, arg3: float)
 --- @param arg0 String
 --- @param arg1 boolean
 --- @param arg2 float
 --- @return Audio
+--- @overload fun(arg0: String, arg1: boolean, arg2: float, arg3: float)
 function DummySoundManager:PlaySound(arg0, arg1, arg2) end
 
 --- @public
@@ -86,17 +85,14 @@ function DummySoundManager:PlaySound(arg0, arg1, arg2) end
 function DummySoundManager:PlaySoundEvenSilent(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: String, arg1: int, arg2: boolean, arg3: float)
---- @overload fun(arg0: String, arg1: boolean, arg2: float, arg3: float)
 --- @param arg0 String
 --- @param arg1 boolean
 --- @param arg2 float
 --- @return Audio
+--- @overload fun(arg0: String, arg1: boolean, arg2: float, arg3: float)
 function DummySoundManager:PlaySoundWav(arg0, arg1, arg2) end
 
 --- @public
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int, arg6: boolean)
---- @overload fun(arg0: String, arg1: boolean, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean)
 --- @param arg0 String
 --- @param arg1 IsoGridSquare
 --- @param arg2 float
@@ -104,6 +100,7 @@ function DummySoundManager:PlaySoundWav(arg0, arg1, arg2) end
 --- @param arg4 float
 --- @param arg5 boolean
 --- @return Audio
+--- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int, arg6: boolean)
 function DummySoundManager:PlayWorldSound(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -120,8 +117,6 @@ function DummySoundManager:PlayWorldSound(arg0, arg1, arg2, arg3, arg4, arg5) en
 function DummySoundManager:PlayWorldSoundImpl(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
---- @overload fun(arg0: String, arg1: boolean, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean)
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int, arg6: boolean)
 --- @param arg0 String
 --- @param arg1 IsoGridSquare
 --- @param arg2 float
@@ -129,6 +124,7 @@ function DummySoundManager:PlayWorldSoundImpl(arg0, arg1, arg2, arg3, arg4, arg5
 --- @param arg4 float
 --- @param arg5 boolean
 --- @return Audio
+--- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int, arg6: boolean)
 function DummySoundManager:PlayWorldSoundWav(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -219,8 +215,7 @@ function DummySoundManager:isListenerInRange(arg0, arg1, arg2) end
 function DummySoundManager:isPlayingMusic() end
 
 --- @public
---- @overload fun(arg0: String)
---- @param arg0 long
+--- @param arg0 String
 --- @return boolean
 function DummySoundManager:isPlayingUISound(arg0) end
 

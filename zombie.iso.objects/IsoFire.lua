@@ -9,10 +9,10 @@ IsoFire = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoGridSquare, arg1: boolean, arg2: boolean)
 --- @param arg0 IsoGridSquare
 --- @param arg1 boolean
 --- @return boolean
+--- @overload fun(arg0: IsoGridSquare, arg1: boolean, arg2: boolean)
 function IsoFire.CanAddFire(arg0, arg1) end
 
 --- @public
@@ -160,10 +160,10 @@ function IsoFire:update() end
 ------------------------------------
 
 --- @public
+--- @param arg0 IsoCell
+--- @return IsoFire
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare)
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int)
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int, arg4: int)
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int, arg4: int, arg5: boolean)
---- @param arg0 IsoCell
---- @return IsoFire
 function IsoFire.new(arg0) end

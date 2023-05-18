@@ -20,10 +20,10 @@ function StorySound:getClone() end
 function StorySound:getName() end
 
 --- @public
+--- @return long
 --- @overload fun(arg0: float)
 --- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float)
 --- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float)
---- @return long
 function StorySound:playSound() end
 
 --- @public

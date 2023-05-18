@@ -9,10 +9,9 @@ TemplateText = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: IReplaceProvider)
---- @overload fun(arg0: String, arg1: KahluaTableImpl)
 --- @param arg0 String
 --- @return String
+--- @overload fun(arg0: String, arg1: IReplaceProvider)
 function TemplateText.Build(arg0) end
 
 --- @public
@@ -22,16 +21,13 @@ function TemplateText.Initialize() end
 
 --- @public
 --- @static
---- @overload fun(arg0: int)
---- @overload fun(arg0: int, arg1: int)
---- @overload fun(arg0: float, arg1: float)
 --- @param arg0 float
 --- @return float
+--- @overload fun(arg0: int, arg1: int)
 function TemplateText.RandNext(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: String, arg1: IReplace)
 --- @param arg0 String
 --- @param arg1 KahluaTableImpl
 --- @return void

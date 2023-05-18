@@ -157,10 +157,10 @@ function WeatherPeriod:hasStorm() end
 function WeatherPeriod:hasTropical() end
 
 --- @public
---- @overload fun(arg0: AirFront, arg1: double, arg2: int, arg3: float)
 --- @param arg0 AirFront
 --- @param arg1 double
 --- @return void
+--- @overload fun(arg0: AirFront, arg1: double, arg2: int, arg3: float)
 function WeatherPeriod:initSimulationDebug(arg0, arg1) end
 
 --- @public

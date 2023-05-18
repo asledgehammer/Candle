@@ -88,12 +88,12 @@ function IsoFireManager.Reset() end
 
 --- @public
 --- @static
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int, arg4: int)
 --- @param arg0 IsoCell
 --- @param arg1 IsoGridSquare
 --- @param arg2 boolean
 --- @param arg3 int
 --- @return void
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int, arg4: int)
 function IsoFireManager.StartFire(arg0, arg1, arg2, arg3) end
 
 --- @public

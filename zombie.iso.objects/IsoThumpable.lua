@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class IsoThumpable: IsoObject
+--- @implement BarricadeAble
+--- @implement Thumpable
 --- @field public tempo Vector2
 IsoThumpable = {};
 
@@ -253,6 +255,10 @@ function IsoThumpable:getRenderEffectMaster() end
 function IsoThumpable:getSpriteEdge(arg0) end
 
 --- @public
+--- @return IsoGridSquare
+function IsoThumpable:getSquare() end
+
+--- @public
 --- @return KahluaTable
 function IsoThumpable:getTable() end
 
@@ -498,7 +504,6 @@ function IsoThumpable:setIsContainer(arg0) end
 function IsoThumpable:setIsDismantable(arg0) end
 
 --- @public
---- @overload fun(arg0: boolean)
 --- @param arg0 Boolean
 --- @return void
 function IsoThumpable:setIsDoor(arg0) end
@@ -534,9 +539,9 @@ function IsoThumpable:setIsStairs(arg0) end
 function IsoThumpable:setIsThumpable(arg0) end
 
 --- @public
---- @overload fun(arg0: int, arg1: boolean)
 --- @param arg0 int
 --- @return void
+--- @overload fun(arg0: int, arg1: boolean)
 function IsoThumpable:setKeyId(arg0) end
 
 --- @public
@@ -676,8 +681,8 @@ function IsoThumpable:update() end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String, arg4: boolean, arg5: KahluaTable)
 --- @param arg0 IsoCell
 --- @return IsoThumpable
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable)
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String, arg4: boolean, arg5: KahluaTable)
 function IsoThumpable.new(arg0) end

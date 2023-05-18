@@ -11,8 +11,7 @@ ClothingItem = {};
 
 --- @public
 --- @static
---- @overload fun(arg0: ClothingItemReference, arg1: CharacterMask)
---- @param arg0 ClothingItem
+--- @param arg0 ClothingItemReference
 --- @param arg1 CharacterMask
 --- @return void
 function ClothingItem.tryGetCombinedMask(arg0, arg1) end

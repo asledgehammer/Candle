@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BooleanServerOption: BooleanConfigOption
+--- @implement ServerOption
 BooleanServerOption = {};
 
 ------------------------------------

@@ -25,8 +25,8 @@ function BufferedReader:mark(arg0) end
 function BufferedReader:markSupported() end
 
 --- @public
---- @overload fun(arg0: char[], arg1: int, arg2: int)
 --- @return int
+--- @overload fun(arg0: char[], arg1: int, arg2: int)
 function BufferedReader:read() end
 
 --- @public
@@ -52,7 +52,7 @@ function BufferedReader:skip(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: Reader, arg1: int)
 --- @param arg0 Reader
 --- @return BufferedReader
+--- @overload fun(arg0: Reader, arg1: int)
 function BufferedReader.new(arg0) end

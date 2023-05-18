@@ -16,7 +16,6 @@ function BaseCharacterSoundEmitter:hasSoundsToStart() end
 function BaseCharacterSoundEmitter:isClear() end
 
 --- @public
---- @overload fun(arg0: long)
 --- @param arg0 String
 --- @return boolean
 function BaseCharacterSoundEmitter:isPlaying(arg0) end
@@ -28,9 +27,9 @@ function BaseCharacterSoundEmitter:isPlaying(arg0) end
 function BaseCharacterSoundEmitter:playFootsteps(arg0, arg1) end
 
 --- @public
---- @overload fun(arg0: String, arg1: IsoObject)
 --- @param arg0 String
 --- @return long
+--- @overload fun(arg0: String, arg1: IsoObject)
 function BaseCharacterSoundEmitter:playSound(arg0) end
 
 --- @public

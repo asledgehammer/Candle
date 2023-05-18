@@ -57,8 +57,6 @@ function PZMath.ceil(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @overload fun(arg0: long, arg1: long, arg2: long)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
@@ -81,7 +79,6 @@ function PZMath.clamp_01(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: Matrix4f, arg1: Matrix4f)
 --- @param arg0 Matrix4f
 --- @param arg1 Matrix4f
 --- @return Matrix4f
@@ -95,15 +92,14 @@ function PZMath.degToRad(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: float, arg1: float, arg2: float)
 --- @param arg0 float
 --- @param arg1 float
 --- @return boolean
+--- @overload fun(arg0: float, arg1: float, arg2: float)
 function PZMath.equal(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: double)
 --- @param arg0 float
 --- @return int
 function PZMath.fastfloor(arg0) end
@@ -143,12 +139,11 @@ function PZMath.getClosestAngleDegrees(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: Vector3f, arg3: float)
---- @overload fun(arg0: Vector2, arg1: Vector2, arg2: Vector2, arg3: float)
 --- @param arg0 float
 --- @param arg1 float
 --- @param arg2 float
 --- @return float
+--- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: Vector3f, arg3: float)
 function PZMath.lerp(arg0, arg1, arg2) end
 
 --- @public
@@ -179,15 +174,13 @@ function PZMath.lerpFunc_EaseOutQuad(arg0) end
 
 --- @public
 --- @static
---- @overload fun(arg0: int, arg1: int)
---- @param arg0 float
---- @param arg1 float
---- @return float
+--- @param arg0 int
+--- @param arg1 int
+--- @return int
 function PZMath.max(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: float, arg1: float)
 --- @param arg0 int
 --- @param arg1 int
 --- @return int
@@ -286,10 +279,10 @@ function PZMath.tryParseInt(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: float, arg1: float, arg2: float)
 --- @param arg0 float
 --- @param arg1 float
 --- @return float
+--- @overload fun(arg0: float, arg1: float, arg2: float)
 function PZMath.wrap(arg0, arg1) end
 
 

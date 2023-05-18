@@ -116,12 +116,12 @@ function Translator.getRecipeName(arg0) end
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return String
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @param arg0 String
---- @return String
 function Translator.getText(arg0) end
 
 --- @public
@@ -132,12 +132,12 @@ function Translator.getTextMediaEN(arg0) end
 
 --- @public
 --- @static
+--- @param arg0 String
+--- @return String
 --- @overload fun(arg0: String, arg1: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
 --- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @param arg0 String
---- @return String
 function Translator.getTextOrNull(arg0) end
 
 --- @public
@@ -154,8 +154,7 @@ function Translator.setDefaultItemEvolvedRecipeName(arg0, arg1) end
 
 --- @public
 --- @static
---- @overload fun(arg0: Language)
---- @param arg0 int
+--- @param arg0 Language
 --- @return void
 function Translator.setLanguage(arg0) end
 

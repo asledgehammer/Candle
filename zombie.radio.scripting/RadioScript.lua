@@ -8,9 +8,9 @@ RadioScript = {};
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: RadioBroadCast, arg1: boolean)
 --- @param arg0 RadioBroadCast
 --- @return void
+--- @overload fun(arg0: RadioBroadCast, arg1: boolean)
 function RadioScript:AddBroadcast(arg0) end
 
 --- @public
@@ -97,9 +97,9 @@ function RadioScript:setStartDayStamp(arg0) end
 ------------------------------------
 
 --- @public
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: String)
 --- @param arg0 String
 --- @param arg1 int
 --- @param arg2 int
 --- @return RadioScript
+--- @overload fun(arg0: String, arg1: int, arg2: int, arg3: String)
 function RadioScript.new(arg0, arg1, arg2) end

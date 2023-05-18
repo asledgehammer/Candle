@@ -133,8 +133,8 @@ function SandboxOptions:handleOldZombiesFile2() end
 function SandboxOptions:initSandboxVars() end
 
 --- @public
---- @overload fun(arg0: ByteBuffer)
 --- @return void
+--- @overload fun(arg0: ByteBuffer)
 function SandboxOptions:load() end
 
 --- @public

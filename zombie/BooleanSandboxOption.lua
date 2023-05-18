@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BooleanSandboxOption: BooleanConfigOption
+--- @implement SandboxOption
 BooleanSandboxOption = {};
 
 ------------------------------------
