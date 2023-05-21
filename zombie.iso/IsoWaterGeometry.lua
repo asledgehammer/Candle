@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoWaterGeometry: Object
+--- @class IsoWaterGeometry
 --- @field public pool ObjectPool
 IsoWaterGeometry = {};
 
@@ -13,9 +13,9 @@ IsoWaterGeometry = {};
 function IsoWaterGeometry:getFlow() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return IsoWaterGeometry
-function IsoWaterGeometry:init(arg0) end
+function IsoWaterGeometry:init(square) end
 
 --- @public
 --- @return boolean

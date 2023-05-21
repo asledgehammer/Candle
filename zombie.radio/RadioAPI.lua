@@ -1,6 +1,6 @@
 --- @meta
 
---- @class RadioAPI: Object
+--- @class RadioAPI
 RadioAPI = {};
 
 ------------------------------------
@@ -19,29 +19,29 @@ function RadioAPI.hasInstance() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param stamp int
 --- @return int
-function RadioAPI.timeStampToDays(arg0) end
+function RadioAPI.timeStampToDays(stamp) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param stamp int
 --- @return int
-function RadioAPI.timeStampToHours(arg0) end
+function RadioAPI.timeStampToHours(stamp) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param stamp int
 --- @return int
-function RadioAPI.timeStampToMinutes(arg0) end
+function RadioAPI.timeStampToMinutes(stamp) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param days int
+--- @param hours int
+--- @param minutes int
 --- @return int
-function RadioAPI.timeToTimeStamp(arg0, arg1, arg2) end
+function RadioAPI.timeToTimeStamp(days, hours, minutes) end
 
 
 ------------------------------------
@@ -49,8 +49,8 @@ function RadioAPI.timeToTimeStamp(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return KahluaTable
-function RadioAPI:getChannels(arg0) end
+function RadioAPI:getChannels(category) end
 
 

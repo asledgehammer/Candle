@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoMetaChunk: Object
+--- @class IsoMetaChunk
 --- @field public zombiesFullPerChunk float
 --- @field public zombiesMinPerChunk float
 IsoMetaChunk = {};
@@ -14,9 +14,9 @@ IsoMetaChunk = {};
 function IsoMetaChunk:Dispose() end
 
 --- @public
---- @param arg0 RoomDef
+--- @param room RoomDef
 --- @return void
-function IsoMetaChunk:addRoom(arg0) end
+function IsoMetaChunk:addRoom(room) end
 
 --- @public
 --- @param arg0 Zone
@@ -32,11 +32,11 @@ function IsoMetaChunk:clearRooms() end
 function IsoMetaChunk:clearZones() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return RoomDef
-function IsoMetaChunk:getEmptyOutsideAt(arg0, arg1, arg2) end
+function IsoMetaChunk:getEmptyOutsideAt(x, y, z) end
 
 --- @public
 --- @return float
@@ -47,20 +47,20 @@ function IsoMetaChunk:getLootZombieIntensity() end
 function IsoMetaChunk:getNumRooms() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return RoomDef
-function IsoMetaChunk:getRoomAt(arg0, arg1, arg2) end
+function IsoMetaChunk:getRoomAt(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 ArrayList
+--- @param x int
+--- @param y int
+--- @param w int
+--- @param h int
+--- @param result ArrayList
 --- @return void
-function IsoMetaChunk:getRoomsIntersecting(arg0, arg1, arg2, arg3, arg4) end
+function IsoMetaChunk:getRoomsIntersecting(x, y, w, h, result) end
 
 --- @public
 --- @return int
@@ -68,43 +68,43 @@ function IsoMetaChunk:getUnadjustedZombieIntensity() end
 
 --- @public
 --- @return float
---- @overload fun(arg0: boolean)
+--- @overload fun(bRandom: boolean)
 function IsoMetaChunk:getZombieIntensity() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return Zone
-function IsoMetaChunk:getZone(arg0) end
+function IsoMetaChunk:getZone(index) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return Zone
-function IsoMetaChunk:getZoneAt(arg0, arg1, arg2) end
+function IsoMetaChunk:getZoneAt(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 ArrayList
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param result ArrayList
 --- @return ArrayList
-function IsoMetaChunk:getZonesAt(arg0, arg1, arg2, arg3) end
+function IsoMetaChunk:getZonesAt(x, y, z, result) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 ArrayList
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param w int
+--- @param h int
+--- @param result ArrayList
 --- @return void
-function IsoMetaChunk:getZonesIntersecting(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoMetaChunk:getZonesIntersecting(x, y, z, w, h, result) end
 
 --- @public
---- @param arg0 Set
+--- @param result Set
 --- @return void
-function IsoMetaChunk:getZonesUnique(arg0) end
+function IsoMetaChunk:getZonesUnique(result) end
 
 --- @public
 --- @return int
@@ -116,9 +116,9 @@ function IsoMetaChunk:numZones() end
 function IsoMetaChunk:removeZone(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param zombieIntensity int
 --- @return void
-function IsoMetaChunk:setZombieIntensity(arg0) end
+function IsoMetaChunk:setZombieIntensity(zombieIntensity) end
 
 
 ------------------------------------

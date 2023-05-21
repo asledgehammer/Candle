@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BentFences: Object
+--- @class BentFences
 BentFences = {};
 
 ------------------------------------
@@ -28,31 +28,31 @@ function BentFences:Reset() end
 function BentFences:addFenceTiles(arg0, arg1) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 IsoDirections
+--- @param obj IsoObject
+--- @param dir IsoDirections
 --- @return void
-function BentFences:bendFence(arg0, arg1) end
+function BentFences:bendFence(obj, dir) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function BentFences:isBentObject(arg0) end
+function BentFences:isBentObject(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function BentFences:isUnbentObject(arg0) end
+function BentFences:isUnbentObject(obj) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 IsoDirections
+--- @param obj IsoObject
+--- @param dir IsoDirections
 --- @return void
-function BentFences:swapTiles(arg0, arg1) end
+function BentFences:swapTiles(obj, dir) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return void
-function BentFences:unbendFence(arg0) end
+function BentFences:unbendFence(obj) end
 
 
 ------------------------------------

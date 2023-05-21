@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Profession: Object
+--- @class Profession
 --- @implement IListBoxItem
 Profession = {};
 
@@ -9,9 +9,9 @@ Profession = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param trait String
 --- @return void
-function Profession:addFreeTrait(arg0) end
+function Profession:addFreeTrait(trait) end
 
 --- @public
 --- @param arg0 Perk
@@ -72,39 +72,39 @@ function Profession:getType() end
 function Profession:getXPBoostMap() end
 
 --- @public
---- @param arg0 int
+--- @param cost int
 --- @return void
-function Profession:setCost(arg0) end
+function Profession:setCost(cost) end
 
 --- @public
---- @param arg0 String
+--- @param description String
 --- @return void
-function Profession:setDescription(arg0) end
+function Profession:setDescription(description) end
 
 --- @public
---- @param arg0 List
+--- @param freeRecipes List
 --- @return void
-function Profession:setFreeRecipes(arg0) end
+function Profession:setFreeRecipes(freeRecipes) end
 
 --- @public
---- @param arg0 Stack
+--- @param FreeTraitStack Stack
 --- @return void
-function Profession:setFreeTraitStack(arg0) end
+function Profession:setFreeTraitStack(FreeTraitStack) end
 
 --- @public
---- @param arg0 String
+--- @param IconPath String
 --- @return void
-function Profession:setIconPath(arg0) end
+function Profession:setIconPath(IconPath) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Profession:setName(arg0) end
+function Profession:setName(name) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function Profession:setType(arg0) end
+function Profession:setType(type) end
 
 
 ------------------------------------
@@ -112,10 +112,10 @@ function Profession:setType(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 int
---- @param arg4 String
+--- @param type String
+--- @param name String
+--- @param IconPathname String
+--- @param cost int
+--- @param desc String
 --- @return Profession
-function Profession.new(arg0, arg1, arg2, arg3, arg4) end
+function Profession.new(type, name, IconPathname, cost, desc) end

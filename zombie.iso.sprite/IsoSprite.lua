@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoSprite: Object
+--- @class IsoSprite
 --- @field public alphaStep float
 --- @field public globalOffsetX float
 --- @field public globalOffsetY float
@@ -15,17 +15,17 @@ IsoSprite = {};
 
 --- @public
 --- @static
---- @param arg0 IsoSpriteManager
+--- @param manager IsoSpriteManager
 --- @return IsoSprite
-function IsoSprite.CreateSprite(arg0) end
+function IsoSprite.CreateSprite(manager) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param objectName String
+--- @param animName String
+--- @param numFrames int
 --- @return IsoSprite
-function IsoSprite.CreateSpriteUsingCache(arg0, arg1, arg2) end
+function IsoSprite.CreateSpriteUsingCache(objectName, animName, numFrames) end
 
 --- @public
 --- @static
@@ -34,31 +34,31 @@ function IsoSprite.DisposeAll() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param string String
 --- @return boolean
-function IsoSprite.HasCache(arg0) end
+function IsoSprite.HasCache(string) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return int
-function IsoSprite.getSheetGridIdFromName(arg0) end
+function IsoSprite.getSheetGridIdFromName(name) end
 
 --- @public
 --- @static
---- @param arg0 IsoSpriteManager
---- @param arg1 int
+--- @param manager IsoSpriteManager
+--- @param id int
 --- @return IsoSprite
---- @overload fun(arg0: IsoSpriteManager, arg1: IsoSprite, arg2: int)
-function IsoSprite.getSprite(arg0, arg1) end
+--- @overload fun(manager: IsoSpriteManager, spr: IsoSprite, offset: int)
+function IsoSprite.getSprite(manager, id) end
 
 --- @public
 --- @static
---- @param arg0 IsoSpriteManager
---- @param arg1 int
---- @param arg2 IsoSprite
+--- @param manager IsoSpriteManager
+--- @param id int
+--- @param spr IsoSprite
 --- @return void
-function IsoSprite.setSpriteID(arg0, arg1, arg2) end
+function IsoSprite.setSpriteID(manager, id, spr) end
 
 
 ------------------------------------
@@ -66,135 +66,135 @@ function IsoSprite.setSpriteID(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return void
-function IsoSprite:AddProperties(arg0) end
+function IsoSprite:AddProperties(sprite) end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return void
-function IsoSprite:CacheAnims(arg0) end
+function IsoSprite:CacheAnims(key) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param NewTintMod ColorInfo
 --- @return void
-function IsoSprite:ChangeTintMod(arg0) end
+function IsoSprite:ChangeTintMod(NewTintMod) end
 
 --- @public
 --- @return void
 function IsoSprite:Dispose() end
 
 --- @public
---- @param arg0 String
+--- @param string String
 --- @return void
-function IsoSprite:LoadCache(arg0) end
+function IsoSprite:LoadCache(string) end
 
 --- @public
---- @param arg0 String
+--- @param ObjectName String
 --- @return Texture
-function IsoSprite:LoadFrameExplicit(arg0) end
+function IsoSprite:LoadFrameExplicit(ObjectName) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param ObjectName String
+--- @param AnimName String
+--- @param nFrames int
 --- @return void
-function IsoSprite:LoadFrames(arg0, arg1, arg2) end
+function IsoSprite:LoadFrames(ObjectName, AnimName, nFrames) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param ObjectName String
+--- @param AnimName String
+--- @param nFrames int
 --- @return void
-function IsoSprite:LoadFramesNoDirPage(arg0, arg1, arg2) end
+function IsoSprite:LoadFramesNoDirPage(ObjectName, AnimName, nFrames) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param ObjectName String
+--- @param AnimName String
+--- @param nFrames int
 --- @return void
-function IsoSprite:LoadFramesNoDirPageDirect(arg0, arg1, arg2) end
+function IsoSprite:LoadFramesNoDirPageDirect(ObjectName, AnimName, nFrames) end
 
 --- @public
---- @param arg0 String
+--- @param ObjectName String
 --- @return void
-function IsoSprite:LoadFramesNoDirPageSimple(arg0) end
+function IsoSprite:LoadFramesNoDirPageSimple(ObjectName) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param NObjectName String
+--- @param SObjectName String
+--- @param EObjectName String
+--- @param WObjectName String
 --- @return void
-function IsoSprite:LoadFramesPageSimple(arg0, arg1, arg2, arg3) end
+function IsoSprite:LoadFramesPageSimple(NObjectName, SObjectName, EObjectName, WObjectName) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param ObjectName String
+--- @param AnimName String
+--- @param nFrames int
 --- @return void
-function IsoSprite:LoadFramesPcx(arg0, arg1, arg2) end
+function IsoSprite:LoadFramesPcx(ObjectName, AnimName, nFrames) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 int
+--- @param ObjectName String
+--- @param AnimName String
+--- @param AltName String
+--- @param nFrames int
 --- @return void
-function IsoSprite:LoadFramesReverseAltName(arg0, arg1, arg2, arg3) end
+function IsoSprite:LoadFramesReverseAltName(ObjectName, AnimName, AltName, nFrames) end
 
 --- @public
---- @param arg0 IsoAnim
+--- @param name String
 --- @return void
-function IsoSprite:PlayAnim(arg0) end
+function IsoSprite:PlayAnim(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function IsoSprite:PlayAnimUnlooped(arg0) end
+function IsoSprite:PlayAnimUnlooped(name) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function IsoSprite:RenderGhostTile(arg0, arg1, arg2) end
+function IsoSprite:RenderGhostTile(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float)
-function IsoSprite:RenderGhostTileColor(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(x: int, y: int, z: int, offsetX: float, offsetY: float, r: float, g: float, b: float, a: float)
+function IsoSprite:RenderGhostTileColor(x, y, z, r, g, b, a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function IsoSprite:RenderGhostTileRed(arg0, arg1, arg2) end
+function IsoSprite:RenderGhostTileRed(x, y, z) end
 
 --- @public
---- @param arg0 String
+--- @param ObjectName String
 --- @return void
-function IsoSprite:ReplaceCurrentAnimFrames(arg0) end
+function IsoSprite:ReplaceCurrentAnimFrames(ObjectName) end
 
 --- @public
 --- @return int
 function IsoSprite:getID() end
 
 --- @public
---- @param arg0 IsoDirections
---- @param arg1 int
---- @param arg2 int
---- @param arg3 boolean
+--- @param dir IsoDirections
+--- @param x int
+--- @param y int
+--- @param flip boolean
 --- @return float
-function IsoSprite:getMaskClickedY(arg0, arg1, arg2, arg3) end
+function IsoSprite:getMaskClickedY(dir, x, y, flip) end
 
 --- @public
 --- @return String
@@ -217,15 +217,15 @@ function IsoSprite:getSheetGridIdFromName() end
 function IsoSprite:getSpriteGrid() end
 
 --- @public
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return Texture
-function IsoSprite:getTextureForCurrentFrame(arg0) end
+function IsoSprite:getTextureForCurrentFrame(dir) end
 
 --- @public
---- @param arg0 int
---- @param arg1 IsoDirections
+--- @param frame int
+--- @param dir IsoDirections
 --- @return Texture
-function IsoSprite:getTextureForFrame(arg0, arg1) end
+function IsoSprite:getTextureForFrame(frame, dir) end
 
 --- @public
 --- @return ColorInfo
@@ -240,137 +240,137 @@ function IsoSprite:getType() end
 function IsoSprite:hasActiveModel() end
 
 --- @public
---- @param arg0 IsoDirections
---- @param arg1 int
---- @param arg2 int
+--- @param dir IsoDirections
+--- @param x int
+--- @param y int
 --- @return boolean
---- @overload fun(arg0: IsoDirections, arg1: int, arg2: int, arg3: boolean)
-function IsoSprite:isMaskClicked(arg0, arg1, arg2) end
+--- @overload fun(dir: IsoDirections, x: int, y: int, flip: boolean)
+function IsoSprite:isMaskClicked(dir, x, y) end
 
 --- @public
 --- @return boolean
 function IsoSprite:isMoveWithWind() end
 
 --- @public
---- @param arg0 DataInputStream
+--- @param input DataInputStream
 --- @return void
-function IsoSprite:load(arg0) end
+function IsoSprite:load(input) end
 
 --- @public
 --- @return IsoSpriteInstance
 function IsoSprite:newInstance() end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 IsoDirections
---- @param arg5 float
---- @param arg6 float
---- @param arg7 ColorInfo
---- @param arg8 boolean
+--- @param obj IsoObject
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param dir IsoDirections
+--- @param offsetX float
+--- @param offsetY float
+--- @param info2 ColorInfo
+--- @param bDoRenderPrep boolean
 --- @return void
---- @overload fun(arg0: IsoObject, arg1: float, arg2: float, arg3: float, arg4: IsoDirections, arg5: float, arg6: float, arg7: ColorInfo, arg8: boolean, arg9: Consumer)
---- @overload fun(arg0: IsoSpriteInstance, arg1: IsoObject, arg2: float, arg3: float, arg4: float, arg5: IsoDirections, arg6: float, arg7: float, arg8: ColorInfo, arg9: boolean, arg10: Consumer)
-function IsoSprite:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+--- @overload fun(inst: IsoSpriteInstance, obj: IsoObject, x: float, y: float, z: float, dir: IsoDirections, offsetX: float, offsetY: float, info2: ColorInfo, bDoRenderPrep: boolean)
+--- @overload fun(inst: IsoSpriteInstance, obj: IsoObject, x: float, y: float, z: float, dir: IsoDirections, offsetX: float, offsetY: float, info2: ColorInfo, bDoRenderPrep: boolean, texdModifier: Consumer)
+function IsoSprite:render(obj, x, y, z, dir, offsetX, offsetY, info2, bDoRenderPrep) end
 
 --- @public
 --- @return void
 function IsoSprite:renderActiveModel() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param info2 ColorInfo
 --- @return void
-function IsoSprite:renderBloodSplat(arg0, arg1, arg2, arg3) end
+function IsoSprite:renderBloodSplat(x, y, z, info2) end
 
 --- @public
---- @param arg0 IsoSpriteInstance
---- @param arg1 IsoObject
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 IsoDirections
---- @param arg6 float
---- @param arg7 float
---- @param arg8 ColorInfo
---- @param arg9 boolean
---- @param arg10 Consumer
+--- @param inst IsoSpriteInstance
+--- @param obj IsoObject
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param dir IsoDirections
+--- @param offsetX float
+--- @param offsetY float
+--- @param col ColorInfo
+--- @param bDoRenderPrep boolean
+--- @param texdModifier Consumer
 --- @return void
-function IsoSprite:renderCurrentAnim(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
+function IsoSprite:renderCurrentAnim(inst, obj, x, y, z, dir, offsetX, offsetY, col, bDoRenderPrep, texdModifier) end
 
 --- @public
---- @param arg0 IsoSpriteInstance
---- @param arg1 IsoObject
---- @param arg2 IsoDirections
+--- @param def IsoSpriteInstance
+--- @param obj IsoObject
+--- @param dir IsoDirections
 --- @return void
-function IsoSprite:renderObjectPicker(arg0, arg1, arg2) end
+function IsoSprite:renderObjectPicker(def, obj, dir) end
 
 --- @public
---- @param arg0 IsoSpriteInstance
---- @param arg1 IsoObject
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 ColorInfo
---- @param arg8 boolean
+--- @param inst IsoSpriteInstance
+--- @param obj IsoObject
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param offsetX float
+--- @param offsetY float
+--- @param info2 ColorInfo
+--- @param bDoRenderPrep boolean
 --- @return void
-function IsoSprite:renderVehicle(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function IsoSprite:renderVehicle(inst, obj, x, y, z, offsetX, offsetY, info2, bDoRenderPrep) end
 
 --- @public
---- @param arg0 DataOutputStream
+--- @param output DataOutputStream
 --- @return void
-function IsoSprite:save(arg0) end
+function IsoSprite:save(output) end
 
 --- @public
---- @param arg0 boolean
+--- @param animate boolean
 --- @return void
-function IsoSprite:setAnimate(arg0) end
+function IsoSprite:setAnimate(animate) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param objectName String
+--- @param animName String
+--- @param numFrames int
 --- @return IsoSprite
-function IsoSprite:setFromCache(arg0, arg1, arg2) end
+function IsoSprite:setFromCache(objectName, animName, numFrames) end
 
 --- @public
 --- @return void
 function IsoSprite:setHideForWaterRender() end
 
 --- @public
---- @param arg0 String
+--- @param string String
 --- @return void
-function IsoSprite:setName(arg0) end
+function IsoSprite:setName(string) end
 
 --- @public
---- @param arg0 String
+--- @param val String
 --- @return void
-function IsoSprite:setParentObjectName(arg0) end
+function IsoSprite:setParentObjectName(val) end
 
 --- @public
---- @param arg0 IsoSpriteGrid
+--- @param sGrid IsoSpriteGrid
 --- @return void
-function IsoSprite:setSpriteGrid(arg0) end
+function IsoSprite:setSpriteGrid(sGrid) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param info ColorInfo
 --- @return void
-function IsoSprite:setTintMod(arg0) end
+function IsoSprite:setTintMod(info) end
 
 --- @public
---- @param arg0 IsoObjectType
+--- @param ntype IsoObjectType
 --- @return void
-function IsoSprite:setType(arg0) end
+function IsoSprite:setType(ntype) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: IsoSpriteInstance)
+--- @overload fun(def: IsoSpriteInstance)
 function IsoSprite:update() end
 
 
@@ -380,5 +380,5 @@ function IsoSprite:update() end
 
 --- @public
 --- @return IsoSprite
---- @overload fun(arg0: IsoSpriteManager)
+--- @overload fun(manager: IsoSpriteManager)
 function IsoSprite.new() end

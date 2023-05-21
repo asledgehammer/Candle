@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Seeds: Object
+--- @class Seeds
 Seeds = {};
 
 ------------------------------------

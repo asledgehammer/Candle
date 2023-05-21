@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSPokerNight: RandomizedDeadSurvivorBase
+--- Create some zombies in varsity outfit + 2 naked zombies in bedroom
 RDSPokerNight = {};
 
 ------------------------------------
@@ -8,15 +9,15 @@ RDSPokerNight = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RDSPokerNight:isValid(arg0, arg1) end
+function RDSPokerNight:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSPokerNight:randomizeDeadSurvivor(arg0) end
+function RDSPokerNight:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

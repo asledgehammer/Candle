@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoSpriteInstance: Object
+--- @class IsoSpriteInstance
 --- @field public pool ObjectPool
 IsoSpriteInstance = {};
 
@@ -10,15 +10,15 @@ IsoSpriteInstance = {};
 
 --- @public
 --- @static
---- @param arg0 IsoSpriteInstance
+--- @param isoSpriteInstance IsoSpriteInstance
 --- @return void
-function IsoSpriteInstance.add(arg0) end
+function IsoSpriteInstance.add(isoSpriteInstance) end
 
 --- @public
 --- @static
---- @param arg0 IsoSprite
+--- @param spr IsoSprite
 --- @return IsoSpriteInstance
-function IsoSpriteInstance.get(arg0) end
+function IsoSpriteInstance.get(spr) end
 
 
 ------------------------------------
@@ -30,25 +30,25 @@ function IsoSpriteInstance.get(arg0) end
 function IsoSpriteInstance:Dispose() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function IsoSpriteInstance:RenderGhostTileColor(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoSpriteInstance:RenderGhostTileColor(x, y, z, r, g, b, a) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function IsoSpriteInstance:SetAlpha(arg0) end
+function IsoSpriteInstance:SetAlpha(f) end
 
 --- @public
---- @param arg0 float
+--- @param targetAlpha float
 --- @return void
-function IsoSpriteInstance:SetTargetAlpha(arg0) end
+function IsoSpriteInstance:SetTargetAlpha(targetAlpha) end
 
 --- @public
 --- @return float
@@ -107,35 +107,35 @@ function IsoSpriteInstance:isFinished() end
 function IsoSpriteInstance:isMultiplyObjectAlpha() end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 IsoDirections
---- @param arg5 float
---- @param arg6 float
---- @param arg7 ColorInfo
+--- @param obj IsoObject
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param dir IsoDirections
+--- @param offsetX float
+--- @param offsetY float
+--- @param info2 ColorInfo
 --- @return void
-function IsoSpriteInstance:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoSpriteInstance:render(obj, x, y, z, dir, offsetX, offsetY, info2) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param texW float
+--- @param texH float
+--- @param width float
+--- @param height float
 --- @return void
-function IsoSpriteInstance:scaleAspect(arg0, arg1, arg2, arg3) end
+function IsoSpriteInstance:scaleAspect(texW, texH, width, height) end
 
 --- @public
---- @param arg0 float
+--- @param perSecond float
 --- @return void
-function IsoSpriteInstance:setFrameSpeedPerFrame(arg0) end
+function IsoSpriteInstance:setFrameSpeedPerFrame(perSecond) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param scaleX float
+--- @param scaleY float
 --- @return void
-function IsoSpriteInstance:setScale(arg0, arg1) end
+function IsoSpriteInstance:setScale(scaleX, scaleY) end
 
 --- @public
 --- @return void
@@ -148,5 +148,5 @@ function IsoSpriteInstance:update() end
 
 --- @public
 --- @return IsoSpriteInstance
---- @overload fun(arg0: IsoSprite)
+--- @overload fun(spr: IsoSprite)
 function IsoSpriteInstance.new() end

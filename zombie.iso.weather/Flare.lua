@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Flare: Object
+--- @class Flare
 Flare = {};
 
 ------------------------------------
@@ -12,14 +12,14 @@ Flare = {};
 function Flare:getColor() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return ClimateColorInfo
-function Flare:getColorPlayer(arg0) end
+function Flare:getColorPlayer(index) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return float
-function Flare:getDistModPlayer(arg0) end
+function Flare:getDistModPlayer(index) end
 
 --- @public
 --- @return int
@@ -30,14 +30,14 @@ function Flare:getId() end
 function Flare:getIntensity() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return float
-function Flare:getIntensityPlayer(arg0) end
+function Flare:getIntensityPlayer(index) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return float
-function Flare:getLerpPlayer(arg0) end
+function Flare:getLerpPlayer(index) end
 
 --- @public
 --- @return float
@@ -48,9 +48,9 @@ function Flare:getLifeTime() end
 function Flare:getMaxLifeTime() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return ClimateColorInfo
-function Flare:getOutColorPlayer(arg0) end
+function Flare:getOutColorPlayer(index) end
 
 --- @public
 --- @return float

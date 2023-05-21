@@ -23,48 +23,48 @@ function ClimbOverFenceState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function ClimbOverFenceState:animEvent(arg0, arg1) end
+function ClimbOverFenceState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbOverFenceState:enter(arg0) end
+function ClimbOverFenceState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbOverFenceState:execute(arg0) end
+function ClimbOverFenceState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbOverFenceState:exit(arg0) end
+function ClimbOverFenceState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 MoveDeltaModifiers
+--- @param owner IsoGameCharacter
+--- @param modifiers MoveDeltaModifiers
 --- @return void
-function ClimbOverFenceState:getDeltaModifiers(arg0, arg1) end
+function ClimbOverFenceState:getDeltaModifiers(owner, modifiers) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param owner IsoGameCharacter
+--- @param fromX int
+--- @param fromY int
+--- @param fromZ int
+--- @param toX int
+--- @param toY int
+--- @param toZ int
 --- @return boolean
-function ClimbOverFenceState:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ClimbOverFenceState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoDirections
+--- @param owner IsoGameCharacter
+--- @param dir IsoDirections
 --- @return void
-function ClimbOverFenceState:setParams(arg0, arg1) end
+function ClimbOverFenceState:setParams(owner, dir) end
 
 
 ------------------------------------

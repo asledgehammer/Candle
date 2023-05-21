@@ -1,6 +1,7 @@
 --- @meta
 
---- @class IsoRegions: Object
+--- @class IsoRegions
+--- TurboTuTone.
 --- @field public BIT_EMPTY byte
 --- @field public BIT_HAS_FLOOR byte
 --- @field public BIT_HAS_ROOF byte
@@ -38,9 +39,9 @@ IsoRegions = {};
 
 --- @public
 --- @static
---- @param arg0 byte
+--- @param dir byte
 --- @return byte
-function IsoRegions.GetOppositeDir(arg0) end
+function IsoRegions.GetOppositeDir(dir) end
 
 --- @public
 --- @static
@@ -49,25 +50,25 @@ function IsoRegions.ResetAllDataDebug() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param chunkX int
+--- @param chunkY int
 --- @return File
-function IsoRegions.getChunkFile(arg0, arg1) end
+function IsoRegions.getChunkFile(chunkX, chunkY) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return IChunkRegion
-function IsoRegions.getChunkRegion(arg0, arg1, arg2) end
+function IsoRegions.getChunkRegion(x, y, z) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param chunkx int
+--- @param chunky int
 --- @return DataChunk
-function IsoRegions.getDataChunk(arg0, arg1) end
+function IsoRegions.getDataChunk(chunkx, chunky) end
 
 --- @public
 --- @static
@@ -81,11 +82,11 @@ function IsoRegions.getHeaderFile() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return IWorldRegion
-function IsoRegions.getIsoWorldRegion(arg0, arg1, arg2) end
+function IsoRegions.getIsoWorldRegion(x, y, z) end
 
 --- @public
 --- @static
@@ -94,18 +95,18 @@ function IsoRegions.getLogger() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return byte
-function IsoRegions.getSquareFlags(arg0, arg1, arg2) end
+function IsoRegions.getSquareFlags(x, y, z) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return int
-function IsoRegions.hash(arg0, arg1) end
+function IsoRegions.hash(x, y) end
 
 --- @public
 --- @static
@@ -119,23 +120,23 @@ function IsoRegions.isDebugLoadAllChunks() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return void
---- @overload fun(arg0: String, arg1: Color)
-function IsoRegions.log(arg0) end
+--- @overload fun(str: String, col: Color)
+function IsoRegions.log(str) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
---- @param arg1 UdpConnection
+--- @param input ByteBuffer
+--- @param conn UdpConnection
 --- @return void
-function IsoRegions.receiveClientRequestFullDataChunks(arg0, arg1) end
+function IsoRegions.receiveClientRequestFullDataChunks(input, conn) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return void
-function IsoRegions.receiveServerUpdatePacket(arg0) end
+function IsoRegions.receiveServerUpdatePacket(input) end
 
 --- @public
 --- @static
@@ -144,22 +145,22 @@ function IsoRegions.reset() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function IsoRegions.setDebugLoadAllChunks(arg0) end
+function IsoRegions.setDebugLoadAllChunks(b) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param gs IsoGridSquare
 --- @return void
-function IsoRegions.setPreviousFlags(arg0) end
+function IsoRegions.setPreviousFlags(gs) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param gs IsoGridSquare
 --- @return void
---- @overload fun(arg0: IsoGridSquare, arg1: boolean)
-function IsoRegions.squareChanged(arg0) end
+--- @overload fun(gs: IsoGridSquare, isRemoval: boolean)
+function IsoRegions.squareChanged(gs) end
 
 --- @public
 --- @static
@@ -168,9 +169,9 @@ function IsoRegions.update() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return void
-function IsoRegions.warn(arg0) end
+function IsoRegions.warn(str) end
 
 
 ------------------------------------

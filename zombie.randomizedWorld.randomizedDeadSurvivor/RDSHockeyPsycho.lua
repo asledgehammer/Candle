@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSHockeyPsycho: RandomizedDeadSurvivorBase
+--- Well, it's friday the 13th... Basically.
 RDSHockeyPsycho = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RDSHockeyPsycho = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSHockeyPsycho:randomizeDeadSurvivor(arg0) end
+function RDSHockeyPsycho:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

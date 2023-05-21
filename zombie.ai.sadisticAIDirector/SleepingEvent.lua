@@ -1,6 +1,6 @@
 --- @meta
 
---- @class SleepingEvent: Object
+--- @class SleepingEvent
 --- @field public instance SleepingEvent
 --- @field public zombiesInvasion boolean
 SleepingEvent = {};
@@ -10,21 +10,21 @@ SleepingEvent = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 int
+--- @param chr IsoPlayer
+--- @param sleepingTime int
 --- @return void
-function SleepingEvent:setPlayerFallAsleep(arg0, arg1) end
+function SleepingEvent:setPlayerFallAsleep(chr, sleepingTime) end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param chr IsoPlayer
 --- @return void
-function SleepingEvent:update(arg0) end
+function SleepingEvent:update(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
-function SleepingEvent:wakeUp(arg0) end
+--- @overload fun(chr: IsoGameCharacter, remote: boolean)
+function SleepingEvent:wakeUp(chr) end
 
 
 ------------------------------------

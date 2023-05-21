@@ -1,6 +1,7 @@
 --- @meta
 
---- @class RadioLine: Object
+--- @class RadioLine
+--- Turbo
 RadioLine = {};
 
 ------------------------------------
@@ -36,14 +37,14 @@ function RadioLine:getText() end
 function RadioLine:isCustomAirTime() end
 
 --- @public
---- @param arg0 float
+--- @param airTime float
 --- @return void
-function RadioLine:setAirTime(arg0) end
+function RadioLine:setAirTime(airTime) end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return void
-function RadioLine:setText(arg0) end
+function RadioLine:setText(text) end
 
 
 ------------------------------------
@@ -51,10 +52,10 @@ function RadioLine:setText(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param txt String
+--- @param red float
+--- @param green float
+--- @param blue float
 --- @return RadioLine
---- @overload fun(arg0: String, arg1: float, arg2: float, arg3: float, arg4: String)
-function RadioLine.new(arg0, arg1, arg2, arg3) end
+--- @overload fun(txt: String, red: float, green: float, blue: float, fx: String)
+function RadioLine.new(txt, red, green, blue) end

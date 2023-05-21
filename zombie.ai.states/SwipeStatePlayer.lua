@@ -9,25 +9,25 @@ SwipeStatePlayer = {};
 
 --- @public
 --- @static
---- @param arg0 HandWeapon
---- @param arg1 IsoGameCharacter
+--- @param weapon HandWeapon
+--- @param owner IsoGameCharacter
 --- @return void
-function SwipeStatePlayer.WeaponLowerCondition(arg0, arg1) end
+function SwipeStatePlayer.WeaponLowerCondition(weapon, owner) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoMovingObject
+--- @param owner IsoGameCharacter
+--- @param obj IsoMovingObject
 --- @return boolean
-function SwipeStatePlayer.checkPVP(arg0, arg1) end
+function SwipeStatePlayer.checkPVP(owner, obj) end
 
 --- @public
 --- @static
---- @param arg0 IsoMovingObject
---- @param arg1 String
---- @param arg2 Vector3
+--- @param target IsoMovingObject
+--- @param boneName String
+--- @param bonePos Vector3
 --- @return Vector3
-function SwipeStatePlayer.getBoneWorldPos(arg0, arg1, arg2) end
+function SwipeStatePlayer.getBoneWorldPos(target, boneName, bonePos) end
 
 --- @public
 --- @static
@@ -36,23 +36,23 @@ function SwipeStatePlayer.instance() end
 
 --- @public
 --- @static
---- @param arg0 IsoMovingObject
+--- @param obj IsoMovingObject
 --- @return boolean
-function SwipeStatePlayer.isProne(arg0) end
+function SwipeStatePlayer.isProne(obj) end
 
 --- @public
 --- @static
---- @param arg0 IsoMovingObject
+--- @param obj IsoMovingObject
 --- @return boolean
-function SwipeStatePlayer.isStanding(arg0) end
+function SwipeStatePlayer.isStanding(obj) end
 
 --- @public
 --- @static
---- @param arg0 IsoMovingObject
---- @param arg1 HandWeapon
---- @param arg2 IsoGameCharacter
+--- @param obj IsoMovingObject
+--- @param weapon HandWeapon
+--- @param owner IsoGameCharacter
 --- @return void
-function SwipeStatePlayer.splash(arg0, arg1, arg2) end
+function SwipeStatePlayer.splash(obj, weapon, owner) end
 
 
 ------------------------------------
@@ -60,74 +60,74 @@ function SwipeStatePlayer.splash(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoLivingCharacter
---- @param arg1 AttackVars
+--- @param owner IsoLivingCharacter
+--- @param vars AttackVars
 --- @return void
-function SwipeStatePlayer:CalcAttackVars(arg0, arg1) end
+function SwipeStatePlayer:CalcAttackVars(owner, vars) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 HandWeapon
---- @param arg2 HitInfo
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
+--- @param hitInfo HitInfo
 --- @return int
-function SwipeStatePlayer:CalcHitChance(arg0, arg1, arg2) end
+function SwipeStatePlayer:CalcHitChance(owner, weapon, hitInfo) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 boolean
---- @param arg2 AttackVars
---- @param arg3 ArrayList
+--- @param owner IsoGameCharacter
+--- @param extraRange boolean
+--- @param attackVars AttackVars
+--- @param hitList ArrayList
 --- @return void
-function SwipeStatePlayer:CalcHitList(arg0, arg1, arg2, arg3) end
+function SwipeStatePlayer:CalcHitList(owner, extraRange, attackVars, hitList) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 HandWeapon
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
 --- @return void
-function SwipeStatePlayer:ConnectSwing(arg0, arg1) end
+function SwipeStatePlayer:ConnectSwing(owner, weapon) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function SwipeStatePlayer:animEvent(arg0, arg1) end
+function SwipeStatePlayer:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoLivingCharacter
---- @param arg1 HandWeapon
---- @param arg2 boolean
---- @param arg3 ArrayList
---- @param arg4 ArrayList
+--- @param owner IsoLivingCharacter
+--- @param weapon HandWeapon
+--- @param extraRange boolean
+--- @param targetsProne ArrayList
+--- @param targetsStanding ArrayList
 --- @return void
-function SwipeStatePlayer:calcValidTargets(arg0, arg1, arg2, arg3, arg4) end
+function SwipeStatePlayer:calcValidTargets(owner, weapon, extraRange, targetsProne, targetsStanding) end
 
 --- @public
---- @param arg0 HandWeapon
---- @param arg1 IsoGameCharacter
+--- @param weapon HandWeapon
+--- @param owner IsoGameCharacter
 --- @return void
-function SwipeStatePlayer:changeWeapon(arg0, arg1) end
+function SwipeStatePlayer:changeWeapon(weapon, owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function SwipeStatePlayer:enter(arg0) end
+function SwipeStatePlayer:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function SwipeStatePlayer:execute(arg0) end
+function SwipeStatePlayer:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function SwipeStatePlayer:exit(arg0) end
+function SwipeStatePlayer:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 HitInfo
---- @param arg2 HitInfo
+--- @param owner IsoGameCharacter
+--- @param bestStanding HitInfo
+--- @param bestProne HitInfo
 --- @return boolean
-function SwipeStatePlayer:isProneTargetBetter(arg0, arg1, arg2) end
+function SwipeStatePlayer:isProneTargetBetter(owner, bestStanding, bestProne) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class SGlobalObjects: Object
+--- @class SGlobalObjects
 SGlobalObjects = {};
 
 ------------------------------------
@@ -9,10 +9,10 @@ SGlobalObjects = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 IsoObject
+--- @param systemName String
+--- @param isoObject IsoObject
 --- @return void
-function SGlobalObjects.OnIsoObjectChangedItself(arg0, arg1) end
+function SGlobalObjects.OnIsoObjectChangedItself(systemName, isoObject) end
 
 --- @public
 --- @static
@@ -21,22 +21,22 @@ function SGlobalObjects.Reset() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return void
-function SGlobalObjects.chunkLoaded(arg0, arg1) end
+function SGlobalObjects.chunkLoaded(wx, wy) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return SGlobalObjectSystem
-function SGlobalObjects.getSystemByIndex(arg0) end
+function SGlobalObjects.getSystemByIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return SGlobalObjectSystem
-function SGlobalObjects.getSystemByName(arg0) end
+function SGlobalObjects.getSystemByName(name) end
 
 --- @public
 --- @static
@@ -55,15 +55,15 @@ function SGlobalObjects.load() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return SGlobalObjectSystem
-function SGlobalObjects.newSystem(arg0) end
+function SGlobalObjects.newSystem(name) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param message String
 --- @return void
-function SGlobalObjects.noise(arg0) end
+function SGlobalObjects.noise(message) end
 
 --- @public
 --- @static
@@ -76,9 +76,9 @@ function SGlobalObjects.receiveClientCommand(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return SGlobalObjectSystem
-function SGlobalObjects.registerSystem(arg0) end
+function SGlobalObjects.registerSystem(name) end
 
 --- @public
 --- @static
@@ -87,9 +87,9 @@ function SGlobalObjects.save() end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function SGlobalObjects.saveInitialStateForClient(arg0) end
+function SGlobalObjects.saveInitialStateForClient(bb) end
 
 --- @public
 --- @static

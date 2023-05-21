@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Stats: Object
+--- @class Stats
 --- @field public NumCloseZombies int
 Stats = {};
 
@@ -121,134 +121,134 @@ function Stats:getVisibleZombies() end
 function Stats:isTripping() end
 
 --- @public
---- @param arg0 DataInputStream
+--- @param input DataInputStream
 --- @return void
---- @overload fun(arg0: ByteBuffer, arg1: int)
-function Stats:load(arg0) end
+--- @overload fun(input: ByteBuffer, WorldVersion: int)
+function Stats:load(input) end
 
 --- @public
 --- @return void
 function Stats:resetStats() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output DataOutputStream
 --- @return void
-function Stats:save(arg0) end
+function Stats:save(output) end
 
 --- @public
---- @param arg0 float
+--- @param Anger float
 --- @return void
-function Stats:setAnger(arg0) end
+function Stats:setAnger(Anger) end
 
 --- @public
---- @param arg0 float
+--- @param boredom float
 --- @return void
-function Stats:setBoredom(arg0) end
+function Stats:setBoredom(boredom) end
 
 --- @public
---- @param arg0 float
+--- @param Drunkenness float
 --- @return void
-function Stats:setDrunkenness(arg0) end
+function Stats:setDrunkenness(Drunkenness) end
 
 --- @public
---- @param arg0 float
+--- @param endurance float
 --- @return void
-function Stats:setEndurance(arg0) end
+function Stats:setEndurance(endurance) end
 
 --- @public
---- @param arg0 float
+--- @param endurancedanger float
 --- @return void
-function Stats:setEndurancedanger(arg0) end
+function Stats:setEndurancedanger(endurancedanger) end
 
 --- @public
---- @param arg0 float
+--- @param endurancelast float
 --- @return void
-function Stats:setEndurancelast(arg0) end
+function Stats:setEndurancelast(endurancelast) end
 
 --- @public
---- @param arg0 float
+--- @param endurancewarn float
 --- @return void
-function Stats:setEndurancewarn(arg0) end
+function Stats:setEndurancewarn(endurancewarn) end
 
 --- @public
---- @param arg0 float
+--- @param fatigue float
 --- @return void
-function Stats:setFatigue(arg0) end
+function Stats:setFatigue(fatigue) end
 
 --- @public
---- @param arg0 float
+--- @param Fear float
 --- @return void
-function Stats:setFear(arg0) end
+function Stats:setFear(Fear) end
 
 --- @public
---- @param arg0 float
+--- @param fitness float
 --- @return void
-function Stats:setFitness(arg0) end
+function Stats:setFitness(fitness) end
 
 --- @public
---- @param arg0 float
+--- @param hunger float
 --- @return void
-function Stats:setHunger(arg0) end
+function Stats:setHunger(hunger) end
 
 --- @public
---- @param arg0 float
+--- @param idleboredom float
 --- @return void
-function Stats:setIdleboredom(arg0) end
+function Stats:setIdleboredom(idleboredom) end
 
 --- @public
---- @param arg0 float
+--- @param morale float
 --- @return void
-function Stats:setMorale(arg0) end
+function Stats:setMorale(morale) end
 
 --- @public
---- @param arg0 int
+--- @param NumVisibleZombies int
 --- @return void
-function Stats:setNumVisibleZombies(arg0) end
+function Stats:setNumVisibleZombies(NumVisibleZombies) end
 
 --- @public
---- @param arg0 float
+--- @param Pain float
 --- @return void
-function Stats:setPain(arg0) end
+function Stats:setPain(Pain) end
 
 --- @public
---- @param arg0 float
+--- @param Panic float
 --- @return void
-function Stats:setPanic(arg0) end
+function Stats:setPanic(Panic) end
 
 --- @public
---- @param arg0 float
+--- @param Sanity float
 --- @return void
-function Stats:setSanity(arg0) end
+function Stats:setSanity(Sanity) end
 
 --- @public
---- @param arg0 float
+--- @param Sickness float
 --- @return void
-function Stats:setSickness(arg0) end
+function Stats:setSickness(Sickness) end
 
 --- @public
---- @param arg0 float
+--- @param stress float
 --- @return void
-function Stats:setStress(arg0) end
+function Stats:setStress(stress) end
 
 --- @public
---- @param arg0 float
+--- @param stressFromCigarettes float
 --- @return void
-function Stats:setStressFromCigarettes(arg0) end
+function Stats:setStressFromCigarettes(stressFromCigarettes) end
 
 --- @public
---- @param arg0 float
+--- @param thirst float
 --- @return void
-function Stats:setThirst(arg0) end
+function Stats:setThirst(thirst) end
 
 --- @public
---- @param arg0 boolean
+--- @param Tripping boolean
 --- @return void
-function Stats:setTripping(arg0) end
+function Stats:setTripping(Tripping) end
 
 --- @public
---- @param arg0 float
+--- @param TrippingRotAngle float
 --- @return void
-function Stats:setTrippingRotAngle(arg0) end
+function Stats:setTrippingRotAngle(TrippingRotAngle) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class WeatherStage: Object
+--- @class WeatherStage
 WeatherStage = {};
 
 ------------------------------------
@@ -44,36 +44,36 @@ function WeatherStage:getStageID() end
 function WeatherStage:getStageStart() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param mid int
+--- @param __end int
 --- @return void
-function WeatherStage:lerpEntryTo(arg0, arg1) end
+function WeatherStage:lerpEntryTo(mid, __end) end
 
 --- @public
---- @param arg0 DataInputStream
---- @param arg1 int
+--- @param input DataInputStream
+--- @param worldVersion int
 --- @return void
-function WeatherStage:load(arg0, arg1) end
+function WeatherStage:load(input, worldVersion) end
 
 --- @public
---- @param arg0 DataOutputStream
+--- @param output DataOutputStream
 --- @return void
-function WeatherStage:save(arg0) end
+function WeatherStage:save(output) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function WeatherStage:setHasStartedCloud(arg0) end
+function WeatherStage:setHasStartedCloud(b) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return void
-function WeatherStage:setStageID(arg0) end
+function WeatherStage:setStageID(id) end
 
 --- @public
---- @param arg0 float
+--- @param t float
 --- @return void
-function WeatherStage:setTargetStrength(arg0) end
+function WeatherStage:setTargetStrength(t) end
 
 
 ------------------------------------
@@ -82,5 +82,5 @@ function WeatherStage:setTargetStrength(arg0) end
 
 --- @public
 --- @return WeatherStage
---- @overload fun(arg0: int)
+--- @overload fun(id: int)
 function WeatherStage.new() end

@@ -32,14 +32,14 @@ function BooleanConfigOption:getValueAsObject() end
 function BooleanConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return boolean
-function BooleanConfigOption:isValidString(arg0) end
+function BooleanConfigOption:isValidString(s) end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return void
-function BooleanConfigOption:parse(arg0) end
+function BooleanConfigOption:parse(s) end
 
 --- @public
 --- @return void
@@ -50,14 +50,14 @@ function BooleanConfigOption:resetToDefault() end
 function BooleanConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 boolean
+--- @param value boolean
 --- @return void
-function BooleanConfigOption:setValue(arg0) end
+function BooleanConfigOption:setValue(value) end
 
 --- @public
---- @param arg0 Object
+--- @param o Object
 --- @return void
-function BooleanConfigOption:setValueFromObject(arg0) end
+function BooleanConfigOption:setValueFromObject(o) end
 
 
 ------------------------------------
@@ -65,7 +65,7 @@ function BooleanConfigOption:setValueFromObject(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param name String
+--- @param defaultValue boolean
 --- @return BooleanConfigOption
-function BooleanConfigOption.new(arg0, arg1) end
+function BooleanConfigOption.new(name, defaultValue) end

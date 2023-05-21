@@ -21,6 +21,6 @@ function RadarPanel:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param playerIndex int
 --- @return RadarPanel
-function RadarPanel.new(arg0) end
+function RadarPanel.new(playerIndex) end

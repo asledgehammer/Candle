@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Mod: Object
+--- @class Mod
 Mod = {};
 
 ------------------------------------
@@ -8,16 +8,16 @@ Mod = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param name String
+--- @param flags int
 --- @return void
-function Mod:addPack(arg0, arg1) end
+function Mod:addPack(name, flags) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param name String
+--- @param fileNumber int
 --- @return void
-function Mod:addTileDef(arg0, arg1) end
+function Mod:addTileDef(name, fileNumber) end
 
 --- @public
 --- @return String
@@ -40,9 +40,9 @@ function Mod:getName() end
 function Mod:getPacks() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return String
-function Mod:getPoster(arg0) end
+function Mod:getPoster(index) end
 
 --- @public
 --- @return int
@@ -81,34 +81,34 @@ function Mod:getWorkshopID() end
 function Mod:isAvailable() end
 
 --- @public
---- @param arg0 boolean
+--- @param available boolean
 --- @return void
-function Mod:setAvailable(arg0) end
+function Mod:setAvailable(available) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return void
-function Mod:setId(arg0) end
+function Mod:setId(id) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Mod:setName(arg0) end
+function Mod:setName(name) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param require ArrayList
 --- @return void
-function Mod:setRequire(arg0) end
+function Mod:setRequire(require) end
 
 --- @public
---- @param arg0 Texture
+--- @param tex Texture
 --- @return void
-function Mod:setTexture(arg0) end
+function Mod:setTexture(tex) end
 
 --- @public
---- @param arg0 String
+--- @param url String
 --- @return void
-function Mod:setUrl(arg0) end
+function Mod:setUrl(url) end
 
 
 ------------------------------------
@@ -116,6 +116,6 @@ function Mod:setUrl(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param dir String
 --- @return Mod
-function Mod.new(arg0) end
+function Mod.new(dir) end

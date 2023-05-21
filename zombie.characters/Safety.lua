@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Safety: Object
+--- @class Safety
 Safety = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ Safety = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Safety
+--- @param other Safety
 --- @return void
-function Safety:copyFrom(arg0) end
+function Safety:copyFrom(other) end
 
 --- @public
 --- @return Object
@@ -41,35 +41,35 @@ function Safety:isLast() end
 function Safety:isToggleAllowed() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Safety:load(arg0, arg1) end
+function Safety:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function Safety:save(arg0) end
+function Safety:save(output) end
 
 --- @public
---- @param arg0 float
+--- @param cooldown float
 --- @return void
-function Safety:setCooldown(arg0) end
+function Safety:setCooldown(cooldown) end
 
 --- @public
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return void
-function Safety:setEnabled(arg0) end
+function Safety:setEnabled(enabled) end
 
 --- @public
---- @param arg0 boolean
+--- @param last boolean
 --- @return void
-function Safety:setLast(arg0) end
+function Safety:setLast(last) end
 
 --- @public
---- @param arg0 float
+--- @param toggle float
 --- @return void
-function Safety:setToggle(arg0) end
+function Safety:setToggle(toggle) end
 
 --- @public
 --- @return void
@@ -82,5 +82,5 @@ function Safety:toggleSafety() end
 
 --- @public
 --- @return Safety
---- @overload fun(arg0: IsoGameCharacter)
+--- @overload fun(character: IsoGameCharacter)
 function Safety.new() end

@@ -8,14 +8,14 @@ KeyRing = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Key
+--- @param key Key
 --- @return void
-function KeyRing:addKey(arg0) end
+function KeyRing:addKey(key) end
 
 --- @public
---- @param arg0 int
+--- @param keyId int
 --- @return boolean
-function KeyRing:containsKeyId(arg0) end
+function KeyRing:containsKeyId(keyId) end
 
 --- @public
 --- @return String
@@ -30,9 +30,9 @@ function KeyRing:getKeys() end
 function KeyRing:getSaveType() end
 
 --- @public
---- @param arg0 ArrayList
+--- @param keys ArrayList
 --- @return void
-function KeyRing:setKeys(arg0) end
+function KeyRing:setKeys(keys) end
 
 
 ------------------------------------
@@ -40,9 +40,9 @@ function KeyRing:setKeys(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param type String
+--- @param tex String
 --- @return KeyRing
-function KeyRing.new(arg0, arg1, arg2, arg3) end
+function KeyRing.new(module, name, type, tex) end

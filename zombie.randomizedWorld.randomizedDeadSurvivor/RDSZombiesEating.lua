@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSZombiesEating: RandomizedDeadSurvivorBase
+--- Create a dead survivor in the livingroom with zombies eating him
 RDSZombiesEating = {};
 
 ------------------------------------
@@ -8,15 +9,15 @@ RDSZombiesEating = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RDSZombiesEating:isValid(arg0, arg1) end
+function RDSZombiesEating:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSZombiesEating:randomizeDeadSurvivor(arg0) end
+function RDSZombiesEating:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

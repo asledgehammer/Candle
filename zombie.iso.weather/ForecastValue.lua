@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ForecastValue: Object
+--- @class ForecastValue
 ForecastValue = {};
 
 ------------------------------------

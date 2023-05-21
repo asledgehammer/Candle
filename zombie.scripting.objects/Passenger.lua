@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Passenger: Object
+--- @class Passenger
 Passenger = {};
 
 ------------------------------------
@@ -12,23 +12,23 @@ Passenger = {};
 function Passenger:getId() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return Position
-function Passenger:getPosition(arg0) end
+function Passenger:getPosition(index) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return Position
-function Passenger:getPositionById(arg0) end
+function Passenger:getPositionById(id) end
 
 --- @public
 --- @return int
 function Passenger:getPositionCount() end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return SwitchSeat
-function Passenger:getSwitchSeatById(arg0) end
+function Passenger:getSwitchSeatById(id) end
 
 --- @public
 --- @return Passenger

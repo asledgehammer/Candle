@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ItemPickerJava: Object
+--- @class ItemPickerJava
 --- @field public containers THashMap
 --- @field public NoContainerFillRooms ArrayList
 --- @field public ProceduralDistributions THashMap
@@ -27,9 +27,9 @@ function ItemPickerJava.Parse() end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return void
-function ItemPickerJava.doOverlaySprite(arg0) end
+function ItemPickerJava.doOverlaySprite(sq) end
 
 --- @public
 --- @static
@@ -45,10 +45,10 @@ function ItemPickerJava.doRollItem(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
 
 --- @public
 --- @static
---- @param arg0 ItemContainer
---- @param arg1 IsoPlayer
+--- @param container ItemContainer
+--- @param player IsoPlayer
 --- @return void
-function ItemPickerJava.fillContainer(arg0, arg1) end
+function ItemPickerJava.fillContainer(container, player) end
 
 --- @public
 --- @static
@@ -61,18 +61,18 @@ function ItemPickerJava.fillContainerType(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 boolean
+--- @param room String
+--- @param container String
+--- @param proceduralName String
+--- @param junk boolean
 --- @return ItemPickerContainer
-function ItemPickerJava.getItemContainer(arg0, arg1, arg2, arg3) end
+function ItemPickerJava.getItemContainer(room, container, proceduralName, junk) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param itemname String
 --- @return float
-function ItemPickerJava.getLootModifier(arg0) end
+function ItemPickerJava.getLootModifier(itemname) end
 
 --- @public
 --- @static
@@ -102,9 +102,9 @@ function ItemPickerJava.tryAddItemToContainer(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return void
-function ItemPickerJava.updateOverlaySprite(arg0) end
+function ItemPickerJava.updateOverlaySprite(obj) end
 
 
 ------------------------------------

@@ -34,24 +34,24 @@ function Texture.clearTextures() end
 
 --- @public
 --- @static
---- @param arg0 HashMap
---- @param arg1 HashMap
+--- @param map HashMap
+--- @param mapFull HashMap
 --- @return void
-function Texture.collectAllIcons(arg0, arg1) end
+function Texture.collectAllIcons(map, mapFull) end
 
 --- @public
 --- @static
---- @param arg0 int[]
---- @param arg1 int
---- @param arg2 int
+--- @param imgPixels int[]
+--- @param imgw int
+--- @param imgh int
 --- @return int[]
-function Texture.flipPixels(arg0, arg1, arg2) end
+function Texture.flipPixels(imgPixels, imgw, imgh) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return void
-function Texture.forgetTexture(arg0) end
+function Texture.forgetTexture(name) end
 
 --- @public
 --- @static
@@ -65,23 +65,23 @@ function Texture.getErrorTexture() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return Texture
---- @overload fun(arg0: String, arg1: String)
---- @overload fun(arg0: String, arg1: int[], arg2: String)
-function Texture.getSharedTexture(arg0) end
+--- @overload fun(name: String, palette: String)
+--- @overload fun(name: String, palette: int[], paletteName: String)
+function Texture.getSharedTexture(name) end
 
 --- @public
 --- @static
---- @param arg0 long
+--- @param steamID long
 --- @return Texture
-function Texture.getSteamAvatar(arg0) end
+function Texture.getSteamAvatar(steamID) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return Texture
-function Texture.getTexture(arg0) end
+function Texture.getTexture(name) end
 
 --- @public
 --- @static
@@ -95,27 +95,27 @@ function Texture.onTexturePacksChanged() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param filePath String
 --- @return String
-function Texture.processFilePath(arg0) end
+function Texture.processFilePath(filePath) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return void
-function Texture.reload(arg0) end
+function Texture.reload(name) end
 
 --- @public
 --- @static
---- @param arg0 long
+--- @param steamID long
 --- @return void
-function Texture.steamAvatarChanged(arg0) end
+function Texture.steamAvatarChanged(steamID) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return Texture
-function Texture.trygetTexture(arg0) end
+function Texture.trygetTexture(name) end
 
 
 ------------------------------------
@@ -124,21 +124,21 @@ function Texture.trygetTexture(arg0) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: int)
+--- @overload fun(unit: int)
 function Texture:bind() end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param from Texture
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
 --- @return void
-function Texture:copyMaskRegion(arg0, arg1, arg2, arg3, arg4) end
+function Texture:copyMaskRegion(from, x, y, width, height) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: WrappedBuffer)
+--- @overload fun(mask: boolean[])
 function Texture:createMask() end
 
 --- @public
@@ -146,9 +146,9 @@ function Texture:createMask() end
 function Texture:destroy() end
 
 --- @public
---- @param arg0 Texture
+--- @param other Texture
 --- @return boolean
-function Texture:equals(arg0) end
+function Texture:equals(other) end
 
 --- @public
 --- @return WrappedBuffer
@@ -203,9 +203,9 @@ function Texture:getTextureId() end
 function Texture:getType() end
 
 --- @public
---- @param arg0 Vector2
+--- @param uvScale Vector2
 --- @return Vector2
-function Texture:getUVScale(arg0) end
+function Texture:getUVScale(uvScale) end
 
 --- @public
 --- @return boolean
@@ -256,229 +256,229 @@ function Texture:isSolid() end
 function Texture:isValid() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param cache ByteBuffer
 --- @return void
-function Texture:loadMaskRegion(arg0) end
+function Texture:loadMaskRegion(cache) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param red int
+--- @param green int
+--- @param blue int
 --- @return void
-function Texture:makeTransp(arg0, arg1, arg2) end
+function Texture:makeTransp(red, green, blue) end
 
 --- @public
 --- @return void
 function Texture:onBeforeReady() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Texture:reloadFromFile(arg0) end
+function Texture:reloadFromFile(name) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param x float
+--- @param y float
 --- @return void
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: Consumer)
---- @overload fun(arg0: ObjectRenderEffects, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: Consumer)
-function Texture:render(arg0, arg1) end
+--- @overload fun(x: float, y: float, width: float, height: float)
+--- @overload fun(x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer)
+--- @overload fun(dr: ObjectRenderEffects, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer)
+function Texture:render(x, y) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
+--- @param x float
+--- @param y float
+--- @param width float
+--- @param height float
+--- @param l int
+--- @param u int
+--- @param r int
+--- @param d int
 --- @return void
-function Texture:renderdiamond(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function Texture:renderdiamond(x, y, width, height, l, u, r, d) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
---- @param arg8 float
---- @param arg9 float
---- @param arg10 float
---- @param arg11 float
+--- @param x float
+--- @param y float
+--- @param width float
+--- @param height float
+--- @param texx int
+--- @param texy int
+--- @param texWidth int
+--- @param texHeight int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function Texture:rendershader2(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
+function Texture:rendershader2(x, y, width, height, texx, texy, texWidth, texHeight, r, g, b, a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 Consumer
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param texdModifier Consumer
 --- @return void
-function Texture:renderstrip(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function Texture:renderstrip(x, y, width, height, r, g, b, a, texdModifier) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
+--- @param x float
+--- @param y float
+--- @param width float
+--- @param height float
+--- @param u int
+--- @param d int
+--- @param u2 int
+--- @param d2 int
 --- @return void
-function Texture:renderwalln(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function Texture:renderwalln(x, y, width, height, u, d, u2, d2) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
---- @param arg8 int
---- @param arg9 int
+--- @param x float
+--- @param y float
+--- @param width float
+--- @param height float
+--- @param u int
+--- @param d int
+--- @param u2 int
+--- @param d2 int
+--- @param r int
+--- @param r2 int
 --- @return void
-function Texture:renderwallnw(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+function Texture:renderwallnw(x, y, width, height, u, d, u2, d2, r, r2) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
+--- @param x float
+--- @param y float
+--- @param width float
+--- @param height float
+--- @param u int
+--- @param d int
+--- @param u2 int
+--- @param d2 int
 --- @return void
-function Texture:renderwallw(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function Texture:renderwallw(x, y, width, height, u, d, u2, d2) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Texture:saveMask(arg0) end
+function Texture:saveMask(name) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param cache ByteBuffer
 --- @return void
-function Texture:saveMaskRegion(arg0) end
+function Texture:saveMaskRegion(cache) end
 
 --- @public
---- @param arg0 String
+--- @param filename String
 --- @return void
-function Texture:saveOnRenderThread(arg0) end
+function Texture:saveOnRenderThread(filename) end
 
 --- @public
---- @param arg0 String
+--- @param filename String
 --- @return void
-function Texture:saveToCurrentSavefileDirectory(arg0) end
+function Texture:saveToCurrentSavefileDirectory(filename) end
 
 --- @public
---- @param arg0 String
+--- @param filename String
 --- @return void
-function Texture:saveToZomboidDirectory(arg0) end
+function Texture:saveToZomboidDirectory(filename) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param red int
+--- @param green int
+--- @param blue int
+--- @param alpha int
 --- @return void
-function Texture:setAlphaForeach(arg0, arg1, arg2, arg3) end
+function Texture:setAlphaForeach(red, green, blue, alpha) end
 
 --- @public
 --- @return void
 function Texture:setCustomizedTexture() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param data ByteBuffer
 --- @return void
-function Texture:setData(arg0) end
+function Texture:setData(data) end
 
 --- @public
---- @param arg0 int
+--- @param height int
 --- @return void
-function Texture:setHeight(arg0) end
+function Texture:setHeight(height) end
 
 --- @public
---- @param arg0 Mask
+--- @param mask Mask
 --- @return void
-function Texture:setMask(arg0) end
+function Texture:setMask(mask) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Texture:setName(arg0) end
+function Texture:setName(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Texture:setNameOnly(arg0) end
+function Texture:setNameOnly(name) end
 
 --- @public
---- @param arg0 int
+--- @param offset int
 --- @return void
-function Texture:setOffsetX(arg0) end
+function Texture:setOffsetX(offset) end
 
 --- @public
---- @param arg0 int
+--- @param offset int
 --- @return void
-function Texture:setOffsetY(arg0) end
+function Texture:setOffsetY(offset) end
 
 --- @public
---- @param arg0 int
+--- @param realHeight int
 --- @return void
-function Texture:setRealHeight(arg0) end
+function Texture:setRealHeight(realHeight) end
 
 --- @public
---- @param arg0 int
+--- @param realWidth int
 --- @return void
-function Texture:setRealWidth(arg0) end
+function Texture:setRealWidth(realWidth) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
 --- @return void
-function Texture:setRegion(arg0, arg1, arg2, arg3) end
+function Texture:setRegion(x, y, width, height) end
 
 --- @public
---- @param arg0 boolean
+--- @param value boolean
 --- @return void
-function Texture:setUseAlphaChannel(arg0) end
+function Texture:setUseAlphaChannel(value) end
 
 --- @public
---- @param arg0 int
+--- @param width int
 --- @return void
-function Texture:setWidth(arg0) end
+function Texture:setWidth(width) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param xOffset int
+--- @param yOffset int
+--- @param width int
+--- @param height int
 --- @return Texture
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: int)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int)
-function Texture:split(arg0, arg1, arg2, arg3) end
+--- @overload fun(name: String, xOffset: int, yOffset: int, width: int, height: int)
+--- @overload fun(xOffset: int, yOffset: int, row: int, coloumn: int, width: int, height: int, spaceX: int, spaceY: int)
+function Texture:split(xOffset, yOffset, width, height) end
 
 --- @public
---- @param arg0 int[]
---- @param arg1 int[]
+--- @param xstep int[]
+--- @param ystep int[]
 --- @return Texture[][]
-function Texture:split2D(arg0, arg1) end
+function Texture:split2D(xstep, ystep) end
 
 --- @public
 --- @return Texture
@@ -495,8 +495,8 @@ function Texture:toString() end
 
 --- @public
 --- @return Texture
---- @overload fun(arg0: Texture)
---- @overload fun(arg0: String, arg1: boolean)
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
+--- @overload fun(t: Texture)
+--- @overload fun(file: String, useAlphaChannel: boolean)
+--- @overload fun(width: int, height: int, flags: int)
+--- @overload fun(file: String, red: int, green: int, blue: int)
 function Texture.new() end

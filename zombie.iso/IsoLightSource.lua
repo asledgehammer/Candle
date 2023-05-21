@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoLightSource: Object
+--- @class IsoLightSource
 --- @field public NextID int
 IsoLightSource = {};
 
@@ -58,58 +58,58 @@ function IsoLightSource:isHydroPowered() end
 
 --- @public
 --- @return boolean
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
+--- @overload fun(minX: int, minY: int, maxX: int, maxY: int)
 function IsoLightSource:isInBounds() end
 
 --- @public
---- @param arg0 boolean
+--- @param bActive boolean
 --- @return void
-function IsoLightSource:setActive(arg0) end
+function IsoLightSource:setActive(bActive) end
 
 --- @public
---- @param arg0 float
+--- @param b float
 --- @return void
-function IsoLightSource:setB(arg0) end
+function IsoLightSource:setB(b) end
 
 --- @public
---- @param arg0 float
+--- @param g float
 --- @return void
-function IsoLightSource:setG(arg0) end
+function IsoLightSource:setG(g) end
 
 --- @public
---- @param arg0 float
+--- @param r float
 --- @return void
-function IsoLightSource:setR(arg0) end
+function IsoLightSource:setR(r) end
 
 --- @public
---- @param arg0 int
+--- @param radius int
 --- @return void
-function IsoLightSource:setRadius(arg0) end
+function IsoLightSource:setRadius(radius) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param switches ArrayList
 --- @return void
-function IsoLightSource:setSwitches(arg0) end
+function IsoLightSource:setSwitches(switches) end
 
 --- @public
---- @param arg0 boolean
+--- @param bWasActive boolean
 --- @return void
-function IsoLightSource:setWasActive(arg0) end
+function IsoLightSource:setWasActive(bWasActive) end
 
 --- @public
---- @param arg0 int
+--- @param x int
 --- @return void
-function IsoLightSource:setX(arg0) end
+function IsoLightSource:setX(x) end
 
 --- @public
---- @param arg0 int
+--- @param y int
 --- @return void
-function IsoLightSource:setY(arg0) end
+function IsoLightSource:setY(y) end
 
 --- @public
---- @param arg0 int
+--- @param z int
 --- @return void
-function IsoLightSource:setZ(arg0) end
+function IsoLightSource:setZ(z) end
 
 --- @public
 --- @return void
@@ -125,13 +125,13 @@ function IsoLightSource:wasActive() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 int
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param radius int
 --- @return IsoLightSource
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: float, arg4: float, arg5: float, arg6: int, arg7: int)
-function IsoLightSource.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(x: int, y: int, z: int, r: float, g: float, b: float, radius: int, life: int)
+function IsoLightSource.new(x, y, z, r, g, b, radius) end

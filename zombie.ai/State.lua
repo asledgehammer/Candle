@@ -1,6 +1,6 @@
 --- @meta
 
---- @class State: Object
+--- @class State
 State = {};
 
 ------------------------------------
@@ -8,31 +8,31 @@ State = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function State:animEvent(arg0, arg1) end
+function State:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function State:enter(arg0) end
+function State:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function State:execute(arg0) end
+function State:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function State:exit(arg0) end
+function State:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 MoveDeltaModifiers
+--- @param owner IsoGameCharacter
+--- @param modifiers MoveDeltaModifiers
 --- @return void
-function State:getDeltaModifiers(arg0, arg1) end
+function State:getDeltaModifiers(owner, modifiers) end
 
 --- @public
 --- @return String
@@ -43,29 +43,29 @@ function State:getName() end
 function State:getStatePermissions() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return boolean
-function State:isAttacking(arg0) end
+function State:isAttacking(owner) end
 
 --- @public
 --- @return boolean
 function State:isDoingActionThatCanBeCancelled() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param owner IsoGameCharacter
+--- @param fromX int
+--- @param fromY int
+--- @param fromZ int
+--- @param toX int
+--- @param toY int
+--- @param toZ int
 --- @return boolean
-function State:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function State:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return boolean
-function State:isMoving(arg0) end
+function State:isMoving(owner) end
 
 
 ------------------------------------

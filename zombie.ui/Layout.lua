@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Layout: Object
+--- @class Layout
 Layout = {};
 
 ------------------------------------
@@ -16,21 +16,21 @@ function Layout:addItem() end
 function Layout:free() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 ObjectTooltip
+--- @param left int
+--- @param top int
+--- @param ui ObjectTooltip
 --- @return int
-function Layout:render(arg0, arg1, arg2) end
+function Layout:render(left, top, ui) end
 
 --- @public
---- @param arg0 int
+--- @param minWidth int
 --- @return void
-function Layout:setMinLabelWidth(arg0) end
+function Layout:setMinLabelWidth(minWidth) end
 
 --- @public
---- @param arg0 int
+--- @param minWidth int
 --- @return void
-function Layout:setMinValueWidth(arg0) end
+function Layout:setMinValueWidth(minWidth) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class TraitCollection: Object
+--- @class TraitCollection
 TraitCollection = {};
 
 ------------------------------------
@@ -8,53 +8,53 @@ TraitCollection = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param trait String
 --- @return void
-function TraitCollection:add(arg0) end
+function TraitCollection:add(trait) end
 
 --- @public
---- @param arg0 Collection
+--- @param c Collection
 --- @return void
-function TraitCollection:addAll(arg0) end
+function TraitCollection:addAll(c) end
 
 --- @public
 --- @return void
 function TraitCollection:clear() end
 
 --- @public
---- @param arg0 String
+--- @param trait String
 --- @return boolean
-function TraitCollection:contains(arg0) end
+function TraitCollection:contains(trait) end
 
 --- @public
---- @param arg0 int
+--- @param n int
 --- @return String
-function TraitCollection:get(arg0) end
+function TraitCollection:get(n) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return TraitSlot
-function TraitCollection:getTraitSlot(arg0) end
+function TraitCollection:getTraitSlot(name) end
 
 --- @public
 --- @return boolean
 function TraitCollection:isEmpty() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function TraitCollection:remove(arg0) end
+function TraitCollection:remove(name) end
 
 --- @public
---- @param arg0 Collection
+--- @param c Collection
 --- @return void
-function TraitCollection:removeAll(arg0) end
+function TraitCollection:removeAll(c) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param name String
+--- @param val boolean
 --- @return void
-function TraitCollection:set(arg0, arg1) end
+function TraitCollection:set(name, val) end
 
 --- @public
 --- @return int

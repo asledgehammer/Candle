@@ -1,6 +1,7 @@
 --- @meta
 
---- @class VehicleType: Object
+--- @class VehicleType
+--- Contains all car model with their associated skin index
 --- @field public specialVehicles ArrayList
 --- @field public vehicles HashMap
 VehicleType = {};
@@ -16,22 +17,22 @@ function VehicleType.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param zoneName String
 --- @return VehicleType
---- @overload fun(arg0: String, arg1: Boolean)
-function VehicleType.getRandomVehicleType(arg0) end
+--- @overload fun(zoneName: String, doNormalWhenSpecific: Boolean)
+function VehicleType.getRandomVehicleType(zoneName) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return VehicleType
-function VehicleType.getTypeFromName(arg0) end
+function VehicleType.getTypeFromName(name) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param zoneName String
 --- @return boolean
-function VehicleType.hasTypeForZone(arg0) end
+function VehicleType.hasTypeForZone(zoneName) end
 
 --- @public
 --- @static
@@ -56,9 +57,9 @@ function VehicleType:getChanceToSpawnKey() end
 function VehicleType:getRandomBaseVehicleQuality() end
 
 --- @public
---- @param arg0 int
+--- @param chanceToSpawnKey int
 --- @return void
-function VehicleType:setChanceToSpawnKey(arg0) end
+function VehicleType:setChanceToSpawnKey(chanceToSpawnKey) end
 
 
 ------------------------------------
@@ -66,6 +67,6 @@ function VehicleType:setChanceToSpawnKey(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return VehicleType
-function VehicleType.new(arg0) end
+function VehicleType.new(name) end

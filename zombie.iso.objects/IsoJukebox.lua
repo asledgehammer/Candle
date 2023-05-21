@@ -8,9 +8,9 @@ IsoJukebox = {};
 ------------------------------------
 
 --- @public
---- @param arg0 boolean
+--- @param ShouldPlay boolean
 --- @return void
-function IsoJukebox:SetPlaying(arg0) end
+function IsoJukebox:SetPlaying(ShouldPlay) end
 
 --- @public
 --- @return void
@@ -21,10 +21,10 @@ function IsoJukebox:addToWorld() end
 function IsoJukebox:getObjectName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return boolean
-function IsoJukebox:onMouseLeftClick(arg0, arg1) end
+function IsoJukebox:onMouseLeftClick(x, y) end
 
 --- @public
 --- @return void
@@ -36,7 +36,7 @@ function IsoJukebox:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoJukebox
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String)
-function IsoJukebox.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: String)
+function IsoJukebox.new(cell) end

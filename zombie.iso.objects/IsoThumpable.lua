@@ -23,60 +23,60 @@ function IsoThumpable:IsOpen() end
 function IsoThumpable:IsStrengthenedByPushedItems() end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 IsoGridSquare
---- @param arg2 IsoGridSquare
+--- @param obj IsoMovingObject
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return boolean
-function IsoThumpable:TestCollide(arg0, arg1, arg2) end
+function IsoThumpable:TestCollide(obj, from, to) end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 IsoGridSquare
---- @param arg2 IsoGridSquare
+--- @param obj IsoMovingObject
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return boolean
-function IsoThumpable:TestPathfindCollide(arg0, arg1, arg2) end
+function IsoThumpable:TestPathfindCollide(obj, from, to) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 IsoGridSquare
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return VisionResult
-function IsoThumpable:TestVision(arg0, arg1) end
+function IsoThumpable:TestVision(from, to) end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param thumper IsoMovingObject
 --- @return void
-function IsoThumpable:Thump(arg0) end
+function IsoThumpable:Thump(thumper) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function IsoThumpable:ToggleDoor(arg0) end
+function IsoThumpable:ToggleDoor(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function IsoThumpable:ToggleDoorActual(arg0) end
+function IsoThumpable:ToggleDoorActual(chr) end
 
 --- @public
 --- @return void
 function IsoThumpable:ToggleDoorSilent() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 HandWeapon
+--- @param owner IsoGameCharacter
+--- @param weapon HandWeapon
 --- @return void
-function IsoThumpable:WeaponHit(arg0, arg1) end
+function IsoThumpable:WeaponHit(owner, weapon) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function IsoThumpable:addSheet(arg0) end
+function IsoThumpable:addSheet(chr) end
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 String
+--- @param player IsoPlayer
+--- @param itemType String
 --- @return boolean
-function IsoThumpable:addSheetRope(arg0, arg1) end
+function IsoThumpable:addSheetRope(player, itemType) end
 
 --- @public
 --- @return void
@@ -95,44 +95,44 @@ function IsoThumpable:canBeLockByPadlock() end
 function IsoThumpable:canBePlastered() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
-function IsoThumpable:canClimbOver(arg0) end
+function IsoThumpable:canClimbOver(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
-function IsoThumpable:canClimbThrough(arg0) end
+function IsoThumpable:canClimbThrough(chr) end
 
 --- @public
 --- @return int
 function IsoThumpable:countAddSheetRope() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 String
---- @param arg6 InventoryItem
---- @param arg7 IsoGameCharacter
+--- @param radius int
+--- @param offsetX int
+--- @param offsetY int
+--- @param offsetZ int
+--- @param life int
+--- @param lightSourceFuel String
+--- @param baseItem InventoryItem
+--- @param chr IsoGameCharacter
 --- @return void
-function IsoThumpable:createLightSource(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoThumpable:createLightSource(radius, offsetX, offsetY, offsetZ, life, lightSourceFuel, baseItem, chr) end
 
 --- @public
 --- @return void
 function IsoThumpable:destroy() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoGridSquare
-function IsoThumpable:getAddSheetSquare(arg0) end
+function IsoThumpable:getAddSheetSquare(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoBarricade
-function IsoThumpable:getBarricadeForCharacter(arg0) end
+function IsoThumpable:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
@@ -143,9 +143,9 @@ function IsoThumpable:getBarricadeOnOppositeSquare() end
 function IsoThumpable:getBarricadeOnSameSquare() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoBarricade
-function IsoThumpable:getBarricadeOppositeCharacter(arg0) end
+function IsoThumpable:getBarricadeOppositeCharacter(chr) end
 
 --- @public
 --- @return String
@@ -160,9 +160,9 @@ function IsoThumpable:getCanBarricade() end
 function IsoThumpable:getCrossSpeed() end
 
 --- @public
---- @param arg0 Vector2
+--- @param pos Vector2
 --- @return Vector2
-function IsoThumpable:getFacingPosition(arg0) end
+function IsoThumpable:getFacingPosition(pos) end
 
 --- @public
 --- @return int
@@ -241,18 +241,18 @@ function IsoThumpable:getOpenSprite() end
 function IsoThumpable:getOppositeSquare() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoGridSquare
-function IsoThumpable:getOtherSideOfDoor(arg0) end
+function IsoThumpable:getOtherSideOfDoor(chr) end
 
 --- @public
 --- @return IsoObject
 function IsoThumpable:getRenderEffectMaster() end
 
 --- @public
---- @param arg0 boolean
+--- @param ignoreOpen boolean
 --- @return IsoDirections
-function IsoThumpable:getSpriteEdge(arg0) end
+function IsoThumpable:getSpriteEdge(ignoreOpen) end
 
 --- @public
 --- @return IsoGridSquare
@@ -275,9 +275,9 @@ function IsoThumpable:getThumpDmg() end
 function IsoThumpable:getThumpSound() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return Thumpable
-function IsoThumpable:getThumpableFor(arg0) end
+function IsoThumpable:getThumpableFor(chr) end
 
 --- @public
 --- @return boolean
@@ -292,15 +292,15 @@ function IsoThumpable:haveFuel() end
 function IsoThumpable:haveSheetRope() end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 IsoGameCharacter
+--- @param item InventoryItem
+--- @param chr IsoGameCharacter
 --- @return InventoryItem
-function IsoThumpable:insertNewFuel(arg0, arg1) end
+function IsoThumpable:insertNewFuel(item, chr) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square2 IsoGridSquare
 --- @return boolean
-function IsoThumpable:isAdjacentToSquare(arg0) end
+function IsoThumpable:isAdjacentToSquare(square2) end
 
 --- @public
 --- @return boolean
@@ -363,9 +363,9 @@ function IsoThumpable:isLockedByKey() end
 function IsoThumpable:isLockedByPadlock() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
-function IsoThumpable:isLockedToCharacter(arg0) end
+function IsoThumpable:isLockedToCharacter(chr) end
 
 --- @public
 --- @return boolean
@@ -388,43 +388,43 @@ function IsoThumpable:isThumpable() end
 function IsoThumpable:isWindow() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoThumpable:load(arg0, arg1, arg2) end
+function IsoThumpable:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ByteBuffer
+--- @param change String
+--- @param bb ByteBuffer
 --- @return void
-function IsoThumpable:loadChange(arg0, arg1) end
+function IsoThumpable:loadChange(change, bb) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return boolean
-function IsoThumpable:onMouseLeftClick(arg0, arg1) end
+function IsoThumpable:onMouseLeftClick(x, y) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return InventoryItem
-function IsoThumpable:removeCurrentFuel(arg0) end
+function IsoThumpable:removeCurrentFuel(chr) end
 
 --- @public
 --- @return void
 function IsoThumpable:removeFromWorld() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return boolean
-function IsoThumpable:removeSheetRope(arg0) end
+function IsoThumpable:removeSheetRope(player) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoThumpable:save(arg0, arg1) end
+function IsoThumpable:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 String
@@ -434,180 +434,180 @@ function IsoThumpable:save(arg0, arg1) end
 function IsoThumpable:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 boolean
+--- @param blockAllTheSquare boolean
 --- @return void
-function IsoThumpable:setBlockAllTheSquare(arg0) end
+function IsoThumpable:setBlockAllTheSquare(blockAllTheSquare) end
 
 --- @public
---- @param arg0 String
+--- @param pBreakSound String
 --- @return void
-function IsoThumpable:setBreakSound(arg0) end
+function IsoThumpable:setBreakSound(pBreakSound) end
 
 --- @public
---- @param arg0 boolean
+--- @param pCanBarricade boolean
 --- @return void
-function IsoThumpable:setCanBarricade(arg0) end
+function IsoThumpable:setCanBarricade(pCanBarricade) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBeLockByPadlock boolean
 --- @return void
-function IsoThumpable:setCanBeLockByPadlock(arg0) end
+function IsoThumpable:setCanBeLockByPadlock(canBeLockByPadlock) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBePlastered boolean
 --- @return void
-function IsoThumpable:setCanBePlastered(arg0) end
+function IsoThumpable:setCanBePlastered(canBePlastered) end
 
 --- @public
---- @param arg0 boolean
+--- @param pCanPassThrough boolean
 --- @return void
-function IsoThumpable:setCanPassThrough(arg0) end
+function IsoThumpable:setCanPassThrough(pCanPassThrough) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return void
-function IsoThumpable:setClosedSprite(arg0) end
+function IsoThumpable:setClosedSprite(sprite) end
 
 --- @public
---- @param arg0 boolean
+--- @param pCorner boolean
 --- @return void
-function IsoThumpable:setCorner(arg0) end
+function IsoThumpable:setCorner(pCorner) end
 
 --- @public
---- @param arg0 float
+--- @param pCrossSpeed float
 --- @return void
-function IsoThumpable:setCrossSpeed(arg0) end
+function IsoThumpable:setCrossSpeed(pCrossSpeed) end
 
 --- @public
---- @param arg0 boolean
+--- @param haveFuel boolean
 --- @return void
-function IsoThumpable:setHaveFuel(arg0) end
+function IsoThumpable:setHaveFuel(haveFuel) end
 
 --- @public
---- @param arg0 int
+--- @param health int
 --- @return void
-function IsoThumpable:setHealth(arg0) end
+function IsoThumpable:setHealth(health) end
 
 --- @public
---- @param arg0 boolean
+--- @param isHoppable boolean
 --- @return void
-function IsoThumpable:setHoppable(arg0) end
+function IsoThumpable:setHoppable(isHoppable) end
 
 --- @public
---- @param arg0 boolean
+--- @param pIsContainer boolean
 --- @return void
-function IsoThumpable:setIsContainer(arg0) end
+function IsoThumpable:setIsContainer(pIsContainer) end
 
 --- @public
---- @param arg0 boolean
+--- @param dismantable boolean
 --- @return void
-function IsoThumpable:setIsDismantable(arg0) end
+function IsoThumpable:setIsDismantable(dismantable) end
 
 --- @public
---- @param arg0 Boolean
+--- @param pIsDoor boolean
 --- @return void
-function IsoThumpable:setIsDoor(arg0) end
+function IsoThumpable:setIsDoor(pIsDoor) end
 
 --- @public
---- @param arg0 boolean
+--- @param pIsDoorFrame boolean
 --- @return void
-function IsoThumpable:setIsDoorFrame(arg0) end
+function IsoThumpable:setIsDoorFrame(pIsDoorFrame) end
 
 --- @public
---- @param arg0 boolean
+--- @param pIsFloor boolean
 --- @return void
-function IsoThumpable:setIsFloor(arg0) end
+function IsoThumpable:setIsFloor(pIsFloor) end
 
 --- @public
---- @param arg0 boolean
+--- @param isHoppable boolean
 --- @return void
-function IsoThumpable:setIsHoppable(arg0) end
+function IsoThumpable:setIsHoppable(isHoppable) end
 
 --- @public
---- @param arg0 boolean
+--- @param lock boolean
 --- @return void
-function IsoThumpable:setIsLocked(arg0) end
+function IsoThumpable:setIsLocked(lock) end
 
 --- @public
---- @param arg0 boolean
+--- @param pStairs boolean
 --- @return void
-function IsoThumpable:setIsStairs(arg0) end
+function IsoThumpable:setIsStairs(pStairs) end
 
 --- @public
---- @param arg0 boolean
+--- @param thumpable boolean
 --- @return void
-function IsoThumpable:setIsThumpable(arg0) end
+function IsoThumpable:setIsThumpable(thumpable) end
 
 --- @public
---- @param arg0 int
+--- @param keyId int
 --- @return void
---- @overload fun(arg0: int, arg1: boolean)
-function IsoThumpable:setKeyId(arg0) end
+--- @overload fun(keyId: int, doNetwork: boolean)
+function IsoThumpable:setKeyId(keyId) end
 
 --- @public
---- @param arg0 float
+--- @param lifeDelta float
 --- @return void
-function IsoThumpable:setLifeDelta(arg0) end
+function IsoThumpable:setLifeDelta(lifeDelta) end
 
 --- @public
---- @param arg0 float
+--- @param lifeLeft float
 --- @return void
-function IsoThumpable:setLifeLeft(arg0) end
+function IsoThumpable:setLifeLeft(lifeLeft) end
 
 --- @public
---- @param arg0 IsoLightSource
+--- @param lightSource IsoLightSource
 --- @return void
-function IsoThumpable:setLightSource(arg0) end
+function IsoThumpable:setLightSource(lightSource) end
 
 --- @public
---- @param arg0 String
+--- @param lightSourceFuel String
 --- @return void
-function IsoThumpable:setLightSourceFuel(arg0) end
+function IsoThumpable:setLightSourceFuel(lightSourceFuel) end
 
 --- @public
---- @param arg0 int
+--- @param lightSourceLife int
 --- @return void
-function IsoThumpable:setLightSourceLife(arg0) end
+function IsoThumpable:setLightSourceLife(lightSourceLife) end
 
 --- @public
---- @param arg0 boolean
+--- @param lightSourceOn boolean
 --- @return void
-function IsoThumpable:setLightSourceOn(arg0) end
+function IsoThumpable:setLightSourceOn(lightSourceOn) end
 
 --- @public
---- @param arg0 int
+--- @param lightSourceRadius int
 --- @return void
-function IsoThumpable:setLightSourceRadius(arg0) end
+function IsoThumpable:setLightSourceRadius(lightSourceRadius) end
 
 --- @public
---- @param arg0 int
+--- @param lightSourceXOffset int
 --- @return void
-function IsoThumpable:setLightSourceXOffset(arg0) end
+function IsoThumpable:setLightSourceXOffset(lightSourceXOffset) end
 
 --- @public
---- @param arg0 int
+--- @param lightSourceYOffset int
 --- @return void
-function IsoThumpable:setLightSourceYOffset(arg0) end
+function IsoThumpable:setLightSourceYOffset(lightSourceYOffset) end
 
 --- @public
---- @param arg0 int
+--- @param lockedByCode int
 --- @return void
-function IsoThumpable:setLockedByCode(arg0) end
+function IsoThumpable:setLockedByCode(lockedByCode) end
 
 --- @public
---- @param arg0 boolean
+--- @param lockedByKey boolean
 --- @return void
-function IsoThumpable:setLockedByKey(arg0) end
+function IsoThumpable:setLockedByKey(lockedByKey) end
 
 --- @public
---- @param arg0 boolean
+--- @param lockedByPadlock boolean
 --- @return void
-function IsoThumpable:setLockedByPadlock(arg0) end
+function IsoThumpable:setLockedByPadlock(lockedByPadlock) end
 
 --- @public
---- @param arg0 int
+--- @param maxHealth int
 --- @return void
-function IsoThumpable:setMaxHealth(arg0) end
+function IsoThumpable:setMaxHealth(maxHealth) end
 
 --- @public
 --- @param arg0 KahluaTable
@@ -615,24 +615,24 @@ function IsoThumpable:setMaxHealth(arg0) end
 function IsoThumpable:setModData(arg0) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return void
-function IsoThumpable:setOpenSprite(arg0) end
+function IsoThumpable:setOpenSprite(sprite) end
 
 --- @public
---- @param arg0 boolean
+--- @param paintable boolean
 --- @return void
-function IsoThumpable:setPaintable(arg0) end
+function IsoThumpable:setPaintable(paintable) end
 
 --- @public
---- @param arg0 String
+--- @param sprite String
 --- @return void
-function IsoThumpable:setSprite(arg0) end
+function IsoThumpable:setSprite(sprite) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function IsoThumpable:setSpriteFromName(arg0) end
+function IsoThumpable:setSpriteFromName(name) end
 
 --- @public
 --- @param arg0 KahluaTable
@@ -640,36 +640,36 @@ function IsoThumpable:setSpriteFromName(arg0) end
 function IsoThumpable:setTable(arg0) end
 
 --- @public
---- @param arg0 Integer
+--- @param pThumpDmg Integer
 --- @return void
-function IsoThumpable:setThumpDmg(arg0) end
+function IsoThumpable:setThumpDmg(pThumpDmg) end
 
 --- @public
---- @param arg0 String
+--- @param thumpSound String
 --- @return void
-function IsoThumpable:setThumpSound(arg0) end
+function IsoThumpable:setThumpSound(thumpSound) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 byte
---- @param arg2 UdpConnection
---- @param arg3 ByteBuffer
+--- @param bRemote boolean
+--- @param val byte
+--- @param source UdpConnection
+--- @param bb ByteBuffer
 --- @return void
-function IsoThumpable:syncIsoObject(arg0, arg1, arg2, arg3) end
+function IsoThumpable:syncIsoObject(bRemote, val, source, bb) end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return void
-function IsoThumpable:syncIsoObjectSend(arg0) end
+function IsoThumpable:syncIsoObjectSend(b) end
 
 --- @public
 --- @return void
 function IsoThumpable:syncIsoThumpable() end
 
 --- @public
---- @param arg0 boolean
+--- @param toggle boolean
 --- @return void
-function IsoThumpable:toggleLightSource(arg0) end
+function IsoThumpable:toggleLightSource(toggle) end
 
 --- @public
 --- @return void
@@ -681,8 +681,8 @@ function IsoThumpable:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoThumpable
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable)
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String, arg4: boolean, arg5: KahluaTable)
-function IsoThumpable.new(arg0) end
+function IsoThumpable.new(cell) end

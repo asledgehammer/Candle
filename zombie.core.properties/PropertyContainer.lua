@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PropertyContainer: Object
+--- @class PropertyContainer
 --- @field public sorted List
 --- @field public test NonBlockingHashMap
 PropertyContainer = {};
@@ -10,9 +10,9 @@ PropertyContainer = {};
 ------------------------------------
 
 --- @public
---- @param arg0 PropertyContainer
+--- @param other PropertyContainer
 --- @return void
-function PropertyContainer:AddProperties(arg0) end
+function PropertyContainer:AddProperties(other) end
 
 --- @public
 --- @return void
@@ -23,26 +23,26 @@ function PropertyContainer:Clear() end
 function PropertyContainer:CreateKeySet() end
 
 --- @public
---- @param arg0 Double
+--- @param flag Double
 --- @return boolean
-function PropertyContainer:Is(arg0) end
+function PropertyContainer:Is(flag) end
 
 --- @public
---- @param arg0 IsoFlagType
+--- @param flag IsoFlagType
 --- @return void
---- @overload fun(arg0: IsoFlagType, arg1: String)
---- @overload fun(arg0: String, arg1: String, arg2: boolean)
-function PropertyContainer:Set(arg0) end
+--- @overload fun(flag: IsoFlagType, ignored: String)
+--- @overload fun(propName: String, propName2: String, checkIsoFlagType: boolean)
+function PropertyContainer:Set(flag) end
 
 --- @public
---- @param arg0 String
+--- @param flag IsoFlagType
 --- @return void
-function PropertyContainer:UnSet(arg0) end
+function PropertyContainer:UnSet(flag) end
 
 --- @public
---- @param arg0 String
+--- @param property String
 --- @return String
-function PropertyContainer:Val(arg0) end
+function PropertyContainer:Val(property) end
 
 --- @public
 --- @return ArrayList

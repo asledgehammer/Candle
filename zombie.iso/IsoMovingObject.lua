@@ -17,16 +17,16 @@ function IsoMovingObject.getIDCount() end
 
 --- @public
 --- @static
---- @param arg0 Vector2
---- @param arg1 IsoDirections
+--- @param moveForwardVec Vector2
+--- @param dir IsoDirections
 --- @return Vector2
-function IsoMovingObject.getVectorFromDirection(arg0, arg1) end
+function IsoMovingObject.getVectorFromDirection(moveForwardVec, dir) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param aIDCount int
 --- @return void
-function IsoMovingObject.setIDCount(arg0) end
+function IsoMovingObject.setIDCount(aIDCount) end
 
 
 ------------------------------------
@@ -38,21 +38,21 @@ function IsoMovingObject.setIDCount(arg0) end
 function IsoMovingObject:Despawn() end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param other IsoMovingObject
 --- @return float
---- @overload fun(arg0: int, arg1: int)
-function IsoMovingObject:DistTo(arg0) end
+--- @overload fun(x: int, y: int)
+function IsoMovingObject:DistTo(other) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param other IsoObject
 --- @return float
-function IsoMovingObject:DistToProper(arg0) end
+function IsoMovingObject:DistToProper(other) end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param other IsoMovingObject
 --- @return float
---- @overload fun(arg0: float, arg1: float)
-function IsoMovingObject:DistToSquared(arg0) end
+--- @overload fun(x: float, y: float)
+function IsoMovingObject:DistToSquared(other) end
 
 --- @public
 --- @return void
@@ -63,37 +63,37 @@ function IsoMovingObject:DoCollideNorS() end
 function IsoMovingObject:DoCollideWorE() end
 
 --- @public
---- @param arg0 HandWeapon
---- @param arg1 IsoGameCharacter
---- @param arg2 float
---- @param arg3 boolean
---- @param arg4 float
+--- @param weapon HandWeapon
+--- @param wielder IsoGameCharacter
+--- @param damageSplit float
+--- @param bIgnoreDamage boolean
+--- @param modDelta float
 --- @return float
-function IsoMovingObject:Hit(arg0, arg1, arg2, arg3, arg4) end
+function IsoMovingObject:Hit(weapon, wielder, damageSplit, bIgnoreDamage, modDelta) end
 
 --- @public
---- @param arg0 Vector2
+--- @param dir Vector2
 --- @return void
-function IsoMovingObject:Move(arg0) end
+function IsoMovingObject:Move(dir) end
 
 --- @public
---- @param arg0 Vector2
+--- @param dir Vector2
 --- @return void
-function IsoMovingObject:MoveUnmodded(arg0) end
+function IsoMovingObject:MoveUnmodded(dir) end
 
 --- @public
 --- @return byte
 function IsoMovingObject:canHaveMultipleHits() end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return void
-function IsoMovingObject:collideWith(arg0) end
+function IsoMovingObject:collideWith(obj) end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param other IsoMovingObject
 --- @return int
-function IsoMovingObject:compareToY(arg0) end
+function IsoMovingObject:compareToY(other) end
 
 --- @public
 --- @return float
@@ -112,9 +112,9 @@ function IsoMovingObject:ensureOnTile() end
 function IsoMovingObject:getBuilding() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param bumped IsoGameCharacter
 --- @return String
-function IsoMovingObject:getBumpedType(arg0) end
+function IsoMovingObject:getBumpedType(bumped) end
 
 --- @public
 --- @return String
@@ -137,23 +137,23 @@ function IsoMovingObject:getCurrentSquare() end
 function IsoMovingObject:getCurrentZone() end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param other IsoMovingObject
 --- @return float
-function IsoMovingObject:getDistanceSq(arg0) end
+function IsoMovingObject:getDistanceSq(other) end
 
 --- @public
 --- @return ArrayList
 function IsoMovingObject:getEatingZombies() end
 
 --- @public
---- @param arg0 Vector2
+--- @param pos Vector2
 --- @return Vector2
-function IsoMovingObject:getFacingPosition(arg0) end
+function IsoMovingObject:getFacingPosition(pos) end
 
 --- @public
---- @param arg0 float
+--- @param dist float
 --- @return IsoGridSquare
-function IsoMovingObject:getFeelerTile(arg0) end
+function IsoMovingObject:getFeelerTile(dist) end
 
 --- @public
 --- @return float
@@ -165,7 +165,7 @@ function IsoMovingObject:getFuturWalkedSquare() end
 
 --- @public
 --- @return float
---- @overload fun(arg0: boolean)
+--- @overload fun(bDoNoises: boolean)
 function IsoMovingObject:getGlobalMovementMod() end
 
 --- @public
@@ -253,9 +253,9 @@ function IsoMovingObject:getObjectName() end
 function IsoMovingObject:getPathFindIndex() end
 
 --- @public
---- @param arg0 Vector3
+--- @param out Vector3
 --- @return Vector3
-function IsoMovingObject:getPosition(arg0) end
+function IsoMovingObject:getPosition(out) end
 
 --- @public
 --- @return float
@@ -294,13 +294,13 @@ function IsoMovingObject:getThumpTarget() end
 function IsoMovingObject:getTimeSinceZombieAttack() end
 
 --- @public
---- @param arg0 Vector2
+--- @param moveForwardVec Vector2
 --- @return Vector2
-function IsoMovingObject:getVectorFromDirection(arg0) end
+function IsoMovingObject:getVectorFromDirection(moveForwardVec) end
 
 --- @public
 --- @return float
---- @overload fun(arg0: float, arg1: float)
+--- @overload fun(x: float, y: float)
 function IsoMovingObject:getWeight() end
 
 --- @public
@@ -368,9 +368,9 @@ function IsoMovingObject:isCollidedWithVehicle() end
 function IsoMovingObject:isDestroyed() end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param other IsoMovingObject
 --- @return boolean
-function IsoMovingObject:isEatingOther(arg0) end
+function IsoMovingObject:isEatingOther(other) end
 
 --- @public
 --- @return boolean
@@ -385,9 +385,9 @@ function IsoMovingObject:isOnFloor() end
 function IsoMovingObject:isPushableForSeparate() end
 
 --- @public
---- @param arg0 IsoMovingObject
+--- @param other IsoMovingObject
 --- @return boolean
-function IsoMovingObject:isPushedByForSeparate(arg0) end
+function IsoMovingObject:isPushedByForSeparate(other) end
 
 --- @public
 --- @return boolean
@@ -410,17 +410,17 @@ function IsoMovingObject:isZombiesDontAttack() end
 function IsoMovingObject:isbAltCollide() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoMovingObject:load(arg0, arg1, arg2) end
+function IsoMovingObject:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param lx int
+--- @param ly int
 --- @return void
-function IsoMovingObject:onMouseRightClick(arg0, arg1) end
+function IsoMovingObject:onMouseRightClick(lx, ly) end
 
 --- @public
 --- @return void
@@ -447,274 +447,274 @@ function IsoMovingObject:removeFromWorld() end
 function IsoMovingObject:renderlast() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoMovingObject:save(arg0, arg1) end
+function IsoMovingObject:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return void
 function IsoMovingObject:separate() end
 
 --- @public
---- @param arg0 boolean
+--- @param closeKilled boolean
 --- @return void
-function IsoMovingObject:setCloseKilled(arg0) end
+function IsoMovingObject:setCloseKilled(closeKilled) end
 
 --- @public
---- @param arg0 boolean
+--- @param Collidable boolean
 --- @return void
-function IsoMovingObject:setCollidable(arg0) end
+function IsoMovingObject:setCollidable(Collidable) end
 
 --- @public
---- @param arg0 String
+--- @param collideType String
 --- @return void
-function IsoMovingObject:setCollideType(arg0) end
+function IsoMovingObject:setCollideType(collideType) end
 
 --- @public
---- @param arg0 boolean
+--- @param collidedE boolean
 --- @return void
-function IsoMovingObject:setCollidedE(arg0) end
+function IsoMovingObject:setCollidedE(collidedE) end
 
 --- @public
---- @param arg0 boolean
+--- @param collidedN boolean
 --- @return void
-function IsoMovingObject:setCollidedN(arg0) end
+function IsoMovingObject:setCollidedN(collidedN) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param CollidedObject IsoObject
 --- @return void
-function IsoMovingObject:setCollidedObject(arg0) end
+function IsoMovingObject:setCollidedObject(CollidedObject) end
 
 --- @public
---- @param arg0 boolean
+--- @param collidedS boolean
 --- @return void
-function IsoMovingObject:setCollidedS(arg0) end
+function IsoMovingObject:setCollidedS(collidedS) end
 
 --- @public
---- @param arg0 boolean
+--- @param collidedThisFrame boolean
 --- @return void
-function IsoMovingObject:setCollidedThisFrame(arg0) end
+function IsoMovingObject:setCollidedThisFrame(collidedThisFrame) end
 
 --- @public
---- @param arg0 boolean
+--- @param collidedW boolean
 --- @return void
-function IsoMovingObject:setCollidedW(arg0) end
+function IsoMovingObject:setCollidedW(collidedW) end
 
 --- @public
---- @param arg0 boolean
+--- @param CollidedWithDoor boolean
 --- @return void
-function IsoMovingObject:setCollidedWithDoor(arg0) end
+function IsoMovingObject:setCollidedWithDoor(CollidedWithDoor) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param current IsoGridSquare
 --- @return void
-function IsoMovingObject:setCurrent(arg0) end
+function IsoMovingObject:setCurrent(current) end
 
 --- @public
---- @param arg0 boolean
+--- @param destroyed boolean
 --- @return void
-function IsoMovingObject:setDestroyed(arg0) end
+function IsoMovingObject:setDestroyed(destroyed) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param zeds ArrayList
 --- @return void
-function IsoMovingObject:setEatingZombies(arg0) end
+function IsoMovingObject:setEatingZombies(zeds) end
 
 --- @public
---- @param arg0 float
+--- @param feelersize float
 --- @return void
-function IsoMovingObject:setFeelersize(arg0) end
+function IsoMovingObject:setFeelersize(feelersize) end
 
 --- @public
---- @param arg0 boolean
+--- @param firstUpdate boolean
 --- @return void
-function IsoMovingObject:setFirstUpdate(arg0) end
+function IsoMovingObject:setFirstUpdate(firstUpdate) end
 
 --- @public
---- @param arg0 Vector2
+--- @param hitDir Vector2
 --- @return void
-function IsoMovingObject:setHitDir(arg0) end
+function IsoMovingObject:setHitDir(hitDir) end
 
 --- @public
---- @param arg0 float
+--- @param hitForce float
 --- @return void
-function IsoMovingObject:setHitForce(arg0) end
+function IsoMovingObject:setHitForce(hitForce) end
 
 --- @public
---- @param arg0 float
+--- @param hitFromAngle float
 --- @return void
-function IsoMovingObject:setHitFromAngle(arg0) end
+function IsoMovingObject:setHitFromAngle(hitFromAngle) end
 
 --- @public
---- @param arg0 int
+--- @param ID int
 --- @return void
-function IsoMovingObject:setID(arg0) end
+function IsoMovingObject:setID(ID) end
 
 --- @public
---- @param arg0 float
+--- @param impulsex float
 --- @return void
-function IsoMovingObject:setImpulsex(arg0) end
+function IsoMovingObject:setImpulsex(impulsex) end
 
 --- @public
---- @param arg0 float
+--- @param impulsey float
 --- @return void
-function IsoMovingObject:setImpulsey(arg0) end
+function IsoMovingObject:setImpulsey(impulsey) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param last IsoGridSquare
 --- @return void
-function IsoMovingObject:setLast(arg0) end
+function IsoMovingObject:setLast(last) end
 
 --- @public
---- @param arg0 float
+--- @param lastCollideTime float
 --- @return void
-function IsoMovingObject:setLastCollideTime(arg0) end
+function IsoMovingObject:setLastCollideTime(lastCollideTime) end
 
 --- @public
---- @param arg0 IsoZombie
+--- @param lastTargettedBy IsoZombie
 --- @return void
-function IsoMovingObject:setLastTargettedBy(arg0) end
+function IsoMovingObject:setLastTargettedBy(lastTargettedBy) end
 
 --- @public
---- @param arg0 float
+--- @param limpulsex float
 --- @return void
-function IsoMovingObject:setLimpulsex(arg0) end
+function IsoMovingObject:setLimpulsex(limpulsex) end
 
 --- @public
---- @param arg0 float
+--- @param limpulsey float
 --- @return void
-function IsoMovingObject:setLimpulsey(arg0) end
+function IsoMovingObject:setLimpulsey(limpulsey) end
 
 --- @public
---- @param arg0 float
+--- @param lx float
 --- @return void
-function IsoMovingObject:setLx(arg0) end
+function IsoMovingObject:setLx(lx) end
 
 --- @public
---- @param arg0 float
+--- @param ly float
 --- @return void
-function IsoMovingObject:setLy(arg0) end
+function IsoMovingObject:setLy(ly) end
 
 --- @public
---- @param arg0 float
+--- @param lz float
 --- @return void
-function IsoMovingObject:setLz(arg0) end
+function IsoMovingObject:setLz(lz) end
 
 --- @public
---- @param arg0 Vector2
+--- @param movementLastFrame Vector2
 --- @return void
-function IsoMovingObject:setMovementLastFrame(arg0) end
+function IsoMovingObject:setMovementLastFrame(movementLastFrame) end
 
 --- @public
 --- @return void
 function IsoMovingObject:setMovingSquareNow() end
 
 --- @public
---- @param arg0 boolean
+--- @param dmg boolean
 --- @return void
-function IsoMovingObject:setNoDamage(arg0) end
+function IsoMovingObject:setNoDamage(dmg) end
 
 --- @public
---- @param arg0 float
+--- @param nx float
 --- @return void
-function IsoMovingObject:setNx(arg0) end
+function IsoMovingObject:setNx(nx) end
 
 --- @public
---- @param arg0 float
+--- @param ny float
 --- @return void
-function IsoMovingObject:setNy(arg0) end
+function IsoMovingObject:setNy(ny) end
 
 --- @public
---- @param arg0 boolean
+--- @param bOnFloor boolean
 --- @return void
-function IsoMovingObject:setOnFloor(arg0) end
+function IsoMovingObject:setOnFloor(bOnFloor) end
 
 --- @public
---- @param arg0 int
+--- @param PathFindIndex int
 --- @return void
-function IsoMovingObject:setPathFindIndex(arg0) end
+function IsoMovingObject:setPathFindIndex(PathFindIndex) end
 
 --- @public
---- @param arg0 String
+--- @param ScriptModule String
 --- @return void
-function IsoMovingObject:setScriptModule(arg0) end
+function IsoMovingObject:setScriptModule(ScriptModule) end
 
 --- @public
---- @param arg0 float
+--- @param scriptnx float
 --- @return void
-function IsoMovingObject:setScriptnx(arg0) end
+function IsoMovingObject:setScriptnx(scriptnx) end
 
 --- @public
---- @param arg0 float
+--- @param scriptny float
 --- @return void
-function IsoMovingObject:setScriptny(arg0) end
+function IsoMovingObject:setScriptny(scriptny) end
 
 --- @public
---- @param arg0 boolean
+--- @param shootable boolean
 --- @return void
-function IsoMovingObject:setShootable(arg0) end
+function IsoMovingObject:setShootable(shootable) end
 
 --- @public
---- @param arg0 boolean
+--- @param solid boolean
 --- @return void
-function IsoMovingObject:setSolid(arg0) end
+function IsoMovingObject:setSolid(solid) end
 
 --- @public
---- @param arg0 float
+--- @param StateEventDelayTimer float
 --- @return void
-function IsoMovingObject:setStateEventDelayTimer(arg0) end
+function IsoMovingObject:setStateEventDelayTimer(StateEventDelayTimer) end
 
 --- @public
---- @param arg0 Thumpable
+--- @param thumpTarget Thumpable
 --- @return void
-function IsoMovingObject:setThumpTarget(arg0) end
+function IsoMovingObject:setThumpTarget(thumpTarget) end
 
 --- @public
---- @param arg0 int
+--- @param TimeSinceZombieAttack int
 --- @return void
-function IsoMovingObject:setTimeSinceZombieAttack(arg0) end
+function IsoMovingObject:setTimeSinceZombieAttack(TimeSinceZombieAttack) end
 
 --- @public
---- @param arg0 float
+--- @param weight float
 --- @return void
-function IsoMovingObject:setWeight(arg0) end
+function IsoMovingObject:setWeight(weight) end
 
 --- @public
---- @param arg0 float
+--- @param width float
 --- @return void
-function IsoMovingObject:setWidth(arg0) end
+function IsoMovingObject:setWidth(width) end
 
 --- @public
---- @param arg0 float
+--- @param x float
 --- @return void
-function IsoMovingObject:setX(arg0) end
+function IsoMovingObject:setX(x) end
 
 --- @public
---- @param arg0 float
+--- @param y float
 --- @return void
-function IsoMovingObject:setY(arg0) end
+function IsoMovingObject:setY(y) end
 
 --- @public
---- @param arg0 float
+--- @param z float
 --- @return void
-function IsoMovingObject:setZ(arg0) end
+function IsoMovingObject:setZ(z) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function IsoMovingObject:setZombiesDontAttack(arg0) end
+function IsoMovingObject:setZombiesDontAttack(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param bAltCollide boolean
 --- @return void
-function IsoMovingObject:setbAltCollide(arg0) end
+function IsoMovingObject:setbAltCollide(bAltCollide) end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 boolean
+--- @param other IsoMovingObject
+--- @param bForced boolean
 --- @return void
-function IsoMovingObject:spotted(arg0, arg1) end
+function IsoMovingObject:spotted(other, bForced) end
 
 --- @public
 --- @return void
@@ -727,7 +727,7 @@ function IsoMovingObject:update() end
 
 --- @public
 --- @return IsoMovingObject
---- @overload fun(arg0: IsoCell)
---- @overload fun(arg0: IsoCell, arg1: boolean)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean)
+--- @overload fun(cell: IsoCell)
+--- @overload fun(cell: IsoCell, bObjectListAdd: boolean)
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite, bObjectListAdd: boolean)
 function IsoMovingObject.new() end

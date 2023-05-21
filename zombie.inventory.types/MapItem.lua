@@ -50,21 +50,21 @@ function MapItem:getSaveType() end
 function MapItem:getSymbols() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function MapItem:load(arg0, arg1) end
+function MapItem:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function MapItem:save(arg0, arg1) end
+function MapItem:save(output, net) end
 
 --- @public
---- @param arg0 String
+--- @param mapID String
 --- @return void
-function MapItem:setMapID(arg0) end
+function MapItem:setMapID(mapID) end
 
 
 ------------------------------------
@@ -72,9 +72,9 @@ function MapItem:setMapID(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param type String
+--- @param tex String
 --- @return MapItem
-function MapItem.new(arg0, arg1, arg2, arg3) end
+function MapItem.new(module, name, type, tex) end

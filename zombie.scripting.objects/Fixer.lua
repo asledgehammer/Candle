@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Fixer: Object
+--- @class Fixer
 Fixer = {};
 
 ------------------------------------
@@ -25,8 +25,8 @@ function Fixer:getNumberOfUse() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 LinkedList
---- @param arg2 int
+--- @param name String
+--- @param skills LinkedList
+--- @param numberOfUse int
 --- @return Fixer
-function Fixer.new(arg0, arg1, arg2) end
+function Fixer.new(name, skills, numberOfUse) end

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RVSFlippedCrash: RandomizedVehicleStoryBase
+--- Flipped car with bodies &amp; blood near it, can be burnt
 RVSFlippedCrash = {};
 
 ------------------------------------

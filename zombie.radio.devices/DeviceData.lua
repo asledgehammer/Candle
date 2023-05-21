@@ -1,6 +1,8 @@
 --- @meta
 
---- @class DeviceData: Object
+--- @class DeviceData
+--- Turbo
+ Stores shared data for devices (used in iso and item)
 --- @implement Cloneable
 DeviceData = {};
 
@@ -17,24 +19,24 @@ function DeviceData:StartPlayMedia() end
 function DeviceData:StopPlayMedia() end
 
 --- @public
---- @param arg0 boolean
+--- @param listening boolean
 --- @return void
-function DeviceData:TriggerPlayerListening(arg0) end
+function DeviceData:TriggerPlayerListening(listening) end
 
 --- @public
---- @param arg0 DrainableComboItem
+--- @param bat DrainableComboItem
 --- @return void
-function DeviceData:addBattery(arg0) end
+function DeviceData:addBattery(bat) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param headphones InventoryItem
 --- @return void
-function DeviceData:addHeadphones(arg0) end
+function DeviceData:addHeadphones(headphones) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param media InventoryItem
 --- @return void
-function DeviceData:addMediaItem(arg0) end
+function DeviceData:addMediaItem(media) end
 
 --- @public
 --- @return boolean
@@ -45,19 +47,19 @@ function DeviceData:canBePoweredHere() end
 function DeviceData:cleanSoundsAndEmitter() end
 
 --- @public
---- @param arg0 DevicePresets
+--- @param p DevicePresets
 --- @return void
-function DeviceData:cloneDevicePresets(arg0) end
+function DeviceData:cloneDevicePresets(p) end
 
 --- @public
---- @param arg0 float
+--- @param distance float
 --- @return void
-function DeviceData:doReceiveMPSignal(arg0) end
+function DeviceData:doReceiveMPSignal(distance) end
 
 --- @public
---- @param arg0 int
+--- @param distance int
 --- @return void
-function DeviceData:doReceiveSignal(arg0) end
+function DeviceData:doReceiveSignal(distance) end
 
 --- @public
 --- @return void
@@ -68,9 +70,9 @@ function DeviceData:generatePresets() end
 function DeviceData:getBaseVolumeRange() end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param inventory ItemContainer
 --- @return InventoryItem
-function DeviceData:getBattery(arg0) end
+function DeviceData:getBattery(inventory) end
 
 --- @public
 --- @return int
@@ -113,9 +115,9 @@ function DeviceData:getHasBattery() end
 function DeviceData:getHeadphoneType() end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param inventory ItemContainer
 --- @return InventoryItem
-function DeviceData:getHeadphones(arg0) end
+function DeviceData:getHeadphones(inventory) end
 
 --- @public
 --- @return boolean
@@ -218,191 +220,191 @@ function DeviceData:isReceivingSignal() end
 function DeviceData:isVehicleDevice() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param net boolean
 --- @return void
-function DeviceData:load(arg0, arg1, arg2) end
+function DeviceData:load(input, WorldVersion, net) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 boolean
+--- @param soundname String
+--- @param volume float
+--- @param transmit boolean
 --- @return void
-function DeviceData:playSound(arg0, arg1, arg2) end
+function DeviceData:playSound(soundname, volume, transmit) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param soundname String
+--- @param useDeviceVolume boolean
 --- @return void
-function DeviceData:playSoundLocal(arg0, arg1) end
+function DeviceData:playSoundLocal(soundname, useDeviceVolume) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param soundname String
+--- @param useDeviceVolume boolean
 --- @return void
-function DeviceData:playSoundSend(arg0, arg1) end
+function DeviceData:playSoundSend(soundname, useDeviceVolume) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 UdpConnection
+--- @param bb ByteBuffer
+--- @param ignoreConnection UdpConnection
 --- @return void
-function DeviceData:receiveDeviceDataStatePacket(arg0, arg1) end
+function DeviceData:receiveDeviceDataStatePacket(bb, ignoreConnection) end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param inventory ItemContainer
 --- @return InventoryItem
-function DeviceData:removeMediaItem(arg0) end
+function DeviceData:removeMediaItem(inventory) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function DeviceData:save(arg0, arg1) end
+function DeviceData:save(output, net) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function DeviceData:setBaseVolumeRange(arg0) end
+function DeviceData:setBaseVolumeRange(f) end
 
 --- @public
---- @param arg0 int
+--- @param c int
 --- @return void
---- @overload fun(arg0: int, arg1: boolean)
-function DeviceData:setChannel(arg0) end
+--- @overload fun(chan: int, setislistening: boolean)
+function DeviceData:setChannel(c) end
 
 --- @public
---- @param arg0 int
+--- @param chan int
 --- @return void
-function DeviceData:setChannelRaw(arg0) end
+function DeviceData:setChannelRaw(chan) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function DeviceData:setDeviceName(arg0) end
+function DeviceData:setDeviceName(name) end
 
 --- @public
---- @param arg0 DevicePresets
+--- @param p DevicePresets
 --- @return void
-function DeviceData:setDevicePresets(arg0) end
+function DeviceData:setDevicePresets(p) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function DeviceData:setDeviceVolume(arg0) end
+function DeviceData:setDeviceVolume(f) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function DeviceData:setDeviceVolumeRaw(arg0) end
+function DeviceData:setDeviceVolumeRaw(f) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setHasBattery(arg0) end
+function DeviceData:setHasBattery(b) end
 
 --- @public
---- @param arg0 int
+--- @param i int
 --- @return void
-function DeviceData:setHeadphoneType(arg0) end
+function DeviceData:setHeadphoneType(i) end
 
 --- @public
 --- @return void
 function DeviceData:setInitialPower() end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setIsBatteryPowered(arg0) end
+function DeviceData:setIsBatteryPowered(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setIsHighTier(arg0) end
+function DeviceData:setIsHighTier(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setIsPortable(arg0) end
+function DeviceData:setIsPortable(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setIsTelevision(arg0) end
+function DeviceData:setIsTelevision(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setIsTurnedOn(arg0) end
+function DeviceData:setIsTurnedOn(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setIsTwoWay(arg0) end
+function DeviceData:setIsTwoWay(b) end
 
 --- @public
---- @param arg0 int
+--- @param i int
 --- @return void
-function DeviceData:setMaxChannelRange(arg0) end
+function DeviceData:setMaxChannelRange(i) end
 
 --- @public
---- @param arg0 short
+--- @param mediaIndex short
 --- @return void
-function DeviceData:setMediaIndex(arg0) end
+function DeviceData:setMediaIndex(mediaIndex) end
 
 --- @public
---- @param arg0 byte
+--- @param mediaType byte
 --- @return void
-function DeviceData:setMediaType(arg0) end
+function DeviceData:setMediaType(mediaType) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setMicIsMuted(arg0) end
+function DeviceData:setMicIsMuted(b) end
 
 --- @public
---- @param arg0 int
+--- @param i int
 --- @return void
-function DeviceData:setMicRange(arg0) end
+function DeviceData:setMicRange(i) end
 
 --- @public
---- @param arg0 int
+--- @param i int
 --- @return void
-function DeviceData:setMinChannelRange(arg0) end
+function DeviceData:setMinChannelRange(i) end
 
 --- @public
---- @param arg0 boolean
+--- @param noTransmit boolean
 --- @return void
-function DeviceData:setNoTransmit(arg0) end
+function DeviceData:setNoTransmit(noTransmit) end
 
 --- @public
---- @param arg0 WaveSignalDevice
+--- @param p WaveSignalDevice
 --- @return void
-function DeviceData:setParent(arg0) end
+function DeviceData:setParent(p) end
 
 --- @public
---- @param arg0 float
+--- @param p float
 --- @return void
-function DeviceData:setPower(arg0) end
+function DeviceData:setPower(p) end
 
 --- @public
 --- @return void
 function DeviceData:setRandomChannel() end
 
 --- @public
---- @param arg0 int
+--- @param range int
 --- @return void
-function DeviceData:setTransmitRange(arg0) end
+function DeviceData:setTransmitRange(range) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function DeviceData:setTurnedOnRaw(arg0) end
+function DeviceData:setTurnedOnRaw(b) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function DeviceData:setUseDelta(arg0) end
+function DeviceData:setUseDelta(f) end
 
 --- @public
 --- @return void
@@ -413,10 +415,10 @@ function DeviceData:transmitBattryChange() end
 function DeviceData:transmitPresets() end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 boolean
+--- @param isIso boolean
+--- @param playerInRange boolean
 --- @return void
-function DeviceData:update(arg0, arg1) end
+function DeviceData:update(isIso, playerInRange) end
 
 --- @public
 --- @return void
@@ -433,5 +435,5 @@ function DeviceData:updateSimple() end
 
 --- @public
 --- @return DeviceData
---- @overload fun(arg0: WaveSignalDevice)
+--- @overload fun(parent: WaveSignalDevice)
 function DeviceData.new() end

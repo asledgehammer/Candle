@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BodyLocation: Object
+--- @class BodyLocation
 BodyLocation = {};
 
 ------------------------------------
@@ -8,47 +8,47 @@ BodyLocation = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param alias String
 --- @return BodyLocation
-function BodyLocation:addAlias(arg0) end
+function BodyLocation:addAlias(alias) end
 
 --- @public
 --- @return String
 function BodyLocation:getId() end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return boolean
-function BodyLocation:isExclusive(arg0) end
+function BodyLocation:isExclusive(id) end
 
 --- @public
---- @param arg0 String
+--- @param otherId String
 --- @return boolean
-function BodyLocation:isHideModel(arg0) end
+function BodyLocation:isHideModel(otherId) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return boolean
-function BodyLocation:isID(arg0) end
+function BodyLocation:isID(id) end
 
 --- @public
 --- @return boolean
 function BodyLocation:isMultiItem() end
 
 --- @public
---- @param arg0 String
+--- @param otherId String
 --- @return BodyLocation
-function BodyLocation:setExclusive(arg0) end
+function BodyLocation:setExclusive(otherId) end
 
 --- @public
---- @param arg0 String
+--- @param otherId String
 --- @return BodyLocation
-function BodyLocation:setHideModel(arg0) end
+function BodyLocation:setHideModel(otherId) end
 
 --- @public
---- @param arg0 boolean
+--- @param bMultiItem boolean
 --- @return BodyLocation
-function BodyLocation:setMultiItem(arg0) end
+function BodyLocation:setMultiItem(bMultiItem) end
 
 
 ------------------------------------
@@ -56,7 +56,7 @@ function BodyLocation:setMultiItem(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 BodyLocationGroup
---- @param arg1 String
+--- @param group BodyLocationGroup
+--- @param id String
 --- @return BodyLocation
-function BodyLocation.new(arg0, arg1) end
+function BodyLocation.new(group, id) end

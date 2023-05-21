@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Debug: Object
+--- @class Debug
 Debug = {};
 
 ------------------------------------

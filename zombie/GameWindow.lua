@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GameWindow: Object
+--- @class GameWindow
 --- @field public ActivatedJoyPad Joypad
 --- @field public assetManagers AssetManagers
 --- @field public averageFPS float
@@ -29,9 +29,9 @@ GameWindow = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param text String
 --- @return void
-function GameWindow.DoLoadingText(arg0) end
+function GameWindow.DoLoadingText(text) end
 
 --- @public
 --- @static
@@ -45,49 +45,49 @@ function GameWindow.InitGameThread() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 int
+--- @param pack String
+--- @param flags int
 --- @return void
---- @overload fun(arg0: String, arg1: int, arg2: String)
-function GameWindow.LoadTexturePack(arg0, arg1) end
+--- @overload fun(pack: String, flags: int, modID: String)
+function GameWindow.LoadTexturePack(pack, flags) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param pack String
 --- @return void
-function GameWindow.LoadTexturePackDDS(arg0) end
+function GameWindow.LoadTexturePackDDS(pack) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param input DataInputStream
 --- @return String
-function GameWindow.ReadString(arg0) end
+function GameWindow.ReadString(input) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return String
-function GameWindow.ReadStringUTF(arg0) end
+function GameWindow.ReadStringUTF(input) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
---- @param arg1 String
+--- @param output DataOutputStream
+--- @param str String
 --- @return void
-function GameWindow.WriteString(arg0, arg1) end
+function GameWindow.WriteString(output, str) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
---- @param arg1 String
+--- @param output ByteBuffer
+--- @param str String
 --- @return void
-function GameWindow.WriteStringUTF(arg0, arg1) end
+function GameWindow.WriteStringUTF(output, str) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function GameWindow.doRenderEvent(arg0) end
+function GameWindow.doRenderEvent(b) end
 
 --- @public
 --- @static
@@ -96,15 +96,15 @@ function GameWindow.getCoopServerHome() end
 
 --- @public
 --- @static
---- @param arg0 DataInputStream
+--- @param __in DataInputStream
 --- @return int
-function GameWindow.readInt(arg0) end
+function GameWindow.readInt(__in) end
 
 --- @public
 --- @static
---- @param arg0 DataInputStream
+--- @param __in DataInputStream
 --- @return long
-function GameWindow.readLong(arg0) end
+function GameWindow.readLong(__in) end
 
 --- @public
 --- @static
@@ -113,9 +113,9 @@ function GameWindow.render() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDoChars boolean
 --- @return void
-function GameWindow.save(arg0) end
+function GameWindow.save(bDoChars) end
 
 --- @public
 --- @static
@@ -124,10 +124,10 @@ function GameWindow.setTexturePackLookup() end
 
 --- @public
 --- @static
---- @param arg0 Thread
---- @param arg1 Throwable
+--- @param thread Thread
+--- @param e Throwable
 --- @return void
-function GameWindow.uncaughtException(arg0, arg1) end
+function GameWindow.uncaughtException(thread, e) end
 
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
---- @class RadioChannel: Object
+--- @class RadioChannel
+--- Turbo
 RadioChannel = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RadioChannel = {};
 ------------------------------------
 
 --- @public
---- @param arg0 RadioScript
+--- @param script RadioScript
 --- @return void
-function RadioChannel:AddRadioScript(arg0) end
+function RadioChannel:AddRadioScript(script) end
 
 --- @public
 --- @return ChannelCategory
@@ -33,21 +34,21 @@ function RadioChannel:GetPlayerIsListening() end
 function RadioChannel:IsTv() end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param guid String
+--- @param line int
 --- @return void
-function RadioChannel:LoadAiringBroadcast(arg0, arg1) end
+function RadioChannel:LoadAiringBroadcast(guid, line) end
 
 --- @public
---- @param arg0 boolean
+--- @param isListening boolean
 --- @return void
-function RadioChannel:SetPlayerIsListening(arg0) end
+function RadioChannel:SetPlayerIsListening(isListening) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param timestamp int
+--- @param day int
 --- @return void
-function RadioChannel:UpdateScripts(arg0, arg1) end
+function RadioChannel:UpdateScripts(timestamp, day) end
 
 --- @public
 --- @return float
@@ -86,9 +87,9 @@ function RadioChannel:getLastBroadcastID() end
 function RadioChannel:getRadioData() end
 
 --- @public
---- @param arg0 String
+--- @param script String
 --- @return RadioScript
-function RadioChannel:getRadioScript(arg0) end
+function RadioChannel:getRadioScript(script) end
 
 --- @public
 --- @return boolean
@@ -99,40 +100,40 @@ function RadioChannel:isTimeSynced() end
 function RadioChannel:isVanilla() end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param scriptName String
+--- @param day int
 --- @return void
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
-function RadioChannel:setActiveScript(arg0, arg1) end
+--- @overload fun(scriptName: String, day: int, loop: int, maxloops: int)
+function RadioChannel:setActiveScript(scriptName, day) end
 
 --- @public
 --- @return void
 function RadioChannel:setActiveScriptNull() end
 
 --- @public
---- @param arg0 float
+--- @param airCounterMultiplier float
 --- @return void
-function RadioChannel:setAirCounterMultiplier(arg0) end
+function RadioChannel:setAirCounterMultiplier(airCounterMultiplier) end
 
 --- @public
---- @param arg0 RadioBroadCast
+--- @param bc RadioBroadCast
 --- @return void
-function RadioChannel:setAiringBroadcast(arg0) end
+function RadioChannel:setAiringBroadcast(bc) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function RadioChannel:setLouisvilleObfuscate(arg0) end
+function RadioChannel:setLouisvilleObfuscate(b) end
 
 --- @public
---- @param arg0 RadioData
+--- @param radioData RadioData
 --- @return void
-function RadioChannel:setRadioData(arg0) end
+function RadioChannel:setRadioData(radioData) end
 
 --- @public
---- @param arg0 boolean
+--- @param isTimeSynced boolean
 --- @return void
-function RadioChannel:setTimeSynced(arg0) end
+function RadioChannel:setTimeSynced(isTimeSynced) end
 
 --- @public
 --- @return void
@@ -144,9 +145,9 @@ function RadioChannel:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 ChannelCategory
+--- @param n String
+--- @param freq int
+--- @param c ChannelCategory
 --- @return RadioChannel
---- @overload fun(arg0: String, arg1: int, arg2: ChannelCategory, arg3: String)
-function RadioChannel.new(arg0, arg1, arg2) end
+--- @overload fun(n: String, freq: int, c: ChannelCategory, guid: String)
+function RadioChannel.new(n, freq, c) end

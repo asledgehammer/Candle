@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Clipboard: Object
+--- @class Clipboard
 Clipboard = {};
 
 ------------------------------------
@@ -24,9 +24,9 @@ function Clipboard.rememberCurrentValue() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return void
-function Clipboard.setClipboard(arg0) end
+function Clipboard.setClipboard(str) end
 
 --- @public
 --- @static

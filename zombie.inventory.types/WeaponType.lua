@@ -19,9 +19,9 @@ WeaponType = {};
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return WeaponType
-function WeaponType.getWeaponType(arg0) end
+function WeaponType.getWeaponType(chr) end
 
 --- @public
 --- @static

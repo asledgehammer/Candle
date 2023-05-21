@@ -9,24 +9,24 @@ IsoFire = {};
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
---- @param arg1 boolean
+--- @param gridSquare IsoGridSquare
+--- @param CanBurnAnywhere boolean
 --- @return boolean
---- @overload fun(arg0: IsoGridSquare, arg1: boolean, arg2: boolean)
-function IsoFire.CanAddFire(arg0, arg1) end
+--- @overload fun(gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, smoke: boolean)
+function IsoFire.CanAddFire(gridSquare, CanBurnAnywhere) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
---- @param arg1 boolean
+--- @param gridSquare IsoGridSquare
+--- @param CanBurnAnywhere boolean
 --- @return boolean
-function IsoFire.CanAddSmoke(arg0, arg1) end
+function IsoFire.CanAddSmoke(gridSquare, CanBurnAnywhere) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param gridSquare IsoGridSquare
 --- @return boolean
-function IsoFire.Fire_IsSquareFlamable(arg0) end
+function IsoFire.Fire_IsSquareFlamable(gridSquare) end
 
 
 ------------------------------------
@@ -42,16 +42,16 @@ function IsoFire:HasTooltip() end
 function IsoFire:Spread() end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 IsoGridSquare
+--- @param obj IsoMovingObject
+--- @param PassedObjectSquare IsoGridSquare
 --- @return boolean
-function IsoFire:TestCollide(arg0, arg1) end
+function IsoFire:TestCollide(obj, PassedObjectSquare) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 IsoGridSquare
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return VisionResult
-function IsoFire:TestVision(arg0, arg1) end
+function IsoFire:TestVision(from, to) end
 
 --- @public
 --- @return void
@@ -90,38 +90,38 @@ function IsoFire:isCampfire() end
 function IsoFire:isPermanent() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param b ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoFire:load(arg0, arg1, arg2) end
+function IsoFire:load(b, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ByteBuffer
+--- @param change String
+--- @param bb ByteBuffer
 --- @return void
-function IsoFire:loadChange(arg0, arg1) end
+function IsoFire:loadChange(change, bb) end
 
 --- @public
 --- @return void
 function IsoFire:removeFromWorld() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return void
-function IsoFire:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoFire:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoFire:save(arg0, arg1) end
+function IsoFire:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 String
@@ -131,24 +131,24 @@ function IsoFire:save(arg0, arg1) end
 function IsoFire:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
+--- @param Life int
 --- @return void
-function IsoFire:setLife(arg0) end
+function IsoFire:setLife(Life) end
 
 --- @public
---- @param arg0 int
+--- @param lifeStage int
 --- @return void
-function IsoFire:setLifeStage(arg0) end
+function IsoFire:setLifeStage(lifeStage) end
 
 --- @public
---- @param arg0 int
+--- @param radius int
 --- @return void
-function IsoFire:setLightRadius(arg0) end
+function IsoFire:setLightRadius(radius) end
 
 --- @public
---- @param arg0 int
+--- @param SpreadDelay int
 --- @return void
-function IsoFire:setSpreadDelay(arg0) end
+function IsoFire:setSpreadDelay(SpreadDelay) end
 
 --- @public
 --- @return void
@@ -160,10 +160,10 @@ function IsoFire:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoFire
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int, arg4: int)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: boolean, arg3: int, arg4: int, arg5: boolean)
-function IsoFire.new(arg0) end
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int, SetLife: int)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int, SetLife: int, isSmoke: boolean)
+function IsoFire.new(cell) end

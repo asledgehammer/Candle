@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AirFront: Object
+--- @class AirFront
 AirFront = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ AirFront = {};
 ------------------------------------
 
 --- @public
---- @param arg0 float
+--- @param noiseval float
 --- @return void
-function AirFront:addDaySample(arg0) end
+function AirFront:addDaySample(noiseval) end
 
 --- @public
 --- @param arg0 AirFront
@@ -42,24 +42,24 @@ function AirFront:getTotalNoise() end
 function AirFront:getType() end
 
 --- @public
---- @param arg0 DataInputStream
+--- @param input DataInputStream
 --- @return void
-function AirFront:load(arg0) end
+function AirFront:load(input) end
 
 --- @public
---- @param arg0 DataOutputStream
+--- @param output DataOutputStream
 --- @return void
-function AirFront:save(arg0) end
+function AirFront:save(output) end
 
 --- @public
---- @param arg0 int
+--- @param type int
 --- @return void
-function AirFront:setFrontType(arg0) end
+function AirFront:setFrontType(type) end
 
 --- @public
---- @param arg0 float
+--- @param str float
 --- @return void
-function AirFront:setStrength(arg0) end
+function AirFront:setStrength(str) end
 
 
 ------------------------------------

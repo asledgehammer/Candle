@@ -46,14 +46,14 @@ function BooleanSandboxOption:isCustom() end
 function BooleanSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 String
+--- @param pageName String
 --- @return SandboxOption
-function BooleanSandboxOption:setPageName(arg0) end
+function BooleanSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 String
+--- @param translation String
 --- @return SandboxOption
-function BooleanSandboxOption:setTranslation(arg0) end
+function BooleanSandboxOption:setTranslation(translation) end
 
 --- @public
 --- @param arg0 KahluaTable
@@ -66,8 +66,8 @@ function BooleanSandboxOption:toTable(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 String
---- @param arg2 boolean
+--- @param owner SandboxOptions
+--- @param name String
+--- @param defaultValue boolean
 --- @return BooleanSandboxOption
-function BooleanSandboxOption.new(arg0, arg1, arg2) end
+function BooleanSandboxOption.new(owner, name, defaultValue) end

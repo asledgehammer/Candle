@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSHenDo: RandomizedDeadSurvivorBase
+--- Create some zombies female zombies with 1 naked male, some alcohol around
 RDSHenDo = {};
 
 ------------------------------------
@@ -8,15 +9,15 @@ RDSHenDo = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RDSHenDo:isValid(arg0, arg1) end
+function RDSHenDo:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSHenDo:randomizeDeadSurvivor(arg0) end
+function RDSHenDo:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

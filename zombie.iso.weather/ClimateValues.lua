@@ -1,6 +1,7 @@
 --- @meta
 
---- @class ClimateValues: Object
+--- @class ClimateValues
+--- TurboTuTone.
 ClimateValues = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ ClimateValues = {};
 ------------------------------------
 
 --- @public
---- @param arg0 ClimateValues
+--- @param copy ClimateValues
 --- @return void
-function ClimateValues:CopyValues(arg0) end
+function ClimateValues:CopyValues(copy) end
 
 --- @public
 --- @return float
@@ -149,12 +150,12 @@ function ClimateValues:isDayDoFog() end
 function ClimateValues:isTemperatureIsSnow() end
 
 --- @public
---- @param arg0 GregorianCalendar
+--- @param calendar GregorianCalendar
 --- @return void
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int)
-function ClimateValues:pollDate(arg0) end
+--- @overload fun(year: int, month: int, dayOfMonth: int)
+--- @overload fun(year: int, month: int, dayOfMonth: int, hourOfDay: int)
+--- @overload fun(year: int, month: int, dayOfMonth: int, hourOfDay: int, minute: int)
+function ClimateValues:pollDate(calendar) end
 
 --- @public
 --- @return void
@@ -166,6 +167,6 @@ function ClimateValues:print() end
 ------------------------------------
 
 --- @public
---- @param arg0 ClimateManager
+--- @param clim ClimateManager
 --- @return ClimateValues
-function ClimateValues.new(arg0) end
+function ClimateValues.new(clim) end

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RVSPoliceBlockade: RandomizedVehicleStoryBase
+--- Police barricading a road, 2 police cars, some zombies police
 RVSPoliceBlockade = {};
 
 ------------------------------------

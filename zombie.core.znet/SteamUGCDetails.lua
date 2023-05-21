@@ -1,6 +1,6 @@
 --- @meta
 
---- @class SteamUGCDetails: Object
+--- @class SteamUGCDetails
 SteamUGCDetails = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ SteamUGCDetails = {};
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return long
-function SteamUGCDetails:getChildID(arg0) end
+function SteamUGCDetails:getChildID(index) end
 
 --- @public
 --- @return long[]
@@ -54,11 +54,11 @@ function SteamUGCDetails:getTitle() end
 ------------------------------------
 
 --- @public
---- @param arg0 long
---- @param arg1 String
---- @param arg2 long
---- @param arg3 long
---- @param arg4 int
---- @param arg5 long[]
+--- @param ID long
+--- @param title String
+--- @param timeCreated long
+--- @param timeUpdated long
+--- @param fileSize int
+--- @param childIDs long[]
 --- @return SteamUGCDetails
-function SteamUGCDetails.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+function SteamUGCDetails.new(ID, title, timeCreated, timeUpdated, fileSize, childIDs) end

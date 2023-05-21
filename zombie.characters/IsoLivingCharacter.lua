@@ -8,14 +8,14 @@ IsoLivingCharacter = {};
 ------------------------------------
 
 --- @public
---- @param arg0 float
+--- @param ChargeDelta float
 --- @return boolean
-function IsoLivingCharacter:AttemptAttack(arg0) end
+function IsoLivingCharacter:AttemptAttack(ChargeDelta) end
 
 --- @public
---- @param arg0 float
+--- @param ChargeDelta float
 --- @return boolean
-function IsoLivingCharacter:DoAttack(arg0) end
+function IsoLivingCharacter:DoAttack(ChargeDelta) end
 
 --- @public
 --- @return boolean
@@ -26,9 +26,9 @@ function IsoLivingCharacter:isCollidedWithPushableThisFrame() end
 function IsoLivingCharacter:isDoShove() end
 
 --- @public
---- @param arg0 boolean
+--- @param bDoShove boolean
 --- @return void
-function IsoLivingCharacter:setDoShove(arg0) end
+function IsoLivingCharacter:setDoShove(bDoShove) end
 
 
 ------------------------------------
@@ -36,9 +36,9 @@ function IsoLivingCharacter:setDoShove(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param cell IsoCell
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return IsoLivingCharacter
-function IsoLivingCharacter.new(arg0, arg1, arg2, arg3) end
+function IsoLivingCharacter.new(cell, x, y, z) end

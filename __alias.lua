@@ -1,523 +1,496 @@
-
----------- ALIAS ----------
-
---- @alias AIBrainPlayerControlVars Object
---- @alias AStarPathFinderResult Object
---- @alias AbstractStyle Object
---- @alias ActionContext Object
---- @alias ActionStateSnapshot Object
---- @alias AdvancedAnimator Object
---- @alias Aggro Object
---- @alias Anim Object
---- @alias AnimEvent Object
---- @alias AnimLayer Object
---- @alias AnimTimer Object
---- @alias AnimatedModel Object
---- @alias Animation Object
---- @alias AnimationPlayer Object
---- @alias AnimationPlayerRecorder Object
---- @alias AnimationTrack Object
---- @alias AnimationVariableHandle Object
---- @alias AnimationVariableSource Object
---- @alias AnimationsMesh Object
---- @alias Appendable Object
---- @alias ArrayDeque Object
---- @alias AssetManager Object
---- @alias AssetManagers Object
---- @alias AssetParams Object
---- @alias AssetPath Object
---- @alias AssetType Object
---- @alias AtomicBoolean Object
---- @alias AttackVars Object
---- @alias AttributedCharacterIterator Object
---- @alias Audio Object
---- @alias Authorization Object
---- @alias Bandages Object
---- @alias BankPreviewSound Object
---- @alias BaseSoundListener Object
---- @alias BiConsumer Object
---- @alias BiFunction Object
---- @alias BitSet Object
---- @alias BodyPartLast Object
---- @alias BodyTexture Object
---- @alias BooleanGrid Object
---- @alias BooleanSupplier Object
---- @alias BoundedQueue Object
---- @alias Buffer Object
---- @alias BufferedImage Object
---- @alias BufferedInputStream Object
---- @alias BufferedRandomAccessFile Object
---- @alias BuildingSearchCriteria Object
---- @alias ByteBuffer Object
---- @alias ByteBufferWriter Object
---- @alias CRC32 Object
---- @alias Calendar Object
---- @alias CallbackGetStrongTyped Object
---- @alias CallbackGetStrongTyped Object
---- @alias CallbackGetStrongTyped Object
---- @alias CallbackGetStrongTyped Object
---- @alias CallbackSetStrongTyped Object
---- @alias CallbackSetStrongTyped Object
---- @alias CallbackSetStrongTyped Object
---- @alias CallbackSetStrongTyped Object
---- @alias CarController Object
---- @alias CellGetSquare Object
---- @alias CharBuffer Object
---- @alias CharDef Object
---- @alias CharSequence Object
---- @alias Character Object
---- @alias CharacterMask Object
---- @alias CharacterSceneModelCamera Object
---- @alias CharsetDecoder Object
---- @alias ChatElement Object
---- @alias ChatMode Object
---- @alias ChatSettings Object
---- @alias ChatType Object
---- @alias Checks Object
---- @alias Chunk Object
---- @alias Chunk Object
---- @alias ChunkData Object
---- @alias ChunkData Object
---- @alias ChunkData Object
---- @alias ChunkData Object
---- @alias ChunkGetter Object
---- @alias Class Object
---- @alias ClickObject Object
---- @alias ClimateNetInfo Object
---- @alias Clipper Object
---- @alias ClipperOffset Object
---- @alias ClothingDryerLogic Object
---- @alias ClothingItemReference Object
---- @alias ClothingWasherLogic Object
---- @alias ClothingWetness Object
---- @alias Collection Object
---- @alias CompDistToPlayer Object
---- @alias CompScoreToPlayer Object
---- @alias Comparator Object
---- @alias ConcurrentLinkedQueue Object
---- @alias ConcurrentMap Object
---- @alias ConnectToServerState Object
---- @alias Consumer Object
---- @alias Container Object
---- @alias Coroutine Object
---- @alias Cursor Object
---- @alias CustomComparator Object
---- @alias CustomSandboxOption Object
---- @alias DataInput Object
---- @alias DataRoot Object
---- @alias Date Object
---- @alias DateFormatSymbols Object
---- @alias DebugCommands Object
---- @alias DebugLogStream Object
---- @alias DebugStuff Object
---- @alias DecimalFormat Object
---- @alias Descriptor Object
---- @alias DialogButton Object
---- @alias DiamondMatrixIterator Object
---- @alias Dimension Object
---- @alias DirectionArrowList Object
---- @alias DisplayList Object
---- @alias Door Object
---- @alias DoorType Object
---- @alias DrawElement Object
---- @alias DrawLine Object
---- @alias Drawer Object
---- @alias Drawer Object
---- @alias Drawer Object
---- @alias Element Object
---- @alias Entry Object
---- @alias Enumeration Object
---- @alias ErosionIceQueen Object
---- @alias ErosionWorld Object
---- @alias Event Object
---- @alias Exception Object
---- @alias ExplosionMode Object
---- @alias FMODFootstep Object
---- @alias FMODParameter Object
---- @alias FMODParameterList Object
---- @alias FMODVoice Object
---- @alias FMOD_STUDIO_EVENT_CALLBACK Object
---- @alias FMOD_STUDIO_EVENT_DESCRIPTION Object
---- @alias FMOD_STUDIO_PARAMETER_DESCRIPTION Object
---- @alias FPSTracking Object
---- @alias FadeInfo Object
---- @alias Field Object
---- @alias Field Object
---- @alias FieldPosition Object
---- @alias File Object
---- @alias FileInputStream Object
---- @alias FileOutputStream Object
---- @alias FilePreviewSound Object
---- @alias FileReader Object
---- @alias FileSystem Object
---- @alias FileWriter Object
---- @alias FireSounds Object
---- @alias FitnessExercise Object
---- @alias FloatBuffer Object
---- @alias FloodFill Object
---- @alias FogRectangle Object
---- @alias FrameState Object
---- @alias Function Object
---- @alias GLFWImage Object
---- @alias GameClient Object
---- @alias GameMode Object
---- @alias GameStateMachine Object
---- @alias GenericDrawer Object
---- @alias GetSquare Object
---- @alias GibletType Object
---- @alias Gizmo Object
---- @alias GlobalObjectLookup Object
---- @alias Goal Object
---- @alias GregorianCalendar Object
---- @alias GridPlane Object
---- @alias HUDButton Object
---- @alias HashSet Object
---- @alias Helicopter Object
---- @alias HitInfo Object
---- @alias HitReactionNetworkAI Object
---- @alias HitVars Object
---- @alias IAnimationVariableSlot Object
---- @alias IChunkRegion Object
---- @alias IClothingWasherDryerLogic Object
---- @alias IDebugOption Object
---- @alias IDebugOptionGroup Object
---- @alias IFMODParameterUpdater Object
---- @alias IHumanVisual Object
---- @alias ILighting Object
---- @alias IPreviewSound Object
---- @alias IReplace Object
---- @alias IReplaceProvider Object
---- @alias IStatePermissions Object
---- @alias ITemplateBuilder Object
---- @alias ITexture Object
---- @alias IWorldRegion Object
---- @alias Input Object
---- @alias InputState Object
---- @alias IntFunction Object
---- @alias IntGrid Object
---- @alias IsoAnim Object
---- @alias IsoGridOcclusionData Object
---- @alias IsoObjectFactory Object
---- @alias IsoObjectID Object
---- @alias IsoPuddlesGeometry Object
---- @alias IsoRainSplash Object
---- @alias IsoRaindrop Object
---- @alias IsoRegionManager Object
---- @alias IsoRegionWorker Object
---- @alias IsoSprite Object
---- @alias ItemPickerContainer Object
---- @alias ItemPickerRoom Object
---- @alias ItemReplacement Object
---- @alias ItemTexture Object
---- @alias Iterable Object
---- @alias JobType Object
---- @alias Joypad Object
---- @alias KahluaTableImpl Object
---- @alias KahluaThread Object
---- @alias KeyEventQueue Object
---- @alias KeyboardStateCache Object
---- @alias KnownBlockedEdges Object
---- @alias LiangBarsky Object
---- @alias LightBar Object
---- @alias LightInfo Object
---- @alias LightbarLightsMode Object
---- @alias LightbarSirenMode Object
---- @alias Line Object
---- @alias LinkedHashMap Object
---- @alias List Object
---- @alias ListIterator Object
---- @alias LoadedAreas Object
---- @alias LoadingQueueUI Object
---- @alias LocalDateTime Object
---- @alias Locale Object
---- @alias Lock Object
---- @alias LogSeverity Object
---- @alias LotHeader Object
---- @alias LuaCallFrame Object
---- @alias LuaClosure Object
---- @alias LuaEnvironment Object
---- @alias Map Object
---- @alias Map Object
---- @alias Mask Object
---- @alias MasterVolume Object
---- @alias Material Object
---- @alias Matrix2dc Object
---- @alias Matrix2fc Object
---- @alias Matrix3dc Object
---- @alias Matrix3fc Object
---- @alias Matrix3x2fc Object
---- @alias Matrix4dc Object
---- @alias Matrix4f Object
---- @alias Matrix4f Object
---- @alias Matrix4fc Object
---- @alias Matrix4x3fc Object
---- @alias MetaGridLoaderThread Object
---- @alias Method Object
---- @alias MinMaxPosition Object
---- @alias Model Object
---- @alias ModelInstance Object
---- @alias ModelInstanceTextureCreator Object
---- @alias ModelManager Object
---- @alias ModelSlot Object
---- @alias MonitoredLayer Object
---- @alias MonitoredVar Object
---- @alias MouseStateCache Object
---- @alias MoveDeltaModifiers Object
---- @alias MoveVars Object
---- @alias Mover Object
---- @alias MultiTextureFBO2 Object
---- @alias Music Object
---- @alias NPCData Object
---- @alias Network Object
---- @alias NetworkCharacter Object
---- @alias NetworkCharacterAI Object
---- @alias NetworkPlayerAI Object
---- @alias NetworkTeleport Object
---- @alias NetworkZombieAI Object
---- @alias Node Object
---- @alias Node Object
---- @alias Node Object
---- @alias Noise2D Object
---- @alias NonBlockingHashMap Object
---- @alias NumberFormat Object
---- @alias ObjectInput Object
---- @alias ObjectOutput Object
---- @alias ObjectOutputStream Object
---- @alias ObjectPool Object
---- @alias ObserverCallback Object
---- @alias OffscreenBuffer Object
---- @alias OnceEvery Object
---- @alias Optional Object
---- @alias OriginAttachment Object
---- @alias OriginBone Object
---- @alias OriginGizmo Object
---- @alias Outfit Object
---- @alias OutputStreamWrapper Object
---- @alias OutputStreams Object
---- @alias PRIVATE Object
---- @alias PZFileformat Object
---- @alias ParameterCameraZoom Object
---- @alias ParameterCharacterInside Object
---- @alias ParameterCharacterMovementSpeed Object
---- @alias ParameterClosestWallDistance Object
---- @alias ParameterEquippedBaggageContainer Object
---- @alias ParameterFogIntensity Object
---- @alias ParameterFootstepMaterial Object
---- @alias ParameterFootstepMaterial2 Object
---- @alias ParameterHardOfHearing Object
---- @alias ParameterInside Object
---- @alias ParameterLocalPlayer Object
---- @alias ParameterMeleeHitSurface Object
---- @alias ParameterMoodlePanic Object
---- @alias ParameterMusicActionStyle Object
---- @alias ParameterMusicLibrary Object
---- @alias ParameterMusicState Object
---- @alias ParameterMusicWakeState Object
---- @alias ParameterMusicZombiesTargeting Object
---- @alias ParameterMusicZombiesVisible Object
---- @alias ParameterOcclusion Object
---- @alias ParameterPlayerDistance Object
---- @alias ParameterPlayerHealth Object
---- @alias ParameterPowerSupply Object
---- @alias ParameterRainIntensity Object
---- @alias ParameterRoomSize Object
---- @alias ParameterRoomType Object
---- @alias ParameterSeason Object
---- @alias ParameterShoeType Object
---- @alias ParameterSnowIntensity Object
---- @alias ParameterStorm Object
---- @alias ParameterTemperature Object
---- @alias ParameterTimeOfDay Object
---- @alias ParameterVehicleBrake Object
---- @alias ParameterVehicleEngineCondition Object
---- @alias ParameterVehicleGear Object
---- @alias ParameterVehicleHitLocation Object
---- @alias ParameterVehicleLoad Object
---- @alias ParameterVehicleRPM Object
---- @alias ParameterVehicleRoadMaterial Object
---- @alias ParameterVehicleSkid Object
---- @alias ParameterVehicleSpeed Object
---- @alias ParameterVehicleSteer Object
---- @alias ParameterVehicleTireMissing Object
---- @alias ParameterWaterSupply Object
---- @alias ParameterWeatherEvent Object
---- @alias ParameterWindIntensity Object
---- @alias ParameterZombieState Object
---- @alias ParameterZone Object
---- @alias ParameterZoneWaterSide Object
---- @alias Params Object
---- @alias ParsePosition Object
---- @alias Part Object
---- @alias ParticleRectangle Object
---- @alias Passenger Object
---- @alias Path Object
---- @alias Path Object
---- @alias Path Object
---- @alias Pattern Object
---- @alias PerObjectLogic Object
---- @alias PerPlayer Object
---- @alias PerPlayerRender Object
---- @alias PhysicsShapes Object
---- @alias Plane Object
---- @alias Platform Object
---- @alias PlayerCamera Object
---- @alias PlayerFlareLightInfo Object
---- @alias PlayerHomingPointList Object
---- @alias PlayerLightningInfo Object
---- @alias PlayerRenderSettings Object
---- @alias PlayerScreen Object
---- @alias PlayerSpawns Object
---- @alias Point Object
---- @alias Point Object
---- @alias PointOnPath Object
---- @alias Predicate Object
---- @alias PredicateRequired Object
---- @alias PredicatedFileWatcher Object
---- @alias PrintStream Object
---- @alias PrintWriter Object
---- @alias Prototype Object
---- @alias Quaternion Object
---- @alias Quaternionf Object
---- @alias Quaternionfc Object
---- @alias Queue Object
---- @alias RadSegment Object
---- @alias RadioDebugConsole Object
---- @alias RadioTranslationData Object
---- @alias Random Object
---- @alias RandomAccessFile Object
---- @alias Ray Object
---- @alias Rectangle Object
---- @alias RectangleIterator Object
---- @alias ReentrantLock Object
---- @alias RenderData Object
---- @alias RenderEffectType Object
---- @alias ReplayManager Object
---- @alias ResultBiggestSound Object
---- @alias RingBuffer Object
---- @alias RotateGizmo Object
---- @alias Runnable Object
---- @alias SandboxOption Object
---- @alias SanityCheck Object
---- @alias ScaleGizmo Object
---- @alias SceneObject Object
---- @alias ScreenElement Object
---- @alias Screens Object
---- @alias ScrollBar Object
---- @alias SeasonColor Object
---- @alias ServerOption Object
---- @alias ServerVehicleState Object
---- @alias Set Object
---- @alias Shader Object
---- @alias Shader Object
---- @alias SharedSkeleAnimationRepository Object
---- @alias SharedStrings Object
---- @alias SharedVertexBufferObjects Object
---- @alias SideOfLine Object
---- @alias Skin Object
---- @alias SkyBox Object
---- @alias SleepingEventData Object
---- @alias SnowGrid Object
---- @alias SnowGridTiles Object
---- @alias SoundTimelineScript Object
---- @alias Sounds Object
---- @alias Spliterator Object
---- @alias SpriteRenderState Object
---- @alias SpriteRendererStates Object
---- @alias Square Object
---- @alias Stance Object
---- @alias State Object
---- @alias StateAction Object
---- @alias StateData Object
---- @alias StateMachine Object
---- @alias StaticPerPlayer Object
---- @alias SteppedUpdateFloat Object
---- @alias StoryEmitter Object
---- @alias Stream Object
---- @alias StringBuffer Object
---- @alias StringBuilder Object
---- @alias SubTexture Object
---- @alias SurroundVehicle Object
---- @alias SurvivorGroup Object
---- @alias SwitchSeat Object
---- @alias Sync Object
---- @alias TFloatArrayList Object
---- @alias THashMap Object
---- @alias TIntArrayList Object
---- @alias TIntHashSet Object
---- @alias TIntIntHashMap Object
---- @alias TIntObjectHashMap Object
---- @alias TShortArrayList Object
---- @alias Terrain Object
---- @alias TestResults Object
---- @alias TextDrawHorizontal Object
---- @alias TextureAssetParams Object
---- @alias TextureFBO Object
---- @alias TextureID Object
---- @alias TexturePackTextures Object
---- @alias Thread Object
---- @alias ThreadLocal Object
---- @alias Throwable Object
---- @alias Thumpable Object
---- @alias ThunderEvent Object
---- @alias TimSortComparator Object
---- @alias TimeZone Object
---- @alias Transform Object
---- @alias TransformMode Object
---- @alias TranslateGizmo Object
---- @alias TransmissionNumber Object
---- @alias TreeMap Object
---- @alias TreeSoundManager Object
---- @alias UIEventHandler Object
---- @alias UINineGrid Object
---- @alias UIWorldMap Object
---- @alias UI_BodyPart Object
---- @alias URI Object
---- @alias UdpConnection Object
---- @alias UnaryOperator Object
---- @alias UpdateLimit Object
---- @alias Updater Object
---- @alias VBOLines Object
---- @alias Vector2d Object
---- @alias Vector2dc Object
---- @alias Vector2fc Object
---- @alias Vector2i Object
---- @alias Vector2ic Object
---- @alias Vector3d Object
---- @alias Vector3dc Object
---- @alias Vector3f Object
---- @alias Vector3fc Object
---- @alias Vector3i Object
---- @alias Vector3ic Object
---- @alias Vector4f Object
---- @alias VehicleContainerData Object
---- @alias VehicleEngineRPM Object
---- @alias VehicleImpulse Object
---- @alias VehicleInterpolation Object
---- @alias VehiclePoly Object
---- @alias VehicleSceneModelCamera Object
---- @alias VehicleStorySpawnData Object
---- @alias VehicleStorySpawner Object
---- @alias VehicleTemplate Object
---- @alias View Object
---- @alias VisionResult Object
---- @alias WalkingOnTheSpot Object
---- @alias WallShaderTexRender Object
---- @alias WallShaperWhole Object
---- @alias WaveSignalDevice Object
---- @alias Weather Object
---- @alias WheelInfo Object
---- @alias Window Object
---- @alias WindowType Object
---- @alias WindowVisitor Object
---- @alias WorldMapSymbols Object
---- @alias WrappedBuffer Object
---- @alias YearData Object
---- @alias ZombieConfig Object
---- @alias ZombieGroup Object
---- @alias ZombieLore Object
---- @alias ZombiePacket Object
---- @alias ZombiePosPool Object
---- @alias ZombieState Object
---- @alias ZomboidBitFlag Object
---- @alias ZoneGeometryType Object
---- @alias engineStateTypes Object
+--- @class AIBrainPlayerControlVars
+--- @class AStarPathFinderResult
+--- @class AbstractStyle
+--- @class ActionContext
+--- @class ActionStateSnapshot
+--- @class AdvancedAnimator
+--- @class Aggro
+--- @class Anim
+--- @class AnimEvent
+--- @class AnimLayer
+--- @class AnimTimer
+--- @class AnimatedModel
+--- @class Animation
+--- @class AnimationPlayer
+--- @class AnimationPlayerRecorder
+--- @class AnimationTrack
+--- @class AnimationVariableHandle
+--- @class AnimationVariableSource
+--- @class AnimationsMesh
+--- @class Appendable
+--- @class ArrayDeque
+--- @class AssetManager
+--- @class AssetManagers
+--- @class AssetParams
+--- @class AssetPath
+--- @class AssetType
+--- @class AtomicBoolean
+--- @class AttackVars
+--- @class AttributedCharacterIterator
+--- @class Audio
+--- @class Authorization
+--- @class Bandages
+--- @class BankPreviewSound
+--- @class BaseSoundListener
+--- @class BiConsumer
+--- @class BiFunction
+--- @class BitSet
+--- @class BodyPartLast
+--- @class BodyTexture
+--- @class BooleanGrid
+--- @class BooleanSupplier
+--- @class BoundedQueue
+--- @class Buffer
+--- @class BufferedImage
+--- @class BufferedInputStream
+--- @class BufferedRandomAccessFile
+--- @class BuildingSearchCriteria
+--- @class ByteBuffer
+--- @class ByteBufferWriter
+--- @class CRC32
+--- @class Calendar
+--- @class CallbackGetStrongTyped
+--- @class CallbackSetStrongTyped
+--- @class CarController
+--- @class CellGetSquare
+--- @class CharBuffer
+--- @class CharDef
+--- @class CharSequence
+--- @class Character
+--- @class CharacterMask
+--- @class CharacterSceneModelCamera
+--- @class CharsetDecoder
+--- @class ChatElement
+--- @class ChatMode
+--- @class ChatSettings
+--- @class ChatTab
+--- @class ChatType
+--- @class Checks
+--- @class Chunk
+--- @class ChunkData
+--- @class ChunkGetter
+--- @class Class
+--- @class ClickObject
+--- @class ClimateNetInfo
+--- @class Clipper
+--- @class ClipperOffset
+--- @class ClothingDryerLogic
+--- @class ClothingItemReference
+--- @class ClothingWasherLogic
+--- @class ClothingWetness
+--- @class Collection
+--- @class CompDistToPlayer
+--- @class CompScoreToPlayer
+--- @class Comparator
+--- @class ConcurrentLinkedQueue
+--- @class ConcurrentMap
+--- @class ConnectToServerState
+--- @class Consumer
+--- @class Container
+--- @class Coroutine
+--- @class Cursor
+--- @class CustomComparator
+--- @class CustomSandboxOption
+--- @class DataInput
+--- @class DataRoot
+--- @class Date
+--- @class DateFormatSymbols
+--- @class DebugLogStream
+--- @class DebugStuff
+--- @class DecimalFormat
+--- @class Descriptor
+--- @class DialogButton
+--- @class DiamondMatrixIterator
+--- @class Dimension
+--- @class DirectionArrowList
+--- @class DisplayList
+--- @class Door
+--- @class DoorType
+--- @class DrawElement
+--- @class DrawLine
+--- @class Drawer
+--- @class Element
+--- @class Entry
+--- @class Enumeration
+--- @class ErosionIceQueen
+--- @class ErosionWorld
+--- @class Event
+--- @class Exception
+--- @class ExplosionMode
+--- @class FMODFootstep
+--- @class FMODParameter
+--- @class FMODParameterList
+--- @class FMODVoice
+--- @class FMOD_STUDIO_EVENT_CALLBACK
+--- @class FMOD_STUDIO_EVENT_DESCRIPTION
+--- @class FMOD_STUDIO_PARAMETER_DESCRIPTION
+--- @class FPSTracking
+--- @class FadeInfo
+--- @class Field
+--- @class FieldPosition
+--- @class File
+--- @class FileInputStream
+--- @class FileOutputStream
+--- @class FilePreviewSound
+--- @class FileReader
+--- @class FileSystem
+--- @class FileWriter
+--- @class FireSounds
+--- @class FitnessExercise
+--- @class FloatBuffer
+--- @class FloodFill
+--- @class FogRectangle
+--- @class FrameState
+--- @class Function
+--- @class GLFWImage
+--- @class GameClient
+--- @class GameMode
+--- @class GameStateMachine
+--- @class GenericDrawer
+--- @class GetSquare
+--- @class GibletType
+--- @class Gizmo
+--- @class GlobalObjectLookup
+--- @class Goal
+--- @class GregorianCalendar
+--- @class GridPlane
+--- @class HUDButton
+--- @class HashSet
+--- @class Helicopter
+--- @class HitInfo
+--- @class HitReactionNetworkAI
+--- @class HitVars
+--- @class IAnimationVariableSlot
+--- @class IChunkRegion
+--- @class IClothingWasherDryerLogic
+--- @class IDebugOption
+--- @class IDebugOptionGroup
+--- @class IFMODParameterUpdater
+--- @class IHumanVisual
+--- @class ILighting
+--- @class IPreviewSound
+--- @class IReplace
+--- @class IReplaceProvider
+--- @class IStatePermissions
+--- @class ITemplateBuilder
+--- @class ITexture
+--- @class IWorldRegion
+--- @class Input
+--- @class InputState
+--- @class IntFunction
+--- @class IntGrid
+--- @class IsoAnim
+--- @class IsoGridOcclusionData
+--- @class IsoObjectFactory
+--- @class IsoObjectID
+--- @class IsoPuddlesGeometry
+--- @class IsoRainSplash
+--- @class IsoRaindrop
+--- @class IsoRegionManager
+--- @class IsoRegionWorker
+--- @class IsoSprite
+--- @class ItemPickerContainer
+--- @class ItemPickerRoom
+--- @class ItemReplacement
+--- @class ItemTexture
+--- @class Iterable
+--- @class JobType
+--- @class Joypad
+--- @class KahluaTableImpl
+--- @class KahluaThread
+--- @class KeyEventQueue
+--- @class KeyboardStateCache
+--- @class KnownBlockedEdges
+--- @class LiangBarsky
+--- @class LightBar
+--- @class LightInfo
+--- @class LightbarLightsMode
+--- @class LightbarSirenMode
+--- @class Line
+--- @class LinkedHashMap
+--- @class List
+--- @class ListIterator
+--- @class LoadingQueueUI
+--- @class LocalDateTime
+--- @class Locale
+--- @class Lock
+--- @class LogSeverity
+--- @class LotHeader
+--- @class LuaCallFrame
+--- @class LuaClosure
+--- @class LuaEnvironment
+--- @class Map
+--- @class Mask
+--- @class MasterVolume
+--- @class Material
+--- @class Matrix2dc
+--- @class Matrix2fc
+--- @class Matrix3dc
+--- @class Matrix3fc
+--- @class Matrix3x2fc
+--- @class Matrix4dc
+--- @class Matrix4f
+--- @class Matrix4fc
+--- @class Matrix4x3fc
+--- @class MetaGridLoaderThread
+--- @class Method
+--- @class MinMaxPosition
+--- @class Model
+--- @class ModelInstance
+--- @class ModelInstanceTextureCreator
+--- @class ModelManager
+--- @class ModelSlot
+--- @class MonitoredLayer
+--- @class MonitoredVar
+--- @class MouseStateCache
+--- @class MoveDeltaModifiers
+--- @class MoveVars
+--- @class Mover
+--- @class MultiTextureFBO2
+--- @class Music
+--- @class NPCData
+--- @class Network
+--- @class NetworkCharacter
+--- @class NetworkCharacterAI
+--- @class NetworkPlayerAI
+--- @class NetworkTeleport
+--- @class NetworkZombieAI
+--- @class Node
+--- @class Noise2D
+--- @class NonBlockingHashMap
+--- @class NumberFormat
+--- @class ObjectInput
+--- @class ObjectOutput
+--- @class ObjectOutputStream
+--- @class ObjectPool
+--- @class ObserverCallback
+--- @class OffscreenBuffer
+--- @class OnceEvery
+--- @class Optional
+--- @class OriginAttachment
+--- @class OriginBone
+--- @class OriginGizmo
+--- @class Outfit
+--- @class OutputStreamWrapper
+--- @class OutputStreams
+--- @class PRIVATE
+--- @class PZFileformat
+--- @class ParameterCameraZoom
+--- @class ParameterCharacterInside
+--- @class ParameterCharacterMovementSpeed
+--- @class ParameterClosestWallDistance
+--- @class ParameterEquippedBaggageContainer
+--- @class ParameterFogIntensity
+--- @class ParameterFootstepMaterial
+--- @class ParameterFootstepMaterial2
+--- @class ParameterHardOfHearing
+--- @class ParameterInside
+--- @class ParameterLocalPlayer
+--- @class ParameterMeleeHitSurface
+--- @class ParameterMoodlePanic
+--- @class ParameterMusicActionStyle
+--- @class ParameterMusicLibrary
+--- @class ParameterMusicState
+--- @class ParameterMusicWakeState
+--- @class ParameterMusicZombiesTargeting
+--- @class ParameterMusicZombiesVisible
+--- @class ParameterOcclusion
+--- @class ParameterPlayerDistance
+--- @class ParameterPlayerHealth
+--- @class ParameterPowerSupply
+--- @class ParameterRainIntensity
+--- @class ParameterRoomSize
+--- @class ParameterRoomType
+--- @class ParameterSeason
+--- @class ParameterShoeType
+--- @class ParameterSnowIntensity
+--- @class ParameterStorm
+--- @class ParameterTemperature
+--- @class ParameterTimeOfDay
+--- @class ParameterVehicleBrake
+--- @class ParameterVehicleEngineCondition
+--- @class ParameterVehicleGear
+--- @class ParameterVehicleHitLocation
+--- @class ParameterVehicleLoad
+--- @class ParameterVehicleRPM
+--- @class ParameterVehicleRoadMaterial
+--- @class ParameterVehicleSkid
+--- @class ParameterVehicleSpeed
+--- @class ParameterVehicleSteer
+--- @class ParameterVehicleTireMissing
+--- @class ParameterWaterSupply
+--- @class ParameterWeatherEvent
+--- @class ParameterWindIntensity
+--- @class ParameterZombieState
+--- @class ParameterZone
+--- @class ParameterZoneWaterSide
+--- @class Params
+--- @class ParsePosition
+--- @class Part
+--- @class ParticleRectangle
+--- @class Passenger
+--- @class Path
+--- @class Pattern
+--- @class PerObjectLogic
+--- @class PerPlayer
+--- @class PerPlayerRender
+--- @class PhysicsShapes
+--- @class Plane
+--- @class Platform
+--- @class PlayerCamera
+--- @class PlayerFlareLightInfo
+--- @class PlayerHomingPointList
+--- @class PlayerLightningInfo
+--- @class PlayerRenderSettings
+--- @class PlayerScreen
+--- @class Point
+--- @class PointOnPath
+--- @class Predicate
+--- @class PredicateRequired
+--- @class PredicatedFileWatcher
+--- @class PrintStream
+--- @class PrintWriter
+--- @class Prototype
+--- @class Quaternion
+--- @class Quaternionf
+--- @class Quaternionfc
+--- @class Queue
+--- @class RadSegment
+--- @class RadioDebugConsole
+--- @class RadioTranslationData
+--- @class Random
+--- @class RandomAccessFile
+--- @class Ray
+--- @class Rectangle
+--- @class RectangleIterator
+--- @class ReentrantLock
+--- @class RenderData
+--- @class RenderEffectType
+--- @class ReplayManager
+--- @class ResultBiggestSound
+--- @class RingBuffer
+--- @class RotateGizmo
+--- @class Runnable
+--- @class SandboxOption
+--- @class SanityCheck
+--- @class ScaleGizmo
+--- @class SceneObject
+--- @class ScreenElement
+--- @class Screens
+--- @class ScrollBar
+--- @class SeasonColor
+--- @class ServerOption
+--- @class ServerVehicleState
+--- @class Set
+--- @class Shader
+--- @class SharedSkeleAnimationRepository
+--- @class SharedStrings
+--- @class SharedVertexBufferObjects
+--- @class SideOfLine
+--- @class Skin
+--- @class SkyBox
+--- @class SleepingEventData
+--- @class SnowGrid
+--- @class SnowGridTiles
+--- @class SoundTimelineScript
+--- @class Sounds
+--- @class Spliterator
+--- @class SpriteRenderState
+--- @class SpriteRendererStates
+--- @class Square
+--- @class Stance
+--- @class State
+--- @class StateAction
+--- @class StateData
+--- @class StateMachine
+--- @class StaticPerPlayer
+--- @class SteppedUpdateFloat
+--- @class StoryEmitter
+--- @class Stream
+--- @class StringBuffer
+--- @class StringBuilder
+--- @class SubTexture
+--- @class SurroundVehicle
+--- @class SurvivorGroup
+--- @class SwitchSeat
+--- @class Sync
+--- @class TFloatArrayList
+--- @class THashMap
+--- @class TIntArrayList
+--- @class TIntIntHashMap
+--- @class TIntObjectHashMap
+--- @class TShortArrayList
+--- @class Terrain
+--- @class TestResults
+--- @class TextDrawHorizontal
+--- @class TextureAssetParams
+--- @class TextureFBO
+--- @class TextureID
+--- @class TexturePackTextures
+--- @class Thread
+--- @class ThreadLocal
+--- @class Throwable
+--- @class Thumpable
+--- @class ThunderEvent
+--- @class TimSortComparator
+--- @class TimeZone
+--- @class Transform
+--- @class TransformMode
+--- @class TranslateGizmo
+--- @class TransmissionNumber
+--- @class TreeMap
+--- @class TreeSoundManager
+--- @class UIEventHandler
+--- @class UINineGrid
+--- @class UIWorldMap
+--- @class UI_BodyPart
+--- @class URI
+--- @class UdpConnection
+--- @class UnaryOperator
+--- @class UpdateLimit
+--- @class Updater
+--- @class VBOLines
+--- @class Vector2d
+--- @class Vector2dc
+--- @class Vector2fc
+--- @class Vector2i
+--- @class Vector2ic
+--- @class Vector3d
+--- @class Vector3dc
+--- @class Vector3f
+--- @class Vector3fc
+--- @class Vector3i
+--- @class Vector3ic
+--- @class Vector4f
+--- @class VehicleContainerData
+--- @class VehicleEngineRPM
+--- @class VehicleImpulse
+--- @class VehicleInterpolation
+--- @class VehiclePoly
+--- @class VehicleSceneModelCamera
+--- @class VehicleStorySpawnData
+--- @class VehicleStorySpawner
+--- @class VehicleTemplate
+--- @class View
+--- @class VisionResult
+--- @class WalkingOnTheSpot
+--- @class WallShaderTexRender
+--- @class WallShaperWhole
+--- @class WaveSignalDevice
+--- @class Weather
+--- @class WheelInfo
+--- @class Window
+--- @class WindowType
+--- @class WindowVisitor
+--- @class WorldMapSymbols
+--- @class WrappedBuffer
+--- @class YearData
+--- @class ZombieConfig
+--- @class ZombieGroup
+--- @class ZombieLore
+--- @class ZombiePacket
+--- @class ZombiePosPool
+--- @class ZombieState
+--- @class ZomboidBitFlag
+--- @class ZoneGeometryType
+--- @class engineStateTypes

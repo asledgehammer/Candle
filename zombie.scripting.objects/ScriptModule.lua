@@ -13,63 +13,63 @@ ScriptModule = {};
 function ScriptModule:CheckExitPoints() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param name String
+--- @param strArray String
 --- @return void
-function ScriptModule:Load(arg0, arg1) end
+function ScriptModule:Load(name, strArray) end
 
 --- @public
---- @param arg0 String
+--- @param totalFile String
 --- @return void
-function ScriptModule:ParseScript(arg0) end
+function ScriptModule:ParseScript(totalFile) end
 
 --- @public
---- @param arg0 String
+--- @param totalFile String
 --- @return void
-function ScriptModule:ParseScriptPP(arg0) end
+function ScriptModule:ParseScriptPP(totalFile) end
 
 --- @public
 --- @return void
 function ScriptModule:Reset() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Item
-function ScriptModule:getItem(arg0) end
+function ScriptModule:getItem(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ModelScript
-function ScriptModule:getModelScript(arg0) end
+function ScriptModule:getModelScript(name) end
 
 --- @public
 --- @return String
 function ScriptModule:getName() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Recipe
-function ScriptModule:getRecipe(arg0) end
+function ScriptModule:getRecipe(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Item
-function ScriptModule:getSpecificItem(arg0) end
+function ScriptModule:getSpecificItem(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return VehicleScript
-function ScriptModule:getVehicle(arg0) end
+function ScriptModule:getVehicle(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return VehicleEngineRPM
-function ScriptModule:getVehicleEngineRPM(arg0) end
+function ScriptModule:getVehicleEngineRPM(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return VehicleTemplate
-function ScriptModule:getVehicleTemplate(arg0) end
+function ScriptModule:getVehicleTemplate(name) end
 
 
 ------------------------------------

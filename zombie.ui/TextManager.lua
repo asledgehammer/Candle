@@ -1,6 +1,6 @@
 --- @meta
 
---- @class TextManager: Object
+--- @class TextManager
 --- @field public instance TextManager
 TextManager = {};
 
@@ -9,128 +9,128 @@ TextManager = {};
 ------------------------------------
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 String
+--- @param x double
+--- @param y double
+--- @param str String
 --- @return void
---- @overload fun(arg0: double, arg1: double, arg2: String, arg3: double, arg4: double, arg5: double, arg6: double)
---- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
---- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: double, arg4: String, arg5: double, arg6: double, arg7: double, arg8: double)
-function TextManager:DrawString(arg0, arg1, arg2) end
+--- @overload fun(x: double, y: double, str: String, r: double, g: double, b: double, a: double)
+--- @overload fun(font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double)
+--- @overload fun(font: UIFont, x: double, y: double, zoom: double, str: String, r: double, g: double, b: double, a: double)
+function TextManager:DrawString(x, y, str) end
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 double
---- @param arg2 double
---- @param arg3 String
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
+--- @param font UIFont
+--- @param x double
+--- @param y double
+--- @param str String
+--- @param r double
+--- @param g double
+--- @param b double
+--- @param a double
 --- @return void
-function TextManager:DrawStringBBcode(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function TextManager:DrawStringBBcode(font, x, y, str, r, g, b, a) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 String
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
+--- @param x double
+--- @param y double
+--- @param str String
+--- @param r double
+--- @param g double
+--- @param b double
+--- @param a double
 --- @return void
---- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
-function TextManager:DrawStringCentre(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double)
+function TextManager:DrawStringCentre(x, y, str, r, g, b, a) end
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 double
---- @param arg2 double
---- @param arg3 String
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
+--- @param font UIFont
+--- @param x double
+--- @param y double
+--- @param str String
+--- @param r double
+--- @param g double
+--- @param b double
+--- @param a double
 --- @return void
-function TextManager:DrawStringCentreDefered(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function TextManager:DrawStringCentreDefered(font, x, y, str, r, g, b, a) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 String
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
+--- @param x double
+--- @param y double
+--- @param str String
+--- @param r double
+--- @param g double
+--- @param b double
+--- @param a double
 --- @return void
---- @overload fun(arg0: UIFont, arg1: double, arg2: double, arg3: String, arg4: double, arg5: double, arg6: double, arg7: double)
-function TextManager:DrawStringRight(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double)
+function TextManager:DrawStringRight(x, y, str, r, g, b, a) end
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 double
---- @param arg2 double
---- @param arg3 String
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
+--- @param font UIFont
+--- @param x double
+--- @param y double
+--- @param str String
+--- @param r double
+--- @param g double
+--- @param b double
+--- @param a double
 --- @return void
-function TextManager:DrawStringUntrimmed(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function TextManager:DrawStringUntrimmed(font, x, y, str, r, g, b, a) end
 
 --- @public
 --- @return void
 function TextManager:DrawTextFromGameWorld() end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
---- @param arg2 TextDrawObject
+--- @param x double
+--- @param y double
+--- @param td TextDrawObject
 --- @return void
-function TextManager:DrawTextObject(arg0, arg1, arg2) end
+function TextManager:DrawTextObject(x, y, td) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 boolean
+--- @param str String
+--- @param maxLineWidth int
+--- @param restrictImages boolean
 --- @return TextDrawObject
-function TextManager:GetDrawTextObject(arg0, arg1, arg2) end
+function TextManager:GetDrawTextObject(str, maxLineWidth, restrictImages) end
 
 --- @public
 --- @return void
 function TextManager:Init() end
 
 --- @public
---- @param arg0 UIFont
+--- @param font UIFont
 --- @return int
-function TextManager:MeasureFont(arg0) end
+function TextManager:MeasureFont(font) end
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 String
+--- @param font UIFont
+--- @param str String
 --- @return int
-function TextManager:MeasureStringX(arg0, arg1) end
+function TextManager:MeasureStringX(font, str) end
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 String
+--- @param font UIFont
+--- @param str String
 --- @return int
-function TextManager:MeasureStringY(arg0, arg1) end
+function TextManager:MeasureStringY(font, str) end
 
 --- @public
---- @param arg0 UIFont
+--- @param font UIFont
 --- @return AngelCodeFont
-function TextManager:getFontFromEnum(arg0) end
+function TextManager:getFontFromEnum(font) end
 
 --- @public
---- @param arg0 UIFont
+--- @param fontID UIFont
 --- @return int
-function TextManager:getFontHeight(arg0) end
+function TextManager:getFontHeight(fontID) end
 
 --- @public
---- @param arg0 int
+--- @param points int
 --- @return AngelCodeFont
-function TextManager:getNormalFromFontSize(arg0) end
+function TextManager:getNormalFromFontSize(points) end
 
 
 ------------------------------------

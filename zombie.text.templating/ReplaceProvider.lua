@@ -1,6 +1,9 @@
 --- @meta
 
---- @class ReplaceProvider: Object
+--- @class ReplaceProvider
+--- TurboTuTone.
+ A generic non-pooled ReplaceProvider that can be used for example in scripting,
+ where the provider could provide forced overrides for certain template keys.
 --- @implement IReplaceProvider
 ReplaceProvider = {};
 
@@ -15,20 +18,20 @@ ReplaceProvider = {};
 function ReplaceProvider:addKey(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IReplace
+--- @param key String
+--- @param replace IReplace
 --- @return void
-function ReplaceProvider:addReplacer(arg0, arg1) end
+function ReplaceProvider:addReplacer(key, replace) end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return IReplace
-function ReplaceProvider:getReplacer(arg0) end
+function ReplaceProvider:getReplacer(key) end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return boolean
-function ReplaceProvider:hasReplacer(arg0) end
+function ReplaceProvider:hasReplacer(key) end
 
 
 ------------------------------------

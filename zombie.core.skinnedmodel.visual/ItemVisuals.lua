@@ -16,15 +16,15 @@ function ItemVisuals:findHat() end
 function ItemVisuals:findMask() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function ItemVisuals:load(arg0, arg1) end
+function ItemVisuals:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function ItemVisuals:save(arg0) end
+function ItemVisuals:save(output) end
 
 
 ------------------------------------

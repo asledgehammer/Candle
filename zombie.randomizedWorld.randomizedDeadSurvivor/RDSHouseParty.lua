@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSHouseParty: RandomizedDeadSurvivorBase
+--- Zombies in party outfit, some food scattered around
 RDSHouseParty = {};
 
 ------------------------------------
@@ -8,15 +9,15 @@ RDSHouseParty = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RDSHouseParty:isValid(arg0, arg1) end
+function RDSHouseParty:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSHouseParty:randomizeDeadSurvivor(arg0) end
+function RDSHouseParty:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

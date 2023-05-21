@@ -1,6 +1,9 @@
 --- @meta
 
---- @class ModData: Object
+--- @class ModData
+--- TurboTuTone.
+
+ Exposed class with only allowed functions accessible for modding
 ModData = {};
 
 ------------------------------------
@@ -17,26 +20,26 @@ function ModData.add(arg0, arg1) end
 --- @public
 --- @static
 --- @return String
---- @overload fun(arg0: String)
+--- @overload fun(tag: String)
 function ModData.create() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param tag String
 --- @return boolean
-function ModData.exists(arg0) end
+function ModData.exists(tag) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param tag String
 --- @return KahluaTable
-function ModData.get(arg0) end
+function ModData.get(tag) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param tag String
 --- @return KahluaTable
-function ModData.getOrCreate(arg0) end
+function ModData.getOrCreate(tag) end
 
 --- @public
 --- @static
@@ -45,21 +48,21 @@ function ModData.getTableNames() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param tag String
 --- @return KahluaTable
-function ModData.remove(arg0) end
+function ModData.remove(tag) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param tag String
 --- @return void
-function ModData.request(arg0) end
+function ModData.request(tag) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param tag String
 --- @return void
-function ModData.transmit(arg0) end
+function ModData.transmit(tag) end
 
 
 ------------------------------------

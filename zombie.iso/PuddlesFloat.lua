@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PuddlesFloat: Object
+--- @class PuddlesFloat
 PuddlesFloat = {};
 
 ------------------------------------
@@ -8,15 +8,15 @@ PuddlesFloat = {};
 ------------------------------------
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function PuddlesFloat:addFinalValue(arg0) end
+function PuddlesFloat:addFinalValue(f) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param f float
+--- @param maximum float
 --- @return void
-function PuddlesFloat:addFinalValueForMax(arg0, arg1) end
+function PuddlesFloat:addFinalValueForMax(f, maximum) end
 
 --- @public
 --- @return float
@@ -43,34 +43,34 @@ function PuddlesFloat:getMin() end
 function PuddlesFloat:getName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param id int
+--- @param name String
 --- @return PuddlesFloat
-function PuddlesFloat:init(arg0, arg1) end
+function PuddlesFloat:init(id, name) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function PuddlesFloat:interpolateFinalValue(arg0) end
+function PuddlesFloat:interpolateFinalValue(f) end
 
 --- @public
 --- @return boolean
 function PuddlesFloat:isEnableAdmin() end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function PuddlesFloat:setAdminValue(arg0) end
+function PuddlesFloat:setAdminValue(f) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function PuddlesFloat:setEnableAdmin(arg0) end
+function PuddlesFloat:setEnableAdmin(b) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function PuddlesFloat:setFinalValue(arg0) end
+function PuddlesFloat:setFinalValue(f) end
 
 
 ------------------------------------

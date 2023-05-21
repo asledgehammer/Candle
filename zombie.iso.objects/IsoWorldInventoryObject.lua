@@ -9,10 +9,10 @@ IsoWorldInventoryObject = {};
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
---- @param arg1 float
+--- @param square IsoGridSquare
+--- @param zoff float
 --- @return float
-function IsoWorldInventoryObject.getSurfaceAlpha(arg0, arg1) end
+function IsoWorldInventoryObject.getSurfaceAlpha(square, zoff) end
 
 
 ------------------------------------
@@ -20,9 +20,9 @@ function IsoWorldInventoryObject.getSurfaceAlpha(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
+--- @param tooltipUI ObjectTooltip
 --- @return void
-function IsoWorldInventoryObject:DoTooltip(arg0) end
+function IsoWorldInventoryObject:DoTooltip(tooltipUI) end
 
 --- @public
 --- @return boolean
@@ -49,14 +49,14 @@ function IsoWorldInventoryObject:getItem() end
 function IsoWorldInventoryObject:getObjectName() end
 
 --- @public
---- @param arg0 int
+--- @param playerIndex int
 --- @return float
-function IsoWorldInventoryObject:getScreenPosX(arg0) end
+function IsoWorldInventoryObject:getScreenPosX(playerIndex) end
 
 --- @public
---- @param arg0 int
+--- @param playerIndex int
 --- @return float
-function IsoWorldInventoryObject:getScreenPosY(arg0) end
+function IsoWorldInventoryObject:getScreenPosY(playerIndex) end
 
 --- @public
 --- @return int
@@ -87,23 +87,23 @@ function IsoWorldInventoryObject:isIgnoreRemoveSandbox() end
 function IsoWorldInventoryObject:isTaintedWater() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoWorldInventoryObject:load(arg0, arg1, arg2) end
+function IsoWorldInventoryObject:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ByteBuffer
+--- @param change String
+--- @param bb ByteBuffer
 --- @return void
-function IsoWorldInventoryObject:loadChange(arg0, arg1) end
+function IsoWorldInventoryObject:loadChange(change, bb) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return boolean
-function IsoWorldInventoryObject:onMouseLeftClick(arg0, arg1) end
+function IsoWorldInventoryObject:onMouseLeftClick(x, y) end
 
 --- @public
 --- @return void
@@ -114,29 +114,29 @@ function IsoWorldInventoryObject:removeFromSquare() end
 function IsoWorldInventoryObject:removeFromWorld() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return void
-function IsoWorldInventoryObject:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoWorldInventoryObject:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param lightInfo ColorInfo
 --- @return void
-function IsoWorldInventoryObject:renderObjectPicker(arg0, arg1, arg2, arg3) end
+function IsoWorldInventoryObject:renderObjectPicker(x, y, z, lightInfo) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoWorldInventoryObject:save(arg0, arg1) end
+function IsoWorldInventoryObject:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 String
@@ -146,28 +146,28 @@ function IsoWorldInventoryObject:save(arg0, arg1) end
 function IsoWorldInventoryObject:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function IsoWorldInventoryObject:setIgnoreRemoveSandbox(arg0) end
+function IsoWorldInventoryObject:setIgnoreRemoveSandbox(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param tainted boolean
 --- @return void
-function IsoWorldInventoryObject:setTaintedWater(arg0) end
+function IsoWorldInventoryObject:setTaintedWater(tainted) end
 
 --- @public
---- @param arg0 int
+--- @param units int
 --- @return void
-function IsoWorldInventoryObject:setWaterAmount(arg0) end
+function IsoWorldInventoryObject:setWaterAmount(units) end
 
 --- @public
 --- @return void
 function IsoWorldInventoryObject:softReset() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param newItem InventoryItem
 --- @return void
-function IsoWorldInventoryObject:swapItem(arg0) end
+function IsoWorldInventoryObject:swapItem(newItem) end
 
 --- @public
 --- @return void
@@ -183,7 +183,7 @@ function IsoWorldInventoryObject:updateSprite() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoWorldInventoryObject
---- @overload fun(arg0: InventoryItem, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float)
-function IsoWorldInventoryObject.new(arg0) end
+--- @overload fun(item: InventoryItem, sq: IsoGridSquare, xoff: float, yoff: float, zoff: float)
+function IsoWorldInventoryObject.new(cell) end

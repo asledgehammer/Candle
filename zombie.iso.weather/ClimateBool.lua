@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ClimateBool: Object
+--- @class ClimateBool
 ClimateBool = {};
 
 ------------------------------------
@@ -32,10 +32,10 @@ function ClimateBool:getName() end
 function ClimateBool:getOverride() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param id int
+--- @param name String
 --- @return ClimateBool
-function ClimateBool:init(arg0, arg1) end
+function ClimateBool:init(id, name) end
 
 --- @public
 --- @return boolean
@@ -46,39 +46,39 @@ function ClimateBool:isEnableAdmin() end
 function ClimateBool:isEnableOverride() end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateBool:setAdminValue(arg0) end
+function ClimateBool:setAdminValue(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateBool:setEnableAdmin(arg0) end
+function ClimateBool:setEnableAdmin(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateBool:setEnableModded(arg0) end
+function ClimateBool:setEnableModded(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateBool:setEnableOverride(arg0) end
+function ClimateBool:setEnableOverride(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateBool:setFinalValue(arg0) end
+function ClimateBool:setFinalValue(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateBool:setModdedValue(arg0) end
+function ClimateBool:setModdedValue(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateBool:setOverride(arg0) end
+function ClimateBool:setOverride(b) end
 
 
 ------------------------------------

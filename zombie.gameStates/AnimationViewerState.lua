@@ -27,30 +27,30 @@ function AnimationViewerState:enter() end
 function AnimationViewerState:exit() end
 
 --- @public
---- @param arg0 String
+--- @param func String
 --- @return Object
-function AnimationViewerState:fromLua0(arg0) end
+function AnimationViewerState:fromLua0(func) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
+--- @param func String
+--- @param arg0 Object
 --- @return Object
-function AnimationViewerState:fromLua1(arg0, arg1) end
+function AnimationViewerState:fromLua1(func, arg0) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function AnimationViewerState:getBoolean(arg0) end
+function AnimationViewerState:getBoolean(name) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return ConfigOption
-function AnimationViewerState:getOptionByIndex(arg0) end
+function AnimationViewerState:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ConfigOption
-function AnimationViewerState:getOptionByName(arg0) end
+function AnimationViewerState:getOptionByName(name) end
 
 --- @public
 --- @return int
@@ -73,10 +73,10 @@ function AnimationViewerState:render() end
 function AnimationViewerState:save() end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param name String
+--- @param value boolean
 --- @return void
-function AnimationViewerState:setBoolean(arg0, arg1) end
+function AnimationViewerState:setBoolean(name, value) end
 
 --- @public
 --- @param arg0 KahluaTable

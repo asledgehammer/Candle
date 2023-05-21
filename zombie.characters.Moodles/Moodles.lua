@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Moodles: Object
+--- @class Moodles
 Moodles = {};
 
 ------------------------------------
@@ -20,53 +20,53 @@ function Moodles:UI_RefreshNeeded() end
 function Moodles:Update() end
 
 --- @public
---- @param arg0 int
+--- @param MoodleIndex int
 --- @return int
-function Moodles:getGoodBadNeutral(arg0) end
+function Moodles:getGoodBadNeutral(MoodleIndex) end
 
 --- @public
---- @param arg0 int
+--- @param moodleIndex int
 --- @return Color
-function Moodles:getMoodleChevronColor(arg0) end
+function Moodles:getMoodleChevronColor(moodleIndex) end
 
 --- @public
---- @param arg0 int
+--- @param moodleIndex int
 --- @return int
-function Moodles:getMoodleChevronCount(arg0) end
+function Moodles:getMoodleChevronCount(moodleIndex) end
 
 --- @public
---- @param arg0 int
+--- @param moodleIndex int
 --- @return boolean
-function Moodles:getMoodleChevronIsUp(arg0) end
+function Moodles:getMoodleChevronIsUp(moodleIndex) end
 
 --- @public
---- @param arg0 int
+--- @param MoodleIndex int
 --- @return String
-function Moodles:getMoodleDescriptionString(arg0) end
+function Moodles:getMoodleDescriptionString(MoodleIndex) end
 
 --- @public
---- @param arg0 int
+--- @param MoodleIndex int
 --- @return String
-function Moodles:getMoodleDisplayString(arg0) end
+function Moodles:getMoodleDisplayString(MoodleIndex) end
 
 --- @public
---- @param arg0 int
+--- @param MoodleIndex int
 --- @return int
-function Moodles:getMoodleLevel(arg0) end
+function Moodles:getMoodleLevel(MoodleIndex) end
 
 --- @public
---- @param arg0 int
+--- @param MoodleIndex int
 --- @return MoodleType
-function Moodles:getMoodleType(arg0) end
+function Moodles:getMoodleType(MoodleIndex) end
 
 --- @public
 --- @return int
 function Moodles:getNumMoodles() end
 
 --- @public
---- @param arg0 boolean
+--- @param refresh boolean
 --- @return void
-function Moodles:setMoodlesStateChanged(arg0) end
+function Moodles:setMoodlesStateChanged(refresh) end
 
 
 ------------------------------------
@@ -74,6 +74,6 @@ function Moodles:setMoodlesStateChanged(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param parent IsoGameCharacter
 --- @return Moodles
-function Moodles.new(arg0) end
+function Moodles.new(parent) end

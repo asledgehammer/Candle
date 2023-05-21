@@ -1,6 +1,6 @@
 --- @meta
 
---- @class MediaLineData: Object
+--- @class MediaLineData
 MediaLineData = {};
 
 ------------------------------------
@@ -41,10 +41,10 @@ function MediaLineData:getTranslatedText() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 String
+--- @param text String
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param codes String
 --- @return MediaLineData
-function MediaLineData.new(arg0, arg1, arg2, arg3, arg4) end
+function MediaLineData.new(text, r, g, b, codes) end

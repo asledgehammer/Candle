@@ -1,6 +1,7 @@
 --- @meta
 
---- @class DataPoint: Object
+--- @class DataPoint
+--- Turbo
 DataPoint = {};
 
 ------------------------------------
@@ -16,14 +17,14 @@ function DataPoint:getIntensity() end
 function DataPoint:getTime() end
 
 --- @public
---- @param arg0 float
+--- @param intensity float
 --- @return void
-function DataPoint:setIntensity(arg0) end
+function DataPoint:setIntensity(intensity) end
 
 --- @public
---- @param arg0 float
+--- @param time float
 --- @return void
-function DataPoint:setTime(arg0) end
+function DataPoint:setTime(time) end
 
 
 ------------------------------------
@@ -31,7 +32,7 @@ function DataPoint:setTime(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param time float
+--- @param intensity float
 --- @return DataPoint
-function DataPoint.new(arg0, arg1) end
+function DataPoint.new(time, intensity) end

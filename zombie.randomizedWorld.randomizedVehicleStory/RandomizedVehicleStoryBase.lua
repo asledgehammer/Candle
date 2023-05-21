@@ -29,14 +29,14 @@ function RandomizedVehicleStoryBase.initAllRVSMapChance(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 BaseVehicle
---- @param arg1 BaseVehicle
---- @param arg2 int
---- @param arg3 int
---- @param arg4 boolean
---- @param arg5 boolean
+--- @param v1 BaseVehicle
+--- @param v2 BaseVehicle
+--- @param xOffset int
+--- @param yOffset int
+--- @param horizontalZone boolean
+--- @param addBlood boolean
 --- @return BaseVehicle[]
-function RandomizedVehicleStoryBase:addSmashedOverlay(arg0, arg1, arg2, arg3, arg4, arg5) end
+function RandomizedVehicleStoryBase:addSmashedOverlay(v1, v2, xOffset, yOffset, horizontalZone, addBlood) end
 
 --- @public
 --- @param arg0 Zone
@@ -114,18 +114,18 @@ function RandomizedVehicleStoryBase:initSpawnDataForChunk(arg0, arg1) end
 function RandomizedVehicleStoryBase:initVehicleStorySpawner(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return boolean
-function RandomizedVehicleStoryBase:isChunkLoaded(arg0, arg1) end
+function RandomizedVehicleStoryBase:isChunkLoaded(wx, wy) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param x1 int
+--- @param y1 int
+--- @param x2 int
+--- @param y2 int
 --- @return boolean
-function RandomizedVehicleStoryBase:isFullyStreamedIn(arg0, arg1, arg2, arg3) end
+function RandomizedVehicleStoryBase:isFullyStreamedIn(x1, y1, x2, y2) end
 
 --- @public
 --- @param arg0 Zone
@@ -145,19 +145,19 @@ function RandomizedVehicleStoryBase:randomizeVehicleStory(arg0, arg1) end
 function RandomizedVehicleStoryBase:registerCustomOutfits() end
 
 --- @public
---- @param arg0 int
+--- @param chance int
 --- @return void
-function RandomizedVehicleStoryBase:setChance(arg0) end
+function RandomizedVehicleStoryBase:setChance(chance) end
 
 --- @public
---- @param arg0 int
+--- @param maximumDays int
 --- @return void
-function RandomizedVehicleStoryBase:setMaximumDays(arg0) end
+function RandomizedVehicleStoryBase:setMaximumDays(maximumDays) end
 
 --- @public
---- @param arg0 int
+--- @param minimumDays int
 --- @return void
-function RandomizedVehicleStoryBase:setMinimumDays(arg0) end
+function RandomizedVehicleStoryBase:setMinimumDays(minimumDays) end
 
 --- @public
 --- @param arg0 VehicleStorySpawner

@@ -9,9 +9,9 @@ UI3DModel = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param itemGuid String
 --- @return void
-function UI3DModel:clothingItemChanged(arg0) end
+function UI3DModel:clothingItemChanged(itemGuid) end
 
 --- @public
 --- @return IsoDirections
@@ -22,71 +22,71 @@ function UI3DModel:getDirection() end
 function UI3DModel:render() end
 
 --- @public
---- @param arg0 String
+--- @param event String
 --- @return void
-function UI3DModel:reportEvent(arg0) end
+function UI3DModel:reportEvent(event) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function UI3DModel:setAnimSetName(arg0) end
+function UI3DModel:setAnimSetName(name) end
 
 --- @public
---- @param arg0 boolean
+--- @param animate boolean
 --- @return void
-function UI3DModel:setAnimate(arg0) end
+function UI3DModel:setAnimate(animate) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param character IsoGameCharacter
 --- @return void
-function UI3DModel:setCharacter(arg0) end
+function UI3DModel:setCharacter(character) end
 
 --- @public
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return void
-function UI3DModel:setDirection(arg0) end
+function UI3DModel:setDirection(dir) end
 
 --- @public
---- @param arg0 boolean
+--- @param doExt boolean
 --- @return void
-function UI3DModel:setDoRandomExtAnimations(arg0) end
+function UI3DModel:setDoRandomExtAnimations(doExt) end
 
 --- @public
---- @param arg0 boolean
+--- @param iso boolean
 --- @return void
-function UI3DModel:setIsometric(arg0) end
+function UI3DModel:setIsometric(iso) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param outfitName String
+--- @param female boolean
+--- @param zombie boolean
 --- @return void
-function UI3DModel:setOutfitName(arg0, arg1, arg2) end
+function UI3DModel:setOutfitName(outfitName, female, zombie) end
 
 --- @public
---- @param arg0 String
+--- @param state String
 --- @return void
-function UI3DModel:setState(arg0) end
+function UI3DModel:setState(state) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param survivorDesc SurvivorDesc
 --- @return void
-function UI3DModel:setSurvivorDesc(arg0) end
+function UI3DModel:setSurvivorDesc(survivorDesc) end
 
 --- @public
---- @param arg0 float
+--- @param newXOffset float
 --- @return void
-function UI3DModel:setXOffset(arg0) end
+function UI3DModel:setXOffset(newXOffset) end
 
 --- @public
---- @param arg0 float
+--- @param newYOffset float
 --- @return void
-function UI3DModel:setYOffset(arg0) end
+function UI3DModel:setYOffset(newYOffset) end
 
 --- @public
---- @param arg0 float
+--- @param newZoom float
 --- @return void
-function UI3DModel:setZoom(arg0) end
+function UI3DModel:setZoom(newZoom) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Vector2f: Object
+--- @class Vector2f
 --- @implement Externalizable
 --- @implement Vector2fc
 Vector2f = {};

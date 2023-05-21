@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ClothingPatch: Object
+--- @class ClothingPatch
 ClothingPatch = {};
 
 ------------------------------------

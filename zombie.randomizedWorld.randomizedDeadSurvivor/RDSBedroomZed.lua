@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSBedroomZed: RandomizedDeadSurvivorBase
+--- Create 2 naked zombies in the bedroom with clothing lying around
 RDSBedroomZed = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RDSBedroomZed = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSBedroomZed:randomizeDeadSurvivor(arg0) end
+function RDSBedroomZed:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

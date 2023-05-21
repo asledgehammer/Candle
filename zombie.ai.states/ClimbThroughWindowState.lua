@@ -18,86 +18,86 @@ function ClimbThroughWindowState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function ClimbThroughWindowState:animEvent(arg0, arg1) end
+function ClimbThroughWindowState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbThroughWindowState:enter(arg0) end
+function ClimbThroughWindowState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbThroughWindowState:execute(arg0) end
+function ClimbThroughWindowState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbThroughWindowState:exit(arg0) end
+function ClimbThroughWindowState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 MoveDeltaModifiers
+--- @param owner IsoGameCharacter
+--- @param modifiers MoveDeltaModifiers
 --- @return void
-function ClimbThroughWindowState:getDeltaModifiers(arg0, arg1) end
+function ClimbThroughWindowState:getDeltaModifiers(owner, modifiers) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return IsoObject
-function ClimbThroughWindowState:getWindow(arg0) end
+function ClimbThroughWindowState:getWindow(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param owner IsoGameCharacter
+--- @param fromX int
+--- @param fromY int
+--- @param fromZ int
+--- @param toX int
+--- @param toY int
+--- @param toZ int
 --- @return boolean
-function ClimbThroughWindowState:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ClimbThroughWindowState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 IsoDirections
+--- @param owner IsoGameCharacter
+--- @param x int
+--- @param y int
+--- @param moveDir IsoDirections
 --- @return boolean
-function ClimbThroughWindowState:isPastInnerEdgeOfSquare(arg0, arg1, arg2, arg3) end
+function ClimbThroughWindowState:isPastInnerEdgeOfSquare(owner, x, y, moveDir) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 IsoDirections
+--- @param owner IsoGameCharacter
+--- @param x int
+--- @param y int
+--- @param moveDir IsoDirections
 --- @return boolean
-function ClimbThroughWindowState:isPastOuterEdgeOfSquare(arg0, arg1, arg2, arg3) end
+function ClimbThroughWindowState:isPastOuterEdgeOfSquare(owner, x, y, moveDir) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return boolean
-function ClimbThroughWindowState:isWindowClosing(arg0) end
+function ClimbThroughWindowState:isWindowClosing(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoObject
+--- @param owner IsoGameCharacter
+--- @param obj IsoObject
 --- @return void
-function ClimbThroughWindowState:setParams(arg0, arg1) end
+function ClimbThroughWindowState:setParams(owner, obj) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 float
+--- @param owner IsoGameCharacter
+--- @param x float
 --- @return void
-function ClimbThroughWindowState:slideX(arg0, arg1) end
+function ClimbThroughWindowState:slideX(owner, x) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 float
+--- @param owner IsoGameCharacter
+--- @param y float
 --- @return void
-function ClimbThroughWindowState:slideY(arg0, arg1) end
+function ClimbThroughWindowState:slideY(owner, y) end
 
 
 ------------------------------------

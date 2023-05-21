@@ -1,6 +1,7 @@
 --- @meta
 
---- @class RadioScript: Object
+--- @class RadioScript
+--- Turbo
 RadioScript = {};
 
 ------------------------------------
@@ -8,17 +9,17 @@ RadioScript = {};
 ------------------------------------
 
 --- @public
---- @param arg0 RadioBroadCast
+--- @param broadcast RadioBroadCast
 --- @return void
---- @overload fun(arg0: RadioBroadCast, arg1: boolean)
-function RadioScript:AddBroadcast(arg0) end
+--- @overload fun(broadcast: RadioBroadCast, ignoreTimestamps: boolean)
+function RadioScript:AddBroadcast(broadcast) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param scriptname String
+--- @param chance int
+--- @param startdelay int
 --- @return void
-function RadioScript:AddExitOption(arg0, arg1, arg2) end
+function RadioScript:AddExitOption(scriptname, chance, startdelay) end
 
 --- @public
 --- @return String
@@ -33,9 +34,9 @@ function RadioScript:GetName() end
 function RadioScript:Reset() end
 
 --- @public
---- @param arg0 int
+--- @param timeStamp int
 --- @return boolean
-function RadioScript:UpdateScript(arg0) end
+function RadioScript:UpdateScript(timeStamp) end
 
 --- @public
 --- @return void
@@ -46,9 +47,9 @@ function RadioScript:clearExitOptions() end
 function RadioScript:getBroadcastList() end
 
 --- @public
---- @param arg0 String
+--- @param guid String
 --- @return RadioBroadCast
-function RadioScript:getBroadcastWithID(arg0) end
+function RadioScript:getBroadcastWithID(guid) end
 
 --- @public
 --- @return RadioBroadCast
@@ -87,9 +88,9 @@ function RadioScript:getValidAirBroadcast() end
 function RadioScript:getValidAirBroadcastDebug() end
 
 --- @public
---- @param arg0 int
+--- @param day int
 --- @return void
-function RadioScript:setStartDayStamp(arg0) end
+function RadioScript:setStartDayStamp(day) end
 
 
 ------------------------------------
@@ -97,9 +98,9 @@ function RadioScript:setStartDayStamp(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param n String
+--- @param loopmin int
+--- @param loopmax int
 --- @return RadioScript
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: String)
-function RadioScript.new(arg0, arg1, arg2) end
+--- @overload fun(n: String, loopmin: int, loopmax: int, guid: String)
+function RadioScript.new(n, loopmin, loopmax) end

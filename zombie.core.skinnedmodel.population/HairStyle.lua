@@ -1,6 +1,6 @@
 --- @meta
 
---- @class HairStyle: Object
+--- @class HairStyle
 HairStyle = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ HairStyle = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return String
-function HairStyle:getAlternate(arg0) end
+function HairStyle:getAlternate(category) end
 
 --- @public
 --- @return int

@@ -34,41 +34,41 @@ MoodleType = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return MoodleType
-function MoodleType.FromIndex(arg0) end
+function MoodleType.FromIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return MoodleType
-function MoodleType.FromString(arg0) end
+function MoodleType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 MoodleType
+--- @param MT MoodleType
 --- @return int
-function MoodleType.GoodBadNeutral(arg0) end
+function MoodleType.GoodBadNeutral(MT) end
 
 --- @public
 --- @static
---- @param arg0 MoodleType
+--- @param MT MoodleType
 --- @return int
-function MoodleType.ToIndex(arg0) end
+function MoodleType.ToIndex(MT) end
 
 --- @public
 --- @static
---- @param arg0 MoodleType
---- @param arg1 int
+--- @param MT MoodleType
+--- @param Level int
 --- @return String
-function MoodleType.getDescriptionText(arg0, arg1) end
+function MoodleType.getDescriptionText(MT, Level) end
 
 --- @public
 --- @static
---- @param arg0 MoodleType
---- @param arg1 int
+--- @param MT MoodleType
+--- @param Level int
 --- @return String
-function MoodleType.getDisplayName(arg0, arg1) end
+function MoodleType.getDisplayName(MT, Level) end
 
 --- @public
 --- @static

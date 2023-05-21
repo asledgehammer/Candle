@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ColorRGB: Object
+--- @class ColorRGB
 ColorRGB = {};
 
 ------------------------------------
@@ -8,8 +8,8 @@ ColorRGB = {};
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param r int
+--- @param g int
+--- @param b int
 --- @return ColorRGB
-function ColorRGB.new(arg0, arg1, arg2) end
+function ColorRGB.new(r, g, b) end

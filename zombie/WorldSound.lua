@@ -1,6 +1,6 @@
 --- @meta
 
---- @class WorldSound: Object
+--- @class WorldSound
 WorldSound = {};
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ProfessionFactory: Object
+--- @class ProfessionFactory
 --- @field public ProfessionMap LinkedHashMap
 ProfessionFactory = {};
 
@@ -15,18 +15,18 @@ function ProfessionFactory.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 int
+--- @param type String
+--- @param name String
+--- @param IconPath String
+--- @param points int
 --- @return Profession
-function ProfessionFactory.addProfession(arg0, arg1, arg2, arg3) end
+function ProfessionFactory.addProfession(type, name, IconPath, points) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param type String
 --- @return Profession
-function ProfessionFactory.getProfession(arg0) end
+function ProfessionFactory.getProfession(type) end
 
 --- @public
 --- @static

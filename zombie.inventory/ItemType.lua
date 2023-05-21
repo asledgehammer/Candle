@@ -20,9 +20,9 @@ ItemType = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param value int
 --- @return ItemType
-function ItemType.fromIndex(arg0) end
+function ItemType.fromIndex(value) end
 
 --- @public
 --- @static

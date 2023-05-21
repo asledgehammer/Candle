@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ConfigOption: Object
+--- @class ConfigOption
 ConfigOption = {};
 
 ------------------------------------
@@ -32,14 +32,14 @@ function ConfigOption:getValueAsObject() end
 function ConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return boolean
-function ConfigOption:isValidString(arg0) end
+function ConfigOption:isValidString(s) end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return void
-function ConfigOption:parse(arg0) end
+function ConfigOption:parse(s) end
 
 --- @public
 --- @return void
@@ -50,9 +50,9 @@ function ConfigOption:resetToDefault() end
 function ConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 Object
+--- @param o Object
 --- @return void
-function ConfigOption:setValueFromObject(arg0) end
+function ConfigOption:setValueFromObject(o) end
 
 
 ------------------------------------
@@ -60,6 +60,6 @@ function ConfigOption:setValueFromObject(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ConfigOption
-function ConfigOption.new(arg0) end
+function ConfigOption.new(name) end

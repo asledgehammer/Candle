@@ -1,6 +1,7 @@
 --- @meta
 
---- @class DataChunk: Object
+--- @class DataChunk
+--- TurboTuTone.
 DataChunk = {};
 
 ------------------------------------
@@ -16,70 +17,70 @@ function DataChunk:getChunkX() end
 function DataChunk:getChunkY() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return IsoChunkRegion
-function DataChunk:getIsoChunkRegion(arg0, arg1, arg2) end
+function DataChunk:getIsoChunkRegion(x, y, z) end
 
 --- @public
 --- @return long
 function DataChunk:getLastUpdateStamp() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return byte
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: boolean)
-function DataChunk:getSquare(arg0, arg1, arg2) end
+--- @overload fun(x: int, y: int, z: int, ignoreCoordCheck: boolean)
+function DataChunk:getSquare(x, y, z) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param bb ByteBuffer
+--- @param worldVersion int
+--- @param readLength boolean
 --- @return void
-function DataChunk:load(arg0, arg1, arg2) end
+function DataChunk:load(bb, worldVersion, readLength) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function DataChunk:save(arg0) end
+function DataChunk:save(bb) end
 
 --- @public
---- @param arg0 byte
+--- @param flags byte
 --- @return boolean
-function DataChunk:selectedHasFlags(arg0) end
+function DataChunk:selectedHasFlags(flags) end
 
 --- @public
 --- @return void
 function DataChunk:setDirtyAllActive() end
 
 --- @public
---- @param arg0 long
+--- @param lastUpdateStamp long
 --- @return void
-function DataChunk:setLastUpdateStamp(arg0) end
+function DataChunk:setLastUpdateStamp(lastUpdateStamp) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 byte
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param regionIndex byte
 --- @return void
-function DataChunk:setRegion(arg0, arg1, arg2, arg3) end
+function DataChunk:setRegion(x, y, z, regionIndex) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function DataChunk:setSelectedFlags(arg0, arg1, arg2) end
+function DataChunk:setSelectedFlags(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return byte
-function DataChunk:squareGetFlags(arg0, arg1, arg2) end
+function DataChunk:squareGetFlags(x, y, z) end
 
 

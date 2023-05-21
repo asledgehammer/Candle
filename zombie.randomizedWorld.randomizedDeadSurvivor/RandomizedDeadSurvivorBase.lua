@@ -14,9 +14,9 @@ RandomizedDeadSurvivorBase = {};
 function RandomizedDeadSurvivorBase:isValid(arg0, arg1) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RandomizedDeadSurvivorBase:randomizeDeadSurvivor(arg0) end
+function RandomizedDeadSurvivorBase:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

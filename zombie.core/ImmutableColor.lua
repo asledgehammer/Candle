@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ImmutableColor: Object
+--- @class ImmutableColor
 --- @field public black ImmutableColor
 --- @field public blue ImmutableColor
 --- @field public cyan ImmutableColor
@@ -26,17 +26,17 @@ ImmutableColor = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param hue float
+--- @param saturation float
+--- @param brightness float
 --- @return Integer[]
-function ImmutableColor.HSBtoRGB(arg0, arg1, arg2) end
+function ImmutableColor.HSBtoRGB(hue, saturation, brightness) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param nm String
 --- @return ImmutableColor
-function ImmutableColor.decode(arg0) end
+function ImmutableColor.decode(nm) end
 
 --- @public
 --- @static
@@ -49,24 +49,24 @@ function ImmutableColor.random() end
 ------------------------------------
 
 --- @public
---- @param arg0 ImmutableColor
+--- @param c ImmutableColor
 --- @return ImmutableColor
-function ImmutableColor:add(arg0) end
+function ImmutableColor:add(c) end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(arg0: float)
+--- @overload fun(scale: float)
 function ImmutableColor:brighter() end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(arg0: float)
+--- @overload fun(scale: float)
 function ImmutableColor:darker() end
 
 --- @public
---- @param arg0 Object
+--- @param other Object
 --- @return boolean
-function ImmutableColor:equals(arg0) end
+function ImmutableColor:equals(other) end
 
 --- @public
 --- @return byte
@@ -121,20 +121,20 @@ function ImmutableColor:getRedInt() end
 function ImmutableColor:hashCode() end
 
 --- @public
---- @param arg0 ImmutableColor
---- @param arg1 float
+--- @param to ImmutableColor
+--- @param delta float
 --- @return ImmutableColor
-function ImmutableColor:interp(arg0, arg1) end
+function ImmutableColor:interp(to, delta) end
 
 --- @public
---- @param arg0 Color
+--- @param c Color
 --- @return ImmutableColor
-function ImmutableColor:multiply(arg0) end
+function ImmutableColor:multiply(c) end
 
 --- @public
---- @param arg0 float
+--- @param value float
 --- @return ImmutableColor
-function ImmutableColor:scale(arg0) end
+function ImmutableColor:scale(value) end
 
 --- @public
 --- @return Color
@@ -150,8 +150,8 @@ function ImmutableColor:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param value int
 --- @return ImmutableColor
---- @overload fun(arg0: Color, arg1: Color, arg2: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
-function ImmutableColor.new(arg0) end
+--- @overload fun(A: Color, B: Color, delta: float)
+--- @overload fun(r: float, g: float, b: float, a: float)
+function ImmutableColor.new(value) end

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoDirectionSet: Object
+--- @class IsoDirectionSet
 IsoDirectionSet = {};
 
 ------------------------------------
@@ -9,10 +9,10 @@ IsoDirectionSet = {};
 
 --- @public
 --- @static
---- @param arg0 IsoDirections
---- @param arg1 int
+--- @param dir IsoDirections
+--- @param amount int
 --- @return IsoDirections
-function IsoDirectionSet.rotate(arg0, arg1) end
+function IsoDirectionSet.rotate(dir, amount) end
 
 
 ------------------------------------

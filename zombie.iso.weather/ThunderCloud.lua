@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ThunderCloud: Object
+--- @class ThunderCloud
 ThunderCloud = {};
 
 ------------------------------------
@@ -32,11 +32,11 @@ function ThunderCloud:isRunning() end
 function ThunderCloud:lifeTime() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
+--- @param centerX int
+--- @param centerY int
+--- @param angle float
 --- @return void
-function ThunderCloud:setCenter(arg0, arg1, arg2) end
+function ThunderCloud:setCenter(centerX, centerY, angle) end
 
 
 ------------------------------------

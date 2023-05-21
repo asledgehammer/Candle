@@ -1,6 +1,6 @@
 --- @meta
 
---- @class VehicleDoor: Object
+--- @class VehicleDoor
 VehicleDoor = {};
 
 ------------------------------------
@@ -25,30 +25,30 @@ function VehicleDoor:isLocked() end
 function VehicleDoor:isOpen() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function VehicleDoor:load(arg0, arg1) end
+function VehicleDoor:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function VehicleDoor:save(arg0) end
+function VehicleDoor:save(output) end
 
 --- @public
---- @param arg0 boolean
+--- @param broken boolean
 --- @return void
-function VehicleDoor:setLockBroken(arg0) end
+function VehicleDoor:setLockBroken(broken) end
 
 --- @public
---- @param arg0 boolean
+--- @param locked boolean
 --- @return void
-function VehicleDoor:setLocked(arg0) end
+function VehicleDoor:setLocked(locked) end
 
 --- @public
---- @param arg0 boolean
+--- @param open boolean
 --- @return void
-function VehicleDoor:setOpen(arg0) end
+function VehicleDoor:setOpen(open) end
 
 
 ------------------------------------
@@ -56,6 +56,6 @@ function VehicleDoor:setOpen(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 VehiclePart
+--- @param part VehiclePart
 --- @return VehicleDoor
-function VehicleDoor.new(arg0) end
+function VehicleDoor.new(part) end

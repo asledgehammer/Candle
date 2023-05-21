@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class RZSBuryingCamp: RandomizedZoneStoryBase
+--- Align some graves with possible flower, possible clutter One grave open with
+ a zombie
 RZSBuryingCamp = {};
 
 ------------------------------------

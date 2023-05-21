@@ -1,6 +1,6 @@
 --- @meta
 
---- @class XP: Object
+--- @class XP
 --- @field public MaxXPGrowthRate float
 XP = {};
 

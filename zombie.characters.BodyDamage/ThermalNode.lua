@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ThermalNode: Object
+--- @class ThermalNode
 ThermalNode = {};
 
 ------------------------------------

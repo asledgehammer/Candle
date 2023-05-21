@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AttachedLocations: Object
+--- @class AttachedLocations
 AttachedLocations = {};
 
 ------------------------------------
@@ -14,9 +14,9 @@ function AttachedLocations.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param id String
 --- @return AttachedLocationGroup
-function AttachedLocations.getGroup(arg0) end
+function AttachedLocations.getGroup(id) end
 
 
 ------------------------------------

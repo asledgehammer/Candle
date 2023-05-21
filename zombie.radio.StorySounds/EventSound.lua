@@ -1,6 +1,7 @@
 --- @meta
 
---- @class EventSound: Object
+--- @class EventSound
+--- Turbo
 EventSound = {};
 
 ------------------------------------
@@ -24,24 +25,24 @@ function EventSound:getName() end
 function EventSound:getStorySounds() end
 
 --- @public
---- @param arg0 Color
+--- @param color Color
 --- @return void
-function EventSound:setColor(arg0) end
+function EventSound:setColor(color) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param dataPoints ArrayList
 --- @return void
-function EventSound:setDataPoints(arg0) end
+function EventSound:setDataPoints(dataPoints) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function EventSound:setName(arg0) end
+function EventSound:setName(name) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param storySounds ArrayList
 --- @return void
-function EventSound:setStorySounds(arg0) end
+function EventSound:setStorySounds(storySounds) end
 
 
 ------------------------------------
@@ -50,5 +51,5 @@ function EventSound:setStorySounds(arg0) end
 
 --- @public
 --- @return EventSound
---- @overload fun(arg0: String)
+--- @overload fun(name: String)
 function EventSound.new() end

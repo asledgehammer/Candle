@@ -1,6 +1,6 @@
 --- @meta
 
---- @class CGlobalObjects: Object
+--- @class CGlobalObjects
 CGlobalObjects = {};
 
 ------------------------------------
@@ -14,15 +14,15 @@ function CGlobalObjects.Reset() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return CGlobalObjectSystem
-function CGlobalObjects.getSystemByIndex(arg0) end
+function CGlobalObjects.getSystemByIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return CGlobalObjectSystem
-function CGlobalObjects.getSystemByName(arg0) end
+function CGlobalObjects.getSystemByName(name) end
 
 --- @public
 --- @static
@@ -36,21 +36,21 @@ function CGlobalObjects.initSystems() end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function CGlobalObjects.loadInitialState(arg0) end
+function CGlobalObjects.loadInitialState(bb) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return CGlobalObjectSystem
-function CGlobalObjects.newSystem(arg0) end
+function CGlobalObjects.newSystem(name) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param message String
 --- @return void
-function CGlobalObjects.noise(arg0) end
+function CGlobalObjects.noise(message) end
 
 --- @public
 --- @static
@@ -62,9 +62,9 @@ function CGlobalObjects.receiveServerCommand(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return CGlobalObjectSystem
-function CGlobalObjects.registerSystem(arg0) end
+function CGlobalObjects.registerSystem(name) end
 
 
 ------------------------------------

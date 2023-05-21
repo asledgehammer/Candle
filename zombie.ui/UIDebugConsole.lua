@@ -13,22 +13,22 @@ UIDebugConsole = {};
 function UIDebugConsole:ProcessCommand() end
 
 --- @public
---- @param arg0 byte[]
---- @param arg1 int
---- @param arg2 int
+--- @param b byte[]
+--- @param false int
+--- @param len int
 --- @return void
-function UIDebugConsole:addOutput(arg0, arg1, arg2) end
+function UIDebugConsole:addOutput(b, false, len) end
 
 --- @public
---- @param arg0 CharSequence
---- @param arg1 CharSequence
+--- @param lhs CharSequence
+--- @param rhs CharSequence
 --- @return int
-function UIDebugConsole:levenshteinDistance(arg0, arg1) end
+function UIDebugConsole:levenshteinDistance(lhs, rhs) end
 
 --- @public
---- @param arg0 int
+--- @param key int
 --- @return void
-function UIDebugConsole:onOtherKey(arg0) end
+function UIDebugConsole:onOtherKey(key) end
 
 --- @public
 --- @return void
@@ -44,7 +44,7 @@ function UIDebugConsole:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return UIDebugConsole
-function UIDebugConsole.new(arg0, arg1) end
+function UIDebugConsole.new(x, y) end

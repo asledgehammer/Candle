@@ -10,20 +10,20 @@ Item = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function Item:DoParam(arg0) end
+function Item:DoParam(str) end
 
 --- @public
---- @param arg0 String
+--- @param param String
 --- @return InventoryItem
-function Item:InstanceItem(arg0) end
+function Item:InstanceItem(param) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String[]
+--- @param name String
+--- @param strArray String[]
 --- @return void
-function Item:Load(arg0, arg1) end
+function Item:Load(name, strArray) end
 
 --- @public
 --- @return String
@@ -378,9 +378,9 @@ function Item:getReplaceOnDeplete() end
 function Item:getReplaceOnUse() end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return String
-function Item:getReplaceType(arg0) end
+function Item:getReplaceType(key) end
 
 --- @public
 --- @return String
@@ -403,14 +403,14 @@ function Item:getShellFallSound() end
 function Item:getSkillTrained() end
 
 --- @public
---- @param arg0 String
+--- @param ID String
 --- @return String
-function Item:getSoundByID(arg0) end
+function Item:getSoundByID(ID) end
 
 --- @public
---- @param arg0 String
+--- @param parameterName String
 --- @return String
-function Item:getSoundParameter(arg0) end
+function Item:getSoundParameter(parameterName) end
 
 --- @public
 --- @return int
@@ -521,9 +521,9 @@ function Item:getWeightWet() end
 function Item:getWindresist() end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return boolean
-function Item:hasReplaceType(arg0) end
+function Item:hasReplaceType(key) end
 
 --- @public
 --- @return boolean
@@ -646,369 +646,369 @@ function Item:resolveItemTypes() end
 function Item:resolveModelScripts() end
 
 --- @public
---- @param arg0 float
+--- @param ActualWeight float
 --- @return void
-function Item:setActualWeight(arg0) end
+function Item:setActualWeight(ActualWeight) end
 
 --- @public
---- @param arg0 boolean
+--- @param Alcoholic boolean
 --- @return void
-function Item:setAlcoholic(arg0) end
+function Item:setAlcoholic(Alcoholic) end
 
 --- @public
---- @param arg0 boolean
+--- @param AlwaysKnockdown boolean
 --- @return void
-function Item:setAlwaysKnockdown(arg0) end
+function Item:setAlwaysKnockdown(AlwaysKnockdown) end
 
 --- @public
---- @param arg0 boolean
+--- @param AlwaysWelcomeGift boolean
 --- @return void
-function Item:setAlwaysWelcomeGift(arg0) end
+function Item:setAlwaysWelcomeGift(AlwaysWelcomeGift) end
 
 --- @public
---- @param arg0 String
+--- @param AmmoType String
 --- @return void
-function Item:setAmmoType(arg0) end
+function Item:setAmmoType(AmmoType) end
 
 --- @public
---- @param arg0 boolean
+--- @param AngleFalloff boolean
 --- @return void
-function Item:setAngleFalloff(arg0) end
+function Item:setAngleFalloff(AngleFalloff) end
 
 --- @public
---- @param arg0 String
+--- @param bodyLocation String
 --- @return void
-function Item:setBodyLocation(arg0) end
+function Item:setBodyLocation(bodyLocation) end
 
 --- @public
---- @param arg0 float
+--- @param BoredomChange float
 --- @return void
-function Item:setBoredomChange(arg0) end
+function Item:setBoredomChange(BoredomChange) end
 
 --- @public
---- @param arg0 boolean
+--- @param CanBandage boolean
 --- @return void
-function Item:setCanBandage(arg0) end
+function Item:setCanBandage(CanBandage) end
 
 --- @public
---- @param arg0 boolean
+--- @param CanBarricade boolean
 --- @return void
-function Item:setCanBarricade(arg0) end
+function Item:setCanBarricade(CanBarricade) end
 
 --- @public
---- @param arg0 boolean
+--- @param CantAttackWithLowestEndurance boolean
 --- @return void
-function Item:setCantAttackWithLowestEndurance(arg0) end
+function Item:setCantAttackWithLowestEndurance(CantAttackWithLowestEndurance) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param Categories ArrayList
 --- @return void
-function Item:setCategories(arg0) end
+function Item:setCategories(Categories) end
 
 --- @public
---- @param arg0 ClothingItem
+--- @param asset ClothingItem
 --- @return void
-function Item:setClothingItemAsset(arg0) end
+function Item:setClothingItemAsset(asset) end
 
 --- @public
---- @param arg0 int
+--- @param ConditionLowerChance int
 --- @return void
-function Item:setConditionLowerChance(arg0) end
+function Item:setConditionLowerChance(ConditionLowerChance) end
 
 --- @public
---- @param arg0 int
+--- @param ConditionMax int
 --- @return void
-function Item:setConditionMax(arg0) end
+function Item:setConditionMax(ConditionMax) end
 
 --- @public
---- @param arg0 int
+--- @param Count int
 --- @return void
-function Item:setCount(arg0) end
+function Item:setCount(Count) end
 
 --- @public
---- @param arg0 boolean
+--- @param DangerousUncooked boolean
 --- @return void
-function Item:setDangerousUncooked(arg0) end
+function Item:setDangerousUncooked(DangerousUncooked) end
 
 --- @public
---- @param arg0 int
+--- @param DaysFresh int
 --- @return void
-function Item:setDaysFresh(arg0) end
+function Item:setDaysFresh(DaysFresh) end
 
 --- @public
---- @param arg0 int
+--- @param DaysTotallyRotten int
 --- @return void
-function Item:setDaysTotallyRotten(arg0) end
+function Item:setDaysTotallyRotten(DaysTotallyRotten) end
 
 --- @public
---- @param arg0 boolean
+--- @param DisappearOnUse boolean
 --- @return void
-function Item:setDisappearOnUse(arg0) end
+function Item:setDisappearOnUse(DisappearOnUse) end
 
 --- @public
---- @param arg0 String
+--- @param DisplayName String
 --- @return void
-function Item:setDisplayName(arg0) end
+function Item:setDisplayName(DisplayName) end
 
 --- @public
---- @param arg0 int
+--- @param DoorDamage int
 --- @return void
-function Item:setDoorDamage(arg0) end
+function Item:setDoorDamage(DoorDamage) end
 
 --- @public
---- @param arg0 String
+--- @param DoorHitSound String
 --- @return void
-function Item:setDoorHitSound(arg0) end
+function Item:setDoorHitSound(DoorHitSound) end
 
 --- @public
---- @param arg0 float
+--- @param EnduranceChange float
 --- @return void
-function Item:setEnduranceChange(arg0) end
+function Item:setEnduranceChange(EnduranceChange) end
 
 --- @public
---- @param arg0 float
+--- @param EnduranceMod float
 --- @return void
-function Item:setEnduranceMod(arg0) end
+function Item:setEnduranceMod(EnduranceMod) end
 
 --- @public
---- @param arg0 float
+--- @param HungerChange float
 --- @return void
-function Item:setHungerChange(arg0) end
+function Item:setHungerChange(HungerChange) end
 
 --- @public
---- @param arg0 String
+--- @param Icon String
 --- @return void
-function Item:setIcon(arg0) end
+function Item:setIcon(Icon) end
 
 --- @public
---- @param arg0 String
+--- @param ImpactSound String
 --- @return void
-function Item:setImpactSound(arg0) end
+function Item:setImpactSound(ImpactSound) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function Item:setInsulation(arg0) end
+function Item:setInsulation(f) end
 
 --- @public
---- @param arg0 boolean
+--- @param IsCookable boolean
 --- @return void
-function Item:setIsCookable(arg0) end
+function Item:setIsCookable(IsCookable) end
 
 --- @public
---- @param arg0 boolean
+--- @param KnockBackOnNoDeath boolean
 --- @return void
-function Item:setKnockBackOnNoDeath(arg0) end
+function Item:setKnockBackOnNoDeath(KnockBackOnNoDeath) end
 
 --- @public
---- @param arg0 float
+--- @param KnockdownMod float
 --- @return void
-function Item:setKnockdownMod(arg0) end
+function Item:setKnockdownMod(KnockdownMod) end
 
 --- @public
---- @param arg0 String
+--- @param functionName String
 --- @return void
-function Item:setLuaCreate(arg0) end
+function Item:setLuaCreate(functionName) end
 
 --- @public
---- @param arg0 float
+--- @param MaxDamage float
 --- @return void
-function Item:setMaxDamage(arg0) end
+function Item:setMaxDamage(MaxDamage) end
 
 --- @public
---- @param arg0 int
+--- @param MaxHitCount int
 --- @return void
-function Item:setMaxHitCount(arg0) end
+function Item:setMaxHitCount(MaxHitCount) end
 
 --- @public
---- @param arg0 float
+--- @param MaxRange float
 --- @return void
-function Item:setMaxRange(arg0) end
+function Item:setMaxRange(MaxRange) end
 
 --- @public
---- @param arg0 float
+--- @param MinAngle float
 --- @return void
-function Item:setMinAngle(arg0) end
+function Item:setMinAngle(MinAngle) end
 
 --- @public
---- @param arg0 float
+--- @param MinDamage float
 --- @return void
-function Item:setMinDamage(arg0) end
+function Item:setMinDamage(MinDamage) end
 
 --- @public
---- @param arg0 float
+--- @param MinimumSwingTime float
 --- @return void
-function Item:setMinimumSwingTime(arg0) end
+function Item:setMinimumSwingTime(MinimumSwingTime) end
 
 --- @public
---- @param arg0 int
+--- @param MinutesToBurn int
 --- @return void
-function Item:setMinutesToBurn(arg0) end
+function Item:setMinutesToBurn(MinutesToBurn) end
 
 --- @public
---- @param arg0 int
+--- @param MinutesToCook int
 --- @return void
-function Item:setMinutesToCook(arg0) end
+function Item:setMinutesToCook(MinutesToCook) end
 
 --- @public
---- @param arg0 String
+--- @param modid String
 --- @return void
-function Item:setModID(arg0) end
+function Item:setModID(modid) end
 
 --- @public
---- @param arg0 boolean
+--- @param MultipleHitConditionAffected boolean
 --- @return void
-function Item:setMultipleHitConditionAffected(arg0) end
+function Item:setMultipleHitConditionAffected(MultipleHitConditionAffected) end
 
 --- @public
---- @param arg0 float
+--- @param NPCSoundBoost float
 --- @return void
-function Item:setNPCSoundBoost(arg0) end
+function Item:setNPCSoundBoost(NPCSoundBoost) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Item:setName(arg0) end
+function Item:setName(name) end
 
 --- @public
---- @param arg0 float
+--- @param OtherCharacterVolumeBoost float
 --- @return void
-function Item:setOtherCharacterVolumeBoost(arg0) end
+function Item:setOtherCharacterVolumeBoost(OtherCharacterVolumeBoost) end
 
 --- @public
---- @param arg0 String
+--- @param OtherHandRequire String
 --- @return void
-function Item:setOtherHandRequire(arg0) end
+function Item:setOtherHandRequire(OtherHandRequire) end
 
 --- @public
---- @param arg0 boolean
+--- @param OtherHandUse boolean
 --- @return void
-function Item:setOtherHandUse(arg0) end
+function Item:setOtherHandUse(OtherHandUse) end
 
 --- @public
---- @param arg0 Stack
+--- @param PaletteChoices Stack
 --- @return void
-function Item:setPaletteChoices(arg0) end
+function Item:setPaletteChoices(PaletteChoices) end
 
 --- @public
---- @param arg0 String
+--- @param PalettesStart String
 --- @return void
-function Item:setPalettesStart(arg0) end
+function Item:setPalettesStart(PalettesStart) end
 
 --- @public
---- @param arg0 String
+--- @param PhysicsObject String
 --- @return void
-function Item:setPhysicsObject(arg0) end
+function Item:setPhysicsObject(PhysicsObject) end
 
 --- @public
---- @param arg0 float
+--- @param PushBackMod float
 --- @return void
-function Item:setPushBackMod(arg0) end
+function Item:setPushBackMod(PushBackMod) end
 
 --- @public
---- @param arg0 boolean
+--- @param RangeFalloff boolean
 --- @return void
-function Item:setRangeFalloff(arg0) end
+function Item:setRangeFalloff(RangeFalloff) end
 
 --- @public
---- @param arg0 boolean
+--- @param Ranged boolean
 --- @return void
-function Item:setRanged(arg0) end
+function Item:setRanged(Ranged) end
 
 --- @public
---- @param arg0 short
+--- @param id short
 --- @return void
-function Item:setRegistry_id(arg0) end
+function Item:setRegistry_id(id) end
 
 --- @public
---- @param arg0 String
+--- @param ReplaceOnDeplete String
 --- @return void
-function Item:setReplaceOnDeplete(arg0) end
+function Item:setReplaceOnDeplete(ReplaceOnDeplete) end
 
 --- @public
---- @param arg0 String
+--- @param ReplaceOnUse String
 --- @return void
-function Item:setReplaceOnUse(arg0) end
+function Item:setReplaceOnUse(ReplaceOnUse) end
 
 --- @public
---- @param arg0 boolean
+--- @param ShareDamage boolean
 --- @return void
-function Item:setShareDamage(arg0) end
+function Item:setShareDamage(ShareDamage) end
 
 --- @public
---- @param arg0 boolean
+--- @param ShareEndurance boolean
 --- @return void
-function Item:setShareEndurance(arg0) end
+function Item:setShareEndurance(ShareEndurance) end
 
 --- @public
---- @param arg0 int
+--- @param SoundRadius int
 --- @return void
-function Item:setSoundRadius(arg0) end
+function Item:setSoundRadius(SoundRadius) end
 
 --- @public
---- @param arg0 int
+--- @param SoundVolume int
 --- @return void
-function Item:setSoundVolume(arg0) end
+function Item:setSoundVolume(SoundVolume) end
 
 --- @public
---- @param arg0 boolean
+--- @param SplatBloodOnNoDeath boolean
 --- @return void
-function Item:setSplatBloodOnNoDeath(arg0) end
+function Item:setSplatBloodOnNoDeath(SplatBloodOnNoDeath) end
 
 --- @public
---- @param arg0 int
+--- @param SplatNumber int
 --- @return void
-function Item:setSplatNumber(arg0) end
+function Item:setSplatNumber(SplatNumber) end
 
 --- @public
---- @param arg0 String
+--- @param SpriteName String
 --- @return void
-function Item:setSpriteName(arg0) end
+function Item:setSpriteName(SpriteName) end
 
 --- @public
---- @param arg0 float
+--- @param StressChange float
 --- @return void
-function Item:setStressChange(arg0) end
+function Item:setStressChange(StressChange) end
 
 --- @public
---- @param arg0 float
+--- @param SwingAmountBeforeImpact float
 --- @return void
-function Item:setSwingAmountBeforeImpact(arg0) end
+function Item:setSwingAmountBeforeImpact(SwingAmountBeforeImpact) end
 
 --- @public
---- @param arg0 String
+--- @param SwingAnim String
 --- @return void
-function Item:setSwingAnim(arg0) end
+function Item:setSwingAnim(SwingAnim) end
 
 --- @public
---- @param arg0 String
+--- @param SwingSound String
 --- @return void
-function Item:setSwingSound(arg0) end
+function Item:setSwingSound(SwingSound) end
 
 --- @public
---- @param arg0 float
+--- @param SwingTime float
 --- @return void
-function Item:setSwingTime(arg0) end
+function Item:setSwingTime(SwingTime) end
 
 --- @public
---- @param arg0 float
+--- @param temperature float
 --- @return void
-function Item:setTemperature(arg0) end
+function Item:setTemperature(temperature) end
 
 --- @public
---- @param arg0 float
+--- @param ThirstChange float
 --- @return void
-function Item:setThirstChange(arg0) end
+function Item:setThirstChange(ThirstChange) end
 
 --- @public
---- @param arg0 int
+--- @param TicksPerEquipUse int
 --- @return void
-function Item:setTicksPerEquipUse(arg0) end
+function Item:setTicksPerEquipUse(TicksPerEquipUse) end
 
 --- @public
---- @param arg0 float
+--- @param ToHitModifier float
 --- @return void
-function Item:setToHitModifier(arg0) end
+function Item:setToHitModifier(ToHitModifier) end
 
 --- @public
 --- @param arg0 Type
@@ -1016,64 +1016,64 @@ function Item:setToHitModifier(arg0) end
 function Item:setType(arg0) end
 
 --- @public
---- @param arg0 float
+--- @param UnhappyChange float
 --- @return void
-function Item:setUnhappyChange(arg0) end
+function Item:setUnhappyChange(UnhappyChange) end
 
 --- @public
---- @param arg0 float
+--- @param UseDelta float
 --- @return void
-function Item:setUseDelta(arg0) end
+function Item:setUseDelta(UseDelta) end
 
 --- @public
---- @param arg0 boolean
+--- @param UseEndurance boolean
 --- @return void
-function Item:setUseEndurance(arg0) end
+function Item:setUseEndurance(UseEndurance) end
 
 --- @public
---- @param arg0 boolean
+--- @param UseSelf boolean
 --- @return void
-function Item:setUseSelf(arg0) end
+function Item:setUseSelf(UseSelf) end
 
 --- @public
---- @param arg0 boolean
+--- @param UseWhileEquipped boolean
 --- @return void
-function Item:setUseWhileEquipped(arg0) end
+function Item:setUseWhileEquipped(UseWhileEquipped) end
 
 --- @public
---- @param arg0 boolean
+--- @param UseWhileUnequipped boolean
 --- @return void
-function Item:setUseWhileUnequipped(arg0) end
+function Item:setUseWhileUnequipped(UseWhileUnequipped) end
 
 --- @public
---- @param arg0 float
+--- @param w float
 --- @return void
-function Item:setWaterresist(arg0) end
+function Item:setWaterresist(w) end
 
 --- @public
---- @param arg0 String
+--- @param WeaponSprite String
 --- @return void
-function Item:setWeaponSprite(arg0) end
+function Item:setWeaponSprite(WeaponSprite) end
 
 --- @public
---- @param arg0 float
+--- @param WeaponWeight float
 --- @return void
-function Item:setWeaponWeight(arg0) end
+function Item:setWeaponWeight(WeaponWeight) end
 
 --- @public
---- @param arg0 float
+--- @param weight float
 --- @return void
-function Item:setWeightEmpty(arg0) end
+function Item:setWeightEmpty(weight) end
 
 --- @public
---- @param arg0 float
+--- @param weight float
 --- @return void
-function Item:setWeightWet(arg0) end
+function Item:setWeightWet(weight) end
 
 --- @public
---- @param arg0 float
+--- @param w float
 --- @return void
-function Item:setWindresist(arg0) end
+function Item:setWindresist(w) end
 
 --- @public
 --- @return String

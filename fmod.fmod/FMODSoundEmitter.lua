@@ -40,7 +40,7 @@ function FMODSoundEmitter:hasSustainPoints(arg0) end
 function FMODSoundEmitter:isEmpty() end
 
 --- @public
---- @param arg0 long
+--- @param arg0 String
 --- @return boolean
 function FMODSoundEmitter:isPlaying(arg0) end
 
@@ -69,7 +69,7 @@ function FMODSoundEmitter:playSound(arg0) end
 
 --- @public
 --- @param arg0 String
---- @param arg1 IsoGridSquare
+--- @param arg1 IsoObject
 --- @return long
 --- @overload fun(arg0: String, arg1: boolean, arg2: IsoObject)
 function FMODSoundEmitter:playSoundImpl(arg0, arg1) end

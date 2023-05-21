@@ -27,81 +27,81 @@ BodyPartType = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return BodyPartType
-function BodyPartType.FromIndex(arg0) end
+function BodyPartType.FromIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return BodyPartType
-function BodyPartType.FromString(arg0) end
+function BodyPartType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return float
-function BodyPartType.GetDistToCore(arg0) end
+function BodyPartType.GetDistToCore(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return float
-function BodyPartType.GetMaxActionPenalty(arg0) end
+function BodyPartType.GetMaxActionPenalty(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return float
-function BodyPartType.GetMaxMovementPenalty(arg0) end
+function BodyPartType.GetMaxMovementPenalty(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return float
-function BodyPartType.GetSkinSurface(arg0) end
+function BodyPartType.GetSkinSurface(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param bodyPartType BodyPartType
 --- @return float
-function BodyPartType.GetUmbrellaMod(arg0) end
+function BodyPartType.GetUmbrellaMod(bodyPartType) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param BPT BodyPartType
 --- @return int
-function BodyPartType.ToIndex(arg0) end
+function BodyPartType.ToIndex(BPT) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param BPT BodyPartType
 --- @return String
-function BodyPartType.ToString(arg0) end
+function BodyPartType.ToString(BPT) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return float
-function BodyPartType.getBleedingTimeModifyer(arg0) end
+function BodyPartType.getBleedingTimeModifyer(index) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return float
-function BodyPartType.getDamageModifyer(arg0) end
+function BodyPartType.getDamageModifyer(index) end
 
 --- @public
 --- @static
---- @param arg0 BodyPartType
+--- @param BPT BodyPartType
 --- @return String
-function BodyPartType.getDisplayName(arg0) end
+function BodyPartType.getDisplayName(BPT) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return float
-function BodyPartType.getPainModifyer(arg0) end
+function BodyPartType.getPainModifyer(index) end
 
 --- @public
 --- @static
@@ -129,19 +129,19 @@ function BodyPartType.values() end
 function BodyPartType:getBandageModel() end
 
 --- @public
---- @param arg0 boolean
+--- @param female boolean
 --- @return String
-function BodyPartType:getBiteWoundModel(arg0) end
+function BodyPartType:getBiteWoundModel(female) end
 
 --- @public
---- @param arg0 boolean
+--- @param female boolean
 --- @return String
-function BodyPartType:getCutWoundModel(arg0) end
+function BodyPartType:getCutWoundModel(female) end
 
 --- @public
---- @param arg0 boolean
+--- @param female boolean
 --- @return String
-function BodyPartType:getScratchWoundModel(arg0) end
+function BodyPartType:getScratchWoundModel(female) end
 
 --- @public
 --- @return int

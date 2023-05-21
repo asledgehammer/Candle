@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Translator: Object
+--- @class Translator
 --- @field public debug boolean
 --- @field public language Language
 Translator = {};
@@ -11,10 +11,10 @@ Translator = {};
 
 --- @public
 --- @static
---- @param arg0 Language
---- @param arg1 ArrayList
+--- @param language Language
+--- @param languages ArrayList
 --- @return void
-function Translator.addLanguageToList(arg0, arg1) end
+function Translator.addLanguageToList(language, languages) end
 
 --- @public
 --- @static
@@ -58,21 +58,21 @@ function Translator.getDefaultLanguage() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param trim String
 --- @return String
-function Translator.getDisplayItemName(arg0) end
+function Translator.getDisplayItemName(trim) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param fullType String
 --- @return String
-function Translator.getItemEvolvedRecipeName(arg0) end
+function Translator.getItemEvolvedRecipeName(fullType) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param fullType String
 --- @return String
-function Translator.getItemNameFromFullType(arg0) end
+function Translator.getItemNameFromFullType(fullType) end
 
 --- @public
 --- @static
@@ -81,21 +81,21 @@ function Translator.getLanguage() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return String
-function Translator.getMoveableDisplayName(arg0) end
+function Translator.getMoveableDisplayName(name) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return String
-function Translator.getMoveableDisplayNameOrNull(arg0) end
+function Translator.getMoveableDisplayNameOrNull(name) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return String
-function Translator.getMultiStageBuild(arg0) end
+function Translator.getMultiStageBuild(name) end
 
 --- @public
 --- @static
@@ -104,41 +104,41 @@ function Translator.getNewsVersions() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param s String
 --- @return String
-function Translator.getRadioText(arg0) end
+function Translator.getRadioText(s) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return String
-function Translator.getRecipeName(arg0) end
+function Translator.getRecipeName(name) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param desc String
 --- @return String
---- @overload fun(arg0: String, arg1: Object)
---- @overload fun(arg0: String, arg1: Object, arg2: Object)
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
-function Translator.getText(arg0) end
+--- @overload fun(desc: String, arg1: Object)
+--- @overload fun(desc: String, arg1: Object, arg2: Object)
+--- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object)
+--- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
+function Translator.getText(desc) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param desc String
 --- @return String
-function Translator.getTextMediaEN(arg0) end
+function Translator.getTextMediaEN(desc) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param desc String
 --- @return String
---- @overload fun(arg0: String, arg1: Object)
---- @overload fun(arg0: String, arg1: Object, arg2: Object)
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(arg0: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
-function Translator.getTextOrNull(arg0) end
+--- @overload fun(desc: String, arg1: Object)
+--- @overload fun(desc: String, arg1: Object, arg2: Object)
+--- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object)
+--- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
+function Translator.getTextOrNull(desc) end
 
 --- @public
 --- @static
@@ -147,16 +147,16 @@ function Translator.loadFiles() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param fullType String
+--- @param english String
 --- @return void
-function Translator.setDefaultItemEvolvedRecipeName(arg0, arg1) end
+function Translator.setDefaultItemEvolvedRecipeName(fullType, english) end
 
 --- @public
 --- @static
---- @param arg0 Language
+--- @param newlanguage Language
 --- @return void
-function Translator.setLanguage(arg0) end
+function Translator.setLanguage(newlanguage) end
 
 
 ------------------------------------

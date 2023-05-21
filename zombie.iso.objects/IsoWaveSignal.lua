@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWaveSignal: IsoObject
+--- Turbo
 --- @implement WaveSignalDevice
 --- @implement ChatElementOwner
 --- @implement Talker
@@ -21,16 +22,16 @@ function IsoWaveSignal.Reset() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 String
---- @param arg5 String
---- @param arg6 int
+--- @param line String
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param guid String
+--- @param codes String
+--- @param distance int
 --- @return void
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: String, arg5: String, arg6: int, arg7: boolean)
-function IsoWaveSignal:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int, attractZombies: boolean)
+function IsoWaveSignal:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
@@ -41,18 +42,18 @@ function IsoWaveSignal:HasPlayerInRange() end
 function IsoWaveSignal:IsSpeaking() end
 
 --- @public
---- @param arg0 String
+--- @param line String
 --- @return void
-function IsoWaveSignal:Say(arg0) end
+function IsoWaveSignal:Say(line) end
 
 --- @public
 --- @return void
 function IsoWaveSignal:addToWorld() end
 
 --- @public
---- @param arg0 String
+--- @param itemfull String
 --- @return DeviceData
-function IsoWaveSignal:cloneDeviceDataFromItem(arg0) end
+function IsoWaveSignal:cloneDeviceDataFromItem(itemfull) end
 
 --- @public
 --- @return ChatElement
@@ -95,16 +96,16 @@ function IsoWaveSignal:getZ() end
 function IsoWaveSignal:hasChatToDisplay() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoWaveSignal:load(arg0, arg1, arg2) end
+function IsoWaveSignal:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function IsoWaveSignal:loadState(arg0) end
+function IsoWaveSignal:loadState(bb) end
 
 --- @public
 --- @return void
@@ -123,30 +124,30 @@ function IsoWaveSignal:renderlast() end
 function IsoWaveSignal:renderlastold2() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoWaveSignal:save(arg0, arg1) end
+function IsoWaveSignal:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function IsoWaveSignal:saveState(arg0) end
+function IsoWaveSignal:saveState(bb) end
 
 --- @public
---- @param arg0 float
+--- @param delta float
 --- @return void
-function IsoWaveSignal:setDelta(arg0) end
+function IsoWaveSignal:setDelta(delta) end
 
 --- @public
---- @param arg0 DeviceData
+--- @param data DeviceData
 --- @return void
-function IsoWaveSignal:setDeviceData(arg0) end
+function IsoWaveSignal:setDeviceData(data) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function IsoWaveSignal:setTalkerType(arg0) end
+function IsoWaveSignal:setTalkerType(type) end
 
 --- @public
 --- @return void
@@ -158,7 +159,7 @@ function IsoWaveSignal:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoWaveSignal
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
-function IsoWaveSignal.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite)
+function IsoWaveSignal.new(cell) end

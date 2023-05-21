@@ -1,6 +1,7 @@
 --- @meta
 
---- @class MediaData: Object
+--- @class MediaData
+--- TurboTuTone.
 MediaData = {};
 
 ------------------------------------
@@ -8,13 +9,13 @@ MediaData = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 String
+--- @param text String
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param codes String
 --- @return void
-function MediaData:addLine(arg0, arg1, arg2, arg3, arg4) end
+function MediaData:addLine(text, r, g, b, codes) end
 
 --- @public
 --- @return String
@@ -37,9 +38,9 @@ function MediaData:getId() end
 function MediaData:getIndex() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return MediaLineData
-function MediaData:getLine(arg0) end
+function MediaData:getLine(index) end
 
 --- @public
 --- @return int
@@ -98,24 +99,24 @@ function MediaData:hasSubTitle() end
 function MediaData:hasTitle() end
 
 --- @public
---- @param arg0 String
+--- @param author String
 --- @return void
-function MediaData:setAuthor(arg0) end
+function MediaData:setAuthor(author) end
 
 --- @public
---- @param arg0 String
+--- @param extra String
 --- @return void
-function MediaData:setExtra(arg0) end
+function MediaData:setExtra(extra) end
 
 --- @public
---- @param arg0 String
+--- @param subtitle String
 --- @return void
-function MediaData:setSubtitle(arg0) end
+function MediaData:setSubtitle(subtitle) end
 
 --- @public
---- @param arg0 String
+--- @param title String
 --- @return void
-function MediaData:setTitle(arg0) end
+function MediaData:setTitle(title) end
 
 
 ------------------------------------
@@ -123,8 +124,8 @@ function MediaData:setTitle(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param id String
+--- @param itemDisplayName String
+--- @param spawning int
 --- @return MediaData
-function MediaData.new(arg0, arg1, arg2) end
+function MediaData.new(id, itemDisplayName, spawning) end

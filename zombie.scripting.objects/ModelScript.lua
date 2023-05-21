@@ -19,31 +19,31 @@ function ModelScript.ScriptsLoaded() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param name String
+--- @param totalFile String
 --- @return void
-function ModelScript:Load(arg0, arg1) end
+function ModelScript:Load(name, totalFile) end
 
 --- @public
---- @param arg0 ModelAttachment
+--- @param attach ModelAttachment
 --- @return ModelAttachment
-function ModelScript:addAttachment(arg0) end
+function ModelScript:addAttachment(attach) end
 
 --- @public
---- @param arg0 int
---- @param arg1 ModelAttachment
+--- @param index int
+--- @param attach ModelAttachment
 --- @return ModelAttachment
-function ModelScript:addAttachmentAt(arg0, arg1) end
+function ModelScript:addAttachmentAt(index, attach) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return ModelAttachment
-function ModelScript:getAttachment(arg0) end
+function ModelScript:getAttachment(index) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return ModelAttachment
-function ModelScript:getAttachmentById(arg0) end
+function ModelScript:getAttachmentById(id) end
 
 --- @public
 --- @return int
@@ -71,13 +71,13 @@ function ModelScript:getShaderName() end
 
 --- @public
 --- @return String
---- @overload fun(arg0: boolean)
+--- @overload fun(allowNull: boolean)
 function ModelScript:getTextureName() end
 
 --- @public
---- @param arg0 int
+--- @param attach ModelAttachment
 --- @return ModelAttachment
-function ModelScript:removeAttachment(arg0) end
+function ModelScript:removeAttachment(attach) end
 
 --- @public
 --- @return void

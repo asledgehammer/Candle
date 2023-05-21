@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Writer: Object
+--- @class Writer
 --- @implement Appendable
 --- @implement Closeable
 --- @implement Flushable

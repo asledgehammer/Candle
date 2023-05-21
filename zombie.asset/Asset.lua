@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Asset: Object
+--- @class Asset
 Asset = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ Asset = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Asset
+--- @param dependent_asset Asset
 --- @return void
-function Asset:addDependency(arg0) end
+function Asset:addDependency(dependent_asset) end
 
 --- @public
 --- @return AssetManager
@@ -54,9 +54,9 @@ function Asset:isReady() end
 function Asset:onCreated(arg0) end
 
 --- @public
---- @param arg0 Asset
+--- @param dependent_asset Asset
 --- @return void
-function Asset:removeDependency(arg0) end
+function Asset:removeDependency(dependent_asset) end
 
 --- @public
 --- @param arg0 AssetParams

@@ -1,6 +1,7 @@
 --- @meta
 
---- @class DebugLog: Object
+--- @class DebugLog
+--- Created by LEMMYPC on 31/12/13.
 --- @field public ActionSystem DebugLogStream
 --- @field public Animation DebugLogStream
 --- @field public Asset DebugLogStream
@@ -41,29 +42,29 @@ DebugLog = {};
 
 --- @public
 --- @static
---- @param arg0 DebugType
---- @param arg1 LogSeverity
+--- @param type DebugType
+--- @param severity LogSeverity
 --- @return void
-function DebugLog.enableLog(arg0, arg1) end
+function DebugLog.enableLog(type, severity) end
 
 --- @public
 --- @static
---- @param arg0 DebugType
---- @param arg1 LogSeverity
---- @param arg2 String
---- @param arg3 Object
---- @param arg4 String
+--- @param type DebugType
+--- @param logSeverity LogSeverity
+--- @param prefix String
+--- @param affix Object
+--- @param formatNoParams String
 --- @return String
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object)
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object)
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object)
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object)
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object)
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object)
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object)
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object)
---- @overload fun(arg0: DebugType, arg1: LogSeverity, arg2: String, arg3: Object, arg4: String, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object)
-function DebugLog.formatString(arg0, arg1, arg2, arg3, arg4) end
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object, param8: Object)
+function DebugLog.formatString(type, logSeverity, prefix, affix, formatNoParams) end
 
 --- @public
 --- @static
@@ -83,9 +84,9 @@ function DebugLog.getDebugTypes() end
 
 --- @public
 --- @static
---- @param arg0 DebugType
+--- @param type DebugType
 --- @return LogSeverity
-function DebugLog.getLogLevel(arg0) end
+function DebugLog.getLogLevel(type) end
 
 --- @public
 --- @static
@@ -94,16 +95,16 @@ function DebugLog.init() end
 
 --- @public
 --- @static
---- @param arg0 DebugType
+--- @param type DebugType
 --- @return boolean
-function DebugLog.isEnabled(arg0) end
+function DebugLog.isEnabled(type) end
 
 --- @public
 --- @static
---- @param arg0 LogSeverity
---- @param arg1 DebugType
+--- @param logSeverity LogSeverity
+--- @param type DebugType
 --- @return boolean
-function DebugLog.isLogEnabled(arg0, arg1) end
+function DebugLog.isLogEnabled(logSeverity, type) end
 
 --- @public
 --- @static
@@ -112,10 +113,10 @@ function DebugLog.load() end
 
 --- @public
 --- @static
---- @param arg0 Object
+--- @param str String
 --- @return void
---- @overload fun(arg0: DebugType, arg1: String)
-function DebugLog.log(arg0) end
+--- @overload fun(type: DebugType, str: String)
+function DebugLog.log(str) end
 
 --- @public
 --- @static
@@ -124,22 +125,22 @@ function DebugLog.save() end
 
 --- @public
 --- @static
---- @param arg0 DebugType
---- @param arg1 boolean
+--- @param type DebugType
+--- @param bEnabled boolean
 --- @return void
-function DebugLog.setLogEnabled(arg0, arg1) end
+function DebugLog.setLogEnabled(type, bEnabled) end
 
 --- @public
 --- @static
---- @param arg0 OutputStream
+--- @param out OutputStream
 --- @return void
-function DebugLog.setStdErr(arg0) end
+function DebugLog.setStdErr(out) end
 
 --- @public
 --- @static
---- @param arg0 OutputStream
+--- @param out OutputStream
 --- @return void
-function DebugLog.setStdOut(arg0) end
+function DebugLog.setStdOut(out) end
 
 
 ------------------------------------

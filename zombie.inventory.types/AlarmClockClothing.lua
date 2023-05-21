@@ -60,41 +60,41 @@ function AlarmClockClothing:isDigital() end
 function AlarmClockClothing:isRinging() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function AlarmClockClothing:load(arg0, arg1) end
+function AlarmClockClothing:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function AlarmClockClothing:save(arg0, arg1) end
+function AlarmClockClothing:save(output, net) end
 
 --- @public
---- @param arg0 boolean
+--- @param alarmSet boolean
 --- @return void
-function AlarmClockClothing:setAlarmSet(arg0) end
+function AlarmClockClothing:setAlarmSet(alarmSet) end
 
 --- @public
---- @param arg0 String
+--- @param alarmSound String
 --- @return void
-function AlarmClockClothing:setAlarmSound(arg0) end
+function AlarmClockClothing:setAlarmSound(alarmSound) end
 
 --- @public
---- @param arg0 int
+--- @param hour int
 --- @return void
-function AlarmClockClothing:setHour(arg0) end
+function AlarmClockClothing:setHour(hour) end
 
 --- @public
---- @param arg0 int
+--- @param min int
 --- @return void
-function AlarmClockClothing:setMinute(arg0) end
+function AlarmClockClothing:setMinute(min) end
 
 --- @public
---- @param arg0 int
+--- @param soundRadius int
 --- @return void
-function AlarmClockClothing:setSoundRadius(arg0) end
+function AlarmClockClothing:setSoundRadius(soundRadius) end
 
 --- @public
 --- @return boolean
@@ -109,9 +109,9 @@ function AlarmClockClothing:stopRinging() end
 function AlarmClockClothing:syncAlarmClock() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return void
-function AlarmClockClothing:syncAlarmClock_Player(arg0) end
+function AlarmClockClothing:syncAlarmClock_Player(player) end
 
 --- @public
 --- @return void
@@ -126,9 +126,9 @@ function AlarmClockClothing:syncStopRinging() end
 function AlarmClockClothing:update() end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function AlarmClockClothing:updateSound(arg0) end
+function AlarmClockClothing:updateSound(emitter) end
 
 
 ------------------------------------
@@ -136,11 +136,11 @@ function AlarmClockClothing:updateSound(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
---- @param arg5 String
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param texName String
+--- @param palette String
+--- @param SpriteName String
 --- @return AlarmClockClothing
-function AlarmClockClothing.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+function AlarmClockClothing.new(module, name, itemType, texName, palette, SpriteName) end

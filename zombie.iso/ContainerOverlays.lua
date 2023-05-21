@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ContainerOverlays: Object
+--- @class ContainerOverlays
 --- @field public instance ContainerOverlays
 ContainerOverlays = {};
 
@@ -18,14 +18,14 @@ function ContainerOverlays:Reset() end
 function ContainerOverlays:addOverlays(arg0) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function ContainerOverlays:hasOverlays(arg0) end
+function ContainerOverlays:hasOverlays(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return void
-function ContainerOverlays:updateContainerOverlaySprite(arg0) end
+function ContainerOverlays:updateContainerOverlaySprite(obj) end
 
 
 ------------------------------------

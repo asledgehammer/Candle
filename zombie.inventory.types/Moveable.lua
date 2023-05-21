@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Moveable: InventoryItem
+--- Turbo.
 Moveable = {};
 
 ------------------------------------
@@ -12,9 +13,9 @@ Moveable = {};
 function Moveable:CanBeDroppedOnFloor() end
 
 --- @public
---- @param arg0 String
+--- @param sprite String
 --- @return boolean
-function Moveable:ReadFromWorldSprite(arg0) end
+function Moveable:ReadFromWorldSprite(sprite) end
 
 --- @public
 --- @return String
@@ -85,66 +86,66 @@ function Moveable:isLightUseBattery() end
 function Moveable:isMultiGridAnchor() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Moveable:load(arg0, arg1) end
+function Moveable:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function Moveable:save(arg0, arg1) end
+function Moveable:save(output, net) end
 
 --- @public
---- @param arg0 boolean
+--- @param isLight boolean
 --- @return void
-function Moveable:setLight(arg0) end
+function Moveable:setLight(isLight) end
 
 --- @public
---- @param arg0 float
+--- @param lightB float
 --- @return void
-function Moveable:setLightB(arg0) end
+function Moveable:setLightB(lightB) end
 
 --- @public
---- @param arg0 String
+--- @param lightBulbItem String
 --- @return void
-function Moveable:setLightBulbItem(arg0) end
+function Moveable:setLightBulbItem(lightBulbItem) end
 
 --- @public
---- @param arg0 float
+--- @param lightDelta float
 --- @return void
-function Moveable:setLightDelta(arg0) end
+function Moveable:setLightDelta(lightDelta) end
 
 --- @public
---- @param arg0 float
+--- @param lightG float
 --- @return void
-function Moveable:setLightG(arg0) end
+function Moveable:setLightG(lightG) end
 
 --- @public
---- @param arg0 boolean
+--- @param lightHasBattery boolean
 --- @return void
-function Moveable:setLightHasBattery(arg0) end
+function Moveable:setLightHasBattery(lightHasBattery) end
 
 --- @public
---- @param arg0 float
+--- @param lightPower float
 --- @return void
-function Moveable:setLightPower(arg0) end
+function Moveable:setLightPower(lightPower) end
 
 --- @public
---- @param arg0 float
+--- @param lightR float
 --- @return void
-function Moveable:setLightR(arg0) end
+function Moveable:setLightR(lightR) end
 
 --- @public
---- @param arg0 boolean
+--- @param lightUseBattery boolean
 --- @return void
-function Moveable:setLightUseBattery(arg0) end
+function Moveable:setLightUseBattery(lightUseBattery) end
 
 --- @public
---- @param arg0 String
+--- @param WorldSprite String
 --- @return void
-function Moveable:setWorldSprite(arg0) end
+function Moveable:setWorldSprite(WorldSprite) end
 
 
 ------------------------------------
@@ -152,9 +153,9 @@ function Moveable:setWorldSprite(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param type String
+--- @param tex String
 --- @return Moveable
-function Moveable.new(arg0, arg1, arg2, arg3) end
+function Moveable.new(module, name, type, tex) end

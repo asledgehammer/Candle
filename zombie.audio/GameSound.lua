@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GameSound: Object
+--- @class GameSound
 GameSound = {};
 
 ------------------------------------
@@ -32,18 +32,18 @@ function GameSound:getUserVolume() end
 function GameSound:isLooped() end
 
 --- @public
---- @param arg0 String
+--- @param parameterName String
 --- @return int
-function GameSound:numClipsUsingParameter(arg0) end
+function GameSound:numClipsUsingParameter(parameterName) end
 
 --- @public
 --- @return void
 function GameSound:reset() end
 
 --- @public
---- @param arg0 float
+--- @param gain float
 --- @return void
-function GameSound:setUserVolume(arg0) end
+function GameSound:setUserVolume(gain) end
 
 
 ------------------------------------

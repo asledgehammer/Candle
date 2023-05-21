@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Moodle: Object
+--- @class Moodle
 Moodle = {};
 
 ------------------------------------
@@ -8,20 +8,20 @@ Moodle = {};
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param val int
 --- @return void
-function Moodle:SetLevel(arg0) end
+function Moodle:SetLevel(val) end
 
 --- @public
 --- @return boolean
 function Moodle:Update() end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
---- @param arg2 Color
+--- @param count int
+--- @param isup boolean
+--- @param col Color
 --- @return boolean
-function Moodle:chevronDifference(arg0, arg1, arg2) end
+function Moodle:chevronDifference(count, isup, col) end
 
 --- @public
 --- @return Color
@@ -40,11 +40,11 @@ function Moodle:getLevel() end
 function Moodle:isChevronIsUp() end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
---- @param arg2 Color
+--- @param count int
+--- @param isup boolean
+--- @param col Color
 --- @return void
-function Moodle:setChevron(arg0, arg1, arg2) end
+function Moodle:setChevron(count, isup, col) end
 
 
 ------------------------------------
@@ -52,8 +52,8 @@ function Moodle:setChevron(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 MoodleType
---- @param arg1 IsoGameCharacter
+--- @param ChosenType MoodleType
+--- @param parent IsoGameCharacter
 --- @return Moodle
---- @overload fun(arg0: MoodleType, arg1: IsoGameCharacter, arg2: int)
-function Moodle.new(arg0, arg1) end
+--- @overload fun(ChosenType: MoodleType, parent: IsoGameCharacter, maxChevrons: int)
+function Moodle.new(ChosenType, parent) end

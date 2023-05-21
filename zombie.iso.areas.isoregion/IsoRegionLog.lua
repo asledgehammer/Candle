@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoRegionLog: Object
+--- @class IsoRegionLog
 IsoRegionLog = {};
 
 ------------------------------------

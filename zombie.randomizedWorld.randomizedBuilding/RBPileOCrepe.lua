@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBPileOCrepe: RandomizedBuildingBase
+--- Add some food on table
 RBPileOCrepe = {};
 
 ------------------------------------
@@ -8,20 +9,20 @@ RBPileOCrepe = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBPileOCrepe:isValid(arg0, arg1) end
+function RBPileOCrepe:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RBPileOCrepe:randomizeBuilding(arg0) end
+function RBPileOCrepe:randomizeBuilding(def) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return boolean
-function RBPileOCrepe:roomValid(arg0) end
+function RBPileOCrepe:roomValid(sq) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Userlog: Object
+--- @class Userlog
 Userlog = {};
 
 ------------------------------------
@@ -32,9 +32,9 @@ function Userlog:getType() end
 function Userlog:getUsername() end
 
 --- @public
---- @param arg0 int
+--- @param amount int
 --- @return void
-function Userlog:setAmount(arg0) end
+function Userlog:setAmount(amount) end
 
 
 ------------------------------------

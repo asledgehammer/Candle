@@ -1,6 +1,7 @@
 --- @meta
 
---- @class ClimateManager: Object
+--- @class ClimateManager
+--- TurboTuTone.
 --- @field public A_STORM_IS_COMING boolean
 --- @field public AVG_FAV_AIR_TEMPERATURE float
 --- @field public BOOL_IS_SNOW int
@@ -45,37 +46,37 @@ ClimateManager = {};
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function ClimateManager.ToKph(arg0) end
+function ClimateManager.ToKph(val) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function ClimateManager.ToMph(arg0) end
+function ClimateManager.ToMph(val) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param min int
+--- @param max int
+--- @param val int
 --- @return int
-function ClimateManager.clamp(arg0, arg1, arg2) end
+function ClimateManager.clamp(min, max, val) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function ClimateManager.clamp01(arg0) end
+function ClimateManager.clamp01(val) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param t float
+--- @param a float
+--- @param b float
 --- @return float
-function ClimateManager.clerp(arg0, arg1, arg2) end
+function ClimateManager.clerp(t, a, b) end
 
 --- @public
 --- @static
@@ -84,9 +85,9 @@ function ClimateManager.getInstance() end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param angle float
 --- @return String
-function ClimateManager.getWindAngleString(arg0) end
+function ClimateManager.getWindAngleString(angle) end
 
 --- @public
 --- @static
@@ -105,30 +106,30 @@ function ClimateManager.getWindTickFinal() end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param t float
+--- @param a float
+--- @param b float
 --- @return float
-function ClimateManager.lerp(arg0, arg1, arg2) end
+function ClimateManager.lerp(t, a, b) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param v float
+--- @param n float
 --- @return float
-function ClimateManager.normalizeRange(arg0, arg1) end
+function ClimateManager.normalizeRange(v, n) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param v float
 --- @return float
-function ClimateManager.posToPosNegRange(arg0) end
+function ClimateManager.posToPosNegRange(v) end
 
 --- @public
 --- @static
---- @param arg0 ClimateManager
+--- @param inst ClimateManager
 --- @return void
-function ClimateManager.setInstance(arg0) end
+function ClimateManager.setInstance(inst) end
 
 
 ------------------------------------
@@ -144,13 +145,13 @@ function ClimateManager.setInstance(arg0) end
 function ClimateManager:CalculateWeatherFrontStrength(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 ClimateValues
+--- @param copy ClimateValues
 --- @return void
-function ClimateManager:CopyClimateValues(arg0) end
+function ClimateManager:CopyClimateValues(copy) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: int)
+--- @overload fun(RainModOverride: int)
 function ClimateManager:execute_Simulation() end
 
 --- @public
@@ -170,17 +171,17 @@ function ClimateManager:getAirMassDaily() end
 function ClimateManager:getAirMassTemperature() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param plr IsoGameCharacter
 --- @return float
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
-function ClimateManager:getAirTemperatureForCharacter(arg0) end
+--- @overload fun(plr: IsoGameCharacter, doWindChill: boolean)
+function ClimateManager:getAirTemperatureForCharacter(plr) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return float
---- @overload fun(arg0: IsoGridSquare, arg1: BaseVehicle)
---- @overload fun(arg0: IsoGridSquare, arg1: BaseVehicle, arg2: boolean)
-function ClimateManager:getAirTemperatureForSquare(arg0) end
+--- @overload fun(square: IsoGridSquare, vehicle: BaseVehicle)
+--- @overload fun(square: IsoGridSquare, vehicle: BaseVehicle, doWindChill: boolean)
+function ClimateManager:getAirTemperatureForSquare(square) end
 
 --- @public
 --- @return float
@@ -195,19 +196,19 @@ function ClimateManager:getBaseTemperature() end
 function ClimateManager:getBoolMax() end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return ClimateBool
-function ClimateManager:getClimateBool(arg0) end
+function ClimateManager:getClimateBool(id) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return ClimateColor
-function ClimateManager:getClimateColor(arg0) end
+function ClimateManager:getClimateColor(id) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return ClimateFloat
-function ClimateManager:getClimateFloat(arg0) end
+function ClimateManager:getClimateFloat(id) end
 
 --- @public
 --- @return ClimateForecaster
@@ -370,11 +371,11 @@ function ClimateManager:getRainIntensity() end
 function ClimateManager:getSeason() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param segment int
+--- @param temperature int
+--- @param season int
 --- @return ClimateColorInfo
-function ClimateManager:getSeasonColor(arg0, arg1, arg2) end
+function ClimateManager:getSeasonColor(segment, temperature, season) end
 
 --- @public
 --- @return String
@@ -449,10 +450,10 @@ function ClimateManager:getWindAngleIntensity() end
 function ClimateManager:getWindAngleRadians() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 float
+--- @param character IsoGameCharacter
+--- @param angle float
 --- @return float
-function ClimateManager:getWindForceMovement(arg0, arg1) end
+function ClimateManager:getWindForceMovement(character, angle) end
 
 --- @public
 --- @return float
@@ -475,9 +476,9 @@ function ClimateManager:getWindspeedKph() end
 function ClimateManager:getWorldAgeHours() end
 
 --- @public
---- @param arg0 IsoMetaGrid
+--- @param metaGrid IsoMetaGrid
 --- @return void
-function ClimateManager:init(arg0) end
+function ClimateManager:init(metaGrid) end
 
 --- @public
 --- @return boolean
@@ -496,20 +497,20 @@ function ClimateManager:isUpdated() end
 function ClimateManager:launchFlare() end
 
 --- @public
---- @param arg0 DataInputStream
---- @param arg1 int
+--- @param input DataInputStream
+--- @param worldVersion int
 --- @return void
-function ClimateManager:load(arg0, arg1) end
+function ClimateManager:load(input, worldVersion) end
 
 --- @public
 --- @return void
 function ClimateManager:postCellLoadSetSnow() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 UdpConnection
+--- @param bb ByteBuffer
+--- @param ignoreConnection UdpConnection
 --- @return void
-function ClimateManager:receiveClimatePacket(arg0, arg1) end
+function ClimateManager:receiveClimatePacket(bb, ignoreConnection) end
 
 --- @public
 --- @return void
@@ -524,92 +525,92 @@ function ClimateManager:resetModded() end
 function ClimateManager:resetOverrides() end
 
 --- @public
---- @param arg0 DataOutputStream
+--- @param output DataOutputStream
 --- @return void
-function ClimateManager:save(arg0) end
+function ClimateManager:save(output) end
 
 --- @public
---- @param arg0 UdpConnection
+--- @param connection UdpConnection
 --- @return void
-function ClimateManager:sendInitialState(arg0) end
+function ClimateManager:sendInitialState(connection) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function ClimateManager:setAmbient(arg0) end
+function ClimateManager:setAmbient(f) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function ClimateManager:setDayLightStrength(arg0) end
+function ClimateManager:setDayLightStrength(f) end
 
 --- @public
---- @param arg0 float
+--- @param desaturation float
 --- @return void
-function ClimateManager:setDesaturation(arg0) end
+function ClimateManager:setDesaturation(desaturation) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateManager:setEnabledFxUpdate(arg0) end
+function ClimateManager:setEnabledFxUpdate(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateManager:setEnabledSimulation(arg0) end
+function ClimateManager:setEnabledSimulation(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateManager:setEnabledWeatherGeneration(arg0) end
+function ClimateManager:setEnabledWeatherGeneration(b) end
 
 --- @public
---- @param arg0 float
+--- @param b float
 --- @return void
-function ClimateManager:setNightStrength(arg0) end
+function ClimateManager:setNightStrength(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateManager:setPrecipitationIsSnow(arg0) end
+function ClimateManager:setPrecipitationIsSnow(b) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 boolean
+--- @param temperature int
+--- @param season int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param exterior boolean
 --- @return void
-function ClimateManager:setSeasonColorDawn(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ClimateManager:setSeasonColorDawn(temperature, season, r, g, b, a, exterior) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 boolean
+--- @param temperature int
+--- @param season int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param exterior boolean
 --- @return void
-function ClimateManager:setSeasonColorDay(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ClimateManager:setSeasonColorDay(temperature, season, r, g, b, a, exterior) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 boolean
+--- @param temperature int
+--- @param season int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param exterior boolean
 --- @return void
-function ClimateManager:setSeasonColorDusk(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ClimateManager:setSeasonColorDusk(temperature, season, r, g, b, a, exterior) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function ClimateManager:setViewDistance(arg0) end
+function ClimateManager:setViewDistance(f) end
 
 --- @public
 --- @return void
@@ -620,19 +621,19 @@ function ClimateManager:stopWeatherAndThunder() end
 function ClimateManager:transmitClientChangeAdminVars() end
 
 --- @public
---- @param arg0 float
---- @param arg1 int
+--- @param strength float
+--- @param front int
 --- @return void
-function ClimateManager:transmitGenerateWeather(arg0, arg1) end
+function ClimateManager:transmitGenerateWeather(strength, front) end
 
 --- @public
 --- @return void
 function ClimateManager:transmitRequestAdminVars() end
 
 --- @public
---- @param arg0 float
+--- @param intensity float
 --- @return void
-function ClimateManager:transmitServerStartRain(arg0) end
+function ClimateManager:transmitServerStartRain(intensity) end
 
 --- @public
 --- @return void
@@ -643,61 +644,61 @@ function ClimateManager:transmitServerStopRain() end
 function ClimateManager:transmitServerStopWeather() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
+--- @param x int
+--- @param y int
+--- @param doStrike boolean
+--- @param doLightning boolean
+--- @param doRumble boolean
 --- @return void
-function ClimateManager:transmitServerTriggerLightning(arg0, arg1, arg2, arg3, arg4) end
+function ClimateManager:transmitServerTriggerLightning(x, y, doStrike, doLightning, doRumble) end
 
 --- @public
---- @param arg0 float
+--- @param duration float
 --- @return void
-function ClimateManager:transmitServerTriggerStorm(arg0) end
+function ClimateManager:transmitServerTriggerStorm(duration) end
 
 --- @public
 --- @return void
 function ClimateManager:transmitStopWeather() end
 
 --- @public
---- @param arg0 float
+--- @param duration float
 --- @return void
-function ClimateManager:transmitTriggerBlizzard(arg0) end
+function ClimateManager:transmitTriggerBlizzard(duration) end
 
 --- @public
---- @param arg0 float
+--- @param duration float
 --- @return void
-function ClimateManager:transmitTriggerStorm(arg0) end
+function ClimateManager:transmitTriggerStorm(duration) end
 
 --- @public
---- @param arg0 float
+--- @param duration float
 --- @return void
-function ClimateManager:transmitTriggerTropical(arg0) end
+function ClimateManager:transmitTriggerTropical(duration) end
 
 --- @public
---- @param arg0 float
---- @param arg1 boolean
+--- @param strength float
+--- @param warmFront boolean
 --- @return boolean
-function ClimateManager:triggerCustomWeather(arg0, arg1) end
+function ClimateManager:triggerCustomWeather(strength, warmFront) end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
+--- @param stage int
+--- @param duration float
 --- @return boolean
-function ClimateManager:triggerCustomWeatherStage(arg0, arg1) end
+function ClimateManager:triggerCustomWeatherStage(stage, duration) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 double
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
+--- @param centerX int
+--- @param centerY int
+--- @param duration double
+--- @param strength float
+--- @param initialProgress float
+--- @param angle float
+--- @param initialPuddles float
 --- @return void
---- @overload fun(arg0: int, arg1: int, arg2: double, arg3: float, arg4: float, arg5: float, arg6: float, arg7: ClimateColorInfo)
-function ClimateManager:triggerKateBobIntroStorm(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(centerX: int, centerY: int, duration: double, strength: float, initialProgress: float, angle: float, initialPuddles: float, cloudcolor: ClimateColorInfo)
+function ClimateManager:triggerKateBobIntroStorm(centerX, centerY, duration, strength, initialProgress, angle, initialPuddles) end
 
 --- @public
 --- @return void

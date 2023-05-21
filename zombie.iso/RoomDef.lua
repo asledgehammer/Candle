@@ -1,6 +1,6 @@
 --- @meta
 
---- @class RoomDef: Object
+--- @class RoomDef
 RoomDef = {};
 
 ------------------------------------
@@ -16,25 +16,25 @@ function RoomDef:CalculateBounds() end
 function RoomDef:Dispose() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param cellX int
+--- @param cellY int
 --- @return long
-function RoomDef:calculateMetaID(arg0, arg1) end
+function RoomDef:calculateMetaID(cellX, cellY) end
 
 --- @public
---- @param arg0 BiConsumer
+--- @param consumer BiConsumer
 --- @return void
-function RoomDef:forEachChunk(arg0) end
+function RoomDef:forEachChunk(consumer) end
 
 --- @public
 --- @return int
 function RoomDef:getArea() end
 
 --- @public
---- @param arg0 IsoChunk
+--- @param chunk IsoChunk
 --- @return float
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
-function RoomDef:getAreaOverlapping(arg0) end
+--- @overload fun(x: int, y: int, w: int, h: int)
+function RoomDef:getAreaOverlapping(chunk) end
 
 --- @public
 --- @return BuildingDef
@@ -80,9 +80,9 @@ function RoomDef:getObjects() end
 function RoomDef:getProceduralSpawnedContainer() end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return IsoGridSquare
-function RoomDef:getRandomSquare(arg0) end
+function RoomDef:getRandomSquare(predicate) end
 
 --- @public
 --- @return ArrayList
@@ -113,12 +113,12 @@ function RoomDef:getY2() end
 function RoomDef:getZ() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param x int
+--- @param y int
+--- @param w int
+--- @param h int
 --- @return boolean
-function RoomDef:intersects(arg0, arg1, arg2, arg3) end
+function RoomDef:intersects(x, y, w, h) end
 
 --- @public
 --- @return boolean
@@ -129,11 +129,11 @@ function RoomDef:isEmptyOutside() end
 function RoomDef:isExplored() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return boolean
-function RoomDef:isInside(arg0, arg1, arg2) end
+function RoomDef:isInside(x, y, z) end
 
 --- @public
 --- @return boolean
@@ -144,19 +144,19 @@ function RoomDef:isRoofFixed() end
 function RoomDef:refreshSquares() end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RoomDef:setBuilding(arg0) end
+function RoomDef:setBuilding(def) end
 
 --- @public
---- @param arg0 boolean
+--- @param explored boolean
 --- @return void
-function RoomDef:setExplored(arg0) end
+function RoomDef:setExplored(explored) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function RoomDef:setRoofFixed(arg0) end
+function RoomDef:setRoofFixed(b) end
 
 
 ------------------------------------
@@ -164,7 +164,7 @@ function RoomDef:setRoofFixed(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param ID int
+--- @param name String
 --- @return RoomDef
-function RoomDef.new(arg0, arg1) end
+function RoomDef.new(ID, name) end

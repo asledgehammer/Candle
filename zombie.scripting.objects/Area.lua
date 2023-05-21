@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Area: Object
+--- @class Area
 Area = {};
 
 ------------------------------------
@@ -28,24 +28,24 @@ function Area:getX() end
 function Area:getY() end
 
 --- @public
---- @param arg0 Double
+--- @param d Double
 --- @return void
-function Area:setH(arg0) end
+function Area:setH(d) end
 
 --- @public
---- @param arg0 Double
+--- @param d Double
 --- @return void
-function Area:setW(arg0) end
+function Area:setW(d) end
 
 --- @public
---- @param arg0 Double
+--- @param d Double
 --- @return void
-function Area:setX(arg0) end
+function Area:setX(d) end
 
 --- @public
---- @param arg0 Double
+--- @param d Double
 --- @return void
-function Area:setY(arg0) end
+function Area:setY(d) end
 
 
 ------------------------------------

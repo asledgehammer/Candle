@@ -1,6 +1,6 @@
 --- @meta
 
---- @class SpriteRenderer: Object
+--- @class SpriteRenderer
 --- @field public GL_BLENDFUNC_ENABLED boolean
 --- @field public instance SpriteRenderer
 --- @field public NUM_RENDER_STATES int
@@ -16,56 +16,56 @@ SpriteRenderer = {};
 function SpriteRenderer:EndShader() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
+--- @param shaderID int
+--- @param uniform int
+--- @param uniformValue float
 --- @return void
-function SpriteRenderer:ShaderUpdate1f(arg0, arg1, arg2) end
+function SpriteRenderer:ShaderUpdate1f(shaderID, uniform, uniformValue) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param shaderID int
+--- @param uniform int
+--- @param uniformValue int
 --- @return void
-function SpriteRenderer:ShaderUpdate1i(arg0, arg1, arg2) end
+function SpriteRenderer:ShaderUpdate1i(shaderID, uniform, uniformValue) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 float
+--- @param shaderID int
+--- @param uniform int
+--- @param value1 float
+--- @param value2 float
 --- @return void
-function SpriteRenderer:ShaderUpdate2f(arg0, arg1, arg2, arg3) end
+function SpriteRenderer:ShaderUpdate2f(shaderID, uniform, value1, value2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param shaderID int
+--- @param uniform int
+--- @param value1 float
+--- @param value2 float
+--- @param value3 float
 --- @return void
-function SpriteRenderer:ShaderUpdate3f(arg0, arg1, arg2, arg3, arg4) end
+function SpriteRenderer:ShaderUpdate3f(shaderID, uniform, value1, value2, value3) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
+--- @param shaderID int
+--- @param uniform int
+--- @param value1 float
+--- @param value2 float
+--- @param value3 float
+--- @param value4 float
 --- @return void
-function SpriteRenderer:ShaderUpdate4f(arg0, arg1, arg2, arg3, arg4, arg5) end
+function SpriteRenderer:ShaderUpdate4f(shaderID, uniform, value1, value2, value3, value4) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param iD int
+--- @param playerIndex int
 --- @return void
-function SpriteRenderer:StartShader(arg0, arg1) end
+function SpriteRenderer:StartShader(iD, playerIndex) end
 
 --- @public
---- @param arg0 BooleanSupplier
+--- @param waitCallback BooleanSupplier
 --- @return SpriteRenderState
-function SpriteRenderer:acquireStateForRendering(arg0) end
+function SpriteRenderer:acquireStateForRendering(waitCallback) end
 
 --- @public
 --- @return void
@@ -84,10 +84,10 @@ function SpriteRenderer:clearUseVertColorsArray() end
 function SpriteRenderer:create() end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
+--- @param id int
+--- @param val float
 --- @return void
-function SpriteRenderer:doCoreIntParam(arg0, arg1) end
+function SpriteRenderer:doCoreIntParam(id, val) end
 
 --- @public
 --- @param arg0 GenericDrawer
@@ -100,35 +100,35 @@ function SpriteRenderer:drawGeneric(arg0) end
 function SpriteRenderer:drawModel(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param playerIndex int
+--- @param var1 int
+--- @param var2 int
 --- @return void
-function SpriteRenderer:drawParticles(arg0, arg1, arg2) end
+function SpriteRenderer:drawParticles(playerIndex, var1, var2) end
 
 --- @public
---- @param arg0 Shader
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param shader Shader
+--- @param playerIndex int
+--- @param apiId int
+--- @param z int
 --- @return void
-function SpriteRenderer:drawPuddles(arg0, arg1, arg2, arg3) end
+function SpriteRenderer:drawPuddles(shader, playerIndex, apiId, z) end
 
 --- @public
---- @param arg0 Shader
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param shader Shader
+--- @param playerIndex int
+--- @param apiId int
+--- @param bufferId int
 --- @return void
-function SpriteRenderer:drawSkyBox(arg0, arg1, arg2, arg3) end
+function SpriteRenderer:drawSkyBox(shader, playerIndex, apiId, bufferId) end
 
 --- @public
---- @param arg0 Shader
---- @param arg1 int
---- @param arg2 int
---- @param arg3 boolean
+--- @param shader Shader
+--- @param playerIndex int
+--- @param apiId int
+--- @param bShore boolean
 --- @return void
-function SpriteRenderer:drawWater(arg0, arg1, arg2, arg3) end
+function SpriteRenderer:drawWater(shader, playerIndex, apiId, bShore) end
 
 --- @public
 --- @return boolean
@@ -159,9 +159,9 @@ function SpriteRenderer:getPopulatingState() end
 function SpriteRenderer:getRenderStateIndex() end
 
 --- @public
---- @param arg0 int
+--- @param userId int
 --- @return PlayerCamera
-function SpriteRenderer:getRenderingPlayerCamera(arg0) end
+function SpriteRenderer:getRenderingPlayerCamera(userId) end
 
 --- @public
 --- @return int
@@ -172,154 +172,154 @@ function SpriteRenderer:getRenderingPlayerIndex() end
 function SpriteRenderer:getRenderingState() end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
+--- @param a int
+--- @param b float
 --- @return void
-function SpriteRenderer:glAlphaFunc(arg0, arg1) end
+function SpriteRenderer:glAlphaFunc(a, b) end
 
 --- @public
---- @param arg0 int
+--- @param a int
 --- @return void
-function SpriteRenderer:glBind(arg0) end
+function SpriteRenderer:glBind(a) end
 
 --- @public
---- @param arg0 int
+--- @param a int
 --- @return void
-function SpriteRenderer:glBlendEquation(arg0) end
+function SpriteRenderer:glBlendEquation(a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param a int
+--- @param b int
 --- @return void
-function SpriteRenderer:glBlendFunc(arg0, arg1) end
+function SpriteRenderer:glBlendFunc(a, b) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param a int
+--- @param b int
+--- @param c int
+--- @param d int
 --- @return void
-function SpriteRenderer:glBlendFuncSeparate(arg0, arg1, arg2, arg3) end
+function SpriteRenderer:glBlendFuncSeparate(a, b, c, d) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param i int
+--- @param p int
 --- @return void
-function SpriteRenderer:glBuffer(arg0, arg1) end
+function SpriteRenderer:glBuffer(i, p) end
 
 --- @public
---- @param arg0 int
+--- @param a int
 --- @return void
-function SpriteRenderer:glClear(arg0) end
+function SpriteRenderer:glClear(a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param r int
+--- @param g int
+--- @param b int
+--- @param a int
 --- @return void
-function SpriteRenderer:glClearColor(arg0, arg1, arg2, arg3) end
+function SpriteRenderer:glClearColor(r, g, b, a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param a int
+--- @param b int
+--- @param c int
+--- @param d int
 --- @return void
-function SpriteRenderer:glColorMask(arg0, arg1, arg2, arg3) end
+function SpriteRenderer:glColorMask(a, b, c, d) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function SpriteRenderer:glDepthMask(arg0) end
+function SpriteRenderer:glDepthMask(b) end
 
 --- @public
---- @param arg0 int
+--- @param a int
 --- @return void
-function SpriteRenderer:glDisable(arg0) end
+function SpriteRenderer:glDisable(a) end
 
 --- @public
 --- @return void
 function SpriteRenderer:glDoEndFrame() end
 
 --- @public
---- @param arg0 int
+--- @param player int
 --- @return void
-function SpriteRenderer:glDoEndFrameFx(arg0) end
+function SpriteRenderer:glDoEndFrameFx(player) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 int
+--- @param w int
+--- @param h int
+--- @param zoom float
+--- @param player int
 --- @return void
---- @overload fun(arg0: int, arg1: int, arg2: float, arg3: int, arg4: boolean)
-function SpriteRenderer:glDoStartFrame(arg0, arg1, arg2, arg3) end
+--- @overload fun(w: int, h: int, zoom: float, player: int, isTextFrame: boolean)
+function SpriteRenderer:glDoStartFrame(w, h, zoom, player) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param w int
+--- @param h int
+--- @param player int
 --- @return void
-function SpriteRenderer:glDoStartFrameFx(arg0, arg1, arg2) end
+function SpriteRenderer:glDoStartFrameFx(w, h, player) end
 
 --- @public
---- @param arg0 int
+--- @param a int
 --- @return void
-function SpriteRenderer:glEnable(arg0) end
+function SpriteRenderer:glEnable(a) end
 
 --- @public
---- @param arg0 int
+--- @param a int
 --- @return void
-function SpriteRenderer:glGenerateMipMaps(arg0) end
+function SpriteRenderer:glGenerateMipMaps(a) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function SpriteRenderer:glIgnoreStyles(arg0) end
+function SpriteRenderer:glIgnoreStyles(b) end
 
 --- @public
 --- @return void
 function SpriteRenderer:glLoadIdentity() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param a int
+--- @param b int
+--- @param c int
 --- @return void
-function SpriteRenderer:glStencilFunc(arg0, arg1, arg2) end
+function SpriteRenderer:glStencilFunc(a, b, c) end
 
 --- @public
---- @param arg0 int
+--- @param a int
 --- @return void
-function SpriteRenderer:glStencilMask(arg0) end
+function SpriteRenderer:glStencilMask(a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param a int
+--- @param b int
+--- @param c int
 --- @return void
-function SpriteRenderer:glStencilOp(arg0, arg1, arg2) end
+function SpriteRenderer:glStencilOp(a, b, c) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param a int
+--- @param b int
+--- @param c int
 --- @return void
-function SpriteRenderer:glTexParameteri(arg0, arg1, arg2) end
+function SpriteRenderer:glTexParameteri(a, b, c) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
 --- @return void
-function SpriteRenderer:glViewport(arg0, arg1, arg2, arg3) end
+function SpriteRenderer:glViewport(x, y, width, height) end
 
 --- @public
---- @param arg0 int
+--- @param nPlayer int
 --- @return void
-function SpriteRenderer:initFromIsoCamera(arg0) end
+function SpriteRenderer:initFromIsoCamera(nPlayer) end
 
 --- @public
 --- @return boolean
@@ -350,162 +350,162 @@ function SpriteRenderer:prePopulating() end
 function SpriteRenderer:pushFrameDown() end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 Consumer
+--- @param tex Texture
+--- @param x float
+--- @param y float
+--- @param width float
+--- @param height float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param texdModifier Consumer
 --- @return void
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: int, arg10: int, arg11: int, arg12: int)
---- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double, arg9: float, arg10: float, arg11: float, arg12: float, arg13: Consumer)
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float)
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: Consumer)
---- @overload fun(arg0: Texture, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: double, arg8: double, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: float, arg18: float, arg19: float, arg20: float, arg21: float, arg22: float, arg23: float, arg24: float, arg25: Consumer)
-function SpriteRenderer:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+--- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, c1: int, c2: int, c3: int, c4: int)
+--- @overload fun(tex: Texture, x1: double, y1: double, x2: double, y2: double, x3: double, y3: double, x4: double, y4: double, r: float, g: float, b: float, a: float, texdModifier: Consumer)
+--- @overload fun(tex: Texture, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float)
+--- @overload fun(tex: Texture, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float, texdModifier: Consumer)
+--- @overload fun(tex: Texture, x1: double, y1: double, x2: double, y2: double, x3: double, y3: double, x4: double, y4: double, r1: float, g1: float, b1: float, a1: float, r2: float, g2: float, b2: float, a2: float, r3: float, g3: float, b3: float, a3: float, r4: float, g4: float, b4: float, a4: float, texdModifier: Consumer)
+function SpriteRenderer:render(tex, x, y, width, height, r, g, b, a, texdModifier) end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
---- @param arg8 int
---- @param arg9 float
---- @param arg10 float
---- @param arg11 float
---- @param arg12 float
---- @param arg13 Consumer
+--- @param tex Texture
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param clampX int
+--- @param clampY int
+--- @param clampW int
+--- @param clampH int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param texdModifier Consumer
 --- @return void
-function SpriteRenderer:renderClamped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13) end
+function SpriteRenderer:renderClamped(tex, x, y, width, height, clampX, clampY, clampW, clampH, r, g, b, a, texdModifier) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 float
---- @param arg10 float
---- @param arg11 float
+--- @param x1 float
+--- @param y1 float
+--- @param x2 float
+--- @param y2 float
+--- @param x3 float
+--- @param y3 float
+--- @param x4 float
+--- @param y4 float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float)
---- @overload fun(arg0: Texture, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float, arg8: float, arg9: float, arg10: float, arg11: float, arg12: float, arg13: float, arg14: float, arg15: float, arg16: float, arg17: float, arg18: float, arg19: float, arg20: float)
-function SpriteRenderer:renderPoly(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
+--- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, r: float, g: float, b: float, a: float)
+--- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float)
+function SpriteRenderer:renderPoly(x1, y1, x2, y2, x3, y3, x4, y4, r, g, b, a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function SpriteRenderer:renderRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function SpriteRenderer:renderRect(x, y, width, height, r, g, b, a) end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 float
---- @param arg10 float
---- @param arg11 float
---- @param arg12 float
---- @param arg13 float
---- @param arg14 float
---- @param arg15 float
---- @param arg16 float
---- @param arg17 float
---- @param arg18 float
---- @param arg19 float
---- @param arg20 float
---- @param arg21 float
---- @param arg22 float
---- @param arg23 float
---- @param arg24 float
---- @param arg25 Consumer
+--- @param tex Texture
+--- @param x1 float
+--- @param y1 float
+--- @param x2 float
+--- @param y2 float
+--- @param x3 float
+--- @param y3 float
+--- @param x4 float
+--- @param y4 float
+--- @param r1 float
+--- @param g1 float
+--- @param b1 float
+--- @param a1 float
+--- @param r2 float
+--- @param g2 float
+--- @param b2 float
+--- @param a2 float
+--- @param r3 float
+--- @param g3 float
+--- @param b3 float
+--- @param a3 float
+--- @param r4 float
+--- @param g4 float
+--- @param b4 float
+--- @param a4 float
+--- @param texdModifier Consumer
 --- @return void
-function SpriteRenderer:renderdebug(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25) end
+function SpriteRenderer:renderdebug(tex, x1, y1, x2, y2, x3, y3, x4, y4, r1, g1, b1, a1, r2, g2, b2, a2, r3, g3, b3, a3, r4, g4, b4, a4, texdModifier) end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 Consumer
+--- @param tex Texture
+--- @param x float
+--- @param y float
+--- @param width float
+--- @param height float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param texdModifier Consumer
 --- @return void
-function SpriteRenderer:renderflipped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+function SpriteRenderer:renderflipped(tex, x, y, width, height, r, g, b, a, texdModifier) end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 Consumer
+--- @param tex Texture
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param texdModifier Consumer
 --- @return void
-function SpriteRenderer:renderi(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+function SpriteRenderer:renderi(tex, x, y, width, height, r, g, b, a, texdModifier) end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
+--- @param tex Texture
+--- @param x1 int
+--- @param y1 int
+--- @param x2 int
+--- @param y2 int
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
---- @overload fun(arg0: Texture, arg1: int, arg2: int, arg3: int, arg4: int, arg5: float, arg6: float, arg7: float, arg8: float, arg9: int)
-function SpriteRenderer:renderline(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+--- @overload fun(tex: Texture, x1: int, y1: int, x2: int, y2: int, r: float, g: float, b: float, a: float, thickness: int)
+function SpriteRenderer:renderline(tex, x1, y1, x2, y2, r, g, b, a) end
 
 --- @public
---- @param arg0 Texture
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param tex Texture
+--- @param x int
+--- @param y int
+--- @param w int
+--- @param h int
 --- @return void
-function SpriteRenderer:setCutawayTexture(arg0, arg1, arg2, arg3, arg4) end
+function SpriteRenderer:setCutawayTexture(tex, x, y, w, h) end
 
 --- @public
---- @param arg0 AbstractStyle
+--- @param style AbstractStyle
 --- @return void
-function SpriteRenderer:setDefaultStyle(arg0) end
+function SpriteRenderer:setDefaultStyle(style) end
 
 --- @public
---- @param arg0 boolean
+--- @param bDoAdditive boolean
 --- @return void
-function SpriteRenderer:setDoAdditive(arg0) end
+function SpriteRenderer:setDoAdditive(bDoAdditive) end
 
 --- @public
 --- @param arg0 WallShaderTexRender
@@ -513,18 +513,18 @@ function SpriteRenderer:setDoAdditive(arg0) end
 function SpriteRenderer:setExtraWallShaderParams(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param player int
 --- @return void
-function SpriteRenderer:setRenderingPlayerIndex(arg0) end
+function SpriteRenderer:setRenderingPlayerIndex(player) end
 
 --- @public
---- @param arg0 byte
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param whichShader byte
+--- @param c0 int
+--- @param c1 int
+--- @param c2 int
+--- @param c3 int
 --- @return void
-function SpriteRenderer:setUseVertColorsArray(arg0, arg1, arg2, arg3, arg4) end
+function SpriteRenderer:setUseVertColorsArray(whichShader, c0, c1, c2, c3) end
 
 --- @public
 --- @return void

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class StashBuilding: Object
+--- @class StashBuilding
 StashBuilding = {};
 
 ------------------------------------
@@ -17,8 +17,8 @@ function StashBuilding:getName() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param stashName String
+--- @param buildingX int
+--- @param buildingY int
 --- @return StashBuilding
-function StashBuilding.new(arg0, arg1, arg2) end
+function StashBuilding.new(stashName, buildingX, buildingY) end

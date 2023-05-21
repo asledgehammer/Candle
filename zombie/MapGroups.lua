@@ -1,6 +1,6 @@
 --- @meta
 
---- @class MapGroups: Object
+--- @class MapGroups
 MapGroups = {};
 
 ------------------------------------
@@ -9,9 +9,9 @@ MapGroups = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param mapName String
 --- @return String
-function MapGroups.addMissingVanillaDirectories(arg0) end
+function MapGroups.addMissingVanillaDirectories(mapName) end
 
 
 ------------------------------------
@@ -24,8 +24,8 @@ function MapGroups:checkMapConflicts() end
 
 --- @public
 --- @return void
---- @overload fun(arg0: ActiveMods, arg1: boolean)
---- @overload fun(arg0: ActiveMods, arg1: boolean, arg2: boolean)
+--- @overload fun(activeMods: ActiveMods, includeVanilla: boolean)
+--- @overload fun(activeMods: ActiveMods, includeVanilla: boolean, includeChallenges: boolean)
 function MapGroups:createGroups() end
 
 --- @public
@@ -33,23 +33,23 @@ function MapGroups:createGroups() end
 function MapGroups:getAllMapsInOrder() end
 
 --- @public
---- @param arg0 String
+--- @param mapName String
 --- @return ArrayList
-function MapGroups:getMapConflicts(arg0) end
+function MapGroups:getMapConflicts(mapName) end
 
 --- @public
---- @param arg0 int
+--- @param groupIndex int
 --- @return ArrayList
-function MapGroups:getMapDirectoriesInGroup(arg0) end
+function MapGroups:getMapDirectoriesInGroup(groupIndex) end
 
 --- @public
 --- @return int
 function MapGroups:getNumberOfGroups() end
 
 --- @public
---- @param arg0 int
+--- @param groupIndex int
 --- @return void
-function MapGroups:setWorld(arg0) end
+function MapGroups:setWorld(groupIndex) end
 
 
 ------------------------------------

@@ -1,6 +1,9 @@
 --- @meta
 
---- @class SLSoundManager: Object
+--- @class SLSoundManager
+--- Turbo
+
+ Story line sound manager
 --- @field public DEBUG boolean
 --- @field public Emitter StoryEmitter
 --- @field public ENABLED boolean
@@ -50,9 +53,9 @@ function SLSoundManager:init() end
 function SLSoundManager:loadSounds() end
 
 --- @public
---- @param arg0 String
+--- @param line String
 --- @return void
-function SLSoundManager:print(arg0) end
+function SLSoundManager:print(line) end
 
 --- @public
 --- @return void
@@ -67,11 +70,11 @@ function SLSoundManager:renderDebug() end
 function SLSoundManager:thunderTest() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param storylineDay int
+--- @param hour int
+--- @param min int
 --- @return void
-function SLSoundManager:update(arg0, arg1, arg2) end
+function SLSoundManager:update(storylineDay, hour, min) end
 
 --- @public
 --- @return void

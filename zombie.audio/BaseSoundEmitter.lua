@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BaseSoundEmitter: Object
+--- @class BaseSoundEmitter
 BaseSoundEmitter = {};
 
 ------------------------------------
@@ -12,73 +12,73 @@ BaseSoundEmitter = {};
 function BaseSoundEmitter:hasSoundsToStart() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return boolean
-function BaseSoundEmitter:hasSustainPoints(arg0) end
+function BaseSoundEmitter:hasSustainPoints(handle) end
 
 --- @public
 --- @return boolean
 function BaseSoundEmitter:isEmpty() end
 
 --- @public
---- @param arg0 String
+--- @param alias String
 --- @return boolean
-function BaseSoundEmitter:isPlaying(arg0) end
+function BaseSoundEmitter:isPlaying(alias) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
-function BaseSoundEmitter:playAmbientLoopedImpl(arg0) end
+function BaseSoundEmitter:playAmbientLoopedImpl(file) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return long
-function BaseSoundEmitter:playAmbientSound(arg0) end
+function BaseSoundEmitter:playAmbientSound(name) end
 
 --- @public
---- @param arg0 GameSoundClip
---- @param arg1 IsoObject
+--- @param clip GameSoundClip
+--- @param parent IsoObject
 --- @return long
-function BaseSoundEmitter:playClip(arg0, arg1) end
+function BaseSoundEmitter:playClip(clip, parent) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
---- @overload fun(arg0: String, arg1: IsoGameCharacter)
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
-function BaseSoundEmitter:playSound(arg0) end
+--- @overload fun(file: String, parent: IsoObject)
+--- @overload fun(file: String, x: int, y: int, z: int)
+function BaseSoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoGridSquare
+--- @param file String
+--- @param square IsoGridSquare
 --- @return long
---- @overload fun(arg0: String, arg1: boolean, arg2: IsoObject)
-function BaseSoundEmitter:playSoundImpl(arg0, arg1) end
+--- @overload fun(file: String, doWorldSound: boolean, parent: IsoObject)
+function BaseSoundEmitter:playSoundImpl(file, square) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
-function BaseSoundEmitter:playSoundLooped(arg0) end
+function BaseSoundEmitter:playSoundLooped(file) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
-function BaseSoundEmitter:playSoundLoopedImpl(arg0) end
+function BaseSoundEmitter:playSoundLoopedImpl(file) end
 
 --- @public
 --- @return void
 function BaseSoundEmitter:randomStart() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return boolean
-function BaseSoundEmitter:restart(arg0) end
+function BaseSoundEmitter:restart(handle) end
 
 --- @public
---- @param arg0 long
---- @param arg1 boolean
+--- @param handle long
+--- @param is3D boolean
 --- @return void
-function BaseSoundEmitter:set3D(arg0, arg1) end
+function BaseSoundEmitter:set3D(handle, is3D) end
 
 --- @public
 --- @param arg0 long
@@ -88,72 +88,72 @@ function BaseSoundEmitter:set3D(arg0, arg1) end
 function BaseSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
+--- @param handle long
+--- @param pitch float
 --- @return void
-function BaseSoundEmitter:setPitch(arg0, arg1) end
+function BaseSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return void
-function BaseSoundEmitter:setPos(arg0, arg1, arg2) end
+function BaseSoundEmitter:setPos(x, y, z) end
 
 --- @public
---- @param arg0 long
---- @param arg1 String
+--- @param handle long
+--- @param positionName String
 --- @return void
-function BaseSoundEmitter:setTimelinePosition(arg0, arg1) end
+function BaseSoundEmitter:setTimelinePosition(handle, positionName) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
+--- @param handle long
+--- @param volume float
 --- @return void
-function BaseSoundEmitter:setVolume(arg0, arg1) end
+function BaseSoundEmitter:setVolume(handle, volume) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function BaseSoundEmitter:setVolumeAll(arg0) end
+function BaseSoundEmitter:setVolumeAll(volume) end
 
 --- @public
 --- @return void
 function BaseSoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function BaseSoundEmitter:stopOrTriggerSound(arg0) end
+function BaseSoundEmitter:stopOrTriggerSound(handle) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function BaseSoundEmitter:stopOrTriggerSoundByName(arg0) end
+function BaseSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
---- @param arg0 long
+--- @param channel long
 --- @return int
-function BaseSoundEmitter:stopSound(arg0) end
+function BaseSoundEmitter:stopSound(channel) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return int
-function BaseSoundEmitter:stopSoundByName(arg0) end
+function BaseSoundEmitter:stopSoundByName(name) end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function BaseSoundEmitter:stopSoundLocal(arg0) end
+function BaseSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return void
 function BaseSoundEmitter:tick() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function BaseSoundEmitter:triggerCue(arg0) end
+function BaseSoundEmitter:triggerCue(handle) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class HairStyles: Object
+--- @class HairStyles
 --- @field public instance HairStyles
 HairStyles = {};
 
@@ -10,9 +10,9 @@ HairStyles = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param filename String
 --- @return HairStyles
-function HairStyles.Parse(arg0) end
+function HairStyles.Parse(filename) end
 
 --- @public
 --- @static
@@ -26,9 +26,9 @@ function HairStyles.init() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param filename String
 --- @return HairStyles
-function HairStyles.parse(arg0) end
+function HairStyles.parse(filename) end
 
 
 ------------------------------------
@@ -36,14 +36,14 @@ function HairStyles.parse(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return HairStyle
-function HairStyles:FindFemaleStyle(arg0) end
+function HairStyles:FindFemaleStyle(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return HairStyle
-function HairStyles:FindMaleStyle(arg0) end
+function HairStyles:FindMaleStyle(name) end
 
 --- @public
 --- @return ArrayList
@@ -54,20 +54,20 @@ function HairStyles:getAllFemaleStyles() end
 function HairStyles:getAllMaleStyles() end
 
 --- @public
---- @param arg0 HairStyle
---- @param arg1 String
+--- @param style HairStyle
+--- @param category String
 --- @return HairStyle
-function HairStyles:getAlternateForHat(arg0, arg1) end
+function HairStyles:getAlternateForHat(style, category) end
 
 --- @public
---- @param arg0 String
+--- @param outfitName String
 --- @return String
-function HairStyles:getRandomFemaleStyle(arg0) end
+function HairStyles:getRandomFemaleStyle(outfitName) end
 
 --- @public
---- @param arg0 String
+--- @param outfitName String
 --- @return String
-function HairStyles:getRandomMaleStyle(arg0) end
+function HairStyles:getRandomMaleStyle(outfitName) end
 
 
 ------------------------------------

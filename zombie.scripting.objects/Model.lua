@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Model: Object
+--- @class Model
 Model = {};
 
 ------------------------------------

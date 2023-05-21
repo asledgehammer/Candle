@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GameState: Object
+--- @class GameState
 GameState = {};
 
 ------------------------------------

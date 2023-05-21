@@ -16,40 +16,40 @@ function IsoBrokenGlass:addToWorld() end
 function IsoBrokenGlass:getObjectName() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param bb ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoBrokenGlass:load(arg0, arg1, arg2) end
+function IsoBrokenGlass:load(bb, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return void
 function IsoBrokenGlass:removeFromWorld() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return void
-function IsoBrokenGlass:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoBrokenGlass:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param lightInfo ColorInfo
 --- @return void
-function IsoBrokenGlass:renderObjectPicker(arg0, arg1, arg2, arg3) end
+function IsoBrokenGlass:renderObjectPicker(x, y, z, lightInfo) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param bb ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoBrokenGlass:save(arg0, arg1) end
+function IsoBrokenGlass:save(bb, IS_DEBUG_SAVE) end
 
 
 ------------------------------------
@@ -57,6 +57,6 @@ function IsoBrokenGlass:save(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoBrokenGlass
-function IsoBrokenGlass.new(arg0) end
+function IsoBrokenGlass.new(cell) end

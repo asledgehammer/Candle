@@ -18,25 +18,25 @@ function PlayerHitReactionState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function PlayerHitReactionState:animEvent(arg0, arg1) end
+function PlayerHitReactionState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerHitReactionState:enter(arg0) end
+function PlayerHitReactionState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerHitReactionState:execute(arg0) end
+function PlayerHitReactionState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerHitReactionState:exit(arg0) end
+function PlayerHitReactionState:exit(owner) end
 
 
 ------------------------------------

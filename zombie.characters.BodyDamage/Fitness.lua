@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Fitness: Object
+--- @class Fitness
 Fitness = {};
 
 ------------------------------------
@@ -12,23 +12,23 @@ Fitness = {};
 function Fitness:exerciseRepeat() end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return float
-function Fitness:getCurrentExeStiffnessInc(arg0) end
+function Fitness:getCurrentExeStiffnessInc(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return int
-function Fitness:getCurrentExeStiffnessTimer(arg0) end
+function Fitness:getCurrentExeStiffnessTimer(type) end
 
 --- @public
 --- @return IsoGameCharacter
 function Fitness:getParent() end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return float
-function Fitness:getRegularity(arg0) end
+function Fitness:getRegularity(type) end
 
 --- @public
 --- @return HashMap
@@ -55,10 +55,10 @@ function Fitness:init() end
 function Fitness:initRegularityMapProfession() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Fitness:load(arg0, arg1) end
+function Fitness:load(input, WorldVersion) end
 
 --- @public
 --- @return boolean
@@ -69,33 +69,33 @@ function Fitness:onGoingStiffness() end
 function Fitness:reduceEndurance() end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function Fitness:removeStiffnessValue(arg0) end
+function Fitness:removeStiffnessValue(type) end
 
 --- @public
 --- @return void
 function Fitness:resetValues() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function Fitness:save(arg0) end
+function Fitness:save(output) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function Fitness:setCurrentExercise(arg0) end
+function Fitness:setCurrentExercise(type) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param parent IsoGameCharacter
 --- @return void
-function Fitness:setParent(arg0) end
+function Fitness:setParent(parent) end
 
 --- @public
---- @param arg0 HashMap
+--- @param regularityMap HashMap
 --- @return void
-function Fitness:setRegularityMap(arg0) end
+function Fitness:setRegularityMap(regularityMap) end
 
 --- @public
 --- @return void
@@ -107,6 +107,6 @@ function Fitness:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param parent IsoGameCharacter
 --- @return Fitness
-function Fitness.new(arg0) end
+function Fitness.new(parent) end

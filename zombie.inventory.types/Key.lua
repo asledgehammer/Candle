@@ -10,10 +10,10 @@ Key = {};
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 InventoryItem
+--- @param playerNum int
+--- @param item InventoryItem
 --- @return void
-function Key.setHighlightDoors(arg0, arg1) end
+function Key.setHighlightDoors(playerNum, item) end
 
 
 ------------------------------------
@@ -45,36 +45,36 @@ function Key:isDigitalPadlock() end
 function Key:isPadlock() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Key:load(arg0, arg1) end
+function Key:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function Key:save(arg0, arg1) end
+function Key:save(output, net) end
 
 --- @public
---- @param arg0 boolean
+--- @param digitalPadlock boolean
 --- @return void
-function Key:setDigitalPadlock(arg0) end
+function Key:setDigitalPadlock(digitalPadlock) end
 
 --- @public
---- @param arg0 int
+--- @param keyId int
 --- @return void
-function Key:setKeyId(arg0) end
+function Key:setKeyId(keyId) end
 
 --- @public
---- @param arg0 int
+--- @param numberOfKey int
 --- @return void
-function Key:setNumberOfKey(arg0) end
+function Key:setNumberOfKey(numberOfKey) end
 
 --- @public
---- @param arg0 boolean
+--- @param padlock boolean
 --- @return void
-function Key:setPadlock(arg0) end
+function Key:setPadlock(padlock) end
 
 --- @public
 --- @return void
@@ -86,9 +86,9 @@ function Key:takeKeyId() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param type String
+--- @param tex String
 --- @return Key
-function Key.new(arg0, arg1, arg2, arg3) end
+function Key.new(module, name, type, tex) end

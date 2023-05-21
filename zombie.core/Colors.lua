@@ -1,6 +1,7 @@
 --- @meta
 
---- @class Colors: Object
+--- @class Colors
+--- TurboTuTone.
 --- @field public Aqua Color
 --- @field public Aquamarine Color
 --- @field public Bisque Color
@@ -122,21 +123,21 @@ Colors = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function Colors.ColorExists(arg0) end
+function Colors.ColorExists(name) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return Color
-function Colors.GetColorByName(arg0) end
+function Colors.GetColorByName(name) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return Color
-function Colors.GetColorFromIndex(arg0) end
+function Colors.GetColorFromIndex(index) end
 
 --- @public
 --- @static

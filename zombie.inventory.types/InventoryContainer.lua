@@ -8,10 +8,10 @@ InventoryContainer = {};
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
+--- @param tooltipUI ObjectTooltip
 --- @return void
 --- @overload fun(arg0: ObjectTooltip, arg1: Layout)
-function InventoryContainer:DoTooltip(arg0) end
+function InventoryContainer:DoTooltip(tooltipUI) end
 
 --- @public
 --- @return boolean
@@ -42,9 +42,9 @@ function InventoryContainer:getClothingExtraSubmenu() end
 function InventoryContainer:getContentsWeight() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return int
-function InventoryContainer:getEffectiveCapacity(arg0) end
+function InventoryContainer:getEffectiveCapacity(chr) end
 
 --- @public
 --- @return float
@@ -71,41 +71,41 @@ function InventoryContainer:getSaveType() end
 function InventoryContainer:getWeightReduction() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function InventoryContainer:load(arg0, arg1) end
+function InventoryContainer:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function InventoryContainer:save(arg0, arg1) end
+function InventoryContainer:save(output, net) end
 
 --- @public
---- @param arg0 float
+--- @param delta float
 --- @return void
-function InventoryContainer:setBloodLevel(arg0) end
+function InventoryContainer:setBloodLevel(delta) end
 
 --- @public
---- @param arg0 String
+--- @param canBeEquipped String
 --- @return void
-function InventoryContainer:setCanBeEquipped(arg0) end
+function InventoryContainer:setCanBeEquipped(canBeEquipped) end
 
 --- @public
---- @param arg0 int
+--- @param capacity int
 --- @return void
-function InventoryContainer:setCapacity(arg0) end
+function InventoryContainer:setCapacity(capacity) end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param cont ItemContainer
 --- @return void
-function InventoryContainer:setItemContainer(arg0) end
+function InventoryContainer:setItemContainer(cont) end
 
 --- @public
---- @param arg0 int
+--- @param weightReduction int
 --- @return void
-function InventoryContainer:setWeightReduction(arg0) end
+function InventoryContainer:setWeightReduction(weightReduction) end
 
 --- @public
 --- @return void
@@ -117,9 +117,9 @@ function InventoryContainer:updateAge() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param texName String
 --- @return InventoryContainer
-function InventoryContainer.new(arg0, arg1, arg2, arg3) end
+function InventoryContainer.new(module, name, itemType, texName) end

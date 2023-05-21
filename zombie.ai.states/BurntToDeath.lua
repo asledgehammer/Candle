@@ -18,19 +18,19 @@ function BurntToDeath.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function BurntToDeath:enter(arg0) end
+function BurntToDeath:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function BurntToDeath:execute(arg0) end
+function BurntToDeath:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function BurntToDeath:exit(arg0) end
+function BurntToDeath:exit(owner) end
 
 
 ------------------------------------

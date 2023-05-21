@@ -27,15 +27,15 @@ function AttachmentEditorState:enter() end
 function AttachmentEditorState:exit() end
 
 --- @public
---- @param arg0 String
+--- @param func String
 --- @return Object
-function AttachmentEditorState:fromLua0(arg0) end
+function AttachmentEditorState:fromLua0(func) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
+--- @param func String
+--- @param arg0 Object
 --- @return Object
-function AttachmentEditorState:fromLua1(arg0, arg1) end
+function AttachmentEditorState:fromLua1(func, arg0) end
 
 --- @public
 --- @return void

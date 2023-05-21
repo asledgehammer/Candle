@@ -1,6 +1,7 @@
 --- @meta
 
---- @class StorySound: Object
+--- @class StorySound
+--- Turbo
 StorySound = {};
 
 ------------------------------------
@@ -21,20 +22,20 @@ function StorySound:getName() end
 
 --- @public
 --- @return long
---- @overload fun(arg0: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float)
+--- @overload fun(volumeOverride: float)
+--- @overload fun(x: float, y: float, z: float, minRange: float, maxRange: float)
+--- @overload fun(volumeMod: float, x: float, y: float, z: float, minRange: float, maxRange: float)
 function StorySound:playSound() end
 
 --- @public
---- @param arg0 float
+--- @param baseVolume float
 --- @return void
-function StorySound:setBaseVolume(arg0) end
+function StorySound:setBaseVolume(baseVolume) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function StorySound:setName(arg0) end
+function StorySound:setName(name) end
 
 
 ------------------------------------
@@ -42,7 +43,7 @@ function StorySound:setName(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
+--- @param name String
+--- @param baseVol float
 --- @return StorySound
-function StorySound.new(arg0, arg1) end
+function StorySound.new(name, baseVol) end

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class SystemDisabler: Object
+--- @class SystemDisabler
 --- @field public doCharacterStats boolean
 --- @field public doEnableDetectOpenGLErrorsInTexture boolean
 --- @field public doKickInDebug boolean
@@ -58,57 +58,57 @@ function SystemDisabler.getdoVehicleLowRider() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return void
-function SystemDisabler.setDoCharacterStats(arg0) end
+function SystemDisabler.setDoCharacterStats(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return void
-function SystemDisabler.setDoPlayerCreation(arg0) end
+function SystemDisabler.setDoPlayerCreation(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return void
-function SystemDisabler.setDoSurvivorCreation(arg0) end
+function SystemDisabler.setDoSurvivorCreation(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return void
-function SystemDisabler.setDoZombieCreation(arg0) end
+function SystemDisabler.setDoZombieCreation(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function SystemDisabler.setEnableAdvancedSoundOptions(arg0) end
+function SystemDisabler.setEnableAdvancedSoundOptions(enable) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return void
-function SystemDisabler.setObjectStateSyncEnable(arg0) end
+function SystemDisabler.setObjectStateSyncEnable(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return void
-function SystemDisabler.setOverridePOVCharacters(arg0) end
+function SystemDisabler.setOverridePOVCharacters(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return void
-function SystemDisabler.setVehiclesEverywhere(arg0) end
+function SystemDisabler.setVehiclesEverywhere(bDo) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bDo boolean
 --- @return void
-function SystemDisabler.setWorldSyncEnable(arg0) end
+function SystemDisabler.setWorldSyncEnable(bDo) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AttachedLocationGroup: Object
+--- @class AttachedLocationGroup
 AttachedLocationGroup = {};
 
 ------------------------------------
@@ -8,29 +8,29 @@ AttachedLocationGroup = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return void
-function AttachedLocationGroup:checkValid(arg0) end
+function AttachedLocationGroup:checkValid(locationId) end
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return AttachedLocation
-function AttachedLocationGroup:getLocation(arg0) end
+function AttachedLocationGroup:getLocation(locationId) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return AttachedLocation
-function AttachedLocationGroup:getLocationByIndex(arg0) end
+function AttachedLocationGroup:getLocationByIndex(index) end
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return AttachedLocation
-function AttachedLocationGroup:getOrCreateLocation(arg0) end
+function AttachedLocationGroup:getOrCreateLocation(locationId) end
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return int
-function AttachedLocationGroup:indexOf(arg0) end
+function AttachedLocationGroup:indexOf(locationId) end
 
 --- @public
 --- @return int
@@ -42,6 +42,6 @@ function AttachedLocationGroup:size() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return AttachedLocationGroup
-function AttachedLocationGroup.new(arg0) end
+function AttachedLocationGroup.new(id) end

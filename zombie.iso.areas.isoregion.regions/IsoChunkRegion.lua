@@ -1,6 +1,7 @@
 --- @meta
 
---- @class IsoChunkRegion: Object
+--- @class IsoChunkRegion
+--- TurboTuTone.
 --- @implement IChunkRegion
 IsoChunkRegion = {};
 
@@ -13,14 +14,14 @@ IsoChunkRegion = {};
 function IsoChunkRegion:addChunkBorderSquaresCnt() end
 
 --- @public
---- @param arg0 IsoChunkRegion
+--- @param neighbor IsoChunkRegion
 --- @return void
-function IsoChunkRegion:addConnectedNeighbor(arg0) end
+function IsoChunkRegion:addConnectedNeighbor(neighbor) end
 
 --- @public
---- @param arg0 IsoChunkRegion
+--- @param neighbor IsoChunkRegion
 --- @return void
-function IsoChunkRegion:addNeighbor(arg0) end
+function IsoChunkRegion:addNeighbor(neighbor) end
 
 --- @public
 --- @return void
@@ -31,14 +32,14 @@ function IsoChunkRegion:addRoof() end
 function IsoChunkRegion:addSquareCount() end
 
 --- @public
---- @param arg0 IsoChunkRegion
+--- @param n IsoChunkRegion
 --- @return boolean
-function IsoChunkRegion:containsConnectedNeighbor(arg0) end
+function IsoChunkRegion:containsConnectedNeighbor(n) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return boolean
-function IsoChunkRegion:containsConnectedNeighborID(arg0) end
+function IsoChunkRegion:containsConnectedNeighborID(id) end
 
 --- @public
 --- @return int
@@ -93,15 +94,15 @@ function IsoChunkRegion:getzLayer() end
 function IsoChunkRegion:resetRoofCnt() end
 
 --- @public
---- @param arg0 byte
---- @param arg1 boolean
+--- @param dir byte
+--- @param b boolean
 --- @return void
-function IsoChunkRegion:setEnclosed(arg0, arg1) end
+function IsoChunkRegion:setEnclosed(dir, b) end
 
 --- @public
---- @param arg0 IsoWorldRegion
+--- @param mr IsoWorldRegion
 --- @return void
-function IsoChunkRegion:setIsoWorldRegion(arg0) end
+function IsoChunkRegion:setIsoWorldRegion(mr) end
 
 --- @public
 --- @return IsoWorldRegion

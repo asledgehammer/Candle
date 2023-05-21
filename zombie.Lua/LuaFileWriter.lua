@@ -1,6 +1,6 @@
 --- @meta
 
---- @class LuaFileWriter: Object
+--- @class LuaFileWriter
 LuaFileWriter = {};
 
 ------------------------------------
@@ -12,14 +12,14 @@ LuaFileWriter = {};
 function LuaFileWriter:close() end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function LuaFileWriter:write(arg0) end
+function LuaFileWriter:write(str) end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function LuaFileWriter:writeln(arg0) end
+function LuaFileWriter:writeln(str) end
 
 
 ------------------------------------
@@ -27,6 +27,6 @@ function LuaFileWriter:writeln(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 PrintWriter
+--- @param writer PrintWriter
 --- @return LuaFileWriter
-function LuaFileWriter.new(arg0) end
+function LuaFileWriter.new(writer) end

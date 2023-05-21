@@ -1,6 +1,6 @@
 --- @meta
 
---- @class KahluaUtil: Object
+--- @class KahluaUtil
 KahluaUtil = {};
 
 ------------------------------------

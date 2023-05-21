@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BaseSoundBank: Object
+--- @class BaseSoundBank
 --- @field public instance BaseSoundBank
 BaseSoundBank = {};
 
@@ -9,30 +9,30 @@ BaseSoundBank = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
+--- @param alias String
+--- @param grass String
+--- @param wood String
+--- @param concrete String
+--- @param upstairs String
 --- @return void
-function BaseSoundBank:addFootstep(arg0, arg1, arg2, arg3, arg4) end
+function BaseSoundBank:addFootstep(alias, grass, wood, concrete, upstairs) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 float
+--- @param alias String
+--- @param sound String
+--- @param priority float
 --- @return void
-function BaseSoundBank:addVoice(arg0, arg1, arg2) end
+function BaseSoundBank:addVoice(alias, sound, priority) end
 
 --- @public
---- @param arg0 String
+--- @param alias String
 --- @return FMODFootstep
-function BaseSoundBank:getFootstep(arg0) end
+function BaseSoundBank:getFootstep(alias) end
 
 --- @public
---- @param arg0 String
+--- @param alias String
 --- @return FMODVoice
-function BaseSoundBank:getVoice(arg0) end
+function BaseSoundBank:getVoice(alias) end
 
 
 ------------------------------------

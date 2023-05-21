@@ -1,6 +1,6 @@
 --- @meta
 
---- @class TileOverlays: Object
+--- @class TileOverlays
 --- @field public instance TileOverlays
 TileOverlays = {};
 
@@ -18,19 +18,19 @@ function TileOverlays:Reset() end
 function TileOverlays:addOverlays(arg0) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return void
-function TileOverlays:fixTableTopOverlays(arg0) end
+function TileOverlays:fixTableTopOverlays(square) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function TileOverlays:hasOverlays(arg0) end
+function TileOverlays:hasOverlays(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return void
-function TileOverlays:updateTileOverlaySprite(arg0) end
+function TileOverlays:updateTileOverlaySprite(obj) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class WorldSoundManager: Object
+--- @class WorldSoundManager
 --- @field public instance WorldSoundManager
 WorldSoundManager = {};
 
@@ -13,40 +13,40 @@ WorldSoundManager = {};
 function WorldSoundManager:KillCell() end
 
 --- @public
---- @param arg0 Object
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
+--- @param source Object
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param radius int
+--- @param volume int
 --- @return WorldSound
---- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean)
---- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float)
---- @overload fun(arg0: Object, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: boolean, arg7: float, arg8: float, arg9: boolean, arg10: boolean, arg11: boolean)
-function WorldSoundManager:addSound(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean)
+--- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean, zombieIgnoreDist: float, stressMod: float)
+--- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean, zombieIgnoreDist: float, stressMod: float, sourceIsZombie: boolean, doSend: boolean, remote: boolean)
+function WorldSoundManager:addSound(source, x, y, z, radius, volume) end
 
 --- @public
---- @param arg0 Object
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 boolean
+--- @param source Object
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param radius int
+--- @param volume int
+--- @param StressHumans boolean
 --- @return WorldSound
-function WorldSoundManager:addSoundRepeating(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function WorldSoundManager:addSoundRepeating(source, x, y, z, radius, volume, StressHumans) end
+
+--- @public
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param ignoreBySameType boolean
+--- @param zom IsoZombie
+--- @return ResultBiggestSound
+function WorldSoundManager:getBiggestSoundZomb(x, y, z, ignoreBySameType, zom) end
 
 --- @public
 --- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 boolean
---- @param arg4 IsoZombie
---- @return ResultBiggestSound
-function WorldSoundManager:getBiggestSoundZomb(arg0, arg1, arg2, arg3, arg4) end
-
---- @public
---- @param arg0 IsoZombie
 --- @return float
 function WorldSoundManager:getHearingMultiplier(arg0) end
 
@@ -61,21 +61,21 @@ function WorldSoundManager:getNew() end
 function WorldSoundManager:getSoundAttract(arg0, arg1) end
 
 --- @public
---- @param arg0 IsoZombie
+--- @param zom IsoZombie
 --- @return WorldSound
-function WorldSoundManager:getSoundZomb(arg0) end
+function WorldSoundManager:getSoundZomb(zom) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return float
-function WorldSoundManager:getStressFromSounds(arg0, arg1, arg2) end
+function WorldSoundManager:getStressFromSounds(x, y, z) end
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return void
-function WorldSoundManager:init(arg0) end
+function WorldSoundManager:init(cell) end
 
 --- @public
 --- @return void

@@ -30,43 +30,43 @@ function MoodlesUI.getInstance() end
 function MoodlesUI:CurrentlyAnimating() end
 
 --- @public
---- @param arg0 UIElement
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param el UIElement
+--- @param t int
+--- @param r int
+--- @param b int
+--- @param l int
 --- @return void
-function MoodlesUI:Nest(arg0, arg1, arg2, arg3, arg4) end
+function MoodlesUI:Nest(el, t, r, b, l) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param dx double
+--- @param dy double
 --- @return Boolean
-function MoodlesUI:onMouseMove(arg0, arg1) end
+function MoodlesUI:onMouseMove(dx, dy) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param dx double
+--- @param dy double
 --- @return void
-function MoodlesUI:onMouseMoveOutside(arg0, arg1) end
+function MoodlesUI:onMouseMoveOutside(dx, dy) end
 
 --- @public
 --- @return void
 function MoodlesUI:render() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function MoodlesUI:setCharacter(arg0) end
+function MoodlesUI:setCharacter(chr) end
 
 --- @public
 --- @return void
 function MoodlesUI:update() end
 
 --- @public
---- @param arg0 MoodleType
+--- @param Moodle MoodleType
 --- @return void
-function MoodlesUI:wiggle(arg0) end
+function MoodlesUI:wiggle(Moodle) end
 
 
 ------------------------------------

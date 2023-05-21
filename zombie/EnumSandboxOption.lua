@@ -42,14 +42,14 @@ function EnumSandboxOption:getTranslatedName() end
 function EnumSandboxOption:getValueTranslation() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return String
-function EnumSandboxOption:getValueTranslationByIndex(arg0) end
+function EnumSandboxOption:getValueTranslationByIndex(index) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return String
-function EnumSandboxOption:getValueTranslationByIndexOrNull(arg0) end
+function EnumSandboxOption:getValueTranslationByIndexOrNull(index) end
 
 --- @public
 --- @return boolean
@@ -60,19 +60,19 @@ function EnumSandboxOption:isCustom() end
 function EnumSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 String
+--- @param pageName String
 --- @return SandboxOption
-function EnumSandboxOption:setPageName(arg0) end
+function EnumSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 String
+--- @param translation String
 --- @return SandboxOption
-function EnumSandboxOption:setTranslation(arg0) end
+function EnumSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 String
+--- @param translation String
 --- @return EnumSandboxOption
-function EnumSandboxOption:setValueTranslation(arg0) end
+function EnumSandboxOption:setValueTranslation(translation) end
 
 --- @public
 --- @param arg0 KahluaTable
@@ -85,9 +85,9 @@ function EnumSandboxOption:toTable(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
+--- @param owner SandboxOptions
+--- @param name String
+--- @param numValues int
+--- @param defaultValue int
 --- @return EnumSandboxOption
-function EnumSandboxOption.new(arg0, arg1, arg2, arg3) end
+function EnumSandboxOption.new(owner, name, numValues, defaultValue) end

@@ -19,24 +19,24 @@ function ClimbSheetRopeState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbSheetRopeState:enter(arg0) end
+function ClimbSheetRopeState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbSheetRopeState:execute(arg0) end
+function ClimbSheetRopeState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbSheetRopeState:exit(arg0) end
+function ClimbSheetRopeState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return float
-function ClimbSheetRopeState:getClimbSheetRopeSpeed(arg0) end
+function ClimbSheetRopeState:getClimbSheetRopeSpeed(owner) end
 
 
 ------------------------------------

@@ -36,14 +36,14 @@ function StringConfigOption:getValueAsObject() end
 function StringConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return boolean
-function StringConfigOption:isValidString(arg0) end
+function StringConfigOption:isValidString(s) end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return void
-function StringConfigOption:parse(arg0) end
+function StringConfigOption:parse(s) end
 
 --- @public
 --- @return void
@@ -54,14 +54,14 @@ function StringConfigOption:resetToDefault() end
 function StringConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 String
+--- @param value String
 --- @return void
-function StringConfigOption:setValue(arg0) end
+function StringConfigOption:setValue(value) end
 
 --- @public
---- @param arg0 Object
+--- @param o Object
 --- @return void
-function StringConfigOption:setValueFromObject(arg0) end
+function StringConfigOption:setValueFromObject(o) end
 
 
 ------------------------------------
@@ -69,8 +69,8 @@ function StringConfigOption:setValueFromObject(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param name String
+--- @param defaultValue String
+--- @param maxLength int
 --- @return StringConfigOption
-function StringConfigOption.new(arg0, arg1, arg2) end
+function StringConfigOption.new(name, defaultValue, maxLength) end

@@ -18,25 +18,25 @@ function ZombieReanimateState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function ZombieReanimateState:animEvent(arg0, arg1) end
+function ZombieReanimateState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ZombieReanimateState:enter(arg0) end
+function ZombieReanimateState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ZombieReanimateState:execute(arg0) end
+function ZombieReanimateState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ZombieReanimateState:exit(arg0) end
+function ZombieReanimateState:exit(owner) end
 
 
 ------------------------------------

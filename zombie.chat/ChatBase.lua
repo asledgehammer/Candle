@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ChatBase: Object
+--- @class ChatBase
 ChatBase = {};
 
 ------------------------------------
@@ -8,23 +8,23 @@ ChatBase = {};
 ------------------------------------
 
 --- @public
---- @param arg0 short
+--- @param playerID short
 --- @return void
-function ChatBase:addMember(arg0) end
+function ChatBase:addMember(playerID) end
 
 --- @public
 --- @return void
 function ChatBase:close() end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return ChatMessage
-function ChatBase:createMessage(arg0) end
+function ChatBase:createMessage(text) end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return ServerChatMessage
-function ChatBase:createServerMessage(arg0) end
+function ChatBase:createServerMessage(text) end
 
 --- @public
 --- @return Color
@@ -43,14 +43,14 @@ function ChatBase:getJustAddedMembers() end
 function ChatBase:getJustRemovedMembers() end
 
 --- @public
---- @param arg0 ChatMessage
+--- @param msg ChatMessage
 --- @return String
-function ChatBase:getMessagePrefix(arg0) end
+function ChatBase:getMessagePrefix(msg) end
 
 --- @public
---- @param arg0 ChatMessage
+--- @param msg ChatMessage
 --- @return String
-function ChatBase:getMessageTextWithPrefix(arg0) end
+function ChatBase:getMessageTextWithPrefix(msg) end
 
 --- @public
 --- @return ChatMode
@@ -85,83 +85,83 @@ function ChatBase:isEnabled() end
 function ChatBase:isSendingToRadio() end
 
 --- @public
---- @param arg0 Short
+--- @param playerID Short
 --- @return void
-function ChatBase:leaveMember(arg0) end
+function ChatBase:leaveMember(playerID) end
 
 --- @public
---- @param arg0 ByteBufferWriter
---- @param arg1 ChatMessage
+--- @param b ByteBufferWriter
+--- @param msg ChatMessage
 --- @return void
-function ChatBase:packMessage(arg0, arg1) end
+function ChatBase:packMessage(b, msg) end
 
 --- @public
---- @param arg0 Short
+--- @param playerID Short
 --- @return void
-function ChatBase:removeMember(arg0) end
+function ChatBase:removeMember(playerID) end
 
 --- @public
---- @param arg0 ServerChatMessage
+--- @param msg ChatMessage
 --- @return void
-function ChatBase:sendMessageToChatMembers(arg0) end
+function ChatBase:sendMessageToChatMembers(msg) end
 
 --- @public
---- @param arg0 UdpConnection
---- @param arg1 ChatMessage
+--- @param connection UdpConnection
+--- @param msg ChatMessage
 --- @return void
-function ChatBase:sendMessageToPlayer(arg0, arg1) end
+function ChatBase:sendMessageToPlayer(connection, msg) end
 
 --- @public
---- @param arg0 UdpConnection
+--- @param playerConnection UdpConnection
 --- @return void
-function ChatBase:sendPlayerJoinChatPacket(arg0) end
+function ChatBase:sendPlayerJoinChatPacket(playerConnection) end
 
 --- @public
---- @param arg0 UdpConnection
+--- @param playerID short
 --- @return void
-function ChatBase:sendPlayerLeaveChatPacket(arg0) end
+function ChatBase:sendPlayerLeaveChatPacket(playerID) end
 
 --- @public
---- @param arg0 ChatMessage
---- @param arg1 DeviceData
+--- @param msg ChatMessage
+--- @param deviceData DeviceData
 --- @return void
-function ChatBase:sendToServer(arg0, arg1) end
+function ChatBase:sendToServer(msg, deviceData) end
 
 --- @public
---- @param arg0 String
+--- @param fontSize String
 --- @return void
-function ChatBase:setFontSize(arg0) end
+function ChatBase:setFontSize(fontSize) end
 
 --- @public
---- @param arg0 ChatSettings
+--- @param settings ChatSettings
 --- @return void
-function ChatBase:setSettings(arg0) end
+function ChatBase:setSettings(settings) end
 
 --- @public
---- @param arg0 boolean
+--- @param showTimestamp boolean
 --- @return void
-function ChatBase:setShowTimestamp(arg0) end
+function ChatBase:setShowTimestamp(showTimestamp) end
 
 --- @public
---- @param arg0 boolean
+--- @param showTitle boolean
 --- @return void
-function ChatBase:setShowTitle(arg0) end
+function ChatBase:setShowTitle(showTitle) end
 
 --- @public
---- @param arg0 ChatMessage
+--- @param msg ChatMessage
 --- @return void
---- @overload fun(arg0: String, arg1: String)
-function ChatBase:showMessage(arg0) end
+--- @overload fun(text: String, author: String)
+function ChatBase:showMessage(msg) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param players ArrayList
 --- @return void
-function ChatBase:syncMembersByUsernames(arg0) end
+function ChatBase:syncMembersByUsernames(players) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return ChatMessage
-function ChatBase:unpackMessage(arg0) end
+function ChatBase:unpackMessage(bb) end
 
 
 ------------------------------------
@@ -169,9 +169,9 @@ function ChatBase:unpackMessage(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 ChatType
---- @param arg2 ChatTab
+--- @param id int
+--- @param type ChatType
+--- @param tab ChatTab
 --- @return ChatBase
---- @overload fun(arg0: ByteBuffer, arg1: ChatType, arg2: ChatTab, arg3: IsoPlayer)
-function ChatBase.new(arg0, arg1, arg2) end
+--- @overload fun(bb: ByteBuffer, type: ChatType, tab: ChatTab, owner: IsoPlayer)
+function ChatBase.new(id, type, tab) end

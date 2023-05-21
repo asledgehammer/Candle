@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoMarkers: Object
+--- @class IsoMarkers
 --- @field public instance IsoMarkers
 IsoMarkers = {};
 
@@ -9,50 +9,50 @@ IsoMarkers = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param gs IsoGridSquare
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return CircleIsoMarker
-function IsoMarkers:addCircleIsoMarker(arg0, arg1, arg2, arg3, arg4) end
+function IsoMarkers:addCircleIsoMarker(gs, r, g, b, a) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoGridSquare
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 boolean
---- @param arg6 boolean
+--- @param spriteName String
+--- @param gs IsoGridSquare
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param doAlpha boolean
+--- @param doIsoObject boolean
 --- @return IsoMarker
 --- @overload fun(arg0: KahluaTable, arg1: KahluaTable, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean, arg7: boolean)
 --- @overload fun(arg0: KahluaTable, arg1: KahluaTable, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean, arg7: boolean, arg8: float, arg9: float, arg10: float)
-function IsoMarkers:addIsoMarker(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoMarkers:addIsoMarker(spriteName, gs, r, g, b, doAlpha, doIsoObject) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return CircleIsoMarker
-function IsoMarkers:getCircleIsoMarker(arg0) end
+function IsoMarkers:getCircleIsoMarker(id) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return IsoMarker
-function IsoMarkers:getIsoMarker(arg0) end
+function IsoMarkers:getIsoMarker(id) end
 
 --- @public
 --- @return void
 function IsoMarkers:init() end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return boolean
-function IsoMarkers:removeCircleIsoMarker(arg0) end
+function IsoMarkers:removeCircleIsoMarker(id) end
 
 --- @public
---- @param arg0 IsoMarker
+--- @param id int
 --- @return boolean
-function IsoMarkers:removeIsoMarker(arg0) end
+function IsoMarkers:removeIsoMarker(id) end
 
 --- @public
 --- @return void

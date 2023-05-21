@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PlayerHomingPoint: Object
+--- @class PlayerHomingPoint
 PlayerHomingPoint = {};
 
 ------------------------------------
@@ -100,127 +100,127 @@ function PlayerHomingPoint:isRemoved() end
 function PlayerHomingPoint:remove() end
 
 --- @public
---- @param arg0 float
+--- @param a float
 --- @return void
-function PlayerHomingPoint:setA(arg0) end
+function PlayerHomingPoint:setA(a) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return void
-function PlayerHomingPoint:setActive(arg0) end
+function PlayerHomingPoint:setActive(active) end
 
 --- @public
---- @param arg0 float
+--- @param angleLerpVal float
 --- @return void
-function PlayerHomingPoint:setAngleLerpVal(arg0) end
+function PlayerHomingPoint:setAngleLerpVal(angleLerpVal) end
 
 --- @public
---- @param arg0 float
+--- @param b float
 --- @return void
-function PlayerHomingPoint:setB(arg0) end
+function PlayerHomingPoint:setB(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param customTargetAngle boolean
 --- @return void
-function PlayerHomingPoint:setCustomTargetAngle(arg0) end
+function PlayerHomingPoint:setCustomTargetAngle(customTargetAngle) end
 
 --- @public
---- @param arg0 float
+--- @param g float
 --- @return void
-function PlayerHomingPoint:setG(arg0) end
+function PlayerHomingPoint:setG(g) end
 
 --- @public
 --- @return void
 function PlayerHomingPoint:setHighCounter() end
 
 --- @public
---- @param arg0 float
+--- @param homeOnOffsetX float
 --- @return void
-function PlayerHomingPoint:setHomeOnOffsetX(arg0) end
+function PlayerHomingPoint:setHomeOnOffsetX(homeOnOffsetX) end
 
 --- @public
---- @param arg0 float
+--- @param homeOnOffsetY float
 --- @return void
-function PlayerHomingPoint:setHomeOnOffsetY(arg0) end
+function PlayerHomingPoint:setHomeOnOffsetY(homeOnOffsetY) end
 
 --- @public
---- @param arg0 int
+--- @param homeOnTargetDist int
 --- @return void
-function PlayerHomingPoint:setHomeOnTargetDist(arg0) end
+function PlayerHomingPoint:setHomeOnTargetDist(homeOnTargetDist) end
 
 --- @public
---- @param arg0 boolean
+--- @param homeOnTargetInView boolean
 --- @return void
-function PlayerHomingPoint:setHomeOnTargetInView(arg0) end
+function PlayerHomingPoint:setHomeOnTargetInView(homeOnTargetInView) end
 
 --- @public
---- @param arg0 float
+--- @param movementLerpVal float
 --- @return void
-function PlayerHomingPoint:setMovementLerpVal(arg0) end
+function PlayerHomingPoint:setMovementLerpVal(movementLerpVal) end
 
 --- @public
---- @param arg0 float
+--- @param r float
 --- @return void
-function PlayerHomingPoint:setR(arg0) end
+function PlayerHomingPoint:setR(r) end
 
 --- @public
---- @param arg0 float
+--- @param renderHeight float
 --- @return void
-function PlayerHomingPoint:setRenderHeight(arg0) end
+function PlayerHomingPoint:setRenderHeight(renderHeight) end
 
 --- @public
---- @param arg0 float
+--- @param renderOffsetX float
 --- @return void
-function PlayerHomingPoint:setRenderOffsetX(arg0) end
+function PlayerHomingPoint:setRenderOffsetX(renderOffsetX) end
 
 --- @public
---- @param arg0 float
+--- @param renderOffsetY float
 --- @return void
-function PlayerHomingPoint:setRenderOffsetY(arg0) end
+function PlayerHomingPoint:setRenderOffsetY(renderOffsetY) end
 
 --- @public
---- @param arg0 float
+--- @param renderWidth float
 --- @return void
-function PlayerHomingPoint:setRenderWidth(arg0) end
+function PlayerHomingPoint:setRenderWidth(renderWidth) end
 
 --- @public
---- @param arg0 float
+--- @param stickToCharDist float
 --- @return void
-function PlayerHomingPoint:setStickToCharDist(arg0) end
+function PlayerHomingPoint:setStickToCharDist(stickToCharDist) end
 
 --- @public
 --- @return void
 function PlayerHomingPoint:setTableSurface() end
 
 --- @public
---- @param arg0 float
+--- @param targetAngle float
 --- @return void
-function PlayerHomingPoint:setTargetAngle(arg0) end
+function PlayerHomingPoint:setTargetAngle(targetAngle) end
 
 --- @public
---- @param arg0 String
+--- @param texname String
 --- @return void
-function PlayerHomingPoint:setTexture(arg0) end
+function PlayerHomingPoint:setTexture(texname) end
 
 --- @public
---- @param arg0 int
+--- @param x int
 --- @return void
-function PlayerHomingPoint:setX(arg0) end
+function PlayerHomingPoint:setX(x) end
 
 --- @public
---- @param arg0 float
+--- @param offset float
 --- @return void
-function PlayerHomingPoint:setXOffsetScaled(arg0) end
+function PlayerHomingPoint:setXOffsetScaled(offset) end
 
 --- @public
---- @param arg0 int
+--- @param y int
 --- @return void
-function PlayerHomingPoint:setY(arg0) end
+function PlayerHomingPoint:setY(y) end
 
 --- @public
---- @param arg0 float
+--- @param offset float
 --- @return void
-function PlayerHomingPoint:setYOffsetScaled(arg0) end
+function PlayerHomingPoint:setYOffsetScaled(offset) end
 
 
 ------------------------------------
@@ -228,6 +228,6 @@ function PlayerHomingPoint:setYOffsetScaled(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param plrIndex int
 --- @return PlayerHomingPoint
-function PlayerHomingPoint.new(arg0) end
+function PlayerHomingPoint.new(plrIndex) end

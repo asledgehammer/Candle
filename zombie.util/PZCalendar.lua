@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PZCalendar: Object
+--- @class PZCalendar
 PZCalendar = {};
 
 ------------------------------------
@@ -18,9 +18,9 @@ function PZCalendar.getInstance() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param field int
 --- @return int
-function PZCalendar:get(arg0) end
+function PZCalendar:get(field) end
 
 --- @public
 --- @return Date
@@ -31,23 +31,23 @@ function PZCalendar:getTime() end
 function PZCalendar:getTimeInMillis() end
 
 --- @public
---- @param arg0 int
+--- @param year int
 --- @return boolean
-function PZCalendar:isLeapYear(arg0) end
+function PZCalendar:isLeapYear(year) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param year int
+--- @param month int
+--- @param dayOfMonth int
+--- @param hourOfDay int
+--- @param minute int
 --- @return void
-function PZCalendar:set(arg0, arg1, arg2, arg3, arg4) end
+function PZCalendar:set(year, month, dayOfMonth, hourOfDay, minute) end
 
 --- @public
---- @param arg0 long
+--- @param millis long
 --- @return void
-function PZCalendar:setTimeInMillis(arg0) end
+function PZCalendar:setTimeInMillis(millis) end
 
 
 ------------------------------------
@@ -55,6 +55,6 @@ function PZCalendar:setTimeInMillis(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 Calendar
+--- @param calendar Calendar
 --- @return PZCalendar
-function PZCalendar.new(arg0) end
+function PZCalendar.new(calendar) end

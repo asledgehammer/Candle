@@ -1,6 +1,7 @@
 --- @meta
 
---- @class HaloTextHelper: Object
+--- @class HaloTextHelper
+--- TurboTuTone.
 --- @field public COLOR_GREEN ColorRGB
 --- @field public COLOR_RED ColorRGB
 --- @field public COLOR_WHITE ColorRGB
@@ -12,12 +13,12 @@ HaloTextHelper = {};
 
 --- @public
 --- @static
---- @param arg0 IsoPlayer
---- @param arg1 String
+--- @param player IsoPlayer
+--- @param text String
 --- @return void
 --- @overload fun(arg0: IsoPlayer, arg1: String, arg2: ColorRGB)
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: int, arg3: int, arg4: int)
-function HaloTextHelper.addText(arg0, arg1) end
+--- @overload fun(player: IsoPlayer, text: String, r: int, g: int, b: int)
+function HaloTextHelper.addText(player, text) end
 
 --- @public
 --- @static
@@ -27,8 +28,8 @@ function HaloTextHelper.addText(arg0, arg1) end
 --- @param arg3 ColorRGB
 --- @return void
 --- @overload fun(arg0: IsoPlayer, arg1: String, arg2: boolean, arg3: ColorRGB, arg4: ColorRGB)
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: boolean, arg3: int, arg4: int, arg5: int)
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: boolean, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int, arg8: int)
+--- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, r: int, g: int, b: int)
+--- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, r: int, g: int, b: int, aR: int, aG: int, aB: int)
 function HaloTextHelper.addTextWithArrow(arg0, arg1, arg2, arg3) end
 
 --- @public

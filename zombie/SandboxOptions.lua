@@ -1,6 +1,6 @@
 --- @meta
 
---- @class SandboxOptions: Object
+--- @class SandboxOptions
 --- @field public instance SandboxOptions
 SandboxOptions = {};
 
@@ -20,9 +20,9 @@ function SandboxOptions.getInstance() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function SandboxOptions.isValidPresetName(arg0) end
+function SandboxOptions.isValidPresetName(name) end
 
 
 ------------------------------------
@@ -34,9 +34,9 @@ function SandboxOptions.isValidPresetName(arg0) end
 function SandboxOptions:applySettings() end
 
 --- @public
---- @param arg0 SandboxOptions
+--- @param other SandboxOptions
 --- @return void
-function SandboxOptions:copyValuesFrom(arg0) end
+function SandboxOptions:copyValuesFrom(other) end
 
 --- @public
 --- @return boolean
@@ -79,14 +79,14 @@ function SandboxOptions:getFoodLootModifier() end
 function SandboxOptions:getNumOptions() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return SandboxOption
-function SandboxOptions:getOptionByIndex(arg0) end
+function SandboxOptions:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return SandboxOption
-function SandboxOptions:getOptionByName(arg0) end
+function SandboxOptions:getOptionByName(name) end
 
 --- @public
 --- @return int
@@ -134,7 +134,7 @@ function SandboxOptions:initSandboxVars() end
 
 --- @public
 --- @return void
---- @overload fun(arg0: ByteBuffer)
+--- @overload fun(input: ByteBuffer)
 function SandboxOptions:load() end
 
 --- @public
@@ -142,82 +142,82 @@ function SandboxOptions:load() end
 function SandboxOptions:loadCurrentGameBinFile() end
 
 --- @public
---- @param arg0 String
+--- @param presetName String
 --- @return boolean
-function SandboxOptions:loadGameFile(arg0) end
+function SandboxOptions:loadGameFile(presetName) end
 
 --- @public
---- @param arg0 String
+--- @param presetName String
 --- @return boolean
-function SandboxOptions:loadPresetFile(arg0) end
+function SandboxOptions:loadPresetFile(presetName) end
 
 --- @public
---- @param arg0 String
+--- @param serverName String
 --- @return boolean
-function SandboxOptions:loadServerLuaFile(arg0) end
+function SandboxOptions:loadServerLuaFile(serverName) end
 
 --- @public
---- @param arg0 String
+--- @param serverName String
 --- @return boolean
-function SandboxOptions:loadServerTextFile(arg0) end
+function SandboxOptions:loadServerTextFile(serverName) end
 
 --- @public
---- @param arg0 String
+--- @param serverName String
 --- @return boolean
-function SandboxOptions:loadServerZombiesFile(arg0) end
+function SandboxOptions:loadServerZombiesFile(serverName) end
 
 --- @public
 --- @return SandboxOptions
 function SandboxOptions:newCopy() end
 
 --- @public
---- @param arg0 CustomSandboxOption
+--- @param customSandboxOption CustomSandboxOption
 --- @return void
-function SandboxOptions:newCustomOption(arg0) end
+function SandboxOptions:newCustomOption(customSandboxOption) end
 
 --- @public
---- @param arg0 int
+--- @param electricityShutoffModifier int
 --- @return int
-function SandboxOptions:randomElectricityShut(arg0) end
+function SandboxOptions:randomElectricityShut(electricityShutoffModifier) end
 
 --- @public
---- @param arg0 int
+--- @param waterShutoffModifier int
 --- @return int
-function SandboxOptions:randomWaterShut(arg0) end
+function SandboxOptions:randomWaterShut(waterShutoffModifier) end
 
 --- @public
 --- @return void
 function SandboxOptions:resetToDefault() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function SandboxOptions:save(arg0) end
+function SandboxOptions:save(output) end
 
 --- @public
---- @param arg0 String
+--- @param presetName String
 --- @return boolean
-function SandboxOptions:saveGameFile(arg0) end
+function SandboxOptions:saveGameFile(presetName) end
 
 --- @public
---- @param arg0 String
+--- @param presetName String
 --- @return boolean
-function SandboxOptions:savePresetFile(arg0) end
+function SandboxOptions:savePresetFile(presetName) end
 
 --- @public
---- @param arg0 String
+--- @param serverName String
 --- @return boolean
-function SandboxOptions:saveServerLuaFile(arg0) end
+function SandboxOptions:saveServerLuaFile(serverName) end
 
 --- @public
 --- @return void
 function SandboxOptions:sendToServer() end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
+--- @param name String
+--- @param o Object
 --- @return void
-function SandboxOptions:set(arg0, arg1) end
+function SandboxOptions:set(name, o) end
 
 --- @public
 --- @return void

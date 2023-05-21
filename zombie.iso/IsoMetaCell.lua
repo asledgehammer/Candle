@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoMetaCell: Object
+--- @class IsoMetaCell
 IsoMetaCell = {};
 
 ------------------------------------
@@ -12,19 +12,19 @@ IsoMetaCell = {};
 function IsoMetaCell:Dispose() end
 
 --- @public
---- @param arg0 RoomDef
---- @param arg1 int
---- @param arg2 int
+--- @param room RoomDef
+--- @param cellX int
+--- @param cellY int
 --- @return void
-function IsoMetaCell:addRoom(arg0, arg1, arg2) end
+function IsoMetaCell:addRoom(room, cellX, cellY) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 int
---- @param arg2 int
---- @param arg3 String
+--- @param def BuildingDef
+--- @param triggerRange int
+--- @param zombieExclusionRange int
+--- @param type String
 --- @return void
-function IsoMetaCell:addTrigger(arg0, arg1, arg2, arg3) end
+function IsoMetaCell:addTrigger(def, triggerRange, zombieExclusionRange, type) end
 
 --- @public
 --- @param arg0 Zone
@@ -38,34 +38,34 @@ function IsoMetaCell:addZone(arg0, arg1, arg2) end
 function IsoMetaCell:checkTriggers() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return IsoMetaChunk
-function IsoMetaCell:getChunk(arg0, arg1) end
+function IsoMetaCell:getChunk(x, y) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 ArrayList
+--- @param x int
+--- @param y int
+--- @param w int
+--- @param h int
+--- @param result ArrayList
 --- @return void
-function IsoMetaCell:getRoomsIntersecting(arg0, arg1, arg2, arg3, arg4) end
+function IsoMetaCell:getRoomsIntersecting(x, y, w, h, result) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 ArrayList
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param w int
+--- @param h int
+--- @param result ArrayList
 --- @return void
-function IsoMetaCell:getZonesIntersecting(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoMetaCell:getZonesIntersecting(x, y, z, w, h, result) end
 
 --- @public
---- @param arg0 Set
+--- @param result Set
 --- @return void
-function IsoMetaCell:getZonesUnique(arg0) end
+function IsoMetaCell:getZonesUnique(result) end
 
 --- @public
 --- @param arg0 Zone
@@ -78,7 +78,7 @@ function IsoMetaCell:removeZone(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return IsoMetaCell
-function IsoMetaCell.new(arg0, arg1) end
+function IsoMetaCell.new(wx, wy) end

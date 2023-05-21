@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Metabolics: Enum
+--- TurboTuTone.
 --- @field public ClimbRope Metabolics
 --- @field public Default Metabolics
 --- @field public DefaultExercise Metabolics
@@ -33,21 +34,21 @@ Metabolics = {};
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param met float
 --- @return float
-function Metabolics.MetToBtuHr(arg0) end
+function Metabolics.MetToBtuHr(met) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param met float
 --- @return float
-function Metabolics.MetToW(arg0) end
+function Metabolics.MetToW(met) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param met float
 --- @return float
-function Metabolics.MetToWm2(arg0) end
+function Metabolics.MetToWm2(met) end
 
 --- @public
 --- @static

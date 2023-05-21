@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BuildingDef: Object
+--- @class BuildingDef
 BuildingDef = {};
 
 ------------------------------------
@@ -8,24 +8,24 @@ BuildingDef = {};
 ------------------------------------
 
 --- @public
---- @param arg0 ArrayList
+--- @param tempRooms ArrayList
 --- @return void
-function BuildingDef:CalculateBounds(arg0) end
+function BuildingDef:CalculateBounds(tempRooms) end
 
 --- @public
 --- @return void
 function BuildingDef:Dispose() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param cellX int
+--- @param cellY int
 --- @return long
-function BuildingDef:calculateMetaID(arg0, arg1) end
+function BuildingDef:calculateMetaID(cellX, cellY) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function BuildingDef:containsRoom(arg0) end
+function BuildingDef:containsRoom(name) end
 
 --- @public
 --- @return int
@@ -67,14 +67,14 @@ function BuildingDef:getKeyId() end
 function BuildingDef:getKeySpawned() end
 
 --- @public
---- @param arg0 int
+--- @param minArea int
 --- @return RoomDef
-function BuildingDef:getRandomRoom(arg0) end
+function BuildingDef:getRandomRoom(minArea) end
 
 --- @public
---- @param arg0 String
+--- @param roomName String
 --- @return RoomDef
-function BuildingDef:getRoom(arg0) end
+function BuildingDef:getRoom(roomName) end
 
 --- @public
 --- @return ArrayList
@@ -129,10 +129,10 @@ function BuildingDef:isFullyStreamedIn() end
 function BuildingDef:isHasBeenVisited() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return boolean
-function BuildingDef:overlapsChunk(arg0, arg1) end
+function BuildingDef:overlapsChunk(wx, wy) end
 
 --- @public
 --- @return void
@@ -143,29 +143,29 @@ function BuildingDef:recalculate() end
 function BuildingDef:refreshSquares() end
 
 --- @public
---- @param arg0 boolean
+--- @param alarm boolean
 --- @return void
-function BuildingDef:setAlarmed(arg0) end
+function BuildingDef:setAlarmed(alarm) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function BuildingDef:setAllExplored(arg0) end
+function BuildingDef:setAllExplored(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param hasBeenVisited boolean
 --- @return void
-function BuildingDef:setHasBeenVisited(arg0) end
+function BuildingDef:setHasBeenVisited(hasBeenVisited) end
 
 --- @public
---- @param arg0 int
+--- @param keyId int
 --- @return void
-function BuildingDef:setKeyId(arg0) end
+function BuildingDef:setKeyId(keyId) end
 
 --- @public
---- @param arg0 int
+--- @param keySpawned int
 --- @return void
-function BuildingDef:setKeySpawned(arg0) end
+function BuildingDef:setKeySpawned(keySpawned) end
 
 
 ------------------------------------

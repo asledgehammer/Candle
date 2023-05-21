@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BaseAmbientStreamManager: Object
+--- @class BaseAmbientStreamManager
 BaseAmbientStreamManager = {};
 
 ------------------------------------
@@ -8,44 +8,44 @@ BaseAmbientStreamManager = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 float
+--- @param name String
+--- @param x int
+--- @param y int
+--- @param radius int
+--- @param volume float
 --- @return void
-function BaseAmbientStreamManager:addAmbient(arg0, arg1, arg2, arg3, arg4) end
+function BaseAmbientStreamManager:addAmbient(name, x, y, radius, volume) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 int
---- @param arg3 String
+--- @param x float
+--- @param y float
+--- @param z int
+--- @param name String
 --- @return void
-function BaseAmbientStreamManager:addAmbientEmitter(arg0, arg1, arg2, arg3) end
+function BaseAmbientStreamManager:addAmbientEmitter(x, y, z, name) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
---- @param arg5 boolean
+--- @param name String
+--- @param vol float
+--- @param bIndoors boolean
+--- @param bRain boolean
+--- @param bNight boolean
+--- @param bDay boolean
 --- @return void
-function BaseAmbientStreamManager:addBlend(arg0, arg1, arg2, arg3, arg4, arg5) end
+function BaseAmbientStreamManager:addBlend(name, vol, bIndoors, bRain, bNight, bDay) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 int
---- @param arg3 String
+--- @param x float
+--- @param y float
+--- @param z int
+--- @param name String
 --- @return void
-function BaseAmbientStreamManager:addDaytimeAmbientEmitter(arg0, arg1, arg2, arg3) end
+function BaseAmbientStreamManager:addDaytimeAmbientEmitter(x, y, z, name) end
 
 --- @public
---- @param arg0 RoomDef
+--- @param room RoomDef
 --- @return void
-function BaseAmbientStreamManager:doAlarm(arg0) end
+function BaseAmbientStreamManager:doAlarm(room) end
 
 --- @public
 --- @return void

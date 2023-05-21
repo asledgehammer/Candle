@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AttachedLocation: Object
+--- @class AttachedLocation
 AttachedLocation = {};
 
 ------------------------------------
@@ -16,9 +16,9 @@ function AttachedLocation:getAttachmentName() end
 function AttachedLocation:getId() end
 
 --- @public
---- @param arg0 String
+--- @param attachmentName String
 --- @return void
-function AttachedLocation:setAttachmentName(arg0) end
+function AttachedLocation:setAttachmentName(attachmentName) end
 
 
 ------------------------------------
@@ -26,7 +26,7 @@ function AttachedLocation:setAttachmentName(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 AttachedLocationGroup
---- @param arg1 String
+--- @param group AttachedLocationGroup
+--- @param id String
 --- @return AttachedLocation
-function AttachedLocation.new(arg0, arg1) end
+function AttachedLocation.new(group, id) end

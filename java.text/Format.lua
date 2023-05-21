@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Format: Object
+--- @class Format
 --- @implement Serializable
 --- @implement Cloneable
 Format = {};

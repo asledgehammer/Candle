@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BeardStyles: Object
+--- @class BeardStyles
 --- @field public instance BeardStyles
 BeardStyles = {};
 
@@ -10,9 +10,9 @@ BeardStyles = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param filename String
 --- @return BeardStyles
-function BeardStyles.Parse(arg0) end
+function BeardStyles.Parse(filename) end
 
 --- @public
 --- @static
@@ -26,9 +26,9 @@ function BeardStyles.init() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param filename String
 --- @return BeardStyles
-function BeardStyles.parse(arg0) end
+function BeardStyles.parse(filename) end
 
 
 ------------------------------------
@@ -36,9 +36,9 @@ function BeardStyles.parse(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return BeardStyle
-function BeardStyles:FindStyle(arg0) end
+function BeardStyles:FindStyle(name) end
 
 --- @public
 --- @return ArrayList
@@ -49,9 +49,9 @@ function BeardStyles:getAllStyles() end
 function BeardStyles:getInstance() end
 
 --- @public
---- @param arg0 String
+--- @param outfitName String
 --- @return String
-function BeardStyles:getRandomStyle(arg0) end
+function BeardStyles:getRandomStyle(outfitName) end
 
 
 ------------------------------------

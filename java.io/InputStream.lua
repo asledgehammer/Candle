@@ -1,6 +1,6 @@
 --- @meta
 
---- @class InputStream: Object
+--- @class InputStream
 --- @implement Closeable
 InputStream = {};
 

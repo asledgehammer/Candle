@@ -1,6 +1,6 @@
 --- @meta
 
---- @class TraitSlot: Object
+--- @class TraitSlot
 TraitSlot = {};
 
 ------------------------------------

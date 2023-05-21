@@ -25,9 +25,9 @@ function BooleanDebugOption:getValue() end
 function BooleanDebugOption:isDebugOnly() end
 
 --- @public
---- @param arg0 IDebugOptionGroup
+--- @param parent IDebugOptionGroup
 --- @return void
-function BooleanDebugOption:setParent(arg0) end
+function BooleanDebugOption:setParent(parent) end
 
 
 ------------------------------------
@@ -35,8 +35,8 @@ function BooleanDebugOption:setParent(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param name String
+--- @param debugOnly boolean
+--- @param defaultValue boolean
 --- @return BooleanDebugOption
-function BooleanDebugOption.new(arg0, arg1, arg2) end
+function BooleanDebugOption.new(name, debugOnly, defaultValue) end

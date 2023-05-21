@@ -13,20 +13,20 @@ MainScreenState = {};
 
 --- @public
 --- @static
---- @param arg0 Texture
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 Color
+--- @param tex Texture
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param col Color
 --- @return void
-function MainScreenState.DrawTexture(arg0, arg1, arg2, arg3, arg4, arg5) end
+function MainScreenState.DrawTexture(tex, x, y, width, height, col) end
 
 --- @public
 --- @static
---- @param arg0 BufferedImage
+--- @param image BufferedImage
 --- @return ByteBuffer
-function MainScreenState.convertToByteBuffer(arg0) end
+function MainScreenState.convertToByteBuffer(image) end
 
 --- @public
 --- @static
@@ -40,9 +40,9 @@ function MainScreenState.loadIcons() end
 
 --- @public
 --- @static
---- @param arg0 String[]
+--- @param args String[]
 --- @return void
-function MainScreenState.main(arg0) end
+function MainScreenState.main(args) end
 
 
 ------------------------------------
@@ -74,9 +74,9 @@ function MainScreenState:render() end
 function MainScreenState:renderBackground() end
 
 --- @public
---- @param arg0 ConnectToServerState
+--- @param state ConnectToServerState
 --- @return void
-function MainScreenState:setConnectToServerState(arg0) end
+function MainScreenState:setConnectToServerState(state) end
 
 --- @public
 --- @return StateAction

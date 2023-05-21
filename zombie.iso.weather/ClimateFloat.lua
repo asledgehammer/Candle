@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ClimateFloat: Object
+--- @class ClimateFloat
 ClimateFloat = {};
 
 ------------------------------------
@@ -48,10 +48,10 @@ function ClimateFloat:getOverride() end
 function ClimateFloat:getOverrideInterpolate() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param id int
+--- @param name String
 --- @return ClimateFloat
-function ClimateFloat:init(arg0, arg1) end
+function ClimateFloat:init(id, name) end
 
 --- @public
 --- @return boolean
@@ -62,45 +62,45 @@ function ClimateFloat:isEnableAdmin() end
 function ClimateFloat:isEnableOverride() end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function ClimateFloat:setAdminValue(arg0) end
+function ClimateFloat:setAdminValue(f) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateFloat:setEnableAdmin(arg0) end
+function ClimateFloat:setEnableAdmin(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateFloat:setEnableModded(arg0) end
+function ClimateFloat:setEnableModded(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateFloat:setEnableOverride(arg0) end
+function ClimateFloat:setEnableOverride(b) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function ClimateFloat:setFinalValue(arg0) end
+function ClimateFloat:setFinalValue(f) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function ClimateFloat:setModdedInterpolate(arg0) end
+function ClimateFloat:setModdedInterpolate(f) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function ClimateFloat:setModdedValue(arg0) end
+function ClimateFloat:setModdedValue(f) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param targ float
+--- @param inter float
 --- @return void
-function ClimateFloat:setOverride(arg0, arg1) end
+function ClimateFloat:setOverride(targ, inter) end
 
 
 ------------------------------------

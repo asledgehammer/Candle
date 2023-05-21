@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GridSquareMarker: Object
+--- @class GridSquareMarker
 GridSquareMarker = {};
 
 ------------------------------------
@@ -60,14 +60,14 @@ function GridSquareMarker:getY() end
 function GridSquareMarker:getZ() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
+--- @param texid String
+--- @param overlay String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param size float
 --- @return void
-function GridSquareMarker:init(arg0, arg1, arg2, arg3, arg4, arg5) end
+function GridSquareMarker:init(texid, overlay, x, y, z, size) end
 
 --- @public
 --- @return boolean
@@ -94,84 +94,84 @@ function GridSquareMarker:isScaleCircleTexture() end
 function GridSquareMarker:remove() end
 
 --- @public
---- @param arg0 float
+--- @param a float
 --- @return void
-function GridSquareMarker:setA(arg0) end
+function GridSquareMarker:setA(a) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return void
-function GridSquareMarker:setActive(arg0) end
+function GridSquareMarker:setActive(active) end
 
 --- @public
---- @param arg0 float
+--- @param alpha float
 --- @return void
-function GridSquareMarker:setAlpha(arg0) end
+function GridSquareMarker:setAlpha(alpha) end
 
 --- @public
---- @param arg0 float
+--- @param alphaMax float
 --- @return void
-function GridSquareMarker:setAlphaMax(arg0) end
+function GridSquareMarker:setAlphaMax(alphaMax) end
 
 --- @public
---- @param arg0 float
+--- @param alphaMin float
 --- @return void
-function GridSquareMarker:setAlphaMin(arg0) end
+function GridSquareMarker:setAlphaMin(alphaMin) end
 
 --- @public
---- @param arg0 float
+--- @param b float
 --- @return void
-function GridSquareMarker:setB(arg0) end
+function GridSquareMarker:setB(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param doAlpha boolean
 --- @return void
-function GridSquareMarker:setDoAlpha(arg0) end
+function GridSquareMarker:setDoAlpha(doAlpha) end
 
 --- @public
---- @param arg0 boolean
+--- @param doBlink boolean
 --- @return void
-function GridSquareMarker:setDoBlink(arg0) end
+function GridSquareMarker:setDoBlink(doBlink) end
 
 --- @public
---- @param arg0 float
+--- @param fadeSpeed float
 --- @return void
-function GridSquareMarker:setFadeSpeed(arg0) end
+function GridSquareMarker:setFadeSpeed(fadeSpeed) end
 
 --- @public
---- @param arg0 float
+--- @param g float
 --- @return void
-function GridSquareMarker:setG(arg0) end
+function GridSquareMarker:setG(g) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function GridSquareMarker:setPos(arg0, arg1, arg2) end
+function GridSquareMarker:setPos(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 float
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param size float
 --- @return void
-function GridSquareMarker:setPosAndSize(arg0, arg1, arg2, arg3) end
+function GridSquareMarker:setPosAndSize(x, y, z, size) end
 
 --- @public
---- @param arg0 float
+--- @param r float
 --- @return void
-function GridSquareMarker:setR(arg0) end
+function GridSquareMarker:setR(r) end
 
 --- @public
---- @param arg0 boolean
+--- @param bScale boolean
 --- @return void
-function GridSquareMarker:setScaleCircleTexture(arg0) end
+function GridSquareMarker:setScaleCircleTexture(bScale) end
 
 --- @public
---- @param arg0 float
+--- @param size float
 --- @return void
-function GridSquareMarker:setSize(arg0) end
+function GridSquareMarker:setSize(size) end
 
 
 ------------------------------------

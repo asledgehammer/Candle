@@ -22,25 +22,25 @@ function DummySoundManager:BlendThenStart(arg0, arg1, arg2) end
 function DummySoundManager:BlendVolume(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return void
-function DummySoundManager:CacheSound(arg0) end
+function DummySoundManager:CacheSound(file) end
 
 --- @public
 --- @return void
 function DummySoundManager:CheckDoMusic() end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param name String
+--- @param bLoop boolean
 --- @return void
-function DummySoundManager:DoMusic(arg0, arg1) end
+function DummySoundManager:DoMusic(name, bLoop) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param name String
+--- @param milli int
 --- @return void
-function DummySoundManager:FadeOutMusic(arg0, arg1) end
+function DummySoundManager:FadeOutMusic(name, milli) end
 
 --- @public
 --- @return boolean
@@ -55,93 +55,93 @@ function DummySoundManager:IsMusicPlaying() end
 function DummySoundManager:PlayAsMusic(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 float
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
-function DummySoundManager:PlayJukeboxSound(arg0, arg1, arg2) end
+function DummySoundManager:PlayJukeboxSound(name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 boolean
---- @param arg3 float
+--- @param n String
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
-function DummySoundManager:PlayMusic(arg0, arg1, arg2, arg3) end
+function DummySoundManager:PlayMusic(n, name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 float
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
---- @overload fun(arg0: String, arg1: boolean, arg2: float, arg3: float)
-function DummySoundManager:PlaySound(arg0, arg1, arg2) end
+--- @overload fun(name: String, loop: boolean, pitchVar: float, maxGain: float)
+function DummySoundManager:PlaySound(name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 float
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
-function DummySoundManager:PlaySoundEvenSilent(arg0, arg1, arg2) end
+function DummySoundManager:PlaySoundEvenSilent(name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 float
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
---- @overload fun(arg0: String, arg1: boolean, arg2: float, arg3: float)
-function DummySoundManager:PlaySoundWav(arg0, arg1, arg2) end
+--- @overload fun(name: String, variations: int, loop: boolean, maxGain: float)
+function DummySoundManager:PlaySoundWav(name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoGridSquare
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 boolean
+--- @param name String
+--- @param source IsoGridSquare
+--- @param pitchVar float
+--- @param radius float
+--- @param maxGain float
+--- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int, arg6: boolean)
-function DummySoundManager:PlayWorldSound(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean)
+function DummySoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 boolean
+--- @param name String
+--- @param loop boolean
+--- @param sx int
+--- @param sy int
+--- @param sz int
+--- @param pitchVar float
+--- @param radius float
+--- @param maxGain float
+--- @param ignoreOutside boolean
 --- @return Audio
-function DummySoundManager:PlayWorldSoundImpl(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function DummySoundManager:PlayWorldSoundImpl(name, loop, sx, sy, sz, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoGridSquare
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 boolean
+--- @param name String
+--- @param source IsoGridSquare
+--- @param pitchVar float
+--- @param radius float
+--- @param maxGain float
+--- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int, arg6: boolean)
-function DummySoundManager:PlayWorldSoundWav(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean)
+function DummySoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 IsoGridSquare
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 boolean
+--- @param name String
+--- @param loop boolean
+--- @param source IsoGridSquare
+--- @param pitchVar float
+--- @param radius float
+--- @param maxGain float
+--- @param ignoreOutside boolean
 --- @return Audio
-function DummySoundManager:PlayWorldSoundWavImpl(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function DummySoundManager:PlayWorldSoundWavImpl(name, loop, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Audio
-function DummySoundManager:PrepareMusic(arg0) end
+function DummySoundManager:PrepareMusic(name) end
 
 --- @public
 --- @return void
@@ -204,20 +204,20 @@ function DummySoundManager:getSoundVolume() end
 function DummySoundManager:getVehicleEngineVolume() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param range float
 --- @return boolean
-function DummySoundManager:isListenerInRange(arg0, arg1, arg2) end
+function DummySoundManager:isListenerInRange(x, y, range) end
 
 --- @public
 --- @return boolean
 function DummySoundManager:isPlayingMusic() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function DummySoundManager:isPlayingUISound(arg0) end
+function DummySoundManager:isPlayingUISound(name) end
 
 --- @public
 --- @return boolean
@@ -228,89 +228,89 @@ function DummySoundManager:isRemastered() end
 function DummySoundManager:pauseSoundAndMusic() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function DummySoundManager:playAmbient(arg0) end
+function DummySoundManager:playAmbient(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function DummySoundManager:playMusic(arg0) end
+function DummySoundManager:playMusic(name) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
+--- @param name String
+--- @param gain float
 --- @return void
-function DummySoundManager:playMusicNonTriggered(arg0, arg1) end
+function DummySoundManager:playMusicNonTriggered(name, gain) end
 
 --- @public
---- @param arg0 String
+--- @param choice String
 --- @return void
-function DummySoundManager:playNightAmbient(arg0) end
+function DummySoundManager:playNightAmbient(choice) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return long
-function DummySoundManager:playUISound(arg0) end
+function DummySoundManager:playUISound(name) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function DummySoundManager:registerEmitter(arg0) end
+function DummySoundManager:registerEmitter(emitter) end
 
 --- @public
 --- @return void
 function DummySoundManager:resumeSoundAndMusic() end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function DummySoundManager:setAmbientVolume(arg0) end
+function DummySoundManager:setAmbientVolume(volume) end
 
 --- @public
---- @param arg0 String
+--- @param stateName String
 --- @return void
-function DummySoundManager:setMusicState(arg0) end
+function DummySoundManager:setMusicState(stateName) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function DummySoundManager:setMusicVolume(arg0) end
+function DummySoundManager:setMusicVolume(volume) end
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 String
+--- @param player IsoPlayer
+--- @param stateName String
 --- @return void
-function DummySoundManager:setMusicWakeState(arg0, arg1) end
+function DummySoundManager:setMusicWakeState(player, stateName) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function DummySoundManager:setSoundVolume(arg0) end
+function DummySoundManager:setSoundVolume(volume) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function DummySoundManager:setVehicleEngineVolume(arg0) end
+function DummySoundManager:setVehicleEngineVolume(volume) end
 
 --- @public
 --- @return void
 function DummySoundManager:stop() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function DummySoundManager:stopMusic(arg0) end
+function DummySoundManager:stopMusic(name) end
 
 --- @public
---- @param arg0 long
+--- @param eventInstance long
 --- @return void
-function DummySoundManager:stopUISound(arg0) end
+function DummySoundManager:stopUISound(eventInstance) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function DummySoundManager:unregisterEmitter(arg0) end
+function DummySoundManager:unregisterEmitter(emitter) end
 
 --- @public
 --- @return void

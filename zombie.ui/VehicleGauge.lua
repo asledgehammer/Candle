@@ -12,19 +12,19 @@ VehicleGauge = {};
 function VehicleGauge:render() end
 
 --- @public
---- @param arg0 int
+--- @param newSize int
 --- @return void
-function VehicleGauge:setNeedleWidth(arg0) end
+function VehicleGauge:setNeedleWidth(newSize) end
 
 --- @public
---- @param arg0 Texture
+--- @param newText Texture
 --- @return void
-function VehicleGauge:setTexture(arg0) end
+function VehicleGauge:setTexture(newText) end
 
 --- @public
---- @param arg0 float
+--- @param value float
 --- @return void
-function VehicleGauge:setValue(arg0) end
+function VehicleGauge:setValue(value) end
 
 
 ------------------------------------
@@ -32,10 +32,10 @@ function VehicleGauge:setValue(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 Texture
---- @param arg1 int
---- @param arg2 int
---- @param arg3 float
---- @param arg4 float
+--- @param texture Texture
+--- @param needleX int
+--- @param needleY int
+--- @param minAngle float
+--- @param maxAngle float
 --- @return VehicleGauge
-function VehicleGauge.new(arg0, arg1, arg2, arg3, arg4) end
+function VehicleGauge.new(texture, needleX, needleY, minAngle, maxAngle) end

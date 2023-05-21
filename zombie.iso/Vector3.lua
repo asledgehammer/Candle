@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Vector3: Object
+--- @class Vector3
 --- @implement Cloneable
 Vector3 = {};
 
@@ -10,33 +10,33 @@ Vector3 = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param x float
+--- @param y float
+--- @param tx float
+--- @param ty float
 --- @return float
-function Vector3.dot(arg0, arg1, arg2, arg3) end
+function Vector3.dot(x, y, tx, ty) end
 
 --- @public
 --- @static
---- @param arg0 Point
+--- @param p Point
 --- @return Vector2
-function Vector3.fromAwtPoint(arg0) end
+function Vector3.fromAwtPoint(p) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param length float
+--- @param direction float
 --- @return Vector2
-function Vector3.fromLengthDirection(arg0, arg1) end
+function Vector3.fromLengthDirection(length, direction) end
 
 --- @public
 --- @static
---- @param arg0 Vector3
---- @param arg1 Vector3
---- @param arg2 Vector3
+--- @param a Vector3
+--- @param b Vector3
+--- @param out Vector3
 --- @return Vector3
-function Vector3.sub(arg0, arg1, arg2) end
+function Vector3.sub(a, b, out) end
 
 
 ------------------------------------
@@ -44,53 +44,53 @@ function Vector3.sub(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return Vector2
-function Vector3:add(arg0) end
+function Vector3:add(other) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return Vector3
-function Vector3:addToThis(arg0) end
+function Vector3:addToThis(other) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return Vector3
-function Vector3:aimAt(arg0) end
+function Vector3:aimAt(other) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return float
-function Vector3:angleTo(arg0) end
+function Vector3:angleTo(other) end
 
 --- @public
 --- @return Object
 function Vector3:clone() end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return float
-function Vector3:distanceTo(arg0) end
+function Vector3:distanceTo(other) end
 
 --- @public
---- @param arg0 float
+--- @param scalar float
 --- @return Vector3
-function Vector3:div(arg0) end
+function Vector3:div(scalar) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return float
-function Vector3:dot(arg0) end
+function Vector3:dot(other) end
 
 --- @public
---- @param arg0 Vector3
+--- @param other Vector3
 --- @return float
-function Vector3:dot3d(arg0) end
+function Vector3:dot3d(other) end
 
 --- @public
---- @param arg0 Object
+--- @param other Object
 --- @return boolean
-function Vector3:equals(arg0) end
+function Vector3:equals(other) end
 
 --- @public
 --- @return float
@@ -109,42 +109,42 @@ function Vector3:getLengthSq() end
 function Vector3:normalize() end
 
 --- @public
---- @param arg0 float
+--- @param rad float
 --- @return void
-function Vector3:rotate(arg0) end
+function Vector3:rotate(rad) end
 
 --- @public
---- @param arg0 float
+--- @param rad float
 --- @return void
-function Vector3:rotatey(arg0) end
+function Vector3:rotatey(rad) end
 
 --- @public
---- @param arg0 Vector3
+--- @param other Vector3
 --- @return Vector3
---- @overload fun(arg0: float, arg1: float, arg2: float)
-function Vector3:set(arg0) end
+--- @overload fun(x: float, y: float, z: float)
+function Vector3:set(other) end
 
 --- @public
---- @param arg0 float
+--- @param direction float
 --- @return Vector3
-function Vector3:setDirection(arg0) end
+function Vector3:setDirection(direction) end
 
 --- @public
---- @param arg0 float
+--- @param length float
 --- @return Vector3
-function Vector3:setLength(arg0) end
+function Vector3:setLength(length) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param direction float
+--- @param length float
 --- @return Vector3
-function Vector3:setLengthAndDirection(arg0, arg1) end
+function Vector3:setLengthAndDirection(direction, length) end
 
 --- @public
---- @param arg0 Vector3
---- @param arg1 Vector3
+--- @param val Vector3
+--- @param out Vector3
 --- @return Vector3
-function Vector3:sub(arg0, arg1) end
+function Vector3:sub(val, out) end
 
 --- @public
 --- @return Dimension
@@ -165,6 +165,6 @@ function Vector3:toString() end
 
 --- @public
 --- @return Vector3
---- @overload fun(arg0: Vector3)
---- @overload fun(arg0: float, arg1: float, arg2: float)
+--- @overload fun(other: Vector3)
+--- @overload fun(x: float, y: float, z: float)
 function Vector3.new() end

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoCamera: Object
+--- @class IsoCamera
 --- @field public CamCharacter IsoGameCharacter
 --- @field public cameras PlayerCamera[]
 --- @field public FakePos Vector2
@@ -18,9 +18,9 @@ IsoCamera = {};
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param GameChar IsoGameCharacter
 --- @return void
-function IsoCamera.SetCharacterToFollow(arg0) end
+function IsoCamera.SetCharacterToFollow(GameChar) end
 
 --- @public
 --- @static
@@ -59,27 +59,27 @@ function IsoCamera.getOffY() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function IsoCamera.getOffscreenHeight(arg0) end
+function IsoCamera.getOffscreenHeight(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function IsoCamera.getOffscreenLeft(arg0) end
+function IsoCamera.getOffscreenLeft(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function IsoCamera.getOffscreenTop(arg0) end
+function IsoCamera.getOffscreenTop(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function IsoCamera.getOffscreenWidth(arg0) end
+function IsoCamera.getOffscreenWidth(playerIndex) end
 
 --- @public
 --- @static
@@ -93,27 +93,27 @@ function IsoCamera.getRightClickOffY() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function IsoCamera.getScreenHeight(arg0) end
+function IsoCamera.getScreenHeight(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function IsoCamera.getScreenLeft(arg0) end
+function IsoCamera.getScreenLeft(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function IsoCamera.getScreenTop(arg0) end
+function IsoCamera.getScreenTop(playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function IsoCamera.getScreenWidth(arg0) end
+function IsoCamera.getScreenWidth(playerIndex) end
 
 --- @public
 --- @static
@@ -142,57 +142,57 @@ function IsoCamera.init() end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param aCamCharacter IsoGameCharacter
 --- @return void
-function IsoCamera.setCamCharacter(arg0) end
+function IsoCamera.setCamCharacter(aCamCharacter) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param aFakePos Vector2
 --- @return void
-function IsoCamera.setFakePos(arg0) end
+function IsoCamera.setFakePos(aFakePos) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param aFakePosVec Vector2
 --- @return void
-function IsoCamera.setFakePosVec(arg0) end
+function IsoCamera.setFakePosVec(aFakePosVec) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param aLastOffX float
 --- @return void
-function IsoCamera.setLastOffX(arg0) end
+function IsoCamera.setLastOffX(aLastOffX) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param aLastOffY float
 --- @return void
-function IsoCamera.setLastOffY(arg0) end
+function IsoCamera.setLastOffY(aLastOffY) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param aOffX float
 --- @return void
-function IsoCamera.setOffX(arg0) end
+function IsoCamera.setOffX(aOffX) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param aOffY float
 --- @return void
-function IsoCamera.setOffY(arg0) end
+function IsoCamera.setOffY(aOffY) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param aTargetTileX int
 --- @return void
-function IsoCamera.setTargetTileX(arg0) end
+function IsoCamera.setTargetTileX(aTargetTileX) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param aTargetTileY int
 --- @return void
-function IsoCamera.setTargetTileY(arg0) end
+function IsoCamera.setTargetTileY(aTargetTileY) end
 
 --- @public
 --- @static

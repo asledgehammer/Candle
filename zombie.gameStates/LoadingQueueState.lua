@@ -14,9 +14,9 @@ function LoadingQueueState.onConnectionImmediate() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param place int
 --- @return void
-function LoadingQueueState.onPlaceInQueue(arg0) end
+function LoadingQueueState.onPlaceInQueue(place) end
 
 
 ------------------------------------

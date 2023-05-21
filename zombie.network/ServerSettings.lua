@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ServerSettings: Object
+--- @class ServerSettings
 ServerSettings = {};
 
 ------------------------------------
@@ -8,10 +8,10 @@ ServerSettings = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param name String
+--- @param file String
 --- @return void
-function ServerSettings:addSpawnRegion(arg0, arg1) end
+function ServerSettings:addSpawnRegion(name, file) end
 
 --- @public
 --- @return void
@@ -22,9 +22,9 @@ function ServerSettings:clearSpawnRegions() end
 function ServerSettings:deleteFiles() end
 
 --- @public
---- @param arg0 String
+--- @param newName String
 --- @return boolean
-function ServerSettings:duplicateFiles(arg0) end
+function ServerSettings:duplicateFiles(newName) end
 
 --- @public
 --- @return String
@@ -47,14 +47,14 @@ function ServerSettings:getSandboxOptions() end
 function ServerSettings:getServerOptions() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return String
-function ServerSettings:getSpawnRegionFile(arg0) end
+function ServerSettings:getSpawnRegionFile(index) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return String
-function ServerSettings:getSpawnRegionName(arg0) end
+function ServerSettings:getSpawnRegionName(index) end
 
 --- @public
 --- @return boolean
@@ -65,19 +65,19 @@ function ServerSettings:isValid() end
 function ServerSettings:loadFiles() end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return KahluaTable
-function ServerSettings:loadSpawnPointsFile(arg0) end
+function ServerSettings:loadSpawnPointsFile(file) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return void
-function ServerSettings:removeSpawnRegion(arg0) end
+function ServerSettings:removeSpawnRegion(index) end
 
 --- @public
---- @param arg0 String
+--- @param newName String
 --- @return boolean
-function ServerSettings:rename(arg0) end
+function ServerSettings:rename(newName) end
 
 --- @public
 --- @return void
@@ -99,6 +99,6 @@ function ServerSettings:saveSpawnPointsFile(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ServerSettings
-function ServerSettings.new(arg0) end
+function ServerSettings.new(name) end

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Time: Object
+--- @class Time
 Time = {};
 
 ------------------------------------

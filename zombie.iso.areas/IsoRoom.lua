@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoRoom: Object
+--- @class IsoRoom
 IsoRoom = {};
 
 ------------------------------------
@@ -8,19 +8,19 @@ IsoRoom = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoBuilding
-function IsoRoom:CreateBuilding(arg0) end
+function IsoRoom:CreateBuilding(cell) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return void
-function IsoRoom:addSquare(arg0) end
+function IsoRoom:addSquare(sq) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return void
-function IsoRoom:createLights(arg0) end
+function IsoRoom:createLights(active) end
 
 --- @public
 --- @return IsoBuilding
@@ -79,11 +79,11 @@ function IsoRoom:hasLightSwitches() end
 function IsoRoom:hasWater() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return boolean
-function IsoRoom:isInside(arg0, arg1, arg2) end
+function IsoRoom:isInside(x, y, z) end
 
 --- @public
 --- @return void
@@ -94,14 +94,14 @@ function IsoRoom:onSee() end
 function IsoRoom:refreshSquares() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return void
-function IsoRoom:removeSquare(arg0) end
+function IsoRoom:removeSquare(sq) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param WaterSources ArrayList
 --- @return void
-function IsoRoom:setWaterSources(arg0) end
+function IsoRoom:setWaterSources(WaterSources) end
 
 --- @public
 --- @return void

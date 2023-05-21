@@ -1,6 +1,6 @@
 --- @meta
 
---- @class LosUtil: Object
+--- @class LosUtil
 --- @field public cachecleared boolean[]
 --- @field public cachedresults byte[][][][]
 --- @field public XSIZE int
@@ -14,63 +14,63 @@ LosUtil = {};
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param width int
+--- @param height int
 --- @return void
-function LosUtil.init(arg0, arg1) end
+function LosUtil.init(width, height) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 boolean
+--- @param cell IsoCell
+--- @param x0 int
+--- @param y0 int
+--- @param z0 int
+--- @param x1 int
+--- @param y1 int
+--- @param z1 int
+--- @param bIgnoreDoors boolean
 --- @return TestResults
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: boolean, arg8: int)
-function LosUtil.lineClear(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+--- @overload fun(cell: IsoCell, x0: int, y0: int, z0: int, x1: int, y1: int, z1: int, bIgnoreDoors: boolean, RangeTillWindows: int)
+function LosUtil.lineClear(cell, x0, y0, z0, x1, y1, z1, bIgnoreDoors) end
 
 --- @public
 --- @static
---- @param arg0 IsoCell
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 boolean
---- @param arg8 int
+--- @param cell IsoCell
+--- @param x1 int
+--- @param y1 int
+--- @param z1 int
+--- @param x0 int
+--- @param y0 int
+--- @param z0 int
+--- @param bIgnoreDoors boolean
+--- @param playerIndex int
 --- @return TestResults
-function LosUtil.lineClearCached(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function LosUtil.lineClearCached(cell, x1, y1, z1, x0, y0, z0, bIgnoreDoors, playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 boolean
+--- @param x1 int
+--- @param y1 int
+--- @param z1 int
+--- @param x0 int
+--- @param y0 int
+--- @param z0 int
+--- @param bIgnoreDoors boolean
 --- @return boolean
-function LosUtil.lineClearCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function LosUtil.lineClearCollide(x1, y1, z1, x0, y0, z0, bIgnoreDoors) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoCell
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
+--- @param chr IsoGameCharacter
+--- @param cell IsoCell
+--- @param x1 int
+--- @param y1 int
+--- @param z1 int
+--- @param x0 int
+--- @param y0 int
+--- @param z0 int
 --- @return int
-function LosUtil.lineClearCollideCount(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function LosUtil.lineClearCollideCount(chr, cell, x1, y1, z1, x0, y0, z0) end
 
 
 ------------------------------------

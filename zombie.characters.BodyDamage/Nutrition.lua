@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Nutrition: Object
+--- @class Nutrition
 Nutrition = {};
 
 ------------------------------------
@@ -56,54 +56,54 @@ function Nutrition:isIncWeight() end
 function Nutrition:isIncWeightLot() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return void
-function Nutrition:load(arg0) end
+function Nutrition:load(input) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function Nutrition:save(arg0) end
+function Nutrition:save(output) end
 
 --- @public
---- @param arg0 float
+--- @param calories float
 --- @return void
-function Nutrition:setCalories(arg0) end
+function Nutrition:setCalories(calories) end
 
 --- @public
---- @param arg0 float
+--- @param carbohydrates float
 --- @return void
-function Nutrition:setCarbohydrates(arg0) end
+function Nutrition:setCarbohydrates(carbohydrates) end
 
 --- @public
---- @param arg0 boolean
+--- @param decWeight boolean
 --- @return void
-function Nutrition:setDecWeight(arg0) end
+function Nutrition:setDecWeight(decWeight) end
 
 --- @public
---- @param arg0 boolean
+--- @param incWeight boolean
 --- @return void
-function Nutrition:setIncWeight(arg0) end
+function Nutrition:setIncWeight(incWeight) end
 
 --- @public
---- @param arg0 boolean
+--- @param incWeightLot boolean
 --- @return void
-function Nutrition:setIncWeightLot(arg0) end
+function Nutrition:setIncWeightLot(incWeightLot) end
 
 --- @public
---- @param arg0 float
+--- @param lipids float
 --- @return void
-function Nutrition:setLipids(arg0) end
+function Nutrition:setLipids(lipids) end
 
 --- @public
---- @param arg0 float
+--- @param proteins float
 --- @return void
-function Nutrition:setProteins(arg0) end
+function Nutrition:setProteins(proteins) end
 
 --- @public
---- @param arg0 double
+--- @param weight double
 --- @return void
-function Nutrition:setWeight(arg0) end
+function Nutrition:setWeight(weight) end
 
 --- @public
 --- @return void
@@ -119,6 +119,6 @@ function Nutrition:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param parent IsoPlayer
 --- @return Nutrition
-function Nutrition.new(arg0) end
+function Nutrition.new(parent) end

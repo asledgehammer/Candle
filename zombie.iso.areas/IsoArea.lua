@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoArea: Object
+--- @class IsoArea
 --- @field public Doobo boolean
 --- @field public version String
 IsoArea = {};
@@ -11,9 +11,9 @@ IsoArea = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param filename String
 --- @return String
-function IsoArea.Ardo(arg0) end
+function IsoArea.Ardo(filename) end
 
 --- @public
 --- @static
@@ -22,22 +22,22 @@ function IsoArea.Thigglewhat() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param str String
+--- @param gfgf String
 --- @return boolean
-function IsoArea.Thigglewhat2(arg0, arg1) end
+function IsoArea.Thigglewhat2(str, gfgf) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return String
-function IsoArea.Thigglewhat22(arg0) end
+function IsoArea.Thigglewhat22(str) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param filename String
 --- @return byte[]
-function IsoArea.asasa(arg0) end
+function IsoArea.asasa(filename) end
 
 
 ------------------------------------

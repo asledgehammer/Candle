@@ -1,6 +1,6 @@
 --- @meta
 
---- @class MetaObject: Object
+--- @class MetaObject
 MetaObject = {};
 
 ------------------------------------
@@ -28,9 +28,9 @@ function MetaObject:getX() end
 function MetaObject:getY() end
 
 --- @public
---- @param arg0 boolean
+--- @param bUsed boolean
 --- @return void
-function MetaObject:setUsed(arg0) end
+function MetaObject:setUsed(bUsed) end
 
 
 ------------------------------------
@@ -38,9 +38,9 @@ function MetaObject:setUsed(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 RoomDef
+--- @param type int
+--- @param x int
+--- @param y int
+--- @param def RoomDef
 --- @return MetaObject
-function MetaObject.new(arg0, arg1, arg2, arg3) end
+function MetaObject.new(type, x, y, def) end

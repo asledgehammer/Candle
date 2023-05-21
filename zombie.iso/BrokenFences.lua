@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BrokenFences: Object
+--- @class BrokenFences
 BrokenFences = {};
 
 ------------------------------------
@@ -32,37 +32,37 @@ function BrokenFences:addBrokenTiles(arg0) end
 function BrokenFences:addDebrisTiles(arg0) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 IsoDirections
+--- @param obj IsoObject
+--- @param dir IsoDirections
 --- @return void
-function BrokenFences:destroyFence(arg0, arg1) end
+function BrokenFences:destroyFence(obj, dir) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return boolean
-function BrokenFences:isBreakableObject(arg0) end
+function BrokenFences:isBreakableObject(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return void
-function BrokenFences:setDamagedLeft(arg0) end
+function BrokenFences:setDamagedLeft(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return void
-function BrokenFences:setDamagedRight(arg0) end
+function BrokenFences:setDamagedRight(obj) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param obj IsoObject
 --- @return void
-function BrokenFences:setDestroyed(arg0) end
+function BrokenFences:setDestroyed(obj) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param obj IsoObject
+--- @param brokenLeft boolean
+--- @param brokenRight boolean
 --- @return void
-function BrokenFences:updateSprite(arg0, arg1, arg2) end
+function BrokenFences:updateSprite(obj, brokenLeft, brokenRight) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Result: Object
+--- @class Result
 Result = {};
 
 ------------------------------------
@@ -28,24 +28,24 @@ function Result:getModule() end
 function Result:getType() end
 
 --- @public
---- @param arg0 int
+--- @param count int
 --- @return void
-function Result:setCount(arg0) end
+function Result:setCount(count) end
 
 --- @public
---- @param arg0 int
+--- @param count int
 --- @return void
-function Result:setDrainableCount(arg0) end
+function Result:setDrainableCount(count) end
 
 --- @public
---- @param arg0 String
+--- @param module String
 --- @return void
-function Result:setModule(arg0) end
+function Result:setModule(module) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function Result:setType(arg0) end
+function Result:setType(type) end
 
 
 ------------------------------------

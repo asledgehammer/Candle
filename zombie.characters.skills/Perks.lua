@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Perks: Object
+--- @class Perks
 --- @field public Agility Perk
 --- @field public Aiming Perk
 --- @field public Axe Perk
@@ -46,15 +46,15 @@ Perks = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param id String
 --- @return Perk
-function Perks.FromString(arg0) end
+function Perks.FromString(id) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param value int
 --- @return Perk
-function Perks.fromIndex(arg0) end
+function Perks.fromIndex(value) end
 
 --- @public
 --- @static

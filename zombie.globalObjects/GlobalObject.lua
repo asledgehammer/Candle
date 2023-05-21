@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GlobalObject: Object
+--- @class GlobalObject
 GlobalObject = {};
 
 ------------------------------------
@@ -32,10 +32,10 @@ function GlobalObject:getY() end
 function GlobalObject:getZ() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function GlobalObject:setLocation(arg0, arg1, arg2) end
+function GlobalObject:setLocation(x, y, z) end
 
 

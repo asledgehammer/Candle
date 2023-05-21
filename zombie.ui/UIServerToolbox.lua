@@ -11,31 +11,31 @@ UIServerToolbox = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param name String
+--- @param x int
+--- @param y int
 --- @return void
-function UIServerToolbox:DoubleClick(arg0, arg1, arg2) end
+function UIServerToolbox:DoubleClick(name, x, y) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param name String
+--- @param chosen String
 --- @return void
-function UIServerToolbox:ModalClick(arg0, arg1) end
+function UIServerToolbox:ModalClick(name, chosen) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param tag String
+--- @param cookie String
+--- @param payload String
 --- @return void
-function UIServerToolbox:OnCoopServerMessage(arg0, arg1, arg2) end
+function UIServerToolbox:OnCoopServerMessage(tag, cookie, payload) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param name String
+--- @param Selected int
+--- @param LastSelected int
 --- @return void
-function UIServerToolbox:Selected(arg0, arg1, arg2) end
+function UIServerToolbox:Selected(name, Selected, LastSelected) end
 
 --- @public
 --- @return void
@@ -55,7 +55,7 @@ function UIServerToolbox:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return UIServerToolbox
-function UIServerToolbox.new(arg0, arg1) end
+function UIServerToolbox.new(x, y) end

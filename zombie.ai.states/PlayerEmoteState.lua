@@ -18,25 +18,25 @@ function PlayerEmoteState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function PlayerEmoteState:animEvent(arg0, arg1) end
+function PlayerEmoteState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerEmoteState:enter(arg0) end
+function PlayerEmoteState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerEmoteState:execute(arg0) end
+function PlayerEmoteState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerEmoteState:exit(arg0) end
+function PlayerEmoteState:exit(owner) end
 
 --- @public
 --- @return boolean

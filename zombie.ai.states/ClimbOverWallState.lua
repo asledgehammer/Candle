@@ -18,42 +18,42 @@ function ClimbOverWallState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function ClimbOverWallState:animEvent(arg0, arg1) end
+function ClimbOverWallState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbOverWallState:enter(arg0) end
+function ClimbOverWallState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbOverWallState:execute(arg0) end
+function ClimbOverWallState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ClimbOverWallState:exit(arg0) end
+function ClimbOverWallState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param owner IsoGameCharacter
+--- @param fromX int
+--- @param fromY int
+--- @param fromZ int
+--- @param toX int
+--- @param toY int
+--- @param toZ int
 --- @return boolean
-function ClimbOverWallState:isIgnoreCollide(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ClimbOverWallState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoDirections
+--- @param owner IsoGameCharacter
+--- @param dir IsoDirections
 --- @return void
-function ClimbOverWallState:setParams(arg0, arg1) end
+function ClimbOverWallState:setParams(owner, dir) end
 
 
 ------------------------------------

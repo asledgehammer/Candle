@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ClimateColor: Object
+--- @class ClimateColor
 ClimateColor = {};
 
 ------------------------------------
@@ -40,10 +40,10 @@ function ClimateColor:getOverride() end
 function ClimateColor:getOverrideInterpolate() end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param id int
+--- @param name String
 --- @return ClimateColor
-function ClimateColor:init(arg0, arg1) end
+function ClimateColor:init(id, name) end
 
 --- @public
 --- @return boolean
@@ -54,62 +54,62 @@ function ClimateColor:isEnableAdmin() end
 function ClimateColor:isEnableOverride() end
 
 --- @public
---- @param arg0 ClimateColorInfo
+--- @param targ ClimateColorInfo
 --- @return void
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float)
-function ClimateColor:setAdminValue(arg0) end
+--- @overload fun(r: float, g: float, b: float, a: float, r1: float, g1: float, b1: float, a1: float)
+function ClimateColor:setAdminValue(targ) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function ClimateColor:setAdminValueExterior(arg0, arg1, arg2, arg3) end
+function ClimateColor:setAdminValueExterior(r, g, b, a) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function ClimateColor:setAdminValueInterior(arg0, arg1, arg2, arg3) end
+function ClimateColor:setAdminValueInterior(r, g, b, a) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateColor:setEnableAdmin(arg0) end
+function ClimateColor:setEnableAdmin(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateColor:setEnableModded(arg0) end
+function ClimateColor:setEnableModded(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ClimateColor:setEnableOverride(arg0) end
+function ClimateColor:setEnableOverride(b) end
 
 --- @public
---- @param arg0 ClimateColorInfo
+--- @param targ ClimateColorInfo
 --- @return void
-function ClimateColor:setFinalValue(arg0) end
+function ClimateColor:setFinalValue(targ) end
 
 --- @public
---- @param arg0 float
+--- @param f float
 --- @return void
-function ClimateColor:setModdedInterpolate(arg0) end
+function ClimateColor:setModdedInterpolate(f) end
 
 --- @public
---- @param arg0 ClimateColorInfo
+--- @param targ ClimateColorInfo
 --- @return void
-function ClimateColor:setModdedValue(arg0) end
+function ClimateColor:setModdedValue(targ) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 float
+--- @param input ByteBuffer
+--- @param interp float
 --- @return void
-function ClimateColor:setOverride(arg0, arg1) end
+function ClimateColor:setOverride(input, interp) end
 
 
 ------------------------------------

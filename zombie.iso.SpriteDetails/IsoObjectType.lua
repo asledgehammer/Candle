@@ -39,15 +39,15 @@ IsoObjectType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return IsoObjectType
-function IsoObjectType.FromString(arg0) end
+function IsoObjectType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param value int
 --- @return IsoObjectType
-function IsoObjectType.fromIndex(arg0) end
+function IsoObjectType.fromIndex(value) end
 
 --- @public
 --- @static

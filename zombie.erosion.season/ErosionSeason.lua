@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ErosionSeason: Object
+--- @class ErosionSeason
 --- @field public NUM_SEASONS int
 --- @field public SEASON_AUTUMN int
 --- @field public SEASON_DEFAULT int
@@ -137,33 +137,33 @@ function ErosionSeason:getTempMax() end
 function ErosionSeason:getTempMin() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param day int
+--- @param month int
+--- @param year int
 --- @return GregorianCalendar
-function ErosionSeason:getWinterStartDay(arg0, arg1, arg2) end
+function ErosionSeason:getWinterStartDay(day, month, year) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
---- @param arg6 int
---- @param arg7 int
---- @param arg8 int
+--- @param _lat int
+--- @param _tempMax int
+--- @param _tempMin int
+--- @param _tempDiff int
+--- @param _seasonLag int
+--- @param _noon float
+--- @param _seedA int
+--- @param _seedB int
+--- @param _seedC int
 --- @return void
-function ErosionSeason:init(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function ErosionSeason:init(_lat, _tempMax, _tempMin, _tempDiff, _seasonLag, _noon, _seedA, _seedB, _seedC) end
 
 --- @public
 --- @return boolean
 function ErosionSeason:isRainDay() end
 
 --- @public
---- @param arg0 int
+--- @param _season int
 --- @return boolean
-function ErosionSeason:isSeason(arg0) end
+function ErosionSeason:isSeason(_season) end
 
 --- @public
 --- @return boolean
@@ -174,32 +174,32 @@ function ErosionSeason:isSunnyDay() end
 function ErosionSeason:isThunderDay() end
 
 --- @public
---- @param arg0 int
+--- @param season int
 --- @return void
-function ErosionSeason:setCurSeason(arg0) end
+function ErosionSeason:setCurSeason(season) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param _day int
+--- @param _month int
+--- @param _year int
 --- @return void
-function ErosionSeason:setDay(arg0, arg1, arg2) end
+function ErosionSeason:setDay(_day, _month, _year) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 float
---- @param arg9 float
---- @param arg10 float
---- @param arg11 float
+--- @param _jan float
+--- @param _feb float
+--- @param _mar float
+--- @param _apr float
+--- @param _may float
+--- @param _jun float
+--- @param _jul float
+--- @param _aug float
+--- @param _sep float
+--- @param _oct float
+--- @param _nov float
+--- @param _dec float
 --- @return void
-function ErosionSeason:setRain(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
+function ErosionSeason:setRain(_jan, _feb, _mar, _apr, _may, _jun, _jul, _aug, _sep, _oct, _nov, _dec) end
 
 
 ------------------------------------

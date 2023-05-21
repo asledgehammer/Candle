@@ -1,6 +1,7 @@
 --- @meta
 
---- @class DevicePresets: Object
+--- @class DevicePresets
+--- Turrubo
 --- @implement Cloneable
 DevicePresets = {};
 
@@ -9,10 +10,10 @@ DevicePresets = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param name String
+--- @param frequency int
 --- @return void
-function DevicePresets:addPreset(arg0, arg1) end
+function DevicePresets:addPreset(name, frequency) end
 
 --- @public
 --- @return void
@@ -23,14 +24,14 @@ function DevicePresets:clearPresets() end
 function DevicePresets:getMaxPresets() end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return int
-function DevicePresets:getPresetFreq(arg0) end
+function DevicePresets:getPresetFreq(id) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return String
-function DevicePresets:getPresetName(arg0) end
+function DevicePresets:getPresetName(id) end
 
 --- @public
 --- @return ArrayList
@@ -41,51 +42,51 @@ function DevicePresets:getPresets() end
 function DevicePresets:getPresetsLua() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param net boolean
 --- @return void
-function DevicePresets:load(arg0, arg1, arg2) end
+function DevicePresets:load(input, WorldVersion, net) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return void
-function DevicePresets:removePreset(arg0) end
+function DevicePresets:removePreset(id) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function DevicePresets:save(arg0, arg1) end
+function DevicePresets:save(output, net) end
 
 --- @public
---- @param arg0 int
+--- @param m int
 --- @return void
-function DevicePresets:setMaxPresets(arg0) end
+function DevicePresets:setMaxPresets(m) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @param arg2 int
+--- @param id int
+--- @param name String
+--- @param frequency int
 --- @return void
-function DevicePresets:setPreset(arg0, arg1, arg2) end
+function DevicePresets:setPreset(id, name, frequency) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param id int
+--- @param frequency int
 --- @return void
-function DevicePresets:setPresetFreq(arg0, arg1) end
+function DevicePresets:setPresetFreq(id, frequency) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
+--- @param id int
+--- @param name String
 --- @return void
-function DevicePresets:setPresetName(arg0, arg1) end
+function DevicePresets:setPresetName(id, name) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param p ArrayList
 --- @return void
-function DevicePresets:setPresets(arg0) end
+function DevicePresets:setPresets(p) end
 
 
 ------------------------------------

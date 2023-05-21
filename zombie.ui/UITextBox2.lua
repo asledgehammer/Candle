@@ -13,9 +13,9 @@ UITextBox2 = {};
 function UITextBox2:ClearHighlights() end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return void
-function UITextBox2:SetText(arg0) end
+function UITextBox2:SetText(text) end
 
 --- @public
 --- @return void
@@ -94,39 +94,39 @@ function UITextBox2:isSelectable() end
 function UITextBox2:onCommandEntered() end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param x double
+--- @param y double
 --- @return Boolean
-function UITextBox2:onMouseDown(arg0, arg1) end
+function UITextBox2:onMouseDown(x, y) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param dx double
+--- @param dy double
 --- @return Boolean
-function UITextBox2:onMouseMove(arg0, arg1) end
+function UITextBox2:onMouseMove(dx, dy) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param dx double
+--- @param dy double
 --- @return void
-function UITextBox2:onMouseMoveOutside(arg0, arg1) end
+function UITextBox2:onMouseMoveOutside(dx, dy) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param x double
+--- @param y double
 --- @return Boolean
-function UITextBox2:onMouseUp(arg0, arg1) end
+function UITextBox2:onMouseUp(x, y) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param x double
+--- @param y double
 --- @return void
-function UITextBox2:onMouseUpOutside(arg0, arg1) end
+function UITextBox2:onMouseUpOutside(x, y) end
 
 --- @public
---- @param arg0 int
+--- @param key int
 --- @return void
-function UITextBox2:onOtherKey(arg0) end
+function UITextBox2:onOtherKey(key) end
 
 --- @public
 --- @return void
@@ -157,79 +157,79 @@ function UITextBox2:resetBlink() end
 function UITextBox2:selectAll() end
 
 --- @public
---- @param arg0 boolean
+--- @param hasButton boolean
 --- @return void
-function UITextBox2:setClearButton(arg0) end
+function UITextBox2:setClearButton(hasButton) end
 
 --- @public
---- @param arg0 int
+--- @param line int
 --- @return void
-function UITextBox2:setCursorLine(arg0) end
+function UITextBox2:setCursorLine(line) end
 
 --- @public
---- @param arg0 int
+--- @param charIndex int
 --- @return void
-function UITextBox2:setCursorPos(arg0) end
+function UITextBox2:setCursorPos(charIndex) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function UITextBox2:setEditable(arg0) end
+function UITextBox2:setEditable(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param forceUpperCase boolean
 --- @return void
-function UITextBox2:setForceUpperCase(arg0) end
+function UITextBox2:setForceUpperCase(forceUpperCase) end
 
 --- @public
---- @param arg0 float
+--- @param alpha float
 --- @return void
-function UITextBox2:setFrameAlpha(arg0) end
+function UITextBox2:setFrameAlpha(alpha) end
 
 --- @public
---- @param arg0 boolean
+--- @param hasFrame boolean
 --- @return void
-function UITextBox2:setHasFrame(arg0) end
+function UITextBox2:setHasFrame(hasFrame) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function UITextBox2:setMasked(arg0) end
+function UITextBox2:setMasked(b) end
 
 --- @public
---- @param arg0 int
+--- @param maxLines int
 --- @return void
-function UITextBox2:setMaxLines(arg0) end
+function UITextBox2:setMaxLines(maxLines) end
 
 --- @public
---- @param arg0 int
+--- @param maxtextLength int
 --- @return void
-function UITextBox2:setMaxTextLength(arg0) end
+function UITextBox2:setMaxTextLength(maxtextLength) end
 
 --- @public
---- @param arg0 boolean
+--- @param multiple boolean
 --- @return void
-function UITextBox2:setMultipleLine(arg0) end
+function UITextBox2:setMultipleLine(multiple) end
 
 --- @public
---- @param arg0 boolean
+--- @param onlyNumbers boolean
 --- @return void
-function UITextBox2:setOnlyNumbers(arg0) end
+function UITextBox2:setOnlyNumbers(onlyNumbers) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function UITextBox2:setSelectable(arg0) end
+function UITextBox2:setSelectable(b) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param newColor ColorInfo
 --- @return void
-function UITextBox2:setTextColor(arg0) end
+function UITextBox2:setTextColor(newColor) end
 
 --- @public
---- @param arg0 int
+--- @param textOffset int
 --- @return int
-function UITextBox2:toDisplayLine(arg0) end
+function UITextBox2:toDisplayLine(textOffset) end
 
 --- @public
 --- @return void
@@ -249,12 +249,12 @@ function UITextBox2:updateText() end
 ------------------------------------
 
 --- @public
---- @param arg0 UIFont
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 String
---- @param arg6 boolean
+--- @param font UIFont
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param text String
+--- @param HasFrame boolean
 --- @return UITextBox2
-function UITextBox2.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function UITextBox2.new(font, x, y, width, height, text, HasFrame) end

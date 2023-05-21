@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PerformanceSettings: Object
+--- @class PerformanceSettings
 --- @field public AnimationSkip int
 --- @field public auto3DZombies boolean
 --- @field public BaseStaticAnimFramerate int
@@ -37,15 +37,15 @@ function PerformanceSettings.isUncappedFPS() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param lockFPS int
 --- @return void
-function PerformanceSettings.setLockFPS(arg0) end
+function PerformanceSettings.setLockFPS(lockFPS) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param uncappedFPS boolean
 --- @return void
-function PerformanceSettings.setUncappedFPS(arg0) end
+function PerformanceSettings.setUncappedFPS(uncappedFPS) end
 
 
 ------------------------------------
@@ -89,44 +89,44 @@ function PerformanceSettings:getWaterQuality() end
 function PerformanceSettings:isFramerateUncapped() end
 
 --- @public
---- @param arg0 int
+--- @param fogQuality int
 --- @return void
-function PerformanceSettings:setFogQuality(arg0) end
+function PerformanceSettings:setFogQuality(fogQuality) end
 
 --- @public
---- @param arg0 int
+--- @param framerate int
 --- @return void
-function PerformanceSettings:setFramerate(arg0) end
+function PerformanceSettings:setFramerate(framerate) end
 
 --- @public
---- @param arg0 boolean
+--- @param val boolean
 --- @return void
-function PerformanceSettings:setFramerateUncapped(arg0) end
+function PerformanceSettings:setFramerateUncapped(val) end
 
 --- @public
---- @param arg0 int
+--- @param fps int
 --- @return void
-function PerformanceSettings:setLightingFPS(arg0) end
+function PerformanceSettings:setLightingFPS(fps) end
 
 --- @public
---- @param arg0 int
+--- @param lighting int
 --- @return void
-function PerformanceSettings:setLightingQuality(arg0) end
+function PerformanceSettings:setLightingQuality(lighting) end
 
 --- @public
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return void
-function PerformanceSettings:setNewRoofHiding(arg0) end
+function PerformanceSettings:setNewRoofHiding(enabled) end
 
 --- @public
---- @param arg0 int
+--- @param puddles int
 --- @return void
-function PerformanceSettings:setPuddlesQuality(arg0) end
+function PerformanceSettings:setPuddlesQuality(puddles) end
 
 --- @public
---- @param arg0 int
+--- @param water int
 --- @return void
-function PerformanceSettings:setWaterQuality(arg0) end
+function PerformanceSettings:setWaterQuality(water) end
 
 
 ------------------------------------

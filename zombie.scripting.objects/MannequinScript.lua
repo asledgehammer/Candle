@@ -8,10 +8,10 @@ MannequinScript = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param name String
+--- @param totalFile String
 --- @return void
-function MannequinScript:Load(arg0, arg1) end
+function MannequinScript:Load(name, totalFile) end
 
 --- @public
 --- @return String
@@ -50,39 +50,39 @@ function MannequinScript:isFemale() end
 function MannequinScript:reset() end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function MannequinScript:setAnimSet(arg0) end
+function MannequinScript:setAnimSet(str) end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function MannequinScript:setAnimState(arg0) end
+function MannequinScript:setAnimState(str) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function MannequinScript:setFemale(arg0) end
+function MannequinScript:setFemale(b) end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function MannequinScript:setModelScriptName(arg0) end
+function MannequinScript:setModelScriptName(str) end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function MannequinScript:setOutfit(arg0) end
+function MannequinScript:setOutfit(str) end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function MannequinScript:setPose(arg0) end
+function MannequinScript:setPose(str) end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
-function MannequinScript:setTexture(arg0) end
+function MannequinScript:setTexture(str) end
 
 
 ------------------------------------

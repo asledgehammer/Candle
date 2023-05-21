@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BodyLocationGroup: Object
+--- @class BodyLocationGroup
 BodyLocationGroup = {};
 
 ------------------------------------
@@ -8,73 +8,73 @@ BodyLocationGroup = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return void
-function BodyLocationGroup:checkValid(arg0) end
+function BodyLocationGroup:checkValid(locationId) end
 
 --- @public
 --- @return ArrayList
 function BodyLocationGroup:getAllLocations() end
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return BodyLocation
-function BodyLocationGroup:getLocation(arg0) end
+function BodyLocationGroup:getLocation(locationId) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return BodyLocation
-function BodyLocationGroup:getLocationByIndex(arg0) end
+function BodyLocationGroup:getLocationByIndex(index) end
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return BodyLocation
-function BodyLocationGroup:getLocationNotNull(arg0) end
+function BodyLocationGroup:getLocationNotNull(locationId) end
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return BodyLocation
-function BodyLocationGroup:getOrCreateLocation(arg0) end
+function BodyLocationGroup:getOrCreateLocation(locationId) end
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return int
-function BodyLocationGroup:indexOf(arg0) end
+function BodyLocationGroup:indexOf(locationId) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param firstId String
+--- @param secondId String
 --- @return boolean
-function BodyLocationGroup:isExclusive(arg0, arg1) end
+function BodyLocationGroup:isExclusive(firstId, secondId) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param firstId String
+--- @param secondId String
 --- @return boolean
-function BodyLocationGroup:isHideModel(arg0, arg1) end
+function BodyLocationGroup:isHideModel(firstId, secondId) end
 
 --- @public
---- @param arg0 String
+--- @param locationId String
 --- @return boolean
-function BodyLocationGroup:isMultiItem(arg0) end
+function BodyLocationGroup:isMultiItem(locationId) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param firstId String
+--- @param secondId String
 --- @return void
-function BodyLocationGroup:setExclusive(arg0, arg1) end
+function BodyLocationGroup:setExclusive(firstId, secondId) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param firstId String
+--- @param secondId String
 --- @return void
-function BodyLocationGroup:setHideModel(arg0, arg1) end
+function BodyLocationGroup:setHideModel(firstId, secondId) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param locationId String
+--- @param bMultiItem boolean
 --- @return void
-function BodyLocationGroup:setMultiItem(arg0, arg1) end
+function BodyLocationGroup:setMultiItem(locationId, bMultiItem) end
 
 --- @public
 --- @return int
@@ -86,6 +86,6 @@ function BodyLocationGroup:size() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return BodyLocationGroup
-function BodyLocationGroup.new(arg0) end
+function BodyLocationGroup.new(id) end

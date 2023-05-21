@@ -18,25 +18,25 @@ function StaggerBackState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function StaggerBackState:animEvent(arg0, arg1) end
+function StaggerBackState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function StaggerBackState:enter(arg0) end
+function StaggerBackState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function StaggerBackState:execute(arg0) end
+function StaggerBackState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function StaggerBackState:exit(arg0) end
+function StaggerBackState:exit(owner) end
 
 
 ------------------------------------

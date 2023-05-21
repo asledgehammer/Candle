@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AttachedItem: Object
+--- @class AttachedItem
 AttachedItem = {};
 
 ------------------------------------
@@ -21,7 +21,7 @@ function AttachedItem:getLocation() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 InventoryItem
+--- @param location String
+--- @param item InventoryItem
 --- @return AttachedItem
-function AttachedItem.new(arg0, arg1) end
+function AttachedItem.new(location, item) end

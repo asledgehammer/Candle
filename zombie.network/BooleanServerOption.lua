@@ -22,8 +22,8 @@ function BooleanServerOption:getTooltip() end
 ------------------------------------
 
 --- @public
---- @param arg0 ServerOptions
---- @param arg1 String
---- @param arg2 boolean
+--- @param owner ServerOptions
+--- @param name String
+--- @param defaultValue boolean
 --- @return BooleanServerOption
-function BooleanServerOption.new(arg0, arg1, arg2) end
+function BooleanServerOption.new(owner, name, defaultValue) end

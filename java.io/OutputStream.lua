@@ -1,6 +1,6 @@
 --- @meta
 
---- @class OutputStream: Object
+--- @class OutputStream
 --- @implement Closeable
 --- @implement Flushable
 OutputStream = {};

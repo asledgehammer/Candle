@@ -30,9 +30,9 @@ UIFont = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return UIFont
-function UIFont.FromString(arg0) end
+function UIFont.FromString(str) end
 
 --- @public
 --- @static

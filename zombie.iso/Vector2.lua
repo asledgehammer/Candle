@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Vector2: Object
+--- @class Vector2
 --- @implement Cloneable
 Vector2 = {};
 
@@ -10,48 +10,48 @@ Vector2 = {};
 
 --- @public
 --- @static
---- @param arg0 Vector2
---- @param arg1 Vector2
---- @param arg2 float
---- @param arg3 Vector2
+--- @param a Vector2
+--- @param b Vector2
+--- @param scale float
+--- @param result Vector2
 --- @return Vector2
-function Vector2.addScaled(arg0, arg1, arg2, arg3) end
+function Vector2.addScaled(a, b, scale, result) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param x float
+--- @param y float
+--- @param tx float
+--- @param ty float
 --- @return float
-function Vector2.dot(arg0, arg1, arg2, arg3) end
+function Vector2.dot(x, y, tx, ty) end
 
 --- @public
 --- @static
---- @param arg0 Point
+--- @param p Point
 --- @return Vector2
-function Vector2.fromAwtPoint(arg0) end
+function Vector2.fromAwtPoint(p) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param length float
+--- @param direction float
 --- @return Vector2
-function Vector2.fromLengthDirection(arg0, arg1) end
+function Vector2.fromLengthDirection(length, direction) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param x float
+--- @param y float
 --- @return float
-function Vector2.getDirection(arg0, arg1) end
+function Vector2.getDirection(x, y) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
---- @param arg1 float
+--- @param val Vector2
+--- @param scale float
 --- @return Vector2
-function Vector2.scale(arg0, arg1) end
+function Vector2.scale(val, scale) end
 
 
 ------------------------------------
@@ -59,43 +59,43 @@ function Vector2.scale(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return Vector2
-function Vector2:add(arg0) end
+function Vector2:add(other) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return Vector2
-function Vector2:aimAt(arg0) end
+function Vector2:aimAt(other) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return float
-function Vector2:angleBetween(arg0) end
+function Vector2:angleBetween(other) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return float
-function Vector2:angleTo(arg0) end
+function Vector2:angleTo(other) end
 
 --- @public
 --- @return Object
 function Vector2:clone() end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return float
-function Vector2:distanceTo(arg0) end
+function Vector2:distanceTo(other) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return float
-function Vector2:dot(arg0) end
+function Vector2:dot(other) end
 
 --- @public
---- @param arg0 Object
+--- @param other Object
 --- @return boolean
-function Vector2:equals(arg0) end
+function Vector2:equals(other) end
 
 --- @public
 --- @return float
@@ -126,46 +126,46 @@ function Vector2:getY() end
 function Vector2:normalize() end
 
 --- @public
---- @param arg0 float
+--- @param rad float
 --- @return void
-function Vector2:rotate(arg0) end
+function Vector2:rotate(rad) end
 
 --- @public
---- @param arg0 float
+--- @param scale float
 --- @return void
-function Vector2:scale(arg0) end
+function Vector2:scale(scale) end
 
 --- @public
---- @param arg0 Vector2
+--- @param other Vector2
 --- @return Vector2
---- @overload fun(arg0: float, arg1: float)
-function Vector2:set(arg0) end
+--- @overload fun(x: float, y: float)
+function Vector2:set(other) end
 
 --- @public
---- @param arg0 float
+--- @param direction float
 --- @return Vector2
-function Vector2:setDirection(arg0) end
+function Vector2:setDirection(direction) end
 
 --- @public
---- @param arg0 float
+--- @param length float
 --- @return Vector2
-function Vector2:setLength(arg0) end
+function Vector2:setLength(length) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param direction float
+--- @param length float
 --- @return Vector2
-function Vector2:setLengthAndDirection(arg0, arg1) end
+function Vector2:setLengthAndDirection(direction, length) end
 
 --- @public
---- @param arg0 float
+--- @param x float
 --- @return void
-function Vector2:setX(arg0) end
+function Vector2:setX(x) end
 
 --- @public
---- @param arg0 float
+--- @param y float
 --- @return void
-function Vector2:setY(arg0) end
+function Vector2:setY(y) end
 
 --- @public
 --- @return void
@@ -190,6 +190,6 @@ function Vector2:toString() end
 
 --- @public
 --- @return Vector2
---- @overload fun(arg0: Vector2)
---- @overload fun(arg0: float, arg1: float)
+--- @overload fun(other: Vector2)
+--- @overload fun(x: float, y: float)
 function Vector2.new() end

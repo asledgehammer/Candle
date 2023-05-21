@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSSuicidePact: RandomizedDeadSurvivorBase
+--- Create 2 dead survivor with 1 gunshot, one handle a loaded gun
 RDSSuicidePact = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RDSSuicidePact = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSSuicidePact:randomizeDeadSurvivor(arg0) end
+function RDSSuicidePact:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

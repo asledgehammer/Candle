@@ -46,14 +46,14 @@ function IntegerSandboxOption:isCustom() end
 function IntegerSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 String
+--- @param pageName String
 --- @return SandboxOption
-function IntegerSandboxOption:setPageName(arg0) end
+function IntegerSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 String
+--- @param translation String
 --- @return SandboxOption
-function IntegerSandboxOption:setTranslation(arg0) end
+function IntegerSandboxOption:setTranslation(translation) end
 
 --- @public
 --- @param arg0 KahluaTable
@@ -66,10 +66,10 @@ function IntegerSandboxOption:toTable(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param owner SandboxOptions
+--- @param name String
+--- @param min int
+--- @param max int
+--- @param defaultValue int
 --- @return IntegerSandboxOption
-function IntegerSandboxOption.new(arg0, arg1, arg2, arg3, arg4) end
+function IntegerSandboxOption.new(owner, name, min, max, defaultValue) end

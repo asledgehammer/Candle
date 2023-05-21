@@ -14,34 +14,34 @@ SpeedControls = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function SpeedControls:ButtonClicked(arg0) end
+function SpeedControls:ButtonClicked(name) end
 
 --- @public
 --- @return void
 function SpeedControls:SetCorrectIconStates() end
 
 --- @public
---- @param arg0 int
+--- @param NewSpeed int
 --- @return void
-function SpeedControls:SetCurrentGameSpeed(arg0) end
+function SpeedControls:SetCurrentGameSpeed(NewSpeed) end
 
 --- @public
 --- @return int
 function SpeedControls:getCurrentGameSpeed() end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param dx double
+--- @param dy double
 --- @return Boolean
-function SpeedControls:onMouseMove(arg0, arg1) end
+function SpeedControls:onMouseMove(dx, dy) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param dx double
+--- @param dy double
 --- @return void
-function SpeedControls:onMouseMoveOutside(arg0, arg1) end
+function SpeedControls:onMouseMoveOutside(dx, dy) end
 
 --- @public
 --- @return void

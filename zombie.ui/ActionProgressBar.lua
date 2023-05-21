@@ -16,14 +16,14 @@ function ActionProgressBar:getValue() end
 function ActionProgressBar:render() end
 
 --- @public
---- @param arg0 float
+--- @param delta float
 --- @return void
-function ActionProgressBar:setValue(arg0) end
+function ActionProgressBar:setValue(delta) end
 
 --- @public
---- @param arg0 int
+--- @param nPlayer int
 --- @return void
-function ActionProgressBar:update(arg0) end
+function ActionProgressBar:update(nPlayer) end
 
 
 ------------------------------------
@@ -31,7 +31,7 @@ function ActionProgressBar:update(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return ActionProgressBar
-function ActionProgressBar.new(arg0, arg1) end
+function ActionProgressBar.new(x, y) end

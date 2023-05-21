@@ -1,6 +1,7 @@
 --- @meta
 
---- @class RadioBroadCast: Object
+--- @class RadioBroadCast
+--- Turbo
 RadioBroadCast = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RadioBroadCast = {};
 ------------------------------------
 
 --- @public
---- @param arg0 RadioLine
+--- @param radioLine RadioLine
 --- @return void
-function RadioBroadCast:AddRadioLine(arg0) end
+function RadioBroadCast:AddRadioLine(radioLine) end
 
 --- @public
 --- @return String
@@ -38,7 +39,7 @@ function RadioBroadCast:getLines() end
 
 --- @public
 --- @return RadioLine
---- @overload fun(arg0: boolean)
+--- @overload fun(doChildren: boolean)
 function RadioBroadCast:getNextLine() end
 
 --- @public
@@ -47,23 +48,23 @@ function RadioBroadCast:getStartStamp() end
 
 --- @public
 --- @return void
---- @overload fun(arg0: boolean)
+--- @overload fun(doChildren: boolean)
 function RadioBroadCast:resetLineCounter() end
 
 --- @public
---- @param arg0 int
+--- @param n int
 --- @return void
-function RadioBroadCast:setCurrentLineNumber(arg0) end
+function RadioBroadCast:setCurrentLineNumber(n) end
 
 --- @public
---- @param arg0 RadioBroadCast
+--- @param broadCast RadioBroadCast
 --- @return void
-function RadioBroadCast:setPostSegment(arg0) end
+function RadioBroadCast:setPostSegment(broadCast) end
 
 --- @public
---- @param arg0 RadioBroadCast
+--- @param broadCast RadioBroadCast
 --- @return void
-function RadioBroadCast:setPreSegment(arg0) end
+function RadioBroadCast:setPreSegment(broadCast) end
 
 
 ------------------------------------
@@ -71,8 +72,8 @@ function RadioBroadCast:setPreSegment(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param id String
+--- @param startstamp int
+--- @param endstamp int
 --- @return RadioBroadCast
-function RadioBroadCast.new(arg0, arg1, arg2) end
+function RadioBroadCast.new(id, startstamp, endstamp) end

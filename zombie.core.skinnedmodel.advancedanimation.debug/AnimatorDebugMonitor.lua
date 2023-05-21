@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AnimatorDebugMonitor: Object
+--- @class AnimatorDebugMonitor
 AnimatorDebugMonitor = {};
 
 ------------------------------------
@@ -19,9 +19,9 @@ function AnimatorDebugMonitor.isKnownVarsDirty() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param key String
 --- @return void
-function AnimatorDebugMonitor.registerVariable(arg0) end
+function AnimatorDebugMonitor.registerVariable(key) end
 
 
 ------------------------------------
@@ -37,14 +37,14 @@ function AnimatorDebugMonitor:IsDirty() end
 function AnimatorDebugMonitor:IsDirtyFloatList() end
 
 --- @public
---- @param arg0 String
+--- @param var String
 --- @return void
-function AnimatorDebugMonitor:addCustomVariable(arg0) end
+function AnimatorDebugMonitor:addCustomVariable(var) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return boolean
-function AnimatorDebugMonitor:getFilter(arg0) end
+function AnimatorDebugMonitor:getFilter(index) end
 
 --- @public
 --- @return ArrayList
@@ -79,31 +79,31 @@ function AnimatorDebugMonitor:getSelectedVariableFloat() end
 function AnimatorDebugMonitor:isDoTickStamps() end
 
 --- @public
---- @param arg0 String
+--- @param var String
 --- @return void
-function AnimatorDebugMonitor:removeCustomVariable(arg0) end
+function AnimatorDebugMonitor:removeCustomVariable(var) end
 
 --- @public
---- @param arg0 boolean
+--- @param doTickStamps boolean
 --- @return void
-function AnimatorDebugMonitor:setDoTickStamps(arg0) end
+function AnimatorDebugMonitor:setDoTickStamps(doTickStamps) end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
+--- @param index int
+--- @param b boolean
 --- @return void
-function AnimatorDebugMonitor:setFilter(arg0, arg1) end
+function AnimatorDebugMonitor:setFilter(index, b) end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return void
-function AnimatorDebugMonitor:setSelectedVariable(arg0) end
+function AnimatorDebugMonitor:setSelectedVariable(key) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimLayer[]
+--- @param chr IsoGameCharacter
+--- @param Layers AnimLayer[]
 --- @return void
-function AnimatorDebugMonitor:update(arg0, arg1) end
+function AnimatorDebugMonitor:update(chr, Layers) end
 
 
 ------------------------------------
@@ -111,6 +111,6 @@ function AnimatorDebugMonitor:update(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return AnimatorDebugMonitor
-function AnimatorDebugMonitor.new(arg0) end
+function AnimatorDebugMonitor.new(chr) end

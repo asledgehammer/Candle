@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GameKeyboard: Object
+--- @class GameKeyboard
 --- @field public bNoEventsWhileLoading boolean
 --- @field public doLuaKeyPressed boolean
 GameKeyboard = {};
@@ -11,9 +11,9 @@ GameKeyboard = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param key int
 --- @return void
-function GameKeyboard.eatKeyPress(arg0) end
+function GameKeyboard.eatKeyPress(key) end
 
 --- @public
 --- @static
@@ -27,15 +27,15 @@ function GameKeyboard.getEventQueuePolling() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param key int
 --- @return boolean
-function GameKeyboard.isKeyDown(arg0) end
+function GameKeyboard.isKeyDown(key) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param key int
 --- @return boolean
-function GameKeyboard.isKeyPressed(arg0) end
+function GameKeyboard.isKeyPressed(key) end
 
 --- @public
 --- @static
@@ -44,9 +44,9 @@ function GameKeyboard.poll() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param doIt boolean
 --- @return void
-function GameKeyboard.setDoLuaKeyPressed(arg0) end
+function GameKeyboard.setDoLuaKeyPressed(doIt) end
 
 --- @public
 --- @static
@@ -55,9 +55,9 @@ function GameKeyboard.update() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param key int
 --- @return boolean
-function GameKeyboard.wasKeyDown(arg0) end
+function GameKeyboard.wasKeyDown(key) end
 
 
 ------------------------------------

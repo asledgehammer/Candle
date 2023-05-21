@@ -11,9 +11,9 @@ IsoBuilding = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoRoom
+--- @param room IsoRoom
 --- @return void
-function IsoBuilding:AddRoom(arg0) end
+function IsoBuilding:AddRoom(room) end
 
 --- @public
 --- @return void
@@ -24,57 +24,57 @@ function IsoBuilding:CalculateExits() end
 function IsoBuilding:CalculateWindows() end
 
 --- @public
---- @param arg0 Stack
+--- @param items Stack
 --- @return boolean
-function IsoBuilding:ContainsAllItems(arg0) end
+function IsoBuilding:ContainsAllItems(items) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 LotHeader
+--- @param building BuildingDef
+--- @param info LotHeader
 --- @return void
-function IsoBuilding:CreateFrom(arg0, arg1) end
+function IsoBuilding:CreateFrom(building, info) end
 
 --- @public
 --- @return void
 function IsoBuilding:FillContainers() end
 
 --- @public
---- @param arg0 SurvivorDesc
---- @param arg1 boolean
+--- @param desc SurvivorDesc
+--- @param bFarGood boolean
 --- @return float
-function IsoBuilding:ScoreBuildingPersonSpecific(arg0, arg1) end
+function IsoBuilding:ScoreBuildingPersonSpecific(desc, bFarGood) end
 
 --- @public
 --- @return void
 function IsoBuilding:TriggerAlarm() end
 
 --- @public
---- @param arg0 IsoDoor
---- @param arg1 boolean
+--- @param obj IsoDoor
+--- @param bOtherTile boolean
 --- @return void
---- @overload fun(arg0: IsoDoor, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding)
-function IsoBuilding:addDoor(arg0, arg1) end
+--- @overload fun(obj: IsoDoor, bOtherTile: boolean, from: IsoGridSquare, building: IsoBuilding)
+function IsoBuilding:addDoor(obj, bOtherTile) end
 
 --- @public
---- @param arg0 IsoWindow
---- @param arg1 boolean
+--- @param obj IsoWindow
+--- @param bOtherTile boolean
 --- @return void
---- @overload fun(arg0: IsoWindow, arg1: boolean, arg2: IsoGridSquare, arg3: IsoBuilding)
-function IsoBuilding:addWindow(arg0, arg1) end
+--- @overload fun(obj: IsoWindow, bOtherTile: boolean, from: IsoGridSquare, building: IsoBuilding)
+function IsoBuilding:addWindow(obj, bOtherTile) end
 
 --- @public
---- @param arg0 String
+--- @param room String
 --- @return boolean
-function IsoBuilding:containsRoom(arg0) end
+function IsoBuilding:containsRoom(room) end
 
 --- @public
 --- @return void
 function IsoBuilding:forceAwake() end
 
 --- @public
---- @param arg0 ItemType
+--- @param itemType ItemType
 --- @return ItemContainer
-function IsoBuilding:getContainerWith(arg0) end
+function IsoBuilding:getContainerWith(itemType) end
 
 --- @public
 --- @return BuildingDef
@@ -89,9 +89,9 @@ function IsoBuilding:getFreeTile() end
 function IsoBuilding:getID() end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return ItemContainer
-function IsoBuilding:getRandomContainer(arg0) end
+function IsoBuilding:getRandomContainer(type) end
 
 --- @public
 --- @return IsoWindow
@@ -99,7 +99,7 @@ function IsoBuilding:getRandomFirstFloorWindow() end
 
 --- @public
 --- @return IsoRoom
---- @overload fun(arg0: String)
+--- @overload fun(room: String)
 function IsoBuilding:getRandomRoom() end
 
 --- @public
@@ -123,14 +123,14 @@ function IsoBuilding:isResidential() end
 function IsoBuilding:isToxic() end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function IsoBuilding:setAllExplored(arg0) end
+function IsoBuilding:setAllExplored(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param isToxic boolean
 --- @return void
-function IsoBuilding:setToxic(arg0) end
+function IsoBuilding:setToxic(isToxic) end
 
 --- @public
 --- @return void
@@ -143,5 +143,5 @@ function IsoBuilding:update() end
 
 --- @public
 --- @return IsoBuilding
---- @overload fun(arg0: IsoCell)
+--- @overload fun(cell: IsoCell)
 function IsoBuilding.new() end

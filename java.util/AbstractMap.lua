@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AbstractMap: Object
+--- @class AbstractMap
 --- @implement Map
 AbstractMap = {};
 

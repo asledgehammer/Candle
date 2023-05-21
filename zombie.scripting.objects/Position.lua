@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Position: Object
+--- @class Position
 Position = {};
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Trait: Object
+--- @class Trait
 --- @implement IListBoxItem
 Trait = {};
 
@@ -63,19 +63,19 @@ function Trait:isFree() end
 function Trait:isRemoveInMP() end
 
 --- @public
---- @param arg0 String
+--- @param desc String
 --- @return void
-function Trait:setDescription(arg0) end
+function Trait:setDescription(desc) end
 
 --- @public
---- @param arg0 List
+--- @param freeRecipes List
 --- @return void
-function Trait:setFreeRecipes(arg0) end
+function Trait:setFreeRecipes(freeRecipes) end
 
 --- @public
---- @param arg0 boolean
+--- @param removeInMP boolean
 --- @return void
-function Trait:setRemoveInMP(arg0) end
+function Trait:setRemoveInMP(removeInMP) end
 
 
 ------------------------------------
@@ -83,11 +83,11 @@ function Trait:setRemoveInMP(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 String
---- @param arg4 boolean
---- @param arg5 boolean
+--- @param tr String
+--- @param name String
+--- @param cost int
+--- @param desc String
+--- @param prof boolean
+--- @param removeInMP boolean
 --- @return Trait
-function Trait.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+function Trait.new(tr, name, cost, desc, prof, removeInMP) end

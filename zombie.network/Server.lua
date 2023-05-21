@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Server: Object
+--- @class Server
 Server = {};
 
 ------------------------------------
@@ -88,89 +88,89 @@ function Server:isPasswordProtected() end
 function Server:isPublic() end
 
 --- @public
---- @param arg0 String
+--- @param description String
 --- @return void
-function Server:setDescription(arg0) end
+function Server:setDescription(description) end
 
 --- @public
---- @param arg0 boolean
+--- @param hosted boolean
 --- @return void
-function Server:setHosted(arg0) end
+function Server:setHosted(hosted) end
 
 --- @public
---- @param arg0 String
+--- @param ip String
 --- @return void
-function Server:setIp(arg0) end
+function Server:setIp(ip) end
 
 --- @public
---- @param arg0 int
+--- @param lastUpdate int
 --- @return void
-function Server:setLastUpdate(arg0) end
+function Server:setLastUpdate(lastUpdate) end
 
 --- @public
---- @param arg0 String
+--- @param ip String
 --- @return void
-function Server:setLocalIP(arg0) end
+function Server:setLocalIP(ip) end
 
 --- @public
---- @param arg0 String
+--- @param maxPlayers String
 --- @return void
-function Server:setMaxPlayers(arg0) end
+function Server:setMaxPlayers(maxPlayers) end
 
 --- @public
---- @param arg0 String
+--- @param mods String
 --- @return void
-function Server:setMods(arg0) end
+function Server:setMods(mods) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Server:setName(arg0) end
+function Server:setName(name) end
 
 --- @public
---- @param arg0 boolean
+--- @param open boolean
 --- @return void
-function Server:setOpen(arg0) end
+function Server:setOpen(open) end
 
 --- @public
---- @param arg0 boolean
+--- @param pp boolean
 --- @return void
-function Server:setPasswordProtected(arg0) end
+function Server:setPasswordProtected(pp) end
 
 --- @public
---- @param arg0 String
+--- @param ping String
 --- @return void
-function Server:setPing(arg0) end
+function Server:setPing(ping) end
 
 --- @public
---- @param arg0 String
+--- @param players String
 --- @return void
-function Server:setPlayers(arg0) end
+function Server:setPlayers(players) end
 
 --- @public
---- @param arg0 String
+--- @param port String
 --- @return void
-function Server:setPort(arg0) end
+function Server:setPort(port) end
 
 --- @public
---- @param arg0 boolean
+--- @param bPublic boolean
 --- @return void
-function Server:setPublic(arg0) end
+function Server:setPublic(bPublic) end
 
 --- @public
---- @param arg0 String
+--- @param pwd String
 --- @return void
-function Server:setPwd(arg0) end
+function Server:setPwd(pwd) end
 
 --- @public
---- @param arg0 String
+--- @param pwd String
 --- @return void
-function Server:setServerPassword(arg0) end
+function Server:setServerPassword(pwd) end
 
 --- @public
---- @param arg0 String
+--- @param steamId String
 --- @return void
-function Server:setSteamId(arg0) end
+function Server:setSteamId(steamId) end
 
 --- @public
 --- @param arg0 boolean
@@ -178,14 +178,14 @@ function Server:setSteamId(arg0) end
 function Server:setUseSteamRelay(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param userName String
 --- @return void
-function Server:setUserName(arg0) end
+function Server:setUserName(userName) end
 
 --- @public
---- @param arg0 String
+--- @param version String
 --- @return void
-function Server:setVersion(arg0) end
+function Server:setVersion(version) end
 
 
 ------------------------------------

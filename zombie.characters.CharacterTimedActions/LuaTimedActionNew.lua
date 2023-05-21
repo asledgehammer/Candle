@@ -9,28 +9,28 @@ LuaTimedActionNew = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Mover
+--- @param mover Mover
 --- @return void
-function LuaTimedActionNew:Failed(arg0) end
+function LuaTimedActionNew:Failed(mover) end
 
 --- @public
---- @param arg0 AnimEvent
+--- @param event AnimEvent
 --- @return void
-function LuaTimedActionNew:OnAnimEvent(arg0) end
+function LuaTimedActionNew:OnAnimEvent(event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param chr IsoGameCharacter
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function LuaTimedActionNew:Pathfind(arg0, arg1, arg2, arg3) end
+function LuaTimedActionNew:Pathfind(chr, x, y, z) end
 
 --- @public
---- @param arg0 Path
---- @param arg1 Mover
+--- @param path Path
+--- @param mover Mover
 --- @return void
-function LuaTimedActionNew:Succeeded(arg0, arg1) end
+function LuaTimedActionNew:Succeeded(path, mover) end
 
 --- @public
 --- @return String
@@ -45,14 +45,14 @@ function LuaTimedActionNew:getName() end
 function LuaTimedActionNew:perform() end
 
 --- @public
---- @param arg0 float
+--- @param time float
 --- @return void
-function LuaTimedActionNew:setCurrentTime(arg0) end
+function LuaTimedActionNew:setCurrentTime(time) end
 
 --- @public
---- @param arg0 int
+--- @param maxTime int
 --- @return void
-function LuaTimedActionNew:setTime(arg0) end
+function LuaTimedActionNew:setTime(maxTime) end
 
 --- @public
 --- @return void

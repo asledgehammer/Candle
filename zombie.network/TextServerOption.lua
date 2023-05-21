@@ -26,9 +26,9 @@ function TextServerOption:getType() end
 ------------------------------------
 
 --- @public
---- @param arg0 ServerOptions
---- @param arg1 String
---- @param arg2 String
---- @param arg3 int
+--- @param owner ServerOptions
+--- @param name String
+--- @param defaultValue String
+--- @param maxLength int
 --- @return TextServerOption
-function TextServerOption.new(arg0, arg1, arg2, arg3) end
+function TextServerOption.new(owner, name, defaultValue, maxLength) end

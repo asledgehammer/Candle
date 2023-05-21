@@ -46,14 +46,14 @@ function DoubleSandboxOption:isCustom() end
 function DoubleSandboxOption:setCustom() end
 
 --- @public
---- @param arg0 String
+--- @param pageName String
 --- @return SandboxOption
-function DoubleSandboxOption:setPageName(arg0) end
+function DoubleSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param arg0 String
+--- @param translation String
 --- @return SandboxOption
-function DoubleSandboxOption:setTranslation(arg0) end
+function DoubleSandboxOption:setTranslation(translation) end
 
 --- @public
 --- @param arg0 KahluaTable
@@ -66,10 +66,10 @@ function DoubleSandboxOption:toTable(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 SandboxOptions
---- @param arg1 String
---- @param arg2 double
---- @param arg3 double
---- @param arg4 double
+--- @param owner SandboxOptions
+--- @param name String
+--- @param min double
+--- @param max double
+--- @param defaultValue double
 --- @return DoubleSandboxOption
-function DoubleSandboxOption.new(arg0, arg1, arg2, arg3, arg4) end
+function DoubleSandboxOption.new(owner, name, min, max, defaultValue) end

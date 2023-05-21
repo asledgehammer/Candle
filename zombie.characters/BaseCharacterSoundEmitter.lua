@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BaseCharacterSoundEmitter: Object
+--- @class BaseCharacterSoundEmitter
 BaseCharacterSoundEmitter = {};
 
 ------------------------------------
@@ -16,43 +16,43 @@ function BaseCharacterSoundEmitter:hasSoundsToStart() end
 function BaseCharacterSoundEmitter:isClear() end
 
 --- @public
---- @param arg0 String
+--- @param channel long
 --- @return boolean
-function BaseCharacterSoundEmitter:isPlaying(arg0) end
+function BaseCharacterSoundEmitter:isPlaying(channel) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
+--- @param file String
+--- @param volume float
 --- @return void
-function BaseCharacterSoundEmitter:playFootsteps(arg0, arg1) end
+function BaseCharacterSoundEmitter:playFootsteps(file, volume) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
---- @overload fun(arg0: String, arg1: IsoObject)
-function BaseCharacterSoundEmitter:playSound(arg0) end
+--- @overload fun(file: String, proxy: IsoObject)
+function BaseCharacterSoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoObject
+--- @param file String
+--- @param proxy IsoObject
 --- @return long
-function BaseCharacterSoundEmitter:playSoundImpl(arg0, arg1) end
+function BaseCharacterSoundEmitter:playSoundImpl(file, proxy) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
-function BaseCharacterSoundEmitter:playVocals(arg0) end
+function BaseCharacterSoundEmitter:playVocals(file) end
 
 --- @public
 --- @return void
 function BaseCharacterSoundEmitter:register() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return void
-function BaseCharacterSoundEmitter:set(arg0, arg1, arg2) end
+function BaseCharacterSoundEmitter:set(x, y, z) end
 
 --- @public
 --- @param arg0 long
@@ -62,45 +62,45 @@ function BaseCharacterSoundEmitter:set(arg0, arg1, arg2) end
 function BaseCharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
+--- @param handle long
+--- @param pitch float
 --- @return void
-function BaseCharacterSoundEmitter:setPitch(arg0, arg1) end
+function BaseCharacterSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
+--- @param handle long
+--- @param volume float
 --- @return void
-function BaseCharacterSoundEmitter:setVolume(arg0, arg1) end
+function BaseCharacterSoundEmitter:setVolume(handle, volume) end
 
 --- @public
 --- @return void
 function BaseCharacterSoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function BaseCharacterSoundEmitter:stopOrTriggerSound(arg0) end
+function BaseCharacterSoundEmitter:stopOrTriggerSound(handle) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function BaseCharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
+function BaseCharacterSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
---- @param arg0 long
+--- @param channel long
 --- @return int
-function BaseCharacterSoundEmitter:stopSound(arg0) end
+function BaseCharacterSoundEmitter:stopSound(channel) end
 
 --- @public
---- @param arg0 String
+--- @param soundName String
 --- @return int
-function BaseCharacterSoundEmitter:stopSoundByName(arg0) end
+function BaseCharacterSoundEmitter:stopSoundByName(soundName) end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function BaseCharacterSoundEmitter:stopSoundLocal(arg0) end
+function BaseCharacterSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return void
@@ -116,6 +116,6 @@ function BaseCharacterSoundEmitter:unregister() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return BaseCharacterSoundEmitter
-function BaseCharacterSoundEmitter.new(arg0) end
+function BaseCharacterSoundEmitter.new(chr) end

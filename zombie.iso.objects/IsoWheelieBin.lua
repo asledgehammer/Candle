@@ -12,10 +12,10 @@ IsoWheelieBin = {};
 function IsoWheelieBin:getObjectName() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param x float
+--- @param y float
 --- @return float
-function IsoWheelieBin:getWeight(arg0, arg1) end
+function IsoWheelieBin:getWeight(x, y) end
 
 --- @public
 --- @return void
@@ -27,7 +27,7 @@ function IsoWheelieBin:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoWheelieBin
---- @overload fun(arg0: IsoCell, arg1: int, arg2: int, arg3: int)
-function IsoWheelieBin.new(arg0) end
+--- @overload fun(cell: IsoCell, x: int, y: int, z: int)
+function IsoWheelieBin.new(cell) end

@@ -12,73 +12,73 @@ DummySoundEmitter = {};
 function DummySoundEmitter:hasSoundsToStart() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return boolean
-function DummySoundEmitter:hasSustainPoints(arg0) end
+function DummySoundEmitter:hasSustainPoints(handle) end
 
 --- @public
 --- @return boolean
 function DummySoundEmitter:isEmpty() end
 
 --- @public
---- @param arg0 String
+--- @param alias String
 --- @return boolean
-function DummySoundEmitter:isPlaying(arg0) end
+function DummySoundEmitter:isPlaying(alias) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
-function DummySoundEmitter:playAmbientLoopedImpl(arg0) end
+function DummySoundEmitter:playAmbientLoopedImpl(file) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return long
-function DummySoundEmitter:playAmbientSound(arg0) end
+function DummySoundEmitter:playAmbientSound(name) end
 
 --- @public
---- @param arg0 GameSoundClip
---- @param arg1 IsoObject
+--- @param clip GameSoundClip
+--- @param parent IsoObject
 --- @return long
-function DummySoundEmitter:playClip(arg0, arg1) end
+function DummySoundEmitter:playClip(clip, parent) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
---- @overload fun(arg0: String, arg1: IsoGameCharacter)
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int)
-function DummySoundEmitter:playSound(arg0) end
+--- @overload fun(file: String, square: IsoGridSquare)
+--- @overload fun(file: String, x: int, y: int, z: int)
+function DummySoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoGridSquare
+--- @param file String
+--- @param parent IsoObject
 --- @return long
---- @overload fun(arg0: String, arg1: boolean, arg2: IsoObject)
-function DummySoundEmitter:playSoundImpl(arg0, arg1) end
+--- @overload fun(file: String, doWorldSound: boolean, parent: IsoObject)
+function DummySoundEmitter:playSoundImpl(file, parent) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
-function DummySoundEmitter:playSoundLooped(arg0) end
+function DummySoundEmitter:playSoundLooped(file) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
-function DummySoundEmitter:playSoundLoopedImpl(arg0) end
+function DummySoundEmitter:playSoundLoopedImpl(file) end
 
 --- @public
 --- @return void
 function DummySoundEmitter:randomStart() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return boolean
-function DummySoundEmitter:restart(arg0) end
+function DummySoundEmitter:restart(handle) end
 
 --- @public
---- @param arg0 long
---- @param arg1 boolean
+--- @param handle long
+--- @param is3D boolean
 --- @return void
-function DummySoundEmitter:set3D(arg0, arg1) end
+function DummySoundEmitter:set3D(handle, is3D) end
 
 --- @public
 --- @param arg0 long
@@ -88,72 +88,72 @@ function DummySoundEmitter:set3D(arg0, arg1) end
 function DummySoundEmitter:setParameterValue(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
+--- @param handle long
+--- @param volume float
 --- @return void
-function DummySoundEmitter:setPitch(arg0, arg1) end
+function DummySoundEmitter:setPitch(handle, volume) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return void
-function DummySoundEmitter:setPos(arg0, arg1, arg2) end
+function DummySoundEmitter:setPos(x, y, z) end
 
 --- @public
---- @param arg0 long
---- @param arg1 String
+--- @param handle long
+--- @param positionName String
 --- @return void
-function DummySoundEmitter:setTimelinePosition(arg0, arg1) end
+function DummySoundEmitter:setTimelinePosition(handle, positionName) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
+--- @param handle long
+--- @param volume float
 --- @return void
-function DummySoundEmitter:setVolume(arg0, arg1) end
+function DummySoundEmitter:setVolume(handle, volume) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function DummySoundEmitter:setVolumeAll(arg0) end
+function DummySoundEmitter:setVolumeAll(volume) end
 
 --- @public
 --- @return void
 function DummySoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function DummySoundEmitter:stopOrTriggerSound(arg0) end
+function DummySoundEmitter:stopOrTriggerSound(handle) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function DummySoundEmitter:stopOrTriggerSoundByName(arg0) end
+function DummySoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
---- @param arg0 long
+--- @param channel long
 --- @return int
-function DummySoundEmitter:stopSound(arg0) end
+function DummySoundEmitter:stopSound(channel) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return int
-function DummySoundEmitter:stopSoundByName(arg0) end
+function DummySoundEmitter:stopSoundByName(name) end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function DummySoundEmitter:stopSoundLocal(arg0) end
+function DummySoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return void
 function DummySoundEmitter:tick() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function DummySoundEmitter:triggerCue(arg0) end
+function DummySoundEmitter:triggerCue(handle) end
 
 
 ------------------------------------

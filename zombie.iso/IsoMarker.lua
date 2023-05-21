@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoMarker: Object
+--- @class IsoMarker
 IsoMarker = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ IsoMarker = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoObject
+--- @param tempObject IsoObject
 --- @return void
-function IsoMarker:addTempSquareObject(arg0) end
+function IsoMarker:addTempSquareObject(tempObject) end
 
 --- @public
 --- @return float
@@ -69,15 +69,15 @@ function IsoMarker:getZ() end
 function IsoMarker:hasTempSquareObject() end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 IsoGridSquare
---- @param arg5 boolean
+--- @param spriteName String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param gs IsoGridSquare
+--- @param doTempIsoObject boolean
 --- @return void
 --- @overload fun(arg0: KahluaTable, arg1: KahluaTable, arg2: int, arg3: int, arg4: int, arg5: IsoGridSquare, arg6: boolean)
-function IsoMarker:init(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoMarker:init(spriteName, x, y, z, gs, doTempIsoObject) end
 
 --- @public
 --- @return boolean
@@ -100,66 +100,66 @@ function IsoMarker:remove() end
 function IsoMarker:removeTempSquareObjects() end
 
 --- @public
---- @param arg0 float
+--- @param a float
 --- @return void
-function IsoMarker:setA(arg0) end
+function IsoMarker:setA(a) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return void
-function IsoMarker:setActive(arg0) end
+function IsoMarker:setActive(active) end
 
 --- @public
---- @param arg0 float
+--- @param alpha float
 --- @return void
-function IsoMarker:setAlpha(arg0) end
+function IsoMarker:setAlpha(alpha) end
 
 --- @public
---- @param arg0 float
+--- @param alphaMax float
 --- @return void
-function IsoMarker:setAlphaMax(arg0) end
+function IsoMarker:setAlphaMax(alphaMax) end
 
 --- @public
---- @param arg0 float
+--- @param alphaMin float
 --- @return void
-function IsoMarker:setAlphaMin(arg0) end
+function IsoMarker:setAlphaMin(alphaMin) end
 
 --- @public
---- @param arg0 float
+--- @param b float
 --- @return void
-function IsoMarker:setB(arg0) end
+function IsoMarker:setB(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param doAlpha boolean
 --- @return void
-function IsoMarker:setDoAlpha(arg0) end
+function IsoMarker:setDoAlpha(doAlpha) end
 
 --- @public
---- @param arg0 float
+--- @param fadeSpeed float
 --- @return void
-function IsoMarker:setFadeSpeed(arg0) end
+function IsoMarker:setFadeSpeed(fadeSpeed) end
 
 --- @public
---- @param arg0 float
+--- @param g float
 --- @return void
-function IsoMarker:setG(arg0) end
+function IsoMarker:setG(g) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function IsoMarker:setPos(arg0, arg1, arg2) end
+function IsoMarker:setPos(x, y, z) end
 
 --- @public
---- @param arg0 float
+--- @param r float
 --- @return void
-function IsoMarker:setR(arg0) end
+function IsoMarker:setR(r) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return void
-function IsoMarker:setSquare(arg0) end
+function IsoMarker:setSquare(square) end
 
 
 ------------------------------------

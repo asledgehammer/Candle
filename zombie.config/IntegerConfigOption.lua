@@ -40,14 +40,14 @@ function IntegerConfigOption:getValueAsObject() end
 function IntegerConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return boolean
-function IntegerConfigOption:isValidString(arg0) end
+function IntegerConfigOption:isValidString(s) end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return void
-function IntegerConfigOption:parse(arg0) end
+function IntegerConfigOption:parse(s) end
 
 --- @public
 --- @return void
@@ -58,14 +58,14 @@ function IntegerConfigOption:resetToDefault() end
 function IntegerConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 int
+--- @param value int
 --- @return void
-function IntegerConfigOption:setValue(arg0) end
+function IntegerConfigOption:setValue(value) end
 
 --- @public
---- @param arg0 Object
+--- @param o Object
 --- @return void
-function IntegerConfigOption:setValueFromObject(arg0) end
+function IntegerConfigOption:setValueFromObject(o) end
 
 
 ------------------------------------
@@ -73,9 +73,9 @@ function IntegerConfigOption:setValueFromObject(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param name String
+--- @param min int
+--- @param max int
+--- @param defaultValue int
 --- @return IntegerConfigOption
-function IntegerConfigOption.new(arg0, arg1, arg2, arg3) end
+function IntegerConfigOption.new(name, min, max, defaultValue) end

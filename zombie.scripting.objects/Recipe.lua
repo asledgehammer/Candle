@@ -8,25 +8,25 @@ Recipe = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function Recipe:DoResult(arg0) end
+function Recipe:DoResult(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function Recipe:DoSource(arg0) end
+function Recipe:DoSource(type) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param a InventoryItem
 --- @return int
-function Recipe:FindIndexOf(arg0) end
+function Recipe:FindIndexOf(a) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String[]
+--- @param name String
+--- @param strArray String[]
 --- @return void
-function Recipe:Load(arg0, arg1) end
+function Recipe:Load(name, strArray) end
 
 --- @public
 --- @param arg0 Perk
@@ -39,9 +39,9 @@ function Recipe:addRequiredSkill(arg0, arg1) end
 function Recipe:clearRequiredSkills() end
 
 --- @public
---- @param arg0 String
+--- @param sourceFullType String
 --- @return Source
-function Recipe:findSource(arg0) end
+function Recipe:findSource(sourceFullType) end
 
 --- @public
 --- @return String
@@ -104,9 +104,9 @@ function Recipe:getProp1() end
 function Recipe:getProp2() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return RequiredSkill
-function Recipe:getRequiredSkill(arg0) end
+function Recipe:getRequiredSkill(index) end
 
 --- @public
 --- @return int
@@ -157,9 +157,9 @@ function Recipe:isAllowRottenItem() end
 function Recipe:isCanBeDoneFromFloor() end
 
 --- @public
---- @param arg0 String
+--- @param sourceFullType String
 --- @return boolean
-function Recipe:isDestroy(arg0) end
+function Recipe:isDestroy(sourceFullType) end
 
 --- @public
 --- @return boolean
@@ -170,9 +170,9 @@ function Recipe:isHidden() end
 function Recipe:isInSameInventory() end
 
 --- @public
---- @param arg0 String
+--- @param sourceFullType String
 --- @return boolean
-function Recipe:isKeep(arg0) end
+function Recipe:isKeep(sourceFullType) end
 
 --- @public
 --- @return boolean
@@ -195,14 +195,14 @@ function Recipe:needToBeLearn() end
 function Recipe:noBrokenItems() end
 
 --- @public
---- @param arg0 boolean
+--- @param allow boolean
 --- @return void
-function Recipe:setAllowDestroyedItem(arg0) end
+function Recipe:setAllowDestroyedItem(allow) end
 
 --- @public
---- @param arg0 boolean
+--- @param allow boolean
 --- @return void
-function Recipe:setAllowFrozenItem(arg0) end
+function Recipe:setAllowFrozenItem(allow) end
 
 --- @public
 --- @param arg0 boolean
@@ -210,94 +210,94 @@ function Recipe:setAllowFrozenItem(arg0) end
 function Recipe:setAllowRottenItem(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param animNode String
 --- @return void
-function Recipe:setAnimNode(arg0) end
+function Recipe:setAnimNode(animNode) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBeDoneFromFloor boolean
 --- @return void
-function Recipe:setCanBeDoneFromFloor(arg0) end
+function Recipe:setCanBeDoneFromFloor(canBeDoneFromFloor) end
 
 --- @public
---- @param arg0 String
+--- @param functionName String
 --- @return void
-function Recipe:setCanPerform(arg0) end
+function Recipe:setCanPerform(functionName) end
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return void
-function Recipe:setCategory(arg0) end
+function Recipe:setCategory(category) end
 
 --- @public
---- @param arg0 boolean
+--- @param hide boolean
 --- @return void
-function Recipe:setIsHidden(arg0) end
+function Recipe:setIsHidden(hide) end
 
 --- @public
---- @param arg0 String
+--- @param functionName String
 --- @return void
-function Recipe:setLuaCreate(arg0) end
+function Recipe:setLuaCreate(functionName) end
 
 --- @public
---- @param arg0 String
+--- @param functionName String
 --- @return void
-function Recipe:setLuaGiveXP(arg0) end
+function Recipe:setLuaGiveXP(functionName) end
 
 --- @public
---- @param arg0 String
+--- @param functionName String
 --- @return void
-function Recipe:setLuaGrab(arg0) end
+function Recipe:setLuaGrab(functionName) end
 
 --- @public
---- @param arg0 String
+--- @param functionName String
 --- @return void
-function Recipe:setLuaTest(arg0) end
+function Recipe:setLuaTest(functionName) end
 
 --- @public
---- @param arg0 String
+--- @param nearItem String
 --- @return void
-function Recipe:setNearItem(arg0) end
+function Recipe:setNearItem(nearItem) end
 
 --- @public
---- @param arg0 boolean
+--- @param needToBeLearn boolean
 --- @return void
-function Recipe:setNeedToBeLearn(arg0) end
+function Recipe:setNeedToBeLearn(needToBeLearn) end
 
 --- @public
---- @param arg0 String
+--- @param originalname String
 --- @return void
-function Recipe:setOriginalname(arg0) end
+function Recipe:setOriginalname(originalname) end
 
 --- @public
---- @param arg0 String
+--- @param prop1 String
 --- @return void
-function Recipe:setProp1(arg0) end
+function Recipe:setProp1(prop1) end
 
 --- @public
---- @param arg0 String
+--- @param prop2 String
 --- @return void
-function Recipe:setProp2(arg0) end
+function Recipe:setProp2(prop2) end
 
 --- @public
---- @param arg0 boolean
+--- @param removeResultItem boolean
 --- @return void
-function Recipe:setRemoveResultItem(arg0) end
+function Recipe:setRemoveResultItem(removeResultItem) end
 
 --- @public
---- @param arg0 String
+--- @param sound String
 --- @return void
-function Recipe:setSound(arg0) end
+function Recipe:setSound(sound) end
 
 --- @public
---- @param arg0 boolean
+--- @param stop boolean
 --- @return void
-function Recipe:setStopOnRun(arg0) end
+function Recipe:setStopOnRun(stop) end
 
 --- @public
---- @param arg0 boolean
+--- @param stop boolean
 --- @return void
-function Recipe:setStopOnWalk(arg0) end
+function Recipe:setStopOnWalk(stop) end
 
 
 ------------------------------------

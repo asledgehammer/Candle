@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSGunslinger: RandomizedDeadSurvivorBase
+--- Create a dead survivor somewhere with lot of modified guns/ammo on him
 RDSGunslinger = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RDSGunslinger = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSGunslinger:randomizeDeadSurvivor(arg0) end
+function RDSGunslinger:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

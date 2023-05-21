@@ -1,6 +1,6 @@
 --- @meta
 
---- @class FixingManager: Object
+--- @class FixingManager
 FixingManager = {};
 
 ------------------------------------
@@ -36,9 +36,9 @@ function FixingManager.getCondRepaired(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return ArrayList
-function FixingManager.getFixes(arg0) end
+function FixingManager.getFixes(item) end
 
 --- @public
 --- @static

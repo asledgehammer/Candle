@@ -1,6 +1,7 @@
 --- @meta
 
---- @class ClimateForecaster: Object
+--- @class ClimateForecaster
+--- TurboTuTone.
 ClimateForecaster = {};
 
 ------------------------------------
@@ -13,7 +14,7 @@ function ClimateForecaster:getDaysTillFirstWeather() end
 
 --- @public
 --- @return DayForecast
---- @overload fun(arg0: int)
+--- @overload fun(offset: int)
 function ClimateForecaster:getForecast() end
 
 --- @public

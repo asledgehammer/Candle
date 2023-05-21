@@ -18,40 +18,40 @@ IsoDirections = {};
 
 --- @public
 --- @static
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return IsoDirections
-function IsoDirections.RotLeft(arg0) end
+function IsoDirections.RotLeft(dir) end
 
 --- @public
 --- @static
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return IsoDirections
-function IsoDirections.RotRight(arg0) end
+function IsoDirections.RotRight(dir) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param angle Vector2
 --- @return IsoDirections
-function IsoDirections.cardinalFromAngle(arg0) end
+function IsoDirections.cardinalFromAngle(angle) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param angle Vector2
 --- @return IsoDirections
---- @overload fun(arg0: float, arg1: float)
-function IsoDirections.fromAngle(arg0) end
+--- @overload fun(angleX: float, angleY: float)
+function IsoDirections.fromAngle(angle) end
 
 --- @public
 --- @static
---- @param arg0 Vector2
+--- @param angle Vector2
 --- @return IsoDirections
-function IsoDirections.fromAngleActual(arg0) end
+function IsoDirections.fromAngleActual(angle) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return IsoDirections
-function IsoDirections.fromIndex(arg0) end
+function IsoDirections.fromIndex(index) end
 
 --- @public
 --- @static
@@ -65,9 +65,9 @@ function IsoDirections.getRandom() end
 
 --- @public
 --- @static
---- @param arg0 IsoDirections
+--- @param dir IsoDirections
 --- @return IsoDirections
-function IsoDirections.reverse(arg0) end
+function IsoDirections.reverse(dir) end
 
 --- @public
 --- @static
@@ -87,12 +87,12 @@ function IsoDirections.values() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(arg0: int)
+--- @overload fun(time: int)
 function IsoDirections:RotLeft() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(arg0: int)
+--- @overload fun(time: int)
 function IsoDirections:RotRight() end
 
 --- @public

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BeardStyle: Object
+--- @class BeardStyle
 BeardStyle = {};
 
 ------------------------------------

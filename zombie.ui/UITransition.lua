@@ -1,6 +1,6 @@
 --- @meta
 
---- @class UITransition: Object
+--- @class UITransition
 UITransition = {};
 
 ------------------------------------
@@ -26,29 +26,29 @@ function UITransition:fraction() end
 function UITransition:getElapsed() end
 
 --- @public
---- @param arg0 float
---- @param arg1 boolean
+--- @param duration float
+--- @param fadeOut boolean
 --- @return void
-function UITransition:init(arg0, arg1) end
+function UITransition:init(duration, fadeOut) end
 
 --- @public
 --- @return void
 function UITransition:reset() end
 
 --- @public
---- @param arg0 float
+--- @param elapsed float
 --- @return void
-function UITransition:setElapsed(arg0) end
+function UITransition:setElapsed(elapsed) end
 
 --- @public
---- @param arg0 boolean
+--- @param fadeIn boolean
 --- @return void
-function UITransition:setFadeIn(arg0) end
+function UITransition:setFadeIn(fadeIn) end
 
 --- @public
---- @param arg0 boolean
+--- @param ignore boolean
 --- @return void
-function UITransition:setIgnoreUpdateTime(arg0) end
+function UITransition:setIgnoreUpdateTime(ignore) end
 
 --- @public
 --- @return void

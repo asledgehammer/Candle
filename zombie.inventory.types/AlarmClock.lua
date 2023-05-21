@@ -60,41 +60,41 @@ function AlarmClock:isDigital() end
 function AlarmClock:isRinging() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function AlarmClock:load(arg0, arg1) end
+function AlarmClock:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function AlarmClock:save(arg0, arg1) end
+function AlarmClock:save(output, net) end
 
 --- @public
---- @param arg0 boolean
+--- @param alarmSet boolean
 --- @return void
-function AlarmClock:setAlarmSet(arg0) end
+function AlarmClock:setAlarmSet(alarmSet) end
 
 --- @public
---- @param arg0 String
+--- @param alarmSound String
 --- @return void
-function AlarmClock:setAlarmSound(arg0) end
+function AlarmClock:setAlarmSound(alarmSound) end
 
 --- @public
---- @param arg0 int
+--- @param hour int
 --- @return void
-function AlarmClock:setHour(arg0) end
+function AlarmClock:setHour(hour) end
 
 --- @public
---- @param arg0 int
+--- @param min int
 --- @return void
-function AlarmClock:setMinute(arg0) end
+function AlarmClock:setMinute(min) end
 
 --- @public
---- @param arg0 int
+--- @param soundRadius int
 --- @return void
-function AlarmClock:setSoundRadius(arg0) end
+function AlarmClock:setSoundRadius(soundRadius) end
 
 --- @public
 --- @return boolean
@@ -109,9 +109,9 @@ function AlarmClock:stopRinging() end
 function AlarmClock:syncAlarmClock() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return void
-function AlarmClock:syncAlarmClock_Player(arg0) end
+function AlarmClock:syncAlarmClock_Player(player) end
 
 --- @public
 --- @return void
@@ -126,9 +126,9 @@ function AlarmClock:syncStopRinging() end
 function AlarmClock:update() end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function AlarmClock:updateSound(arg0) end
+function AlarmClock:updateSound(emitter) end
 
 
 ------------------------------------
@@ -136,9 +136,9 @@ function AlarmClock:updateSound(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param texName String
 --- @return AlarmClock
-function AlarmClock.new(arg0, arg1, arg2, arg3) end
+function AlarmClock.new(module, name, itemType, texName) end

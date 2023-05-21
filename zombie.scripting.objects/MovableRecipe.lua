@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MovableRecipe: Recipe
+--- TurboTuTone.
 MovableRecipe = {};
 
 ------------------------------------
@@ -32,19 +33,19 @@ function MovableRecipe:hasXpPerk() end
 function MovableRecipe:isValid() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function MovableRecipe:setName(arg0) end
+function MovableRecipe:setName(name) end
 
 --- @public
---- @param arg0 String
+--- @param onCreate String
 --- @return void
-function MovableRecipe:setOnCreate(arg0) end
+function MovableRecipe:setOnCreate(onCreate) end
 
 --- @public
---- @param arg0 String
+--- @param onXP String
 --- @return void
-function MovableRecipe:setOnXP(arg0) end
+function MovableRecipe:setOnXP(onXP) end
 
 --- @public
 --- @param arg0 Perk
@@ -53,36 +54,36 @@ function MovableRecipe:setOnXP(arg0) end
 function MovableRecipe:setRequiredSkill(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param resultItem String
+--- @param count int
 --- @return void
-function MovableRecipe:setResult(arg0, arg1) end
+function MovableRecipe:setResult(resultItem, count) end
 
 --- @public
---- @param arg0 String
+--- @param sourceItem String
 --- @return void
-function MovableRecipe:setSource(arg0) end
+function MovableRecipe:setSource(sourceItem) end
 
 --- @public
---- @param arg0 float
+--- @param time float
 --- @return void
-function MovableRecipe:setTime(arg0) end
+function MovableRecipe:setTime(time) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param tools String
+--- @param isPrimary boolean
 --- @return void
-function MovableRecipe:setTool(arg0, arg1) end
+function MovableRecipe:setTool(tools, isPrimary) end
 
 --- @public
---- @param arg0 boolean
+--- @param valid boolean
 --- @return void
-function MovableRecipe:setValid(arg0) end
+function MovableRecipe:setValid(valid) end
 
 --- @public
---- @param arg0 String
+--- @param worldSprite String
 --- @return void
-function MovableRecipe:setWorldSprite(arg0) end
+function MovableRecipe:setWorldSprite(worldSprite) end
 
 --- @public
 --- @param arg0 Perk

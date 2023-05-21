@@ -1,6 +1,6 @@
 --- @meta
 
---- @class LayoutItem: Object
+--- @class LayoutItem
 LayoutItem = {};
 
 ------------------------------------
@@ -12,55 +12,55 @@ LayoutItem = {};
 function LayoutItem:calcSizes() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 ObjectTooltip
+--- @param x int
+--- @param y int
+--- @param mid int
+--- @param right int
+--- @param ui ObjectTooltip
 --- @return void
-function LayoutItem:render(arg0, arg1, arg2, arg3, arg4) end
+function LayoutItem:render(x, y, mid, right, ui) end
 
 --- @public
 --- @return void
 function LayoutItem:reset() end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param label String
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function LayoutItem:setLabel(arg0, arg1, arg2, arg3, arg4) end
+function LayoutItem:setLabel(label, r, g, b, a) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param fraction float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function LayoutItem:setProgress(arg0, arg1, arg2, arg3, arg4) end
+function LayoutItem:setProgress(fraction, r, g, b, a) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param label String
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function LayoutItem:setValue(arg0, arg1, arg2, arg3, arg4) end
+function LayoutItem:setValue(label, r, g, b, a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
+--- @param value int
+--- @param highGood boolean
 --- @return void
-function LayoutItem:setValueRight(arg0, arg1) end
+function LayoutItem:setValueRight(value, highGood) end
 
 --- @public
---- @param arg0 int
+--- @param value int
 --- @return void
-function LayoutItem:setValueRightNoPlus(arg0) end
+function LayoutItem:setValueRightNoPlus(value) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Season: Object
+--- @class Season
 Season = {};
 
 ------------------------------------

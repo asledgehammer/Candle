@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BaseScriptObject: Object
+--- @class BaseScriptObject
 BaseScriptObject = {};
 
 ------------------------------------
@@ -8,10 +8,10 @@ BaseScriptObject = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String[]
+--- @param name String
+--- @param strArray String[]
 --- @return void
-function BaseScriptObject:Load(arg0, arg1) end
+function BaseScriptObject:Load(name, strArray) end
 
 --- @public
 --- @return ScriptModule

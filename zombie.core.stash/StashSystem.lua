@@ -1,6 +1,6 @@
 --- @meta
 
---- @class StashSystem: Object
+--- @class StashSystem
 --- @field public allStashes ArrayList
 --- @field public buildingsToDo ArrayList
 --- @field public possibleStashes ArrayList
@@ -17,22 +17,22 @@ function StashSystem.Reset() end
 
 --- @public
 --- @static
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function StashSystem.checkStashItem(arg0) end
+function StashSystem.checkStashItem(item) end
 
 --- @public
 --- @static
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function StashSystem.doBuildingStash(arg0) end
+function StashSystem.doBuildingStash(def) end
 
 --- @public
 --- @static
---- @param arg0 Stash
---- @param arg1 InventoryItem
+--- @param stash Stash
+--- @param item InventoryItem
 --- @return void
-function StashSystem.doStashItem(arg0, arg1) end
+function StashSystem.doStashItem(stash, item) end
 
 --- @public
 --- @static
@@ -41,9 +41,9 @@ function StashSystem.getPossibleStashes() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param stashName String
 --- @return Stash
-function StashSystem.getStash(arg0) end
+function StashSystem.getStash(stashName) end
 
 --- @public
 --- @static
@@ -57,16 +57,16 @@ function StashSystem.initAllStashes() end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function StashSystem.load(arg0, arg1) end
+function StashSystem.load(input, WorldVersion) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param stashName String
 --- @return void
-function StashSystem.prepareBuildingStash(arg0) end
+function StashSystem.prepareBuildingStash(stashName) end
 
 --- @public
 --- @static
@@ -75,15 +75,15 @@ function StashSystem.reinit() end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function StashSystem.save(arg0) end
+function StashSystem.save(output) end
 
 --- @public
 --- @static
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function StashSystem.visitedBuilding(arg0) end
+function StashSystem.visitedBuilding(def) end
 
 
 ------------------------------------

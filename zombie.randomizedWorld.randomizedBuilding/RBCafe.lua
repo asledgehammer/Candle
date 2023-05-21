@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBCafe: RandomizedBuildingBase
+--- Add some food on table
 RBCafe = {};
 
 ------------------------------------
@@ -8,20 +9,20 @@ RBCafe = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBCafe:isValid(arg0, arg1) end
+function RBCafe:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RBCafe:randomizeBuilding(arg0) end
+function RBCafe:randomizeBuilding(def) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return boolean
-function RBCafe:roomValid(arg0) end
+function RBCafe:roomValid(sq) end
 
 
 ------------------------------------

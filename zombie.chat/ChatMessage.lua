@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ChatMessage: Object
+--- @class ChatMessage
 --- @implement Cloneable
 ChatMessage = {};
 
@@ -101,74 +101,74 @@ function ChatMessage:isShowInChat() end
 function ChatMessage:makeFromDiscord() end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return void
-function ChatMessage:pack(arg0) end
+function ChatMessage:pack(b) end
 
 --- @public
---- @param arg0 String
+--- @param author String
 --- @return void
-function ChatMessage:setAuthor(arg0) end
+function ChatMessage:setAuthor(author) end
 
 --- @public
---- @param arg0 String
+--- @param customTag String
 --- @return void
-function ChatMessage:setCustomTag(arg0) end
+function ChatMessage:setCustomTag(customTag) end
 
 --- @public
---- @param arg0 LocalDateTime
+--- @param datetime LocalDateTime
 --- @return void
-function ChatMessage:setDatetime(arg0) end
+function ChatMessage:setDatetime(datetime) end
 
 --- @public
---- @param arg0 boolean
+--- @param __local boolean
 --- @return void
-function ChatMessage:setLocal(arg0) end
+function ChatMessage:setLocal(__local) end
 
 --- @public
---- @param arg0 boolean
+--- @param overHeadSpeech boolean
 --- @return void
-function ChatMessage:setOverHeadSpeech(arg0) end
+function ChatMessage:setOverHeadSpeech(overHeadSpeech) end
 
 --- @public
---- @param arg0 int
+--- @param radioChannel int
 --- @return void
-function ChatMessage:setRadioChannel(arg0) end
+function ChatMessage:setRadioChannel(radioChannel) end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return void
-function ChatMessage:setScrambledText(arg0) end
+function ChatMessage:setScrambledText(text) end
 
 --- @public
---- @param arg0 boolean
+--- @param serverAlert boolean
 --- @return void
-function ChatMessage:setServerAlert(arg0) end
+function ChatMessage:setServerAlert(serverAlert) end
 
 --- @public
---- @param arg0 boolean
+--- @param serverAuthor boolean
 --- @return void
-function ChatMessage:setServerAuthor(arg0) end
+function ChatMessage:setServerAuthor(serverAuthor) end
 
 --- @public
---- @param arg0 boolean
+--- @param shouldAttractZombies boolean
 --- @return void
-function ChatMessage:setShouldAttractZombies(arg0) end
+function ChatMessage:setShouldAttractZombies(shouldAttractZombies) end
 
 --- @public
---- @param arg0 boolean
+--- @param showInChat boolean
 --- @return void
-function ChatMessage:setShowInChat(arg0) end
+function ChatMessage:setShowInChat(showInChat) end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return void
-function ChatMessage:setText(arg0) end
+function ChatMessage:setText(text) end
 
 --- @public
---- @param arg0 Color
+--- @param textColor Color
 --- @return void
-function ChatMessage:setTextColor(arg0) end
+function ChatMessage:setTextColor(textColor) end
 
 --- @public
 --- @return String
@@ -180,8 +180,8 @@ function ChatMessage:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 ChatBase
---- @param arg1 String
+--- @param chat ChatBase
+--- @param text String
 --- @return ChatMessage
---- @overload fun(arg0: ChatBase, arg1: LocalDateTime, arg2: String)
-function ChatMessage.new(arg0, arg1) end
+--- @overload fun(chat: ChatBase, datetime: LocalDateTime, text: String)
+function ChatMessage.new(chat, text) end

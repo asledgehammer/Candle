@@ -17,9 +17,9 @@ function ComboItem:getSaveType() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param texName String
 --- @return ComboItem
-function ComboItem.new(arg0, arg1, arg2, arg3) end
+function ComboItem.new(module, name, itemType, texName) end

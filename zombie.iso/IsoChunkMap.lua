@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoChunkMap: Object
+--- @class IsoChunkMap
 --- @field public bSettingChunk ReentrantLock
 --- @field public ChunkGridWidth int
 --- @field public ChunksPerWidth int
@@ -29,10 +29,10 @@ function IsoChunkMap.CalcChunkWidth() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return void
-function IsoChunkMap.setWorldStartPos(arg0, arg1) end
+function IsoChunkMap.setWorldStartPos(x, y) end
 
 
 ------------------------------------
@@ -44,25 +44,25 @@ function IsoChunkMap.setWorldStartPos(arg0, arg1) end
 function IsoChunkMap:Dispose() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param wx int
+--- @param wy int
+--- @param x int
+--- @param y int
 --- @return void
-function IsoChunkMap:LoadChunk(arg0, arg1, arg2, arg3) end
+function IsoChunkMap:LoadChunk(wx, wy, x, y) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param wx int
+--- @param wy int
+--- @param x int
+--- @param y int
 --- @return IsoChunk
-function IsoChunkMap:LoadChunkForLater(arg0, arg1, arg2, arg3) end
+function IsoChunkMap:LoadChunkForLater(wx, wy, x, y) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function IsoChunkMap:ProcessChunkPos(arg0) end
+function IsoChunkMap:ProcessChunkPos(chr) end
 
 --- @public
 --- @return void
@@ -85,50 +85,50 @@ function IsoChunkMap:checkIntegrity() end
 function IsoChunkMap:checkIntegrityThread() end
 
 --- @public
---- @param arg0 IsoChunkMap
+--- @param from IsoChunkMap
 --- @return void
-function IsoChunkMap:copy(arg0) end
+function IsoChunkMap:copy(from) end
 
 --- @public
 --- @return void
 function IsoChunkMap:drawDebugChunkMap() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return IsoChunk
-function IsoChunkMap:getChunk(arg0, arg1) end
+function IsoChunkMap:getChunk(x, y) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return IsoChunk
-function IsoChunkMap:getChunkCurrent(arg0, arg1) end
+function IsoChunkMap:getChunkCurrent(x, y) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return IsoChunk
-function IsoChunkMap:getChunkForGridSquare(arg0, arg1) end
+function IsoChunkMap:getChunkForGridSquare(x, y) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return IsoGridSquare
-function IsoChunkMap:getGridSquare(arg0, arg1, arg2) end
+function IsoChunkMap:getGridSquare(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param tileX int
+--- @param tileY int
+--- @param tileZ int
 --- @return IsoGridSquare
-function IsoChunkMap:getGridSquareDirect(arg0, arg1, arg2) end
+function IsoChunkMap:getGridSquareDirect(tileX, tileY, tileZ) end
 
 --- @public
---- @param arg0 int
+--- @param iD int
 --- @return IsoRoom
-function IsoChunkMap:getRoom(arg0) end
+function IsoChunkMap:getRoom(iD) end
 
 --- @public
 --- @return int
@@ -163,29 +163,29 @@ function IsoChunkMap:getWorldYMinTiles() end
 function IsoChunkMap:processAllLoadGridSquare() end
 
 --- @public
---- @param arg0 int
+--- @param zza int
 --- @return void
-function IsoChunkMap:renderBloodForChunks(arg0) end
+function IsoChunkMap:renderBloodForChunks(zza) end
 
 --- @public
---- @param arg0 IsoChunk
---- @param arg1 boolean
+--- @param c IsoChunk
+--- @param bRequireLock boolean
 --- @return boolean
-function IsoChunkMap:setChunkDirect(arg0, arg1) end
+function IsoChunkMap:setChunkDirect(c, bRequireLock) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
+--- @param square IsoGridSquare
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function IsoChunkMap:setGridSquare(arg0, arg1, arg2, arg3) end
+function IsoChunkMap:setGridSquare(square, x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return void
-function IsoChunkMap:setInitialPos(arg0, arg1) end
+function IsoChunkMap:setInitialPos(wx, wy) end
 
 --- @public
 --- @return void
@@ -197,6 +197,6 @@ function IsoChunkMap:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoChunkMap
-function IsoChunkMap.new(arg0) end
+function IsoChunkMap.new(cell) end

@@ -12,23 +12,23 @@ IsoLuaMover = {};
 function IsoLuaMover:getObjectName() end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 boolean
---- @param arg3 boolean
+--- @param name String
+--- @param seconds float
+--- @param looped boolean
+--- @param playing boolean
 --- @return void
-function IsoLuaMover:playAnim(arg0, arg1, arg2, arg3) end
+function IsoLuaMover:playAnim(name, seconds, looped, playing) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param col ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return void
-function IsoLuaMover:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoLuaMover:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
 --- @return void

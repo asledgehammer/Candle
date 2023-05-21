@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ServerOptions: Object
+--- @class ServerOptions
 --- @field public cardList ArrayList
 --- @field public clientOptionsList HashMap
 --- @field public instance ServerOptions
@@ -13,9 +13,9 @@ ServerOptions = {};
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param doLine boolean
 --- @return ArrayList
-function ServerOptions.getClientCommandList(arg0) end
+function ServerOptions.getClientCommandList(doLine) end
 
 --- @public
 --- @static
@@ -43,30 +43,30 @@ function ServerOptions.initClientCommandsHelp() end
 function ServerOptions:addOption(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param key String
+--- @param value String
 --- @return String
-function ServerOptions:changeOption(arg0, arg1) end
+function ServerOptions:changeOption(key, value) end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return Boolean
-function ServerOptions:getBoolean(arg0) end
+function ServerOptions:getBoolean(key) end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return Double
-function ServerOptions:getDouble(arg0) end
+function ServerOptions:getDouble(key) end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return Float
-function ServerOptions:getFloat(arg0) end
+function ServerOptions:getFloat(key) end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return Integer
-function ServerOptions:getInteger(arg0) end
+function ServerOptions:getInteger(key) end
 
 --- @public
 --- @return int
@@ -77,19 +77,19 @@ function ServerOptions:getMaxPlayers() end
 function ServerOptions:getNumOptions() end
 
 --- @public
---- @param arg0 String
+--- @param key String
 --- @return String
-function ServerOptions:getOption(arg0) end
+function ServerOptions:getOption(key) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return ServerOption
-function ServerOptions:getOptionByIndex(arg0) end
+function ServerOptions:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ServerOption
-function ServerOptions:getOptionByName(arg0) end
+function ServerOptions:getOptionByName(name) end
 
 --- @public
 --- @return ArrayList
@@ -104,30 +104,30 @@ function ServerOptions:getPublicOptions() end
 function ServerOptions:init() end
 
 --- @public
---- @param arg0 String
+--- @param serverName String
 --- @return boolean
-function ServerOptions:loadServerTextFile(arg0) end
+function ServerOptions:loadServerTextFile(serverName) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param key String
+--- @param value String
 --- @return void
-function ServerOptions:putOption(arg0, arg1) end
+function ServerOptions:putOption(key, value) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param key String
+--- @param value String
 --- @return void
-function ServerOptions:putSaveOption(arg0, arg1) end
+function ServerOptions:putSaveOption(key, value) end
 
 --- @public
 --- @return void
 function ServerOptions:resetRegionFile() end
 
 --- @public
---- @param arg0 String
+--- @param serverName String
 --- @return boolean
-function ServerOptions:saveServerTextFile(arg0) end
+function ServerOptions:saveServerTextFile(serverName) end
 
 
 ------------------------------------

@@ -17,28 +17,28 @@ function IsoDeadBody.Reset() end
 
 --- @public
 --- @static
---- @param arg0 short
---- @param arg1 IsoDeadBody
+--- @param id short
+--- @param deadBody IsoDeadBody
 --- @return void
-function IsoDeadBody.addDeadBodyID(arg0, arg1) end
+function IsoDeadBody.addDeadBodyID(id, deadBody) end
 
 --- @public
 --- @static
---- @param arg0 short
+--- @param id short
 --- @return IsoDeadBody
-function IsoDeadBody.getDeadBody(arg0) end
+function IsoDeadBody.getDeadBody(id) end
 
 --- @public
 --- @static
---- @param arg0 short
+--- @param id short
 --- @return boolean
-function IsoDeadBody.isDead(arg0) end
+function IsoDeadBody.isDead(id) end
 
 --- @public
 --- @static
---- @param arg0 short
+--- @param id short
 --- @return void
-function IsoDeadBody.removeDeadBody(arg0) end
+function IsoDeadBody.removeDeadBody(id) end
 
 --- @public
 --- @static
@@ -69,28 +69,28 @@ function IsoDeadBody.updateBodies() end
 function IsoDeadBody:Burn() end
 
 --- @public
---- @param arg0 Vector2
---- @param arg1 IsoObject
+--- @param collision Vector2
+--- @param object IsoObject
 --- @return void
-function IsoDeadBody:Collision(arg0, arg1) end
+function IsoDeadBody:Collision(collision, object) end
 
 --- @public
 --- @return boolean
 function IsoDeadBody:IsSpeaking() end
 
 --- @public
---- @param arg0 String
+--- @param line String
 --- @return void
-function IsoDeadBody:Say(arg0) end
+function IsoDeadBody:Say(line) end
 
 --- @public
 --- @return void
 function IsoDeadBody:addToWorld() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param removedItem InventoryItem
 --- @return void
-function IsoDeadBody:checkClothing(arg0) end
+function IsoDeadBody:checkClothing(removedItem) end
 
 --- @public
 --- @return float
@@ -109,9 +109,9 @@ function IsoDeadBody:getHumanVisual() end
 function IsoDeadBody:getItem() end
 
 --- @public
---- @param arg0 ItemVisuals
+--- @param itemVisuals ItemVisuals
 --- @return void
-function IsoDeadBody:getItemVisuals(arg0) end
+function IsoDeadBody:getItemVisuals(itemVisuals) end
 
 --- @public
 --- @return short
@@ -174,10 +174,10 @@ function IsoDeadBody:isFallOnFront() end
 function IsoDeadBody:isFemale() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param screenX float
+--- @param screenY float
 --- @return boolean
-function IsoDeadBody:isMouseOver(arg0, arg1) end
+function IsoDeadBody:isMouseOver(screenX, screenY) end
 
 --- @public
 --- @return boolean
@@ -192,22 +192,22 @@ function IsoDeadBody:isSkeleton() end
 function IsoDeadBody:isZombie() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoDeadBody:load(arg0, arg1, arg2) end
+function IsoDeadBody:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ByteBuffer
+--- @param change String
+--- @param bb ByteBuffer
 --- @return void
-function IsoDeadBody:loadChange(arg0, arg1) end
+function IsoDeadBody:loadChange(change, bb) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param b ByteBuffer
 --- @return String
-function IsoDeadBody:readInventory(arg0) end
+function IsoDeadBody:readInventory(b) end
 
 --- @public
 --- @return void
@@ -226,23 +226,23 @@ function IsoDeadBody:reanimateNow() end
 function IsoDeadBody:removeFromWorld() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return void
-function IsoDeadBody:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoDeadBody:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param lightInfo ColorInfo
 --- @return void
-function IsoDeadBody:renderObjectPicker(arg0, arg1, arg2, arg3) end
+function IsoDeadBody:renderObjectPicker(x, y, z, lightInfo) end
 
 --- @public
 --- @return void
@@ -253,10 +253,10 @@ function IsoDeadBody:renderShadow() end
 function IsoDeadBody:renderlast() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoDeadBody:save(arg0, arg1) end
+function IsoDeadBody:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 String
@@ -266,59 +266,59 @@ function IsoDeadBody:save(arg0, arg1) end
 function IsoDeadBody:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 AttachedItems
+--- @param other AttachedItems
 --- @return void
-function IsoDeadBody:setAttachedItems(arg0) end
+function IsoDeadBody:setAttachedItems(other) end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param container ItemContainer
 --- @return void
-function IsoDeadBody:setContainer(arg0) end
+function IsoDeadBody:setContainer(container) end
 
 --- @public
---- @param arg0 boolean
+--- @param crawling boolean
 --- @return void
-function IsoDeadBody:setCrawling(arg0) end
+function IsoDeadBody:setCrawling(crawling) end
 
 --- @public
---- @param arg0 boolean
+--- @param fakeDead boolean
 --- @return void
-function IsoDeadBody:setFakeDead(arg0) end
+function IsoDeadBody:setFakeDead(fakeDead) end
 
 --- @public
---- @param arg0 boolean
+--- @param fallOnFront boolean
 --- @return void
-function IsoDeadBody:setFallOnFront(arg0) end
+function IsoDeadBody:setFallOnFront(fallOnFront) end
 
 --- @public
---- @param arg0 short
+--- @param objectID short
 --- @return void
-function IsoDeadBody:setObjectID(arg0) end
+function IsoDeadBody:setObjectID(objectID) end
 
 --- @public
---- @param arg0 short
+--- @param onlineID short
 --- @return void
-function IsoDeadBody:setOnlineID(arg0) end
+function IsoDeadBody:setOnlineID(onlineID) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function IsoDeadBody:setPrimaryHandItem(arg0) end
+function IsoDeadBody:setPrimaryHandItem(item) end
 
 --- @public
---- @param arg0 float
+--- @param hours float
 --- @return void
-function IsoDeadBody:setReanimateTime(arg0) end
+function IsoDeadBody:setReanimateTime(hours) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function IsoDeadBody:setSecondaryHandItem(arg0) end
+function IsoDeadBody:setSecondaryHandItem(item) end
 
 --- @public
---- @param arg0 WornItems
+--- @param other WornItems
 --- @return void
-function IsoDeadBody:setWornItems(arg0) end
+function IsoDeadBody:setWornItems(other) end
 
 --- @public
 --- @return void
@@ -334,7 +334,7 @@ function IsoDeadBody:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param died IsoGameCharacter
 --- @return IsoDeadBody
---- @overload fun(arg0: IsoGameCharacter, arg1: boolean)
-function IsoDeadBody.new(arg0) end
+--- @overload fun(died: IsoGameCharacter, wasCorpseAlready: boolean)
+function IsoDeadBody.new(died) end

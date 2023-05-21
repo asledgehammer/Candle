@@ -17,22 +17,22 @@ function DebugGlobalObjectState:enter() end
 function DebugGlobalObjectState:exit() end
 
 --- @public
---- @param arg0 String
+--- @param func String
 --- @return Object
-function DebugGlobalObjectState:fromLua0(arg0) end
+function DebugGlobalObjectState:fromLua0(func) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
+--- @param func String
+--- @param arg0 Object
 --- @return Object
-function DebugGlobalObjectState:fromLua1(arg0, arg1) end
+function DebugGlobalObjectState:fromLua1(func, arg0) end
 
 --- @public
---- @param arg0 String
+--- @param func String
+--- @param arg0 Object
 --- @param arg1 Object
---- @param arg2 Object
 --- @return Object
-function DebugGlobalObjectState:fromLua2(arg0, arg1, arg2) end
+function DebugGlobalObjectState:fromLua2(func, arg0, arg1) end
 
 --- @public
 --- @return void

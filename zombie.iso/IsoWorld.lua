@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoWorld: Object
+--- @class IsoWorld
 --- @field public instance IsoWorld
 --- @field public mapPath String
 --- @field public mapUseJar boolean
@@ -109,15 +109,15 @@ function IsoWorld.isAnimRecorderDiscardTriggered() end
 
 --- @public
 --- @static
---- @param arg0 InputStream
+--- @param __in RandomAccessFile
 --- @return int
-function IsoWorld.readInt(arg0) end
+function IsoWorld.readInt(__in) end
 
 --- @public
 --- @static
---- @param arg0 RandomAccessFile
+--- @param __in InputStream
 --- @return String
-function IsoWorld.readString(arg0) end
+function IsoWorld.readString(__in) end
 
 
 ------------------------------------
@@ -125,20 +125,20 @@ function IsoWorld.readString(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 SurvivorDesc
---- @param arg1 IsoGridSquare
---- @param arg2 IsoPlayer
+--- @param desc SurvivorDesc
+--- @param sq IsoGridSquare
+--- @param player IsoPlayer
 --- @return IsoSurvivor
-function IsoWorld:CreateRandomSurvivor(arg0, arg1, arg2) end
+function IsoWorld:CreateRandomSurvivor(desc, sq, player) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param num int
+--- @param x1 int
+--- @param y1 int
+--- @param x2 int
+--- @param y2 int
 --- @return void
-function IsoWorld:CreateSwarm(arg0, arg1, arg2, arg3, arg4) end
+function IsoWorld:CreateSwarm(num, x1, y1, x2, y2) end
 
 --- @public
 --- @return void
@@ -153,23 +153,23 @@ function IsoWorld:KillCell() end
 function IsoWorld:LoadPlayerForInfo() end
 
 --- @public
---- @param arg0 IsoSpriteManager
---- @param arg1 String
---- @param arg2 int
+--- @param sprMan IsoSpriteManager
+--- @param filename String
+--- @param fileNumber int
 --- @return void
-function IsoWorld:LoadTileDefinitions(arg0, arg1, arg2) end
+function IsoWorld:LoadTileDefinitions(sprMan, filename, fileNumber) end
 
 --- @public
---- @param arg0 IsoSpriteManager
---- @param arg1 String
---- @param arg2 int
+--- @param sprMan IsoSpriteManager
+--- @param filename String
+--- @param fileNumber int
 --- @return void
-function IsoWorld:LoadTileDefinitionsPropertyStrings(arg0, arg1, arg2) end
+function IsoWorld:LoadTileDefinitionsPropertyStrings(sprMan, filename, fileNumber) end
 
 --- @public
---- @param arg0 String
+--- @param trait String
 --- @return void
-function IsoWorld:addLuaTrait(arg0) end
+function IsoWorld:addLuaTrait(trait) end
 
 --- @public
 --- @return void
@@ -177,7 +177,7 @@ function IsoWorld:checkVehiclesZones() end
 
 --- @public
 --- @return HashMap
---- @overload fun(arg0: String)
+--- @overload fun(filename: String)
 function IsoWorld:getAllTiles() end
 
 --- @public
@@ -202,7 +202,7 @@ function IsoWorld:getFrameNo() end
 
 --- @public
 --- @return BaseSoundEmitter
---- @overload fun(arg0: float, arg1: float, arg2: float)
+--- @overload fun(x: float, y: float, z: float)
 function IsoWorld:getFreeEmitter() end
 
 --- @public
@@ -214,9 +214,9 @@ function IsoWorld:getGameMode() end
 function IsoWorld:getGlobalTemperature() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return IsoObject
-function IsoWorld:getItemFromXYZIndexBuffer(arg0) end
+function IsoWorld:getItemFromXYZIndexBuffer(bb) end
 
 --- @public
 --- @return SurvivorDesc
@@ -251,16 +251,16 @@ function IsoWorld:getLuaTraits() end
 function IsoWorld:getMap() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return IsoMetaChunk
-function IsoWorld:getMetaChunk(arg0, arg1) end
+function IsoWorld:getMetaChunk(wx, wy) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return IsoMetaChunk
-function IsoWorld:getMetaChunkFromTile(arg0, arg1) end
+function IsoWorld:getMetaChunkFromTile(wx, wy) end
 
 --- @public
 --- @return IsoMetaGrid
@@ -279,9 +279,9 @@ function IsoWorld:getRBBasic() end
 function IsoWorld:getRandomizedBuildingList() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return RandomizedVehicleStoryBase
-function IsoWorld:getRandomizedVehicleStoryByName(arg0) end
+function IsoWorld:getRandomizedVehicleStoryByName(name) end
 
 --- @public
 --- @return ArrayList
@@ -332,11 +332,11 @@ function IsoWorld:init() end
 function IsoWorld:isHydroPowerOn() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return boolean
-function IsoWorld:isValidSquare(arg0, arg1, arg2) end
+function IsoWorld:isValidSquare(x, y, z) end
 
 --- @public
 --- @param arg0 String
@@ -384,49 +384,49 @@ function IsoWorld:registerSpawnOrigin(arg0, arg1, arg2, arg3, arg4) end
 function IsoWorld:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param x float
+--- @param y float
+--- @param flow float
+--- @param speed float
 --- @return void
-function IsoWorld:registerWaterFlow(arg0, arg1, arg2, arg3) end
+function IsoWorld:registerWaterFlow(x, y, flow, speed) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
+--- @param x1 float
+--- @param y1 float
+--- @param x2 float
+--- @param y2 float
+--- @param shore float
+--- @param water_ground float
 --- @return void
-function IsoWorld:registerWaterZone(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoWorld:registerWaterZone(x1, y1, x2, y2, shore, water_ground) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param width int
+--- @param height int
 --- @return Zone
-function IsoWorld:registerZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoWorld:registerZone(name, type, x, y, z, width, height) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param width int
+--- @param height int
 --- @return Zone
-function IsoWorld:registerZoneNoOverlap(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoWorld:registerZoneNoOverlap(name, type, x, y, z, width, height) end
 
 --- @public
---- @param arg0 String
+--- @param lotDir String
 --- @return void
-function IsoWorld:removeZonesForLotDirectory(arg0) end
+function IsoWorld:removeZonesForLotDirectory(lotDir) end
 
 --- @public
 --- @return void
@@ -437,99 +437,99 @@ function IsoWorld:render() end
 function IsoWorld:renderTerrain() end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function IsoWorld:returnOwnershipOfEmitter(arg0) end
+function IsoWorld:returnOwnershipOfEmitter(emitter) end
 
 --- @public
 --- @return void
 function IsoWorld:sceneCullZombies() end
 
 --- @public
---- @param arg0 String
+--- @param difficulty String
 --- @return void
-function IsoWorld:setDifficulty(arg0) end
+function IsoWorld:setDifficulty(difficulty) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function IsoWorld:setDrawWorld(arg0) end
+function IsoWorld:setDrawWorld(b) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
---- @param arg1 IsoObject
+--- @param emitter BaseSoundEmitter
+--- @param object IsoObject
 --- @return void
-function IsoWorld:setEmitterOwner(arg0, arg1) end
+function IsoWorld:setEmitterOwner(emitter, object) end
 
 --- @public
---- @param arg0 String
+--- @param mode String
 --- @return void
-function IsoWorld:setGameMode(arg0) end
+function IsoWorld:setGameMode(mode) end
 
 --- @public
---- @param arg0 float
+--- @param globalTemperature float
 --- @return void
-function IsoWorld:setGlobalTemperature(arg0) end
+function IsoWorld:setGlobalTemperature(globalTemperature) end
 
 --- @public
---- @param arg0 boolean
+--- @param arg1 boolean
 --- @return void
-function IsoWorld:setHydroPowerOn(arg0) end
+function IsoWorld:setHydroPowerOn(arg1) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return void
-function IsoWorld:setLuaPlayerDesc(arg0) end
+function IsoWorld:setLuaPlayerDesc(desc) end
 
 --- @public
---- @param arg0 int
+--- @param luaPosX int
 --- @return void
-function IsoWorld:setLuaPosX(arg0) end
+function IsoWorld:setLuaPosX(luaPosX) end
 
 --- @public
---- @param arg0 int
+--- @param luaPosY int
 --- @return void
-function IsoWorld:setLuaPosY(arg0) end
+function IsoWorld:setLuaPosY(luaPosY) end
 
 --- @public
---- @param arg0 int
+--- @param luaPosZ int
 --- @return void
-function IsoWorld:setLuaPosZ(arg0) end
+function IsoWorld:setLuaPosZ(luaPosZ) end
 
 --- @public
---- @param arg0 int
+--- @param luaSpawnCellX int
 --- @return void
-function IsoWorld:setLuaSpawnCellX(arg0) end
+function IsoWorld:setLuaSpawnCellX(luaSpawnCellX) end
 
 --- @public
---- @param arg0 int
+--- @param luaSpawnCellY int
 --- @return void
-function IsoWorld:setLuaSpawnCellY(arg0) end
+function IsoWorld:setLuaSpawnCellY(luaSpawnCellY) end
 
 --- @public
---- @param arg0 String
+--- @param world String
 --- @return void
-function IsoWorld:setMap(arg0) end
+function IsoWorld:setMap(world) end
 
 --- @public
---- @param arg0 int
+--- @param timeSinceLastSurvivorInHorde int
 --- @return void
-function IsoWorld:setTimeSinceLastSurvivorInHorde(arg0) end
+function IsoWorld:setTimeSinceLastSurvivorInHorde(timeSinceLastSurvivorInHorde) end
 
 --- @public
---- @param arg0 String
+--- @param weather String
 --- @return void
-function IsoWorld:setWeather(arg0) end
+function IsoWorld:setWeather(weather) end
 
 --- @public
---- @param arg0 String
+--- @param world String
 --- @return void
-function IsoWorld:setWorld(arg0) end
+function IsoWorld:setWorld(world) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function IsoWorld:takeOwnershipOfEmitter(arg0) end
+function IsoWorld:takeOwnershipOfEmitter(emitter) end
 
 --- @public
 --- @return void

@@ -1,6 +1,7 @@
 --- @meta
 
---- @class ClimateMoon: Object
+--- @class ClimateMoon
+--- TurboTuTone.
 ClimateMoon = {};
 
 ------------------------------------
@@ -24,11 +25,11 @@ function ClimateMoon.getPhaseName() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param year int
+--- @param month int
+--- @param day int
 --- @return void
-function ClimateMoon.updatePhase(arg0, arg1, arg2) end
+function ClimateMoon.updatePhase(year, month, day) end
 
 
 ------------------------------------

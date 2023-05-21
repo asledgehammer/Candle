@@ -24,25 +24,25 @@ function SoundManager:BlendThenStart(arg0, arg1, arg2) end
 function SoundManager:BlendVolume(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return void
-function SoundManager:CacheSound(arg0) end
+function SoundManager:CacheSound(file) end
 
 --- @public
 --- @return void
 function SoundManager:CheckDoMusic() end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param name String
+--- @param bLoop boolean
 --- @return void
-function SoundManager:DoMusic(arg0, arg1) end
+function SoundManager:DoMusic(name, bLoop) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param name String
+--- @param milli int
 --- @return void
-function SoundManager:FadeOutMusic(arg0, arg1) end
+function SoundManager:FadeOutMusic(name, milli) end
 
 --- @public
 --- @return boolean
@@ -51,99 +51,99 @@ function SoundManager:IsMusicPlaying() end
 --- @public
 --- @param arg0 String
 --- @param arg1 Audio
---- @param arg2 float
---- @param arg3 boolean
+--- @param arg2 boolean
+--- @param arg3 float
 --- @return void
 function SoundManager:PlayAsMusic(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 float
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
-function SoundManager:PlayJukeboxSound(arg0, arg1, arg2) end
+function SoundManager:PlayJukeboxSound(name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 boolean
---- @param arg3 float
+--- @param n String
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
-function SoundManager:PlayMusic(arg0, arg1, arg2, arg3) end
+function SoundManager:PlayMusic(n, name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 float
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
---- @overload fun(arg0: String, arg1: boolean, arg2: float, arg3: float)
-function SoundManager:PlaySound(arg0, arg1, arg2) end
+--- @overload fun(name: String, loop: boolean, maxGain: float, pitchVar: float)
+function SoundManager:PlaySound(name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 float
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
-function SoundManager:PlaySoundEvenSilent(arg0, arg1, arg2) end
+function SoundManager:PlaySoundEvenSilent(name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 float
+--- @param name String
+--- @param loop boolean
+--- @param maxGain float
 --- @return Audio
---- @overload fun(arg0: String, arg1: boolean, arg2: float, arg3: float)
-function SoundManager:PlaySoundWav(arg0, arg1, arg2) end
+--- @overload fun(name: String, loop: boolean, maxGain: float, pitchVar: float)
+function SoundManager:PlaySoundWav(name, loop, maxGain) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoGridSquare
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 boolean
+--- @param name String
+--- @param source IsoGridSquare
+--- @param pitchVar float
+--- @param radius float
+--- @param maxGain float
+--- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(arg0: String, arg1: boolean, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean)
-function SoundManager:PlayWorldSound(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean)
+function SoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
---- @param arg8 boolean
+--- @param name String
+--- @param loop boolean
+--- @param sx int
+--- @param sy int
+--- @param sz int
+--- @param pitchVar float
+--- @param radius float
+--- @param maxGain float
+--- @param ignoreOutside boolean
 --- @return Audio
-function SoundManager:PlayWorldSoundImpl(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function SoundManager:PlayWorldSoundImpl(name, loop, sx, sy, sz, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoGridSquare
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 boolean
+--- @param name String
+--- @param source IsoGridSquare
+--- @param pitchVar float
+--- @param radius float
+--- @param maxGain float
+--- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int, arg6: boolean)
-function SoundManager:PlayWorldSoundWav(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean)
+function SoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 IsoGridSquare
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 boolean
+--- @param name String
+--- @param loop boolean
+--- @param source IsoGridSquare
+--- @param pitchVar float
+--- @param radius float
+--- @param maxGain float
+--- @param ignoreOutside boolean
 --- @return Audio
-function SoundManager:PlayWorldSoundWavImpl(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function SoundManager:PlayWorldSoundWavImpl(name, loop, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Audio
-function SoundManager:PrepareMusic(arg0) end
+function SoundManager:PrepareMusic(name) end
 
 --- @public
 --- @return void
@@ -210,20 +210,20 @@ function SoundManager:getSoundVolume() end
 function SoundManager:getVehicleEngineVolume() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param range float
 --- @return boolean
-function SoundManager:isListenerInRange(arg0, arg1, arg2) end
+function SoundManager:isListenerInRange(x, y, range) end
 
 --- @public
 --- @return boolean
 function SoundManager:isPlayingMusic() end
 
 --- @public
---- @param arg0 long
+--- @param eventInstance long
 --- @return boolean
-function SoundManager:isPlayingUISound(arg0) end
+function SoundManager:isPlayingUISound(eventInstance) end
 
 --- @public
 --- @return boolean
@@ -234,103 +234,103 @@ function SoundManager:isRemastered() end
 function SoundManager:pauseSoundAndMusic() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function SoundManager:playAmbient(arg0) end
+function SoundManager:playAmbient(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function SoundManager:playMusic(arg0) end
+function SoundManager:playMusic(name) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
+--- @param name String
+--- @param gain float
 --- @return void
-function SoundManager:playMusicNonTriggered(arg0, arg1) end
+function SoundManager:playMusicNonTriggered(name, gain) end
 
 --- @public
---- @param arg0 String
+--- @param choice String
 --- @return void
-function SoundManager:playNightAmbient(arg0) end
+function SoundManager:playNightAmbient(choice) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return long
-function SoundManager:playUISound(arg0) end
+function SoundManager:playUISound(name) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function SoundManager:registerEmitter(arg0) end
+function SoundManager:registerEmitter(emitter) end
 
 --- @public
 --- @return void
 function SoundManager:resumeSoundAndMusic() end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function SoundManager:setAmbientVolume(arg0) end
+function SoundManager:setAmbientVolume(volume) end
 
 --- @public
---- @param arg0 String
+--- @param stateName String
 --- @return void
-function SoundManager:setMusicState(arg0) end
+function SoundManager:setMusicState(stateName) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function SoundManager:setMusicVolume(arg0) end
+function SoundManager:setMusicVolume(volume) end
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 String
+--- @param player IsoPlayer
+--- @param stateName String
 --- @return void
-function SoundManager:setMusicWakeState(arg0, arg1) end
+function SoundManager:setMusicWakeState(player, stateName) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function SoundManager:setSoundVolume(arg0) end
+function SoundManager:setSoundVolume(volume) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function SoundManager:setVehicleEngineVolume(arg0) end
+function SoundManager:setVehicleEngineVolume(volume) end
 
 --- @public
---- @param arg0 long
---- @param arg1 GameSoundClip
---- @param arg2 BitSet
+--- @param eventInstance long
+--- @param clip GameSoundClip
+--- @param parameterSet BitSet
 --- @return void
-function SoundManager:startEvent(arg0, arg1, arg2) end
+function SoundManager:startEvent(eventInstance, clip, parameterSet) end
 
 --- @public
 --- @return void
 function SoundManager:stop() end
 
 --- @public
---- @param arg0 long
---- @param arg1 GameSoundClip
---- @param arg2 BitSet
+--- @param eventInstance long
+--- @param clip GameSoundClip
+--- @param parameterSet BitSet
 --- @return void
-function SoundManager:stopEvent(arg0, arg1, arg2) end
+function SoundManager:stopEvent(eventInstance, clip, parameterSet) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function SoundManager:stopMusic(arg0) end
+function SoundManager:stopMusic(name) end
 
 --- @public
---- @param arg0 long
+--- @param eventInstance long
 --- @return void
-function SoundManager:stopUISound(arg0) end
+function SoundManager:stopUISound(eventInstance) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function SoundManager:unregisterEmitter(arg0) end
+function SoundManager:unregisterEmitter(emitter) end
 
 --- @public
 --- @return void
@@ -353,10 +353,10 @@ function SoundManager:update3D() end
 function SoundManager:update4() end
 
 --- @public
---- @param arg0 long
---- @param arg1 GameSoundClip
+--- @param eventInstance long
+--- @param clip GameSoundClip
 --- @return void
-function SoundManager:updateEvent(arg0, arg1) end
+function SoundManager:updateEvent(eventInstance, clip) end
 
 
 ------------------------------------

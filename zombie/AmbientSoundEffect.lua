@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AmbientSoundEffect: Object
+--- @class AmbientSoundEffect
 --- @implement Audio
 AmbientSoundEffect = {};
 
@@ -21,14 +21,14 @@ function AmbientSoundEffect:isPlaying() end
 function AmbientSoundEffect:pause() end
 
 --- @public
---- @param arg0 String
+--- @param choice String
 --- @return void
-function AmbientSoundEffect:setName(arg0) end
+function AmbientSoundEffect:setName(choice) end
 
 --- @public
---- @param arg0 float
+--- @param volume float
 --- @return void
-function AmbientSoundEffect:setVolume(arg0) end
+function AmbientSoundEffect:setVolume(volume) end
 
 --- @public
 --- @return void
@@ -48,6 +48,6 @@ function AmbientSoundEffect:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return AmbientSoundEffect
-function AmbientSoundEffect.new(arg0) end
+function AmbientSoundEffect.new(name) end

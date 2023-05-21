@@ -106,15 +106,15 @@ IsoFlagType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return IsoFlagType
-function IsoFlagType.FromString(arg0) end
+function IsoFlagType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param value int
 --- @return IsoFlagType
-function IsoFlagType.fromIndex(arg0) end
+function IsoFlagType.fromIndex(value) end
 
 --- @public
 --- @static

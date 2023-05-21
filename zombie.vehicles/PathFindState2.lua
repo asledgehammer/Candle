@@ -8,30 +8,30 @@ PathFindState2 = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function PathFindState2:animEvent(arg0, arg1) end
+function PathFindState2:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PathFindState2:enter(arg0) end
+function PathFindState2:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PathFindState2:execute(arg0) end
+function PathFindState2:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PathFindState2:exit(arg0) end
+function PathFindState2:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return boolean
-function PathFindState2:isMoving(arg0) end
+function PathFindState2:isMoving(owner) end
 
 
 ------------------------------------

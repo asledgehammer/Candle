@@ -1,6 +1,6 @@
 --- @meta
 
---- @class RequiredSkill: Object
+--- @class RequiredSkill
 RequiredSkill = {};
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BodyPart: Object
+--- @class BodyPart
 BodyPart = {};
 
 ------------------------------------
@@ -8,14 +8,14 @@ BodyPart = {};
 ------------------------------------
 
 --- @public
---- @param arg0 float
+--- @param Val float
 --- @return void
-function BodyPart:AddDamage(arg0) end
+function BodyPart:AddDamage(Val) end
 
 --- @public
---- @param arg0 float
+--- @param Val float
 --- @return void
-function BodyPart:AddHealth(arg0) end
+function BodyPart:AddHealth(Val) end
 
 --- @public
 --- @return void
@@ -46,54 +46,54 @@ function BodyPart:IsFakeInfected() end
 function BodyPart:IsInfected() end
 
 --- @public
---- @param arg0 float
+--- @param Val float
 --- @return void
-function BodyPart:ReduceHealth(arg0) end
+function BodyPart:ReduceHealth(Val) end
 
 --- @public
 --- @return void
 function BodyPart:RestoreToFullHealth() end
 
 --- @public
---- @param arg0 boolean
+--- @param Bitten boolean
 --- @return void
---- @overload fun(arg0: boolean, arg1: boolean)
-function BodyPart:SetBitten(arg0) end
+--- @overload fun(Bitten: boolean, Infected: boolean)
+function BodyPart:SetBitten(Bitten) end
 
 --- @public
---- @param arg0 boolean
+--- @param BleedingStemmed boolean
 --- @return void
-function BodyPart:SetBleedingStemmed(arg0) end
+function BodyPart:SetBleedingStemmed(BleedingStemmed) end
 
 --- @public
---- @param arg0 boolean
+--- @param Cortorised boolean
 --- @return void
-function BodyPart:SetCortorised(arg0) end
+function BodyPart:SetCortorised(Cortorised) end
 
 --- @public
---- @param arg0 boolean
+--- @param inf boolean
 --- @return void
-function BodyPart:SetFakeInfected(arg0) end
+function BodyPart:SetFakeInfected(inf) end
 
 --- @public
---- @param arg0 float
+--- @param NewHealth float
 --- @return void
-function BodyPart:SetHealth(arg0) end
+function BodyPart:SetHealth(NewHealth) end
 
 --- @public
---- @param arg0 boolean
+--- @param inf boolean
 --- @return void
-function BodyPart:SetInfected(arg0) end
+function BodyPart:SetInfected(inf) end
 
 --- @public
---- @param arg0 boolean
+--- @param Scratched boolean
 --- @return void
-function BodyPart:SetScratchedWeapon(arg0) end
+function BodyPart:SetScratchedWeapon(Scratched) end
 
 --- @public
---- @param arg0 boolean
+--- @param Scratched boolean
 --- @return void
-function BodyPart:SetScratchedWindow(arg0) end
+function BodyPart:SetScratchedWindow(Scratched) end
 
 --- @public
 --- @return boolean
@@ -108,9 +108,9 @@ function BodyPart:bitten() end
 function BodyPart:bleeding() end
 
 --- @public
---- @param arg0 float
+--- @param damage float
 --- @return void
-function BodyPart:damageFromFirearm(arg0) end
+function BodyPart:damageFromFirearm(damage) end
 
 --- @public
 --- @return boolean
@@ -129,13 +129,13 @@ function BodyPart:generateDeepShardWound() end
 function BodyPart:generateDeepWound() end
 
 --- @public
---- @param arg0 int
+--- @param baseChance int
 --- @return void
-function BodyPart:generateZombieInfection(arg0) end
+function BodyPart:generateZombieInfection(baseChance) end
 
 --- @public
 --- @return float
---- @overload fun(arg0: boolean)
+--- @overload fun(includeStiffness: boolean)
 function BodyPart:getAdditionalPain() end
 
 --- @public
@@ -323,217 +323,217 @@ function BodyPart:isSplint() end
 function BodyPart:scratched() end
 
 --- @public
---- @param arg0 float
+--- @param additionalPain float
 --- @return void
-function BodyPart:setAdditionalPain(arg0) end
+function BodyPart:setAdditionalPain(additionalPain) end
 
 --- @public
---- @param arg0 float
+--- @param alcoholLevel float
 --- @return void
-function BodyPart:setAlcoholLevel(arg0) end
+function BodyPart:setAlcoholLevel(alcoholLevel) end
 
 --- @public
---- @param arg0 float
+--- @param bandageLife float
 --- @return void
-function BodyPart:setBandageLife(arg0) end
+function BodyPart:setBandageLife(bandageLife) end
 
 --- @public
---- @param arg0 String
+--- @param bandageType String
 --- @return void
-function BodyPart:setBandageType(arg0) end
+function BodyPart:setBandageType(bandageType) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 float
+--- @param Bandaged boolean
+--- @param bandageLife float
 --- @return void
---- @overload fun(arg0: boolean, arg1: float, arg2: boolean, arg3: String)
-function BodyPart:setBandaged(arg0, arg1) end
+--- @overload fun(Bandaged: boolean, bandageLife: float, isAlcoholic: boolean, bandageType: String)
+function BodyPart:setBandaged(Bandaged, bandageLife) end
 
 --- @public
---- @param arg0 float
+--- @param biteTime float
 --- @return void
-function BodyPart:setBiteTime(arg0) end
+function BodyPart:setBiteTime(biteTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param Bleeding boolean
 --- @return void
-function BodyPart:setBleeding(arg0) end
+function BodyPart:setBleeding(Bleeding) end
 
 --- @public
---- @param arg0 float
+--- @param bleedingTime float
 --- @return void
-function BodyPart:setBleedingTime(arg0) end
+function BodyPart:setBleedingTime(bleedingTime) end
 
 --- @public
---- @param arg0 float
+--- @param burnSpeedModifier float
 --- @return void
-function BodyPart:setBurnSpeedModifier(arg0) end
+function BodyPart:setBurnSpeedModifier(burnSpeedModifier) end
 
 --- @public
---- @param arg0 float
+--- @param burnTime float
 --- @return void
-function BodyPart:setBurnTime(arg0) end
+function BodyPart:setBurnTime(burnTime) end
 
 --- @public
 --- @return void
 function BodyPart:setBurned() end
 
 --- @public
---- @param arg0 float
+--- @param comfreyFactor float
 --- @return void
-function BodyPart:setComfreyFactor(arg0) end
+function BodyPart:setComfreyFactor(comfreyFactor) end
 
 --- @public
---- @param arg0 boolean
+--- @param cut boolean
 --- @return void
---- @overload fun(arg0: boolean, arg1: boolean)
-function BodyPart:setCut(arg0) end
+--- @overload fun(cut: boolean, forceNoInfection: boolean)
+function BodyPart:setCut(cut) end
 
 --- @public
---- @param arg0 float
+--- @param cutSpeedModifier float
 --- @return void
-function BodyPart:setCutSpeedModifier(arg0) end
+function BodyPart:setCutSpeedModifier(cutSpeedModifier) end
 
 --- @public
---- @param arg0 float
+--- @param cutTime float
 --- @return void
-function BodyPart:setCutTime(arg0) end
+function BodyPart:setCutTime(cutTime) end
 
 --- @public
---- @param arg0 float
+--- @param deepWoundSpeedModifier float
 --- @return void
-function BodyPart:setDeepWoundSpeedModifier(arg0) end
+function BodyPart:setDeepWoundSpeedModifier(deepWoundSpeedModifier) end
 
 --- @public
---- @param arg0 float
+--- @param deepWoundTime float
 --- @return void
-function BodyPart:setDeepWoundTime(arg0) end
+function BodyPart:setDeepWoundTime(deepWoundTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param Wounded boolean
 --- @return void
-function BodyPart:setDeepWounded(arg0) end
+function BodyPart:setDeepWounded(Wounded) end
 
 --- @public
---- @param arg0 float
+--- @param fractureTime float
 --- @return void
-function BodyPart:setFractureTime(arg0) end
+function BodyPart:setFractureTime(fractureTime) end
 
 --- @public
---- @param arg0 float
+--- @param garlicFactor float
 --- @return void
-function BodyPart:setGarlicFactor(arg0) end
+function BodyPart:setGarlicFactor(garlicFactor) end
 
 --- @public
---- @param arg0 boolean
+--- @param getBandageXp boolean
 --- @return void
-function BodyPart:setGetBandageXp(arg0) end
+function BodyPart:setGetBandageXp(getBandageXp) end
 
 --- @public
---- @param arg0 boolean
+--- @param getSplintXp boolean
 --- @return void
-function BodyPart:setGetSplintXp(arg0) end
+function BodyPart:setGetSplintXp(getSplintXp) end
 
 --- @public
---- @param arg0 boolean
+--- @param getStitchXp boolean
 --- @return void
-function BodyPart:setGetStitchXp(arg0) end
+function BodyPart:setGetStitchXp(getStitchXp) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 int
+--- @param haveBullet boolean
+--- @param doctorLevel int
 --- @return void
-function BodyPart:setHaveBullet(arg0, arg1) end
+function BodyPart:setHaveBullet(haveBullet, doctorLevel) end
 
 --- @public
---- @param arg0 boolean
+--- @param haveGlass boolean
 --- @return void
-function BodyPart:setHaveGlass(arg0) end
+function BodyPart:setHaveGlass(haveGlass) end
 
 --- @public
---- @param arg0 boolean
+--- @param infectedWound boolean
 --- @return void
-function BodyPart:setInfectedWound(arg0) end
+function BodyPart:setInfectedWound(infectedWound) end
 
 --- @public
---- @param arg0 float
+--- @param lastTimeBurnWash float
 --- @return void
-function BodyPart:setLastTimeBurnWash(arg0) end
+function BodyPart:setLastTimeBurnWash(lastTimeBurnWash) end
 
 --- @public
---- @param arg0 boolean
+--- @param needBurnWash boolean
 --- @return void
-function BodyPart:setNeedBurnWash(arg0) end
+function BodyPart:setNeedBurnWash(needBurnWash) end
 
 --- @public
---- @param arg0 float
+--- @param plantainFactor float
 --- @return void
-function BodyPart:setPlantainFactor(arg0) end
+function BodyPart:setPlantainFactor(plantainFactor) end
 
 --- @public
---- @param arg0 float
+--- @param scratchSpeedModifier float
 --- @return void
-function BodyPart:setScratchSpeedModifier(arg0) end
+function BodyPart:setScratchSpeedModifier(scratchSpeedModifier) end
 
 --- @public
---- @param arg0 float
+--- @param scratchTime float
 --- @return void
-function BodyPart:setScratchTime(arg0) end
+function BodyPart:setScratchTime(scratchTime) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 boolean
+--- @param Scratched boolean
+--- @param forceNoInfection boolean
 --- @return void
-function BodyPart:setScratched(arg0, arg1) end
+function BodyPart:setScratched(Scratched, forceNoInfection) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 float
+--- @param splint boolean
+--- @param splintFactor float
 --- @return void
-function BodyPart:setSplint(arg0, arg1) end
+function BodyPart:setSplint(splint, splintFactor) end
 
 --- @public
---- @param arg0 float
+--- @param splintFactor float
 --- @return void
-function BodyPart:setSplintFactor(arg0) end
+function BodyPart:setSplintFactor(splintFactor) end
 
 --- @public
---- @param arg0 String
+--- @param splintItem String
 --- @return void
-function BodyPart:setSplintItem(arg0) end
+function BodyPart:setSplintItem(splintItem) end
 
 --- @public
---- @param arg0 float
+--- @param stiffness float
 --- @return void
-function BodyPart:setStiffness(arg0) end
+function BodyPart:setStiffness(stiffness) end
 
 --- @public
---- @param arg0 float
+--- @param stitchTime float
 --- @return void
-function BodyPart:setStitchTime(arg0) end
+function BodyPart:setStitchTime(stitchTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param Stitched boolean
 --- @return void
-function BodyPart:setStitched(arg0) end
+function BodyPart:setStitched(Stitched) end
 
 --- @public
---- @param arg0 float
+--- @param wetness float
 --- @return void
-function BodyPart:setWetness(arg0) end
+function BodyPart:setWetness(wetness) end
 
 --- @public
---- @param arg0 float
+--- @param infectedWound float
 --- @return void
-function BodyPart:setWoundInfectionLevel(arg0) end
+function BodyPart:setWoundInfectionLevel(infectedWound) end
 
 --- @public
 --- @return boolean
 function BodyPart:stitched() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 byte
+--- @param arg0 BodyPart
+--- @param arg1 Updater
 --- @return void
 function BodyPart:sync(arg0, arg1) end
 
@@ -543,7 +543,7 @@ function BodyPart:sync(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 BodyPartType
---- @param arg1 IsoGameCharacter
+--- @param ChosenType BodyPartType
+--- @param PC IsoGameCharacter
 --- @return BodyPart
-function BodyPart.new(arg0, arg1) end
+function BodyPart.new(ChosenType, PC) end

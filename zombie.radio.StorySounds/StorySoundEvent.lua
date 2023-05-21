@@ -1,6 +1,7 @@
 --- @meta
 
---- @class StorySoundEvent: Object
+--- @class StorySoundEvent
+--- Turbo
 StorySoundEvent = {};
 
 ------------------------------------
@@ -16,14 +17,14 @@ function StorySoundEvent:getEventSounds() end
 function StorySoundEvent:getName() end
 
 --- @public
---- @param arg0 ArrayList
+--- @param eventSounds ArrayList
 --- @return void
-function StorySoundEvent:setEventSounds(arg0) end
+function StorySoundEvent:setEventSounds(eventSounds) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function StorySoundEvent:setName(arg0) end
+function StorySoundEvent:setName(name) end
 
 
 ------------------------------------
@@ -32,5 +33,5 @@ function StorySoundEvent:setName(arg0) end
 
 --- @public
 --- @return StorySoundEvent
---- @overload fun(arg0: String)
+--- @overload fun(name: String)
 function StorySoundEvent.new() end

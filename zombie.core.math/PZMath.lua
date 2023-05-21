@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PZMath: Object
+--- @class PZMath
 --- @field public degToRads float
 --- @field public microsToNanos long
 --- @field public millisToMicros long
@@ -17,65 +17,65 @@ PZMath = {};
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function PZMath.abs(arg0) end
+function PZMath.abs(val) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param m float
+--- @param n float
 --- @return float
-function PZMath.almostIdentity(arg0, arg1, arg2) end
+function PZMath.almostIdentity(x, m, n) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param x float
 --- @return float
-function PZMath.almostUnitIdentity(arg0) end
+function PZMath.almostUnitIdentity(x) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param src float
+--- @param dest float
+--- @param alpha float
 --- @return float
-function PZMath.c_lerp(arg0, arg1, arg2) end
+function PZMath.c_lerp(src, dest, alpha) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param varStr String
 --- @return boolean
-function PZMath.canParseFloat(arg0) end
+function PZMath.canParseFloat(varStr) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function PZMath.ceil(arg0) end
+function PZMath.ceil(val) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @return float
-function PZMath.clamp(arg0, arg1, arg2) end
+--- @param val int
+--- @param min int
+--- @param max int
+--- @return int
+function PZMath.clamp(val, min, max) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param val float
+--- @param min float
+--- @param max float
 --- @return float
-function PZMath.clampFloat(arg0, arg1, arg2) end
+function PZMath.clampFloat(val, min, max) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function PZMath.clamp_01(arg0) end
+function PZMath.clamp_01(val) end
 
 --- @public
 --- @static
@@ -86,141 +86,141 @@ function PZMath.convertMatrix(arg0, arg1) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param degrees float
 --- @return float
-function PZMath.degToRad(arg0) end
+function PZMath.degToRad(degrees) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param a float
+--- @param b float
 --- @return boolean
---- @overload fun(arg0: float, arg1: float, arg2: float)
-function PZMath.equal(arg0, arg1) end
+--- @overload fun(a: float, b: float, delta: float)
+function PZMath.equal(a, b) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param x float
 --- @return int
-function PZMath.fastfloor(arg0) end
+function PZMath.fastfloor(x) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function PZMath.floor(arg0) end
+function PZMath.floor(val) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function PZMath.frac(arg0) end
+function PZMath.frac(val) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param x float
+--- @param k float
 --- @return float
-function PZMath.gain(arg0, arg1) end
+function PZMath.gain(x, k) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param in_radsA float
+--- @param in_radsB float
 --- @return float
-function PZMath.getClosestAngle(arg0, arg1) end
+function PZMath.getClosestAngle(in_radsA, in_radsB) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param in_degsA float
+--- @param in_degsB float
 --- @return float
-function PZMath.getClosestAngleDegrees(arg0, arg1) end
+function PZMath.getClosestAngleDegrees(in_degsA, in_degsB) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param src float
+--- @param dest float
+--- @param alpha float
 --- @return float
 --- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: Vector3f, arg3: float)
-function PZMath.lerp(arg0, arg1, arg2) end
+function PZMath.lerp(src, dest, alpha) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param src float
+--- @param dest float
+--- @param alpha float
 --- @return float
-function PZMath.lerpAngle(arg0, arg1, arg2) end
+function PZMath.lerpAngle(src, dest, alpha) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param x float
 --- @return float
-function PZMath.lerpFunc_EaseInQuad(arg0) end
+function PZMath.lerpFunc_EaseInQuad(x) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param x float
 --- @return float
-function PZMath.lerpFunc_EaseOutInQuad(arg0) end
+function PZMath.lerpFunc_EaseOutInQuad(x) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param x float
 --- @return float
-function PZMath.lerpFunc_EaseOutQuad(arg0) end
+function PZMath.lerpFunc_EaseOutQuad(x) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param a float
+--- @param b float
+--- @return float
+function PZMath.max(a, b) end
+
+--- @public
+--- @static
+--- @param a float
+--- @param b float
+--- @return float
+function PZMath.min(a, b) end
+
+--- @public
+--- @static
+--- @param radians float
+--- @return float
+function PZMath.radToDeg(radians) end
+
+--- @public
+--- @static
+--- @param val float
+--- @return float
+function PZMath.roundFromEdges(val) end
+
+--- @public
+--- @static
+--- @param val float
 --- @return int
-function PZMath.max(arg0, arg1) end
+function PZMath.roundToInt(val) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param val float
+--- @return float
+function PZMath.roundToIntPlus05(val) end
+
+--- @public
+--- @static
+--- @param val float
+--- @return float
+function PZMath.roundToNearest(val) end
+
+--- @public
+--- @static
+--- @param val float
 --- @return int
-function PZMath.min(arg0, arg1) end
-
---- @public
---- @static
---- @param arg0 float
---- @return float
-function PZMath.radToDeg(arg0) end
-
---- @public
---- @static
---- @param arg0 float
---- @return float
-function PZMath.roundFromEdges(arg0) end
-
---- @public
---- @static
---- @param arg0 float
---- @return int
-function PZMath.roundToInt(arg0) end
-
---- @public
---- @static
---- @param arg0 float
---- @return float
-function PZMath.roundToIntPlus05(arg0) end
-
---- @public
---- @static
---- @param arg0 float
---- @return float
-function PZMath.roundToNearest(arg0) end
-
---- @public
---- @static
---- @param arg0 float
---- @return int
-function PZMath.sign(arg0) end
+function PZMath.sign(val) end
 
 --- @public
 --- @static
@@ -233,57 +233,57 @@ function PZMath.slerp(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function PZMath.sqrt(arg0) end
+function PZMath.sqrt(val) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param from float
+--- @param to float
+--- @param delta float
 --- @return float
-function PZMath.step(arg0, arg1, arg2) end
+function PZMath.step(from, to, delta) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
+--- @param x1 float
+--- @param y1 float
+--- @param x2 float
+--- @param y2 float
+--- @param px float
+--- @param py float
 --- @return SideOfLine
-function PZMath.testSideOfLine(arg0, arg1, arg2, arg3, arg4, arg5) end
+function PZMath.testSideOfLine(x1, y1, x2, y2, px, py) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 double
+--- @param varStr String
+--- @param defaultVal double
 --- @return double
-function PZMath.tryParseDouble(arg0, arg1) end
+function PZMath.tryParseDouble(varStr, defaultVal) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 float
+--- @param varStr String
+--- @param defaultVal float
 --- @return float
-function PZMath.tryParseFloat(arg0, arg1) end
+function PZMath.tryParseFloat(varStr, defaultVal) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 int
+--- @param varStr String
+--- @param defaultVal int
 --- @return int
-function PZMath.tryParseInt(arg0, arg1) end
+function PZMath.tryParseInt(varStr, defaultVal) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
+--- @param val float
+--- @param range float
 --- @return float
---- @overload fun(arg0: float, arg1: float, arg2: float)
-function PZMath.wrap(arg0, arg1) end
+--- @overload fun(in_val: float, in_min: float, in_max: float)
+function PZMath.wrap(val, range) end
 
 
 ------------------------------------

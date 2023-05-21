@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class RBBurntCorpse: RandomizedBuildingBase
+--- This building will be 60% burnt (no fire started tho)
+ Add some burnt skeleton in it
 RBBurntCorpse = {};
 
 ------------------------------------
@@ -14,9 +16,9 @@ RBBurntCorpse = {};
 function RBBurntCorpse:isValid(arg0, arg1) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RBBurntCorpse:randomizeBuilding(arg0) end
+function RBBurntCorpse:randomizeBuilding(def) end
 
 
 ------------------------------------

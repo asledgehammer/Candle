@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Language: Object
+--- @class Language
 Language = {};
 
 ------------------------------------
@@ -9,15 +9,15 @@ Language = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return Language
-function Language.FromString(arg0) end
+function Language.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return Language
-function Language.fromIndex(arg0) end
+function Language.fromIndex(index) end
 
 
 ------------------------------------

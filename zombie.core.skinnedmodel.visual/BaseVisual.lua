@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BaseVisual: Object
+--- @class BaseVisual
 BaseVisual = {};
 
 ------------------------------------
@@ -12,15 +12,15 @@ BaseVisual = {};
 function BaseVisual:clear() end
 
 --- @public
---- @param arg0 BaseVisual
+--- @param other BaseVisual
 --- @return void
-function BaseVisual:copyFrom(arg0) end
+function BaseVisual:copyFrom(other) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ItemVisuals
+--- @param outfitName String
+--- @param itemVisuals ItemVisuals
 --- @return void
-function BaseVisual:dressInNamedOutfit(arg0, arg1) end
+function BaseVisual:dressInNamedOutfit(outfitName, itemVisuals) end
 
 --- @public
 --- @return Model
@@ -31,15 +31,15 @@ function BaseVisual:getModel() end
 function BaseVisual:getModelScript() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function BaseVisual:load(arg0, arg1) end
+function BaseVisual:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function BaseVisual:save(arg0) end
+function BaseVisual:save(output) end
 
 
 ------------------------------------

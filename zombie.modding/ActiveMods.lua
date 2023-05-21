@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ActiveMods: Object
+--- @class ActiveMods
 ActiveMods = {};
 
 ------------------------------------
@@ -14,21 +14,21 @@ function ActiveMods.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param id String
 --- @return ActiveMods
-function ActiveMods.getById(arg0) end
+function ActiveMods.getById(id) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return ActiveMods
-function ActiveMods.getByIndex(arg0) end
+function ActiveMods.getByIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param id String
 --- @return int
-function ActiveMods.indexOf(arg0) end
+function ActiveMods.indexOf(id) end
 
 --- @public
 --- @static
@@ -37,15 +37,15 @@ function ActiveMods.renderUI() end
 
 --- @public
 --- @static
---- @param arg0 ActiveMods
+--- @param activeMods ActiveMods
 --- @return boolean
-function ActiveMods.requiresResetLua(arg0) end
+function ActiveMods.requiresResetLua(activeMods) end
 
 --- @public
 --- @static
---- @param arg0 ActiveMods
+--- @param activeMods ActiveMods
 --- @return void
-function ActiveMods.setLoadedMods(arg0) end
+function ActiveMods.setLoadedMods(activeMods) end
 
 
 ------------------------------------
@@ -65,9 +65,9 @@ function ActiveMods:checkMissingMods() end
 function ActiveMods:clear() end
 
 --- @public
---- @param arg0 ActiveMods
+--- @param other ActiveMods
 --- @return void
-function ActiveMods:copyFrom(arg0) end
+function ActiveMods:copyFrom(other) end
 
 --- @public
 --- @return ArrayList
@@ -78,25 +78,25 @@ function ActiveMods:getMapOrder() end
 function ActiveMods:getMods() end
 
 --- @public
---- @param arg0 String
+--- @param modID String
 --- @return boolean
-function ActiveMods:isModActive(arg0) end
+function ActiveMods:isModActive(modID) end
 
 --- @public
---- @param arg0 String
+--- @param folder String
 --- @return void
-function ActiveMods:removeMapOrder(arg0) end
+function ActiveMods:removeMapOrder(folder) end
 
 --- @public
---- @param arg0 String
+--- @param modID String
 --- @return void
-function ActiveMods:removeMod(arg0) end
+function ActiveMods:removeMod(modID) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param modID String
+--- @param active boolean
 --- @return void
-function ActiveMods:setModActive(arg0, arg1) end
+function ActiveMods:setModActive(modID, active) end
 
 
 ------------------------------------
@@ -104,6 +104,6 @@ function ActiveMods:setModActive(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return ActiveMods
-function ActiveMods.new(arg0) end
+function ActiveMods.new(id) end

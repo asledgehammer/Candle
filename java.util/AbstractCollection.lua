@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AbstractCollection: Object
+--- @class AbstractCollection
 --- @implement Collection
 AbstractCollection = {};
 

@@ -20,11 +20,11 @@ function CGlobalObjectSystem:Reset() end
 function CGlobalObjectSystem:receiveNewLuaObjectAt(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function CGlobalObjectSystem:receiveRemoveLuaObjectAt(arg0, arg1, arg2) end
+function CGlobalObjectSystem:receiveRemoveLuaObjectAt(x, y, z) end
 
 --- @public
 --- @param arg0 String
@@ -53,6 +53,6 @@ function CGlobalObjectSystem:sendCommand(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return CGlobalObjectSystem
-function CGlobalObjectSystem.new(arg0) end
+function CGlobalObjectSystem.new(name) end

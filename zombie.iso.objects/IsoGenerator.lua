@@ -14,26 +14,26 @@ function IsoGenerator.Reset() end
 
 --- @public
 --- @static
---- @param arg0 IsoChunk
+--- @param chunk IsoChunk
 --- @return void
-function IsoGenerator.chunkLoaded(arg0) end
+function IsoGenerator.chunkLoaded(chunk) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
+--- @param generatorX int
+--- @param generatorY int
+--- @param generatorZ int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return boolean
-function IsoGenerator.isPoweringSquare(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoGenerator.isPoweringSquare(generatorX, generatorY, generatorZ, x, y, z) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return void
-function IsoGenerator.updateGenerator(arg0) end
+function IsoGenerator.updateGenerator(sq) end
 
 --- @public
 --- @static
@@ -82,11 +82,11 @@ function IsoGenerator:isActivated() end
 function IsoGenerator:isConnected() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoGenerator:load(arg0, arg1, arg2) end
+function IsoGenerator:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return void
@@ -97,65 +97,65 @@ function IsoGenerator:remove() end
 function IsoGenerator:removeFromWorld() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoGenerator:save(arg0, arg1) end
+function IsoGenerator:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 boolean
+--- @param activated boolean
 --- @return void
-function IsoGenerator:setActivated(arg0) end
+function IsoGenerator:setActivated(activated) end
 
 --- @public
---- @param arg0 int
+--- @param condition int
 --- @return void
-function IsoGenerator:setCondition(arg0) end
+function IsoGenerator:setCondition(condition) end
 
 --- @public
---- @param arg0 boolean
+--- @param connected boolean
 --- @return void
-function IsoGenerator:setConnected(arg0) end
+function IsoGenerator:setConnected(connected) end
 
 --- @public
---- @param arg0 float
+--- @param fuel float
 --- @return void
-function IsoGenerator:setFuel(arg0) end
+function IsoGenerator:setFuel(fuel) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function IsoGenerator:setInfoFromItem(arg0) end
+function IsoGenerator:setInfoFromItem(item) end
 
 --- @public
 --- @return void
 function IsoGenerator:setSurroundingElectricity() end
 
 --- @public
---- @param arg0 float
+--- @param totalPowerUsing float
 --- @return void
-function IsoGenerator:setTotalPowerUsing(arg0) end
+function IsoGenerator:setTotalPowerUsing(totalPowerUsing) end
 
 --- @public
---- @param arg0 float
---- @param arg1 int
---- @param arg2 boolean
---- @param arg3 boolean
+--- @param fuel float
+--- @param condition int
+--- @param connected boolean
+--- @param activated boolean
 --- @return void
-function IsoGenerator:sync(arg0, arg1, arg2, arg3) end
+function IsoGenerator:sync(fuel, condition, connected, activated) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 byte
---- @param arg2 UdpConnection
---- @param arg3 ByteBuffer
+--- @param bRemote boolean
+--- @param val byte
+--- @param source UdpConnection
+--- @param bb ByteBuffer
 --- @return void
-function IsoGenerator:syncIsoObject(arg0, arg1, arg2, arg3) end
+function IsoGenerator:syncIsoObject(bRemote, val, source, bb) end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return void
-function IsoGenerator:syncIsoObjectSend(arg0) end
+function IsoGenerator:syncIsoObjectSend(b) end
 
 --- @public
 --- @return void
@@ -167,8 +167,8 @@ function IsoGenerator:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoGenerator
---- @overload fun(arg0: InventoryItem, arg1: IsoCell, arg2: IsoGridSquare)
---- @overload fun(arg0: InventoryItem, arg1: IsoCell, arg2: IsoGridSquare, arg3: boolean)
-function IsoGenerator.new(arg0) end
+--- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare)
+--- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare, remote: boolean)
+function IsoGenerator.new(cell) end

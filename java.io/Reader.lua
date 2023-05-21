@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Reader: Object
+--- @class Reader
 --- @implement Readable
 --- @implement Closeable
 Reader = {};

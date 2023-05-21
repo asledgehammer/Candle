@@ -18,10 +18,10 @@ function Literature:DoTooltip(arg0, arg1) end
 function Literature:IsLiterature() end
 
 --- @public
---- @param arg0 Integer
---- @param arg1 String
+--- @param index Integer
+--- @param text String
 --- @return void
-function Literature:addPage(arg0, arg1) end
+function Literature:addPage(index, text) end
 
 --- @public
 --- @return boolean
@@ -96,76 +96,76 @@ function Literature:getTeachedRecipes() end
 function Literature:getUnhappyChange() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Literature:load(arg0, arg1) end
+function Literature:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function Literature:save(arg0, arg1) end
+function Literature:save(output, net) end
 
 --- @public
---- @param arg0 Integer
+--- @param index Integer
 --- @return String
-function Literature:seePage(arg0) end
+function Literature:seePage(index) end
 
 --- @public
---- @param arg0 int
+--- @param alreadyReadPages int
 --- @return void
-function Literature:setAlreadyReadPages(arg0) end
+function Literature:setAlreadyReadPages(alreadyReadPages) end
 
 --- @public
---- @param arg0 String
+--- @param bookName String
 --- @return void
-function Literature:setBookName(arg0) end
+function Literature:setBookName(bookName) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBeWrite boolean
 --- @return void
-function Literature:setCanBeWrite(arg0) end
+function Literature:setCanBeWrite(canBeWrite) end
 
 --- @public
---- @param arg0 HashMap
+--- @param customPages HashMap
 --- @return void
-function Literature:setCustomPages(arg0) end
+function Literature:setCustomPages(customPages) end
 
 --- @public
---- @param arg0 String
+--- @param lockedBy String
 --- @return void
-function Literature:setLockedBy(arg0) end
+function Literature:setLockedBy(lockedBy) end
 
 --- @public
---- @param arg0 int
+--- @param lvlSkillTrained int
 --- @return void
-function Literature:setLvlSkillTrained(arg0) end
+function Literature:setLvlSkillTrained(lvlSkillTrained) end
 
 --- @public
---- @param arg0 int
+--- @param numLevelsTrained int
 --- @return void
-function Literature:setNumLevelsTrained(arg0) end
+function Literature:setNumLevelsTrained(numLevelsTrained) end
 
 --- @public
---- @param arg0 int
+--- @param numberOfPages int
 --- @return void
-function Literature:setNumberOfPages(arg0) end
+function Literature:setNumberOfPages(numberOfPages) end
 
 --- @public
---- @param arg0 int
+--- @param pageToWrite int
 --- @return void
-function Literature:setPageToWrite(arg0) end
+function Literature:setPageToWrite(pageToWrite) end
 
 --- @public
---- @param arg0 String
+--- @param skillTrained String
 --- @return void
-function Literature:setSkillTrained(arg0) end
+function Literature:setSkillTrained(skillTrained) end
 
 --- @public
---- @param arg0 List
+--- @param teachedRecipes List
 --- @return void
-function Literature:setTeachedRecipes(arg0) end
+function Literature:setTeachedRecipes(teachedRecipes) end
 
 --- @public
 --- @return void
@@ -177,9 +177,9 @@ function Literature:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param texName String
 --- @return Literature
-function Literature.new(arg0, arg1, arg2, arg3) end
+function Literature.new(module, name, itemType, texName) end

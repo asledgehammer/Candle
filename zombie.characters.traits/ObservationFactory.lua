@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ObservationFactory: Object
+--- @class ObservationFactory
 --- @field public ObservationMap HashMap
 ObservationFactory = {};
 
@@ -10,17 +10,17 @@ ObservationFactory = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param type String
+--- @param name String
+--- @param desc String
 --- @return void
-function ObservationFactory.addObservation(arg0, arg1, arg2) end
+function ObservationFactory.addObservation(type, name, desc) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return Observation
-function ObservationFactory.getObservation(arg0) end
+function ObservationFactory.getObservation(name) end
 
 --- @public
 --- @static
@@ -29,10 +29,10 @@ function ObservationFactory.init() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param a String
+--- @param b String
 --- @return void
-function ObservationFactory.setMutualExclusive(arg0, arg1) end
+function ObservationFactory.setMutualExclusive(a, b) end
 
 
 ------------------------------------

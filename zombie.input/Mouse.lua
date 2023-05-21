@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Mouse: Object
+--- @class Mouse
 --- @field public bLeftDown boolean
 --- @field public bLeftWasDown boolean
 --- @field public bMiddleDown boolean
@@ -19,9 +19,9 @@ Mouse = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param number int
 --- @return void
-function Mouse.UIBlockButtonDown(arg0) end
+function Mouse.UIBlockButtonDown(number) end
 
 --- @public
 --- @static
@@ -55,15 +55,15 @@ function Mouse.initCustomCursor() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param number int
 --- @return boolean
-function Mouse.isButtonDown(arg0) end
+function Mouse.isButtonDown(number) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param number int
 --- @return boolean
-function Mouse.isButtonDownUICheck(arg0) end
+function Mouse.isButtonDownUICheck(number) end
 
 --- @public
 --- @static
@@ -132,9 +132,9 @@ function Mouse.isRightUp() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param filename String
 --- @return Cursor
-function Mouse.loadCursor(arg0) end
+function Mouse.loadCursor(filename) end
 
 --- @public
 --- @static
@@ -148,16 +148,16 @@ function Mouse.renderCursorTexture() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bVisible boolean
 --- @return void
-function Mouse.setCursorVisible(arg0) end
+function Mouse.setCursorVisible(bVisible) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return void
-function Mouse.setXY(arg0, arg1) end
+function Mouse.setXY(x, y) end
 
 --- @public
 --- @static

@@ -9,9 +9,9 @@ RandomizedBuildingBase = {};
 
 --- @public
 --- @static
---- @param arg0 IsoBuilding
+--- @param building IsoBuilding
 --- @return void
-function RandomizedBuildingBase.ChunkLoaded(arg0) end
+function RandomizedBuildingBase.ChunkLoaded(building) end
 
 --- @public
 --- @static
@@ -24,53 +24,53 @@ function RandomizedBuildingBase.initAllRBMapChance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 int
+--- @param sq IsoGridSquare
+--- @param numPlanks int
 --- @return void
-function RandomizedBuildingBase:addBarricade(arg0, arg1) end
+function RandomizedBuildingBase:addBarricade(sq, numPlanks) end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 boolean
---- @param arg2 boolean
---- @param arg3 boolean
+--- @param container ItemContainer
+--- @param addBulletsInGun boolean
+--- @param addBoxInContainer boolean
+--- @param attachPart boolean
 --- @return HandWeapon
-function RandomizedBuildingBase:addRandomRangedWeapon(arg0, arg1, arg2, arg3) end
+function RandomizedBuildingBase:addRandomRangedWeapon(container, addBulletsInGun, addBoxInContainer, attachPart) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoGridSquare
---- @param arg2 IsoObject
+--- @param item String
+--- @param sq IsoGridSquare
+--- @param obj IsoObject
 --- @return InventoryItem
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float)
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: float, arg3: float, arg4: float, arg5: int)
-function RandomizedBuildingBase:addWorldItem(arg0, arg1, arg2) end
+--- @overload fun(item: String, sq: IsoGridSquare, xoffset: float, yoffset: float, zoffset: float)
+--- @overload fun(item: String, sq: IsoGridSquare, xoffset: float, yoffset: float, zoffset: float, worldZ: int)
+function RandomizedBuildingBase:addWorldItem(item, sq, obj) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 int
---- @param arg2 String
---- @param arg3 Integer
---- @param arg4 RoomDef
+--- @param def BuildingDef
+--- @param totalZombies int
+--- @param outfit String
+--- @param femaleChance Integer
+--- @param room RoomDef
 --- @return ArrayList
-function RandomizedBuildingBase:addZombies(arg0, arg1, arg2, arg3, arg4) end
+function RandomizedBuildingBase:addZombies(def, totalZombies, outfit, femaleChance, room) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @param arg2 Integer
---- @param arg3 IsoGridSquare
+--- @param totalZombies int
+--- @param outfit String
+--- @param femaleChance Integer
+--- @param square IsoGridSquare
 --- @return ArrayList
-function RandomizedBuildingBase:addZombiesOnSquare(arg0, arg1, arg2, arg3) end
+function RandomizedBuildingBase:addZombiesOnSquare(totalZombies, outfit, femaleChance, square) end
 
 --- @public
 --- @return int
 function RandomizedBuildingBase:getChance() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return IsoDoor
-function RandomizedBuildingBase:getDoor(arg0) end
+function RandomizedBuildingBase:getDoor(sq) end
 
 --- @public
 --- @return int
@@ -81,9 +81,9 @@ function RandomizedBuildingBase:getMinimumDays() end
 function RandomizedBuildingBase:getMinimumRooms() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return IsoWindow
-function RandomizedBuildingBase:getWindow(arg0) end
+function RandomizedBuildingBase:getWindow(sq) end
 
 --- @public
 --- @return void
@@ -94,48 +94,48 @@ function RandomizedBuildingBase:init() end
 function RandomizedBuildingBase:isAlwaysDo() end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 IsoGridSquare
+--- @param obj IsoObject
+--- @param sq IsoGridSquare
 --- @return boolean
-function RandomizedBuildingBase:isTableFor3DItems(arg0, arg1) end
+function RandomizedBuildingBase:isTableFor3DItems(obj, sq) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RandomizedBuildingBase:isValid(arg0, arg1) end
+function RandomizedBuildingBase:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RandomizedBuildingBase:randomizeBuilding(arg0) end
+function RandomizedBuildingBase:randomizeBuilding(def) end
 
 --- @public
---- @param arg0 boolean
+--- @param alwaysDo boolean
 --- @return void
-function RandomizedBuildingBase:setAlwaysDo(arg0) end
+function RandomizedBuildingBase:setAlwaysDo(alwaysDo) end
 
 --- @public
---- @param arg0 int
+--- @param chance int
 --- @return void
-function RandomizedBuildingBase:setChance(arg0) end
+function RandomizedBuildingBase:setChance(chance) end
 
 --- @public
---- @param arg0 int
+--- @param minimumDays int
 --- @return void
-function RandomizedBuildingBase:setMinimumDays(arg0) end
+function RandomizedBuildingBase:setMinimumDays(minimumDays) end
 
 --- @public
---- @param arg0 int
+--- @param minimumRooms int
 --- @return void
-function RandomizedBuildingBase:setMinimumRooms(arg0) end
+function RandomizedBuildingBase:setMinimumRooms(minimumRooms) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 String
---- @param arg2 int
+--- @param def BuildingDef
+--- @param distribName String
+--- @param chance int
 --- @return void
-function RandomizedBuildingBase:spawnItemsInContainers(arg0, arg1, arg2) end
+function RandomizedBuildingBase:spawnItemsInContainers(def, distribName, chance) end
 
 
 ------------------------------------

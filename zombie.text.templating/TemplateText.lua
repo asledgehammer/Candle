@@ -1,6 +1,7 @@
 --- @meta
 
---- @class TemplateText: Object
+--- @class TemplateText
+--- TurboTuTone.
 TemplateText = {};
 
 ------------------------------------
@@ -9,10 +10,10 @@ TemplateText = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param input String
 --- @return String
---- @overload fun(arg0: String, arg1: IReplaceProvider)
-function TemplateText.Build(arg0) end
+--- @overload fun(input: String, replaceProvider: IReplaceProvider)
+function TemplateText.Build(input) end
 
 --- @public
 --- @static
@@ -21,10 +22,10 @@ function TemplateText.Initialize() end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param bound float
 --- @return float
---- @overload fun(arg0: int, arg1: int)
-function TemplateText.RandNext(arg0) end
+--- @overload fun(min: int, max: int)
+function TemplateText.RandNext(bound) end
 
 --- @public
 --- @static

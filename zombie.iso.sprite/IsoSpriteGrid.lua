@@ -1,6 +1,7 @@
 --- @meta
 
---- @class IsoSpriteGrid: Object
+--- @class IsoSpriteGrid
+--- Turbo
 IsoSpriteGrid = {};
 
 ------------------------------------
@@ -16,34 +17,34 @@ function IsoSpriteGrid:getAnchorSprite() end
 function IsoSpriteGrid:getHeight() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return IsoSprite
-function IsoSpriteGrid:getSprite(arg0, arg1) end
+function IsoSpriteGrid:getSprite(x, y) end
 
 --- @public
 --- @return int
 function IsoSpriteGrid:getSpriteCount() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return IsoSprite
-function IsoSpriteGrid:getSpriteFromIndex(arg0) end
+function IsoSpriteGrid:getSpriteFromIndex(index) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return int
-function IsoSpriteGrid:getSpriteGridPosX(arg0) end
+function IsoSpriteGrid:getSpriteGridPosX(sprite) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return int
-function IsoSpriteGrid:getSpriteGridPosY(arg0) end
+function IsoSpriteGrid:getSpriteGridPosY(sprite) end
 
 --- @public
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return int
-function IsoSpriteGrid:getSpriteIndex(arg0) end
+function IsoSpriteGrid:getSpriteIndex(sprite) end
 
 --- @public
 --- @return IsoSprite[]
@@ -54,11 +55,11 @@ function IsoSpriteGrid:getSprites() end
 function IsoSpriteGrid:getWidth() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 IsoSprite
+--- @param x int
+--- @param y int
+--- @param sprite IsoSprite
 --- @return void
-function IsoSpriteGrid:setSprite(arg0, arg1, arg2) end
+function IsoSpriteGrid:setSprite(x, y, sprite) end
 
 --- @public
 --- @return boolean
@@ -70,7 +71,7 @@ function IsoSpriteGrid:validate() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param w int
+--- @param h int
 --- @return IsoSpriteGrid
-function IsoSpriteGrid.new(arg0, arg1) end
+function IsoSpriteGrid.new(w, h) end

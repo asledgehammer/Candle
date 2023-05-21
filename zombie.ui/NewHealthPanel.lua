@@ -9,9 +9,9 @@ NewHealthPanel = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function NewHealthPanel:SetCharacter(arg0) end
+function NewHealthPanel:SetCharacter(chr) end
 
 --- @public
 --- @return String
@@ -31,8 +31,8 @@ function NewHealthPanel:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 IsoGameCharacter
+--- @param x int
+--- @param y int
+--- @param ParentCharacter IsoGameCharacter
 --- @return NewHealthPanel
-function NewHealthPanel.new(arg0, arg1, arg2) end
+function NewHealthPanel.new(x, y, ParentCharacter) end

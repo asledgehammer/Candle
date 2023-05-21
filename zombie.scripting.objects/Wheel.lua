@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Wheel: Object
+--- @class Wheel
 Wheel = {};
 
 ------------------------------------

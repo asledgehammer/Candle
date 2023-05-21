@@ -1,6 +1,6 @@
 --- @meta
 
---- @class TextDrawObject: Object
+--- @class TextDrawObject
 TextDrawObject = {};
 
 ------------------------------------
@@ -9,15 +9,15 @@ TextDrawObject = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerNum int
 --- @return void
-function TextDrawObject.NoRender(arg0) end
+function TextDrawObject.NoRender(playerNum) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param playerNum int
 --- @return void
-function TextDrawObject.RenderBatch(arg0) end
+function TextDrawObject.RenderBatch(playerNum) end
 
 
 ------------------------------------
@@ -25,47 +25,47 @@ function TextDrawObject.RenderBatch(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param x double
+--- @param y double
 --- @return void
---- @overload fun(arg0: double, arg1: double, arg2: boolean)
---- @overload fun(arg0: double, arg1: double, arg2: boolean, arg3: float)
---- @overload fun(arg0: double, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: boolean)
---- @overload fun(arg0: TextDrawHorizontal, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: boolean)
-function TextDrawObject:AddBatchedDraw(arg0, arg1) end
+--- @overload fun(x: double, y: double, drawOutlines: boolean)
+--- @overload fun(x: double, y: double, drawOutlines: boolean, alpha: float)
+--- @overload fun(x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean)
+--- @overload fun(horz: TextDrawHorizontal, x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean)
+function TextDrawObject:AddBatchedDraw(x, y) end
 
 --- @public
 --- @return void
 function TextDrawObject:Clear() end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param x double
+--- @param y double
 --- @return void
---- @overload fun(arg0: double, arg1: double, arg2: boolean)
---- @overload fun(arg0: double, arg1: double, arg2: boolean, arg3: float)
---- @overload fun(arg0: double, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: boolean)
---- @overload fun(arg0: TextDrawHorizontal, arg1: double, arg2: double, arg3: double, arg4: double, arg5: double, arg6: double, arg7: boolean)
-function TextDrawObject:Draw(arg0, arg1) end
+--- @overload fun(x: double, y: double, drawOutlines: boolean)
+--- @overload fun(x: double, y: double, drawOutlines: boolean, alpha: float)
+--- @overload fun(x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean)
+--- @overload fun(horz: TextDrawHorizontal, x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean)
+function TextDrawObject:Draw(x, y) end
 
 --- @public
---- @param arg0 TextDrawHorizontal
---- @param arg1 double
---- @param arg2 double
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 boolean
+--- @param horz TextDrawHorizontal
+--- @param x double
+--- @param y double
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
+--- @param drawOutlines boolean
 --- @return void
-function TextDrawObject:DrawRaw(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function TextDrawObject:DrawRaw(horz, x, y, r, g, b, a, drawOutlines) end
 
 --- @public
---- @param arg0 String
+--- @param str String
 --- @return void
---- @overload fun(arg0: String, arg1: int)
---- @overload fun(arg0: UIFont, arg1: String, arg2: int)
-function TextDrawObject:ReadString(arg0) end
+--- @overload fun(str: String, maxLineWidth: int)
+--- @overload fun(font: UIFont, str: String, maxLineWidth: int)
+function TextDrawObject:ReadString(str) end
 
 --- @public
 --- @return void
@@ -124,139 +124,139 @@ function TextDrawObject:getWidth() end
 function TextDrawObject:isNullOrZeroLength() end
 
 --- @public
---- @param arg0 boolean
+--- @param allowAnyImage boolean
 --- @return void
-function TextDrawObject:setAllowAnyImage(arg0) end
+function TextDrawObject:setAllowAnyImage(allowAnyImage) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowBBcode boolean
 --- @return void
-function TextDrawObject:setAllowBBcode(arg0) end
+function TextDrawObject:setAllowBBcode(allowBBcode) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowChatIcons boolean
 --- @return void
-function TextDrawObject:setAllowChatIcons(arg0) end
+function TextDrawObject:setAllowChatIcons(allowChatIcons) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowColors boolean
 --- @return void
-function TextDrawObject:setAllowColors(arg0) end
+function TextDrawObject:setAllowColors(allowColors) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowFonts boolean
 --- @return void
-function TextDrawObject:setAllowFonts(arg0) end
+function TextDrawObject:setAllowFonts(allowFonts) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowImages boolean
 --- @return void
-function TextDrawObject:setAllowImages(arg0) end
+function TextDrawObject:setAllowImages(allowImages) end
 
 --- @public
---- @param arg0 boolean
+--- @param allowLineBreaks boolean
 --- @return void
-function TextDrawObject:setAllowLineBreaks(arg0) end
+function TextDrawObject:setAllowLineBreaks(allowLineBreaks) end
 
 --- @public
---- @param arg0 int
+--- @param dim int
 --- @return void
-function TextDrawObject:setCustomImageMaxDimensions(arg0) end
+function TextDrawObject:setCustomImageMaxDimensions(dim) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return void
-function TextDrawObject:setCustomTag(arg0) end
+function TextDrawObject:setCustomTag(tag) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param r float
+--- @param g float
+--- @param b float
 --- @return void
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
-function TextDrawObject:setDefaultColors(arg0, arg1, arg2) end
+--- @overload fun(r: float, g: float, b: float, a: float)
+function TextDrawObject:setDefaultColors(r, g, b) end
 
 --- @public
---- @param arg0 UIFont
+--- @param f UIFont
 --- @return void
-function TextDrawObject:setDefaultFont(arg0) end
+function TextDrawObject:setDefaultFont(f) end
 
 --- @public
---- @param arg0 boolean
+--- @param draw boolean
 --- @return void
-function TextDrawObject:setDrawBackground(arg0) end
+function TextDrawObject:setDrawBackground(draw) end
 
 --- @public
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return void
-function TextDrawObject:setEnabled(arg0) end
+function TextDrawObject:setEnabled(enabled) end
 
 --- @public
---- @param arg0 boolean
+--- @param equalizeLineHeights boolean
 --- @return void
-function TextDrawObject:setEqualizeLineHeights(arg0) end
+function TextDrawObject:setEqualizeLineHeights(equalizeLineHeights) end
 
 --- @public
---- @param arg0 int
+--- @param range int
 --- @return void
-function TextDrawObject:setHearRange(arg0) end
+function TextDrawObject:setHearRange(range) end
 
 --- @public
---- @param arg0 String
+--- @param horz TextDrawHorizontal
 --- @return void
-function TextDrawObject:setHorizontalAlign(arg0) end
+function TextDrawObject:setHorizontalAlign(horz) end
 
 --- @public
---- @param arg0 float
+--- @param ticks float
 --- @return void
-function TextDrawObject:setInternalTickClock(arg0) end
+function TextDrawObject:setInternalTickClock(ticks) end
 
 --- @public
---- @param arg0 int
+--- @param charsperline int
 --- @return void
-function TextDrawObject:setMaxCharsPerLine(arg0) end
+function TextDrawObject:setMaxCharsPerLine(charsperline) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param r float
+--- @param g float
+--- @param b float
 --- @return void
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
-function TextDrawObject:setOutlineColors(arg0, arg1, arg2) end
+--- @overload fun(r: float, g: float, b: float, a: float)
+function TextDrawObject:setOutlineColors(r, g, b) end
 
 --- @public
---- @param arg0 float
+--- @param value float
 --- @return void
-function TextDrawObject:setScrambleVal(arg0) end
+function TextDrawObject:setScrambleVal(value) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 boolean
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
---- @param arg5 boolean
+--- @param allowBBcode boolean
+--- @param allowImages boolean
+--- @param allowChatIcons boolean
+--- @param allowColors boolean
+--- @param allowFonts boolean
+--- @param equalizeLineHeights boolean
 --- @return void
-function TextDrawObject:setSettings(arg0, arg1, arg2, arg3, arg4, arg5) end
+function TextDrawObject:setSettings(allowBBcode, allowImages, allowChatIcons, allowColors, allowFonts, equalizeLineHeights) end
 
 --- @public
---- @param arg0 String[]
+--- @param list String[]
 --- @return void
-function TextDrawObject:setValidFonts(arg0) end
+function TextDrawObject:setValidFonts(list) end
 
 --- @public
---- @param arg0 String[]
+--- @param list String[]
 --- @return void
-function TextDrawObject:setValidImages(arg0) end
+function TextDrawObject:setValidImages(list) end
 
 --- @public
---- @param arg0 int
+--- @param radius int
 --- @return void
-function TextDrawObject:setVisibleRadius(arg0) end
+function TextDrawObject:setVisibleRadius(radius) end
 
 --- @public
 --- @return float
---- @overload fun(arg0: float)
+--- @overload fun(delta: float)
 function TextDrawObject:updateInternalTickClock() end
 
 
@@ -266,6 +266,6 @@ function TextDrawObject:updateInternalTickClock() end
 
 --- @public
 --- @return TextDrawObject
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: boolean)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: boolean, arg4: boolean, arg5: boolean, arg6: boolean, arg7: boolean, arg8: boolean)
+--- @overload fun(r: int, g: int, b: int, allowBBcode: boolean)
+--- @overload fun(r: int, g: int, b: int, allowBBcode: boolean, allowImages: boolean, allowChatIcons: boolean, allowColors: boolean, allowFonts: boolean, equalizeLineHeights: boolean)
 function TextDrawObject.new() end

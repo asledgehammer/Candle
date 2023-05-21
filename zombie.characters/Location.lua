@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Location: Object
+--- @class Location
 Location = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ Location = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param other Object
 --- @return boolean
-function Location:equals(arg0) end
+function Location:equals(other) end
 
 --- @public
 --- @return int
@@ -25,11 +25,11 @@ function Location:getY() end
 function Location:getZ() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return Location
-function Location:set(arg0, arg1, arg2) end
+function Location:set(x, y, z) end
 
 
 ------------------------------------
@@ -38,5 +38,5 @@ function Location:set(arg0, arg1, arg2) end
 
 --- @public
 --- @return Location
---- @overload fun(arg0: int, arg1: int, arg2: int)
+--- @overload fun(x: int, y: int, z: int)
 function Location.new() end

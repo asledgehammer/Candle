@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PerkFactory: Object
+--- @class PerkFactory
 --- @field public PerkList ArrayList
 PerkFactory = {};
 
@@ -40,9 +40,9 @@ function PerkFactory.getPerk(arg0) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return Perk
-function PerkFactory.getPerkFromName(arg0) end
+function PerkFactory.getPerkFromName(name) end
 
 --- @public
 --- @static

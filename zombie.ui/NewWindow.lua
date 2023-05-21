@@ -8,51 +8,51 @@ NewWindow = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function NewWindow:ButtonClicked(arg0) end
+function NewWindow:ButtonClicked(name) end
 
 --- @public
---- @param arg0 UIElement
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param el UIElement
+--- @param t int
+--- @param r int
+--- @param b int
+--- @param l int
 --- @return void
-function NewWindow:Nest(arg0, arg1, arg2, arg3, arg4) end
+function NewWindow:Nest(el, t, r, b, l) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param x double
+--- @param y double
 --- @return Boolean
-function NewWindow:onMouseDown(arg0, arg1) end
+function NewWindow:onMouseDown(x, y) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param dx double
+--- @param dy double
 --- @return Boolean
-function NewWindow:onMouseMove(arg0, arg1) end
+function NewWindow:onMouseMove(dx, dy) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param dx double
+--- @param dy double
 --- @return void
-function NewWindow:onMouseMoveOutside(arg0, arg1) end
+function NewWindow:onMouseMoveOutside(dx, dy) end
 
 --- @public
---- @param arg0 double
---- @param arg1 double
+--- @param x double
+--- @param y double
 --- @return Boolean
-function NewWindow:onMouseUp(arg0, arg1) end
+function NewWindow:onMouseUp(x, y) end
 
 --- @public
 --- @return void
 function NewWindow:render() end
 
 --- @public
---- @param arg0 boolean
+--- @param bMoveable boolean
 --- @return void
-function NewWindow:setMovable(arg0) end
+function NewWindow:setMovable(bMoveable) end
 
 --- @public
 --- @return void
@@ -64,10 +64,10 @@ function NewWindow:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 boolean
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param bHasClose boolean
 --- @return NewWindow
-function NewWindow.new(arg0, arg1, arg2, arg3, arg4) end
+function NewWindow.new(x, y, width, height, bHasClose) end

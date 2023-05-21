@@ -1,6 +1,6 @@
 --- @meta
 
---- @class CircleIsoMarker: Object
+--- @class CircleIsoMarker
 CircleIsoMarker = {};
 
 ------------------------------------
@@ -64,12 +64,12 @@ function CircleIsoMarker:getY() end
 function CircleIsoMarker:getZ() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 IsoGridSquare
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param gs IsoGridSquare
 --- @return void
-function CircleIsoMarker:init(arg0, arg1, arg2, arg3) end
+function CircleIsoMarker:init(x, y, z, gs) end
 
 --- @public
 --- @return boolean
@@ -88,71 +88,71 @@ function CircleIsoMarker:isRemoved() end
 function CircleIsoMarker:remove() end
 
 --- @public
---- @param arg0 float
+--- @param a float
 --- @return void
-function CircleIsoMarker:setA(arg0) end
+function CircleIsoMarker:setA(a) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return void
-function CircleIsoMarker:setActive(arg0) end
+function CircleIsoMarker:setActive(active) end
 
 --- @public
---- @param arg0 float
+--- @param alpha float
 --- @return void
-function CircleIsoMarker:setAlpha(arg0) end
+function CircleIsoMarker:setAlpha(alpha) end
 
 --- @public
---- @param arg0 float
+--- @param alphaMax float
 --- @return void
-function CircleIsoMarker:setAlphaMax(arg0) end
+function CircleIsoMarker:setAlphaMax(alphaMax) end
 
 --- @public
---- @param arg0 float
+--- @param alphaMin float
 --- @return void
-function CircleIsoMarker:setAlphaMin(arg0) end
+function CircleIsoMarker:setAlphaMin(alphaMin) end
 
 --- @public
---- @param arg0 float
+--- @param b float
 --- @return void
-function CircleIsoMarker:setB(arg0) end
+function CircleIsoMarker:setB(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param doAlpha boolean
 --- @return void
-function CircleIsoMarker:setDoAlpha(arg0) end
+function CircleIsoMarker:setDoAlpha(doAlpha) end
 
 --- @public
---- @param arg0 float
+--- @param fadeSpeed float
 --- @return void
-function CircleIsoMarker:setFadeSpeed(arg0) end
+function CircleIsoMarker:setFadeSpeed(fadeSpeed) end
 
 --- @public
---- @param arg0 float
+--- @param g float
 --- @return void
-function CircleIsoMarker:setG(arg0) end
+function CircleIsoMarker:setG(g) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function CircleIsoMarker:setPos(arg0, arg1, arg2) end
+function CircleIsoMarker:setPos(x, y, z) end
 
 --- @public
---- @param arg0 float
+--- @param r float
 --- @return void
-function CircleIsoMarker:setR(arg0) end
+function CircleIsoMarker:setR(r) end
 
 --- @public
---- @param arg0 float
+--- @param size float
 --- @return void
-function CircleIsoMarker:setSize(arg0) end
+function CircleIsoMarker:setSize(size) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return void
-function CircleIsoMarker:setSquare(arg0) end
+function CircleIsoMarker:setSquare(square) end
 
 
 ------------------------------------

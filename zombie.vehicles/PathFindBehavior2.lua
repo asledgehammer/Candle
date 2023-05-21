@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PathFindBehavior2: Object
+--- @class PathFindBehavior2
 --- @implement IPathfinder
 PathFindBehavior2 = {};
 
@@ -25,9 +25,9 @@ function PathFindBehavior2.closestPointOnPath(arg0, arg1, arg2, arg3, arg4, arg5
 ------------------------------------
 
 --- @public
---- @param arg0 Mover
+--- @param mover Mover
 --- @return void
-function PathFindBehavior2:Failed(arg0) end
+function PathFindBehavior2:Failed(mover) end
 
 --- @public
 --- @param arg0 Path
@@ -100,43 +100,43 @@ function PathFindBehavior2:isMovingUsingPathFind() end
 function PathFindBehavior2:isStrafing() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return boolean
-function PathFindBehavior2:isTargetLocation(arg0, arg1, arg2) end
+function PathFindBehavior2:isTargetLocation(x, y, z) end
 
 --- @public
---- @param arg0 IsoMovingObject
---- @param arg1 float
+--- @param target IsoMovingObject
+--- @param speedMul float
 --- @return void
-function PathFindBehavior2:moveToDir(arg0, arg1) end
+function PathFindBehavior2:moveToDir(target, speedMul) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param speedMul float
 --- @return void
-function PathFindBehavior2:moveToPoint(arg0, arg1, arg2) end
+function PathFindBehavior2:moveToPoint(x, y, speedMul) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param target IsoGameCharacter
 --- @return void
-function PathFindBehavior2:pathToCharacter(arg0) end
+function PathFindBehavior2:pathToCharacter(target) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function PathFindBehavior2:pathToLocation(arg0, arg1, arg2) end
+function PathFindBehavior2:pathToLocation(x, y, z) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return void
-function PathFindBehavior2:pathToLocationF(arg0, arg1, arg2) end
+function PathFindBehavior2:pathToLocationF(x, y, z) end
 
 --- @public
 --- @param arg0 TFloatArrayList
@@ -149,28 +149,28 @@ function PathFindBehavior2:pathToNearest(arg0) end
 function PathFindBehavior2:pathToNearestTable(arg0) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function PathFindBehavior2:pathToSound(arg0, arg1, arg2) end
+function PathFindBehavior2:pathToSound(x, y, z) end
 
 --- @public
---- @param arg0 BaseVehicle
+--- @param vehicle BaseVehicle
 --- @return void
-function PathFindBehavior2:pathToVehicleAdjacent(arg0) end
+function PathFindBehavior2:pathToVehicleAdjacent(vehicle) end
 
 --- @public
---- @param arg0 BaseVehicle
---- @param arg1 String
+--- @param vehicle BaseVehicle
+--- @param areaId String
 --- @return void
-function PathFindBehavior2:pathToVehicleArea(arg0, arg1) end
+function PathFindBehavior2:pathToVehicleArea(vehicle, areaId) end
 
 --- @public
---- @param arg0 BaseVehicle
---- @param arg1 int
+--- @param vehicle BaseVehicle
+--- @param seat int
 --- @return void
-function PathFindBehavior2:pathToVehicleSeat(arg0, arg1) end
+function PathFindBehavior2:pathToVehicleSeat(vehicle, seat) end
 
 --- @public
 --- @return void
@@ -181,11 +181,11 @@ function PathFindBehavior2:render() end
 function PathFindBehavior2:reset() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param targetX float
+--- @param targetY float
+--- @param targetZ float
 --- @return void
-function PathFindBehavior2:setData(arg0, arg1, arg2) end
+function PathFindBehavior2:setData(targetX, targetY, targetZ) end
 
 --- @public
 --- @return boolean
@@ -201,6 +201,6 @@ function PathFindBehavior2:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return PathFindBehavior2
-function PathFindBehavior2.new(arg0) end
+function PathFindBehavior2.new(chr) end

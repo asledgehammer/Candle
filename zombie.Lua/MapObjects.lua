@@ -1,6 +1,6 @@
 --- @meta
 
---- @class MapObjects: Object
+--- @class MapObjects
 MapObjects = {};
 
 ------------------------------------
@@ -17,7 +17,7 @@ function MapObjects.OnLoadWithSprite(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 KahluaTable
 --- @param arg1 LuaClosure
 --- @param arg2 int
 --- @return void
@@ -30,38 +30,38 @@ function MapObjects.Reset() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return void
-function MapObjects.debugLoadChunk(arg0, arg1) end
+function MapObjects.debugLoadChunk(wx, wy) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function MapObjects.debugLoadSquare(arg0, arg1, arg2) end
+function MapObjects.debugLoadSquare(x, y, z) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function MapObjects.debugNewSquare(arg0, arg1, arg2) end
+function MapObjects.debugNewSquare(x, y, z) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return void
-function MapObjects.loadGridSquare(arg0) end
+function MapObjects.loadGridSquare(square) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return void
-function MapObjects.newGridSquare(arg0) end
+function MapObjects.newGridSquare(square) end
 
 --- @public
 --- @static

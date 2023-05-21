@@ -8,30 +8,30 @@ DummySoundBank = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
+--- @param alias String
+--- @param grass String
+--- @param wood String
+--- @param concrete String
+--- @param upstairs String
 --- @return void
-function DummySoundBank:addFootstep(arg0, arg1, arg2, arg3, arg4) end
+function DummySoundBank:addFootstep(alias, grass, wood, concrete, upstairs) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 float
+--- @param alias String
+--- @param sound String
+--- @param priority float
 --- @return void
-function DummySoundBank:addVoice(arg0, arg1, arg2) end
+function DummySoundBank:addVoice(alias, sound, priority) end
 
 --- @public
---- @param arg0 String
+--- @param alias String
 --- @return FMODFootstep
-function DummySoundBank:getFootstep(arg0) end
+function DummySoundBank:getFootstep(alias) end
 
 --- @public
---- @param arg0 String
+--- @param alias String
 --- @return FMODVoice
-function DummySoundBank:getVoice(arg0) end
+function DummySoundBank:getVoice(alias) end
 
 
 ------------------------------------

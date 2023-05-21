@@ -20,39 +20,39 @@ function IsoClothingWasher:getObjectName() end
 function IsoClothingWasher:isActivated() end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoClothingWasher:isItemAllowedInContainer(arg0, arg1) end
+function IsoClothingWasher:isItemAllowedInContainer(container, item) end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoClothingWasher:isRemoveItemAllowedFromContainer(arg0, arg1) end
+function IsoClothingWasher:isRemoveItemAllowedFromContainer(container, item) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoClothingWasher:load(arg0, arg1, arg2) end
+function IsoClothingWasher:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ByteBuffer
+--- @param change String
+--- @param bb ByteBuffer
 --- @return void
-function IsoClothingWasher:loadChange(arg0, arg1) end
+function IsoClothingWasher:loadChange(change, bb) end
 
 --- @public
 --- @return void
 function IsoClothingWasher:removeFromWorld() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoClothingWasher:save(arg0, arg1) end
+function IsoClothingWasher:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 String
@@ -62,9 +62,9 @@ function IsoClothingWasher:save(arg0, arg1) end
 function IsoClothingWasher:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 boolean
+--- @param activated boolean
 --- @return void
-function IsoClothingWasher:setActivated(arg0) end
+function IsoClothingWasher:setActivated(activated) end
 
 --- @public
 --- @return void
@@ -76,7 +76,7 @@ function IsoClothingWasher:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoClothingWasher
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
-function IsoClothingWasher.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite)
+function IsoClothingWasher.new(cell) end

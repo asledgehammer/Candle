@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Core: Object
+--- @class Core
 --- @field public bAltMoveMethod boolean
 --- @field public bDebug boolean
 --- @field public bDemo boolean
@@ -103,11 +103,11 @@ function Core.UnfocusActiveTextEntryBox() end
 
 --- @public
 --- @static
---- @param arg0 int[]
---- @param arg1 int
---- @param arg2 int
+--- @param imgPixels int[]
+--- @param imgw int
+--- @param imgh int
 --- @return int[]
-function Core.flipPixels(arg0, arg1, arg2) end
+function Core.flipPixels(imgPixels, imgw, imgh) end
 
 --- @public
 --- @static
@@ -151,23 +151,23 @@ function Core.isLastStand() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param vdifficulty String
 --- @return void
-function Core.setDifficulty(arg0) end
+function Core.setDifficulty(vdifficulty) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 boolean
+--- @param width int
+--- @param height int
+--- @param fullscreen boolean
 --- @return void
-function Core.setDisplayMode(arg0, arg1, arg2) end
+function Core.setDisplayMode(width, height, fullscreen) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param bool boolean
 --- @return void
-function Core.setFullScreen(arg0) end
+function Core.setFullScreen(bool) end
 
 --- @public
 --- @static
@@ -189,23 +189,23 @@ function Core.supportNPTTexture() end
 function Core:CheckDelayResetLua() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param activeMods String
+--- @param reason String
 --- @return void
-function Core:DelayResetLua(arg0, arg1) end
+function Core:DelayResetLua(activeMods, reason) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param w int
+--- @param h int
 --- @return void
-function Core:DoEndFrameStuff(arg0, arg1) end
+function Core:DoEndFrameStuff(w, h) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param w int
+--- @param h int
+--- @param player int
 --- @return void
-function Core:DoEndFrameStuffFx(arg0, arg1, arg2) end
+function Core:DoEndFrameStuffFx(w, h, player) end
 
 --- @public
 --- @return void
@@ -216,46 +216,46 @@ function Core:DoFrameReady() end
 function Core:DoPopIsoStuff() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param ox float
+--- @param oy float
+--- @param oz float
 --- @return void
-function Core:DoPushIsoParticleStuff(arg0, arg1, arg2) end
+function Core:DoPushIsoParticleStuff(ox, oy, oz) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 boolean
+--- @param ox float
+--- @param oy float
+--- @param oz float
+--- @param useangle float
+--- @param vehicle boolean
 --- @return void
-function Core:DoPushIsoStuff(arg0, arg1, arg2, arg3, arg4) end
+function Core:DoPushIsoStuff(ox, oy, oz, useangle, vehicle) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
---- @param arg3 int
+--- @param w int
+--- @param h int
+--- @param zoom float
+--- @param player int
 --- @return void
---- @overload fun(arg0: int, arg1: int, arg2: float, arg3: int, arg4: boolean)
-function Core:DoStartFrameStuff(arg0, arg1, arg2, arg3) end
+--- @overload fun(w: int, h: int, zoom: float, player: int, isTextFrame: boolean)
+function Core:DoStartFrameStuff(w, h, zoom, player) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param w int
+--- @param h int
+--- @param player int
 --- @return void
-function Core:DoStartFrameStuffSmartTextureFx(arg0, arg1, arg2) end
+function Core:DoStartFrameStuffSmartTextureFx(w, h, player) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: int)
+--- @overload fun(nPlayer: int)
 function Core:EndFrame() end
 
 --- @public
---- @param arg0 int
+--- @param nPlayer int
 --- @return void
-function Core:EndFrameText(arg0) end
+function Core:EndFrameText(nPlayer) end
 
 --- @public
 --- @return void
@@ -270,60 +270,60 @@ function Core:MoveMethodToggle() end
 function Core:RenderOffScreenBuffer() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param activeMods String
+--- @param reason String
 --- @return void
-function Core:ResetLua(arg0, arg1) end
+function Core:ResetLua(activeMods, reason) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: int, arg1: boolean)
+--- @overload fun(nPlayer: int, clear: boolean)
 function Core:StartFrame() end
 
 --- @public
---- @param arg0 int
+--- @param nPlayer int
 --- @return void
-function Core:StartFrameText(arg0) end
+function Core:StartFrameText(nPlayer) end
 
 --- @public
 --- @return boolean
 function Core:StartFrameUI() end
 
 --- @public
---- @param arg0 String
+--- @param filename String
 --- @return void
-function Core:TakeFullScreenshot(arg0) end
+function Core:TakeFullScreenshot(filename) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: int, arg1: int, arg2: int)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int, arg4: int)
+--- @overload fun(width: int, height: int, readBuffer: int)
+--- @overload fun(x: int, y: int, width: int, height: int, readBuffer: int)
 function Core:TakeScreenshot() end
 
 --- @public
---- @param arg0 String
---- @param arg1 Integer
+--- @param keyName String
+--- @param key Integer
 --- @return void
-function Core:addKeyBinding(arg0, arg1) end
+function Core:addKeyBinding(keyName, key) end
 
 --- @public
 --- @return void
 function Core:countMissing3DItems() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param playerIndex int
+--- @param del int
 --- @return void
-function Core:doZoomScroll(arg0, arg1) end
+function Core:doZoomScroll(playerIndex, del) end
 
 --- @public
 --- @return void
 function Core:exitToMenu() end
 
 --- @public
---- @param arg0 int
+--- @param playerIndex int
 --- @return boolean
-function Core:getAutoZoom(arg0) end
+function Core:getAutoZoom(playerIndex) end
 
 --- @public
 --- @return ColorInfo
@@ -374,9 +374,9 @@ function Core:getIgnoreProneZombieRange() end
 function Core:getIsoCursorVisibility() end
 
 --- @public
---- @param arg0 String
+--- @param keyName String
 --- @return int
-function Core:getKey(arg0) end
+function Core:getKey(keyName) end
 
 --- @public
 --- @return Map
@@ -421,10 +421,10 @@ function Core:getMinZoom() end
 function Core:getMpTextColor() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param playerIndex int
+--- @param del int
 --- @return float
-function Core:getNextZoom(arg0, arg1) end
+function Core:getNextZoom(playerIndex, del) end
 
 --- @public
 --- @return ColorInfo
@@ -432,13 +432,13 @@ function Core:getObjectHighlitedColor() end
 
 --- @public
 --- @return TextureFBO
---- @overload fun(arg0: int)
+--- @overload fun(nPlayer: int)
 function Core:getOffscreenBuffer() end
 
 --- @public
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function Core:getOffscreenHeight(arg0) end
+function Core:getOffscreenHeight(playerIndex) end
 
 --- @public
 --- @return int
@@ -449,14 +449,14 @@ function Core:getOffscreenTrueHeight() end
 function Core:getOffscreenTrueWidth() end
 
 --- @public
---- @param arg0 int
+--- @param playerIndex int
 --- @return int
-function Core:getOffscreenWidth(arg0) end
+function Core:getOffscreenWidth(playerIndex) end
 
 --- @public
---- @param arg0 String
+--- @param guid String
 --- @return boolean
-function Core:getOptionActiveController(arg0) end
+function Core:getOptionActiveController(guid) end
 
 --- @public
 --- @return int
@@ -615,9 +615,9 @@ function Core:getOptionMusicLibrary() end
 function Core:getOptionMusicVolume() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Object
-function Core:getOptionOnStartup(arg0) end
+function Core:getOptionOnStartup(name) end
 
 --- @public
 --- @return boolean
@@ -676,9 +676,9 @@ function Core:getOptionSimpleClothingTextures() end
 function Core:getOptionSimpleWeaponTextures() end
 
 --- @public
---- @param arg0 int
+--- @param playerIndex int
 --- @return boolean
-function Core:getOptionSingleContextMenu(arg0) end
+function Core:getOptionSingleContextMenu(playerIndex) end
 
 --- @public
 --- @return int
@@ -853,31 +853,31 @@ function Core:getVersionNumber() end
 function Core:getVidMem() end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
+--- @param width int
+--- @param angle float
 --- @return int
-function Core:getXAngle(arg0, arg1) end
+function Core:getXAngle(width, angle) end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
+--- @param width int
+--- @param angle float
 --- @return int
-function Core:getYAngle(arg0, arg1) end
+function Core:getYAngle(width, angle) end
 
 --- @public
---- @param arg0 int
+--- @param playerIndex int
 --- @return float
-function Core:getZoom(arg0) end
+function Core:getZoom(playerIndex) end
 
 --- @public
 --- @return boolean
 function Core:gotNewBelt() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param width int
+--- @param height int
 --- @return void
-function Core:init(arg0, arg1) end
+function Core:init(width, height) end
 
 --- @public
 --- @return void
@@ -984,9 +984,9 @@ function Core:isOptionShowChatTimestamp() end
 function Core:isOptionShowChatTitle() end
 
 --- @public
---- @param arg0 boolean
+--- @param bZombie boolean
 --- @return boolean
-function Core:isOptionSimpleClothingTextures(arg0) end
+function Core:isOptionSimpleClothingTextures(bZombie) end
 
 --- @public
 --- @return boolean
@@ -1081,20 +1081,20 @@ function Core:reinitKeyMaps() end
 function Core:saveOptions() end
 
 --- @public
---- @param arg0 boolean
+--- @param done boolean
 --- @return void
-function Core:setAnimPopupDone(arg0) end
+function Core:setAnimPopupDone(done) end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
+--- @param playerIndex int
+--- @param auto boolean
 --- @return void
-function Core:setAutoZoom(arg0, arg1) end
+function Core:setAutoZoom(playerIndex, auto) end
 
 --- @public
---- @param arg0 boolean
+--- @param isAzerty boolean
 --- @return void
-function Core:setAzerty(arg0) end
+function Core:setAzerty(isAzerty) end
 
 --- @public
 --- @param arg0 ColorInfo
@@ -1102,49 +1102,49 @@ function Core:setAzerty(arg0) end
 function Core:setBadHighlitedColor(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param blinkingMoodle String
 --- @return void
-function Core:setBlinkingMoodle(arg0) end
+function Core:setBlinkingMoodle(blinkingMoodle) end
 
 --- @public
---- @param arg0 boolean
+--- @param celsius boolean
 --- @return void
-function Core:setCelsius(arg0) end
+function Core:setCelsius(celsius) end
 
 --- @public
---- @param arg0 boolean
+--- @param bChallenge boolean
 --- @return void
-function Core:setChallenge(arg0) end
+function Core:setChallenge(bChallenge) end
 
 --- @public
---- @param arg0 boolean
+--- @param collideZombies boolean
 --- @return void
-function Core:setCollideZombies(arg0) end
+function Core:setCollideZombies(collideZombies) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setContentTranslationsEnabled(arg0) end
+function Core:setContentTranslationsEnabled(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param doneNewSaveFolder boolean
 --- @return void
-function Core:setDoneNewSaveFolder(arg0) end
+function Core:setDoneNewSaveFolder(doneNewSaveFolder) end
 
 --- @public
---- @param arg0 boolean
+--- @param flashIsoCursor boolean
 --- @return void
-function Core:setFlashIsoCursor(arg0) end
+function Core:setFlashIsoCursor(flashIsoCursor) end
 
 --- @public
---- @param arg0 boolean
+--- @param forceSnow boolean
 --- @return void
-function Core:setForceSnow(arg0) end
+function Core:setForceSnow(forceSnow) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return void
-function Core:setFramerate(arg0) end
+function Core:setFramerate(index) end
 
 --- @public
 --- @param arg0 ColorInfo
@@ -1152,90 +1152,90 @@ function Core:setFramerate(arg0) end
 function Core:setGoodHighlitedColor(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param gotit boolean
 --- @return void
-function Core:setGotNewBelt(arg0) end
+function Core:setGotNewBelt(gotit) end
 
 --- @public
---- @param arg0 boolean
+--- @param isSelectingAll boolean
 --- @return void
-function Core:setIsSelectingAll(arg0) end
+function Core:setIsSelectingAll(isSelectingAll) end
 
 --- @public
---- @param arg0 int
+--- @param isoCursorVisibility int
 --- @return void
-function Core:setIsoCursorVisibility(arg0) end
+function Core:setIsoCursorVisibility(isoCursorVisibility) end
 
 --- @public
---- @param arg0 Map
+--- @param keyMaps Map
 --- @return void
-function Core:setKeyMaps(arg0) end
+function Core:setKeyMaps(keyMaps) end
 
 --- @public
---- @param arg0 TextureFBO
+--- @param fbo TextureFBO
 --- @return void
-function Core:setLastRenderedFBO(arg0) end
+function Core:setLastRenderedFBO(fbo) end
 
 --- @public
---- @param arg0 boolean
+--- @param done boolean
 --- @return void
-function Core:setModsPopupDone(arg0) end
+function Core:setModsPopupDone(done) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param mpTextColor ColorInfo
 --- @return void
-function Core:setMpTextColor(arg0) end
+function Core:setMpTextColor(mpTextColor) end
 
 --- @public
---- @param arg0 boolean
+--- @param val boolean
 --- @return void
-function Core:setMultiThread(arg0) end
+function Core:setMultiThread(val) end
 
 --- @public
---- @param arg0 boolean
+--- @param newReloading boolean
 --- @return void
-function Core:setNewReloading(arg0) end
+function Core:setNewReloading(newReloading) end
 
 --- @public
---- @param arg0 boolean
+--- @param noSave boolean
 --- @return void
-function Core:setNoSave(arg0) end
+function Core:setNoSave(noSave) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param objectHighlitedColor ColorInfo
 --- @return void
-function Core:setObjectHighlitedColor(arg0) end
+function Core:setObjectHighlitedColor(objectHighlitedColor) end
 
 --- @public
---- @param arg0 boolean
+--- @param option3Dgrounditem boolean
 --- @return void
-function Core:setOption3DGroundItem(arg0) end
+function Core:setOption3DGroundItem(option3Dgrounditem) end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
+--- @param controllerIndex int
+--- @param active boolean
 --- @return void
-function Core:setOptionActiveController(arg0, arg1) end
+function Core:setOptionActiveController(controllerIndex, active) end
 
 --- @public
---- @param arg0 int
+--- @param choice int
 --- @return void
-function Core:setOptionAimOutline(arg0) end
+function Core:setOptionAimOutline(choice) end
 
 --- @public
---- @param arg0 int
+--- @param volume int
 --- @return void
-function Core:setOptionAmbientVolume(arg0) end
+function Core:setOptionAmbientVolume(volume) end
 
 --- @public
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function Core:setOptionAutoDrink(arg0) end
+function Core:setOptionAutoDrink(enable) end
 
 --- @public
---- @param arg0 boolean
+--- @param optionAutoProneAtk boolean
 --- @return void
-function Core:setOptionAutoProneAtk(arg0) end
+function Core:setOptionAutoProneAtk(optionAutoProneAtk) end
 
 --- @public
 --- @param arg0 boolean
@@ -1243,64 +1243,64 @@ function Core:setOptionAutoProneAtk(arg0) end
 function Core:setOptionAutoWalkContainer(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param n int
 --- @return void
-function Core:setOptionBloodDecals(arg0) end
+function Core:setOptionBloodDecals(n) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionBorderlessWindow(arg0) end
+function Core:setOptionBorderlessWindow(b) end
 
 --- @public
---- @param arg0 float
+--- @param optionChatFadeTime float
 --- @return void
-function Core:setOptionChatFadeTime(arg0) end
+function Core:setOptionChatFadeTime(optionChatFadeTime) end
 
 --- @public
---- @param arg0 String
+--- @param optionChatFontSize String
 --- @return void
-function Core:setOptionChatFontSize(arg0) end
+function Core:setOptionChatFontSize(optionChatFontSize) end
 
 --- @public
---- @param arg0 boolean
+--- @param optionChatOpaqueOnFocus boolean
 --- @return void
-function Core:setOptionChatOpaqueOnFocus(arg0) end
+function Core:setOptionChatOpaqueOnFocus(optionChatOpaqueOnFocus) end
 
 --- @public
---- @param arg0 boolean
+--- @param b24Hour boolean
 --- @return void
-function Core:setOptionClock24Hour(arg0) end
+function Core:setOptionClock24Hour(b24Hour) end
 
 --- @public
---- @param arg0 int
+--- @param fmt int
 --- @return void
-function Core:setOptionClockFormat(arg0) end
+function Core:setOptionClockFormat(fmt) end
 
 --- @public
---- @param arg0 int
+--- @param size int
 --- @return void
-function Core:setOptionClockSize(arg0) end
+function Core:setOptionClockSize(size) end
 
 --- @public
---- @param arg0 String
+--- @param font String
 --- @return void
-function Core:setOptionContextMenuFont(arg0) end
+function Core:setOptionContextMenuFont(font) end
 
 --- @public
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function Core:setOptionCorpseShadows(arg0) end
+function Core:setOptionCorpseShadows(enable) end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return void
-function Core:setOptionCycleContainerKey(arg0) end
+function Core:setOptionCycleContainerKey(s) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionDisplayAsCelsius(arg0) end
+function Core:setOptionDisplayAsCelsius(b) end
 
 --- @public
 --- @param arg0 boolean
@@ -1308,69 +1308,69 @@ function Core:setOptionDisplayAsCelsius(arg0) end
 function Core:setOptionDoContainerOutline(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionDoDoorSpriteEffects(arg0) end
+function Core:setOptionDoDoorSpriteEffects(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionDoWindSpriteEffects(arg0) end
+function Core:setOptionDoWindSpriteEffects(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionDropItemsOnSquareCenter(arg0) end
+function Core:setOptionDropItemsOnSquareCenter(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionEnableLeftJoystickRadialMenu(arg0) end
+function Core:setOptionEnableLeftJoystickRadialMenu(b) end
 
 --- @public
---- @param arg0 int
+--- @param size int
 --- @return void
-function Core:setOptionFontSize(arg0) end
+function Core:setOptionFontSize(size) end
 
 --- @public
---- @param arg0 int
+--- @param i int
 --- @return void
-function Core:setOptionIgnoreProneZombieRange(arg0) end
+function Core:setOptionIgnoreProneZombieRange(i) end
 
 --- @public
---- @param arg0 int
+--- @param size int
 --- @return void
-function Core:setOptionInventoryContainerSize(arg0) end
+function Core:setOptionInventoryContainerSize(size) end
 
 --- @public
---- @param arg0 String
+--- @param font String
 --- @return void
-function Core:setOptionInventoryFont(arg0) end
+function Core:setOptionInventoryFont(font) end
 
 --- @public
---- @param arg0 int
+--- @param volume int
 --- @return void
-function Core:setOptionJumpScareVolume(arg0) end
+function Core:setOptionJumpScareVolume(volume) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Core:setOptionLanguageName(arg0) end
+function Core:setOptionLanguageName(name) end
 
 --- @public
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function Core:setOptionLeaveKeyInIgnition(arg0) end
+function Core:setOptionLeaveKeyInIgnition(enable) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionLockCursorToWindow(arg0) end
+function Core:setOptionLockCursorToWindow(b) end
 
 --- @public
---- @param arg0 float
+--- @param optionMaxChatOpaque float
 --- @return void
-function Core:setOptionMaxChatOpaque(arg0) end
+function Core:setOptionMaxChatOpaque(optionMaxChatOpaque) end
 
 --- @public
 --- @param arg0 int
@@ -1383,339 +1383,339 @@ function Core:setOptionMaxTextureSize(arg0) end
 function Core:setOptionMaxVehicleTextureSize(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param format String
 --- @return void
-function Core:setOptionMeasurementFormat(arg0) end
+function Core:setOptionMeasurementFormat(format) end
 
 --- @public
---- @param arg0 float
+--- @param optionMinChatOpaque float
 --- @return void
-function Core:setOptionMinChatOpaque(arg0) end
+function Core:setOptionMinChatOpaque(optionMinChatOpaque) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionModelTextureMipmaps(arg0) end
+function Core:setOptionModelTextureMipmaps(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return void
-function Core:setOptionModsEnabled(arg0) end
+function Core:setOptionModsEnabled(enabled) end
 
 --- @public
---- @param arg0 int
+--- @param v int
 --- @return void
-function Core:setOptionMusicActionStyle(arg0) end
+function Core:setOptionMusicActionStyle(v) end
 
 --- @public
---- @param arg0 int
+--- @param m int
 --- @return void
-function Core:setOptionMusicLibrary(arg0) end
+function Core:setOptionMusicLibrary(m) end
 
 --- @public
---- @param arg0 int
+--- @param volume int
 --- @return void
-function Core:setOptionMusicVolume(arg0) end
+function Core:setOptionMusicVolume(volume) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
+--- @param name String
+--- @param value Object
 --- @return void
-function Core:setOptionOnStartup(arg0, arg1) end
+function Core:setOptionOnStartup(name, value) end
 
 --- @public
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function Core:setOptionPanCameraWhileAiming(arg0) end
+function Core:setOptionPanCameraWhileAiming(enable) end
 
 --- @public
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function Core:setOptionPanCameraWhileDriving(arg0) end
+function Core:setOptionPanCameraWhileDriving(enable) end
 
 --- @public
---- @param arg0 boolean
+--- @param optionProgressBar boolean
 --- @return void
-function Core:setOptionProgressBar(arg0) end
+function Core:setOptionProgressBar(optionProgressBar) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionRackProgress(arg0) end
+function Core:setOptionRackProgress(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param toggle boolean
 --- @return void
-function Core:setOptionRadialMenuKeyToggle(arg0) end
+function Core:setOptionRadialMenuKeyToggle(toggle) end
 
 --- @public
---- @param arg0 int
+--- @param d int
 --- @return void
-function Core:setOptionReloadDifficulty(arg0) end
+function Core:setOptionReloadDifficulty(d) end
 
 --- @public
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function Core:setOptionReloadRadialInstant(arg0) end
+function Core:setOptionReloadRadialInstant(enable) end
 
 --- @public
---- @param arg0 int
+--- @param optionRenderPrecipitation int
 --- @return void
-function Core:setOptionRenderPrecipitation(arg0) end
+function Core:setOptionRenderPrecipitation(optionRenderPrecipitation) end
 
 --- @public
---- @param arg0 int
+--- @param v int
 --- @return void
-function Core:setOptionSearchModeOverlayEffect(arg0) end
+function Core:setOptionSearchModeOverlayEffect(v) end
 
 --- @public
---- @param arg0 int
+--- @param v int
 --- @return void
-function Core:setOptionShoulderButtonContainerSwitch(arg0) end
+function Core:setOptionShoulderButtonContainerSwitch(v) end
 
 --- @public
---- @param arg0 boolean
+--- @param optionShowChatTimestamp boolean
 --- @return void
-function Core:setOptionShowChatTimestamp(arg0) end
+function Core:setOptionShowChatTimestamp(optionShowChatTimestamp) end
 
 --- @public
---- @param arg0 boolean
+--- @param optionShowChatTitle boolean
 --- @return void
-function Core:setOptionShowChatTitle(arg0) end
+function Core:setOptionShowChatTitle(optionShowChatTitle) end
 
 --- @public
---- @param arg0 boolean
+--- @param show boolean
 --- @return void
-function Core:setOptionShowCursorWhileAiming(arg0) end
+function Core:setOptionShowCursorWhileAiming(show) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionShowItemModInfo(arg0) end
+function Core:setOptionShowItemModInfo(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionShowSurvivalGuide(arg0) end
+function Core:setOptionShowSurvivalGuide(b) end
 
 --- @public
---- @param arg0 int
+--- @param v int
 --- @return void
-function Core:setOptionSimpleClothingTextures(arg0) end
+function Core:setOptionSimpleClothingTextures(v) end
 
 --- @public
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function Core:setOptionSimpleWeaponTextures(arg0) end
+function Core:setOptionSimpleWeaponTextures(enable) end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
+--- @param playerIndex int
+--- @param b boolean
 --- @return void
-function Core:setOptionSingleContextMenu(arg0, arg1) end
+function Core:setOptionSingleContextMenu(playerIndex, b) end
 
 --- @public
---- @param arg0 int
+--- @param volume int
 --- @return void
-function Core:setOptionSoundVolume(arg0) end
+function Core:setOptionSoundVolume(volume) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionTexture2x(arg0) end
+function Core:setOptionTexture2x(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionTextureCompression(arg0) end
+function Core:setOptionTextureCompression(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param val boolean
 --- @return void
-function Core:setOptionTieredZombieUpdates(arg0) end
+function Core:setOptionTieredZombieUpdates(val) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionTimedActionGameSpeedReset(arg0) end
+function Core:setOptionTimedActionGameSpeedReset(b) end
 
 --- @public
---- @param arg0 String
+--- @param font String
 --- @return void
-function Core:setOptionTooltipFont(arg0) end
+function Core:setOptionTooltipFont(font) end
 
 --- @public
---- @param arg0 boolean
+--- @param use boolean
 --- @return void
-function Core:setOptionUIFBO(arg0) end
+function Core:setOptionUIFBO(use) end
 
 --- @public
---- @param arg0 int
+--- @param fps int
 --- @return void
-function Core:setOptionUIRenderFPS(arg0) end
+function Core:setOptionUIRenderFPS(fps) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setOptionUpdateSneakButton(arg0) end
+function Core:setOptionUpdateSneakButton(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param sync boolean
 --- @return void
-function Core:setOptionVSync(arg0) end
+function Core:setOptionVSync(sync) end
 
 --- @public
---- @param arg0 int
+--- @param volume int
 --- @return void
-function Core:setOptionVehicleEngineVolume(arg0) end
+function Core:setOptionVehicleEngineVolume(volume) end
 
 --- @public
---- @param arg0 int
+--- @param option int
 --- @return void
-function Core:setOptionVoiceAGCMode(arg0) end
+function Core:setOptionVoiceAGCMode(option) end
 
 --- @public
---- @param arg0 boolean
+--- @param option boolean
 --- @return void
-function Core:setOptionVoiceEnable(arg0) end
+function Core:setOptionVoiceEnable(option) end
 
 --- @public
---- @param arg0 int
+--- @param option int
 --- @return void
-function Core:setOptionVoiceMode(arg0) end
+function Core:setOptionVoiceMode(option) end
 
 --- @public
---- @param arg0 int
+--- @param option int
 --- @return void
-function Core:setOptionVoiceRecordDevice(arg0) end
+function Core:setOptionVoiceRecordDevice(option) end
 
 --- @public
---- @param arg0 String
+--- @param option String
 --- @return void
-function Core:setOptionVoiceRecordDeviceName(arg0) end
+function Core:setOptionVoiceRecordDeviceName(option) end
 
 --- @public
---- @param arg0 int
+--- @param option int
 --- @return void
-function Core:setOptionVoiceVADMode(arg0) end
+function Core:setOptionVoiceVADMode(option) end
 
 --- @public
---- @param arg0 int
+--- @param option int
 --- @return void
-function Core:setOptionVoiceVolumeMic(arg0) end
+function Core:setOptionVoiceVolumeMic(option) end
 
 --- @public
---- @param arg0 int
+--- @param option int
 --- @return void
-function Core:setOptionVoiceVolumePlayers(arg0) end
+function Core:setOptionVoiceVolumePlayers(option) end
 
 --- @public
---- @param arg0 boolean
+--- @param zoom boolean
 --- @return void
-function Core:setOptionZoom(arg0) end
+function Core:setOptionZoom(zoom) end
 
 --- @public
---- @param arg0 String
+--- @param levels String
 --- @return void
-function Core:setOptionZoomLevels1x(arg0) end
+function Core:setOptionZoomLevels1x(levels) end
 
 --- @public
---- @param arg0 String
+--- @param levels String
 --- @return void
-function Core:setOptionZoomLevels2x(arg0) end
+function Core:setOptionZoomLevels2x(levels) end
 
 --- @public
---- @param arg0 boolean
+--- @param dbltap boolean
 --- @return void
-function Core:setOptiondblTapJogToSprint(arg0) end
+function Core:setOptiondblTapJogToSprint(dbltap) end
 
 --- @public
---- @param arg0 int
+--- @param val int
 --- @return void
-function Core:setPerfPuddles(arg0) end
+function Core:setPerfPuddles(val) end
 
 --- @public
---- @param arg0 boolean
+--- @param val boolean
 --- @return void
-function Core:setPerfReflections(arg0) end
+function Core:setPerfReflections(val) end
 
 --- @public
---- @param arg0 int
+--- @param val int
 --- @return void
-function Core:setPerfSkybox(arg0) end
+function Core:setPerfSkybox(val) end
 
 --- @public
---- @param arg0 String
+--- @param poisonousBerry String
 --- @return void
-function Core:setPoisonousBerry(arg0) end
+function Core:setPoisonousBerry(poisonousBerry) end
 
 --- @public
---- @param arg0 String
+--- @param poisonousMushroom String
 --- @return void
-function Core:setPoisonousMushroom(arg0) end
+function Core:setPoisonousMushroom(poisonousMushroom) end
 
 --- @public
---- @param arg0 boolean
+--- @param optionRenderPrecipIndoors boolean
 --- @return void
-function Core:setRenderPrecipIndoors(arg0) end
+function Core:setRenderPrecipIndoors(optionRenderPrecipIndoors) end
 
 --- @public
---- @param arg0 String
+--- @param res String
 --- @return void
-function Core:setResolution(arg0) end
+function Core:setResolution(res) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 boolean
+--- @param w int
+--- @param h int
+--- @param fullScreen boolean
 --- @return void
-function Core:setResolutionAndFullScreen(arg0, arg1, arg2) end
+function Core:setResolutionAndFullScreen(w, h, fullScreen) end
 
 --- @public
---- @param arg0 boolean
+--- @param riversideDone boolean
 --- @return void
-function Core:setRiversideDone(arg0) end
+function Core:setRiversideDone(riversideDone) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param width int
+--- @param height int
 --- @return void
-function Core:setScreenSize(arg0, arg1) end
+function Core:setScreenSize(width, height) end
 
 --- @public
---- @param arg0 String
+--- @param seenUpdateText String
 --- @return void
-function Core:setSeenUpdateText(arg0) end
+function Core:setSeenUpdateText(seenUpdateText) end
 
 --- @public
---- @param arg0 boolean
+--- @param showFirstTimeSearchTutorial boolean
 --- @return void
-function Core:setShowFirstTimeSearchTutorial(arg0) end
+function Core:setShowFirstTimeSearchTutorial(showFirstTimeSearchTutorial) end
 
 --- @public
---- @param arg0 boolean
+--- @param showFirstTimeSneakTutorial boolean
 --- @return void
-function Core:setShowFirstTimeSneakTutorial(arg0) end
+function Core:setShowFirstTimeSneakTutorial(showFirstTimeSneakTutorial) end
 
 --- @public
---- @param arg0 boolean
+--- @param showFirstTimeVehicleTutorial boolean
 --- @return void
-function Core:setShowFirstTimeVehicleTutorial(arg0) end
+function Core:setShowFirstTimeVehicleTutorial(showFirstTimeVehicleTutorial) end
 
 --- @public
---- @param arg0 boolean
+--- @param showFirstTimeWeatherTutorial boolean
 --- @return void
-function Core:setShowFirstTimeWeatherTutorial(arg0) end
+function Core:setShowFirstTimeWeatherTutorial(showFirstTimeWeatherTutorial) end
 
 --- @public
---- @param arg0 boolean
+--- @param showPing boolean
 --- @return void
-function Core:setShowPing(arg0) end
+function Core:setShowPing(showPing) end
 
 --- @public
---- @param arg0 boolean
+--- @param showYourUsername boolean
 --- @return void
-function Core:setShowYourUsername(arg0) end
+function Core:setShowYourUsername(showYourUsername) end
 
 --- @public
 --- @param arg0 int
@@ -1723,64 +1723,64 @@ function Core:setShowYourUsername(arg0) end
 function Core:setTermsOfServiceVersion(arg0) end
 
 --- @public
---- @param arg0 boolean
+--- @param testing boolean
 --- @return void
-function Core:setTestingMicrophone(arg0) end
+function Core:setTestingMicrophone(testing) end
 
 --- @public
---- @param arg0 boolean
+--- @param enable boolean
 --- @return void
-function Core:setToggleToAim(arg0) end
+function Core:setToggleToAim(enable) end
 
 --- @public
---- @param arg0 boolean
+--- @param toggleToRun boolean
 --- @return void
-function Core:setToggleToRun(arg0) end
+function Core:setToggleToRun(toggleToRun) end
 
 --- @public
---- @param arg0 boolean
+--- @param toggleToSprint boolean
 --- @return void
-function Core:setToggleToSprint(arg0) end
+function Core:setToggleToSprint(toggleToSprint) end
 
 --- @public
---- @param arg0 boolean
+--- @param done boolean
 --- @return void
-function Core:setTutorialDone(arg0) end
+function Core:setTutorialDone(done) end
 
 --- @public
---- @param arg0 boolean
+--- @param bUse boolean
 --- @return void
-function Core:setUseShaders(arg0) end
+function Core:setUseShaders(bUse) end
 
 --- @public
---- @param arg0 boolean
+--- @param done boolean
 --- @return void
-function Core:setVehiclesWarningShow(arg0) end
+function Core:setVehiclesWarningShow(done) end
 
 --- @public
---- @param arg0 int
+--- @param mem int
 --- @return void
-function Core:setVidMem(arg0) end
+function Core:setVidMem(mem) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Core:setWindowed(arg0) end
+function Core:setWindowed(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param zombieGroupSound boolean
 --- @return void
-function Core:setZombieGroupSound(arg0) end
+function Core:setZombieGroupSound(zombieGroupSound) end
 
 --- @public
 --- @return void
 function Core:shadersOptionChanged() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param width int
+--- @param height int
 --- @return boolean
-function Core:supportRes(arg0, arg1) end
+function Core:supportRes(width, height) end
 
 --- @public
 --- @return boolean
@@ -1795,9 +1795,9 @@ function Core:updateKeyboard() end
 function Core:zoomLevelsChanged() end
 
 --- @public
---- @param arg0 boolean
+--- @param inGame boolean
 --- @return void
-function Core:zoomOptionChanged(arg0) end
+function Core:zoomOptionChanged(inGame) end
 
 
 ------------------------------------

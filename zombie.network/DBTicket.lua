@@ -1,6 +1,6 @@
 --- @meta
 
---- @class DBTicket: Object
+--- @class DBTicket
 DBTicket = {};
 
 ------------------------------------
@@ -32,34 +32,34 @@ function DBTicket:isAnswer() end
 function DBTicket:isViewed() end
 
 --- @public
---- @param arg0 DBTicket
+--- @param answer DBTicket
 --- @return void
-function DBTicket:setAnswer(arg0) end
+function DBTicket:setAnswer(answer) end
 
 --- @public
---- @param arg0 String
+--- @param author String
 --- @return void
-function DBTicket:setAuthor(arg0) end
+function DBTicket:setAuthor(author) end
 
 --- @public
---- @param arg0 boolean
+--- @param isAnswer boolean
 --- @return void
-function DBTicket:setIsAnswer(arg0) end
+function DBTicket:setIsAnswer(isAnswer) end
 
 --- @public
---- @param arg0 String
+--- @param message String
 --- @return void
-function DBTicket:setMessage(arg0) end
+function DBTicket:setMessage(message) end
 
 --- @public
---- @param arg0 int
+--- @param ticketID int
 --- @return void
-function DBTicket:setTicketID(arg0) end
+function DBTicket:setTicketID(ticketID) end
 
 --- @public
---- @param arg0 boolean
+--- @param viewed boolean
 --- @return void
-function DBTicket:setViewed(arg0) end
+function DBTicket:setViewed(viewed) end
 
 
 ------------------------------------
@@ -67,8 +67,8 @@ function DBTicket:setViewed(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
+--- @param author String
+--- @param message String
+--- @param ticketID int
 --- @return DBTicket
-function DBTicket.new(arg0, arg1, arg2) end
+function DBTicket.new(author, message, ticketID) end

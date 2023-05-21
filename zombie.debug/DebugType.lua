@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DebugType: Enum
+--- Created by LEMMYPC on 31/12/13.
 --- @field public ActionSystem DebugType
 --- @field public Animation DebugType
 --- @field public Asset DebugType
@@ -41,9 +42,9 @@ DebugType = {};
 
 --- @public
 --- @static
---- @param arg0 DebugType
+--- @param type DebugType
 --- @return boolean
-function DebugType.Do(arg0) end
+function DebugType.Do(type) end
 
 --- @public
 --- @static

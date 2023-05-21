@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Radio: Moveable
+--- Turbo
 --- @implement Talker
 --- @implement IUpdater
 --- @implement WaveSignalDevice
@@ -11,16 +12,16 @@ Radio = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 String
---- @param arg5 String
---- @param arg6 int
+--- @param line String
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param guid String
+--- @param codes String
+--- @param distance int
 --- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int)
-function Radio:AddDeviceText(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(player: IsoPlayer, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int)
+function Radio:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
@@ -31,19 +32,19 @@ function Radio:HasPlayerInRange() end
 function Radio:IsSpeaking() end
 
 --- @public
---- @param arg0 String
+--- @param sprite String
 --- @return boolean
-function Radio:ReadFromWorldSprite(arg0) end
+function Radio:ReadFromWorldSprite(sprite) end
 
 --- @public
---- @param arg0 String
+--- @param line String
 --- @return void
-function Radio:Say(arg0) end
+function Radio:Say(line) end
 
 --- @public
---- @param arg0 int
+--- @param distance int
 --- @return void
-function Radio:doReceiveSignal(arg0) end
+function Radio:doReceiveSignal(distance) end
 
 --- @public
 --- @return float
@@ -86,10 +87,10 @@ function Radio:getY() end
 function Radio:getZ() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Radio:load(arg0, arg1) end
+function Radio:load(input, WorldVersion) end
 
 --- @public
 --- @return void
@@ -100,20 +101,20 @@ function Radio:render() end
 function Radio:renderlast() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function Radio:save(arg0, arg1) end
+function Radio:save(output, net) end
 
 --- @public
---- @param arg0 float
+--- @param delta float
 --- @return void
-function Radio:setDelta(arg0) end
+function Radio:setDelta(delta) end
 
 --- @public
---- @param arg0 DeviceData
+--- @param data DeviceData
 --- @return void
-function Radio:setDeviceData(arg0) end
+function Radio:setDeviceData(data) end
 
 --- @public
 --- @return void
@@ -125,9 +126,9 @@ function Radio:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param texName String
 --- @return Radio
-function Radio.new(arg0, arg1, arg2, arg3) end
+function Radio.new(module, name, itemType, texName) end

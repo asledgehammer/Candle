@@ -1,6 +1,7 @@
 --- @meta
 
---- @class Color: Object
+--- @class Color
+--- A simple wrapper round the values required for a colour
 --- @implement Serializable
 --- @field public black Color
 --- @field public blue Color
@@ -27,92 +28,92 @@ Color = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param hue float
+--- @param saturation float
+--- @param brightness float
 --- @return Color
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Color)
-function Color.HSBtoRGB(arg0, arg1, arg2) end
+--- @overload fun(hue: float, saturation: float, brightness: float, result: Color)
+function Color.HSBtoRGB(hue, saturation, brightness) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 Color
+--- @param valueABGR int
+--- @param out_result Color
 --- @return Color
-function Color.abgrToColor(arg0, arg1) end
+function Color.abgrToColor(valueABGR, out_result) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param valueABGR int
+--- @param targetABGR int
 --- @return int
-function Color.blendABGR(arg0, arg1) end
+function Color.blendABGR(valueABGR, targetABGR) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param valueABGR int
+--- @param targetABGR int
 --- @return int
-function Color.blendBGR(arg0, arg1) end
+function Color.blendBGR(valueABGR, targetABGR) end
 
 --- @public
 --- @static
---- @param arg0 Color
+--- @param val Color
 --- @return int
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
-function Color.colorToABGR(arg0) end
+--- @overload fun(r: float, g: float, b: float, a: float)
+function Color.colorToABGR(val) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param nm String
 --- @return Color
-function Color.decode(arg0) end
+function Color.decode(nm) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param valueABGR int
 --- @return float
-function Color.getAlphaChannelFromABGR(arg0) end
+function Color.getAlphaChannelFromABGR(valueABGR) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param valueABGR int
 --- @return float
-function Color.getBlueChannelFromABGR(arg0) end
+function Color.getBlueChannelFromABGR(valueABGR) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param valueABGR int
 --- @return float
-function Color.getGreenChannelFromABGR(arg0) end
+function Color.getGreenChannelFromABGR(valueABGR) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param valueABGR int
 --- @return float
-function Color.getRedChannelFromABGR(arg0) end
+function Color.getRedChannelFromABGR(valueABGR) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
---- @param arg2 float
+--- @param colA int
+--- @param colB int
+--- @param alpha float
 --- @return int
-function Color.lerpABGR(arg0, arg1, arg2) end
+function Color.lerpABGR(colA, colB, alpha) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param valueABGR int
+--- @param multiplierABGR int
 --- @return int
-function Color.multiplyABGR(arg0, arg1) end
+function Color.multiplyABGR(valueABGR, multiplierABGR) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param valueABGR int
+--- @param multiplierABGR int
 --- @return int
-function Color.multiplyBGR(arg0, arg1) end
+function Color.multiplyBGR(valueABGR, multiplierABGR) end
 
 --- @public
 --- @static
@@ -121,38 +122,38 @@ function Color.random() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 float
+--- @param valueABGR int
+--- @param a float
 --- @return int
-function Color.setAlphaChannelToABGR(arg0, arg1) end
+function Color.setAlphaChannelToABGR(valueABGR, a) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 float
+--- @param valueABGR int
+--- @param b float
 --- @return int
-function Color.setBlueChannelToABGR(arg0, arg1) end
+function Color.setBlueChannelToABGR(valueABGR, b) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 float
+--- @param valueABGR int
+--- @param g float
 --- @return int
-function Color.setGreenChannelToABGR(arg0, arg1) end
+function Color.setGreenChannelToABGR(valueABGR, g) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 float
+--- @param valueABGR int
+--- @param r float
 --- @return int
-function Color.setRedChannelToABGR(arg0, arg1) end
+function Color.setRedChannelToABGR(valueABGR, r) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param targetABGR int
+--- @param tintABGR int
 --- @return int
-function Color.tintABGR(arg0, arg1) end
+function Color.tintABGR(targetABGR, tintABGR) end
 
 
 ------------------------------------
@@ -160,41 +161,41 @@ function Color.tintABGR(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 Color
+--- @param c Color
 --- @return void
-function Color:add(arg0) end
+function Color:add(c) end
 
 --- @public
---- @param arg0 Color
+--- @param c Color
 --- @return Color
-function Color:addToCopy(arg0) end
+function Color:addToCopy(c) end
 
 --- @public
 --- @return Color
---- @overload fun(arg0: float)
+--- @overload fun(scale: float)
 function Color:brighter() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param hFactor float
+--- @param sFactor float
+--- @param bFactor float
 --- @return void
-function Color:changeHSBValue(arg0, arg1, arg2) end
+function Color:changeHSBValue(hFactor, sFactor, bFactor) end
 
 --- @public
 --- @return Color
---- @overload fun(arg0: float)
+--- @overload fun(scale: float)
 function Color:darker() end
 
 --- @public
---- @param arg0 Object
+--- @param other Object
 --- @return boolean
-function Color:equals(arg0) end
+function Color:equals(other) end
 
 --- @public
---- @param arg0 int
+--- @param valueABGR int
 --- @return void
-function Color:fromColor(arg0) end
+function Color:fromColor(valueABGR) end
 
 --- @public
 --- @return int
@@ -261,45 +262,45 @@ function Color:getRedFloat() end
 function Color:hashCode() end
 
 --- @public
---- @param arg0 Color
---- @param arg1 float
---- @param arg2 Color
+--- @param to Color
+--- @param delta float
+--- @param dest Color
 --- @return void
-function Color:interp(arg0, arg1, arg2) end
+function Color:interp(to, delta, dest) end
 
 --- @public
---- @param arg0 Color
+--- @param c Color
 --- @return Color
-function Color:multiply(arg0) end
+function Color:multiply(c) end
 
 --- @public
---- @param arg0 float
+--- @param value float
 --- @return Color
-function Color:scale(arg0) end
+function Color:scale(value) end
 
 --- @public
---- @param arg0 float
+--- @param value float
 --- @return Color
-function Color:scaleCopy(arg0) end
+function Color:scaleCopy(value) end
 
 --- @public
---- @param arg0 Color
+--- @param other Color
 --- @return Color
---- @overload fun(arg0: float, arg1: float, arg2: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
-function Color:set(arg0) end
+--- @overload fun(r: float, g: float, b: float)
+--- @overload fun(r: float, g: float, b: float, a: float)
+function Color:set(other) end
 
 --- @public
---- @param arg0 int
+--- @param valueABGR int
 --- @return void
-function Color:setABGR(arg0) end
+function Color:setABGR(valueABGR) end
 
 --- @public
---- @param arg0 Color
---- @param arg1 Color
---- @param arg2 float
+--- @param A Color
+--- @param B Color
+--- @param delta float
 --- @return void
-function Color:setColor(arg0, arg1, arg2) end
+function Color:setColor(A, B, delta) end
 
 --- @public
 --- @return String
@@ -312,7 +313,7 @@ function Color:toString() end
 
 --- @public
 --- @return Color
---- @overload fun(arg0: Color)
---- @overload fun(arg0: float, arg1: float, arg2: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
+--- @overload fun(color: Color)
+--- @overload fun(r: float, g: float, b: float)
+--- @overload fun(r: float, g: float, b: float, a: float)
 function Color.new() end

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FishingState: State
+--- TurboTuTone.
 FishingState = {};
 
 ------------------------------------
@@ -18,25 +19,25 @@ function FishingState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function FishingState:animEvent(arg0, arg1) end
+function FishingState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function FishingState:enter(arg0) end
+function FishingState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function FishingState:execute(arg0) end
+function FishingState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function FishingState:exit(arg0) end
+function FishingState:exit(owner) end
 
 
 ------------------------------------

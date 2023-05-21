@@ -10,36 +10,36 @@ IsoMannequin = {};
 
 --- @public
 --- @static
---- @param arg0 Moveable
---- @param arg1 int
+--- @param item Moveable
+--- @param playerIndex int
 --- @return IsoDirections
-function IsoMannequin.getDirectionFromItem(arg0, arg1) end
+function IsoMannequin.getDirectionFromItem(item, playerIndex) end
 
 --- @public
 --- @static
---- @param arg0 IsoSprite
+--- @param sprite IsoSprite
 --- @return boolean
-function IsoMannequin.isMannequinSprite(arg0) end
+function IsoMannequin.isMannequinSprite(sprite) end
 
 --- @public
 --- @static
---- @param arg0 Moveable
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 IsoDirections
+--- @param item Moveable
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param dir IsoDirections
 --- @return void
-function IsoMannequin.renderMoveableItem(arg0, arg1, arg2, arg3, arg4) end
+function IsoMannequin.renderMoveableItem(item, x, y, z, dir) end
 
 --- @public
 --- @static
---- @param arg0 IsoMannequin
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 IsoDirections
+--- @param mannequin IsoMannequin
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param dir IsoDirections
 --- @return void
-function IsoMannequin.renderMoveableObject(arg0, arg1, arg2, arg3, arg4) end
+function IsoMannequin.renderMoveableObject(mannequin, x, y, z, dir) end
 
 
 ------------------------------------
@@ -51,9 +51,9 @@ function IsoMannequin.renderMoveableObject(arg0, arg1, arg2, arg3, arg4) end
 function IsoMannequin:addToWorld() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param removedItem InventoryItem
 --- @return void
-function IsoMannequin:checkClothing(arg0) end
+function IsoMannequin:checkClothing(removedItem) end
 
 --- @public
 --- @return String
@@ -64,18 +64,18 @@ function IsoMannequin:getAnimSetName() end
 function IsoMannequin:getAnimStateName() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function IsoMannequin:getCustomSettingsFromItem(arg0) end
+function IsoMannequin:getCustomSettingsFromItem(item) end
 
 --- @public
 --- @return HumanVisual
 function IsoMannequin:getHumanVisual() end
 
 --- @public
---- @param arg0 ItemVisuals
+--- @param itemVisuals ItemVisuals
 --- @return void
-function IsoMannequin:getItemVisuals(arg0) end
+function IsoMannequin:getItemVisuals(itemVisuals) end
 
 --- @public
 --- @return String
@@ -90,19 +90,19 @@ function IsoMannequin:getObjectName() end
 function IsoMannequin:getPose() end
 
 --- @public
---- @param arg0 Map
+--- @param vars Map
 --- @return void
-function IsoMannequin:getVariables(arg0) end
+function IsoMannequin:getVariables(vars) end
 
 --- @public
 --- @return boolean
 function IsoMannequin:isFemale() end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoMannequin:isItemAllowedInContainer(arg0, arg1) end
+function IsoMannequin:isItemAllowedInContainer(container, item) end
 
 --- @public
 --- @return boolean
@@ -113,52 +113,52 @@ function IsoMannequin:isSkeleton() end
 function IsoMannequin:isZombie() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoMannequin:load(arg0, arg1, arg2) end
+function IsoMannequin:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ByteBuffer
+--- @param change String
+--- @param bb ByteBuffer
 --- @return void
-function IsoMannequin:loadChange(arg0, arg1) end
+function IsoMannequin:loadChange(change, bb) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return void
-function IsoMannequin:loadState(arg0) end
+function IsoMannequin:loadState(input) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param col ColorInfo
+--- @param bDoChild boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return void
-function IsoMannequin:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoMannequin:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 boolean
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param bDoAttached boolean
 --- @return void
-function IsoMannequin:renderFxMask(arg0, arg1, arg2, arg3) end
+function IsoMannequin:renderFxMask(x, y, z, bDoAttached) end
 
 --- @public
---- @param arg0 IsoDirections
+--- @param newDir IsoDirections
 --- @return void
-function IsoMannequin:rotate(arg0) end
+function IsoMannequin:rotate(newDir) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoMannequin:save(arg0, arg1) end
+function IsoMannequin:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 String
@@ -168,30 +168,30 @@ function IsoMannequin:save(arg0, arg1) end
 function IsoMannequin:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function IsoMannequin:saveState(arg0) end
+function IsoMannequin:saveState(output) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function IsoMannequin:setCustomSettingsToItem(arg0) end
+function IsoMannequin:setCustomSettingsToItem(item) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function IsoMannequin:setMannequinScriptName(arg0) end
+function IsoMannequin:setMannequinScriptName(name) end
 
 --- @public
---- @param arg0 IsoDirections
+--- @param newDir IsoDirections
 --- @return void
-function IsoMannequin:setRenderDirection(arg0) end
+function IsoMannequin:setRenderDirection(newDir) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 IsoGameCharacter
+--- @param item InventoryItem
+--- @param chr IsoGameCharacter
 --- @return void
-function IsoMannequin:wearItem(arg0, arg1) end
+function IsoMannequin:wearItem(item, chr) end
 
 
 ------------------------------------
@@ -199,7 +199,7 @@ function IsoMannequin:wearItem(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoMannequin
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
-function IsoMannequin.new(arg0) end
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, sprite: IsoSprite)
+function IsoMannequin.new(cell) end

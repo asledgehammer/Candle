@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoLot: Object
+--- @class IsoLot
 --- @field public InfoFileNames HashMap
 --- @field public InfoHeaderNames ArrayList
 --- @field public InfoHeaders HashMap
@@ -18,37 +18,37 @@ function IsoLot.Dispose() end
 
 --- @public
 --- @static
---- @param arg0 Integer
---- @param arg1 Integer
---- @param arg2 Integer
---- @param arg3 Integer
---- @param arg4 IsoChunk
+--- @param cX Integer
+--- @param cY Integer
+--- @param wX Integer
+--- @param wY Integer
+--- @param ch IsoChunk
 --- @return IsoLot
-function IsoLot.get(arg0, arg1, arg2, arg3, arg4) end
+function IsoLot.get(cX, cY, wX, wY, ch) end
 
 --- @public
 --- @static
---- @param arg0 IsoLot
+--- @param lot IsoLot
 --- @return void
-function IsoLot.put(arg0) end
+function IsoLot.put(lot) end
 
 --- @public
 --- @static
---- @param arg0 RandomAccessFile
+--- @param __in RandomAccessFile
 --- @return int
-function IsoLot.readInt(arg0) end
+function IsoLot.readInt(__in) end
 
 --- @public
 --- @static
---- @param arg0 RandomAccessFile
+--- @param __in RandomAccessFile
 --- @return int
-function IsoLot.readShort(arg0) end
+function IsoLot.readShort(__in) end
 
 --- @public
 --- @static
---- @param arg0 BufferedRandomAccessFile
+--- @param __in BufferedRandomAccessFile
 --- @return String
-function IsoLot.readString(arg0) end
+function IsoLot.readString(__in) end
 
 
 ------------------------------------
@@ -56,13 +56,13 @@ function IsoLot.readString(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 Integer
---- @param arg1 Integer
---- @param arg2 Integer
---- @param arg3 Integer
---- @param arg4 IsoChunk
+--- @param cX Integer
+--- @param cY Integer
+--- @param wX Integer
+--- @param wY Integer
+--- @param ch IsoChunk
 --- @return void
-function IsoLot:load(arg0, arg1, arg2, arg3, arg4) end
+function IsoLot:load(cX, cY, wX, wY, ch) end
 
 
 ------------------------------------

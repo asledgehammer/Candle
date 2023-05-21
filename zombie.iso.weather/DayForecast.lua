@@ -1,6 +1,6 @@
 --- @meta
 
---- @class DayForecast: Object
+--- @class DayForecast
 DayForecast = {};
 
 ------------------------------------

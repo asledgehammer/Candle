@@ -1,6 +1,6 @@
 --- @meta
 
---- @class VirtualZombieManager: Object
+--- @class VirtualZombieManager
 --- @field public instance VirtualZombieManager
 VirtualZombieManager = {};
 
@@ -9,116 +9,116 @@ VirtualZombieManager = {};
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 IsoChunk
+--- @param nSize int
+--- @param chk IsoChunk
 --- @return void
-function VirtualZombieManager:AddBloodToMap(arg0, arg1) end
+function VirtualZombieManager:AddBloodToMap(nSize, chk) end
 
 --- @public
---- @param arg0 IsoZombie
+--- @param obj IsoZombie
 --- @return void
-function VirtualZombieManager:RemoveZombie(arg0) end
+function VirtualZombieManager:RemoveZombie(obj) end
 
 --- @public
 --- @return void
 function VirtualZombieManager:Reset() end
 
 --- @public
---- @param arg0 int
---- @param arg1 RoomDef
+--- @param nSize int
+--- @param room RoomDef
 --- @return void
-function VirtualZombieManager:addDeadZombiesToMap(arg0, arg1) end
+function VirtualZombieManager:addDeadZombiesToMap(nSize, room) end
 
 --- @public
---- @param arg0 IsoChunk
---- @param arg1 IsoRoom
+--- @param chunk IsoChunk
+--- @param room IsoRoom
 --- @return void
---- @overload fun(arg0: IsoChunk, arg1: IsoRoom, arg2: int, arg3: ArrayList)
-function VirtualZombieManager:addIndoorZombiesToChunk(arg0, arg1) end
+--- @overload fun(chunk: IsoChunk, room: IsoRoom, zombieCountForRoom: int, zombies: ArrayList)
+function VirtualZombieManager:addIndoorZombiesToChunk(chunk, room) end
 
 --- @public
---- @param arg0 IsoZombie
+--- @param z IsoZombie
 --- @return void
-function VirtualZombieManager:addToReusable(arg0) end
+function VirtualZombieManager:addToReusable(z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 RoomDef
+--- @param nSize int
+--- @param room RoomDef
 --- @return ArrayList
---- @overload fun(arg0: int, arg1: RoomDef, arg2: boolean)
-function VirtualZombieManager:addZombiesToMap(arg0, arg1) end
+--- @overload fun(nSize: int, room: RoomDef, bAllowDead: boolean)
+function VirtualZombieManager:addZombiesToMap(nSize, room) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return boolean
-function VirtualZombieManager:canSpawnAt(arg0, arg1, arg2) end
+function VirtualZombieManager:canSpawnAt(x, y, z) end
 
 --- @public
---- @param arg0 IsoDeadBody
---- @param arg1 int
+--- @param target IsoDeadBody
+--- @param nb int
 --- @return void
-function VirtualZombieManager:createEatingZombies(arg0, arg1) end
+function VirtualZombieManager:createEatingZombies(target, nb) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 int
+--- @param spawnX float
+--- @param spawnY float
+--- @param targetX float
+--- @param targetY float
+--- @param count int
 --- @return void
-function VirtualZombieManager:createHordeFromTo(arg0, arg1, arg2, arg3, arg4) end
+function VirtualZombieManager:createHordeFromTo(spawnX, spawnY, targetX, targetY, count) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return IsoZombie
-function VirtualZombieManager:createRealZombie(arg0, arg1, arg2) end
+function VirtualZombieManager:createRealZombie(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
+--- @param ZombieDir int
+--- @param bDead boolean
 --- @return IsoZombie
---- @overload fun(arg0: int, arg1: int, arg2: boolean)
-function VirtualZombieManager:createRealZombieAlways(arg0, arg1) end
+--- @overload fun(ZombieDir: int, bDead: boolean, outfitID: int)
+function VirtualZombieManager:createRealZombieAlways(ZombieDir, bDead) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return IsoZombie
-function VirtualZombieManager:createRealZombieNow(arg0, arg1, arg2) end
+function VirtualZombieManager:createRealZombieNow(x, y, z) end
 
 --- @public
 --- @return void
 function VirtualZombieManager:init() end
 
 --- @public
---- @param arg0 IsoZombie
+--- @param z IsoZombie
 --- @return boolean
-function VirtualZombieManager:isReused(arg0) end
+function VirtualZombieManager:isReused(z) end
 
 --- @public
---- @param arg0 IsoZombie
+--- @param z IsoZombie
 --- @return boolean
-function VirtualZombieManager:removeZombieFromWorld(arg0) end
+function VirtualZombieManager:removeZombieFromWorld(z) end
 
 --- @public
 --- @return int
 function VirtualZombieManager:reusableZombiesSize() end
 
 --- @public
---- @param arg0 IsoRoom
+--- @param room IsoRoom
 --- @return void
-function VirtualZombieManager:roomSpotted(arg0) end
+function VirtualZombieManager:roomSpotted(room) end
 
 --- @public
---- @param arg0 RoomDef
---- @param arg1 boolean
+--- @param room RoomDef
+--- @param bAllowDead boolean
 --- @return void
-function VirtualZombieManager:tryAddIndoorZombies(arg0, arg1) end
+function VirtualZombieManager:tryAddIndoorZombies(room, bAllowDead) end
 
 --- @public
 --- @return void

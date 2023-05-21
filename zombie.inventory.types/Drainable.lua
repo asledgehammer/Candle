@@ -12,8 +12,8 @@ Drainable = {};
 function Drainable:getUsedDelta() end
 
 --- @public
---- @param arg0 float
+--- @param usedDelta float
 --- @return void
-function Drainable:setUsedDelta(arg0) end
+function Drainable:setUsedDelta(usedDelta) end
 
 

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class VehicleLight: Object
+--- @class VehicleLight
 VehicleLight = {};
 
 ------------------------------------
@@ -32,20 +32,20 @@ function VehicleLight:getFocusing() end
 function VehicleLight:getIntensity() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function VehicleLight:load(arg0, arg1) end
+function VehicleLight:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function VehicleLight:save(arg0) end
+function VehicleLight:save(output) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return void
-function VehicleLight:setActive(arg0) end
+function VehicleLight:setActive(active) end
 
 --- @public
 --- @return void

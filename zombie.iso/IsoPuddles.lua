@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoPuddles: Object
+--- @class IsoPuddles
 --- @field public BOOL_MAX int
 --- @field public FLOAT_MAX int
 --- @field public FLOAT_MUDDYPUDDLES int
@@ -43,14 +43,14 @@ function IsoPuddles:getFloatMax() end
 function IsoPuddles:getHMTexture() end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return PuddlesFloat
-function IsoPuddles:getPuddlesFloat(arg0) end
+function IsoPuddles:getPuddlesFloat(id) end
 
 --- @public
---- @param arg0 int
+--- @param z int
 --- @return FloatBuffer
-function IsoPuddles:getPuddlesParams(arg0) end
+function IsoPuddles:getPuddlesParams(z) end
 
 --- @public
 --- @return float
@@ -77,24 +77,24 @@ function IsoPuddles:getShaderOffsetMain() end
 function IsoPuddles:getShaderTime() end
 
 --- @public
---- @param arg0 int
+--- @param z int
 --- @return void
-function IsoPuddles:puddlesGeometry(arg0) end
+function IsoPuddles:puddlesGeometry(z) end
 
 --- @public
 --- @return void
 function IsoPuddles:puddlesProjection() end
 
 --- @public
---- @param arg0 ArrayList
---- @param arg1 int
+--- @param grid ArrayList
+--- @param z int
 --- @return void
-function IsoPuddles:render(arg0, arg1) end
+function IsoPuddles:render(grid, z) end
 
 --- @public
---- @param arg0 ClimateManager
+--- @param cm ClimateManager
 --- @return void
-function IsoPuddles:update(arg0) end
+function IsoPuddles:update(cm) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class WornItem: Object
+--- @class WornItem
 WornItem = {};
 
 ------------------------------------
@@ -21,7 +21,7 @@ function WornItem:getLocation() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 InventoryItem
+--- @param location String
+--- @param item InventoryItem
 --- @return WornItem
-function WornItem.new(arg0, arg1) end
+function WornItem.new(location, item) end

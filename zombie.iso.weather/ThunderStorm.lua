@@ -1,6 +1,7 @@
 --- @meta
 
---- @class ThunderStorm: Object
+--- @class ThunderStorm
+--- TurboTuTone.
 --- @field public MAP_MAX_X int
 --- @field public MAP_MAX_Y int
 --- @field public MAP_MIN_X int
@@ -33,13 +34,13 @@ function ThunderStorm:HasActiveThunderClouds() end
 function ThunderStorm:applyLightningForPlayer(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
+--- @param x int
+--- @param y int
+--- @param doStrike boolean
+--- @param doLightning boolean
+--- @param doRumble boolean
 --- @return void
-function ThunderStorm:enqueueThunderEvent(arg0, arg1, arg2, arg3, arg4) end
+function ThunderStorm:enqueueThunderEvent(x, y, doStrike, doLightning, doRumble) end
 
 --- @public
 --- @return ArrayList
@@ -50,64 +51,64 @@ function ThunderStorm:getClouds() end
 function ThunderStorm:isModifyingNight() end
 
 --- @public
---- @param arg0 DataInputStream
+--- @param input DataInputStream
 --- @return void
-function ThunderStorm:load(arg0) end
+function ThunderStorm:load(input) end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return void
-function ThunderStorm:noise(arg0) end
+function ThunderStorm:noise(s) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return void
-function ThunderStorm:readNetThunderEvent(arg0) end
+function ThunderStorm:readNetThunderEvent(input) end
 
 --- @public
---- @param arg0 DataOutputStream
+--- @param output DataOutputStream
 --- @return void
-function ThunderStorm:save(arg0) end
+function ThunderStorm:save(output) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 double
---- @param arg6 boolean
+--- @param str float
+--- @param angle float
+--- @param radius float
+--- @param eventFreq float
+--- @param thunderRatio float
+--- @param duration double
+--- @param targetRandomPlayer boolean
 --- @return void
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: double, arg6: boolean, arg7: float)
-function ThunderStorm:startThunderCloud(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+--- @overload fun(str: float, angle: float, radius: float, eventFreq: float, thunderRatio: float, duration: double, targetRandomPlayer: boolean, percentageOffset: float)
+function ThunderStorm:startThunderCloud(str, angle, radius, eventFreq, thunderRatio, duration, targetRandomPlayer) end
 
 --- @public
 --- @return void
 function ThunderStorm:stopAllClouds() end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return void
-function ThunderStorm:stopCloud(arg0) end
+function ThunderStorm:stopCloud(id) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 boolean
---- @param arg3 boolean
---- @param arg4 boolean
+--- @param x int
+--- @param y int
+--- @param doStrike boolean
+--- @param doLightning boolean
+--- @param doRumble boolean
 --- @return void
-function ThunderStorm:triggerThunderEvent(arg0, arg1, arg2, arg3, arg4) end
+function ThunderStorm:triggerThunderEvent(x, y, doStrike, doLightning, doRumble) end
 
 --- @public
---- @param arg0 double
+--- @param currentTime double
 --- @return void
-function ThunderStorm:update(arg0) end
+function ThunderStorm:update(currentTime) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function ThunderStorm:writeNetThunderEvent(arg0) end
+function ThunderStorm:writeNetThunderEvent(output) end
 
 
 ------------------------------------
@@ -115,6 +116,6 @@ function ThunderStorm:writeNetThunderEvent(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 ClimateManager
+--- @param climmgr ClimateManager
 --- @return ThunderStorm
-function ThunderStorm.new(arg0) end
+function ThunderStorm.new(climmgr) end

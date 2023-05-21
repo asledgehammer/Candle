@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Perk: Object
+--- @class Perk
 Perk = {};
 
 ------------------------------------
@@ -20,9 +20,9 @@ function Perk:getName() end
 function Perk:getParent() end
 
 --- @public
---- @param arg0 int
+--- @param level int
 --- @return float
-function Perk:getTotalXpForLevel(arg0) end
+function Perk:getTotalXpForLevel(level) end
 
 --- @public
 --- @return Perk
@@ -69,9 +69,9 @@ function Perk:getXp8() end
 function Perk:getXp9() end
 
 --- @public
---- @param arg0 int
+--- @param level int
 --- @return float
-function Perk:getXpForLevel(arg0) end
+function Perk:getXpForLevel(level) end
 
 --- @public
 --- @return int
@@ -99,7 +99,7 @@ function Perk:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return Perk
 --- @overload fun(arg0: String, arg1: Perk)
-function Perk.new(arg0) end
+function Perk.new(id) end

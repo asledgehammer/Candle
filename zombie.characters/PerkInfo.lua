@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PerkInfo: Object
+--- @class PerkInfo
 PerkInfo = {};
 
 ------------------------------------

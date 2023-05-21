@@ -9,9 +9,9 @@ Food = {};
 ------------------------------------
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function Food:CanStack(arg0) end
+function Food:CanStack(item) end
 
 --- @public
 --- @param arg0 ObjectTooltip
@@ -188,9 +188,9 @@ function Food:getRottenTime() end
 function Food:getSaveType() end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return float
-function Food:getScore(arg0) end
+function Food:getScore(desc) end
 
 --- @public
 --- @return ArrayList
@@ -297,235 +297,235 @@ function Food:isThawing() end
 function Food:isbDangerousUncooked() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Food:load(arg0, arg1) end
+function Food:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 float
+--- @param percentage float
 --- @return void
-function Food:multiplyFoodValues(arg0) end
+function Food:multiplyFoodValues(percentage) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function Food:save(arg0, arg1) end
+function Food:save(output, net) end
 
 --- @public
 --- @return void
 function Food:setAutoAge() end
 
 --- @public
---- @param arg0 boolean
+--- @param bBadCold boolean
 --- @return void
-function Food:setBadCold(arg0) end
+function Food:setBadCold(bBadCold) end
 
 --- @public
---- @param arg0 boolean
+--- @param badInMicrowave boolean
 --- @return void
-function Food:setBadInMicrowave(arg0) end
+function Food:setBadInMicrowave(badInMicrowave) end
 
 --- @public
---- @param arg0 float
+--- @param baseHunger float
 --- @return void
-function Food:setBaseHunger(arg0) end
+function Food:setBaseHunger(baseHunger) end
 
 --- @public
---- @param arg0 float
+--- @param calories float
 --- @return void
-function Food:setCalories(arg0) end
+function Food:setCalories(calories) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBeFrozen boolean
 --- @return void
-function Food:setCanBeFrozen(arg0) end
+function Food:setCanBeFrozen(canBeFrozen) end
 
 --- @public
---- @param arg0 float
+--- @param carbohydrates float
 --- @return void
-function Food:setCarbohydrates(arg0) end
+function Food:setCarbohydrates(carbohydrates) end
 
 --- @public
---- @param arg0 String
+--- @param chef String
 --- @return void
-function Food:setChef(arg0) end
+function Food:setChef(chef) end
 
 --- @public
---- @param arg0 float
+--- @param compostTime float
 --- @return void
-function Food:setCompostTime(arg0) end
+function Food:setCompostTime(compostTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function Food:setCookedInMicrowave(arg0) end
+function Food:setCookedInMicrowave(b) end
 
 --- @public
---- @param arg0 String
+--- @param customEatSound String
 --- @return void
-function Food:setCustomEatSound(arg0) end
+function Food:setCustomEatSound(customEatSound) end
 
 --- @public
---- @param arg0 float
+--- @param endChange float
 --- @return void
-function Food:setEndChange(arg0) end
+function Food:setEndChange(endChange) end
 
 --- @public
---- @param arg0 float
+--- @param endChange float
 --- @return void
-function Food:setEnduranceChange(arg0) end
+function Food:setEnduranceChange(endChange) end
 
 --- @public
---- @param arg0 int
+--- @param fluReduction int
 --- @return void
-function Food:setFluReduction(arg0) end
+function Food:setFluReduction(fluReduction) end
 
 --- @public
---- @param arg0 String
+--- @param foodType String
 --- @return void
-function Food:setFoodType(arg0) end
+function Food:setFoodType(foodType) end
 
 --- @public
---- @param arg0 float
+--- @param freezingTime float
 --- @return void
-function Food:setFreezingTime(arg0) end
+function Food:setFreezingTime(freezingTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param frozen boolean
 --- @return void
-function Food:setFrozen(arg0) end
+function Food:setFrozen(frozen) end
 
 --- @public
---- @param arg0 boolean
+--- @param bGoodHot boolean
 --- @return void
-function Food:setGoodHot(arg0) end
+function Food:setGoodHot(bGoodHot) end
 
 --- @public
---- @param arg0 float
+--- @param Heat float
 --- @return void
-function Food:setHeat(arg0) end
+function Food:setHeat(Heat) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function Food:setHerbalistType(arg0) end
+function Food:setHerbalistType(type) end
 
 --- @public
---- @param arg0 float
+--- @param hungChange float
 --- @return void
-function Food:setHungChange(arg0) end
+function Food:setHungChange(hungChange) end
 
 --- @public
---- @param arg0 int
+--- @param LastCookMinute int
 --- @return void
-function Food:setLastCookMinute(arg0) end
+function Food:setLastCookMinute(LastCookMinute) end
 
 --- @public
---- @param arg0 float
+--- @param lipids float
 --- @return void
-function Food:setLipids(arg0) end
+function Food:setLipids(lipids) end
 
 --- @public
---- @param arg0 String
+--- @param onCooked String
 --- @return void
-function Food:setOnCooked(arg0) end
+function Food:setOnCooked(onCooked) end
 
 --- @public
---- @param arg0 String
+--- @param onEat String
 --- @return void
-function Food:setOnEat(arg0) end
+function Food:setOnEat(onEat) end
 
 --- @public
---- @param arg0 boolean
+--- @param packaged boolean
 --- @return void
-function Food:setPackaged(arg0) end
+function Food:setPackaged(packaged) end
 
 --- @public
---- @param arg0 float
+--- @param painReduction float
 --- @return void
-function Food:setPainReduction(arg0) end
+function Food:setPainReduction(painReduction) end
 
 --- @public
---- @param arg0 int
+--- @param poisonDetectionLevel int
 --- @return void
-function Food:setPoisonDetectionLevel(arg0) end
+function Food:setPoisonDetectionLevel(poisonDetectionLevel) end
 
 --- @public
---- @param arg0 Integer
+--- @param poisonLevelForRecipe Integer
 --- @return void
-function Food:setPoisonLevelForRecipe(arg0) end
+function Food:setPoisonLevelForRecipe(poisonLevelForRecipe) end
 
 --- @public
---- @param arg0 int
+--- @param poisonPower int
 --- @return void
-function Food:setPoisonPower(arg0) end
+function Food:setPoisonPower(poisonPower) end
 
 --- @public
---- @param arg0 float
+--- @param proteins float
 --- @return void
-function Food:setProteins(arg0) end
+function Food:setProteins(proteins) end
 
 --- @public
---- @param arg0 int
+--- @param ReduceFoodSickness int
 --- @return void
-function Food:setReduceFoodSickness(arg0) end
+function Food:setReduceFoodSickness(ReduceFoodSickness) end
 
 --- @public
---- @param arg0 boolean
+--- @param removeNegativeEffectOnCooked boolean
 --- @return void
-function Food:setRemoveNegativeEffectOnCooked(arg0) end
+function Food:setRemoveNegativeEffectOnCooked(removeNegativeEffectOnCooked) end
 
 --- @public
---- @param arg0 List
+--- @param replaceOnCooked List
 --- @return void
-function Food:setReplaceOnCooked(arg0) end
+function Food:setReplaceOnCooked(replaceOnCooked) end
 
 --- @public
---- @param arg0 String
+--- @param replaceOnRotten String
 --- @return void
-function Food:setReplaceOnRotten(arg0) end
+function Food:setReplaceOnRotten(replaceOnRotten) end
 
 --- @public
---- @param arg0 boolean
+--- @param rotten boolean
 --- @return void
-function Food:setRotten(arg0) end
+function Food:setRotten(rotten) end
 
 --- @public
---- @param arg0 float
+--- @param time float
 --- @return void
-function Food:setRottenTime(arg0) end
+function Food:setRottenTime(time) end
 
 --- @public
---- @param arg0 boolean
+--- @param isSpice boolean
 --- @return void
-function Food:setSpice(arg0) end
+function Food:setSpice(isSpice) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param spices ArrayList
 --- @return void
-function Food:setSpices(arg0) end
+function Food:setSpices(spices) end
 
 --- @public
---- @param arg0 float
+--- @param thirstChange float
 --- @return void
-function Food:setThirstChange(arg0) end
+function Food:setThirstChange(thirstChange) end
 
 --- @public
---- @param arg0 int
+--- @param useForPoison int
 --- @return void
-function Food:setUseForPoison(arg0) end
+function Food:setUseForPoison(useForPoison) end
 
 --- @public
---- @param arg0 String
+--- @param useOnConsume String
 --- @return void
-function Food:setUseOnConsume(arg0) end
+function Food:setUseOnConsume(useOnConsume) end
 
 --- @public
---- @param arg0 boolean
+--- @param bDangerousUncooked boolean
 --- @return void
-function Food:setbDangerousUncooked(arg0) end
+function Food:setbDangerousUncooked(bDangerousUncooked) end
 
 --- @public
 --- @return boolean
@@ -540,14 +540,14 @@ function Food:update() end
 function Food:updateAge() end
 
 --- @public
---- @param arg0 ItemContainer
+--- @param outermostContainer ItemContainer
 --- @return void
-function Food:updateFreezing(arg0) end
+function Food:updateFreezing(outermostContainer) end
 
 --- @public
---- @param arg0 BaseSoundEmitter
+--- @param emitter BaseSoundEmitter
 --- @return void
-function Food:updateSound(arg0) end
+function Food:updateSound(emitter) end
 
 
 ------------------------------------
@@ -555,9 +555,9 @@ function Food:updateSound(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 Item
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param item Item
 --- @return Food
-function Food.new(arg0, arg1, arg2, arg3) end
+function Food.new(module, name, itemType, item) end

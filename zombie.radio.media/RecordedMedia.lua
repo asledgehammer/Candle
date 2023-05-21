@@ -1,6 +1,7 @@
 --- @meta
 
---- @class RecordedMedia: Object
+--- @class RecordedMedia
+--- TurboTuTone.
 --- @field public DISABLE_LINE_LEARNING boolean
 --- @field public SAVE_FILE String
 --- @field public VERSION int
@@ -14,21 +15,21 @@ RecordedMedia = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param category String
 --- @return byte
-function RecordedMedia.getMediaTypeForCategory(arg0) end
+function RecordedMedia.getMediaTypeForCategory(category) end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function RecordedMedia.receiveRequestData(arg0) end
+function RecordedMedia.receiveRequestData(bb) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param string String
 --- @return String
-function RecordedMedia.toAscii(arg0) end
+function RecordedMedia.toAscii(string) end
 
 
 ------------------------------------
@@ -36,55 +37,55 @@ function RecordedMedia.toAscii(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return ArrayList
-function RecordedMedia:getAllMediaForCategory(arg0) end
+function RecordedMedia:getAllMediaForCategory(category) end
 
 --- @public
---- @param arg0 byte
+--- @param type byte
 --- @return ArrayList
-function RecordedMedia:getAllMediaForType(arg0) end
+function RecordedMedia:getAllMediaForType(type) end
 
 --- @public
 --- @return ArrayList
 function RecordedMedia:getCategories() end
 
 --- @public
---- @param arg0 MediaData
+--- @param data MediaData
 --- @return short
-function RecordedMedia:getIndexForMediaData(arg0) end
+function RecordedMedia:getIndexForMediaData(data) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return MediaData
-function RecordedMedia:getMediaData(arg0) end
+function RecordedMedia:getMediaData(id) end
 
 --- @public
---- @param arg0 short
+--- @param index short
 --- @return MediaData
-function RecordedMedia:getMediaDataFromIndex(arg0) end
+function RecordedMedia:getMediaDataFromIndex(index) end
 
 --- @public
---- @param arg0 String
+--- @param cat String
 --- @return MediaData
-function RecordedMedia:getRandomFromCategory(arg0) end
+function RecordedMedia:getRandomFromCategory(cat) end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return void
-function RecordedMedia:handleLegacyListenedLines(arg0) end
+function RecordedMedia:handleLegacyListenedLines(player) end
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 MediaData
+--- @param player IsoPlayer
+--- @param mediaData MediaData
 --- @return boolean
-function RecordedMedia:hasListenedToAll(arg0, arg1) end
+function RecordedMedia:hasListenedToAll(player, mediaData) end
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 String
+--- @param player IsoPlayer
+--- @param guid String
 --- @return boolean
-function RecordedMedia:hasListenedToLine(arg0, arg1) end
+function RecordedMedia:hasListenedToLine(player, guid) end
 
 --- @public
 --- @return void
@@ -95,21 +96,21 @@ function RecordedMedia:init() end
 function RecordedMedia:load() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 int
+--- @param category String
+--- @param id String
+--- @param itemDisplayName String
+--- @param spawning int
 --- @return MediaData
-function RecordedMedia:register(arg0, arg1, arg2, arg3) end
+function RecordedMedia:register(category, id, itemDisplayName, spawning) end
 
 --- @public
 --- @return void
 function RecordedMedia:save() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function RecordedMedia:sendRequestData(arg0) end
+function RecordedMedia:sendRequestData(bb) end
 
 
 ------------------------------------

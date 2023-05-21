@@ -18,35 +18,35 @@ function OpenWindowState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function OpenWindowState:animEvent(arg0, arg1) end
+function OpenWindowState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function OpenWindowState:enter(arg0) end
+function OpenWindowState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function OpenWindowState:execute(arg0) end
+function OpenWindowState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function OpenWindowState:exit(arg0) end
+function OpenWindowState:exit(owner) end
 
 --- @public
 --- @return boolean
 function OpenWindowState:isDoingActionThatCanBeCancelled() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoWindow
+--- @param owner IsoGameCharacter
+--- @param window IsoWindow
 --- @return void
-function OpenWindowState:setParams(arg0, arg1) end
+function OpenWindowState:setParams(owner, window) end
 
 
 ------------------------------------

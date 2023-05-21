@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ZLogger: Object
+--- @class ZLogger
 ZLogger = {};
 
 ------------------------------------
@@ -8,11 +8,11 @@ ZLogger = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Exception
+--- @param ex Exception
 --- @return void
---- @overload fun(arg0: String, arg1: String)
+--- @overload fun(logs: String, level: String)
 --- @overload fun(arg0: String, arg1: String, arg2: boolean)
-function ZLogger:write(arg0) end
+function ZLogger:write(ex) end
 
 --- @public
 --- @param arg0 String
@@ -27,7 +27,7 @@ function ZLogger:writeUnsafe(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param name String
+--- @param useConsole boolean
 --- @return ZLogger
-function ZLogger.new(arg0, arg1) end
+function ZLogger.new(name, useConsole) end

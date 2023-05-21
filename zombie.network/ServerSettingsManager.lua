@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ServerSettingsManager: Object
+--- @class ServerSettingsManager
 --- @field public instance ServerSettingsManager
 ServerSettingsManager = {};
 
@@ -9,14 +9,14 @@ ServerSettingsManager = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return String
-function ServerSettingsManager:getNameInSettingsFolder(arg0) end
+function ServerSettingsManager:getNameInSettingsFolder(name) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return ServerSettings
-function ServerSettingsManager:getSettingsByIndex(arg0) end
+function ServerSettingsManager:getSettingsByIndex(index) end
 
 --- @public
 --- @return int
@@ -31,14 +31,14 @@ function ServerSettingsManager:getSettingsFolder() end
 function ServerSettingsManager:getSuffixes() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function ServerSettingsManager:isValidName(arg0) end
+function ServerSettingsManager:isValidName(name) end
 
 --- @public
---- @param arg0 String
+--- @param newName String
 --- @return boolean
-function ServerSettingsManager:isValidNewName(arg0) end
+function ServerSettingsManager:isValidNewName(newName) end
 
 --- @public
 --- @return void

@@ -8,9 +8,9 @@ HandWeapon = {};
 ------------------------------------
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function HandWeapon:CanStack(arg0) end
+function HandWeapon:CanStack(item) end
 
 --- @public
 --- @param arg0 ObjectTooltip
@@ -23,10 +23,10 @@ function HandWeapon:DoTooltip(arg0, arg1) end
 function HandWeapon:IsWeapon() end
 
 --- @public
---- @param arg0 WeaponPart
+--- @param part WeaponPart
 --- @return void
---- @overload fun(arg0: WeaponPart, arg1: boolean)
-function HandWeapon:attachWeaponPart(arg0) end
+--- @overload fun(part: WeaponPart, doChange: boolean)
+function HandWeapon:attachWeaponPart(part) end
 
 --- @public
 --- @return boolean
@@ -37,9 +37,9 @@ function HandWeapon:canBePlaced() end
 function HandWeapon:canBeReused() end
 
 --- @public
---- @param arg0 WeaponPart
+--- @param part WeaponPart
 --- @return void
-function HandWeapon:detachWeaponPart(arg0) end
+function HandWeapon:detachWeaponPart(part) end
 
 --- @public
 --- @return float
@@ -71,7 +71,7 @@ function HandWeapon:getAimingTime() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(arg0: ArrayList)
+--- @overload fun(result: ArrayList)
 function HandWeapon:getAllWeaponParts() end
 
 --- @public
@@ -87,9 +87,9 @@ function HandWeapon:getAmmoPerShoot() end
 function HandWeapon:getBaseSpeed() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return InventoryItem
-function HandWeapon:getBestMagazine(arg0) end
+function HandWeapon:getBestMagazine(owner) end
 
 --- @public
 --- @return float
@@ -144,9 +144,9 @@ function HandWeapon:getCriticalChance() end
 function HandWeapon:getDamageCategory() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return float
-function HandWeapon:getDamageMod(arg0) end
+function HandWeapon:getDamageMod(chr) end
 
 --- @public
 --- @return float
@@ -193,9 +193,9 @@ function HandWeapon:getExplosionTimer() end
 function HandWeapon:getExtraDamage() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return float
-function HandWeapon:getFatigueMod(arg0) end
+function HandWeapon:getFatigueMod(chr) end
 
 --- @public
 --- @return String
@@ -242,9 +242,9 @@ function HandWeapon:getInsertAmmoStopSound() end
 function HandWeapon:getJamGunChance() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return float
-function HandWeapon:getKnockbackMod(arg0) end
+function HandWeapon:getKnockbackMod(chr) end
 
 --- @public
 --- @return float
@@ -268,7 +268,7 @@ function HandWeapon:getMaxHitCount() end
 
 --- @public
 --- @return float
---- @overload fun(arg0: IsoGameCharacter)
+--- @overload fun(owner: IsoGameCharacter)
 function HandWeapon:getMaxRange() end
 
 --- @public
@@ -340,9 +340,9 @@ function HandWeapon:getPushBackMod() end
 function HandWeapon:getRackSound() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return float
-function HandWeapon:getRangeMod(arg0) end
+function HandWeapon:getRangeMod(chr) end
 
 --- @public
 --- @return int
@@ -369,9 +369,9 @@ function HandWeapon:getSaveType() end
 function HandWeapon:getScope() end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return float
-function HandWeapon:getScore(arg0) end
+function HandWeapon:getScore(desc) end
 
 --- @public
 --- @return int
@@ -402,9 +402,9 @@ function HandWeapon:getSoundRadius() end
 function HandWeapon:getSoundVolume() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return float
-function HandWeapon:getSpeedMod(arg0) end
+function HandWeapon:getSpeedMod(chr) end
 
 --- @public
 --- @return int
@@ -443,9 +443,9 @@ function HandWeapon:getSwingSound() end
 function HandWeapon:getSwingTime() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return float
-function HandWeapon:getToHitMod(arg0) end
+function HandWeapon:getToHitMod(chr) end
 
 --- @public
 --- @return float
@@ -460,14 +460,14 @@ function HandWeapon:getTreeDamage() end
 function HandWeapon:getTriggerExplosionTimer() end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return WeaponPart
-function HandWeapon:getWeaponPart(arg0) end
+function HandWeapon:getWeaponPart(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return float
-function HandWeapon:getWeaponPartWeightModifier(arg0) end
+function HandWeapon:getWeaponPartWeightModifier(type) end
 
 --- @public
 --- @return String
@@ -570,9 +570,9 @@ function HandWeapon:isRangeFalloff() end
 function HandWeapon:isRanged() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return boolean
-function HandWeapon:isReloadable(arg0) end
+function HandWeapon:isReloadable(owner) end
 
 --- @public
 --- @return boolean
@@ -603,556 +603,556 @@ function HandWeapon:isUseEndurance() end
 function HandWeapon:isUseSelf() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function HandWeapon:load(arg0, arg1) end
+function HandWeapon:load(input, WorldVersion) end
 
 --- @public
 --- @return void
 function HandWeapon:randomizeBullets() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function HandWeapon:save(arg0, arg1) end
+function HandWeapon:save(output, net) end
 
 --- @public
---- @param arg0 int
+--- @param aimingPerkCritModifier int
 --- @return void
-function HandWeapon:setAimingPerkCritModifier(arg0) end
+function HandWeapon:setAimingPerkCritModifier(aimingPerkCritModifier) end
 
 --- @public
---- @param arg0 float
+--- @param aimingPerkHitChanceModifier float
 --- @return void
-function HandWeapon:setAimingPerkHitChanceModifier(arg0) end
+function HandWeapon:setAimingPerkHitChanceModifier(aimingPerkHitChanceModifier) end
 
 --- @public
---- @param arg0 float
+--- @param aimingPerkMinAngleModifier float
 --- @return void
-function HandWeapon:setAimingPerkMinAngleModifier(arg0) end
+function HandWeapon:setAimingPerkMinAngleModifier(aimingPerkMinAngleModifier) end
 
 --- @public
---- @param arg0 float
+--- @param aimingPerkRangeModifier float
 --- @return void
-function HandWeapon:setAimingPerkRangeModifier(arg0) end
+function HandWeapon:setAimingPerkRangeModifier(aimingPerkRangeModifier) end
 
 --- @public
---- @param arg0 int
+--- @param aimingTime int
 --- @return void
-function HandWeapon:setAimingTime(arg0) end
+function HandWeapon:setAimingTime(aimingTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param AlwaysKnockdown boolean
 --- @return void
-function HandWeapon:setAlwaysKnockdown(arg0) end
+function HandWeapon:setAlwaysKnockdown(AlwaysKnockdown) end
 
 --- @public
---- @param arg0 String
+--- @param ammoBox String
 --- @return void
-function HandWeapon:setAmmoBox(arg0) end
+function HandWeapon:setAmmoBox(ammoBox) end
 
 --- @public
---- @param arg0 int
+--- @param ammoPerShoot int
 --- @return void
-function HandWeapon:setAmmoPerShoot(arg0) end
+function HandWeapon:setAmmoPerShoot(ammoPerShoot) end
 
 --- @public
---- @param arg0 boolean
+--- @param angleFalloff boolean
 --- @return void
-function HandWeapon:setAngleFalloff(arg0) end
+function HandWeapon:setAngleFalloff(angleFalloff) end
 
 --- @public
---- @param arg0 float
+--- @param baseSpeed float
 --- @return void
-function HandWeapon:setBaseSpeed(arg0) end
+function HandWeapon:setBaseSpeed(baseSpeed) end
 
 --- @public
---- @param arg0 float
+--- @param level float
 --- @return void
-function HandWeapon:setBloodLevel(arg0) end
+function HandWeapon:setBloodLevel(level) end
 
 --- @public
---- @param arg0 String
+--- @param bulletOutSound String
 --- @return void
-function HandWeapon:setBulletOutSound(arg0) end
+function HandWeapon:setBulletOutSound(bulletOutSound) end
 
 --- @public
---- @param arg0 boolean
+--- @param bCanBarracade boolean
 --- @return void
-function HandWeapon:setCanBarracade(arg0) end
+function HandWeapon:setCanBarracade(bCanBarracade) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBePlaced boolean
 --- @return void
-function HandWeapon:setCanBePlaced(arg0) end
+function HandWeapon:setCanBePlaced(canBePlaced) end
 
 --- @public
---- @param arg0 boolean
+--- @param canBeReused boolean
 --- @return void
-function HandWeapon:setCanBeReused(arg0) end
+function HandWeapon:setCanBeReused(canBeReused) end
 
 --- @public
---- @param arg0 WeaponPart
+--- @param canon WeaponPart
 --- @return void
-function HandWeapon:setCanon(arg0) end
+function HandWeapon:setCanon(canon) end
 
 --- @public
---- @param arg0 boolean
+--- @param CantAttackWithLowestEndurance boolean
 --- @return void
-function HandWeapon:setCantAttackWithLowestEndurance(arg0) end
+function HandWeapon:setCantAttackWithLowestEndurance(CantAttackWithLowestEndurance) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param categories ArrayList
 --- @return void
-function HandWeapon:setCategories(arg0) end
+function HandWeapon:setCategories(categories) end
 
 --- @public
---- @param arg0 String
+--- @param clickSound String
 --- @return void
-function HandWeapon:setClickSound(arg0) end
+function HandWeapon:setClickSound(clickSound) end
 
 --- @public
---- @param arg0 WeaponPart
+--- @param clip WeaponPart
 --- @return void
-function HandWeapon:setClip(arg0) end
+function HandWeapon:setClip(clip) end
 
 --- @public
---- @param arg0 int
+--- @param capacity int
 --- @return void
-function HandWeapon:setClipSize(arg0) end
+function HandWeapon:setClipSize(capacity) end
 
 --- @public
---- @param arg0 int
+--- @param ConditionLowerChance int
 --- @return void
-function HandWeapon:setConditionLowerChance(arg0) end
+function HandWeapon:setConditionLowerChance(ConditionLowerChance) end
 
 --- @public
---- @param arg0 boolean
+--- @param containsClip boolean
 --- @return void
-function HandWeapon:setContainsClip(arg0) end
+function HandWeapon:setContainsClip(containsClip) end
 
 --- @public
---- @param arg0 float
+--- @param critDmgMultiplier float
 --- @return void
-function HandWeapon:setCritDmgMultiplier(arg0) end
+function HandWeapon:setCritDmgMultiplier(critDmgMultiplier) end
 
 --- @public
---- @param arg0 float
+--- @param criticalChance float
 --- @return void
-function HandWeapon:setCriticalChance(arg0) end
+function HandWeapon:setCriticalChance(criticalChance) end
 
 --- @public
---- @param arg0 String
+--- @param damageCategory String
 --- @return void
-function HandWeapon:setDamageCategory(arg0) end
+function HandWeapon:setDamageCategory(damageCategory) end
 
 --- @public
---- @param arg0 boolean
+--- @param damageMakeHole boolean
 --- @return void
-function HandWeapon:setDamageMakeHole(arg0) end
+function HandWeapon:setDamageMakeHole(damageMakeHole) end
 
 --- @public
---- @param arg0 float
+--- @param doSwingBeforeImpact float
 --- @return void
-function HandWeapon:setDoSwingBeforeImpact(arg0) end
+function HandWeapon:setDoSwingBeforeImpact(doSwingBeforeImpact) end
 
 --- @public
---- @param arg0 int
+--- @param DoorDamage int
 --- @return void
-function HandWeapon:setDoorDamage(arg0) end
+function HandWeapon:setDoorDamage(DoorDamage) end
 
 --- @public
---- @param arg0 String
+--- @param doorHitSound String
 --- @return void
-function HandWeapon:setDoorHitSound(arg0) end
+function HandWeapon:setDoorHitSound(doorHitSound) end
 
 --- @public
---- @param arg0 float
+--- @param EnduranceMod float
 --- @return void
-function HandWeapon:setEnduranceMod(arg0) end
+function HandWeapon:setEnduranceMod(EnduranceMod) end
 
 --- @public
---- @param arg0 int
+--- @param explosionPower int
 --- @return void
-function HandWeapon:setExplosionPower(arg0) end
+function HandWeapon:setExplosionPower(explosionPower) end
 
 --- @public
---- @param arg0 int
+--- @param explosionRange int
 --- @return void
-function HandWeapon:setExplosionRange(arg0) end
+function HandWeapon:setExplosionRange(explosionRange) end
 
 --- @public
---- @param arg0 int
+--- @param explosionTimer int
 --- @return void
-function HandWeapon:setExplosionTimer(arg0) end
+function HandWeapon:setExplosionTimer(explosionTimer) end
 
 --- @public
---- @param arg0 float
+--- @param extraDamage float
 --- @return void
-function HandWeapon:setExtraDamage(arg0) end
+function HandWeapon:setExtraDamage(extraDamage) end
 
 --- @public
---- @param arg0 String
+--- @param fireMode String
 --- @return void
-function HandWeapon:setFireMode(arg0) end
+function HandWeapon:setFireMode(fireMode) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param fireModePossibilities ArrayList
 --- @return void
-function HandWeapon:setFireModePossibilities(arg0) end
+function HandWeapon:setFireModePossibilities(fireModePossibilities) end
 
 --- @public
---- @param arg0 int
+--- @param firePower int
 --- @return void
-function HandWeapon:setFirePower(arg0) end
+function HandWeapon:setFirePower(firePower) end
 
 --- @public
---- @param arg0 int
+--- @param fireRange int
 --- @return void
-function HandWeapon:setFireRange(arg0) end
+function HandWeapon:setFireRange(fireRange) end
 
 --- @public
---- @param arg0 boolean
+--- @param haveChamber boolean
 --- @return void
-function HandWeapon:setHaveChamber(arg0) end
+function HandWeapon:setHaveChamber(haveChamber) end
 
 --- @public
---- @param arg0 int
+--- @param hitChance int
 --- @return void
-function HandWeapon:setHitChance(arg0) end
+function HandWeapon:setHitChance(hitChance) end
 
 --- @public
---- @param arg0 String
+--- @param hitFloorSound String
 --- @return void
-function HandWeapon:setHitFloorSound(arg0) end
+function HandWeapon:setHitFloorSound(hitFloorSound) end
 
 --- @public
---- @param arg0 String
+--- @param impactSound String
 --- @return void
-function HandWeapon:setImpactSound(arg0) end
+function HandWeapon:setImpactSound(impactSound) end
 
 --- @public
---- @param arg0 boolean
+--- @param insertAllBulletsReload boolean
 --- @return void
-function HandWeapon:setInsertAllBulletsReload(arg0) end
+function HandWeapon:setInsertAllBulletsReload(insertAllBulletsReload) end
 
 --- @public
---- @param arg0 float
+--- @param jamGunChance float
 --- @return void
-function HandWeapon:setJamGunChance(arg0) end
+function HandWeapon:setJamGunChance(jamGunChance) end
 
 --- @public
---- @param arg0 boolean
+--- @param isJammed boolean
 --- @return void
-function HandWeapon:setJammed(arg0) end
+function HandWeapon:setJammed(isJammed) end
 
 --- @public
---- @param arg0 boolean
+--- @param knockBackOnNoDeath boolean
 --- @return void
-function HandWeapon:setKnockBackOnNoDeath(arg0) end
+function HandWeapon:setKnockBackOnNoDeath(knockBackOnNoDeath) end
 
 --- @public
---- @param arg0 float
+--- @param KnockdownMod float
 --- @return void
-function HandWeapon:setKnockdownMod(arg0) end
+function HandWeapon:setKnockdownMod(KnockdownMod) end
 
 --- @public
---- @param arg0 String
+--- @param magazineType String
 --- @return void
-function HandWeapon:setMagazineType(arg0) end
+function HandWeapon:setMagazineType(magazineType) end
 
 --- @public
---- @param arg0 float
+--- @param maxAngle float
 --- @return void
-function HandWeapon:setMaxAngle(arg0) end
+function HandWeapon:setMaxAngle(maxAngle) end
 
 --- @public
---- @param arg0 float
+--- @param maxDamage float
 --- @return void
-function HandWeapon:setMaxDamage(arg0) end
+function HandWeapon:setMaxDamage(maxDamage) end
 
 --- @public
---- @param arg0 int
+--- @param maxHitCount int
 --- @return void
-function HandWeapon:setMaxHitCount(arg0) end
+function HandWeapon:setMaxHitCount(maxHitCount) end
 
 --- @public
---- @param arg0 float
+--- @param maxRange float
 --- @return void
-function HandWeapon:setMaxRange(arg0) end
+function HandWeapon:setMaxRange(maxRange) end
 
 --- @public
---- @param arg0 float
+--- @param minAngle float
 --- @return void
-function HandWeapon:setMinAngle(arg0) end
+function HandWeapon:setMinAngle(minAngle) end
 
 --- @public
---- @param arg0 float
+--- @param minDamage float
 --- @return void
-function HandWeapon:setMinDamage(arg0) end
+function HandWeapon:setMinDamage(minDamage) end
 
 --- @public
---- @param arg0 float
+--- @param minRange float
 --- @return void
-function HandWeapon:setMinRange(arg0) end
+function HandWeapon:setMinRange(minRange) end
 
 --- @public
---- @param arg0 float
+--- @param minRangeRanged float
 --- @return void
-function HandWeapon:setMinRangeRanged(arg0) end
+function HandWeapon:setMinRangeRanged(minRangeRanged) end
 
 --- @public
---- @param arg0 float
+--- @param minimumSwingTime float
 --- @return void
-function HandWeapon:setMinimumSwingTime(arg0) end
+function HandWeapon:setMinimumSwingTime(minimumSwingTime) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param modelWeaponPart ArrayList
 --- @return void
-function HandWeapon:setModelWeaponPart(arg0) end
+function HandWeapon:setModelWeaponPart(modelWeaponPart) end
 
 --- @public
---- @param arg0 boolean
+--- @param MultipleHitConditionAffected boolean
 --- @return void
-function HandWeapon:setMultipleHitConditionAffected(arg0) end
+function HandWeapon:setMultipleHitConditionAffected(MultipleHitConditionAffected) end
 
 --- @public
---- @param arg0 float
+--- @param noiseFactor float
 --- @return void
-function HandWeapon:setNoiseFactor(arg0) end
+function HandWeapon:setNoiseFactor(noiseFactor) end
 
 --- @public
---- @param arg0 int
+--- @param noiseRange int
 --- @return void
-function HandWeapon:setNoiseRange(arg0) end
+function HandWeapon:setNoiseRange(noiseRange) end
 
 --- @public
---- @param arg0 String
+--- @param originalWeaponSprite String
 --- @return void
-function HandWeapon:setOriginalWeaponSprite(arg0) end
+function HandWeapon:setOriginalWeaponSprite(originalWeaponSprite) end
 
 --- @public
---- @param arg0 float
+--- @param otherBoost float
 --- @return void
-function HandWeapon:setOtherBoost(arg0) end
+function HandWeapon:setOtherBoost(otherBoost) end
 
 --- @public
---- @param arg0 String
+--- @param otherHandRequire String
 --- @return void
-function HandWeapon:setOtherHandRequire(arg0) end
+function HandWeapon:setOtherHandRequire(otherHandRequire) end
 
 --- @public
---- @param arg0 boolean
+--- @param otherHandUse boolean
 --- @return void
-function HandWeapon:setOtherHandUse(arg0) end
+function HandWeapon:setOtherHandUse(otherHandUse) end
 
 --- @public
---- @param arg0 String
+--- @param physicsObject String
 --- @return void
-function HandWeapon:setPhysicsObject(arg0) end
+function HandWeapon:setPhysicsObject(physicsObject) end
 
 --- @public
---- @param arg0 boolean
+--- @param piercingBullets boolean
 --- @return void
-function HandWeapon:setPiercingBullets(arg0) end
+function HandWeapon:setPiercingBullets(piercingBullets) end
 
 --- @public
---- @param arg0 String
+--- @param placedSprite String
 --- @return void
-function HandWeapon:setPlacedSprite(arg0) end
+function HandWeapon:setPlacedSprite(placedSprite) end
 
 --- @public
---- @param arg0 int
+--- @param count int
 --- @return void
-function HandWeapon:setProjectileCount(arg0) end
+function HandWeapon:setProjectileCount(count) end
 
 --- @public
---- @param arg0 float
+--- @param pushBackMod float
 --- @return void
-function HandWeapon:setPushBackMod(arg0) end
+function HandWeapon:setPushBackMod(pushBackMod) end
 
 --- @public
---- @param arg0 boolean
+--- @param rackAfterShoot boolean
 --- @return void
-function HandWeapon:setRackAfterShoot(arg0) end
+function HandWeapon:setRackAfterShoot(rackAfterShoot) end
 
 --- @public
---- @param arg0 String
+--- @param rackSound String
 --- @return void
-function HandWeapon:setRackSound(arg0) end
+function HandWeapon:setRackSound(rackSound) end
 
 --- @public
---- @param arg0 boolean
+--- @param rangeFalloff boolean
 --- @return void
-function HandWeapon:setRangeFalloff(arg0) end
+function HandWeapon:setRangeFalloff(rangeFalloff) end
 
 --- @public
---- @param arg0 boolean
+--- @param ranged boolean
 --- @return void
-function HandWeapon:setRanged(arg0) end
+function HandWeapon:setRanged(ranged) end
 
 --- @public
---- @param arg0 int
+--- @param recoilDelay int
 --- @return void
-function HandWeapon:setRecoilDelay(arg0) end
+function HandWeapon:setRecoilDelay(recoilDelay) end
 
 --- @public
---- @param arg0 WeaponPart
+--- @param recoilpad WeaponPart
 --- @return void
-function HandWeapon:setRecoilpad(arg0) end
+function HandWeapon:setRecoilpad(recoilpad) end
 
 --- @public
---- @param arg0 int
+--- @param reloadTime int
 --- @return void
-function HandWeapon:setReloadTime(arg0) end
+function HandWeapon:setReloadTime(reloadTime) end
 
 --- @public
---- @param arg0 boolean
+--- @param roundChambered boolean
 --- @return void
-function HandWeapon:setRoundChambered(arg0) end
+function HandWeapon:setRoundChambered(roundChambered) end
 
 --- @public
---- @param arg0 WeaponPart
+--- @param scope WeaponPart
 --- @return void
-function HandWeapon:setScope(arg0) end
+function HandWeapon:setScope(scope) end
 
 --- @public
---- @param arg0 int
+--- @param sensorRange int
 --- @return void
-function HandWeapon:setSensorRange(arg0) end
+function HandWeapon:setSensorRange(sensorRange) end
 
 --- @public
---- @param arg0 boolean
+--- @param shareDamage boolean
 --- @return void
-function HandWeapon:setShareDamage(arg0) end
+function HandWeapon:setShareDamage(shareDamage) end
 
 --- @public
---- @param arg0 boolean
+--- @param shareEndurance boolean
 --- @return void
-function HandWeapon:setShareEndurance(arg0) end
+function HandWeapon:setShareEndurance(shareEndurance) end
 
 --- @public
---- @param arg0 String
+--- @param shellFallSound String
 --- @return void
-function HandWeapon:setShellFallSound(arg0) end
+function HandWeapon:setShellFallSound(shellFallSound) end
 
 --- @public
---- @param arg0 WeaponPart
+--- @param sling WeaponPart
 --- @return void
-function HandWeapon:setSling(arg0) end
+function HandWeapon:setSling(sling) end
 
 --- @public
---- @param arg0 int
+--- @param smokeRange int
 --- @return void
-function HandWeapon:setSmokeRange(arg0) end
+function HandWeapon:setSmokeRange(smokeRange) end
 
 --- @public
---- @param arg0 float
+--- @param soundGain float
 --- @return void
-function HandWeapon:setSoundGain(arg0) end
+function HandWeapon:setSoundGain(soundGain) end
 
 --- @public
---- @param arg0 int
+--- @param soundRadius int
 --- @return void
-function HandWeapon:setSoundRadius(arg0) end
+function HandWeapon:setSoundRadius(soundRadius) end
 
 --- @public
---- @param arg0 int
+--- @param soundVolume int
 --- @return void
-function HandWeapon:setSoundVolume(arg0) end
+function HandWeapon:setSoundVolume(soundVolume) end
 
 --- @public
---- @param arg0 boolean
+--- @param roundChambered boolean
 --- @return void
-function HandWeapon:setSpentRoundChambered(arg0) end
+function HandWeapon:setSpentRoundChambered(roundChambered) end
 
 --- @public
---- @param arg0 int
+--- @param count int
 --- @return void
-function HandWeapon:setSpentRoundCount(arg0) end
+function HandWeapon:setSpentRoundCount(count) end
 
 --- @public
---- @param arg0 boolean
+--- @param splatBloodOnNoDeath boolean
 --- @return void
-function HandWeapon:setSplatBloodOnNoDeath(arg0) end
+function HandWeapon:setSplatBloodOnNoDeath(splatBloodOnNoDeath) end
 
 --- @public
---- @param arg0 int
+--- @param splatNumber int
 --- @return void
-function HandWeapon:setSplatNumber(arg0) end
+function HandWeapon:setSplatNumber(splatNumber) end
 
 --- @public
---- @param arg0 WeaponPart
+--- @param stock WeaponPart
 --- @return void
-function HandWeapon:setStock(arg0) end
+function HandWeapon:setStock(stock) end
 
 --- @public
---- @param arg0 String
+--- @param subcategory String
 --- @return void
-function HandWeapon:setSubCategory(arg0) end
+function HandWeapon:setSubCategory(subcategory) end
 
 --- @public
---- @param arg0 String
+--- @param swingSound String
 --- @return void
-function HandWeapon:setSwingSound(arg0) end
+function HandWeapon:setSwingSound(swingSound) end
 
 --- @public
---- @param arg0 float
+--- @param swingTime float
 --- @return void
-function HandWeapon:setSwingTime(arg0) end
+function HandWeapon:setSwingTime(swingTime) end
 
 --- @public
---- @param arg0 float
+--- @param toHitModifier float
 --- @return void
-function HandWeapon:setToHitModifier(arg0) end
+function HandWeapon:setToHitModifier(toHitModifier) end
 
 --- @public
---- @param arg0 int
+--- @param treeDamage int
 --- @return void
-function HandWeapon:setTreeDamage(arg0) end
+function HandWeapon:setTreeDamage(treeDamage) end
 
 --- @public
---- @param arg0 int
+--- @param triggerExplosionTimer int
 --- @return void
-function HandWeapon:setTriggerExplosionTimer(arg0) end
+function HandWeapon:setTriggerExplosionTimer(triggerExplosionTimer) end
 
 --- @public
---- @param arg0 boolean
+--- @param useEndurance boolean
 --- @return void
-function HandWeapon:setUseEndurance(arg0) end
+function HandWeapon:setUseEndurance(useEndurance) end
 
 --- @public
---- @param arg0 boolean
+--- @param useSelf boolean
 --- @return void
-function HandWeapon:setUseSelf(arg0) end
+function HandWeapon:setUseSelf(useSelf) end
 
 --- @public
---- @param arg0 float
+--- @param weaponLength float
 --- @return void
-function HandWeapon:setWeaponLength(arg0) end
+function HandWeapon:setWeaponLength(weaponLength) end
 
 --- @public
---- @param arg0 String
---- @param arg1 WeaponPart
+--- @param type String
+--- @param part WeaponPart
 --- @return void
-function HandWeapon:setWeaponPart(arg0, arg1) end
+function HandWeapon:setWeaponPart(type, part) end
 
 --- @public
---- @param arg0 String
+--- @param weaponReloadType String
 --- @return void
-function HandWeapon:setWeaponReloadType(arg0) end
+function HandWeapon:setWeaponReloadType(weaponReloadType) end
 
 --- @public
---- @param arg0 String
+--- @param weaponSprite String
 --- @return void
-function HandWeapon:setWeaponSprite(arg0) end
+function HandWeapon:setWeaponSprite(weaponSprite) end
 
 --- @public
---- @param arg0 String
+--- @param hitSound String
 --- @return void
-function HandWeapon:setZombieHitSound(arg0) end
+function HandWeapon:setZombieHitSound(hitSound) end
 
 
 ------------------------------------
@@ -1160,9 +1160,9 @@ function HandWeapon:setZombieHitSound(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 Item
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param item Item
 --- @return HandWeapon
-function HandWeapon.new(arg0, arg1, arg2, arg3) end
+function HandWeapon.new(module, name, itemType, item) end

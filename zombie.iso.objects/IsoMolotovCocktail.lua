@@ -24,15 +24,15 @@ function IsoMolotovCocktail:collideWall() end
 function IsoMolotovCocktail:getObjectName() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param info ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return void
-function IsoMolotovCocktail:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoMolotovCocktail:render(x, y, z, info, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
 --- @return void
@@ -44,7 +44,7 @@ function IsoMolotovCocktail:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoMolotovCocktail
---- @overload fun(arg0: IsoCell, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: HandWeapon, arg7: IsoGameCharacter)
-function IsoMolotovCocktail.new(arg0) end
+--- @overload fun(cell: IsoCell, x: float, y: float, z: float, xvel: float, yvel: float, weapon: HandWeapon, character: IsoGameCharacter)
+function IsoMolotovCocktail.new(cell) end

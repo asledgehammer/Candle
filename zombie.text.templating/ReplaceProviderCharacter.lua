@@ -1,6 +1,8 @@
 --- @meta
 
 --- @class ReplaceProviderCharacter: ReplaceProvider
+--- TurboTuTone.
+ Example of ReplaceProvider that registers firstname and lastname keys for the supplied character.
 ReplaceProviderCharacter = {};
 
 ------------------------------------
@@ -8,6 +10,6 @@ ReplaceProviderCharacter = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param character IsoGameCharacter
 --- @return ReplaceProviderCharacter
-function ReplaceProviderCharacter.new(arg0) end
+function ReplaceProviderCharacter.new(character) end

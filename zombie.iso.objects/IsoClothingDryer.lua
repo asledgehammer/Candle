@@ -20,39 +20,39 @@ function IsoClothingDryer:getObjectName() end
 function IsoClothingDryer:isActivated() end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoClothingDryer:isItemAllowedInContainer(arg0, arg1) end
+function IsoClothingDryer:isItemAllowedInContainer(container, item) end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoClothingDryer:isRemoveItemAllowedFromContainer(arg0, arg1) end
+function IsoClothingDryer:isRemoveItemAllowedFromContainer(container, item) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoClothingDryer:load(arg0, arg1, arg2) end
+function IsoClothingDryer:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ByteBuffer
+--- @param change String
+--- @param bb ByteBuffer
 --- @return void
-function IsoClothingDryer:loadChange(arg0, arg1) end
+function IsoClothingDryer:loadChange(change, bb) end
 
 --- @public
 --- @return void
 function IsoClothingDryer:removeFromWorld() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoClothingDryer:save(arg0, arg1) end
+function IsoClothingDryer:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 String
@@ -62,9 +62,9 @@ function IsoClothingDryer:save(arg0, arg1) end
 function IsoClothingDryer:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 boolean
+--- @param activated boolean
 --- @return void
-function IsoClothingDryer:setActivated(arg0) end
+function IsoClothingDryer:setActivated(activated) end
 
 --- @public
 --- @return void
@@ -76,7 +76,7 @@ function IsoClothingDryer:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoClothingDryer
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
-function IsoClothingDryer.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite)
+function IsoClothingDryer.new(cell) end

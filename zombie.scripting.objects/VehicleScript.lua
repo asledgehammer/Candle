@@ -8,73 +8,73 @@ VehicleScript = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param name String
+--- @param totalFile String
 --- @return void
-function VehicleScript:Load(arg0, arg1) end
+function VehicleScript:Load(name, totalFile) end
 
 --- @public
 --- @return void
 function VehicleScript:Loaded() end
 
 --- @public
---- @param arg0 ModelAttachment
+--- @param attach ModelAttachment
 --- @return ModelAttachment
-function VehicleScript:addAttachment(arg0) end
+function VehicleScript:addAttachment(attach) end
 
 --- @public
---- @param arg0 int
---- @param arg1 ModelAttachment
+--- @param index int
+--- @param attach ModelAttachment
 --- @return ModelAttachment
-function VehicleScript:addAttachmentAt(arg0, arg1) end
+function VehicleScript:addAttachmentAt(index, attach) end
 
 --- @public
---- @param arg0 VehicleScript
---- @param arg1 String
+--- @param other VehicleScript
+--- @param spec String
 --- @return void
-function VehicleScript:copyAreasFrom(arg0, arg1) end
+function VehicleScript:copyAreasFrom(other, spec) end
 
 --- @public
---- @param arg0 VehicleScript
---- @param arg1 String
+--- @param other VehicleScript
+--- @param spec String
 --- @return void
-function VehicleScript:copyPartsFrom(arg0, arg1) end
+function VehicleScript:copyPartsFrom(other, spec) end
 
 --- @public
---- @param arg0 VehicleScript
---- @param arg1 String
+--- @param other VehicleScript
+--- @param spec String
 --- @return void
-function VehicleScript:copyPassengersFrom(arg0, arg1) end
+function VehicleScript:copyPassengersFrom(other, spec) end
 
 --- @public
---- @param arg0 VehicleScript
---- @param arg1 String
+--- @param other VehicleScript
+--- @param spec String
 --- @return void
-function VehicleScript:copyWheelsFrom(arg0, arg1) end
+function VehicleScript:copyWheelsFrom(other, spec) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return Area
-function VehicleScript:getArea(arg0) end
+function VehicleScript:getArea(index) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return Area
-function VehicleScript:getAreaById(arg0) end
+function VehicleScript:getAreaById(id) end
 
 --- @public
 --- @return int
 function VehicleScript:getAreaCount() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return ModelAttachment
-function VehicleScript:getAttachment(arg0) end
+function VehicleScript:getAttachment(index) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return ModelAttachment
-function VehicleScript:getAttachmentById(arg0) end
+function VehicleScript:getAttachmentById(id) end
 
 --- @public
 --- @return int
@@ -157,19 +157,19 @@ function VehicleScript:getHasSiren() end
 function VehicleScript:getHeadlightConfigLevel() end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return int
-function VehicleScript:getIndexOfAreaById(arg0) end
+function VehicleScript:getIndexOfAreaById(id) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return int
-function VehicleScript:getIndexOfPartById(arg0) end
+function VehicleScript:getIndexOfPartById(id) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return int
-function VehicleScript:getIndexOfWheelById(arg0) end
+function VehicleScript:getIndexOfWheelById(id) end
 
 --- @public
 --- @return LightBar
@@ -188,15 +188,15 @@ function VehicleScript:getMechanicType() end
 function VehicleScript:getModel() end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return Model
---- @overload fun(arg0: String, arg1: ArrayList)
-function VehicleScript:getModelById(arg0) end
+--- @overload fun(id: String, models: ArrayList)
+function VehicleScript:getModelById(id) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return Model
-function VehicleScript:getModelByIndex(arg0) end
+function VehicleScript:getModelByIndex(index) end
 
 --- @public
 --- @return int
@@ -219,46 +219,46 @@ function VehicleScript:getName() end
 function VehicleScript:getOffroadEfficiency() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return Part
-function VehicleScript:getPart(arg0) end
+function VehicleScript:getPart(index) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return Part
-function VehicleScript:getPartById(arg0) end
+function VehicleScript:getPartById(id) end
 
 --- @public
 --- @return int
 function VehicleScript:getPartCount() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return Passenger
-function VehicleScript:getPassenger(arg0) end
+function VehicleScript:getPassenger(index) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return Passenger
-function VehicleScript:getPassengerById(arg0) end
+function VehicleScript:getPassengerById(id) end
 
 --- @public
 --- @return int
 function VehicleScript:getPassengerCount() end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return int
-function VehicleScript:getPassengerIndex(arg0) end
+function VehicleScript:getPassengerIndex(id) end
 
 --- @public
 --- @return Vector3f
 function VehicleScript:getPhysicsChassisShape() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return PhysicsShape
-function VehicleScript:getPhysicsShape(arg0) end
+function VehicleScript:getPhysicsShape(index) end
 
 --- @public
 --- @return int
@@ -289,9 +289,9 @@ function VehicleScript:getShadowExtents() end
 function VehicleScript:getShadowOffset() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return Skin
-function VehicleScript:getSkin(arg0) end
+function VehicleScript:getSkin(index) end
 
 --- @public
 --- @return int
@@ -302,9 +302,9 @@ function VehicleScript:getSkinCount() end
 function VehicleScript:getSounds() end
 
 --- @public
---- @param arg0 float
+--- @param speed float
 --- @return float
-function VehicleScript:getSteeringClamp(arg0) end
+function VehicleScript:getSteeringClamp(speed) end
 
 --- @public
 --- @return float
@@ -339,14 +339,14 @@ function VehicleScript:getSuspensionTravel() end
 function VehicleScript:getTextures() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return Wheel
-function VehicleScript:getWheel(arg0) end
+function VehicleScript:getWheel(index) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return Wheel
-function VehicleScript:getWheelById(arg0) end
+function VehicleScript:getWheelById(id) end
 
 --- @public
 --- @return int
@@ -357,65 +357,65 @@ function VehicleScript:getWheelCount() end
 function VehicleScript:getWheelFriction() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param pattern String
+--- @param str String
 --- @return boolean
-function VehicleScript:globMatch(arg0, arg1) end
+function VehicleScript:globMatch(pattern, str) end
 
 --- @public
---- @param arg0 ModelAttachment
+--- @param attach ModelAttachment
 --- @return ModelAttachment
-function VehicleScript:removeAttachment(arg0) end
+function VehicleScript:removeAttachment(attach) end
 
 --- @public
---- @param arg0 String
+--- @param engineRPMType String
 --- @return void
-function VehicleScript:setEngineRPMType(arg0) end
+function VehicleScript:setEngineRPMType(engineRPMType) end
 
 --- @public
---- @param arg0 int
+--- @param engineRepairLevel int
 --- @return void
-function VehicleScript:setEngineRepairLevel(arg0) end
+function VehicleScript:setEngineRepairLevel(engineRepairLevel) end
 
 --- @public
---- @param arg0 float
+--- @param forcedHue float
 --- @return void
-function VehicleScript:setForcedHue(arg0) end
+function VehicleScript:setForcedHue(forcedHue) end
 
 --- @public
---- @param arg0 float
+--- @param forcedSat float
 --- @return void
-function VehicleScript:setForcedSat(arg0) end
+function VehicleScript:setForcedSat(forcedSat) end
 
 --- @public
---- @param arg0 float
+--- @param forcedVal float
 --- @return void
-function VehicleScript:setForcedVal(arg0) end
+function VehicleScript:setForcedVal(forcedVal) end
 
 --- @public
---- @param arg0 int
+--- @param mechanicType int
 --- @return void
-function VehicleScript:setMechanicType(arg0) end
+function VehicleScript:setMechanicType(mechanicType) end
 
 --- @public
---- @param arg0 float
+--- @param scale float
 --- @return void
-function VehicleScript:setModelScale(arg0) end
+function VehicleScript:setModelScale(scale) end
 
 --- @public
---- @param arg0 float
+--- @param offroadEfficiency float
 --- @return void
-function VehicleScript:setOffroadEfficiency(arg0) end
+function VehicleScript:setOffroadEfficiency(offroadEfficiency) end
 
 --- @public
---- @param arg0 float
+--- @param playerDamageProtection float
 --- @return void
-function VehicleScript:setPlayerDamageProtection(arg0) end
+function VehicleScript:setPlayerDamageProtection(playerDamageProtection) end
 
 --- @public
---- @param arg0 int
+--- @param seats int
 --- @return void
-function VehicleScript:setSeats(arg0) end
+function VehicleScript:setSeats(seats) end
 
 --- @public
 --- @return void

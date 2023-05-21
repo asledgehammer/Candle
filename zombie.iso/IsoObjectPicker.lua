@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoObjectPicker: Object
+--- @class IsoObjectPicker
 --- @field public Instance IsoObjectPicker
 IsoObjectPicker = {};
 
@@ -9,88 +9,88 @@ IsoObjectPicker = {};
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 IsoGridSquare
---- @param arg5 IsoObject
---- @param arg6 boolean
---- @param arg7 float
---- @param arg8 float
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param gridSquare IsoGridSquare
+--- @param tile IsoObject
+--- @param flip boolean
+--- @param scaleX float
+--- @param scaleY float
 --- @return void
-function IsoObjectPicker:Add(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function IsoObjectPicker:Add(x, y, width, height, gridSquare, tile, flip, scaleX, scaleY) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param screenX int
+--- @param screenY int
 --- @return ClickObject
-function IsoObjectPicker:ContextPick(arg0, arg1) end
+function IsoObjectPicker:ContextPick(screenX, screenY) end
 
 --- @public
 --- @return void
 function IsoObjectPicker:Init() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param xx int
+--- @param yy int
 --- @return ClickObject
-function IsoObjectPicker:Pick(arg0, arg1) end
+function IsoObjectPicker:Pick(xx, yy) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param screenX int
+--- @param screenY int
 --- @return IsoObject
-function IsoObjectPicker:PickCorpse(arg0, arg1) end
+function IsoObjectPicker:PickCorpse(screenX, screenY) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 boolean
+--- @param screenX int
+--- @param screenY int
+--- @param bTransparent boolean
 --- @return IsoObject
-function IsoObjectPicker:PickDoor(arg0, arg1, arg2) end
+function IsoObjectPicker:PickDoor(screenX, screenY, bTransparent) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param screenX int
+--- @param screenY int
 --- @return IsoObject
-function IsoObjectPicker:PickHoppable(arg0, arg1) end
+function IsoObjectPicker:PickHoppable(screenX, screenY) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param xx int
+--- @param yy int
 --- @return IsoMovingObject
-function IsoObjectPicker:PickTarget(arg0, arg1) end
+function IsoObjectPicker:PickTarget(xx, yy) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param screenX int
+--- @param screenY int
 --- @return IsoObject
-function IsoObjectPicker:PickThumpable(arg0, arg1) end
+function IsoObjectPicker:PickThumpable(screenX, screenY) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param screenX int
+--- @param screenY int
 --- @return IsoObject
-function IsoObjectPicker:PickTree(arg0, arg1) end
+function IsoObjectPicker:PickTree(screenX, screenY) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param screenX int
+--- @param screenY int
 --- @return BaseVehicle
-function IsoObjectPicker:PickVehicle(arg0, arg1) end
+function IsoObjectPicker:PickVehicle(screenX, screenY) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param screenX int
+--- @param screenY int
 --- @return IsoObject
-function IsoObjectPicker:PickWindow(arg0, arg1) end
+function IsoObjectPicker:PickWindow(screenX, screenY) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param screenX int
+--- @param screenY int
 --- @return IsoObject
-function IsoObjectPicker:PickWindowFrame(arg0, arg1) end
+function IsoObjectPicker:PickWindowFrame(screenX, screenY) end
 
 --- @public
 --- @return void

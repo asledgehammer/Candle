@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Stash: Object
+--- @class Stash
 Stash = {};
 
 ------------------------------------
@@ -34,6 +34,6 @@ function Stash:load(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Stash
-function Stash.new(arg0) end
+function Stash.new(name) end

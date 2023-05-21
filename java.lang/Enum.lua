@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Enum: Object
+--- @class Enum
 --- @implement Constable
 --- @implement Comparable
 --- @implement Serializable

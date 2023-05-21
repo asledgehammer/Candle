@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSStagDo: RandomizedDeadSurvivorBase
+--- Create some zombies male zombies with 1 naked female, some alcohol around
 RDSStagDo = {};
 
 ------------------------------------
@@ -8,15 +9,15 @@ RDSStagDo = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RDSStagDo:isValid(arg0, arg1) end
+function RDSStagDo:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSStagDo:randomizeDeadSurvivor(arg0) end
+function RDSStagDo:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

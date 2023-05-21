@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ModelAttachment: Object
+--- @class ModelAttachment
 ModelAttachment = {};
 
 ------------------------------------
@@ -36,29 +36,29 @@ function ModelAttachment:getZOffset() end
 function ModelAttachment:isUpdateConstraint() end
 
 --- @public
---- @param arg0 String
+--- @param bone String
 --- @return void
-function ModelAttachment:setBone(arg0) end
+function ModelAttachment:setBone(bone) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param canAttach ArrayList
 --- @return void
-function ModelAttachment:setCanAttach(arg0) end
+function ModelAttachment:setCanAttach(canAttach) end
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return void
-function ModelAttachment:setId(arg0) end
+function ModelAttachment:setId(id) end
 
 --- @public
---- @param arg0 boolean
+--- @param updateConstraint boolean
 --- @return void
-function ModelAttachment:setUpdateConstraint(arg0) end
+function ModelAttachment:setUpdateConstraint(updateConstraint) end
 
 --- @public
---- @param arg0 float
+--- @param zoffset float
 --- @return void
-function ModelAttachment:setZOffset(arg0) end
+function ModelAttachment:setZOffset(zoffset) end
 
 
 ------------------------------------
@@ -66,6 +66,6 @@ function ModelAttachment:setZOffset(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param id String
 --- @return ModelAttachment
-function ModelAttachment.new(arg0) end
+function ModelAttachment.new(id) end

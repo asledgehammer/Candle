@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSZombieLockedBathroom: RandomizedDeadSurvivorBase
+--- Zombie inside the barricaded bathroom and a dead corpse in front of it with a pistol
 RDSZombieLockedBathroom = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RDSZombieLockedBathroom = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSZombieLockedBathroom:randomizeDeadSurvivor(arg0) end
+function RDSZombieLockedBathroom:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

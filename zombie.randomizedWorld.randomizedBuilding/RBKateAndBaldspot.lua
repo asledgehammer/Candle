@@ -8,15 +8,15 @@ RBKateAndBaldspot = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBKateAndBaldspot:isValid(arg0, arg1) end
+function RBKateAndBaldspot:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RBKateAndBaldspot:randomizeBuilding(arg0) end
+function RBKateAndBaldspot:randomizeBuilding(def) end
 
 
 ------------------------------------

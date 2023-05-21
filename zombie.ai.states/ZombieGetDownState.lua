@@ -18,35 +18,35 @@ function ZombieGetDownState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function ZombieGetDownState:animEvent(arg0, arg1) end
+function ZombieGetDownState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ZombieGetDownState:enter(arg0) end
+function ZombieGetDownState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ZombieGetDownState:execute(arg0) end
+function ZombieGetDownState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ZombieGetDownState:exit(arg0) end
+function ZombieGetDownState:exit(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return boolean
-function ZombieGetDownState:isNearStartXY(arg0) end
+function ZombieGetDownState:isNearStartXY(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function ZombieGetDownState:setParams(arg0) end
+function ZombieGetDownState:setParams(owner) end
 
 
 ------------------------------------

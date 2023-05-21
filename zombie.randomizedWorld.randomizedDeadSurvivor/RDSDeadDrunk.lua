@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSDeadDrunk: RandomizedDeadSurvivorBase
+--- Create a dead survivor with alcohol bottles around him
 RDSDeadDrunk = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RDSDeadDrunk = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSDeadDrunk:randomizeDeadSurvivor(arg0) end
+function RDSDeadDrunk:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

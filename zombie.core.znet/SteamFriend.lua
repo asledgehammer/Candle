@@ -1,6 +1,7 @@
 --- @meta
 
---- @class SteamFriend: Object
+--- @class SteamFriend
+--- Created by Gennadiy on 11.06.2015.
 SteamFriend = {};
 
 ------------------------------------
@@ -30,5 +31,5 @@ function SteamFriend:getSteamID() end
 
 --- @public
 --- @return SteamFriend
---- @overload fun(arg0: String, arg1: long)
+--- @overload fun(name: String, steamID: long)
 function SteamFriend.new() end

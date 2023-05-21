@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GameSoundClip: Object
+--- @class GameSoundClip
 --- @field public INIT_FLAG_DISTANCE_MAX short
 --- @field public INIT_FLAG_DISTANCE_MIN short
 GameSoundClip = {};
@@ -68,6 +68,6 @@ function GameSoundClip:hasSustainPoints() end
 ------------------------------------
 
 --- @public
---- @param arg0 GameSound
+--- @param gameSound GameSound
 --- @return GameSoundClip
-function GameSoundClip.new(arg0) end
+function GameSoundClip.new(gameSound) end

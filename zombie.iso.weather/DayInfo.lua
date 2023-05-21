@@ -1,6 +1,7 @@
 --- @meta
 
---- @class DayInfo: Object
+--- @class DayInfo
+--- DAY INFO
 DayInfo = {};
 
 ------------------------------------
@@ -36,11 +37,11 @@ function DayInfo:getSeason() end
 function DayInfo:getYear() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param day int
+--- @param month int
+--- @param year int
 --- @return void
-function DayInfo:set(arg0, arg1, arg2) end
+function DayInfo:set(day, month, year) end
 
 
 ------------------------------------

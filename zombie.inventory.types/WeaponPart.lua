@@ -76,64 +76,64 @@ function WeaponPart:getSaveType() end
 function WeaponPart:getWeightModifier() end
 
 --- @public
---- @param arg0 int
+--- @param aimingTime int
 --- @return void
-function WeaponPart:setAimingTime(arg0) end
+function WeaponPart:setAimingTime(aimingTime) end
 
 --- @public
---- @param arg0 float
+--- @param angle float
 --- @return void
-function WeaponPart:setAngle(arg0) end
+function WeaponPart:setAngle(angle) end
 
 --- @public
---- @param arg0 int
+--- @param clipSize int
 --- @return void
-function WeaponPart:setClipSize(arg0) end
+function WeaponPart:setClipSize(clipSize) end
 
 --- @public
---- @param arg0 float
+--- @param damage float
 --- @return void
-function WeaponPart:setDamage(arg0) end
+function WeaponPart:setDamage(damage) end
 
 --- @public
---- @param arg0 int
+--- @param hitChance int
 --- @return void
-function WeaponPart:setHitChance(arg0) end
+function WeaponPart:setHitChance(hitChance) end
 
 --- @public
---- @param arg0 float
+--- @param maxRange float
 --- @return void
-function WeaponPart:setMaxRange(arg0) end
+function WeaponPart:setMaxRange(maxRange) end
 
 --- @public
---- @param arg0 float
+--- @param minRangeRanged float
 --- @return void
-function WeaponPart:setMinRangeRanged(arg0) end
+function WeaponPart:setMinRangeRanged(minRangeRanged) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param mountOn ArrayList
 --- @return void
-function WeaponPart:setMountOn(arg0) end
+function WeaponPart:setMountOn(mountOn) end
 
 --- @public
---- @param arg0 String
+--- @param partType String
 --- @return void
-function WeaponPart:setPartType(arg0) end
+function WeaponPart:setPartType(partType) end
 
 --- @public
---- @param arg0 float
+--- @param recoilDelay float
 --- @return void
-function WeaponPart:setRecoilDelay(arg0) end
+function WeaponPart:setRecoilDelay(recoilDelay) end
 
 --- @public
---- @param arg0 int
+--- @param reloadTime int
 --- @return void
-function WeaponPart:setReloadTime(arg0) end
+function WeaponPart:setReloadTime(reloadTime) end
 
 --- @public
---- @param arg0 float
+--- @param weightModifier float
 --- @return void
-function WeaponPart:setWeightModifier(arg0) end
+function WeaponPart:setWeightModifier(weightModifier) end
 
 
 ------------------------------------
@@ -141,9 +141,9 @@ function WeaponPart:setWeightModifier(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param texName String
 --- @return WeaponPart
-function WeaponPart.new(arg0, arg1, arg2, arg3) end
+function WeaponPart.new(module, name, itemType, texName) end

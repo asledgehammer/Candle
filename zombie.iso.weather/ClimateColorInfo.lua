@@ -1,6 +1,10 @@
 --- @meta
 
---- @class ClimateColorInfo: Object
+--- @class ClimateColorInfo
+--- TurboTuTone.
+ A pair of colors for global light interior and exterior, the alpha of the colors is blend intensity.
+ When outside the shader is used to apply global light, when inside a room its using a different method (using the weather mask) to do the coloring of outside parts.
+ This requires separate balancing of colors as using one and the same for both methods doesn't always look right.
 ClimateColorInfo = {};
 
 ------------------------------------
@@ -9,12 +13,12 @@ ClimateColorInfo = {};
 
 --- @public
 --- @static
---- @param arg0 ClimateColorInfo
---- @param arg1 ClimateColorInfo
---- @param arg2 float
---- @param arg3 ClimateColorInfo
+--- @param source ClimateColorInfo
+--- @param target ClimateColorInfo
+--- @param t float
+--- @param resultColorInfo ClimateColorInfo
 --- @return ClimateColorInfo
-function ClimateColorInfo.interp(arg0, arg1, arg2, arg3) end
+function ClimateColorInfo.interp(source, target, t, resultColorInfo) end
 
 --- @public
 --- @static
@@ -35,54 +39,54 @@ function ClimateColorInfo:getExterior() end
 function ClimateColorInfo:getInterior() end
 
 --- @public
---- @param arg0 ClimateColorInfo
---- @param arg1 float
---- @param arg2 ClimateColorInfo
+--- @param to ClimateColorInfo
+--- @param t float
+--- @param result ClimateColorInfo
 --- @return ClimateColorInfo
-function ClimateColorInfo:interp(arg0, arg1, arg2) end
+function ClimateColorInfo:interp(to, t, result) end
 
 --- @public
---- @param arg0 DataInputStream
---- @param arg1 int
+--- @param input DataInputStream
+--- @param worldVersion int
 --- @return void
-function ClimateColorInfo:load(arg0, arg1) end
+function ClimateColorInfo:load(input, worldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return void
-function ClimateColorInfo:read(arg0) end
+function ClimateColorInfo:read(input) end
 
 --- @public
---- @param arg0 DataOutputStream
+--- @param output DataOutputStream
 --- @return void
-function ClimateColorInfo:save(arg0) end
+function ClimateColorInfo:save(output) end
 
 --- @public
---- @param arg0 float
+--- @param val float
 --- @return void
-function ClimateColorInfo:scale(arg0) end
+function ClimateColorInfo:scale(val) end
 
 --- @public
---- @param arg0 Color
+--- @param other Color
 --- @return void
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
-function ClimateColorInfo:setExterior(arg0) end
+--- @overload fun(r: float, g: float, b: float, a: float)
+function ClimateColorInfo:setExterior(other) end
 
 --- @public
---- @param arg0 Color
+--- @param other Color
 --- @return void
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
-function ClimateColorInfo:setInterior(arg0) end
+--- @overload fun(r: float, g: float, b: float, a: float)
+function ClimateColorInfo:setInterior(other) end
 
 --- @public
---- @param arg0 ClimateColorInfo
+--- @param other ClimateColorInfo
 --- @return void
-function ClimateColorInfo:setTo(arg0) end
+function ClimateColorInfo:setTo(other) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function ClimateColorInfo:write(arg0) end
+function ClimateColorInfo:write(output) end
 
 
 ------------------------------------
@@ -91,6 +95,6 @@ function ClimateColorInfo:write(arg0) end
 
 --- @public
 --- @return ClimateColorInfo
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float, arg7: float)
+--- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: float, g: float, b: float, a: float, r2: float, g2: float, b2: float, a2: float)
 function ClimateColorInfo.new() end

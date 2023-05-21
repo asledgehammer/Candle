@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoRegionLogType: Enum
+--- TurboTuTone.
 --- @field public Normal IsoRegionLogType
 --- @field public Warn IsoRegionLogType
 IsoRegionLogType = {};

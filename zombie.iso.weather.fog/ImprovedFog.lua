@@ -1,6 +1,7 @@
 --- @meta
 
---- @class ImprovedFog: Object
+--- @class ImprovedFog
+--- TurboTuTone.
 ImprovedFog = {};
 
 ------------------------------------
@@ -9,21 +10,21 @@ ImprovedFog = {};
 
 --- @public
 --- @static
---- @param arg0 Texture
---- @param arg1 double
---- @param arg2 double
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
---- @param arg7 double
---- @param arg8 double
---- @param arg9 double
---- @param arg10 double
---- @param arg11 double
---- @param arg12 double
+--- @param tex Texture
+--- @param subX double
+--- @param subY double
+--- @param subW double
+--- @param subH double
+--- @param x double
+--- @param y double
+--- @param w double
+--- @param h double
+--- @param r double
+--- @param g double
+--- @param b double
+--- @param a double
 --- @return void
-function ImprovedFog.DrawSubTextureRGBA(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12) end
+function ImprovedFog.DrawSubTextureRGBA(tex, subX, subY, subW, subH, x, y, w, h, r, g, b, a) end
 
 --- @public
 --- @static
@@ -152,154 +153,154 @@ function ImprovedFog.isRenderOnlyOneRow() end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param squareMax IsoGridSquare
 --- @return void
-function ImprovedFog.renderRowsBehind(arg0) end
+function ImprovedFog.renderRowsBehind(squareMax) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param alphaCircleAlpha float
 --- @return void
-function ImprovedFog.setAlphaCircleAlpha(arg0) end
+function ImprovedFog.setAlphaCircleAlpha(alphaCircleAlpha) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param alphaCircleRad float
 --- @return void
-function ImprovedFog.setAlphaCircleRad(arg0) end
+function ImprovedFog.setAlphaCircleRad(alphaCircleRad) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param baseAlpha float
 --- @return void
-function ImprovedFog.setBaseAlpha(arg0) end
+function ImprovedFog.setBaseAlpha(baseAlpha) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param bottomAlphaHeight float
 --- @return void
-function ImprovedFog.setBottomAlphaHeight(arg0) end
+function ImprovedFog.setBottomAlphaHeight(bottomAlphaHeight) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param colorB float
 --- @return void
-function ImprovedFog.setColorB(arg0) end
+function ImprovedFog.setColorB(colorB) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param colorG float
 --- @return void
-function ImprovedFog.setColorG(arg0) end
+function ImprovedFog.setColorG(colorG) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param colorR float
 --- @return void
-function ImprovedFog.setColorR(arg0) end
+function ImprovedFog.setColorR(colorR) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param drawDebugColors boolean
 --- @return void
-function ImprovedFog.setDrawDebugColors(arg0) end
+function ImprovedFog.setDrawDebugColors(drawDebugColors) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enableEditing boolean
 --- @return void
-function ImprovedFog.setEnableEditing(arg0) end
+function ImprovedFog.setEnableEditing(enableEditing) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param highQuality boolean
 --- @return void
-function ImprovedFog.setHighQuality(arg0) end
+function ImprovedFog.setHighQuality(highQuality) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param maxXOffset int
 --- @return void
-function ImprovedFog.setMaxXOffset(arg0) end
+function ImprovedFog.setMaxXOffset(maxXOffset) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param maxYOffset int
 --- @return void
-function ImprovedFog.setMaxYOffset(arg0) end
+function ImprovedFog.setMaxYOffset(maxYOffset) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param minXOffset int
 --- @return void
-function ImprovedFog.setMinXOffset(arg0) end
+function ImprovedFog.setMinXOffset(minXOffset) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param octaves float
 --- @return void
-function ImprovedFog.setOctaves(arg0) end
+function ImprovedFog.setOctaves(octaves) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param renderCurrentLayerOnly boolean
 --- @return void
-function ImprovedFog.setRenderCurrentLayerOnly(arg0) end
+function ImprovedFog.setRenderCurrentLayerOnly(renderCurrentLayerOnly) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param renderEndOnly boolean
 --- @return void
-function ImprovedFog.setRenderEndOnly(arg0) end
+function ImprovedFog.setRenderEndOnly(renderEndOnly) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param renderEveryXRow int
 --- @return void
-function ImprovedFog.setRenderEveryXRow(arg0) end
+function ImprovedFog.setRenderEveryXRow(renderEveryXRow) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param renderOnlyOneRow boolean
 --- @return void
-function ImprovedFog.setRenderOnlyOneRow(arg0) end
+function ImprovedFog.setRenderOnlyOneRow(renderOnlyOneRow) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param renderXRowsFromCenter int
 --- @return void
-function ImprovedFog.setRenderXRowsFromCenter(arg0) end
+function ImprovedFog.setRenderXRowsFromCenter(renderXRowsFromCenter) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param scalingX float
 --- @return void
-function ImprovedFog.setScalingX(arg0) end
+function ImprovedFog.setScalingX(scalingX) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param scalingY float
 --- @return void
-function ImprovedFog.setScalingY(arg0) end
+function ImprovedFog.setScalingY(scalingY) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param secondLayerAlpha float
 --- @return void
-function ImprovedFog.setSecondLayerAlpha(arg0) end
+function ImprovedFog.setSecondLayerAlpha(secondLayerAlpha) end
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param topAlphaHeight float
 --- @return void
-function ImprovedFog.setTopAlphaHeight(arg0) end
+function ImprovedFog.setTopAlphaHeight(topAlphaHeight) end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param nPlayer int
+--- @param z int
 --- @return void
-function ImprovedFog.startRender(arg0, arg1) end
+function ImprovedFog.startRender(nPlayer, z) end
 
 --- @public
 --- @static

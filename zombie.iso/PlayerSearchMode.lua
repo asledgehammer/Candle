@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PlayerSearchMode: Object
+--- @class PlayerSearchMode
 PlayerSearchMode = {};
 
 ------------------------------------
@@ -57,7 +57,7 @@ function PlayerSearchMode:isShaderEnabled() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 SearchMode
+--- @param index int
+--- @param sm SearchMode
 --- @return PlayerSearchMode
-function PlayerSearchMode.new(arg0, arg1) end
+function PlayerSearchMode.new(index, sm) end

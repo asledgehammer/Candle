@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ColorInfo: Object
+--- @class ColorInfo
 ColorInfo = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ ColorInfo = {};
 ------------------------------------
 
 --- @public
---- @param arg0 float
+--- @param s float
 --- @return void
-function ColorInfo:desaturate(arg0) end
+function ColorInfo:desaturate(s) end
 
 --- @public
 --- @return float
@@ -29,17 +29,17 @@ function ColorInfo:getG() end
 function ColorInfo:getR() end
 
 --- @public
---- @param arg0 ColorInfo
---- @param arg1 float
---- @param arg2 ColorInfo
+--- @param to ColorInfo
+--- @param delta float
+--- @param dest ColorInfo
 --- @return void
-function ColorInfo:interp(arg0, arg1, arg2) end
+function ColorInfo:interp(to, delta, dest) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param other ColorInfo
 --- @return ColorInfo
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
-function ColorInfo:set(arg0) end
+--- @overload fun(R: float, G: float, B: float, A: float)
+function ColorInfo:set(other) end
 
 --- @public
 --- @return Color
@@ -60,5 +60,5 @@ function ColorInfo:toString() end
 
 --- @public
 --- @return ColorInfo
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float)
+--- @overload fun(R: float, G: float, B: float, A: float)
 function ColorInfo.new() end

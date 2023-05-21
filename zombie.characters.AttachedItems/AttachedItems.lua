@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AttachedItems: Object
+--- @class AttachedItems
 AttachedItems = {};
 
 ------------------------------------
@@ -12,58 +12,58 @@ AttachedItems = {};
 function AttachedItems:clear() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function AttachedItems:contains(arg0) end
+function AttachedItems:contains(item) end
 
 --- @public
---- @param arg0 AttachedItems
+--- @param other AttachedItems
 --- @return void
-function AttachedItems:copyFrom(arg0) end
+function AttachedItems:copyFrom(other) end
 
 --- @public
---- @param arg0 Consumer
+--- @param c Consumer
 --- @return void
-function AttachedItems:forEach(arg0) end
+function AttachedItems:forEach(c) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return AttachedItem
-function AttachedItems:get(arg0) end
+function AttachedItems:get(index) end
 
 --- @public
 --- @return AttachedLocationGroup
 function AttachedItems:getGroup() end
 
 --- @public
---- @param arg0 String
+--- @param location String
 --- @return InventoryItem
-function AttachedItems:getItem(arg0) end
+function AttachedItems:getItem(location) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return InventoryItem
-function AttachedItems:getItemByIndex(arg0) end
+function AttachedItems:getItemByIndex(index) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return String
-function AttachedItems:getLocation(arg0) end
+function AttachedItems:getLocation(item) end
 
 --- @public
 --- @return boolean
 function AttachedItems:isEmpty() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function AttachedItems:remove(arg0) end
+function AttachedItems:remove(item) end
 
 --- @public
---- @param arg0 String
---- @param arg1 InventoryItem
+--- @param location String
+--- @param item InventoryItem
 --- @return void
-function AttachedItems:setItem(arg0, arg1) end
+function AttachedItems:setItem(location, item) end
 
 --- @public
 --- @return int
@@ -75,6 +75,6 @@ function AttachedItems:size() end
 ------------------------------------
 
 --- @public
---- @param arg0 AttachedLocationGroup
+--- @param group AttachedLocationGroup
 --- @return AttachedItems
-function AttachedItems.new(arg0) end
+function AttachedItems.new(group) end

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BloodBodyPartType: Enum
+--- Created by LEMMY on 7/1/2016.
 --- @field public Back BloodBodyPartType
 --- @field public Foot_L BloodBodyPartType
 --- @field public Foot_R BloodBodyPartType
@@ -28,27 +29,27 @@ BloodBodyPartType = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return BloodBodyPartType
-function BloodBodyPartType.FromIndex(arg0) end
+function BloodBodyPartType.FromIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return BloodBodyPartType
-function BloodBodyPartType.FromString(arg0) end
+function BloodBodyPartType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 BloodBodyPartType
+--- @param BPT BloodBodyPartType
 --- @return int
-function BloodBodyPartType.ToIndex(arg0) end
+function BloodBodyPartType.ToIndex(BPT) end
 
 --- @public
 --- @static
---- @param arg0 BloodBodyPartType
+--- @param BPT BloodBodyPartType
 --- @return String
-function BloodBodyPartType.getDisplayName(arg0) end
+function BloodBodyPartType.getDisplayName(BPT) end
 
 --- @public
 --- @static

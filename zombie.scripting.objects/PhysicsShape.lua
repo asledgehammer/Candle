@@ -1,6 +1,6 @@
 --- @meta
 
---- @class PhysicsShape: Object
+--- @class PhysicsShape
 PhysicsShape = {};
 
 ------------------------------------
@@ -28,9 +28,9 @@ function PhysicsShape:getRotate() end
 function PhysicsShape:getTypeString() end
 
 --- @public
---- @param arg0 float
+--- @param radius float
 --- @return void
-function PhysicsShape:setRadius(arg0) end
+function PhysicsShape:setRadius(radius) end
 
 
 ------------------------------------

@@ -8,15 +8,15 @@ Fixing = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String[]
+--- @param name String
+--- @param strArray String[]
 --- @return void
-function Fixing:Load(arg0, arg1) end
+function Fixing:Load(name, strArray) end
 
 --- @public
---- @param arg0 String
+--- @param require String
 --- @return void
-function Fixing:addRequiredItem(arg0) end
+function Fixing:addRequiredItem(require) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -61,9 +61,9 @@ function Fixing:getRequiredItem() end
 function Fixing:getRequiredItems(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return InventoryItem
-function Fixing:haveGlobalItem(arg0) end
+function Fixing:haveGlobalItem(chr) end
 
 --- @public
 --- @param arg0 IsoGameCharacter
@@ -73,9 +73,9 @@ function Fixing:haveGlobalItem(arg0) end
 function Fixing:haveThisFixer(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 float
+--- @param conditionModifier float
 --- @return void
-function Fixing:setConditionModifier(arg0) end
+function Fixing:setConditionModifier(conditionModifier) end
 
 --- @public
 --- @param arg0 Fixer
@@ -83,15 +83,15 @@ function Fixing:setConditionModifier(arg0) end
 function Fixing:setGlobalItem(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Fixing:setName(arg0) end
+function Fixing:setName(name) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 IsoGameCharacter
+--- @param itemType InventoryItem
+--- @param chr IsoGameCharacter
 --- @return Fixer
-function Fixing:usedInFixer(arg0, arg1) end
+function Fixing:usedInFixer(itemType, chr) end
 
 
 ------------------------------------

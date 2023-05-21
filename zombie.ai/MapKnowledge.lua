@@ -1,6 +1,6 @@
 --- @meta
 
---- @class MapKnowledge: Object
+--- @class MapKnowledge
 MapKnowledge = {};
 
 ------------------------------------
@@ -13,49 +13,49 @@ function MapKnowledge:forget() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(arg0: int, arg1: int, arg2: int)
+--- @overload fun(x: int, y: int, z: int)
 function MapKnowledge:getKnownBlockedEdges() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return KnownBlockedEdges
-function MapKnowledge:getOrCreateKnownBlockedEdges(arg0, arg1, arg2) end
+function MapKnowledge:getOrCreateKnownBlockedEdges(x, y, z) end
 
 --- @public
---- @param arg0 IsoThumpable
---- @param arg1 boolean
+--- @param object IsoThumpable
+--- @param blocked boolean
 --- @return void
-function MapKnowledge:setKnownBlockedDoor(arg0, arg1) end
+function MapKnowledge:setKnownBlockedDoor(object, blocked) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 boolean
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param blocked boolean
 --- @return void
-function MapKnowledge:setKnownBlockedEdgeN(arg0, arg1, arg2, arg3) end
+function MapKnowledge:setKnownBlockedEdgeN(x, y, z, blocked) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 boolean
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param blocked boolean
 --- @return void
-function MapKnowledge:setKnownBlockedEdgeW(arg0, arg1, arg2, arg3) end
+function MapKnowledge:setKnownBlockedEdgeW(x, y, z, blocked) end
 
 --- @public
---- @param arg0 IsoWindow
---- @param arg1 boolean
+--- @param object IsoWindow
+--- @param blocked boolean
 --- @return void
-function MapKnowledge:setKnownBlockedWindow(arg0, arg1) end
+function MapKnowledge:setKnownBlockedWindow(object, blocked) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 boolean
+--- @param object IsoObject
+--- @param blocked boolean
 --- @return void
-function MapKnowledge:setKnownBlockedWindowFrame(arg0, arg1) end
+function MapKnowledge:setKnownBlockedWindowFrame(object, blocked) end
 
 
 ------------------------------------

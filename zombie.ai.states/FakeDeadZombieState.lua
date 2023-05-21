@@ -18,19 +18,19 @@ function FakeDeadZombieState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function FakeDeadZombieState:enter(arg0) end
+function FakeDeadZombieState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function FakeDeadZombieState:execute(arg0) end
+function FakeDeadZombieState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function FakeDeadZombieState:exit(arg0) end
+function FakeDeadZombieState:exit(owner) end
 
 
 ------------------------------------

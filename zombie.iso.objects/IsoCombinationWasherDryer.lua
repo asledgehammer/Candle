@@ -20,10 +20,10 @@ function IsoCombinationWasherDryer:getObjectName() end
 function IsoCombinationWasherDryer:isActivated() end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoCombinationWasherDryer:isItemAllowedInContainer(arg0, arg1) end
+function IsoCombinationWasherDryer:isItemAllowedInContainer(container, item) end
 
 --- @public
 --- @return boolean
@@ -34,33 +34,33 @@ function IsoCombinationWasherDryer:isModeDryer() end
 function IsoCombinationWasherDryer:isModeWasher() end
 
 --- @public
---- @param arg0 ItemContainer
---- @param arg1 InventoryItem
+--- @param container ItemContainer
+--- @param item InventoryItem
 --- @return boolean
-function IsoCombinationWasherDryer:isRemoveItemAllowedFromContainer(arg0, arg1) end
+function IsoCombinationWasherDryer:isRemoveItemAllowedFromContainer(container, item) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoCombinationWasherDryer:load(arg0, arg1, arg2) end
+function IsoCombinationWasherDryer:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ByteBuffer
+--- @param change String
+--- @param bb ByteBuffer
 --- @return void
-function IsoCombinationWasherDryer:loadChange(arg0, arg1) end
+function IsoCombinationWasherDryer:loadChange(change, bb) end
 
 --- @public
 --- @return void
 function IsoCombinationWasherDryer:removeFromWorld() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoCombinationWasherDryer:save(arg0, arg1) end
+function IsoCombinationWasherDryer:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param arg0 String
@@ -70,9 +70,9 @@ function IsoCombinationWasherDryer:save(arg0, arg1) end
 function IsoCombinationWasherDryer:saveChange(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 boolean
+--- @param activated boolean
 --- @return void
-function IsoCombinationWasherDryer:setActivated(arg0) end
+function IsoCombinationWasherDryer:setActivated(activated) end
 
 --- @public
 --- @return void
@@ -92,7 +92,7 @@ function IsoCombinationWasherDryer:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoCombinationWasherDryer
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite)
-function IsoCombinationWasherDryer.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite)
+function IsoCombinationWasherDryer.new(cell) end

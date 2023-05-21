@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ErosionConfig: Object
+--- @class ErosionConfig
 ErosionConfig = {};
 
 ------------------------------------
@@ -16,24 +16,24 @@ function ErosionConfig:consolePrint() end
 function ErosionConfig:getDebug() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function ErosionConfig:load(arg0) end
+function ErosionConfig:load(bb) end
 
 --- @public
---- @param arg0 String
+--- @param _file String
 --- @return boolean
-function ErosionConfig:readFile(arg0) end
+function ErosionConfig:readFile(_file) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function ErosionConfig:save(arg0) end
+function ErosionConfig:save(bb) end
 
 --- @public
---- @param arg0 String
+--- @param _file String
 --- @return void
-function ErosionConfig:writeFile(arg0) end
+function ErosionConfig:writeFile(_file) end
 
 
 ------------------------------------

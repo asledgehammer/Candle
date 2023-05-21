@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ItemRecipe: Object
+--- @class ItemRecipe
 ItemRecipe = {};
 
 ------------------------------------
@@ -24,9 +24,9 @@ function ItemRecipe:getName() end
 function ItemRecipe:getUse() end
 
 --- @public
---- @param arg0 String
+--- @param module String
 --- @return void
-function ItemRecipe:setModule(arg0) end
+function ItemRecipe:setModule(module) end
 
 
 ------------------------------------
@@ -34,8 +34,8 @@ function ItemRecipe:setModule(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 Integer
+--- @param name String
+--- @param module String
+--- @param use Integer
 --- @return ItemRecipe
-function ItemRecipe.new(arg0, arg1, arg2) end
+function ItemRecipe.new(name, module, use) end

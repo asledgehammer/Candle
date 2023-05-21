@@ -1,6 +1,9 @@
 --- @meta
 
 --- @class RDSBandPractice: RandomizedDeadSurvivorBase
+--- Need a garage with a size of at least 10 tiles
+ Spawn some rocker zombies &amp; music instruments on ground &amp; shelves
+ Corpse with a guitar in his hand
 RDSBandPractice = {};
 
 ------------------------------------
@@ -8,15 +11,15 @@ RDSBandPractice = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RDSBandPractice:isValid(arg0, arg1) end
+function RDSBandPractice:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSBandPractice:randomizeDeadSurvivor(arg0) end
+function RDSBandPractice:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

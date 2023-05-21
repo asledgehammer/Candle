@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBOther: RandomizedBuildingBase
+--- Building full of toilet paper
 RBOther = {};
 
 ------------------------------------
@@ -14,9 +15,9 @@ RBOther = {};
 function RBOther:isValid(arg0, arg1) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RBOther:randomizeBuilding(arg0) end
+function RBOther:randomizeBuilding(def) end
 
 
 ------------------------------------

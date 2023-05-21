@@ -8,9 +8,9 @@ BSFurnace = {};
 ------------------------------------
 
 --- @public
---- @param arg0 float
+--- @param amount float
 --- @return void
-function BSFurnace:addFuel(arg0) end
+function BSFurnace:addFuel(amount) end
 
 --- @public
 --- @return void
@@ -37,9 +37,9 @@ function BSFurnace:getHeatDecrease() end
 function BSFurnace:getHeatIncrease() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param meltItem InventoryItem
 --- @return int
-function BSFurnace:getMeltingSkill(arg0) end
+function BSFurnace:getMeltingSkill(meltItem) end
 
 --- @public
 --- @return String
@@ -50,51 +50,51 @@ function BSFurnace:getObjectName() end
 function BSFurnace:isFireStarted() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function BSFurnace:load(arg0, arg1, arg2) end
+function BSFurnace:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @return void
 function BSFurnace:removeFromWorld() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function BSFurnace:save(arg0, arg1) end
+function BSFurnace:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 boolean
+--- @param fireStarted boolean
 --- @return void
-function BSFurnace:setFireStarted(arg0) end
+function BSFurnace:setFireStarted(fireStarted) end
 
 --- @public
---- @param arg0 float
+--- @param amount float
 --- @return void
-function BSFurnace:setFuelAmount(arg0) end
+function BSFurnace:setFuelAmount(amount) end
 
 --- @public
---- @param arg0 float
+--- @param fuelDecrease float
 --- @return void
-function BSFurnace:setFuelDecrease(arg0) end
+function BSFurnace:setFuelDecrease(fuelDecrease) end
 
 --- @public
---- @param arg0 float
+--- @param heat float
 --- @return void
-function BSFurnace:setHeat(arg0) end
+function BSFurnace:setHeat(heat) end
 
 --- @public
---- @param arg0 float
+--- @param heatDecrease float
 --- @return void
-function BSFurnace:setHeatDecrease(arg0) end
+function BSFurnace:setHeatDecrease(heatDecrease) end
 
 --- @public
---- @param arg0 float
+--- @param heatIncrease float
 --- @return void
-function BSFurnace:setHeatIncrease(arg0) end
+function BSFurnace:setHeatIncrease(heatIncrease) end
 
 --- @public
 --- @return void
@@ -114,7 +114,7 @@ function BSFurnace:updateLight() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return BSFurnace
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String)
-function BSFurnace.new(arg0) end
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, sprite: String, litSprite: String)
+function BSFurnace.new(cell) end

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Source: Object
+--- @class Source
 Source = {};
 
 ------------------------------------
@@ -32,24 +32,24 @@ function Source:isDestroy() end
 function Source:isKeep() end
 
 --- @public
---- @param arg0 float
+--- @param count float
 --- @return void
-function Source:setCount(arg0) end
+function Source:setCount(count) end
 
 --- @public
---- @param arg0 boolean
+--- @param destroy boolean
 --- @return void
-function Source:setDestroy(arg0) end
+function Source:setDestroy(destroy) end
 
 --- @public
---- @param arg0 boolean
+--- @param keep boolean
 --- @return void
-function Source:setKeep(arg0) end
+function Source:setKeep(keep) end
 
 --- @public
---- @param arg0 float
+--- @param use float
 --- @return void
-function Source:setUse(arg0) end
+function Source:setUse(use) end
 
 
 ------------------------------------

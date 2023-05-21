@@ -10,23 +10,23 @@ Clothing = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param Sprite String
 --- @return Clothing
-function Clothing.CreateFromSprite(arg0) end
+function Clothing.CreateFromSprite(Sprite) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fabric InventoryItem
 --- @return int
-function Clothing.getBiteDefenseFromItem(arg0, arg1) end
+function Clothing.getBiteDefenseFromItem(chr, fabric) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fabric InventoryItem
 --- @return int
-function Clothing.getScratchDefenseFromItem(arg0, arg1) end
+function Clothing.getScratchDefenseFromItem(chr, fabric) end
 
 
 ------------------------------------
@@ -34,9 +34,9 @@ function Clothing.getScratchDefenseFromItem(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function Clothing:CanStack(arg0) end
+function Clothing:CanStack(item) end
 
 --- @public
 --- @param arg0 ObjectTooltip
@@ -53,33 +53,33 @@ function Clothing:IsClothing() end
 function Clothing:Unwear() end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 boolean
+--- @param bCrafting boolean
+--- @param bInContainer boolean
 --- @return void
-function Clothing:Use(arg0, arg1) end
+function Clothing:Use(bCrafting, bInContainer) end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 BloodBodyPartType
---- @param arg2 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param part BloodBodyPartType
+--- @param fabric InventoryItem
 --- @return void
-function Clothing:addPatch(arg0, arg1, arg2) end
+function Clothing:addPatch(chr, part, fabric) end
 
 --- @public
 --- @return boolean
 function Clothing:canBe3DRender() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 BloodBodyPartType
---- @param arg2 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param part BloodBodyPartType
+--- @param fabric InventoryItem
 --- @return boolean
-function Clothing:canFullyRestore(arg0, arg1, arg2) end
+function Clothing:canFullyRestore(chr, part, fabric) end
 
 --- @public
---- @param arg0 Clothing
+--- @param newClothing Clothing
 --- @return void
-function Clothing:copyPatchesTo(arg0) end
+function Clothing:copyPatchesTo(newClothing) end
 
 --- @public
 --- @return boolean
@@ -98,18 +98,18 @@ function Clothing:getBiteDefense() end
 function Clothing:getBloodLevel() end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param part BloodBodyPartType
 --- @return float
-function Clothing:getBloodLevelForPart(arg0) end
+function Clothing:getBloodLevelForPart(part) end
 
 --- @public
 --- @return float
 function Clothing:getBloodlevel() end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param part BloodBodyPartType
 --- @return float
-function Clothing:getBloodlevelForPart(arg0) end
+function Clothing:getBloodlevelForPart(part) end
 
 --- @public
 --- @return float
@@ -152,11 +152,11 @@ function Clothing:getConditionLowerChance() end
 function Clothing:getCoveredParts() end
 
 --- @public
---- @param arg0 BloodBodyPartType
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param part BloodBodyPartType
+--- @param bite boolean
+--- @param bullet boolean
 --- @return float
-function Clothing:getDefForPart(arg0, arg1, arg2) end
+function Clothing:getDefForPart(part, bite, bullet) end
 
 --- @public
 --- @return float
@@ -187,9 +187,9 @@ function Clothing:getNeckProtectionModifier() end
 function Clothing:getPalette() end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param part BloodBodyPartType
 --- @return ClothingPatch
-function Clothing:getPatchType(arg0) end
+function Clothing:getPatchType(part) end
 
 --- @public
 --- @return int
@@ -260,131 +260,131 @@ function Clothing:isRemoveOnBroken() end
 function Clothing:isWorn() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Clothing:load(arg0, arg1) end
+function Clothing:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param part BloodBodyPartType
 --- @return void
-function Clothing:removePatch(arg0) end
+function Clothing:removePatch(part) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param net boolean
 --- @return void
-function Clothing:save(arg0, arg1) end
+function Clothing:save(output, net) end
 
 --- @public
---- @param arg0 float
+--- @param biteDefense float
 --- @return void
-function Clothing:setBiteDefense(arg0) end
+function Clothing:setBiteDefense(biteDefense) end
 
 --- @public
---- @param arg0 float
+--- @param delta float
 --- @return void
-function Clothing:setBloodLevel(arg0) end
+function Clothing:setBloodLevel(delta) end
 
 --- @public
---- @param arg0 float
+--- @param bulletDefense float
 --- @return void
-function Clothing:setBulletDefense(arg0) end
+function Clothing:setBulletDefense(bulletDefense) end
 
 --- @public
---- @param arg0 Boolean
+--- @param canHaveHoles Boolean
 --- @return void
-function Clothing:setCanHaveHoles(arg0) end
+function Clothing:setCanHaveHoles(canHaveHoles) end
 
 --- @public
---- @param arg0 int
+--- @param chanceToFall int
 --- @return void
-function Clothing:setChanceToFall(arg0) end
+function Clothing:setChanceToFall(chanceToFall) end
 
 --- @public
---- @param arg0 float
+--- @param combatSpeedModifier float
 --- @return void
-function Clothing:setCombatSpeedModifier(arg0) end
+function Clothing:setCombatSpeedModifier(combatSpeedModifier) end
 
 --- @public
---- @param arg0 int
+--- @param Condition int
 --- @return void
-function Clothing:setCondition(arg0) end
+function Clothing:setCondition(Condition) end
 
 --- @public
---- @param arg0 int
+--- @param conditionLowerChance int
 --- @return void
-function Clothing:setConditionLowerChance(arg0) end
+function Clothing:setConditionLowerChance(conditionLowerChance) end
 
 --- @public
---- @param arg0 float
+--- @param delta float
 --- @return void
-function Clothing:setDirtyness(arg0) end
+function Clothing:setDirtyness(delta) end
 
 --- @public
---- @param arg0 float
+--- @param insulation float
 --- @return void
-function Clothing:setInsulation(arg0) end
+function Clothing:setInsulation(insulation) end
 
 --- @public
---- @param arg0 float
+--- @param neckProtectionModifier float
 --- @return void
-function Clothing:setNeckProtectionModifier(arg0) end
+function Clothing:setNeckProtectionModifier(neckProtectionModifier) end
 
 --- @public
---- @param arg0 String
+--- @param palette String
 --- @return void
-function Clothing:setPalette(arg0) end
+function Clothing:setPalette(palette) end
 
 --- @public
---- @param arg0 Boolean
+--- @param removeOnBroken Boolean
 --- @return void
-function Clothing:setRemoveOnBroken(arg0) end
+function Clothing:setRemoveOnBroken(removeOnBroken) end
 
 --- @public
---- @param arg0 float
+--- @param runSpeedModifier float
 --- @return void
-function Clothing:setRunSpeedModifier(arg0) end
+function Clothing:setRunSpeedModifier(runSpeedModifier) end
 
 --- @public
---- @param arg0 float
+--- @param scratchDefense float
 --- @return void
-function Clothing:setScratchDefense(arg0) end
+function Clothing:setScratchDefense(scratchDefense) end
 
 --- @public
---- @param arg0 String
+--- @param SpriteName String
 --- @return void
-function Clothing:setSpriteName(arg0) end
+function Clothing:setSpriteName(SpriteName) end
 
 --- @public
---- @param arg0 float
+--- @param stompPower float
 --- @return void
-function Clothing:setStompPower(arg0) end
+function Clothing:setStompPower(stompPower) end
 
 --- @public
---- @param arg0 float
+--- @param temperature float
 --- @return void
-function Clothing:setTemperature(arg0) end
+function Clothing:setTemperature(temperature) end
 
 --- @public
---- @param arg0 float
+--- @param waterResistance float
 --- @return void
-function Clothing:setWaterResistance(arg0) end
+function Clothing:setWaterResistance(waterResistance) end
 
 --- @public
---- @param arg0 float
+--- @param weight float
 --- @return void
-function Clothing:setWeightWet(arg0) end
+function Clothing:setWeightWet(weight) end
 
 --- @public
---- @param arg0 float
+--- @param percent float
 --- @return void
-function Clothing:setWetness(arg0) end
+function Clothing:setWetness(percent) end
 
 --- @public
---- @param arg0 float
+--- @param windresistance float
 --- @return void
-function Clothing:setWindresistance(arg0) end
+function Clothing:setWindresistance(windresistance) end
 
 --- @public
 --- @return String
@@ -396,7 +396,7 @@ function Clothing:update() end
 
 --- @public
 --- @return void
---- @overload fun(arg0: boolean)
+--- @overload fun(bIgnoreEquipped: boolean)
 function Clothing:updateWetness() end
 
 
@@ -405,11 +405,11 @@ function Clothing:updateWetness() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 Item
---- @param arg4 String
---- @param arg5 String
+--- @param module String
+--- @param name String
+--- @param itemType String
+--- @param item Item
+--- @param palette String
+--- @param SpriteName String
 --- @return Clothing
-function Clothing.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+function Clothing.new(module, name, itemType, item, palette, SpriteName) end

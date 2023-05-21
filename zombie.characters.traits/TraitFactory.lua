@@ -1,6 +1,6 @@
 --- @meta
 
---- @class TraitFactory: Object
+--- @class TraitFactory
 --- @field public TraitMap LinkedHashMap
 TraitFactory = {};
 
@@ -15,20 +15,20 @@ function TraitFactory.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 String
---- @param arg4 boolean
+--- @param type String
+--- @param name String
+--- @param cost int
+--- @param desc String
+--- @param profession boolean
 --- @return Trait
---- @overload fun(arg0: String, arg1: String, arg2: int, arg3: String, arg4: boolean, arg5: boolean)
-function TraitFactory.addTrait(arg0, arg1, arg2, arg3, arg4) end
+--- @overload fun(type: String, name: String, cost: int, desc: String, profession: boolean, removeInMP: boolean)
+function TraitFactory.addTrait(type, name, cost, desc, profession) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return Trait
-function TraitFactory.getTrait(arg0) end
+function TraitFactory.getTrait(name) end
 
 --- @public
 --- @static
@@ -42,10 +42,10 @@ function TraitFactory.init() end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param a String
+--- @param b String
 --- @return void
-function TraitFactory.setMutualExclusive(arg0, arg1) end
+function TraitFactory.setMutualExclusive(a, b) end
 
 --- @public
 --- @static

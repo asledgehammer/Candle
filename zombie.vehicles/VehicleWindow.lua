@@ -1,6 +1,6 @@
 --- @meta
 
---- @class VehicleWindow: Object
+--- @class VehicleWindow
 VehicleWindow = {};
 
 ------------------------------------
@@ -8,9 +8,9 @@ VehicleWindow = {};
 ------------------------------------
 
 --- @public
---- @param arg0 int
+--- @param amount int
 --- @return void
-function VehicleWindow:damage(arg0) end
+function VehicleWindow:damage(amount) end
 
 --- @public
 --- @return int
@@ -21,9 +21,9 @@ function VehicleWindow:getHealth() end
 function VehicleWindow:getOpenDelta() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function VehicleWindow:hit(arg0) end
+function VehicleWindow:hit(chr) end
 
 --- @public
 --- @param arg0 Window
@@ -47,29 +47,29 @@ function VehicleWindow:isOpen() end
 function VehicleWindow:isOpenable() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function VehicleWindow:load(arg0, arg1) end
+function VehicleWindow:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function VehicleWindow:save(arg0) end
+function VehicleWindow:save(output) end
 
 --- @public
---- @param arg0 int
+--- @param health int
 --- @return void
-function VehicleWindow:setHealth(arg0) end
+function VehicleWindow:setHealth(health) end
 
 --- @public
---- @param arg0 boolean
+--- @param open boolean
 --- @return void
-function VehicleWindow:setOpen(arg0) end
+function VehicleWindow:setOpen(open) end
 
 --- @public
---- @param arg0 float
+--- @param delta float
 --- @return void
-function VehicleWindow:setOpenDelta(arg0) end
+function VehicleWindow:setOpenDelta(delta) end
 
 

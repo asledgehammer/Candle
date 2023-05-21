@@ -1,6 +1,8 @@
 --- @meta
 
---- @class AngelCodeFont: Object
+--- @class AngelCodeFont
+--- A font implementation that will parse BMFont format font files. The font files can be output
+ by Hiero, which is included with Slick, and also the AngelCode font tool available at:
 --- @implement Font
 --- @implement AssetStateObserver
 --- @field public curA float
@@ -21,39 +23,39 @@ AngelCodeFont = {};
 function AngelCodeFont:destroy() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 String
+--- @param x float
+--- @param y float
+--- @param text String
 --- @return void
---- @overload fun(arg0: float, arg1: float, arg2: String, arg3: Color)
---- @overload fun(arg0: float, arg1: float, arg2: String, arg3: Color, arg4: int, arg5: int)
---- @overload fun(arg0: float, arg1: float, arg2: String, arg3: float, arg4: float, arg5: float, arg6: float)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: String, arg4: float, arg5: float, arg6: float, arg7: float)
---- @overload fun(arg0: float, arg1: float, arg2: String, arg3: float, arg4: float, arg5: float, arg6: float, arg7: int, arg8: int)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: String, arg4: float, arg5: float, arg6: float, arg7: float, arg8: int, arg9: int)
-function AngelCodeFont:drawString(arg0, arg1, arg2) end
+--- @overload fun(x: float, y: float, text: String, col: Color)
+--- @overload fun(x: float, y: float, text: String, col: Color, startIndex: int, endIndex: int)
+--- @overload fun(x: float, y: float, text: String, r: float, g: float, b: float, a: float)
+--- @overload fun(x: float, y: float, scale: float, text: String, r: float, g: float, b: float, a: float)
+--- @overload fun(x: float, y: float, text: String, r: float, g: float, b: float, a: float, startIndex: int, endIndex: int)
+--- @overload fun(x: float, y: float, scale: float, text: String, r: float, g: float, b: float, a: float, startIndex: int, endIndex: int)
+function AngelCodeFont:drawString(x, y, text) end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return int
-function AngelCodeFont:getHeight(arg0) end
+function AngelCodeFont:getHeight(text) end
 
 --- @public
 --- @return int
 function AngelCodeFont:getLineHeight() end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return int
---- @overload fun(arg0: String, arg1: boolean)
---- @overload fun(arg0: String, arg1: int, arg2: int)
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: boolean)
-function AngelCodeFont:getWidth(arg0) end
+--- @overload fun(text: String, xAdvance: boolean)
+--- @overload fun(text: String, start: int, __end: int)
+--- @overload fun(text: String, start: int, __end: int, xadvance: boolean)
+function AngelCodeFont:getWidth(text) end
 
 --- @public
---- @param arg0 String
+--- @param text String
 --- @return int
-function AngelCodeFont:getYOffset(arg0) end
+function AngelCodeFont:getYOffset(text) end
 
 --- @public
 --- @return boolean
@@ -72,7 +74,7 @@ function AngelCodeFont:onStateChanged(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 Texture
+--- @param fntFile String
+--- @param image Texture
 --- @return AngelCodeFont
-function AngelCodeFont.new(arg0, arg1) end
+function AngelCodeFont.new(fntFile, image) end

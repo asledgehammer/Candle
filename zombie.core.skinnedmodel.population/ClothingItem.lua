@@ -11,10 +11,10 @@ ClothingItem = {};
 
 --- @public
 --- @static
---- @param arg0 ClothingItemReference
---- @param arg1 CharacterMask
+--- @param itemRef ClothingItemReference
+--- @param in_out_mask CharacterMask
 --- @return void
-function ClothingItem.tryGetCombinedMask(arg0, arg1) end
+function ClothingItem.tryGetCombinedMask(itemRef, in_out_mask) end
 
 
 ------------------------------------
@@ -38,9 +38,9 @@ function ClothingItem:getAllowRandomTint() end
 function ClothingItem:getBaseTextures() end
 
 --- @public
---- @param arg0 CharacterMask
+--- @param in_out_mask CharacterMask
 --- @return void
-function ClothingItem:getCombinedMask(arg0) end
+function ClothingItem:getCombinedMask(in_out_mask) end
 
 --- @public
 --- @return String
@@ -55,9 +55,9 @@ function ClothingItem:getFemaleModel() end
 function ClothingItem:getMaleModel() end
 
 --- @public
---- @param arg0 boolean
+--- @param female boolean
 --- @return String
-function ClothingItem:getModel(arg0) end
+function ClothingItem:getModel(female) end
 
 --- @public
 --- @return ArrayList
@@ -89,7 +89,7 @@ function ClothingItem:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 AssetPath
---- @param arg1 AssetManager
+--- @param path AssetPath
+--- @param assetManager AssetManager
 --- @return ClothingItem
-function ClothingItem.new(arg0, arg1) end
+function ClothingItem.new(path, assetManager) end

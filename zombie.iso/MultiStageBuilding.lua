@@ -1,6 +1,6 @@
 --- @meta
 
---- @class MultiStageBuilding: Object
+--- @class MultiStageBuilding
 --- @field public stages ArrayList
 MultiStageBuilding = {};
 
@@ -16,11 +16,11 @@ function MultiStageBuilding.addStage(arg0) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoObject
---- @param arg2 boolean
+--- @param chr IsoGameCharacter
+--- @param itemClicked IsoObject
+--- @param cheat boolean
 --- @return ArrayList
-function MultiStageBuilding.getStages(arg0, arg1, arg2) end
+function MultiStageBuilding.getStages(chr, itemClicked, cheat) end
 
 
 ------------------------------------

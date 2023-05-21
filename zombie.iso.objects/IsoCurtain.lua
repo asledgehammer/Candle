@@ -9,9 +9,9 @@ IsoCurtain = {};
 
 --- @public
 --- @static
---- @param arg0 IsoObject
+--- @param curtain IsoObject
 --- @return boolean
-function IsoCurtain.isSheet(arg0) end
+function IsoCurtain.isSheet(curtain) end
 
 
 ------------------------------------
@@ -23,29 +23,29 @@ function IsoCurtain.isSheet(arg0) end
 function IsoCurtain:IsOpen() end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 IsoGridSquare
+--- @param from IsoGridSquare
+--- @param to IsoGridSquare
 --- @return VisionResult
-function IsoCurtain:TestVision(arg0, arg1) end
+function IsoCurtain:TestVision(from, to) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function IsoCurtain:ToggleDoor(arg0) end
+function IsoCurtain:ToggleDoor(chr) end
 
 --- @public
 --- @return void
 function IsoCurtain:ToggleDoorSilent() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
-function IsoCurtain:canInteractWith(arg0) end
+function IsoCurtain:canInteractWith(chr) end
 
 --- @public
---- @param arg0 Vector2
+--- @param pos Vector2
 --- @return Vector2
-function IsoCurtain:getFacingPosition(arg0) end
+function IsoCurtain:getFacingPosition(pos) end
 
 --- @public
 --- @return boolean
@@ -68,58 +68,58 @@ function IsoCurtain:getOppositeSquare() end
 function IsoCurtain:getSoundPrefix() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param square2 IsoGridSquare
 --- @return boolean
---- @overload fun(arg0: IsoGridSquare, arg1: IsoGridSquare)
-function IsoCurtain:isAdjacentToSquare(arg0) end
+--- @overload fun(square1: IsoGridSquare, square2: IsoGridSquare)
+function IsoCurtain:isAdjacentToSquare(square2) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 boolean
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoCurtain:load(arg0, arg1, arg2) end
+function IsoCurtain:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return boolean
-function IsoCurtain:onMouseLeftClick(arg0, arg1) end
+function IsoCurtain:onMouseLeftClick(x, y) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function IsoCurtain:removeSheet(arg0) end
+function IsoCurtain:removeSheet(chr) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 ColorInfo
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 Shader
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param col ColorInfo
+--- @param bDoAttached boolean
+--- @param bWallLightingPass boolean
+--- @param shader Shader
 --- @return void
-function IsoCurtain:render(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function IsoCurtain:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 boolean
+--- @param output ByteBuffer
+--- @param IS_DEBUG_SAVE boolean
 --- @return void
-function IsoCurtain:save(arg0, arg1) end
+function IsoCurtain:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 byte
---- @param arg2 UdpConnection
+--- @param bRemote boolean
+--- @param val byte
+--- @param source UdpConnection
 --- @return void
---- @overload fun(arg0: boolean, arg1: byte, arg2: UdpConnection, arg3: ByteBuffer)
-function IsoCurtain:syncIsoObject(arg0, arg1, arg2) end
+--- @overload fun(bRemote: boolean, val: byte, source: UdpConnection, bb: ByteBuffer)
+function IsoCurtain:syncIsoObject(bRemote, val, source) end
 
 --- @public
---- @param arg0 ByteBufferWriter
+--- @param b ByteBufferWriter
 --- @return void
-function IsoCurtain:syncIsoObjectSend(arg0) end
+function IsoCurtain:syncIsoObjectSend(b) end
 
 
 ------------------------------------
@@ -127,8 +127,8 @@ function IsoCurtain:syncIsoObjectSend(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoCell
+--- @param cell IsoCell
 --- @return IsoCurtain
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: IsoSprite, arg3: boolean, arg4: boolean)
-function IsoCurtain.new(arg0) end
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean, spriteclosed: boolean)
+function IsoCurtain.new(cell) end

@@ -12,52 +12,52 @@ DummyCharacterSoundEmitter = {};
 function DummyCharacterSoundEmitter:hasSoundsToStart() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return boolean
-function DummyCharacterSoundEmitter:hasSustainPoints(arg0) end
+function DummyCharacterSoundEmitter:hasSustainPoints(handle) end
 
 --- @public
 --- @return boolean
 function DummyCharacterSoundEmitter:isClear() end
 
 --- @public
---- @param arg0 long
+--- @param channel long
 --- @return boolean
-function DummyCharacterSoundEmitter:isPlaying(arg0) end
+function DummyCharacterSoundEmitter:isPlaying(channel) end
 
 --- @public
---- @param arg0 String
---- @param arg1 float
+--- @param file String
+--- @param volume float
 --- @return void
-function DummyCharacterSoundEmitter:playFootsteps(arg0, arg1) end
+function DummyCharacterSoundEmitter:playFootsteps(file, volume) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
---- @overload fun(arg0: String, arg1: IsoObject)
-function DummyCharacterSoundEmitter:playSound(arg0) end
+--- @overload fun(file: String, proxy: IsoObject)
+function DummyCharacterSoundEmitter:playSound(file) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoObject
+--- @param file String
+--- @param proxy IsoObject
 --- @return long
-function DummyCharacterSoundEmitter:playSoundImpl(arg0, arg1) end
+function DummyCharacterSoundEmitter:playSoundImpl(file, proxy) end
 
 --- @public
---- @param arg0 String
+--- @param file String
 --- @return long
-function DummyCharacterSoundEmitter:playVocals(arg0) end
+function DummyCharacterSoundEmitter:playVocals(file) end
 
 --- @public
 --- @return void
 function DummyCharacterSoundEmitter:register() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param x float
+--- @param y float
+--- @param z float
 --- @return void
-function DummyCharacterSoundEmitter:set(arg0, arg1, arg2) end
+function DummyCharacterSoundEmitter:set(x, y, z) end
 
 --- @public
 --- @param arg0 long
@@ -67,45 +67,45 @@ function DummyCharacterSoundEmitter:set(arg0, arg1, arg2) end
 function DummyCharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
+--- @param handle long
+--- @param pitch float
 --- @return void
-function DummyCharacterSoundEmitter:setPitch(arg0, arg1) end
+function DummyCharacterSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
---- @param arg0 long
---- @param arg1 float
+--- @param handle long
+--- @param volume float
 --- @return void
-function DummyCharacterSoundEmitter:setVolume(arg0, arg1) end
+function DummyCharacterSoundEmitter:setVolume(handle, volume) end
 
 --- @public
 --- @return void
 function DummyCharacterSoundEmitter:stopAll() end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function DummyCharacterSoundEmitter:stopOrTriggerSound(arg0) end
+function DummyCharacterSoundEmitter:stopOrTriggerSound(handle) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function DummyCharacterSoundEmitter:stopOrTriggerSoundByName(arg0) end
+function DummyCharacterSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
---- @param arg0 long
+--- @param channel long
 --- @return int
-function DummyCharacterSoundEmitter:stopSound(arg0) end
+function DummyCharacterSoundEmitter:stopSound(channel) end
 
 --- @public
---- @param arg0 String
+--- @param soundName String
 --- @return int
-function DummyCharacterSoundEmitter:stopSoundByName(arg0) end
+function DummyCharacterSoundEmitter:stopSoundByName(soundName) end
 
 --- @public
---- @param arg0 long
+--- @param handle long
 --- @return void
-function DummyCharacterSoundEmitter:stopSoundLocal(arg0) end
+function DummyCharacterSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return void
@@ -121,6 +121,6 @@ function DummyCharacterSoundEmitter:unregister() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return DummyCharacterSoundEmitter
-function DummyCharacterSoundEmitter.new(arg0) end
+function DummyCharacterSoundEmitter.new(chr) end

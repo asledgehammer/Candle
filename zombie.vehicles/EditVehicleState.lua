@@ -27,15 +27,15 @@ function EditVehicleState:enter() end
 function EditVehicleState:exit() end
 
 --- @public
---- @param arg0 String
+--- @param func String
 --- @return Object
-function EditVehicleState:fromLua0(arg0) end
+function EditVehicleState:fromLua0(func) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Object
+--- @param func String
+--- @param arg0 Object
 --- @return Object
-function EditVehicleState:fromLua1(arg0, arg1) end
+function EditVehicleState:fromLua1(func, arg0) end
 
 --- @public
 --- @return void
@@ -46,9 +46,9 @@ function EditVehicleState:reenter() end
 function EditVehicleState:render() end
 
 --- @public
---- @param arg0 String
+--- @param scriptName String
 --- @return void
-function EditVehicleState:setScript(arg0) end
+function EditVehicleState:setScript(scriptName) end
 
 --- @public
 --- @param arg0 KahluaTable

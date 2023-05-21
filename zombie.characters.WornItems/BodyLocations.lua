@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BodyLocations: Object
+--- @class BodyLocations
 BodyLocations = {};
 
 ------------------------------------
@@ -14,9 +14,9 @@ function BodyLocations.Reset() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param id String
 --- @return BodyLocationGroup
-function BodyLocations.getGroup(arg0) end
+function BodyLocations.getGroup(id) end
 
 
 ------------------------------------

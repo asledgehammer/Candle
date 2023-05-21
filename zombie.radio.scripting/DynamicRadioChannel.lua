@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DynamicRadioChannel: RadioChannel
+--- TurboTuTone.
 DynamicRadioChannel = {};
 
 ------------------------------------
@@ -8,10 +9,10 @@ DynamicRadioChannel = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param guid String
+--- @param line int
 --- @return void
-function DynamicRadioChannel:LoadAiringBroadcast(arg0, arg1) end
+function DynamicRadioChannel:LoadAiringBroadcast(guid, line) end
 
 
 ------------------------------------
@@ -19,9 +20,9 @@ function DynamicRadioChannel:LoadAiringBroadcast(arg0, arg1) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 ChannelCategory
+--- @param n String
+--- @param freq int
+--- @param c ChannelCategory
 --- @return DynamicRadioChannel
---- @overload fun(arg0: String, arg1: int, arg2: ChannelCategory, arg3: String)
-function DynamicRadioChannel.new(arg0, arg1, arg2) end
+--- @overload fun(n: String, freq: int, c: ChannelCategory, guid: String)
+function DynamicRadioChannel.new(n, freq, c) end

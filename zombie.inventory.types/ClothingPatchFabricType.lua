@@ -12,15 +12,15 @@ ClothingPatchFabricType = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param index int
 --- @return ClothingPatchFabricType
-function ClothingPatchFabricType.fromIndex(arg0) end
+function ClothingPatchFabricType.fromIndex(index) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param type String
 --- @return ClothingPatchFabricType
-function ClothingPatchFabricType.fromType(arg0) end
+function ClothingPatchFabricType.fromType(type) end
 
 --- @public
 --- @static

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ExitOption: Object
+--- @class ExitOption
 ExitOption = {};
 
 ------------------------------------
@@ -25,8 +25,8 @@ function ExitOption:getStartDelay() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
+--- @param name String
+--- @param rollchance int
+--- @param startdelay int
 --- @return ExitOption
-function ExitOption.new(arg0, arg1, arg2) end
+function ExitOption.new(name, rollchance, startdelay) end

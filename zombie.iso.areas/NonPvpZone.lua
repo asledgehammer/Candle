@@ -1,6 +1,6 @@
 --- @meta
 
---- @class NonPvpZone: Object
+--- @class NonPvpZone
 --- @field public nonPvpZoneList ArrayList
 NonPvpZone = {};
 
@@ -10,13 +10,13 @@ NonPvpZone = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param title String
+--- @param x int
+--- @param y int
+--- @param x2 int
+--- @param y2 int
 --- @return NonPvpZone
-function NonPvpZone.addNonPvpZone(arg0, arg1, arg2, arg3, arg4) end
+function NonPvpZone.addNonPvpZone(title, x, y, x2, y2) end
 
 --- @public
 --- @static
@@ -25,22 +25,22 @@ function NonPvpZone.getAllZones() end
 
 --- @public
 --- @static
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return NonPvpZone
-function NonPvpZone.getNonPvpZone(arg0, arg1) end
+function NonPvpZone.getNonPvpZone(x, y) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param title String
 --- @return NonPvpZone
-function NonPvpZone.getZoneByTitle(arg0) end
+function NonPvpZone.getZoneByTitle(title) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param title String
 --- @return void
-function NonPvpZone.removeNonPvpZone(arg0) end
+function NonPvpZone.removeNonPvpZone(title) end
 
 
 ------------------------------------
@@ -72,50 +72,50 @@ function NonPvpZone:getY() end
 function NonPvpZone:getY2() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function NonPvpZone:load(arg0, arg1) end
+function NonPvpZone:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function NonPvpZone:save(arg0) end
+function NonPvpZone:save(output) end
 
 --- @public
---- @param arg0 int
+--- @param size int
 --- @return void
-function NonPvpZone:setSize(arg0) end
+function NonPvpZone:setSize(size) end
 
 --- @public
---- @param arg0 String
+--- @param title String
 --- @return void
-function NonPvpZone:setTitle(arg0) end
+function NonPvpZone:setTitle(title) end
 
 --- @public
---- @param arg0 int
+--- @param x int
 --- @return void
-function NonPvpZone:setX(arg0) end
+function NonPvpZone:setX(x) end
 
 --- @public
---- @param arg0 int
+--- @param x2 int
 --- @return void
-function NonPvpZone:setX2(arg0) end
+function NonPvpZone:setX2(x2) end
 
 --- @public
---- @param arg0 int
+--- @param y int
 --- @return void
-function NonPvpZone:setY(arg0) end
+function NonPvpZone:setY(y) end
 
 --- @public
---- @param arg0 int
+--- @param y2 int
 --- @return void
-function NonPvpZone:setY2(arg0) end
+function NonPvpZone:setY2(y2) end
 
 --- @public
---- @param arg0 boolean
+--- @param remove boolean
 --- @return void
-function NonPvpZone:syncNonPvpZone(arg0) end
+function NonPvpZone:syncNonPvpZone(remove) end
 
 
 ------------------------------------
@@ -124,5 +124,5 @@ function NonPvpZone:syncNonPvpZone(arg0) end
 
 --- @public
 --- @return NonPvpZone
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int, arg4: int)
+--- @overload fun(title: String, x: int, y: int, x2: int, y2: int)
 function NonPvpZone.new() end

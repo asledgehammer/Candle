@@ -1,6 +1,6 @@
 --- @meta
 
---- @class RandomizedWorldBase: Object
+--- @class RandomizedWorldBase
 RandomizedWorldBase = {};
 
 ------------------------------------
@@ -9,75 +9,75 @@ RandomizedWorldBase = {};
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoGridSquare
+--- @param chr IsoGameCharacter
+--- @param square IsoGridSquare
 --- @return void
-function RandomizedWorldBase.alignCorpseToSquare(arg0, arg1) end
+function RandomizedWorldBase.alignCorpseToSquare(chr, square) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return IsoDeadBody
-function RandomizedWorldBase.createBodyFromZombie(arg0) end
+function RandomizedWorldBase.createBodyFromZombie(chr) end
 
 --- @public
 --- @static
---- @param arg0 RoomDef
---- @param arg1 int
+--- @param room RoomDef
+--- @param blood int
 --- @return IsoDeadBody
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: IsoDirections, arg4: int)
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: IsoDirections, arg4: int, arg5: int)
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: float, arg4: boolean, arg5: int, arg6: int, arg7: String)
-function RandomizedWorldBase.createRandomDeadBody(arg0, arg1) end
+--- @overload fun(sq: IsoGridSquare, dir: IsoDirections, blood: int, crawlerChance: int, outfit: String)
+--- @overload fun(x: int, y: int, z: int, dir: IsoDirections, blood: int, crawlerChance: int)
+--- @overload fun(x: float, y: float, z: float, direction: float, alignToSquare: boolean, blood: int, crawlerChance: int, outfit: String)
+function RandomizedWorldBase.createRandomDeadBody(room, blood) end
 
 --- @public
 --- @static
---- @param arg0 RoomDef
+--- @param room RoomDef
 --- @return IsoGameCharacter
---- @overload fun(arg0: int, arg1: int, arg2: int)
-function RandomizedWorldBase.createRandomZombie(arg0) end
+--- @overload fun(x: int, y: int, z: int)
+function RandomizedWorldBase.createRandomZombie(room) end
 
 --- @public
 --- @static
---- @param arg0 RoomDef
+--- @param room RoomDef
 --- @return IsoGameCharacter
-function RandomizedWorldBase.createRandomZombieForCorpse(arg0) end
+function RandomizedWorldBase.createRandomZombieForCorpse(room) end
 
 --- @public
 --- @static
---- @param arg0 RoomDef
+--- @param roomDef RoomDef
 --- @return IsoGridSquare
-function RandomizedWorldBase.getRandomSpawnSquare(arg0) end
+function RandomizedWorldBase.getRandomSpawnSquare(roomDef) end
 
 --- @public
 --- @static
---- @param arg0 RoomDef
+--- @param roomDef RoomDef
 --- @return IsoGridSquare
-function RandomizedWorldBase.getRandomSquareForCorpse(arg0) end
+function RandomizedWorldBase.getRandomSquareForCorpse(roomDef) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return boolean
-function RandomizedWorldBase.is1x2AreaClear(arg0) end
+function RandomizedWorldBase.is1x2AreaClear(square) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return boolean
-function RandomizedWorldBase.is2x1AreaClear(arg0) end
+function RandomizedWorldBase.is2x1AreaClear(square) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return boolean
-function RandomizedWorldBase.is2x1or1x2AreaClear(arg0) end
+function RandomizedWorldBase.is2x1or1x2AreaClear(square) end
 
 --- @public
 --- @static
---- @param arg0 IsoGridSquare
+--- @param square IsoGridSquare
 --- @return boolean
-function RandomizedWorldBase.is2x2AreaClear(arg0) end
+function RandomizedWorldBase.is2x2AreaClear(square) end
 
 --- @public
 --- @static
@@ -91,59 +91,59 @@ function RandomizedWorldBase.removeAllVehiclesOnZone(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 int
+--- @param sq IsoGridSquare
+--- @param nbr int
 --- @return void
-function RandomizedWorldBase:addBloodSplat(arg0, arg1) end
+function RandomizedWorldBase:addBloodSplat(sq, nbr) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 InventoryItem
+--- @param square IsoGridSquare
+--- @param type String
 --- @return InventoryItem
-function RandomizedWorldBase:addItemOnGround(arg0, arg1) end
+function RandomizedWorldBase:addItemOnGround(square, type) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 ArrayList
+--- @param square IsoGridSquare
+--- @param types ArrayList
 --- @return InventoryItem
-function RandomizedWorldBase:addRandomItemOnGround(arg0, arg1) end
+function RandomizedWorldBase:addRandomItemOnGround(square, types) end
 
 --- @public
---- @param arg0 RoomDef
---- @param arg1 String
---- @param arg2 int
+--- @param room RoomDef
+--- @param type String
+--- @param count int
 --- @return void
-function RandomizedWorldBase:addRandomItemsOnGround(arg0, arg1, arg2) end
+function RandomizedWorldBase:addRandomItemsOnGround(room, type, count) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return IsoObject
-function RandomizedWorldBase:addTentNorthSouth(arg0, arg1, arg2) end
+function RandomizedWorldBase:addTentNorthSouth(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return IsoObject
-function RandomizedWorldBase:addTentWestEast(arg0, arg1, arg2) end
+function RandomizedWorldBase:addTentWestEast(x, y, z) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 String
+--- @param sq IsoGridSquare
+--- @param spriteName String
 --- @return IsoObject
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: String)
-function RandomizedWorldBase:addTileObject(arg0, arg1) end
+--- @overload fun(x: int, y: int, z: int, spriteName: String)
+function RandomizedWorldBase:addTileObject(sq, spriteName) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 int
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param direction float
+--- @param count int
 --- @return void
-function RandomizedWorldBase:addTrailOfBlood(arg0, arg1, arg2, arg3, arg4) end
+function RandomizedWorldBase:addTrailOfBlood(x, y, z, direction, count) end
 
 --- @public
 --- @param arg0 BaseVehicle
@@ -156,13 +156,13 @@ function RandomizedWorldBase:addTrailOfBlood(arg0, arg1, arg2, arg3, arg4) end
 function RandomizedWorldBase:addTrailer(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
---- @param arg0 IsoDirections
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param dir IsoDirections
+--- @param time int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return void
-function RandomizedWorldBase:addTraitOfBlood(arg0, arg1, arg2, arg3, arg4) end
+function RandomizedWorldBase:addTraitOfBlood(dir, time, x, y, z) end
 
 --- @public
 --- @param arg0 Zone
@@ -190,40 +190,40 @@ function RandomizedWorldBase:addVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
 function RandomizedWorldBase:addVehicleFlipped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param type String
+--- @param addRandomBullets boolean
 --- @return HandWeapon
-function RandomizedWorldBase:addWeapon(arg0, arg1) end
+function RandomizedWorldBase:addWeapon(type, addRandomBullets) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @param arg2 Integer
---- @param arg3 IsoGridSquare
+--- @param totalZombies int
+--- @param outfit String
+--- @param femaleChance Integer
+--- @param square IsoGridSquare
 --- @return ArrayList
-function RandomizedWorldBase:addZombiesOnSquare(arg0, arg1, arg2, arg3) end
+function RandomizedWorldBase:addZombiesOnSquare(totalZombies, outfit, femaleChance, square) end
 
 --- @public
---- @param arg0 int
---- @param arg1 String
---- @param arg2 Integer
---- @param arg3 BaseVehicle
+--- @param totalZombies int
+--- @param outfit String
+--- @param femaleChance Integer
+--- @param vehicle BaseVehicle
 --- @return ArrayList
-function RandomizedWorldBase:addZombiesOnVehicle(arg0, arg1, arg2, arg3) end
+function RandomizedWorldBase:addZombiesOnVehicle(totalZombies, outfit, femaleChance, vehicle) end
 
 --- @public
---- @param arg0 RoomDef
+--- @param room RoomDef
 --- @return IsoDeadBody
-function RandomizedWorldBase:createSkeletonCorpse(arg0) end
+function RandomizedWorldBase:createSkeletonCorpse(room) end
 
 --- @public
 --- @return String
 function RandomizedWorldBase:getDebugLine() end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param bDef BuildingDef
 --- @return RoomDef
-function RandomizedWorldBase:getLivingRoomOrKitchen(arg0) end
+function RandomizedWorldBase:getLivingRoomOrKitchen(bDef) end
 
 --- @public
 --- @return int
@@ -234,61 +234,61 @@ function RandomizedWorldBase:getMaximumDays() end
 function RandomizedWorldBase:getName() end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 int
+--- @param bDef BuildingDef
+--- @param minArea int
 --- @return RoomDef
-function RandomizedWorldBase:getRandomRoom(arg0, arg1) end
+function RandomizedWorldBase:getRandomRoom(bDef, minArea) end
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 String
+--- @param bDef BuildingDef
+--- @param roomName String
 --- @return RoomDef
-function RandomizedWorldBase:getRoom(arg0, arg1) end
+function RandomizedWorldBase:getRoom(bDef, roomName) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return IsoGridSquare
-function RandomizedWorldBase:getSq(arg0, arg1, arg2) end
+function RandomizedWorldBase:getSq(x, y, z) end
 
 --- @public
---- @param arg0 boolean
+--- @param force boolean
 --- @return boolean
-function RandomizedWorldBase:isTimeValid(arg0) end
+function RandomizedWorldBase:isTimeValid(force) end
 
 --- @public
 --- @return boolean
 function RandomizedWorldBase:isUnique() end
 
 --- @public
---- @param arg0 IsoZombie
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
+--- @param zombie IsoZombie
+--- @param location String
+--- @param item String
+--- @param ensureItem String
 --- @return void
-function RandomizedWorldBase:setAttachedItem(arg0, arg1, arg2, arg3) end
+function RandomizedWorldBase:setAttachedItem(zombie, location, item, ensureItem) end
 
 --- @public
---- @param arg0 String
+--- @param debugLine String
 --- @return void
-function RandomizedWorldBase:setDebugLine(arg0) end
+function RandomizedWorldBase:setDebugLine(debugLine) end
 
 --- @public
---- @param arg0 int
+--- @param maximumDays int
 --- @return void
-function RandomizedWorldBase:setMaximumDays(arg0) end
+function RandomizedWorldBase:setMaximumDays(maximumDays) end
 
 --- @public
---- @param arg0 boolean
+--- @param unique boolean
 --- @return void
-function RandomizedWorldBase:setUnique(arg0) end
+function RandomizedWorldBase:setUnique(unique) end
 
 --- @public
---- @param arg0 String
---- @param arg1 BuildingDef
+--- @param carName String
+--- @param def BuildingDef
 --- @return BaseVehicle
-function RandomizedWorldBase:spawnCarOnNearestNav(arg0, arg1) end
+function RandomizedWorldBase:spawnCarOnNearestNav(carName, def) end
 
 
 ------------------------------------

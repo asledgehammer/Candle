@@ -40,14 +40,14 @@ function DoubleConfigOption:getValueAsObject() end
 function DoubleConfigOption:getValueAsString() end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return boolean
-function DoubleConfigOption:isValidString(arg0) end
+function DoubleConfigOption:isValidString(s) end
 
 --- @public
---- @param arg0 String
+--- @param s String
 --- @return void
-function DoubleConfigOption:parse(arg0) end
+function DoubleConfigOption:parse(s) end
 
 --- @public
 --- @return void
@@ -58,14 +58,14 @@ function DoubleConfigOption:resetToDefault() end
 function DoubleConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param arg0 double
+--- @param value double
 --- @return void
-function DoubleConfigOption:setValue(arg0) end
+function DoubleConfigOption:setValue(value) end
 
 --- @public
---- @param arg0 Object
+--- @param o Object
 --- @return void
-function DoubleConfigOption:setValueFromObject(arg0) end
+function DoubleConfigOption:setValueFromObject(o) end
 
 
 ------------------------------------
@@ -73,9 +73,9 @@ function DoubleConfigOption:setValueFromObject(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 double
---- @param arg2 double
---- @param arg3 double
+--- @param name String
+--- @param min double
+--- @param max double
+--- @param defaultValue double
 --- @return DoubleConfigOption
-function DoubleConfigOption.new(arg0, arg1, arg2, arg3) end
+function DoubleConfigOption.new(name, min, max, defaultValue) end

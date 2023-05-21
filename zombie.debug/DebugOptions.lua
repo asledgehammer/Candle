@@ -1,6 +1,6 @@
 --- @meta
 
---- @class DebugOptions: Object
+--- @class DebugOptions
 --- @implement IDebugOptionGroup
 --- @field public instance DebugOptions
 --- @field public VERSION int
@@ -12,9 +12,9 @@ DebugOptions = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param idx int
 --- @return void
-function DebugOptions.testThreadCrash(arg0) end
+function DebugOptions.testThreadCrash(idx) end
 
 
 ------------------------------------
@@ -22,14 +22,14 @@ function DebugOptions.testThreadCrash(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 IDebugOption
+--- @param newChild IDebugOption
 --- @return void
-function DebugOptions:addChild(arg0) end
+function DebugOptions:addChild(newChild) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function DebugOptions:getBoolean(arg0) end
+function DebugOptions:getBoolean(name) end
 
 --- @public
 --- @return Iterable
@@ -40,14 +40,14 @@ function DebugOptions:getChildren() end
 function DebugOptions:getName() end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return BooleanDebugOption
-function DebugOptions:getOptionByIndex(arg0) end
+function DebugOptions:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return BooleanDebugOption
-function DebugOptions:getOptionByName(arg0) end
+function DebugOptions:getOptionByName(name) end
 
 --- @public
 --- @return int
@@ -66,29 +66,29 @@ function DebugOptions:init() end
 function DebugOptions:load() end
 
 --- @public
---- @param arg0 IDebugOption
+--- @param newOption IDebugOption
 --- @return void
-function DebugOptions:onChildAdded(arg0) end
+function DebugOptions:onChildAdded(newOption) end
 
 --- @public
---- @param arg0 IDebugOption
+--- @param newOption IDebugOption
 --- @return void
-function DebugOptions:onDescendantAdded(arg0) end
+function DebugOptions:onDescendantAdded(newOption) end
 
 --- @public
 --- @return void
 function DebugOptions:save() end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param name String
+--- @param value boolean
 --- @return void
-function DebugOptions:setBoolean(arg0, arg1) end
+function DebugOptions:setBoolean(name, value) end
 
 --- @public
---- @param arg0 IDebugOptionGroup
+--- @param parent IDebugOptionGroup
 --- @return void
-function DebugOptions:setParent(arg0) end
+function DebugOptions:setParent(parent) end
 
 
 ------------------------------------

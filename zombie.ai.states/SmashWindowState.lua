@@ -18,25 +18,25 @@ function SmashWindowState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function SmashWindowState:animEvent(arg0, arg1) end
+function SmashWindowState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function SmashWindowState:enter(arg0) end
+function SmashWindowState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function SmashWindowState:execute(arg0) end
+function SmashWindowState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function SmashWindowState:exit(arg0) end
+function SmashWindowState:exit(owner) end
 
 --- @public
 --- @return boolean

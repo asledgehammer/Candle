@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Zone: Object
+--- @class Zone
 Zone = {};
 
 ------------------------------------
@@ -12,35 +12,35 @@ Zone = {};
 function Zone:Dispose() end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return void
-function Zone:addSquare(arg0) end
+function Zone:addSquare(sq) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return boolean
-function Zone:contains(arg0, arg1, arg2) end
+function Zone:contains(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 ArrayList
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param w int
+--- @param h int
+--- @param result ArrayList
 --- @return boolean
-function Zone:difference(arg0, arg1, arg2, arg3, arg4, arg5) end
+function Zone:difference(x, y, z, w, h, result) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 double[]
+--- @param clipX1 int
+--- @param clipY1 int
+--- @param clipX2 int
+--- @param clipY2 int
+--- @param t1t2 double[]
 --- @return int
-function Zone:getClippedSegmentOfPolyline(arg0, arg1, arg2, arg3, arg4) end
+function Zone:getClippedSegmentOfPolyline(clipX1, clipY1, clipX2, clipY2, t1t2) end
 
 --- @public
 --- @return int
@@ -119,13 +119,13 @@ function Zone:getZombieDensity() end
 function Zone:haveCons() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param w int
+--- @param h int
 --- @return boolean
-function Zone:intersects(arg0, arg1, arg2, arg3, arg4) end
+function Zone:intersects(x, y, z, w, h) end
 
 --- @public
 --- @return boolean
@@ -149,72 +149,72 @@ function Zone:isRectangle() end
 function Zone:pickRandomLocation(arg0) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return void
-function Zone:removeSquare(arg0) end
+function Zone:removeSquare(sq) end
 
 --- @public
 --- @return void
 function Zone:sendToServer() end
 
 --- @public
---- @param arg0 int
+--- @param h int
 --- @return void
-function Zone:setH(arg0) end
+function Zone:setH(h) end
 
 --- @public
---- @param arg0 boolean
+--- @param have boolean
 --- @return void
-function Zone:setHaveConstruction(arg0) end
+function Zone:setHaveConstruction(have) end
 
 --- @public
 --- @return void
 function Zone:setHourSeenToCurrent() end
 
 --- @public
---- @param arg0 int
+--- @param lastActionTimestamp int
 --- @return void
-function Zone:setLastActionTimestamp(arg0) end
+function Zone:setLastActionTimestamp(lastActionTimestamp) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Zone:setName(arg0) end
+function Zone:setName(name) end
 
 --- @public
---- @param arg0 String
+--- @param originalName String
 --- @return void
-function Zone:setOriginalName(arg0) end
+function Zone:setOriginalName(originalName) end
 
 --- @public
---- @param arg0 int
+--- @param pickedXForZoneStory int
 --- @return void
-function Zone:setPickedXForZoneStory(arg0) end
+function Zone:setPickedXForZoneStory(pickedXForZoneStory) end
 
 --- @public
---- @param arg0 int
+--- @param pickedYForZoneStory int
 --- @return void
-function Zone:setPickedYForZoneStory(arg0) end
+function Zone:setPickedYForZoneStory(pickedYForZoneStory) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function Zone:setType(arg0) end
+function Zone:setType(type) end
 
 --- @public
---- @param arg0 int
+--- @param w int
 --- @return void
-function Zone:setW(arg0) end
+function Zone:setW(w) end
 
 --- @public
---- @param arg0 int
+--- @param x int
 --- @return void
-function Zone:setX(arg0) end
+function Zone:setX(x) end
 
 --- @public
---- @param arg0 int
+--- @param y int
 --- @return void
-function Zone:setY(arg0) end
+function Zone:setY(y) end
 
 
 ------------------------------------
@@ -222,12 +222,12 @@ function Zone:setY(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param w int
+--- @param h int
 --- @return Zone
-function Zone.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function Zone.new(name, type, x, y, z, w, h) end

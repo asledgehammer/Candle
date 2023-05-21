@@ -1,6 +1,6 @@
 --- @meta
 
---- @class DBResult: Object
+--- @class DBResult
 DBResult = {};
 
 ------------------------------------
@@ -24,19 +24,19 @@ function DBResult:getType() end
 function DBResult:getValues() end
 
 --- @public
---- @param arg0 ArrayList
+--- @param columns ArrayList
 --- @return void
-function DBResult:setColumns(arg0) end
+function DBResult:setColumns(columns) end
 
 --- @public
---- @param arg0 String
+--- @param tableName String
 --- @return void
-function DBResult:setTableName(arg0) end
+function DBResult:setTableName(tableName) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function DBResult:setType(arg0) end
+function DBResult:setType(type) end
 
 
 ------------------------------------

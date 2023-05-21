@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Vector3f: Object
+--- @class Vector3f
 --- @implement Externalizable
 --- @implement Vector3fc
 Vector3f = {};
@@ -108,9 +108,9 @@ function Vector3f:distance(arg0) end
 function Vector3f:distanceSquared(arg0) end
 
 --- @public
---- @param arg0 float
+--- @param arg0 Vector3fc
 --- @return Vector3f
---- @overload fun(arg0: float, arg1: Vector3f)
+--- @overload fun(arg0: Vector3fc, arg1: Vector3f)
 --- @overload fun(arg0: float, arg1: float, arg2: float)
 --- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f)
 function Vector3f:div(arg0) end
@@ -212,9 +212,9 @@ function Vector3f:min(arg0) end
 function Vector3f:minComponent() end
 
 --- @public
---- @param arg0 Matrix3fc
+--- @param arg0 Vector3fc
 --- @return Vector3f
---- @overload fun(arg0: Matrix3fc, arg1: Vector3f)
+--- @overload fun(arg0: Matrix3dc, arg1: Vector3f)
 --- @overload fun(arg0: float, arg1: float, arg2: float)
 --- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f)
 function Vector3f:mul(arg0) end
@@ -223,11 +223,11 @@ function Vector3f:mul(arg0) end
 --- @param arg0 Vector3fc
 --- @param arg1 Vector3fc
 --- @return Vector3f
---- @overload fun(arg0: float, arg1: Vector3fc, arg2: Vector3f)
+--- @overload fun(arg0: Vector3fc, arg1: Vector3fc, arg2: Vector3f)
 function Vector3f:mulAdd(arg0, arg1) end
 
 --- @public
---- @param arg0 Matrix4dc
+--- @param arg0 Matrix4x3fc
 --- @return Vector3f
 --- @overload fun(arg0: Matrix4x3fc, arg1: Vector3f)
 function Vector3f:mulDirection(arg0) end
@@ -235,7 +235,7 @@ function Vector3f:mulDirection(arg0) end
 --- @public
 --- @param arg0 Matrix4x3fc
 --- @return Vector3f
---- @overload fun(arg0: Matrix4fc, arg1: Vector3f)
+--- @overload fun(arg0: Matrix4x3fc, arg1: Vector3f)
 function Vector3f:mulPosition(arg0) end
 
 --- @public

@@ -1,6 +1,7 @@
 --- @meta
 
---- @class PresetEntry: Object
+--- @class PresetEntry
+--- turbo
 PresetEntry = {};
 
 ------------------------------------
@@ -16,14 +17,14 @@ function PresetEntry:getFrequency() end
 function PresetEntry:getName() end
 
 --- @public
---- @param arg0 int
+--- @param f int
 --- @return void
-function PresetEntry:setFrequency(arg0) end
+function PresetEntry:setFrequency(f) end
 
 --- @public
---- @param arg0 String
+--- @param n String
 --- @return void
-function PresetEntry:setName(arg0) end
+function PresetEntry:setName(n) end
 
 
 ------------------------------------
@@ -32,5 +33,5 @@ function PresetEntry:setName(arg0) end
 
 --- @public
 --- @return PresetEntry
---- @overload fun(arg0: String, arg1: int)
+--- @overload fun(n: String, f: int)
 function PresetEntry.new() end

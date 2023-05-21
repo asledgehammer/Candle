@@ -1,6 +1,6 @@
 --- @meta
 
---- @class NetworkAIParams: Object
+--- @class NetworkAIParams
 --- @field public CHARACTER_EXTRAPOLATION_UPDATE_INTERVAL_MS int
 --- @field public CHARACTER_PREDICTION_INTERVAL_MS int
 --- @field public CHARACTER_UPDATE_RATE_MS int
@@ -52,21 +52,21 @@ function NetworkAIParams.isShowServerInfo() end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return void
-function NetworkAIParams.setShowConnectionInfo(arg0) end
+function NetworkAIParams.setShowConnectionInfo(enabled) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return void
-function NetworkAIParams.setShowPingInfo(arg0) end
+function NetworkAIParams.setShowPingInfo(enabled) end
 
 --- @public
 --- @static
---- @param arg0 boolean
+--- @param enabled boolean
 --- @return void
-function NetworkAIParams.setShowServerInfo(arg0) end
+function NetworkAIParams.setShowServerInfo(enabled) end
 
 
 ------------------------------------

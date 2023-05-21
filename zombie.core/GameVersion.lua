@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GameVersion: Object
+--- @class GameVersion
 GameVersion = {};
 
 ------------------------------------
@@ -9,9 +9,9 @@ GameVersion = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return GameVersion
-function GameVersion.parse(arg0) end
+function GameVersion.parse(str) end
 
 
 ------------------------------------
@@ -19,9 +19,9 @@ function GameVersion.parse(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 Object
+--- @param obj Object
 --- @return boolean
-function GameVersion:equals(arg0) end
+function GameVersion:equals(obj) end
 
 --- @public
 --- @return int
@@ -40,24 +40,24 @@ function GameVersion:getMinor() end
 function GameVersion:getSuffix() end
 
 --- @public
---- @param arg0 GameVersion
+--- @param rhs GameVersion
 --- @return boolean
-function GameVersion:isGreaterThan(arg0) end
+function GameVersion:isGreaterThan(rhs) end
 
 --- @public
---- @param arg0 GameVersion
+--- @param rhs GameVersion
 --- @return boolean
-function GameVersion:isGreaterThanOrEqualTo(arg0) end
+function GameVersion:isGreaterThanOrEqualTo(rhs) end
 
 --- @public
---- @param arg0 GameVersion
+--- @param rhs GameVersion
 --- @return boolean
-function GameVersion:isLessThan(arg0) end
+function GameVersion:isLessThan(rhs) end
 
 --- @public
---- @param arg0 GameVersion
+--- @param rhs GameVersion
 --- @return boolean
-function GameVersion:isLessThanOrEqualTo(arg0) end
+function GameVersion:isLessThanOrEqualTo(rhs) end
 
 --- @public
 --- @return String
@@ -69,8 +69,8 @@ function GameVersion:toString() end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 String
+--- @param major int
+--- @param minor int
+--- @param suffix String
 --- @return GameVersion
-function GameVersion.new(arg0, arg1, arg2) end
+function GameVersion.new(major, minor, suffix) end

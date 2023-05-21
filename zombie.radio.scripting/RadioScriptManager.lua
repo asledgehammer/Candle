@@ -1,6 +1,7 @@
 --- @meta
 
---- @class RadioScriptManager: Object
+--- @class RadioScriptManager
+--- Turbo
 RadioScriptManager = {};
 
 ------------------------------------
@@ -23,39 +24,39 @@ function RadioScriptManager.hasInstance() end
 ------------------------------------
 
 --- @public
---- @param arg0 RadioChannel
---- @param arg1 boolean
+--- @param channel RadioChannel
+--- @param overwrite boolean
 --- @return void
-function RadioScriptManager:AddChannel(arg0, arg1) end
+function RadioScriptManager:AddChannel(channel, overwrite) end
 
 --- @public
---- @param arg0 List
+--- @param channelLines List
 --- @return void
-function RadioScriptManager:Load(arg0) end
+function RadioScriptManager:Load(channelLines) end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
---- @param arg2 boolean
+--- @param chanfrequency int
+--- @param mode boolean
+--- @param sourceIsTV boolean
 --- @return void
-function RadioScriptManager:PlayerListensChannel(arg0, arg1, arg2) end
+function RadioScriptManager:PlayerListensChannel(chanfrequency, mode, sourceIsTV) end
 
 --- @public
---- @param arg0 int
+--- @param frequency int
 --- @return void
-function RadioScriptManager:RemoveChannel(arg0) end
+function RadioScriptManager:RemoveChannel(frequency) end
 
 --- @public
---- @param arg0 Writer
+--- @param w Writer
 --- @return void
-function RadioScriptManager:Save(arg0) end
+function RadioScriptManager:Save(w) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param day int
+--- @param hour int
+--- @param mins int
 --- @return void
-function RadioScriptManager:UpdateScripts(arg0, arg1, arg2) end
+function RadioScriptManager:UpdateScripts(day, hour, mins) end
 
 --- @public
 --- @return Map
@@ -70,31 +71,31 @@ function RadioScriptManager:getChannelsList() end
 function RadioScriptManager:getCurrentTimeStamp() end
 
 --- @public
---- @param arg0 String
+--- @param uuid String
 --- @return RadioChannel
-function RadioScriptManager:getRadioChannel(arg0) end
+function RadioScriptManager:getRadioChannel(uuid) end
 
 --- @public
---- @param arg0 int
+--- @param savedWorldVersion int
 --- @return void
-function RadioScriptManager:init(arg0) end
+function RadioScriptManager:init(savedWorldVersion) end
 
 --- @public
 --- @return void
 function RadioScriptManager:reset() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 boolean
+--- @param frequency int
+--- @param days int
+--- @param force boolean
 --- @return void
-function RadioScriptManager:simulateChannelUntil(arg0, arg1, arg2) end
+function RadioScriptManager:simulateChannelUntil(frequency, days, force) end
 
 --- @public
---- @param arg0 int
---- @param arg1 boolean
+--- @param days int
+--- @param force boolean
 --- @return void
-function RadioScriptManager:simulateScriptsUntil(arg0, arg1) end
+function RadioScriptManager:simulateScriptsUntil(days, force) end
 
 --- @public
 --- @return void

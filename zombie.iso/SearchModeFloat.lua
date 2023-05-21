@@ -1,6 +1,6 @@
 --- @meta
 
---- @class SearchModeFloat: Object
+--- @class SearchModeFloat
 SearchModeFloat = {};
 
 ------------------------------------
@@ -44,42 +44,42 @@ function SearchModeFloat:getTargetInterior() end
 function SearchModeFloat:reset() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param exterior float
+--- @param targetExterior float
+--- @param interior float
+--- @param targetInterior float
 --- @return void
-function SearchModeFloat:set(arg0, arg1, arg2, arg3) end
+function SearchModeFloat:set(exterior, targetExterior, interior, targetInterior) end
 
 --- @public
---- @param arg0 float
+--- @param exterior float
 --- @return void
-function SearchModeFloat:setExterior(arg0) end
+function SearchModeFloat:setExterior(exterior) end
 
 --- @public
---- @param arg0 float
+--- @param interior float
 --- @return void
-function SearchModeFloat:setInterior(arg0) end
+function SearchModeFloat:setInterior(interior) end
 
 --- @public
---- @param arg0 float
+--- @param targetExterior float
 --- @return void
-function SearchModeFloat:setTargetExterior(arg0) end
+function SearchModeFloat:setTargetExterior(targetExterior) end
 
 --- @public
---- @param arg0 float
+--- @param targetInterior float
 --- @return void
-function SearchModeFloat:setTargetInterior(arg0) end
+function SearchModeFloat:setTargetInterior(targetInterior) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
+--- @param targetExterior float
+--- @param targetInterior float
 --- @return void
-function SearchModeFloat:setTargets(arg0, arg1) end
+function SearchModeFloat:setTargets(targetExterior, targetInterior) end
 
 --- @public
---- @param arg0 float
+--- @param delta float
 --- @return void
-function SearchModeFloat:update(arg0) end
+function SearchModeFloat:update(delta) end
 
 

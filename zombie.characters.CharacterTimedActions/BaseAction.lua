@@ -1,6 +1,6 @@
 --- @meta
 
---- @class BaseAction: Object
+--- @class BaseAction
 BaseAction = {};
 
 ------------------------------------
@@ -8,16 +8,16 @@ BaseAction = {};
 ------------------------------------
 
 --- @public
---- @param arg0 AnimEvent
+--- @param event AnimEvent
 --- @return void
-function BaseAction:OnAnimEvent(arg0) end
+function BaseAction:OnAnimEvent(event) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 float
+--- @param name String
+--- @param radius int
+--- @param maxGain float
 --- @return void
-function BaseAction:PlayLoopedSoundTillComplete(arg0, arg1, arg2) end
+function BaseAction:PlayLoopedSoundTillComplete(name, radius, maxGain) end
 
 --- @public
 --- @return boolean
@@ -72,56 +72,56 @@ function BaseAction:reset() end
 function BaseAction:resetJobDelta() end
 
 --- @public
---- @param arg0 CharacterActionAnims
+--- @param animNode String
 --- @return void
-function BaseAction:setActionAnim(arg0) end
+function BaseAction:setActionAnim(animNode) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param key String
+--- @param val String
 --- @return void
-function BaseAction:setAnimVariable(arg0, arg1) end
+function BaseAction:setAnimVariable(key, val) end
 
 --- @public
---- @param arg0 boolean
+--- @param block boolean
 --- @return void
-function BaseAction:setBlockMovementEtc(arg0) end
+function BaseAction:setBlockMovementEtc(block) end
 
 --- @public
---- @param arg0 boolean
+--- @param looped boolean
 --- @return void
-function BaseAction:setLoopedAction(arg0) end
+function BaseAction:setLoopedAction(looped) end
 
 --- @public
---- @param arg0 boolean
+--- @param override boolean
 --- @return void
-function BaseAction:setOverrideAnimation(arg0) end
+function BaseAction:setOverrideAnimation(override) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 InventoryItem
+--- @param primaryHand InventoryItem
+--- @param secondaryHand InventoryItem
 --- @return void
---- @overload fun(arg0: InventoryItem, arg1: InventoryItem, arg2: boolean)
-function BaseAction:setOverrideHandModels(arg0, arg1) end
+--- @overload fun(primaryHand: InventoryItem, secondaryHand: InventoryItem, resetModel: boolean)
+function BaseAction:setOverrideHandModels(primaryHand, secondaryHand) end
 
 --- @public
---- @param arg0 Object
---- @param arg1 Object
---- @param arg2 boolean
+--- @param primaryHand Object
+--- @param secondaryHand Object
+--- @param resetModel boolean
 --- @return void
-function BaseAction:setOverrideHandModelsObject(arg0, arg1, arg2) end
+function BaseAction:setOverrideHandModelsObject(primaryHand, secondaryHand, resetModel) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param primaryHand String
+--- @param secondaryHand String
 --- @return void
---- @overload fun(arg0: String, arg1: String, arg2: boolean)
-function BaseAction:setOverrideHandModelsString(arg0, arg1) end
+--- @overload fun(primaryHand: String, secondaryHand: String, resetModel: boolean)
+function BaseAction:setOverrideHandModelsString(primaryHand, secondaryHand) end
 
 --- @public
---- @param arg0 boolean
+--- @param use boolean
 --- @return void
-function BaseAction:setUseProgressBar(arg0) end
+function BaseAction:setUseProgressBar(use) end
 
 --- @public
 --- @return void
@@ -153,6 +153,6 @@ function BaseAction:waitToStart() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return BaseAction
-function BaseAction.new(arg0) end
+function BaseAction.new(chr) end

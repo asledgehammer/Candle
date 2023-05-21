@@ -8,24 +8,24 @@ SGlobalObjectSystem = {};
 ------------------------------------
 
 --- @public
---- @param arg0 IsoObject
+--- @param isoObject IsoObject
 --- @return void
-function SGlobalObjectSystem:OnIsoObjectChangedItself(arg0) end
+function SGlobalObjectSystem:OnIsoObjectChangedItself(isoObject) end
 
 --- @public
 --- @return void
 function SGlobalObjectSystem:Reset() end
 
 --- @public
---- @param arg0 SGlobalObject
+--- @param globalObject SGlobalObject
 --- @return void
-function SGlobalObjectSystem:addGlobalObjectOnClient(arg0) end
+function SGlobalObjectSystem:addGlobalObjectOnClient(globalObject) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return void
-function SGlobalObjectSystem:chunkLoaded(arg0, arg1) end
+function SGlobalObjectSystem:chunkLoaded(wx, wy) end
 
 --- @public
 --- @return KahluaTable
@@ -33,7 +33,7 @@ function SGlobalObjectSystem:getInitialStateForClient() end
 
 --- @public
 --- @return void
---- @overload fun(arg0: ByteBuffer, arg1: int)
+--- @overload fun(bb: ByteBuffer, WorldVersion: int)
 function SGlobalObjectSystem:load() end
 
 --- @public
@@ -48,13 +48,13 @@ function SGlobalObjectSystem:loadedWorldVersion() end
 function SGlobalObjectSystem:receiveClientCommand(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 SGlobalObject
+--- @param globalObject SGlobalObject
 --- @return void
-function SGlobalObjectSystem:removeGlobalObjectOnClient(arg0) end
+function SGlobalObjectSystem:removeGlobalObjectOnClient(globalObject) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: ByteBuffer)
+--- @overload fun(bb: ByteBuffer)
 function SGlobalObjectSystem:save() end
 
 --- @public
@@ -83,9 +83,9 @@ function SGlobalObjectSystem:setObjectSyncKeys(arg0) end
 function SGlobalObjectSystem:update() end
 
 --- @public
---- @param arg0 SGlobalObject
+--- @param globalObject SGlobalObject
 --- @return void
-function SGlobalObjectSystem:updateGlobalObjectOnClient(arg0) end
+function SGlobalObjectSystem:updateGlobalObjectOnClient(globalObject) end
 
 
 ------------------------------------
@@ -93,6 +93,6 @@ function SGlobalObjectSystem:updateGlobalObjectOnClient(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return SGlobalObjectSystem
-function SGlobalObjectSystem.new(arg0) end
+function SGlobalObjectSystem.new(name) end

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ZombiePopulationRenderer: Object
+--- @class ZombiePopulationRenderer
 ZombiePopulationRenderer = {};
 
 ------------------------------------
@@ -8,19 +8,19 @@ ZombiePopulationRenderer = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function ZombiePopulationRenderer:getBoolean(arg0) end
+function ZombiePopulationRenderer:getBoolean(name) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return ConfigOption
-function ZombiePopulationRenderer:getOptionByIndex(arg0) end
+function ZombiePopulationRenderer:getOptionByIndex(index) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ConfigOption
-function ZombiePopulationRenderer:getOptionByName(arg0) end
+function ZombiePopulationRenderer:getOptionByName(name) end
 
 --- @public
 --- @return int
@@ -31,146 +31,146 @@ function ZombiePopulationRenderer:getOptionCount() end
 function ZombiePopulationRenderer:load() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
+--- @param x float
+--- @param y float
+--- @param w float
+--- @param h float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function ZombiePopulationRenderer:outlineRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ZombiePopulationRenderer:outlineRect(x, y, w, h, r, g, b, a) end
 
 --- @public
---- @param arg0 UIElement
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param ui UIElement
+--- @param zoom float
+--- @param xPos float
+--- @param yPos float
 --- @return void
-function ZombiePopulationRenderer:render(arg0, arg1, arg2, arg3) end
+function ZombiePopulationRenderer:render(ui, zoom, xPos, yPos) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 float
+--- @param cellX int
+--- @param cellY int
+--- @param effectivePopulation int
+--- @param targetPopulation int
+--- @param lastRepopTime float
 --- @return void
-function ZombiePopulationRenderer:renderCellInfo(arg0, arg1, arg2, arg3, arg4) end
+function ZombiePopulationRenderer:renderCellInfo(cellX, cellY, effectivePopulation, targetPopulation, lastRepopTime) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
+--- @param x float
+--- @param y float
+--- @param radius float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function ZombiePopulationRenderer:renderCircle(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ZombiePopulationRenderer:renderCircle(x, y, radius, r, g, b, a) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
+--- @param x1 float
+--- @param y1 float
+--- @param x2 float
+--- @param y2 float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function ZombiePopulationRenderer:renderLine(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ZombiePopulationRenderer:renderLine(x1, y1, x2, y2, r, g, b, a) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 float
+--- @param x float
+--- @param y float
+--- @param w float
+--- @param h float
+--- @param r float
+--- @param g float
+--- @param b float
+--- @param a float
 --- @return void
-function ZombiePopulationRenderer:renderRect(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function ZombiePopulationRenderer:renderRect(x, y, w, h, r, g, b, a) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 String
---- @param arg3 double
---- @param arg4 double
---- @param arg5 double
---- @param arg6 double
+--- @param x float
+--- @param y float
+--- @param str String
+--- @param r double
+--- @param g double
+--- @param b double
+--- @param a double
 --- @return void
-function ZombiePopulationRenderer:renderString(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ZombiePopulationRenderer:renderString(x, y, str, r, g, b, a) end
 
 --- @public
---- @param arg0 int
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
---- @param arg5 float
+--- @param sqlid int
+--- @param x float
+--- @param y float
+--- @param r float
+--- @param g float
+--- @param b float
 --- @return void
-function ZombiePopulationRenderer:renderVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
+function ZombiePopulationRenderer:renderVehicle(sqlid, x, y, r, g, b) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
---- @param arg4 float
+--- @param x float
+--- @param y float
+--- @param r float
+--- @param g float
+--- @param b float
 --- @return void
-function ZombiePopulationRenderer:renderZombie(arg0, arg1, arg2, arg3, arg4) end
+function ZombiePopulationRenderer:renderZombie(x, y, r, g, b) end
 
 --- @public
 --- @return void
 function ZombiePopulationRenderer:save() end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param name String
+--- @param value boolean
 --- @return void
-function ZombiePopulationRenderer:setBoolean(arg0, arg1) end
+function ZombiePopulationRenderer:setBoolean(name, value) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return void
-function ZombiePopulationRenderer:setWallFollowerEnd(arg0, arg1) end
+function ZombiePopulationRenderer:setWallFollowerEnd(x, y) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return void
-function ZombiePopulationRenderer:setWallFollowerStart(arg0, arg1) end
+function ZombiePopulationRenderer:setWallFollowerStart(x, y) end
 
 --- @public
---- @param arg0 float
+--- @param x float
 --- @return float
-function ZombiePopulationRenderer:uiToWorldX(arg0) end
+function ZombiePopulationRenderer:uiToWorldX(x) end
 
 --- @public
---- @param arg0 float
+--- @param y float
 --- @return float
-function ZombiePopulationRenderer:uiToWorldY(arg0) end
+function ZombiePopulationRenderer:uiToWorldY(y) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param x int
+--- @param y int
 --- @return void
-function ZombiePopulationRenderer:wallFollowerMouseMove(arg0, arg1) end
+function ZombiePopulationRenderer:wallFollowerMouseMove(x, y) end
 
 --- @public
---- @param arg0 float
+--- @param x float
 --- @return float
-function ZombiePopulationRenderer:worldToScreenX(arg0) end
+function ZombiePopulationRenderer:worldToScreenX(x) end
 
 --- @public
---- @param arg0 float
+--- @param y float
 --- @return float
-function ZombiePopulationRenderer:worldToScreenY(arg0) end
+function ZombiePopulationRenderer:worldToScreenY(y) end
 
 
 ------------------------------------

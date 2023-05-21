@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ItemVisual: Object
+--- @class ItemVisual
 --- @field public NULL_HUE float
 ItemVisual = {};
 
@@ -10,9 +10,9 @@ ItemVisual = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param saveStr String
 --- @return InventoryItem
-function ItemVisual.createLastStandItem(arg0) end
+function ItemVisual.createLastStandItem(saveStr) end
 
 
 ------------------------------------
@@ -24,29 +24,29 @@ function ItemVisual.createLastStandItem(arg0) end
 function ItemVisual:clear() end
 
 --- @public
---- @param arg0 ItemVisual
+--- @param other ItemVisual
 --- @return void
-function ItemVisual:copyBlood(arg0) end
+function ItemVisual:copyBlood(other) end
 
 --- @public
---- @param arg0 ItemVisual
+--- @param other ItemVisual
 --- @return void
-function ItemVisual:copyDirt(arg0) end
+function ItemVisual:copyDirt(other) end
 
 --- @public
---- @param arg0 ItemVisual
+--- @param other ItemVisual
 --- @return void
-function ItemVisual:copyFrom(arg0) end
+function ItemVisual:copyFrom(other) end
 
 --- @public
---- @param arg0 ItemVisual
+--- @param other ItemVisual
 --- @return void
-function ItemVisual:copyHoles(arg0) end
+function ItemVisual:copyHoles(other) end
 
 --- @public
---- @param arg0 ItemVisual
+--- @param other ItemVisual
 --- @return void
-function ItemVisual:copyPatches(arg0) end
+function ItemVisual:copyPatches(other) end
 
 --- @public
 --- @return String
@@ -54,64 +54,64 @@ function ItemVisual:getAlternateModelName() end
 
 --- @public
 --- @return int
---- @overload fun(arg0: ClothingItem)
+--- @overload fun(clothingItem: ClothingItem)
 function ItemVisual:getBaseTexture() end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return float
-function ItemVisual:getBasicPatch(arg0) end
+function ItemVisual:getBasicPatch(bodyPartType) end
 
 --- @public
 --- @return int
 function ItemVisual:getBasicPatchesNumber() end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return float
-function ItemVisual:getBlood(arg0) end
+function ItemVisual:getBlood(bodyPartType) end
 
 --- @public
 --- @return ClothingItem
 function ItemVisual:getClothingItem() end
 
 --- @public
---- @param arg0 CharacterMask
+--- @param in_out_mask CharacterMask
 --- @return void
-function ItemVisual:getClothingItemCombinedMask(arg0) end
+function ItemVisual:getClothingItemCombinedMask(in_out_mask) end
 
 --- @public
 --- @return String
 function ItemVisual:getClothingItemName() end
 
 --- @public
---- @param arg0 ClothingItem
+--- @param clothingItem ClothingItem
 --- @return String
-function ItemVisual:getDecal(arg0) end
+function ItemVisual:getDecal(clothingItem) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return float
-function ItemVisual:getDenimPatch(arg0) end
+function ItemVisual:getDenimPatch(bodyPartType) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return float
-function ItemVisual:getDirt(arg0) end
+function ItemVisual:getDirt(bodyPartType) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return float
-function ItemVisual:getHole(arg0) end
+function ItemVisual:getHole(bodyPartType) end
 
 --- @public
 --- @return int
 function ItemVisual:getHolesNumber() end
 
 --- @public
---- @param arg0 ClothingItem
+--- @param clothingItem ClothingItem
 --- @return float
-function ItemVisual:getHue(arg0) end
+function ItemVisual:getHue(clothingItem) end
 
 --- @public
 --- @return InventoryItem
@@ -126,9 +126,9 @@ function ItemVisual:getItemType() end
 function ItemVisual:getLastStandString() end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return float
-function ItemVisual:getLeatherPatch(arg0) end
+function ItemVisual:getLeatherPatch(bodyPartType) end
 
 --- @public
 --- @return Item
@@ -136,12 +136,12 @@ function ItemVisual:getScriptItem() end
 
 --- @public
 --- @return int
---- @overload fun(arg0: ClothingItem)
+--- @overload fun(clothingItem: ClothingItem)
 function ItemVisual:getTextureChoice() end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(arg0: ClothingItem)
+--- @overload fun(clothingItem: ClothingItem)
 function ItemVisual:getTint() end
 
 --- @public
@@ -149,15 +149,15 @@ function ItemVisual:getTint() end
 function ItemVisual:getTotalBlood() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function ItemVisual:load(arg0, arg1) end
+function ItemVisual:load(input, WorldVersion) end
 
 --- @public
---- @param arg0 ClothingItem
+--- @param clothingItem ClothingItem
 --- @return void
-function ItemVisual:pickUninitializedValues(arg0) end
+function ItemVisual:pickUninitializedValues(clothingItem) end
 
 --- @public
 --- @return void
@@ -168,101 +168,101 @@ function ItemVisual:removeBlood() end
 function ItemVisual:removeDirt() end
 
 --- @public
---- @param arg0 int
+--- @param bodyPartIndex int
 --- @return void
-function ItemVisual:removeHole(arg0) end
+function ItemVisual:removeHole(bodyPartIndex) end
 
 --- @public
---- @param arg0 int
+--- @param bodyPartIndex int
 --- @return void
-function ItemVisual:removePatch(arg0) end
+function ItemVisual:removePatch(bodyPartIndex) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function ItemVisual:save(arg0) end
+function ItemVisual:save(output) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function ItemVisual:setAlternateModelName(arg0) end
+function ItemVisual:setAlternateModelName(name) end
 
 --- @public
---- @param arg0 int
+--- @param baseTexture int
 --- @return void
-function ItemVisual:setBaseTexture(arg0) end
+function ItemVisual:setBaseTexture(baseTexture) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return void
-function ItemVisual:setBasicPatch(arg0) end
+function ItemVisual:setBasicPatch(bodyPartType) end
 
 --- @public
---- @param arg0 BloodBodyPartType
---- @param arg1 float
+--- @param bodyPartType BloodBodyPartType
+--- @param amount float
 --- @return void
-function ItemVisual:setBlood(arg0, arg1) end
+function ItemVisual:setBlood(bodyPartType, amount) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function ItemVisual:setClothingItemName(arg0) end
+function ItemVisual:setClothingItemName(name) end
 
 --- @public
---- @param arg0 String
+--- @param decalName String
 --- @return void
-function ItemVisual:setDecal(arg0) end
+function ItemVisual:setDecal(decalName) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return void
-function ItemVisual:setDenimPatch(arg0) end
+function ItemVisual:setDenimPatch(bodyPartType) end
 
 --- @public
---- @param arg0 BloodBodyPartType
---- @param arg1 float
+--- @param bodyPartType BloodBodyPartType
+--- @param amount float
 --- @return void
-function ItemVisual:setDirt(arg0, arg1) end
+function ItemVisual:setDirt(bodyPartType, amount) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return void
-function ItemVisual:setHole(arg0) end
+function ItemVisual:setHole(bodyPartType) end
 
 --- @public
---- @param arg0 float
+--- @param hue float
 --- @return void
-function ItemVisual:setHue(arg0) end
+function ItemVisual:setHue(hue) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param inventoryItem InventoryItem
 --- @return void
-function ItemVisual:setInventoryItem(arg0) end
+function ItemVisual:setInventoryItem(inventoryItem) end
 
 --- @public
---- @param arg0 String
+--- @param fullType String
 --- @return void
-function ItemVisual:setItemType(arg0) end
+function ItemVisual:setItemType(fullType) end
 
 --- @public
---- @param arg0 BloodBodyPartType
+--- @param bodyPartType BloodBodyPartType
 --- @return void
-function ItemVisual:setLeatherPatch(arg0) end
+function ItemVisual:setLeatherPatch(bodyPartType) end
 
 --- @public
---- @param arg0 int
+--- @param TextureChoice int
 --- @return void
-function ItemVisual:setTextureChoice(arg0) end
+function ItemVisual:setTextureChoice(TextureChoice) end
 
 --- @public
---- @param arg0 ImmutableColor
+--- @param tint ImmutableColor
 --- @return void
-function ItemVisual:setTint(arg0) end
+function ItemVisual:setTint(tint) end
 
 --- @public
---- @param arg0 ClothingItemReference
+--- @param itemRef ClothingItemReference
 --- @return void
-function ItemVisual:synchWithOutfit(arg0) end
+function ItemVisual:synchWithOutfit(itemRef) end
 
 --- @public
 --- @return String
@@ -275,5 +275,5 @@ function ItemVisual:toString() end
 
 --- @public
 --- @return ItemVisual
---- @overload fun(arg0: ItemVisual)
+--- @overload fun(other: ItemVisual)
 function ItemVisual.new() end

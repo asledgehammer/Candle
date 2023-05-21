@@ -1,6 +1,6 @@
 --- @meta
 
---- @class SurvivorDesc: Object
+--- @class SurvivorDesc
 --- @implement IHumanVisual
 --- @field public HairCommonColors ArrayList
 --- @field public TrouserCommonColors ArrayList
@@ -12,15 +12,15 @@ SurvivorDesc = {};
 
 --- @public
 --- @static
---- @param arg0 ColorInfo
+--- @param color ColorInfo
 --- @return void
-function SurvivorDesc.addHairColor(arg0) end
+function SurvivorDesc.addHairColor(color) end
 
 --- @public
 --- @static
---- @param arg0 ColorInfo
+--- @param color ColorInfo
 --- @return void
-function SurvivorDesc.addTrouserColor(arg0) end
+function SurvivorDesc.addTrouserColor(color) end
 
 --- @public
 --- @static
@@ -34,9 +34,9 @@ function SurvivorDesc.getRandomSkinColor() end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param aIDCount int
 --- @return void
-function SurvivorDesc.setIDCount(arg0) end
+function SurvivorDesc.setIDCount(aIDCount) end
 
 
 ------------------------------------
@@ -44,14 +44,14 @@ function SurvivorDesc.setIDCount(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param obv String
 --- @return void
-function SurvivorDesc:addObservation(arg0) end
+function SurvivorDesc:addObservation(obv) end
 
 --- @public
---- @param arg0 String
+--- @param outfitName String
 --- @return void
-function SurvivorDesc:dressInNamedOutfit(arg0) end
+function SurvivorDesc:dressInNamedOutfit(outfitName) end
 
 --- @public
 --- @return float
@@ -110,9 +110,9 @@ function SurvivorDesc:getInstance() end
 function SurvivorDesc:getInventoryScript() end
 
 --- @public
---- @param arg0 ItemVisuals
+--- @param itemVisuals ItemVisuals
 --- @return void
-function SurvivorDesc:getItemVisuals(arg0) end
+function SurvivorDesc:getItemVisuals(itemVisuals) end
 
 --- @public
 --- @return float
@@ -124,7 +124,7 @@ function SurvivorDesc:getLoyalty() end
 
 --- @public
 --- @return HashMap
---- @overload fun(arg0: SurvivorDesc)
+--- @overload fun(descriptor: SurvivorDesc)
 function SurvivorDesc:getMetCount() end
 
 --- @public
@@ -156,9 +156,9 @@ function SurvivorDesc:getTorso() end
 function SurvivorDesc:getType() end
 
 --- @public
---- @param arg0 String
+--- @param bodyLocation String
 --- @return InventoryItem
-function SurvivorDesc:getWornItem(arg0) end
+function SurvivorDesc:getWornItem(bodyLocation) end
 
 --- @public
 --- @return WornItems
@@ -169,9 +169,9 @@ function SurvivorDesc:getWornItems() end
 function SurvivorDesc:getXPBoostMap() end
 
 --- @public
---- @param arg0 String
+--- @param o String
 --- @return boolean
-function SurvivorDesc:hasObservation(arg0) end
+function SurvivorDesc:hasObservation(o) end
 
 --- @public
 --- @return boolean
@@ -202,96 +202,96 @@ function SurvivorDesc:isSkeleton() end
 function SurvivorDesc:isZombie() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
---- @param arg2 IsoGameCharacter
+--- @param input ByteBuffer
+--- @param WorldVersion int
+--- @param chr IsoGameCharacter
 --- @return void
-function SurvivorDesc:load(arg0, arg1, arg2) end
+function SurvivorDesc:load(input, WorldVersion, chr) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param input ByteBuffer
 --- @return void
-function SurvivorDesc:loadCompact(arg0) end
+function SurvivorDesc:loadCompact(input) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return void
-function SurvivorDesc:meet(arg0) end
+function SurvivorDesc:meet(desc) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function SurvivorDesc:save(arg0) end
+function SurvivorDesc:save(output) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function SurvivorDesc:saveCompact(arg0) end
+function SurvivorDesc:saveCompact(output) end
 
 --- @public
---- @param arg0 float
+--- @param aggressiveness float
 --- @return void
-function SurvivorDesc:setAggressiveness(arg0) end
+function SurvivorDesc:setAggressiveness(aggressiveness) end
 
 --- @public
---- @param arg0 float
+--- @param bravery float
 --- @return void
-function SurvivorDesc:setBravery(arg0) end
+function SurvivorDesc:setBravery(bravery) end
 
 --- @public
---- @param arg0 float
+--- @param compassion float
 --- @return void
-function SurvivorDesc:setCompassion(arg0) end
+function SurvivorDesc:setCompassion(compassion) end
 
 --- @public
---- @param arg0 float
+--- @param favourindoors float
 --- @return void
-function SurvivorDesc:setFavourindoors(arg0) end
+function SurvivorDesc:setFavourindoors(favourindoors) end
 
 --- @public
---- @param arg0 boolean
+--- @param bFemale boolean
 --- @return void
-function SurvivorDesc:setFemale(arg0) end
+function SurvivorDesc:setFemale(bFemale) end
 
 --- @public
---- @param arg0 String
+--- @param forename String
 --- @return void
-function SurvivorDesc:setForename(arg0) end
+function SurvivorDesc:setForename(forename) end
 
 --- @public
---- @param arg0 float
+--- @param friendliness float
 --- @return void
-function SurvivorDesc:setFriendliness(arg0) end
+function SurvivorDesc:setFriendliness(friendliness) end
 
 --- @public
---- @param arg0 int
+--- @param ID int
 --- @return void
-function SurvivorDesc:setID(arg0) end
+function SurvivorDesc:setID(ID) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param Instance IsoGameCharacter
 --- @return void
-function SurvivorDesc:setInstance(arg0) end
+function SurvivorDesc:setInstance(Instance) end
 
 --- @public
---- @param arg0 String
+--- @param InventoryScript String
 --- @return void
-function SurvivorDesc:setInventoryScript(arg0) end
+function SurvivorDesc:setInventoryScript(InventoryScript) end
 
 --- @public
---- @param arg0 float
+--- @param loner float
 --- @return void
-function SurvivorDesc:setLoner(arg0) end
+function SurvivorDesc:setLoner(loner) end
 
 --- @public
---- @param arg0 float
+--- @param loyalty float
 --- @return void
-function SurvivorDesc:setLoyalty(arg0) end
+function SurvivorDesc:setLoyalty(loyalty) end
 
 --- @public
---- @param arg0 String
+--- @param Profession String
 --- @return void
-function SurvivorDesc:setProfession(arg0) end
+function SurvivorDesc:setProfession(Profession) end
 
 --- @public
 --- @param arg0 Profession
@@ -299,19 +299,19 @@ function SurvivorDesc:setProfession(arg0) end
 function SurvivorDesc:setProfessionSkills(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param surname String
 --- @return void
-function SurvivorDesc:setSurname(arg0) end
+function SurvivorDesc:setSurname(surname) end
 
 --- @public
---- @param arg0 float
+--- @param temper float
 --- @return void
-function SurvivorDesc:setTemper(arg0) end
+function SurvivorDesc:setTemper(temper) end
 
 --- @public
---- @param arg0 String
+--- @param torso String
 --- @return void
-function SurvivorDesc:setTorso(arg0) end
+function SurvivorDesc:setTorso(torso) end
 
 --- @public
 --- @param arg0 SurvivorType
@@ -319,10 +319,10 @@ function SurvivorDesc:setTorso(arg0) end
 function SurvivorDesc:setType(arg0) end
 
 --- @public
---- @param arg0 String
---- @param arg1 InventoryItem
+--- @param bodyLocation String
+--- @param item InventoryItem
 --- @return void
-function SurvivorDesc:setWornItem(arg0, arg1) end
+function SurvivorDesc:setWornItem(bodyLocation, item) end
 
 
 ------------------------------------
@@ -331,5 +331,5 @@ function SurvivorDesc:setWornItem(arg0, arg1) end
 
 --- @public
 --- @return SurvivorDesc
---- @overload fun(arg0: SurvivorDesc)
+--- @overload fun(other: SurvivorDesc)
 function SurvivorDesc.new() end

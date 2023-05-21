@@ -1,6 +1,7 @@
 --- @meta
 
---- @class ClimateHistory: Object
+--- @class ClimateHistory
+--- TurboTuTone.
 ClimateHistory = {};
 
 ------------------------------------
@@ -8,14 +9,14 @@ ClimateHistory = {};
 ------------------------------------
 
 --- @public
---- @param arg0 ClimateManager
+--- @param climateManager ClimateManager
 --- @return void
-function ClimateHistory:init(arg0) end
+function ClimateHistory:init(climateManager) end
 
 --- @public
---- @param arg0 ClimateManager
+--- @param climateManager ClimateManager
 --- @return void
-function ClimateHistory:updateDayChange(arg0) end
+function ClimateHistory:updateDayChange(climateManager) end
 
 
 ------------------------------------

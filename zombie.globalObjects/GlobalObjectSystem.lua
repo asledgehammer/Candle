@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GlobalObjectSystem: Object
+--- @class GlobalObjectSystem
 GlobalObjectSystem = {};
 
 ------------------------------------
@@ -16,9 +16,9 @@ function GlobalObjectSystem:Reset() end
 function GlobalObjectSystem:allocList() end
 
 --- @public
---- @param arg0 ArrayList
+--- @param list ArrayList
 --- @return void
-function GlobalObjectSystem:finishedWithList(arg0) end
+function GlobalObjectSystem:finishedWithList(list) end
 
 --- @public
 --- @return KahluaTable
@@ -29,50 +29,50 @@ function GlobalObjectSystem:getModData() end
 function GlobalObjectSystem:getName() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return GlobalObject
-function GlobalObjectSystem:getObjectAt(arg0, arg1, arg2) end
+function GlobalObjectSystem:getObjectAt(x, y, z) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return GlobalObject
-function GlobalObjectSystem:getObjectByIndex(arg0) end
+function GlobalObjectSystem:getObjectByIndex(index) end
 
 --- @public
 --- @return int
 function GlobalObjectSystem:getObjectCount() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return ArrayList
-function GlobalObjectSystem:getObjectsAdjacentTo(arg0, arg1, arg2) end
+function GlobalObjectSystem:getObjectsAdjacentTo(x, y, z) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return ArrayList
-function GlobalObjectSystem:getObjectsInChunk(arg0, arg1) end
+function GlobalObjectSystem:getObjectsInChunk(wx, wy) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param wx int
+--- @param wy int
 --- @return boolean
-function GlobalObjectSystem:hasObjectsInChunk(arg0, arg1) end
+function GlobalObjectSystem:hasObjectsInChunk(wx, wy) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return GlobalObject
-function GlobalObjectSystem:newObject(arg0, arg1, arg2) end
+function GlobalObjectSystem:newObject(x, y, z) end
 
 --- @public
---- @param arg0 GlobalObject
+--- @param object GlobalObject
 --- @return void
-function GlobalObjectSystem:removeObject(arg0) end
+function GlobalObjectSystem:removeObject(object) end
 
 

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ScriptManager: Object
+--- @class ScriptManager
 --- @implement IScriptObjectStore
 --- @field public instance ScriptManager
 --- @field public VanillaID String
@@ -22,9 +22,9 @@ function ScriptManager.getCurrentLoadFileMod() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return String
-function ScriptManager.getItemName(arg0) end
+function ScriptManager.getItemName(name) end
 
 
 ------------------------------------
@@ -36,25 +36,25 @@ function ScriptManager.getItemName(arg0) end
 function ScriptManager:CheckExitPoints() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Item
---- @overload fun(arg0: String, arg1: boolean)
-function ScriptManager:FindItem(arg0) end
+--- @overload fun(name: String, moduleDefaultsToBase: boolean)
+function ScriptManager:FindItem(name) end
 
 --- @public
 --- @return void
 function ScriptManager:Load() end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
+--- @param filename String
+--- @param bLoadJar boolean
 --- @return void
-function ScriptManager:LoadFile(arg0, arg1) end
+function ScriptManager:LoadFile(filename, bLoadJar) end
 
 --- @public
---- @param arg0 String
+--- @param totalFile String
 --- @return void
-function ScriptManager:ParseScript(arg0) end
+function ScriptManager:ParseScript(totalFile) end
 
 --- @public
 --- @return void
@@ -69,9 +69,9 @@ function ScriptManager:getAllAnimationsMeshes() end
 function ScriptManager:getAllEvolvedRecipes() end
 
 --- @public
---- @param arg0 List
+--- @param result List
 --- @return List
-function ScriptManager:getAllFixing(arg0) end
+function ScriptManager:getAllFixing(result) end
 
 --- @public
 --- @return ArrayList
@@ -94,9 +94,9 @@ function ScriptManager:getAllModelScripts() end
 function ScriptManager:getAllRecipes() end
 
 --- @public
---- @param arg0 String
+--- @param result String
 --- @return ArrayList
-function ScriptManager:getAllRecipesFor(arg0) end
+function ScriptManager:getAllRecipesFor(result) end
 
 --- @public
 --- @return ArrayList
@@ -111,117 +111,117 @@ function ScriptManager:getAllUniqueRecipes() end
 function ScriptManager:getAllVehicleScripts() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return AnimationsMesh
-function ScriptManager:getAnimationsMesh(arg0) end
+function ScriptManager:getAnimationsMesh(name) end
 
 --- @public
 --- @return String
 function ScriptManager:getChecksum() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Item
-function ScriptManager:getItem(arg0) end
+function ScriptManager:getItem(name) end
 
 --- @public
---- @param arg0 String
+--- @param clothingName String
 --- @return Item
-function ScriptManager:getItemForClothingItem(arg0) end
+function ScriptManager:getItemForClothingItem(clothingName) end
 
 --- @public
---- @param arg0 String
+--- @param clothingItem String
 --- @return String
-function ScriptManager:getItemTypeForClothingItem(arg0) end
+function ScriptManager:getItemTypeForClothingItem(clothingItem) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return ArrayList
-function ScriptManager:getItemsByType(arg0) end
+function ScriptManager:getItemsByType(type) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return ArrayList
-function ScriptManager:getItemsTag(arg0) end
+function ScriptManager:getItemsTag(tag) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return MannequinScript
-function ScriptManager:getMannequinScript(arg0) end
+function ScriptManager:getMannequinScript(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ModelScript
-function ScriptManager:getModelScript(arg0) end
+function ScriptManager:getModelScript(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ScriptModule
---- @overload fun(arg0: String, arg1: boolean)
-function ScriptManager:getModule(arg0) end
+--- @overload fun(name: String, defaultToBase: boolean)
+function ScriptManager:getModule(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return ScriptModule
-function ScriptManager:getModuleNoDisableCheck(arg0) end
+function ScriptManager:getModuleNoDisableCheck(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Recipe
-function ScriptManager:getRecipe(arg0) end
+function ScriptManager:getRecipe(name) end
 
 --- @public
---- @param arg0 String
+--- @param eventName String
 --- @return SoundTimelineScript
-function ScriptManager:getSoundTimeline(arg0) end
+function ScriptManager:getSoundTimeline(eventName) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return Item
-function ScriptManager:getSpecificItem(arg0) end
+function ScriptManager:getSpecificItem(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return VehicleScript
-function ScriptManager:getVehicle(arg0) end
+function ScriptManager:getVehicle(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return VehicleEngineRPM
-function ScriptManager:getVehicleEngineRPM(arg0) end
+function ScriptManager:getVehicleEngineRPM(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return VehicleTemplate
-function ScriptManager:getVehicleTemplate(arg0) end
+function ScriptManager:getVehicleTemplate(name) end
 
 --- @public
 --- @return ArrayList
 function ScriptManager:getZedDmgMap() end
 
 --- @public
---- @param arg0 String
+--- @param itemType String
 --- @return boolean
-function ScriptManager:isDrainableItemType(arg0) end
+function ScriptManager:isDrainableItemType(itemType) end
 
 --- @public
---- @param arg0 ScriptModule
---- @param arg1 String
+--- @param module ScriptModule
+--- @param itemType String
 --- @return String
-function ScriptManager:resolveItemType(arg0, arg1) end
+function ScriptManager:resolveItemType(module, itemType) end
 
 --- @public
---- @param arg0 ScriptModule
---- @param arg1 String
+--- @param module ScriptModule
+--- @param modelScriptName String
 --- @return String
-function ScriptManager:resolveModelScript(arg0, arg1) end
+function ScriptManager:resolveModelScript(module, modelScriptName) end
 
 --- @public
---- @param arg0 URI
---- @param arg1 File
---- @param arg2 ArrayList
+--- @param base URI
+--- @param fo File
+--- @param loadList ArrayList
 --- @return void
-function ScriptManager:searchFolders(arg0, arg1, arg2) end
+function ScriptManager:searchFolders(base, fo, loadList) end
 
 --- @public
 --- @return void

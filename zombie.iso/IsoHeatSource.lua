@@ -1,6 +1,6 @@
 --- @meta
 
---- @class IsoHeatSource: Object
+--- @class IsoHeatSource
 IsoHeatSource = {};
 
 ------------------------------------
@@ -29,18 +29,18 @@ function IsoHeatSource:getZ() end
 
 --- @public
 --- @return boolean
---- @overload fun(arg0: int, arg1: int, arg2: int, arg3: int)
+--- @overload fun(minX: int, minY: int, maxX: int, maxY: int)
 function IsoHeatSource:isInBounds() end
 
 --- @public
---- @param arg0 int
+--- @param radius int
 --- @return void
-function IsoHeatSource:setRadius(arg0) end
+function IsoHeatSource:setRadius(radius) end
 
 --- @public
---- @param arg0 int
+--- @param temperature int
 --- @return void
-function IsoHeatSource:setTemperature(arg0) end
+function IsoHeatSource:setTemperature(temperature) end
 
 
 ------------------------------------
@@ -48,10 +48,10 @@ function IsoHeatSource:setTemperature(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param radius int
+--- @param temperature int
 --- @return IsoHeatSource
-function IsoHeatSource.new(arg0, arg1, arg2, arg3, arg4) end
+function IsoHeatSource.new(x, y, z, radius, temperature) end

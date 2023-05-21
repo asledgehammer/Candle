@@ -18,25 +18,25 @@ function PlayerStrafeState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 AnimEvent
+--- @param owner IsoGameCharacter
+--- @param event AnimEvent
 --- @return void
-function PlayerStrafeState:animEvent(arg0, arg1) end
+function PlayerStrafeState:animEvent(owner, event) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerStrafeState:enter(arg0) end
+function PlayerStrafeState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerStrafeState:execute(arg0) end
+function PlayerStrafeState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function PlayerStrafeState:exit(arg0) end
+function PlayerStrafeState:exit(owner) end
 
 
 ------------------------------------

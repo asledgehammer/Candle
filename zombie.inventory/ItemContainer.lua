@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ItemContainer: Object
+--- @class ItemContainer
 ItemContainer = {};
 
 ------------------------------------
@@ -9,9 +9,9 @@ ItemContainer = {};
 
 --- @public
 --- @static
---- @param arg0 float
+--- @param val float
 --- @return float
-function ItemContainer.floatingPointCorrection(arg0) end
+function ItemContainer.floatingPointCorrection(val) end
 
 
 ------------------------------------
@@ -19,102 +19,102 @@ function ItemContainer.floatingPointCorrection(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return InventoryItem
---- @overload fun(arg0: String, arg1: float)
-function ItemContainer:AddItem(arg0) end
+--- @overload fun(type: String, useDelta: float)
+function ItemContainer:AddItem(type) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return InventoryItem
-function ItemContainer:AddItemBlind(arg0) end
+function ItemContainer:AddItemBlind(item) end
 
 --- @public
---- @param arg0 InventoryItem
---- @param arg1 int
+--- @param item InventoryItem
+--- @param use int
 --- @return void
-function ItemContainer:AddItems(arg0, arg1) end
+function ItemContainer:AddItems(item, use) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return InventoryItem
-function ItemContainer:DoAddItem(arg0) end
+function ItemContainer:DoAddItem(item) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return InventoryItem
-function ItemContainer:DoAddItemBlind(arg0) end
+function ItemContainer:DoAddItemBlind(item) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function ItemContainer:DoRemoveItem(arg0) end
+function ItemContainer:DoRemoveItem(item) end
 
 --- @public
---- @param arg0 ItemType
+--- @param itemType ItemType
 --- @return InventoryItem
-function ItemContainer:Find(arg0) end
+function ItemContainer:Find(itemType) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return ArrayList
-function ItemContainer:FindAll(arg0) end
+function ItemContainer:FindAll(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return InventoryItem
---- @overload fun(arg0: String, arg1: int)
-function ItemContainer:FindAndReturn(arg0) end
+--- @overload fun(type: String, itemToCheck: ArrayList)
+function ItemContainer:FindAndReturn(type) end
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return InventoryItem
-function ItemContainer:FindAndReturnCategory(arg0) end
+function ItemContainer:FindAndReturnCategory(category) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return InventoryItem
-function ItemContainer:FindAndReturnStack(arg0) end
+function ItemContainer:FindAndReturnStack(type) end
 
 --- @public
---- @param arg0 int
+--- @param uses int
 --- @return InventoryItem
-function ItemContainer:FindAndReturnWaterItem(arg0) end
+function ItemContainer:FindAndReturnWaterItem(uses) end
 
 --- @public
 --- @return InventoryItem
 function ItemContainer:FindWaterSource() end
 
 --- @public
---- @param arg0 ItemType
+--- @param itemType ItemType
 --- @return boolean
-function ItemContainer:HasType(arg0) end
+function ItemContainer:HasType(itemType) end
 
 --- @public
---- @param arg0 ItemType
+--- @param item InventoryItem
+--- @return void
+function ItemContainer:Remove(item) end
+
+--- @public
+--- @param itemType String
+--- @return void
+function ItemContainer:RemoveAll(itemType) end
+
+--- @public
+--- @param String String
+--- @return void
+--- @overload fun(String: String, insideInv: boolean)
+function ItemContainer:RemoveOneOf(String) end
+
+--- @public
+--- @param item InventoryItem
 --- @return InventoryItem
-function ItemContainer:Remove(arg0) end
+function ItemContainer:addItem(item) end
 
 --- @public
---- @param arg0 String
+--- @param item InventoryItem
 --- @return void
-function ItemContainer:RemoveAll(arg0) end
-
---- @public
---- @param arg0 String
---- @return void
---- @overload fun(arg0: String, arg1: boolean)
-function ItemContainer:RemoveOneOf(arg0) end
-
---- @public
---- @param arg0 InventoryItem
---- @return InventoryItem
-function ItemContainer:addItem(arg0) end
-
---- @public
---- @param arg0 InventoryItem
---- @return void
-function ItemContainer:addItemOnServer(arg0) end
+function ItemContainer:addItemOnServer(item) end
 
 --- @public
 --- @return void
@@ -125,11 +125,11 @@ function ItemContainer:addItemsToProcessItems() end
 function ItemContainer:clear() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
---- @overload fun(arg0: InventoryItem, arg1: boolean)
---- @overload fun(arg0: String, arg1: boolean, arg2: boolean)
-function ItemContainer:contains(arg0) end
+--- @overload fun(type: String, doInv: boolean)
+--- @overload fun(type: String, doInv: boolean, ignoreBroken: boolean)
+function ItemContainer:contains(item) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -154,19 +154,19 @@ function ItemContainer:containsEvalArgRecurse(arg0, arg1) end
 function ItemContainer:containsEvalRecurse(arg0) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return boolean
-function ItemContainer:containsID(arg0) end
+function ItemContainer:containsID(id) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:containsRecursive(arg0) end
+function ItemContainer:containsRecursive(item) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return boolean
-function ItemContainer:containsTag(arg0) end
+function ItemContainer:containsTag(tag) end
 
 --- @public
 --- @param arg0 String
@@ -188,14 +188,14 @@ function ItemContainer:containsTagEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:containsTagEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return boolean
-function ItemContainer:containsTagRecurse(arg0) end
+function ItemContainer:containsTagRecurse(tag) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return boolean
-function ItemContainer:containsType(arg0) end
+function ItemContainer:containsType(type) end
 
 --- @public
 --- @param arg0 String
@@ -211,15 +211,15 @@ function ItemContainer:containsTypeEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:containsTypeEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return boolean
-function ItemContainer:containsTypeRecurse(arg0) end
+function ItemContainer:containsTypeRecurse(type) end
 
 --- @public
---- @param arg0 String
+--- @param moduleType String
 --- @return boolean
---- @overload fun(arg0: String, arg1: boolean)
-function ItemContainer:containsWithModule(arg0) end
+--- @overload fun(moduleType: String, withDeltaLeft: boolean)
+function ItemContainer:containsWithModule(moduleType) end
 
 --- @public
 --- @return void
@@ -234,22 +234,22 @@ function ItemContainer:getAcceptItemFunction() end
 function ItemContainer:getAgeFactor() end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return ArrayList
---- @overload fun(arg0: Predicate, arg1: ArrayList)
-function ItemContainer:getAll(arg0) end
+--- @overload fun(predicate: Predicate, result: ArrayList)
+function ItemContainer:getAll(predicate) end
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: ArrayList)
-function ItemContainer:getAllCategory(arg0) end
+--- @overload fun(category: String, result: ArrayList)
+function ItemContainer:getAllCategory(category) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ArrayList
+--- @param category String
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllCategoryRecurse(arg0, arg1) end
+function ItemContainer:getAllCategoryRecurse(category, result) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -278,22 +278,22 @@ function ItemContainer:getAllEvalArgRecurse(arg0, arg1) end
 function ItemContainer:getAllEvalRecurse(arg0) end
 
 --- @public
---- @param arg0 LinkedHashMap
---- @param arg1 boolean
+--- @param items LinkedHashMap
+--- @param inInv boolean
 --- @return LinkedHashMap
-function ItemContainer:getAllItems(arg0, arg1) end
+function ItemContainer:getAllItems(items, inInv) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 ArrayList
+--- @param predicate Predicate
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllRecurse(arg0, arg1) end
+function ItemContainer:getAllRecurse(predicate, result) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ArrayList
+--- @param tag String
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllTag(arg0, arg1) end
+function ItemContainer:getAllTag(tag, result) end
 
 --- @public
 --- @param arg0 String
@@ -326,16 +326,16 @@ function ItemContainer:getAllTagEvalArgRecurse(arg0, arg1, arg2, arg3) end
 function ItemContainer:getAllTagEvalRecurse(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
---- @param arg1 ArrayList
+--- @param tag String
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllTagRecurse(arg0, arg1) end
+function ItemContainer:getAllTagRecurse(tag, result) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: ArrayList)
-function ItemContainer:getAllType(arg0) end
+--- @overload fun(type: String, result: ArrayList)
+function ItemContainer:getAllType(type) end
 
 --- @public
 --- @param arg0 String
@@ -368,30 +368,30 @@ function ItemContainer:getAllTypeEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:getAllTypeEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: ArrayList)
-function ItemContainer:getAllTypeRecurse(arg0) end
+--- @overload fun(type: String, result: ArrayList)
+function ItemContainer:getAllTypeRecurse(type) end
 
 --- @public
 --- @return ArrayList
 function ItemContainer:getAllWaterFillables() end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 Comparator
+--- @param predicate Predicate
+--- @param comparator Comparator
 --- @return InventoryItem
-function ItemContainer:getBest(arg0, arg1) end
+function ItemContainer:getBest(predicate, comparator) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param descriptor SurvivorDesc
 --- @return InventoryItem
-function ItemContainer:getBestBandage(arg0) end
+function ItemContainer:getBestBandage(descriptor) end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return InventoryItem
-function ItemContainer:getBestCondition(arg0) end
+function ItemContainer:getBestCondition(predicate) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -416,9 +416,9 @@ function ItemContainer:getBestConditionEvalArgRecurse(arg0, arg1) end
 function ItemContainer:getBestConditionEvalRecurse(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return InventoryItem
-function ItemContainer:getBestConditionRecurse(arg0) end
+function ItemContainer:getBestConditionRecurse(type) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -447,21 +447,21 @@ function ItemContainer:getBestEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:getBestEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param descriptor SurvivorDesc
 --- @return InventoryItem
-function ItemContainer:getBestFood(arg0) end
+function ItemContainer:getBestFood(descriptor) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 Comparator
+--- @param predicate Predicate
+--- @param comparator Comparator
 --- @return InventoryItem
-function ItemContainer:getBestRecurse(arg0, arg1) end
+function ItemContainer:getBestRecurse(predicate, comparator) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Comparator
+--- @param type String
+--- @param comparator Comparator
 --- @return InventoryItem
-function ItemContainer:getBestType(arg0, arg1) end
+function ItemContainer:getBestType(type, comparator) end
 
 --- @public
 --- @param arg0 String
@@ -490,14 +490,14 @@ function ItemContainer:getBestTypeEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:getBestTypeEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Comparator
+--- @param type String
+--- @param comparator Comparator
 --- @return InventoryItem
-function ItemContainer:getBestTypeRecurse(arg0, arg1) end
+function ItemContainer:getBestTypeRecurse(type, comparator) end
 
 --- @public
 --- @return InventoryItem
---- @overload fun(arg0: SurvivorDesc)
+--- @overload fun(desc: SurvivorDesc)
 function ItemContainer:getBestWeapon() end
 
 --- @public
@@ -533,9 +533,9 @@ function ItemContainer:getContentsWeight() end
 function ItemContainer:getCookingFactor() end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return int
-function ItemContainer:getCount(arg0) end
+function ItemContainer:getCount(predicate) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -560,14 +560,14 @@ function ItemContainer:getCountEvalArgRecurse(arg0, arg1) end
 function ItemContainer:getCountEvalRecurse(arg0) end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return int
-function ItemContainer:getCountRecurse(arg0) end
+function ItemContainer:getCountRecurse(predicate) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return int
-function ItemContainer:getCountTag(arg0) end
+function ItemContainer:getCountTag(tag) end
 
 --- @public
 --- @param arg0 String
@@ -596,14 +596,14 @@ function ItemContainer:getCountTagEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:getCountTagEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return int
-function ItemContainer:getCountTagRecurse(arg0) end
+function ItemContainer:getCountTagRecurse(tag) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return int
-function ItemContainer:getCountType(arg0) end
+function ItemContainer:getCountType(type) end
 
 --- @public
 --- @param arg0 String
@@ -632,33 +632,33 @@ function ItemContainer:getCountTypeEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:getCountTypeEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return int
-function ItemContainer:getCountTypeRecurse(arg0) end
+function ItemContainer:getCountTypeRecurse(type) end
 
 --- @public
 --- @return float
 function ItemContainer:getCustomTemperature() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return int
-function ItemContainer:getEffectiveCapacity(arg0) end
+function ItemContainer:getEffectiveCapacity(chr) end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return InventoryItem
-function ItemContainer:getFirst(arg0) end
+function ItemContainer:getFirst(predicate) end
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return InventoryItem
-function ItemContainer:getFirstCategory(arg0) end
+function ItemContainer:getFirstCategory(category) end
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return InventoryItem
-function ItemContainer:getFirstCategoryRecurse(arg0) end
+function ItemContainer:getFirstCategoryRecurse(category) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -683,14 +683,14 @@ function ItemContainer:getFirstEvalArgRecurse(arg0, arg1) end
 function ItemContainer:getFirstEvalRecurse(arg0) end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return InventoryItem
-function ItemContainer:getFirstRecurse(arg0) end
+function ItemContainer:getFirstRecurse(predicate) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return InventoryItem
-function ItemContainer:getFirstTag(arg0) end
+function ItemContainer:getFirstTag(tag) end
 
 --- @public
 --- @param arg0 String
@@ -712,14 +712,14 @@ function ItemContainer:getFirstTagEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:getFirstTagEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return InventoryItem
-function ItemContainer:getFirstTagRecurse(arg0) end
+function ItemContainer:getFirstTagRecurse(tag) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return InventoryItem
-function ItemContainer:getFirstType(arg0) end
+function ItemContainer:getFirstType(type) end
 
 --- @public
 --- @param arg0 String
@@ -741,56 +741,56 @@ function ItemContainer:getFirstTypeEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:getFirstTypeEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return InventoryItem
-function ItemContainer:getFirstTypeRecurse(arg0) end
+function ItemContainer:getFirstTypeRecurse(type) end
 
 --- @public
 --- @return String
 function ItemContainer:getFreezerPosition() end
 
 --- @public
---- @param arg0 long
+--- @param id long
 --- @return InventoryItem
-function ItemContainer:getItemById(arg0) end
+function ItemContainer:getItemById(id) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return int
---- @overload fun(arg0: String, arg1: boolean)
-function ItemContainer:getItemCount(arg0) end
+--- @overload fun(type: String, doBags: boolean)
+function ItemContainer:getItemCount(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return int
-function ItemContainer:getItemCountFromTypeRecurse(arg0) end
+function ItemContainer:getItemCountFromTypeRecurse(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return int
-function ItemContainer:getItemCountRecurse(arg0) end
+function ItemContainer:getItemCountRecurse(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return InventoryItem
---- @overload fun(arg0: String, arg1: boolean, arg2: boolean)
---- @overload fun(arg0: String, arg1: IsoGameCharacter, arg2: boolean, arg3: boolean, arg4: boolean)
-function ItemContainer:getItemFromType(arg0) end
+--- @overload fun(type: String, ignoreBroken: boolean, includeInv: boolean)
+--- @overload fun(type: String, chr: IsoGameCharacter, notEquipped: boolean, ignoreBroken: boolean, includeInv: boolean)
+function ItemContainer:getItemFromType(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return InventoryItem
-function ItemContainer:getItemFromTypeRecurse(arg0) end
+function ItemContainer:getItemFromTypeRecurse(type) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return InventoryItem
-function ItemContainer:getItemWithID(arg0) end
+function ItemContainer:getItemWithID(id) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return InventoryItem
-function ItemContainer:getItemWithIDRecursiv(arg0) end
+function ItemContainer:getItemWithIDRecursiv(id) end
 
 --- @public
 --- @return ArrayList
@@ -801,37 +801,37 @@ function ItemContainer:getItems() end
 function ItemContainer:getItems4Admin() end
 
 --- @public
---- @param arg0 String
+--- @param category String
 --- @return ArrayList
-function ItemContainer:getItemsFromCategory(arg0) end
+function ItemContainer:getItemsFromCategory(category) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: boolean)
-function ItemContainer:getItemsFromFullType(arg0) end
+--- @overload fun(type: String, includeInv: boolean)
+function ItemContainer:getItemsFromFullType(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: boolean)
-function ItemContainer:getItemsFromType(arg0) end
+--- @overload fun(type: String, includeInv: boolean)
+function ItemContainer:getItemsFromType(type) end
 
 --- @public
 --- @return float
 function ItemContainer:getMaxWeight() end
 
 --- @public
---- @param arg0 String
+--- @param item String
 --- @return int
-function ItemContainer:getNumItems(arg0) end
+function ItemContainer:getNumItems(item) end
 
 --- @public
---- @param arg0 String
+--- @param findItem String
 --- @return int
---- @overload fun(arg0: String, arg1: boolean)
---- @overload fun(arg0: String, arg1: boolean, arg2: ArrayList)
-function ItemContainer:getNumberOfItem(arg0) end
+--- @overload fun(findItem: String, includeReplaceOnDeplete: boolean)
+--- @overload fun(findItem: String, includeReplaceOnDeplete: boolean, containers: ArrayList)
+function ItemContainer:getNumberOfItem(findItem) end
 
 --- @public
 --- @return String
@@ -850,25 +850,25 @@ function ItemContainer:getParent() end
 function ItemContainer:getPutSound() end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 int
---- @param arg2 ArrayList
+--- @param predicate Predicate
+--- @param count int
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSome(arg0, arg1, arg2) end
+function ItemContainer:getSome(predicate, count, result) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param category String
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: int, arg2: ArrayList)
-function ItemContainer:getSomeCategory(arg0, arg1) end
+--- @overload fun(category: String, count: int, result: ArrayList)
+function ItemContainer:getSomeCategory(category, count) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
---- @param arg2 ArrayList
+--- @param category String
+--- @param count int
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSomeCategoryRecurse(arg0, arg1, arg2) end
+function ItemContainer:getSomeCategoryRecurse(category, count, result) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -901,18 +901,18 @@ function ItemContainer:getSomeEvalArgRecurse(arg0, arg1, arg2) end
 function ItemContainer:getSomeEvalRecurse(arg0, arg1) end
 
 --- @public
---- @param arg0 Predicate
---- @param arg1 int
---- @param arg2 ArrayList
+--- @param predicate Predicate
+--- @param count int
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSomeRecurse(arg0, arg1, arg2) end
+function ItemContainer:getSomeRecurse(predicate, count, result) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param tag String
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: int, arg2: ArrayList)
-function ItemContainer:getSomeTag(arg0, arg1) end
+--- @overload fun(tag: String, count: int, result: ArrayList)
+function ItemContainer:getSomeTag(tag, count) end
 
 --- @public
 --- @param arg0 String
@@ -949,18 +949,18 @@ function ItemContainer:getSomeTagEvalArgRecurse(arg0, arg1, arg2, arg3) end
 function ItemContainer:getSomeTagEvalRecurse(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param tag String
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: int, arg2: ArrayList)
-function ItemContainer:getSomeTagRecurse(arg0, arg1) end
+--- @overload fun(tag: String, count: int, result: ArrayList)
+function ItemContainer:getSomeTagRecurse(tag, count) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param type String
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: int, arg2: ArrayList)
-function ItemContainer:getSomeType(arg0, arg1) end
+--- @overload fun(type: String, count: int, result: ArrayList)
+function ItemContainer:getSomeType(type, count) end
 
 --- @public
 --- @param arg0 String
@@ -997,11 +997,11 @@ function ItemContainer:getSomeTypeEvalArgRecurse(arg0, arg1, arg2, arg3) end
 function ItemContainer:getSomeTypeEvalRecurse(arg0, arg1, arg2) end
 
 --- @public
---- @param arg0 String
---- @param arg1 int
+--- @param type String
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: int, arg2: ArrayList)
-function ItemContainer:getSomeTypeRecurse(arg0, arg1) end
+--- @overload fun(type: String, count: int, result: ArrayList)
+function ItemContainer:getSomeTypeRecurse(type, count) end
 
 --- @public
 --- @return IsoGridSquare
@@ -1012,33 +1012,33 @@ function ItemContainer:getSourceGrid() end
 function ItemContainer:getTemprature() end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return float
-function ItemContainer:getTotalFoodScore(arg0) end
+function ItemContainer:getTotalFoodScore(desc) end
 
 --- @public
---- @param arg0 SurvivorDesc
+--- @param desc SurvivorDesc
 --- @return float
-function ItemContainer:getTotalWeaponScore(arg0) end
+function ItemContainer:getTotalWeaponScore(desc) end
 
 --- @public
 --- @return String
 function ItemContainer:getType() end
 
 --- @public
---- @param arg0 Predicate
+--- @param predicate Predicate
 --- @return int
-function ItemContainer:getUsesRecurse(arg0) end
+function ItemContainer:getUsesRecurse(predicate) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return int
-function ItemContainer:getUsesType(arg0) end
+function ItemContainer:getUsesType(type) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return int
-function ItemContainer:getUsesTypeRecurse(arg0) end
+function ItemContainer:getUsesTypeRecurse(type) end
 
 --- @public
 --- @return VehiclePart
@@ -1057,15 +1057,15 @@ function ItemContainer:getWeight() end
 function ItemContainer:getWeightReduction() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:hasRoomFor(arg0, arg1) end
+function ItemContainer:hasRoomFor(chr, item) end
 
 --- @public
---- @param arg0 int
+--- @param keyId int
 --- @return InventoryItem
-function ItemContainer:haveThisKeyId(arg0) end
+function ItemContainer:haveThisKeyId(keyId) end
 
 --- @public
 --- @return boolean
@@ -1096,23 +1096,23 @@ function ItemContainer:isExplored() end
 function ItemContainer:isHasBeenLooted() end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return boolean
-function ItemContainer:isInCharacterInventory(arg0) end
+function ItemContainer:isInCharacterInventory(chr) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:isInside(arg0) end
+function ItemContainer:isInside(item) end
 
 --- @public
 --- @return boolean
 function ItemContainer:isIsDevice() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:isItemAllowed(arg0) end
+function ItemContainer:isItemAllowed(item) end
 
 --- @public
 --- @return boolean
@@ -1123,38 +1123,38 @@ function ItemContainer:isMicrowave() end
 function ItemContainer:isPowered() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function ItemContainer:isRemoveItemAllowed(arg0) end
+function ItemContainer:isRemoveItemAllowed(item) end
 
 --- @public
 --- @return boolean
 function ItemContainer:isTemperatureChanging() end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return ArrayList
-function ItemContainer:load(arg0, arg1) end
+function ItemContainer:load(input, WorldVersion) end
 
 --- @public
 --- @return void
 function ItemContainer:removeAllItems() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function ItemContainer:removeItemOnServer(arg0) end
+function ItemContainer:removeItemOnServer(item) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return boolean
-function ItemContainer:removeItemWithID(arg0) end
+function ItemContainer:removeItemWithID(id) end
 
 --- @public
---- @param arg0 int
+--- @param id int
 --- @return boolean
-function ItemContainer:removeItemWithIDRecurse(arg0) end
+function ItemContainer:removeItemWithIDRecurse(id) end
 
 --- @public
 --- @return void
@@ -1169,30 +1169,30 @@ function ItemContainer:requestServerItemsForContainer() end
 function ItemContainer:requestSync() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return ArrayList
---- @overload fun(arg0: ByteBuffer, arg1: IsoGameCharacter)
-function ItemContainer:save(arg0) end
+--- @overload fun(output: ByteBuffer, noCompress: IsoGameCharacter)
+function ItemContainer:save(output) end
 
 --- @public
 --- @return void
---- @overload fun(arg0: UdpConnection)
+--- @overload fun(connection: UdpConnection)
 function ItemContainer:sendContentsToRemoteContainer() end
 
 --- @public
---- @param arg0 String
+--- @param functionName String
 --- @return void
-function ItemContainer:setAcceptItemFunction(arg0) end
+function ItemContainer:setAcceptItemFunction(functionName) end
 
 --- @public
---- @param arg0 boolean
+--- @param active boolean
 --- @return void
-function ItemContainer:setActive(arg0) end
+function ItemContainer:setActive(active) end
 
 --- @public
---- @param arg0 float
+--- @param ageFactor float
 --- @return void
-function ItemContainer:setAgeFactor(arg0) end
+function ItemContainer:setAgeFactor(ageFactor) end
 
 --- @public
 --- @param arg0 int
@@ -1200,94 +1200,94 @@ function ItemContainer:setAgeFactor(arg0) end
 function ItemContainer:setCapacity(arg0) end
 
 --- @public
---- @param arg0 String
+--- @param closeSound String
 --- @return void
-function ItemContainer:setCloseSound(arg0) end
+function ItemContainer:setCloseSound(closeSound) end
 
 --- @public
---- @param arg0 String
+--- @param containerPosition String
 --- @return void
-function ItemContainer:setContainerPosition(arg0) end
+function ItemContainer:setContainerPosition(containerPosition) end
 
 --- @public
---- @param arg0 float
+--- @param CookingFactor float
 --- @return void
-function ItemContainer:setCookingFactor(arg0) end
+function ItemContainer:setCookingFactor(CookingFactor) end
 
 --- @public
---- @param arg0 float
+--- @param newTemp float
 --- @return void
-function ItemContainer:setCustomTemperature(arg0) end
+function ItemContainer:setCustomTemperature(newTemp) end
 
 --- @public
---- @param arg0 boolean
+--- @param dirty boolean
 --- @return void
-function ItemContainer:setDirty(arg0) end
+function ItemContainer:setDirty(dirty) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ItemContainer:setDrawDirty(arg0) end
+function ItemContainer:setDrawDirty(b) end
 
 --- @public
---- @param arg0 boolean
+--- @param b boolean
 --- @return void
-function ItemContainer:setExplored(arg0) end
+function ItemContainer:setExplored(b) end
 
 --- @public
---- @param arg0 String
+--- @param freezerPosition String
 --- @return void
-function ItemContainer:setFreezerPosition(arg0) end
+function ItemContainer:setFreezerPosition(freezerPosition) end
 
 --- @public
---- @param arg0 boolean
+--- @param hasBeenLooted boolean
 --- @return void
-function ItemContainer:setHasBeenLooted(arg0) end
+function ItemContainer:setHasBeenLooted(hasBeenLooted) end
 
 --- @public
---- @param arg0 boolean
+--- @param IsDevice boolean
 --- @return void
-function ItemContainer:setIsDevice(arg0) end
+function ItemContainer:setIsDevice(IsDevice) end
 
 --- @public
---- @param arg0 ArrayList
+--- @param Items ArrayList
 --- @return void
-function ItemContainer:setItems(arg0) end
+function ItemContainer:setItems(Items) end
 
 --- @public
---- @param arg0 String
+--- @param onlyAcceptCategory String
 --- @return void
-function ItemContainer:setOnlyAcceptCategory(arg0) end
+function ItemContainer:setOnlyAcceptCategory(onlyAcceptCategory) end
 
 --- @public
---- @param arg0 String
+--- @param openSound String
 --- @return void
-function ItemContainer:setOpenSound(arg0) end
+function ItemContainer:setOpenSound(openSound) end
 
 --- @public
---- @param arg0 IsoObject
+--- @param parent IsoObject
 --- @return void
-function ItemContainer:setParent(arg0) end
+function ItemContainer:setParent(parent) end
 
 --- @public
---- @param arg0 String
+--- @param putSound String
 --- @return void
-function ItemContainer:setPutSound(arg0) end
+function ItemContainer:setPutSound(putSound) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param SourceGrid IsoGridSquare
 --- @return void
-function ItemContainer:setSourceGrid(arg0) end
+function ItemContainer:setSourceGrid(SourceGrid) end
 
 --- @public
---- @param arg0 String
+--- @param type String
 --- @return void
-function ItemContainer:setType(arg0) end
+function ItemContainer:setType(type) end
 
 --- @public
---- @param arg0 int
+--- @param weightReduction int
 --- @return void
-function ItemContainer:setWeightReduction(arg0) end
+function ItemContainer:setWeightReduction(weightReduction) end
 
 
 ------------------------------------
@@ -1296,7 +1296,7 @@ function ItemContainer:setWeightReduction(arg0) end
 
 --- @public
 --- @return ItemContainer
---- @overload fun(arg0: int)
---- @overload fun(arg0: String, arg1: IsoGridSquare, arg2: IsoObject)
---- @overload fun(arg0: int, arg1: String, arg2: IsoGridSquare, arg3: IsoObject)
+--- @overload fun(ID: int)
+--- @overload fun(containerName: String, square: IsoGridSquare, parent: IsoObject)
+--- @overload fun(ID: int, containerName: String, square: IsoGridSquare, parent: IsoObject)
 function ItemContainer.new() end

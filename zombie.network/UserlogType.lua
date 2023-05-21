@@ -17,15 +17,15 @@ UserlogType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param str String
 --- @return UserlogType
-function UserlogType.FromString(arg0) end
+function UserlogType.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param value int
 --- @return UserlogType
-function UserlogType.fromIndex(arg0) end
+function UserlogType.fromIndex(value) end
 
 --- @public
 --- @static

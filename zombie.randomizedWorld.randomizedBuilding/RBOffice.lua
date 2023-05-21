@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBOffice: RandomizedBuildingBase
+--- Random clutter in office
 RBOffice = {};
 
 ------------------------------------
@@ -8,20 +9,20 @@ RBOffice = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
---- @param arg1 boolean
+--- @param def BuildingDef
+--- @param force boolean
 --- @return boolean
-function RBOffice:isValid(arg0, arg1) end
+function RBOffice:isValid(def, force) end
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RBOffice:randomizeBuilding(arg0) end
+function RBOffice:randomizeBuilding(def) end
 
 --- @public
---- @param arg0 IsoGridSquare
+--- @param sq IsoGridSquare
 --- @return boolean
-function RBOffice:roomValid(arg0) end
+function RBOffice:roomValid(sq) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Observation: Object
+--- @class Observation
 --- @implement IListBoxItem
 Observation = {};
 
@@ -33,19 +33,19 @@ function Observation:getRightLabel() end
 function Observation:getTraitID() end
 
 --- @public
---- @param arg0 String
+--- @param description String
 --- @return void
-function Observation:setDescription(arg0) end
+function Observation:setDescription(description) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Observation:setName(arg0) end
+function Observation:setName(name) end
 
 --- @public
---- @param arg0 String
+--- @param traitID String
 --- @return void
-function Observation:setTraitID(arg0) end
+function Observation:setTraitID(traitID) end
 
 
 ------------------------------------
@@ -53,8 +53,8 @@ function Observation:setTraitID(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
+--- @param tr String
+--- @param name String
+--- @param desc String
 --- @return Observation
-function Observation.new(arg0, arg1, arg2) end
+function Observation.new(tr, name, desc) end

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBLooted: RandomizedBuildingBase
+--- This building will be almost empty of loot, and lot of the doors/windows will be broken
 RBLooted = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RBLooted = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RBLooted:randomizeBuilding(arg0) end
+function RBLooted:randomizeBuilding(def) end
 
 
 ------------------------------------

@@ -1,6 +1,6 @@
 --- @meta
 
---- @class WornItems: Object
+--- @class WornItems
 WornItems = {};
 
 ------------------------------------
@@ -8,77 +8,77 @@ WornItems = {};
 ------------------------------------
 
 --- @public
---- @param arg0 ItemContainer
+--- @param container ItemContainer
 --- @return void
-function WornItems:addItemsToItemContainer(arg0) end
+function WornItems:addItemsToItemContainer(container) end
 
 --- @public
 --- @return void
 function WornItems:clear() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return boolean
-function WornItems:contains(arg0) end
+function WornItems:contains(item) end
 
 --- @public
---- @param arg0 WornItems
+--- @param other WornItems
 --- @return void
-function WornItems:copyFrom(arg0) end
+function WornItems:copyFrom(other) end
 
 --- @public
---- @param arg0 Consumer
+--- @param c Consumer
 --- @return void
-function WornItems:forEach(arg0) end
+function WornItems:forEach(c) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return WornItem
-function WornItems:get(arg0) end
+function WornItems:get(index) end
 
 --- @public
 --- @return BodyLocationGroup
 function WornItems:getBodyLocationGroup() end
 
 --- @public
---- @param arg0 String
+--- @param location String
 --- @return InventoryItem
-function WornItems:getItem(arg0) end
+function WornItems:getItem(location) end
 
 --- @public
---- @param arg0 int
+--- @param index int
 --- @return InventoryItem
-function WornItems:getItemByIndex(arg0) end
+function WornItems:getItemByIndex(index) end
 
 --- @public
---- @param arg0 ItemVisuals
+--- @param itemVisuals ItemVisuals
 --- @return void
-function WornItems:getItemVisuals(arg0) end
+function WornItems:getItemVisuals(itemVisuals) end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return String
-function WornItems:getLocation(arg0) end
+function WornItems:getLocation(item) end
 
 --- @public
 --- @return boolean
 function WornItems:isEmpty() end
 
 --- @public
---- @param arg0 InventoryItem
+--- @param item InventoryItem
 --- @return void
-function WornItems:remove(arg0) end
+function WornItems:remove(item) end
 
 --- @public
---- @param arg0 ItemVisuals
+--- @param itemVisuals ItemVisuals
 --- @return void
-function WornItems:setFromItemVisuals(arg0) end
+function WornItems:setFromItemVisuals(itemVisuals) end
 
 --- @public
---- @param arg0 String
---- @param arg1 InventoryItem
+--- @param location String
+--- @param item InventoryItem
 --- @return void
-function WornItems:setItem(arg0, arg1) end
+function WornItems:setItem(location, item) end
 
 --- @public
 --- @return int
@@ -90,6 +90,6 @@ function WornItems:size() end
 ------------------------------------
 
 --- @public
---- @param arg0 BodyLocationGroup
+--- @param group BodyLocationGroup
 --- @return WornItems
-function WornItems.new(arg0) end
+function WornItems.new(group) end

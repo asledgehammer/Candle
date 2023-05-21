@@ -1,6 +1,6 @@
 --- @meta
 
---- @class GameTime: Object
+--- @class GameTime
 --- @field public instance GameTime
 --- @field public MULTIPLIER float
 GameTime = {};
@@ -41,30 +41,30 @@ function GameTime.isGamePaused() end
 
 --- @public
 --- @static
---- @param arg0 ByteBuffer
---- @param arg1 UdpConnection
+--- @param bb ByteBuffer
+--- @param connection UdpConnection
 --- @return void
-function GameTime.receiveTimeSync(arg0, arg1) end
+function GameTime.receiveTimeSync(bb, connection) end
 
 --- @public
 --- @static
---- @param arg0 GameTime
+--- @param aInstance GameTime
 --- @return void
-function GameTime.setInstance(arg0) end
+function GameTime.setInstance(aInstance) end
 
 --- @public
 --- @static
---- @param arg0 long
+--- @param tshift long
 --- @return void
-function GameTime.setServerTimeShift(arg0) end
+function GameTime.setServerTimeShift(tshift) end
 
 --- @public
 --- @static
---- @param arg0 long
---- @param arg1 long
---- @param arg2 long
+--- @param timeClientSend long
+--- @param timeServer long
+--- @param timeClientReceive long
 --- @return void
-function GameTime.syncServerTime(arg0, arg1, arg2) end
+function GameTime.syncServerTime(timeClientSend, timeServer, timeClientReceive) end
 
 
 ------------------------------------
@@ -72,30 +72,30 @@ function GameTime.syncServerTime(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
+--- @param start float
+--- @param __end float
+--- @param delta float
 --- @return float
-function GameTime:Lerp(arg0, arg1, arg2) end
+function GameTime:Lerp(start, __end, delta) end
 
 --- @public
---- @param arg0 int
+--- @param i int
 --- @return void
-function GameTime:RemoveZombiesIndiscriminate(arg0) end
+function GameTime:RemoveZombiesIndiscriminate(i) end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 float
+--- @param startVal float
+--- @param endVal float
+--- @param startTime float
+--- @param endTime float
 --- @return float
-function GameTime:TimeLerp(arg0, arg1, arg2, arg3) end
+function GameTime:TimeLerp(startVal, endVal, startTime, endTime) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
+--- @param year int
+--- @param month int
 --- @return int
-function GameTime:daysInMonth(arg0, arg1) end
+function GameTime:daysInMonth(year, month) end
 
 --- @public
 --- @return float
@@ -130,9 +130,9 @@ function GameTime:getDayPlusOne() end
 function GameTime:getDaysSurvived() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param playerObj IsoPlayer
 --- @return String
-function GameTime:getDeathString(arg0) end
+function GameTime:getDeathString(playerObj) end
 
 --- @public
 --- @return float
@@ -283,9 +283,9 @@ function GameTime:getTimeDelta() end
 function GameTime:getTimeOfDay() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param playerObj IsoPlayer
 --- @return String
-function GameTime:getTimeSurvived(arg0) end
+function GameTime:getTimeSurvived(playerObj) end
 
 --- @public
 --- @return float
@@ -316,9 +316,9 @@ function GameTime:getWorldAgeHours() end
 function GameTime:getYear() end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param playerObj IsoPlayer
 --- @return String
-function GameTime:getZombieKilledText(arg0) end
+function GameTime:getZombieKilledText(playerObj) end
 
 --- @public
 --- @return void
@@ -334,207 +334,207 @@ function GameTime:isThunderDay() end
 
 --- @public
 --- @return void
---- @overload fun(arg0: DataInputStream)
+--- @overload fun(input: DataInputStream)
 function GameTime:load() end
 
 --- @public
 --- @return void
---- @overload fun(arg0: DataOutputStream)
+--- @overload fun(output: ByteBuffer)
 function GameTime:save() end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param bb ByteBuffer
 --- @return void
-function GameTime:saveToPacket(arg0) end
+function GameTime:saveToPacket(bb) end
 
 --- @public
---- @param arg0 float
+--- @param Ambient float
 --- @return void
-function GameTime:setAmbient(arg0) end
+function GameTime:setAmbient(Ambient) end
 
 --- @public
---- @param arg0 float
+--- @param AmbientMax float
 --- @return void
-function GameTime:setAmbientMax(arg0) end
+function GameTime:setAmbientMax(AmbientMax) end
 
 --- @public
---- @param arg0 float
+--- @param AmbientMin float
 --- @return void
-function GameTime:setAmbientMin(arg0) end
+function GameTime:setAmbientMin(AmbientMin) end
 
 --- @public
---- @param arg0 PZCalendar
+--- @param Calender PZCalendar
 --- @return void
-function GameTime:setCalender(arg0) end
+function GameTime:setCalender(Calender) end
 
 --- @public
---- @param arg0 int
+--- @param dawn int
 --- @return void
-function GameTime:setDawn(arg0) end
+function GameTime:setDawn(dawn) end
 
 --- @public
---- @param arg0 int
+--- @param Day int
 --- @return void
-function GameTime:setDay(arg0) end
+function GameTime:setDay(Day) end
 
 --- @public
---- @param arg0 int
+--- @param dusk int
 --- @return void
-function GameTime:setDusk(arg0) end
+function GameTime:setDusk(dusk) end
 
 --- @public
---- @param arg0 int
+--- @param day int
 --- @return void
-function GameTime:setHelicopterDay(arg0) end
+function GameTime:setHelicopterDay(day) end
 
 --- @public
---- @param arg0 int
+--- @param hour int
 --- @return void
-function GameTime:setHelicopterEndHour(arg0) end
+function GameTime:setHelicopterEndHour(hour) end
 
 --- @public
---- @param arg0 int
+--- @param hour int
 --- @return void
-function GameTime:setHelicopterStartHour(arg0) end
+function GameTime:setHelicopterStartHour(hour) end
 
 --- @public
---- @param arg0 double
+--- @param HoursSurvived double
 --- @return void
-function GameTime:setHoursSurvived(arg0) end
+function GameTime:setHoursSurvived(HoursSurvived) end
 
 --- @public
---- @param arg0 float
+--- @param LastTimeOfDay float
 --- @return void
-function GameTime:setLastTimeOfDay(arg0) end
+function GameTime:setLastTimeOfDay(LastTimeOfDay) end
 
 --- @public
---- @param arg0 float
+--- @param MaxZombieCount float
 --- @return void
-function GameTime:setMaxZombieCount(arg0) end
+function GameTime:setMaxZombieCount(MaxZombieCount) end
 
 --- @public
---- @param arg0 float
+--- @param MaxZombieCountStart float
 --- @return void
-function GameTime:setMaxZombieCountStart(arg0) end
+function GameTime:setMaxZombieCountStart(MaxZombieCountStart) end
 
 --- @public
---- @param arg0 float
+--- @param MinZombieCount float
 --- @return void
-function GameTime:setMinZombieCount(arg0) end
+function GameTime:setMinZombieCount(MinZombieCount) end
 
 --- @public
---- @param arg0 float
+--- @param MinZombieCountStart float
 --- @return void
-function GameTime:setMinZombieCountStart(arg0) end
+function GameTime:setMinZombieCountStart(MinZombieCountStart) end
 
 --- @public
---- @param arg0 float
+--- @param MinutesPerDay float
 --- @return void
-function GameTime:setMinutesPerDay(arg0) end
+function GameTime:setMinutesPerDay(MinutesPerDay) end
 
 --- @public
---- @param arg0 int
+--- @param Month int
 --- @return void
-function GameTime:setMonth(arg0) end
+function GameTime:setMonth(Month) end
 
 --- @public
---- @param arg0 float
+--- @param moon float
 --- @return void
-function GameTime:setMoon(arg0) end
+function GameTime:setMoon(moon) end
 
 --- @public
---- @param arg0 float
+--- @param Multiplier float
 --- @return void
-function GameTime:setMultiplier(arg0) end
+function GameTime:setMultiplier(Multiplier) end
 
 --- @public
---- @param arg0 float
+--- @param NightTint float
 --- @return void
-function GameTime:setNight(arg0) end
+function GameTime:setNight(NightTint) end
 
 --- @public
---- @param arg0 float
+--- @param max float
 --- @return void
-function GameTime:setNightMax(arg0) end
+function GameTime:setNightMax(max) end
 
 --- @public
---- @param arg0 float
+--- @param min float
 --- @return void
-function GameTime:setNightMin(arg0) end
+function GameTime:setNightMin(min) end
 
 --- @public
---- @param arg0 float
+--- @param NightTint float
 --- @return void
-function GameTime:setNightTint(arg0) end
+function GameTime:setNightTint(NightTint) end
 
 --- @public
---- @param arg0 int
+--- @param NightsSurvived int
 --- @return void
-function GameTime:setNightsSurvived(arg0) end
+function GameTime:setNightsSurvived(NightsSurvived) end
 
 --- @public
---- @param arg0 int
+--- @param StartDay int
 --- @return void
-function GameTime:setStartDay(arg0) end
+function GameTime:setStartDay(StartDay) end
 
 --- @public
---- @param arg0 int
+--- @param StartMonth int
 --- @return void
-function GameTime:setStartMonth(arg0) end
+function GameTime:setStartMonth(StartMonth) end
 
 --- @public
---- @param arg0 float
+--- @param StartTimeOfDay float
 --- @return void
-function GameTime:setStartTimeOfDay(arg0) end
+function GameTime:setStartTimeOfDay(StartTimeOfDay) end
 
 --- @public
---- @param arg0 int
+--- @param StartYear int
 --- @return void
-function GameTime:setStartYear(arg0) end
+function GameTime:setStartYear(StartYear) end
 
 --- @public
---- @param arg0 int
+--- @param TargetZombies int
 --- @return void
-function GameTime:setTargetZombies(arg0) end
+function GameTime:setTargetZombies(TargetZombies) end
 
 --- @public
---- @param arg0 boolean
+--- @param thunderDay boolean
 --- @return void
-function GameTime:setThunderDay(arg0) end
+function GameTime:setThunderDay(thunderDay) end
 
 --- @public
---- @param arg0 float
+--- @param TimeOfDay float
 --- @return void
-function GameTime:setTimeOfDay(arg0) end
+function GameTime:setTimeOfDay(TimeOfDay) end
 
 --- @public
---- @param arg0 float
+--- @param ViewDistMax float
 --- @return void
-function GameTime:setViewDistMax(arg0) end
+function GameTime:setViewDistMax(ViewDistMax) end
 
 --- @public
---- @param arg0 float
+--- @param ViewDistMin float
 --- @return void
-function GameTime:setViewDistMin(arg0) end
+function GameTime:setViewDistMin(ViewDistMin) end
 
 --- @public
---- @param arg0 int
+--- @param Year int
 --- @return void
-function GameTime:setYear(arg0) end
+function GameTime:setYear(Year) end
 
 --- @public
---- @param arg0 boolean
+--- @param bSleeping boolean
 --- @return void
-function GameTime:update(arg0) end
+function GameTime:update(bSleeping) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param year int
+--- @param month int
+--- @param dayOfMonth int
+--- @param hourOfDay int
+--- @param minute int
 --- @return void
-function GameTime:updateCalendar(arg0, arg1, arg2, arg3, arg4) end
+function GameTime:updateCalendar(year, month, dayOfMonth, hourOfDay, minute) end
 
 
 ------------------------------------

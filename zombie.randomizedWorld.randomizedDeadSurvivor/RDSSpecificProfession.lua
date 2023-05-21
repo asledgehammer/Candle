@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSSpecificProfession: RandomizedDeadSurvivorBase
+--- Create a dead survivor in the kitchen with empty bleach bottle around him
 RDSSpecificProfession = {};
 
 ------------------------------------
@@ -8,9 +9,9 @@ RDSSpecificProfession = {};
 ------------------------------------
 
 --- @public
---- @param arg0 BuildingDef
+--- @param def BuildingDef
 --- @return void
-function RDSSpecificProfession:randomizeDeadSurvivor(arg0) end
+function RDSSpecificProfession:randomizeDeadSurvivor(def) end
 
 
 ------------------------------------

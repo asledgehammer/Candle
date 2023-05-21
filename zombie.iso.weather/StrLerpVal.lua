@@ -13,9 +13,9 @@ StrLerpVal = {};
 
 --- @public
 --- @static
---- @param arg0 int
+--- @param id int
 --- @return StrLerpVal
-function StrLerpVal.fromValue(arg0) end
+function StrLerpVal.fromValue(id) end
 
 --- @public
 --- @static

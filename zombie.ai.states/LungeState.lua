@@ -18,24 +18,24 @@ function LungeState.instance() end
 ------------------------------------
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function LungeState:enter(arg0) end
+function LungeState:enter(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return void
-function LungeState:execute(arg0) end
+function LungeState:execute(owner) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param chr IsoGameCharacter
 --- @return void
-function LungeState:exit(arg0) end
+function LungeState:exit(chr) end
 
 --- @public
---- @param arg0 IsoGameCharacter
+--- @param owner IsoGameCharacter
 --- @return boolean
-function LungeState:isMoving(arg0) end
+function LungeState:isMoving(owner) end
 
 
 ------------------------------------

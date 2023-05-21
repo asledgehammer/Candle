@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Faction: Object
+--- @class Faction
 --- @field public factions ArrayList
 Faction = {};
 
@@ -10,28 +10,28 @@ Faction = {};
 
 --- @public
 --- @static
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return boolean
-function Faction.canCreateFaction(arg0) end
+function Faction.canCreateFaction(player) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
+--- @param name String
+--- @param owner String
 --- @return Faction
-function Faction.createFaction(arg0, arg1) end
+function Faction.createFaction(name, owner) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function Faction.factionExist(arg0) end
+function Faction.factionExist(name) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return Faction
-function Faction.getFaction(arg0) end
+function Faction.getFaction(name) end
 
 --- @public
 --- @static
@@ -40,21 +40,21 @@ function Faction.getFactions() end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param username String
 --- @return Faction
-function Faction.getPlayerFaction(arg0) end
+function Faction.getPlayerFaction(username) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param username String
 --- @return boolean
-function Faction.isAlreadyInFaction(arg0) end
+function Faction.isAlreadyInFaction(username) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function Faction.tagExist(arg0) end
+function Faction.tagExist(name) end
 
 
 ------------------------------------
@@ -62,9 +62,9 @@ function Faction.tagExist(arg0) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param pName String
 --- @return void
-function Faction:addPlayer(arg0) end
+function Faction:addPlayer(pName) end
 
 --- @public
 --- @return boolean
@@ -91,69 +91,69 @@ function Faction:getTag() end
 function Faction:getTagColor() end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function Faction:isMember(arg0) end
+function Faction:isMember(name) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return boolean
-function Faction:isOwner(arg0) end
+function Faction:isOwner(name) end
 
 --- @public
---- @param arg0 IsoPlayer
+--- @param player IsoPlayer
 --- @return boolean
-function Faction:isPlayerMember(arg0) end
+function Faction:isPlayerMember(player) end
 
 --- @public
---- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param input ByteBuffer
+--- @param WorldVersion int
 --- @return void
-function Faction:load(arg0, arg1) end
+function Faction:load(input, WorldVersion) end
 
 --- @public
 --- @return void
 function Faction:removeFaction() end
 
 --- @public
---- @param arg0 String
+--- @param player String
 --- @return void
-function Faction:removePlayer(arg0) end
+function Faction:removePlayer(player) end
 
 --- @public
---- @param arg0 ByteBuffer
+--- @param output ByteBuffer
 --- @return void
-function Faction:save(arg0) end
+function Faction:save(output) end
 
 --- @public
---- @param arg0 String
+--- @param name String
 --- @return void
-function Faction:setName(arg0) end
+function Faction:setName(name) end
 
 --- @public
---- @param arg0 String
+--- @param owner String
 --- @return void
-function Faction:setOwner(arg0) end
+function Faction:setOwner(owner) end
 
 --- @public
---- @param arg0 String
+--- @param tag String
 --- @return void
-function Faction:setTag(arg0) end
+function Faction:setTag(tag) end
 
 --- @public
---- @param arg0 ColorInfo
+--- @param tagColor ColorInfo
 --- @return void
-function Faction:setTagColor(arg0) end
+function Faction:setTagColor(tagColor) end
 
 --- @public
 --- @return void
 function Faction:syncFaction() end
 
 --- @public
---- @param arg0 ByteBufferWriter
---- @param arg1 boolean
+--- @param bb ByteBufferWriter
+--- @param remove boolean
 --- @return void
-function Faction:writeToBuffer(arg0, arg1) end
+function Faction:writeToBuffer(bb, remove) end
 
 
 ------------------------------------
@@ -162,5 +162,5 @@ function Faction:writeToBuffer(arg0, arg1) end
 
 --- @public
 --- @return Faction
---- @overload fun(arg0: String, arg1: String)
+--- @overload fun(name: String, owner: String)
 function Faction.new() end

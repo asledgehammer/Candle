@@ -1,6 +1,6 @@
 --- @meta
 
---- @class Stage: Object
+--- @class Stage
 Stage = {};
 
 ------------------------------------
