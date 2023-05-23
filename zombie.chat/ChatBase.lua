@@ -176,5 +176,5 @@ function ChatBase:unpackMessage(bb) end
 --- @param type ChatType
 --- @param tab ChatTab
 --- @return ChatBase
---- @overload fun(bb: ByteBuffer, type: ChatType, tab: ChatTab, owner: IsoPlayer)
+--- @overload fun(bb: ByteBuffer, type: ChatType, tab: ChatTab, owner: IsoPlayer): ChatBase
 function ChatBase.new(id, type, tab) end

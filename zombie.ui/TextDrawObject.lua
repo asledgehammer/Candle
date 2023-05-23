@@ -271,6 +271,6 @@ function TextDrawObject:updateInternalTickClock() end
 
 --- @public
 --- @return TextDrawObject
---- @overload fun(r: int, g: int, b: int, allowBBcode: boolean)
---- @overload fun(r: int, g: int, b: int, allowBBcode: boolean, allowImages: boolean, allowChatIcons: boolean, allowColors: boolean, allowFonts: boolean, equalizeLineHeights: boolean)
+--- @overload fun(r: int, g: int, b: int, allowBBcode: boolean): TextDrawObject
+--- @overload fun(r: int, g: int, b: int, allowBBcode: boolean, allowImages: boolean, allowChatIcons: boolean, allowColors: boolean, allowFonts: boolean, equalizeLineHeights: boolean): TextDrawObject
 function TextDrawObject.new() end

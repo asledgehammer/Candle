@@ -206,5 +206,5 @@ function IsoMannequin:wearItem(item, chr) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoMannequin
---- @overload fun(cell: IsoCell, square: IsoGridSquare, sprite: IsoSprite)
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, sprite: IsoSprite): IsoMannequin
 function IsoMannequin.new(cell) end

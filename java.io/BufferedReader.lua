@@ -54,5 +54,5 @@ function BufferedReader:skip(arg0) end
 --- @public
 --- @param arg0 Reader
 --- @return BufferedReader
---- @overload fun(arg0: Reader, arg1: int)
+--- @overload fun(arg0: Reader, arg1: int): BufferedReader
 function BufferedReader.new(arg0) end

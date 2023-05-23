@@ -126,7 +126,7 @@ function IsoTree:setSprite(sprite) end
 
 --- @public
 --- @return IsoTree
---- @overload fun(cell: IsoCell)
---- @overload fun(sq: IsoGridSquare, gid: String)
---- @overload fun(sq: IsoGridSquare, gid: IsoSprite)
+--- @overload fun(cell: IsoCell): IsoTree
+--- @overload fun(sq: IsoGridSquare, gid: String): IsoTree
+--- @overload fun(sq: IsoGridSquare, gid: IsoSprite): IsoTree
 function IsoTree.new() end

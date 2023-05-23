@@ -163,5 +163,5 @@ function IsoBarbecue:useFuel(amount) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoBarbecue
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoBarbecue
 function IsoBarbecue.new(cell) end

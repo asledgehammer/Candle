@@ -59,5 +59,5 @@ function IsoTelevision:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoTelevision
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite): IsoTelevision
 function IsoTelevision.new(cell) end

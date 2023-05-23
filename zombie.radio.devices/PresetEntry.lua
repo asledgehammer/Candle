@@ -33,5 +33,5 @@ function PresetEntry:setName(n) end
 
 --- @public
 --- @return PresetEntry
---- @overload fun(n: String, f: int)
+--- @overload fun(n: String, f: int): PresetEntry
 function PresetEntry.new() end

@@ -336,6 +336,6 @@ function SurvivorDesc:setWornItem(bodyLocation, item) end
 
 --- @public
 --- @return SurvivorDesc
---- @overload fun(bNew: boolean)
---- @overload fun(other: SurvivorDesc)
+--- @overload fun(bNew: boolean): SurvivorDesc
+--- @overload fun(other: SurvivorDesc): SurvivorDesc
 function SurvivorDesc.new() end

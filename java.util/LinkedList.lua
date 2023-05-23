@@ -300,5 +300,5 @@ function LinkedList:toArray() end
 
 --- @public
 --- @return LinkedList
---- @overload fun(arg0: Collection)
+--- @overload fun(arg0: Collection): LinkedList
 function LinkedList.new() end

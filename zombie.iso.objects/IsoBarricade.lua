@@ -210,5 +210,5 @@ function IsoBarricade:saveChange(arg0, arg1, arg2) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoBarricade
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, dir: IsoDirections)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, dir: IsoDirections): IsoBarricade
 function IsoBarricade.new(cell) end

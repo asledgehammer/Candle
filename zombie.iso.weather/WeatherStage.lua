@@ -82,5 +82,5 @@ function WeatherStage:setTargetStrength(t) end
 
 --- @public
 --- @return WeatherStage
---- @overload fun(id: int)
+--- @overload fun(id: int): WeatherStage
 function WeatherStage.new() end

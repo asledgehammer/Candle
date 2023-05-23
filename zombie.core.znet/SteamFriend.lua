@@ -31,5 +31,5 @@ function SteamFriend:getSteamID() end
 
 --- @public
 --- @return SteamFriend
---- @overload fun(name: String, steamID: long)
+--- @overload fun(name: String, steamID: long): SteamFriend
 function SteamFriend.new() end

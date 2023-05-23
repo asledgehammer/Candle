@@ -345,6 +345,6 @@ function IsoDeadBody:update() end
 --- @public
 --- @param died IsoGameCharacter
 --- @return IsoDeadBody
---- @overload fun(cell: IsoCell)
---- @overload fun(died: IsoGameCharacter, wasCorpseAlready: boolean)
+--- @overload fun(cell: IsoCell): IsoDeadBody
+--- @overload fun(died: IsoGameCharacter, wasCorpseAlready: boolean): IsoDeadBody
 function IsoDeadBody.new(died) end

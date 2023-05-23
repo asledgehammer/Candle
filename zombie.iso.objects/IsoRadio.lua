@@ -19,5 +19,5 @@ function IsoRadio:getObjectName() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoRadio
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite): IsoRadio
 function IsoRadio.new(cell) end

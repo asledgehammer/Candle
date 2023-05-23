@@ -729,7 +729,7 @@ function IsoMovingObject:update() end
 
 --- @public
 --- @return IsoMovingObject
---- @overload fun(cell: IsoCell)
---- @overload fun(cell: IsoCell, bObjectListAdd: boolean)
---- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite, bObjectListAdd: boolean)
+--- @overload fun(cell: IsoCell): IsoMovingObject
+--- @overload fun(cell: IsoCell, bObjectListAdd: boolean): IsoMovingObject
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite, bObjectListAdd: boolean): IsoMovingObject
 function IsoMovingObject.new() end

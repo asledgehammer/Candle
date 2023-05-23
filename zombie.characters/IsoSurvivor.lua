@@ -27,7 +27,7 @@ function IsoSurvivor:reloadSpritePart() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoSurvivor
---- @overload fun(cell: IsoCell, x: int, y: int, z: int)
---- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: int, y: int, z: int)
---- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: int, y: int, z: int, bSetInstance: boolean)
+--- @overload fun(cell: IsoCell, x: int, y: int, z: int): IsoSurvivor
+--- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: int, y: int, z: int): IsoSurvivor
+--- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: int, y: int, z: int, bSetInstance: boolean): IsoSurvivor
 function IsoSurvivor.new(cell) end

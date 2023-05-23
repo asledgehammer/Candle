@@ -418,5 +418,5 @@ function IsoWindow:syncIsoObjectSend(b) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoWindow
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean): IsoWindow
 function IsoWindow.new(cell) end

@@ -149,5 +149,5 @@ function RadioChannel:update() end
 --- @param freq int
 --- @param c ChannelCategory
 --- @return RadioChannel
---- @overload fun(n: String, freq: int, c: ChannelCategory, guid: String)
+--- @overload fun(n: String, freq: int, c: ChannelCategory, guid: String): RadioChannel
 function RadioChannel.new(n, freq, c) end

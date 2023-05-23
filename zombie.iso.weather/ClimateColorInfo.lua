@@ -95,6 +95,6 @@ function ClimateColorInfo:write(output) end
 
 --- @public
 --- @return ClimateColorInfo
---- @overload fun(r: float, g: float, b: float, a: float)
---- @overload fun(r: float, g: float, b: float, a: float, r2: float, g2: float, b2: float, a2: float)
+--- @overload fun(r: float, g: float, b: float, a: float): ClimateColorInfo
+--- @overload fun(r: float, g: float, b: float, a: float, r2: float, g2: float, b2: float, a2: float): ClimateColorInfo
 function ClimateColorInfo.new() end

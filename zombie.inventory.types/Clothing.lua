@@ -412,5 +412,5 @@ function Clothing:updateWetness() end
 --- @param palette String
 --- @param SpriteName String
 --- @return Clothing
---- @overload fun(module: String, name: String, itemType: String, item: Item, palette: String, SpriteName: String)
+--- @overload fun(module: String, name: String, itemType: String, item: Item, palette: String, SpriteName: String): Clothing
 function Clothing.new(module, name, itemType, texName, palette, SpriteName) end

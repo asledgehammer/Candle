@@ -838,5 +838,5 @@ function IsoZombie:writeInventory(b) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoZombie
---- @overload fun(cell: IsoCell, desc: SurvivorDesc, _palette: int)
+--- @overload fun(cell: IsoCell, desc: SurvivorDesc, _palette: int): IsoZombie
 function IsoZombie.new(cell) end

@@ -127,5 +127,5 @@ function IsoStove:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoStove
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoStove
 function IsoStove.new(cell) end

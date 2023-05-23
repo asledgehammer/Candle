@@ -116,5 +116,5 @@ function BSFurnace:updateLight() end
 --- @public
 --- @param cell IsoCell
 --- @return BSFurnace
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, sprite: String, litSprite: String)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, sprite: String, litSprite: String): BSFurnace
 function BSFurnace.new(cell) end

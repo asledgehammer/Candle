@@ -92,5 +92,5 @@ function WornItems:size() end
 --- @public
 --- @param group BodyLocationGroup
 --- @return WornItems
---- @overload fun(other: WornItems)
+--- @overload fun(other: WornItems): WornItems
 function WornItems.new(group) end

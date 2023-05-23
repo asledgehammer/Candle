@@ -435,5 +435,5 @@ function DeviceData:updateSimple() end
 
 --- @public
 --- @return DeviceData
---- @overload fun(parent: WaveSignalDevice)
+--- @overload fun(parent: WaveSignalDevice): DeviceData
 function DeviceData.new() end

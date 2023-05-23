@@ -1688,5 +1688,5 @@ function InventoryItem:updateSound(emitter) end
 --- @param type String
 --- @param tex String
 --- @return InventoryItem
---- @overload fun(module: String, name: String, type: String, item: Item)
+--- @overload fun(module: String, name: String, type: String, item: Item): InventoryItem
 function InventoryItem.new(module, name, type, tex) end

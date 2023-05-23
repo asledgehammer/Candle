@@ -202,7 +202,7 @@ function HashMap:values() end
 
 --- @public
 --- @return HashMap
---- @overload fun(arg0: int)
---- @overload fun(arg0: Map)
---- @overload fun(arg0: int, arg1: float)
+--- @overload fun(arg0: int): HashMap
+--- @overload fun(arg0: Map): HashMap
+--- @overload fun(arg0: int, arg1: float): HashMap
 function HashMap.new() end

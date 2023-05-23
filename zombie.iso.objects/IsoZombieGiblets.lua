@@ -38,5 +38,5 @@ function IsoZombieGiblets:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoZombieGiblets
---- @overload fun(arg0: GibletType, arg1: IsoCell, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float)
+--- @overload fun(arg0: GibletType, arg1: IsoCell, arg2: float, arg3: float, arg4: float, arg5: float, arg6: float): IsoZombieGiblets
 function IsoZombieGiblets.new(cell) end

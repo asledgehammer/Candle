@@ -1166,5 +1166,5 @@ function HandWeapon:setZombieHitSound(hitSound) end
 --- @param itemType String
 --- @param texName String
 --- @return HandWeapon
---- @overload fun(module: String, name: String, itemType: String, item: Item)
+--- @overload fun(module: String, name: String, itemType: String, item: Item): HandWeapon
 function HandWeapon.new(module, name, itemType, texName) end

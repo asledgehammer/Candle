@@ -229,5 +229,5 @@ function IsoLightSwitch:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoLightSwitch
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite, RoomID: int)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite, RoomID: int): IsoLightSwitch
 function IsoLightSwitch.new(cell) end

@@ -182,5 +182,5 @@ function Literature:update() end
 --- @param itemType String
 --- @param texName String
 --- @return Literature
---- @overload fun(module: String, name: String, itemType: String, item: Item)
+--- @overload fun(module: String, name: String, itemType: String, item: Item): Literature
 function Literature.new(module, name, itemType, texName) end

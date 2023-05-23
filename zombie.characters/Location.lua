@@ -38,5 +38,5 @@ function Location:set(x, y, z) end
 
 --- @public
 --- @return Location
---- @overload fun(x: int, y: int, z: int)
+--- @overload fun(x: int, y: int, z: int): Location
 function Location.new() end

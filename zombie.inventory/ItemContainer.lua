@@ -1308,7 +1308,7 @@ function ItemContainer:setWeightReduction(weightReduction) end
 
 --- @public
 --- @return ItemContainer
---- @overload fun(ID: int)
---- @overload fun(containerName: String, square: IsoGridSquare, parent: IsoObject)
---- @overload fun(ID: int, containerName: String, square: IsoGridSquare, parent: IsoObject)
+--- @overload fun(ID: int): ItemContainer
+--- @overload fun(containerName: String, square: IsoGridSquare, parent: IsoObject): ItemContainer
+--- @overload fun(ID: int, containerName: String, square: IsoGridSquare, parent: IsoObject): ItemContainer
 function ItemContainer.new() end

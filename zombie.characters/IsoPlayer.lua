@@ -1433,5 +1433,5 @@ function IsoPlayer:zombiesSwitchOwnershipEachUpdate() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoPlayer
---- @overload fun(cell: IsoCell, desc: SurvivorDesc, x: int, y: int, z: int)
+--- @overload fun(cell: IsoCell, desc: SurvivorDesc, x: int, y: int, z: int): IsoPlayer
 function IsoPlayer.new(cell) end

@@ -143,5 +143,5 @@ function IsoBuilding:update() end
 
 --- @public
 --- @return IsoBuilding
---- @overload fun(cell: IsoCell)
+--- @overload fun(cell: IsoCell): IsoBuilding
 function IsoBuilding.new() end

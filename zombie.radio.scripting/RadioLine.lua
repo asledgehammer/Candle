@@ -57,5 +57,5 @@ function RadioLine:setText(text) end
 --- @param green float
 --- @param blue float
 --- @return RadioLine
---- @overload fun(txt: String, red: float, green: float, blue: float, fx: String)
+--- @overload fun(txt: String, red: float, green: float, blue: float, fx: String): RadioLine
 function RadioLine.new(txt, red, green, blue) end

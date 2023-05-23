@@ -697,6 +697,6 @@ function IsoThumpable:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoThumpable
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String, arg4: boolean, arg5: KahluaTable)
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable): IsoThumpable
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String, arg4: boolean, arg5: KahluaTable): IsoThumpable
 function IsoThumpable.new(cell) end

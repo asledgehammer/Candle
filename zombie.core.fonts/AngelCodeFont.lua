@@ -87,5 +87,5 @@ function AngelCodeFont:onStateChanged(arg0, arg1, arg2) end
 --- @param fntFile String
 --- @param imgFile String
 --- @return AngelCodeFont
---- @overload fun(fntFile: String, image: Texture)
+--- @overload fun(fntFile: String, image: Texture): AngelCodeFont
 function AngelCodeFont.new(fntFile, imgFile) end

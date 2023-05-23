@@ -82,5 +82,5 @@ function Safety:toggleSafety() end
 
 --- @public
 --- @return Safety
---- @overload fun(character: IsoGameCharacter)
+--- @overload fun(character: IsoGameCharacter): Safety
 function Safety.new() end

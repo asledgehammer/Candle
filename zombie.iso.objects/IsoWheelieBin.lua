@@ -29,5 +29,5 @@ function IsoWheelieBin:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoWheelieBin
---- @overload fun(cell: IsoCell, x: int, y: int, z: int)
+--- @overload fun(cell: IsoCell, x: int, y: int, z: int): IsoWheelieBin
 function IsoWheelieBin.new(cell) end

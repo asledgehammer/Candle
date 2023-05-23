@@ -771,5 +771,5 @@ function UIElement:update() end
 
 --- @public
 --- @return UIElement
---- @overload fun(arg0: KahluaTable)
+--- @overload fun(arg0: KahluaTable): UIElement
 function UIElement.new() end

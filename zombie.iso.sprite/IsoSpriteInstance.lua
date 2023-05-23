@@ -148,5 +148,5 @@ function IsoSpriteInstance:update() end
 
 --- @public
 --- @return IsoSpriteInstance
---- @overload fun(spr: IsoSprite)
+--- @overload fun(spr: IsoSprite): IsoSpriteInstance
 function IsoSpriteInstance.new() end

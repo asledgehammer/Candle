@@ -209,6 +209,6 @@ function ArrayList:trimToSize() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(arg0: int)
---- @overload fun(arg0: Collection)
+--- @overload fun(arg0: int): ArrayList
+--- @overload fun(arg0: Collection): ArrayList
 function ArrayList.new() end

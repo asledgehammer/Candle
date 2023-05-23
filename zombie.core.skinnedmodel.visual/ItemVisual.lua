@@ -275,5 +275,5 @@ function ItemVisual:toString() end
 
 --- @public
 --- @return ItemVisual
---- @overload fun(other: ItemVisual)
+--- @overload fun(other: ItemVisual): ItemVisual
 function ItemVisual.new() end

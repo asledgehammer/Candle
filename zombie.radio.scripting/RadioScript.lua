@@ -102,5 +102,5 @@ function RadioScript:setStartDayStamp(day) end
 --- @param loopmin int
 --- @param loopmax int
 --- @return RadioScript
---- @overload fun(n: String, loopmin: int, loopmax: int, guid: String)
+--- @overload fun(n: String, loopmin: int, loopmax: int, guid: String): RadioScript
 function RadioScript.new(n, loopmin, loopmax) end

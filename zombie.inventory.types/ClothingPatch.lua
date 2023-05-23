@@ -56,5 +56,5 @@ function ClothingPatch:save_old(arg0, arg1) end
 --- @public
 --- @param arg0 Clothing
 --- @return ClothingPatch
---- @overload fun(arg0: Clothing, arg1: int, arg2: int, arg3: boolean)
+--- @overload fun(arg0: Clothing, arg1: int, arg2: int, arg3: boolean): ClothingPatch
 function ClothingPatch.new(arg0) end

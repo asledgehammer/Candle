@@ -83,6 +83,6 @@ function EnumMap:values() end
 --- @public
 --- @param arg0 Class
 --- @return EnumMap
---- @overload fun(arg0: EnumMap)
---- @overload fun(arg0: Map)
+--- @overload fun(arg0: EnumMap): EnumMap
+--- @overload fun(arg0: Map): EnumMap
 function EnumMap.new(arg0) end

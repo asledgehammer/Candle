@@ -313,11 +313,11 @@ function Color:toString() end
 
 --- @public
 --- @return Color
---- @overload fun(value: int)
---- @overload fun(color: Color)
---- @overload fun(r: float, g: float, b: float)
---- @overload fun(r: int, g: int, b: int)
---- @overload fun(A: Color, B: Color, delta: float)
---- @overload fun(r: float, g: float, b: float, a: float)
---- @overload fun(r: int, g: int, b: int, a: int)
+--- @overload fun(value: int): Color
+--- @overload fun(color: Color): Color
+--- @overload fun(r: float, g: float, b: float): Color
+--- @overload fun(r: int, g: int, b: int): Color
+--- @overload fun(A: Color, B: Color, delta: float): Color
+--- @overload fun(r: float, g: float, b: float, a: float): Color
+--- @overload fun(r: int, g: int, b: int, a: int): Color
 function Color.new() end

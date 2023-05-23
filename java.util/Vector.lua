@@ -278,7 +278,7 @@ function Vector:trimToSize() end
 
 --- @public
 --- @return Vector
---- @overload fun(arg0: int)
---- @overload fun(arg0: Collection)
---- @overload fun(arg0: int, arg1: int)
+--- @overload fun(arg0: int): Vector
+--- @overload fun(arg0: Collection): Vector
+--- @overload fun(arg0: int, arg1: int): Vector
 function Vector.new() end

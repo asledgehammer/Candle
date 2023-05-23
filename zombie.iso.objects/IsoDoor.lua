@@ -478,7 +478,7 @@ function IsoDoor:transmitSetCurtainOpen(open) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoDoor
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean)
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean)
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean): IsoDoor
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean): IsoDoor
+--- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable): IsoDoor
 function IsoDoor.new(cell) end

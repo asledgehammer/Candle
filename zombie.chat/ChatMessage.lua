@@ -184,5 +184,5 @@ function ChatMessage:toString() end
 --- @param chat ChatBase
 --- @param text String
 --- @return ChatMessage
---- @overload fun(chat: ChatBase, datetime: LocalDateTime, text: String)
+--- @overload fun(chat: ChatBase, datetime: LocalDateTime, text: String): ChatMessage
 function ChatMessage.new(chat, text) end

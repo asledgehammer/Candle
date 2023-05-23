@@ -133,6 +133,6 @@ function IsoLightSource:wasActive() end
 --- @param b float
 --- @param radius int
 --- @return IsoLightSource
---- @overload fun(x: int, y: int, z: int, r: float, g: float, b: float, radius: int, life: int)
---- @overload fun(x: int, y: int, z: int, r: float, g: float, b: float, radius: int, building: IsoBuilding)
+--- @overload fun(x: int, y: int, z: int, r: float, g: float, b: float, radius: int, life: int): IsoLightSource
+--- @overload fun(x: int, y: int, z: int, r: float, g: float, b: float, radius: int, building: IsoBuilding): IsoLightSource
 function IsoLightSource.new(x, y, z, r, g, b, radius) end

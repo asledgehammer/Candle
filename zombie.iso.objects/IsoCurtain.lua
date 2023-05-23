@@ -129,6 +129,6 @@ function IsoCurtain:syncIsoObjectSend(b) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoCurtain
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean)
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean, spriteclosed: boolean)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean): IsoCurtain
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean, spriteclosed: boolean): IsoCurtain
 function IsoCurtain.new(cell) end

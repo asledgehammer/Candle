@@ -55,5 +55,5 @@ function Moodle:setChevron(count, isup, col) end
 --- @param ChosenType MoodleType
 --- @param parent IsoGameCharacter
 --- @return Moodle
---- @overload fun(ChosenType: MoodleType, parent: IsoGameCharacter, maxChevrons: int)
+--- @overload fun(ChosenType: MoodleType, parent: IsoGameCharacter, maxChevrons: int): Moodle
 function Moodle.new(ChosenType, parent) end

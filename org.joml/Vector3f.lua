@@ -541,15 +541,15 @@ function Vector3f:zero() end
 
 --- @public
 --- @return Vector3f
---- @overload fun(arg0: float[])
---- @overload fun(arg0: float)
---- @overload fun(arg0: ByteBuffer)
---- @overload fun(arg0: FloatBuffer)
---- @overload fun(arg0: Vector3fc)
---- @overload fun(arg0: Vector3ic)
---- @overload fun(arg0: int, arg1: ByteBuffer)
---- @overload fun(arg0: int, arg1: FloatBuffer)
---- @overload fun(arg0: Vector2fc, arg1: float)
---- @overload fun(arg0: Vector2ic, arg1: float)
---- @overload fun(arg0: float, arg1: float, arg2: float)
+--- @overload fun(arg0: float[]): Vector3f
+--- @overload fun(arg0: float): Vector3f
+--- @overload fun(arg0: ByteBuffer): Vector3f
+--- @overload fun(arg0: FloatBuffer): Vector3f
+--- @overload fun(arg0: Vector3fc): Vector3f
+--- @overload fun(arg0: Vector3ic): Vector3f
+--- @overload fun(arg0: int, arg1: ByteBuffer): Vector3f
+--- @overload fun(arg0: int, arg1: FloatBuffer): Vector3f
+--- @overload fun(arg0: Vector2fc, arg1: float): Vector3f
+--- @overload fun(arg0: Vector2ic, arg1: float): Vector3f
+--- @overload fun(arg0: float, arg1: float, arg2: float): Vector3f
 function Vector3f.new() end

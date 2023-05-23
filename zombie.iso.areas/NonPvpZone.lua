@@ -124,5 +124,5 @@ function NonPvpZone:syncNonPvpZone(remove) end
 
 --- @public
 --- @return NonPvpZone
---- @overload fun(title: String, x: int, y: int, x2: int, y2: int)
+--- @overload fun(title: String, x: int, y: int, x2: int, y2: int): NonPvpZone
 function NonPvpZone.new() end

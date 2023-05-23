@@ -178,5 +178,5 @@ function IsoWaveSignal:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoWaveSignal
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite): IsoWaveSignal
 function IsoWaveSignal.new(cell) end

@@ -24,5 +24,5 @@ function DynamicRadioChannel:LoadAiringBroadcast(guid, line) end
 --- @param freq int
 --- @param c ChannelCategory
 --- @return DynamicRadioChannel
---- @overload fun(n: String, freq: int, c: ChannelCategory, guid: String)
+--- @overload fun(n: String, freq: int, c: ChannelCategory, guid: String): DynamicRadioChannel
 function DynamicRadioChannel.new(n, freq, c) end

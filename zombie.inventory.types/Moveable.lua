@@ -158,5 +158,5 @@ function Moveable:setWorldSprite(WorldSprite) end
 --- @param type String
 --- @param tex String
 --- @return Moveable
---- @overload fun(module: String, name: String, type: String, item: Item)
+--- @overload fun(module: String, name: String, type: String, item: Item): Moveable
 function Moveable.new(module, name, type, tex) end

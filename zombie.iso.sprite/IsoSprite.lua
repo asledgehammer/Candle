@@ -383,5 +383,5 @@ function IsoSprite:update() end
 
 --- @public
 --- @return IsoSprite
---- @overload fun(manager: IsoSpriteManager)
+--- @overload fun(manager: IsoSpriteManager): IsoSprite
 function IsoSprite.new() end

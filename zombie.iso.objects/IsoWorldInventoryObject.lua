@@ -185,5 +185,5 @@ function IsoWorldInventoryObject:updateSprite() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoWorldInventoryObject
---- @overload fun(item: InventoryItem, sq: IsoGridSquare, xoff: float, yoff: float, zoff: float)
+--- @overload fun(item: InventoryItem, sq: IsoGridSquare, xoff: float, yoff: float, zoff: float): IsoWorldInventoryObject
 function IsoWorldInventoryObject.new(cell) end

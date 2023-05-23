@@ -191,6 +191,6 @@ function Vector2:toString() end
 
 --- @public
 --- @return Vector2
---- @overload fun(other: Vector2)
---- @overload fun(x: float, y: float)
+--- @overload fun(other: Vector2): Vector2
+--- @overload fun(x: float, y: float): Vector2
 function Vector2.new() end

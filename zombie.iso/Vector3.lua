@@ -167,6 +167,6 @@ function Vector3:toString() end
 
 --- @public
 --- @return Vector3
---- @overload fun(other: Vector3)
---- @overload fun(x: float, y: float, z: float)
+--- @overload fun(other: Vector3): Vector3
+--- @overload fun(x: float, y: float, z: float): Vector3
 function Vector3.new() end

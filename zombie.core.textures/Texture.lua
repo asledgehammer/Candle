@@ -518,17 +518,17 @@ function Texture:toString() end
 
 --- @public
 --- @return Texture
---- @overload fun(file: String)
---- @overload fun(t: Texture)
---- @overload fun(name: String, palette: int[])
---- @overload fun(file: String, useAlphaChannel: boolean)
---- @overload fun(name: String, palette: String)
---- @overload fun(data: TextureID, name: String)
---- @overload fun(width: int, height: int, flags: int)
---- @overload fun(file: String, bDelete: boolean, bUseAlpha: boolean)
---- @overload fun(name: String, b: BufferedInputStream, bDoMask: boolean)
---- @overload fun(arg0: AssetPath, arg1: AssetManager, arg2: TextureAssetParams)
---- @overload fun(width: int, height: int, name: String, flags: int)
---- @overload fun(file: String, red: int, green: int, blue: int)
---- @overload fun(arg0: String, arg1: BufferedInputStream, arg2: boolean, arg3: PZFileformat)
+--- @overload fun(file: String): Texture
+--- @overload fun(t: Texture): Texture
+--- @overload fun(name: String, palette: int[]): Texture
+--- @overload fun(file: String, useAlphaChannel: boolean): Texture
+--- @overload fun(name: String, palette: String): Texture
+--- @overload fun(data: TextureID, name: String): Texture
+--- @overload fun(width: int, height: int, flags: int): Texture
+--- @overload fun(file: String, bDelete: boolean, bUseAlpha: boolean): Texture
+--- @overload fun(name: String, b: BufferedInputStream, bDoMask: boolean): Texture
+--- @overload fun(arg0: AssetPath, arg1: AssetManager, arg2: TextureAssetParams): Texture
+--- @overload fun(width: int, height: int, name: String, flags: int): Texture
+--- @overload fun(file: String, red: int, green: int, blue: int): Texture
+--- @overload fun(arg0: String, arg1: BufferedInputStream, arg2: boolean, arg3: PZFileformat): Texture
 function Texture.new() end

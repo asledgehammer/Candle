@@ -1212,11 +1212,11 @@ function IsoObject:writeToRemoteBuffer(b) end
 
 --- @public
 --- @return IsoObject
---- @overload fun(cell: IsoCell)
---- @overload fun(square: IsoGridSquare, tile: String)
---- @overload fun(cell: IsoCell, square: IsoGridSquare, gid: String)
---- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite)
---- @overload fun(square: IsoGridSquare, tile: String, bShareTilesWithMap: boolean)
---- @overload fun(square: IsoGridSquare, tile: String, name: String)
---- @overload fun(square: IsoGridSquare, tile: String, name: String, bShareTilesWithMap: boolean)
+--- @overload fun(cell: IsoCell): IsoObject
+--- @overload fun(square: IsoGridSquare, tile: String): IsoObject
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, gid: String): IsoObject
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite): IsoObject
+--- @overload fun(square: IsoGridSquare, tile: String, bShareTilesWithMap: boolean): IsoObject
+--- @overload fun(square: IsoGridSquare, tile: String, name: String): IsoObject
+--- @overload fun(square: IsoGridSquare, tile: String, name: String, bShareTilesWithMap: boolean): IsoObject
 function IsoObject.new() end

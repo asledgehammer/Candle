@@ -352,13 +352,13 @@ function Vector2f:zero() end
 
 --- @public
 --- @return Vector2f
---- @overload fun(arg0: float[])
---- @overload fun(arg0: float)
---- @overload fun(arg0: ByteBuffer)
---- @overload fun(arg0: FloatBuffer)
---- @overload fun(arg0: Vector2fc)
---- @overload fun(arg0: Vector2ic)
---- @overload fun(arg0: float, arg1: float)
---- @overload fun(arg0: int, arg1: ByteBuffer)
---- @overload fun(arg0: int, arg1: FloatBuffer)
+--- @overload fun(arg0: float[]): Vector2f
+--- @overload fun(arg0: float): Vector2f
+--- @overload fun(arg0: ByteBuffer): Vector2f
+--- @overload fun(arg0: FloatBuffer): Vector2f
+--- @overload fun(arg0: Vector2fc): Vector2f
+--- @overload fun(arg0: Vector2ic): Vector2f
+--- @overload fun(arg0: float, arg1: float): Vector2f
+--- @overload fun(arg0: int, arg1: ByteBuffer): Vector2f
+--- @overload fun(arg0: int, arg1: FloatBuffer): Vector2f
 function Vector2f.new() end

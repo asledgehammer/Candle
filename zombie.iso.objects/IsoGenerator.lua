@@ -169,6 +169,6 @@ function IsoGenerator:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoGenerator
---- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare)
---- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare, remote: boolean)
+--- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare): IsoGenerator
+--- @overload fun(item: InventoryItem, cell: IsoCell, sq: IsoGridSquare, remote: boolean): IsoGenerator
 function IsoGenerator.new(cell) end

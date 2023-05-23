@@ -162,8 +162,8 @@ function IsoFire:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoFire
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare)
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int)
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int, SetLife: int)
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int, SetLife: int, isSmoke: boolean)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare): IsoFire
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int): IsoFire
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int, SetLife: int): IsoFire
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, StartingEnergy: int, SetLife: int, isSmoke: boolean): IsoFire
 function IsoFire.new(cell) end

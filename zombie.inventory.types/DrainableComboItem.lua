@@ -212,5 +212,5 @@ function DrainableComboItem:updateWeight() end
 --- @param itemType String
 --- @param texName String
 --- @return DrainableComboItem
---- @overload fun(module: String, name: String, itemType: String, item: Item)
+--- @overload fun(module: String, name: String, itemType: String, item: Item): DrainableComboItem
 function DrainableComboItem.new(module, name, itemType, texName) end

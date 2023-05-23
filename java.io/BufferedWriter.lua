@@ -34,5 +34,5 @@ function BufferedWriter:write(arg0) end
 --- @public
 --- @param arg0 Writer
 --- @return BufferedWriter
---- @overload fun(arg0: Writer, arg1: int)
+--- @overload fun(arg0: Writer, arg1: int): BufferedWriter
 function BufferedWriter.new(arg0) end

@@ -164,5 +164,5 @@ function Faction:writeToBuffer(bb, remove) end
 
 --- @public
 --- @return Faction
---- @overload fun(name: String, owner: String)
+--- @overload fun(name: String, owner: String): Faction
 function Faction.new() end

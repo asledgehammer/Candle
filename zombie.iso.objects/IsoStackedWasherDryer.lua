@@ -91,5 +91,5 @@ function IsoStackedWasherDryer:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoStackedWasherDryer
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoStackedWasherDryer
 function IsoStackedWasherDryer.new(cell) end

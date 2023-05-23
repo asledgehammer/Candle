@@ -202,5 +202,5 @@ function IsoTrap:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoTrap
---- @overload fun(weapon: HandWeapon, cell: IsoCell, sq: IsoGridSquare)
+--- @overload fun(weapon: HandWeapon, cell: IsoCell, sq: IsoGridSquare): IsoTrap
 function IsoTrap.new(cell) end

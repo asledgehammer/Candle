@@ -22,5 +22,5 @@ function ComboItem:getSaveType() end
 --- @param itemType String
 --- @param texName String
 --- @return ComboItem
---- @overload fun(module: String, name: String, itemType: String, item: Item)
+--- @overload fun(module: String, name: String, itemType: String, item: Item): ComboItem
 function ComboItem.new(module, name, itemType, texName) end

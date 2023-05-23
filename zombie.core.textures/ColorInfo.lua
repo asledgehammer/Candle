@@ -60,5 +60,5 @@ function ColorInfo:toString() end
 
 --- @public
 --- @return ColorInfo
---- @overload fun(R: float, G: float, B: float, A: float)
+--- @overload fun(R: float, G: float, B: float, A: float): ColorInfo
 function ColorInfo.new() end

@@ -111,5 +111,5 @@ function IsoCarBatteryCharger:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoCarBatteryCharger
---- @overload fun(item: InventoryItem, cell: IsoCell, square: IsoGridSquare)
+--- @overload fun(item: InventoryItem, cell: IsoCell, square: IsoGridSquare): IsoCarBatteryCharger
 function IsoCarBatteryCharger.new(cell) end

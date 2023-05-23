@@ -117,5 +117,5 @@ function IsoFireplace:useFuel(amount) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoFireplace
---- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: IsoSprite): IsoFireplace
 function IsoFireplace.new(cell) end

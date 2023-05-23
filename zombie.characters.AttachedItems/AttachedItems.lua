@@ -77,5 +77,5 @@ function AttachedItems:size() end
 --- @public
 --- @param other AttachedItems
 --- @return AttachedItems
---- @overload fun(group: AttachedLocationGroup)
+--- @overload fun(group: AttachedLocationGroup): AttachedItems
 function AttachedItems.new(other) end
