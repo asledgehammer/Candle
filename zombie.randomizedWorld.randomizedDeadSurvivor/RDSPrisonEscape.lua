@@ -1,8 +1,7 @@
 --- @meta
 
 --- @class RDSPrisonEscape: RandomizedDeadSurvivorBase
---- 2-3 zombies in inmate jumpsuits with some duffel bags on them with ropes,
- duct tape, etc.
+--- 2-3 zombies in inmate jumpsuits with some duffel bags on them with ropes, duct tape, etc.
 RDSPrisonEscape = {};
 
 ------------------------------------

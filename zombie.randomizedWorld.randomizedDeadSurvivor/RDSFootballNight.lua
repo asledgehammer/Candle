@@ -1,7 +1,7 @@
 --- @meta
 
 --- @class RDSFootballNight: RandomizedDeadSurvivorBase
---- Create some zombies in sports outfits with crisps, alcohol &amp; cigarettes lying around
+--- Create some zombies in sports outfits with crisps, alcohol & cigarettes lying around
 RDSFootballNight = {};
 
 ------------------------------------

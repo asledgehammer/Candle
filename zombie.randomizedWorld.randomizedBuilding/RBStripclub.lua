@@ -1,8 +1,7 @@
 --- @meta
 
 --- @class RBStripclub: RandomizedBuildingBase
---- Add money/alcohol on table
- Can also generate a rare male venue
+--- Add money/alcohol on table Can also generate a rare male venue
 RBStripclub = {};
 
 ------------------------------------

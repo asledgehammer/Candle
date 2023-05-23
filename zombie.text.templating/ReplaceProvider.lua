@@ -1,9 +1,7 @@
 --- @meta
 
 --- @class ReplaceProvider
---- TurboTuTone.
- A generic non-pooled ReplaceProvider that can be used for example in scripting,
- where the provider could provide forced overrides for certain template keys.
+--- TurboTuTone. A generic non-pooled ReplaceProvider that can be used for example in scripting, where the provider could provide forced overrides for certain template keys.
 --- @implement IReplaceProvider
 ReplaceProvider = {};
 
