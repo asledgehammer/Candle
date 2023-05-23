@@ -212,7 +212,10 @@ function IsoWorld:getFreeEmitter() end
 function IsoWorld:getGameMode() end
 
 --- @public
---- @return float
+---
+---  Utility method for ClimateManager.getTemperature()
+---
+--- @return float The current temperature.
 function IsoWorld:getGlobalTemperature() end
 
 --- @public
@@ -469,6 +472,10 @@ function IsoWorld:setEmitterOwner(emitter, object) end
 function IsoWorld:setGameMode(mode) end
 
 --- @public
+---
+---  setGlobalTemperature is now deprecated. Does nothing. member globalTemperature
+---  replaced with ClimateManager.getTemperature()
+---
 --- @param globalTemperature float
 --- @return void
 function IsoWorld:setGlobalTemperature(globalTemperature) end

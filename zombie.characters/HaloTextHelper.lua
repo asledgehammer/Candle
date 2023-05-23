@@ -1,7 +1,6 @@
 --- @meta
 
---- @class HaloTextHelper
---- TurboTuTone.
+--- @class HaloTextHelper TurboTuTone.
 --- @field public COLOR_GREEN ColorRGB
 --- @field public COLOR_RED ColorRGB
 --- @field public COLOR_WHITE ColorRGB

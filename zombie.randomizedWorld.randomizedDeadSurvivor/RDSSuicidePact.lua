@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSSuicidePact: RandomizedDeadSurvivorBase
---- Create 2 dead survivor with 1 gunshot, one handle a loaded gun
+--- @class RDSSuicidePact: RandomizedDeadSurvivorBase Create 2 dead survivor with 1 gunshot, one handle a loaded gun
 RDSSuicidePact = {};
 
 ------------------------------------

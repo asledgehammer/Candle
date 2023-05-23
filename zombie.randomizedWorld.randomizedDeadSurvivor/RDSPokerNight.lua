@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSPokerNight: RandomizedDeadSurvivorBase
---- Create some zombies in varsity outfit + 2 naked zombies in bedroom
+--- @class RDSPokerNight: RandomizedDeadSurvivorBase Create some zombies in varsity outfit + 2 naked zombies in bedroom
 RDSPokerNight = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RDSPokerNight = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

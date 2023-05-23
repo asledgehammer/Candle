@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RadioData
---- Turbo
+--- @class RadioData Turbo
 RadioData = {};
 
 ------------------------------------

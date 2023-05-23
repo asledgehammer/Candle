@@ -1,25 +1,24 @@
 --- @meta
 
---- @class Color
---- A simple wrapper round the values required for a colour
+--- @class Color A simple wrapper round the values required for a colour
 --- @implement Serializable
---- @field public black Color
---- @field public blue Color
---- @field public cyan Color
---- @field public darkGray Color
---- @field public darkGreen Color
---- @field public gray Color
---- @field public green Color
---- @field public lightGray Color
---- @field public lightGreen Color
---- @field public magenta Color
---- @field public orange Color
---- @field public pink Color
---- @field public purple Color
---- @field public red Color
---- @field public transparent Color
---- @field public white Color
---- @field public yellow Color
+--- @field public black Color The fixed colour black
+--- @field public blue Color The fixed colour blue
+--- @field public cyan Color The fixed colour cyan
+--- @field public darkGray Color The fixed colour dark gray
+--- @field public darkGreen Color The fixed colour dark green
+--- @field public gray Color The fixed colour gray
+--- @field public green Color The fixed colour green
+--- @field public lightGray Color The fixed colour light gray
+--- @field public lightGreen Color The fixed colour light green
+--- @field public magenta Color The fixed colour dark magenta
+--- @field public orange Color The fixed colour dark orange
+--- @field public pink Color The fixed colour dark pink
+--- @field public purple Color The fixed colour purple
+--- @field public red Color The fixed colour red
+--- @field public transparent Color The fixed color transparent
+--- @field public white Color The fixed colour white
+--- @field public yellow Color The fixed colour yellow
 Color = {};
 
 ------------------------------------
@@ -65,8 +64,11 @@ function Color.colorToABGR(val) end
 
 --- @public
 --- @static
---- @param nm String
---- @return Color
+---
+---  Decode a number in a string and process it as a colour reference.
+---
+--- @param nm String The number string to decode
+--- @return Color The color generated from the number read
 function Color.decode(nm) end
 
 --- @public
@@ -117,6 +119,9 @@ function Color.multiplyBGR(valueABGR, multiplierABGR) end
 
 --- @public
 --- @static
+---
+---  Create a random color.
+---
 --- @return Color
 function Color.random() end
 
@@ -161,18 +166,27 @@ function Color.tintABGR(targetABGR, tintABGR) end
 ------------------------------------
 
 --- @public
---- @param c Color
+---
+---  Add another colour to this one
+---
+--- @param c Color The colour to add
 --- @return void
 function Color:add(c) end
 
 --- @public
---- @param c Color
---- @return Color
+---
+---  Add another colour to this one
+---
+--- @param c Color The colour to add
+--- @return Color The copy which has had the color added to it
 function Color:addToCopy(c) end
 
 --- @public
---- @return Color
---- @overload fun(scale: float): Color
+---
+---  Make a brighter instance of this colour
+---
+--- @return Color The brighter version of this colour
+--- @overload fun(scale: float): Color The brighter version of this colour
 function Color:brighter() end
 
 --- @public
@@ -183,8 +197,11 @@ function Color:brighter() end
 function Color:changeHSBValue(hFactor, sFactor, bFactor) end
 
 --- @public
---- @return Color
---- @overload fun(scale: float): Color
+---
+---  Make a darker instance of this colour
+---
+--- @return Color The darker version of this colour
+--- @overload fun(scale: float): Color The darker version of this colour
 function Color:darker() end
 
 --- @public
@@ -193,16 +210,27 @@ function Color:darker() end
 function Color:equals(other) end
 
 --- @public
+---
+---  Converts the supplied binary value into color values, and sets the result to
+---  object. Performs a clamp on the alpha channel. Performs a special-case on the
+---  channel, where if it is 0, it is set to MAX instead.
+---
 --- @param valueABGR int
 --- @return void
 function Color:fromColor(valueABGR) end
 
 --- @public
---- @return int
+---
+---  get the alpha byte component of this colour
+---
+--- @return int The alpha component (range 0-255)
 function Color:getAlpha() end
 
 --- @public
---- @return int
+---
+---  get the alpha byte component of this colour
+---
+--- @return int The alpha component (range 0-255)
 function Color:getAlphaByte() end
 
 --- @public
@@ -214,11 +242,17 @@ function Color:getAlphaFloat() end
 function Color:getB() end
 
 --- @public
---- @return int
+---
+---  get the blue byte component of this colour
+---
+--- @return int The blue component (range 0-255)
 function Color:getBlue() end
 
 --- @public
---- @return int
+---
+---  get the blue byte component of this colour
+---
+--- @return int The blue component (range 0-255)
 function Color:getBlueByte() end
 
 --- @public
@@ -230,11 +264,17 @@ function Color:getBlueFloat() end
 function Color:getG() end
 
 --- @public
---- @return int
+---
+---  get the green byte component of this colour
+---
+--- @return int The green component (range 0-255)
 function Color:getGreen() end
 
 --- @public
---- @return int
+---
+---  get the green byte component of this colour
+---
+--- @return int The green component (range 0-255)
 function Color:getGreenByte() end
 
 --- @public
@@ -246,11 +286,17 @@ function Color:getGreenFloat() end
 function Color:getR() end
 
 --- @public
---- @return int
+---
+---  get the red byte component of this colour
+---
+--- @return int The red component (range 0-255)
 function Color:getRed() end
 
 --- @public
---- @return int
+---
+---  get the red byte component of this colour
+---
+--- @return int The red component (range 0-255)
 function Color:getRedByte() end
 
 --- @public
@@ -269,18 +315,27 @@ function Color:hashCode() end
 function Color:interp(to, delta, dest) end
 
 --- @public
---- @param c Color
---- @return Color
+---
+---  Multiply this color by another
+---
+--- @param c Color the other color
+--- @return Color product of the two colors
 function Color:multiply(c) end
 
 --- @public
---- @param value float
+---
+---  Scale the components of the colour by the given value
+---
+--- @param value float The value to scale by
 --- @return Color
 function Color:scale(value) end
 
 --- @public
---- @param value float
---- @return Color
+---
+---  Scale the components of the colour by the given value
+---
+--- @param value float The value to scale by
+--- @return Color The copy which has been scaled
 function Color:scaleCopy(value) end
 
 --- @public

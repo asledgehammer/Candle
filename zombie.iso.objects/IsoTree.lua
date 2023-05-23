@@ -115,7 +115,7 @@ function IsoTree:save(output, IS_DEBUG_SAVE) end
 function IsoTree:setHealth(health) end
 
 --- @public
---- @param sprite IsoSprite
+--- @param sprite IsoSprite the sprite to set
 --- @return void
 function IsoTree:setSprite(sprite) end
 

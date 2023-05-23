@@ -1,7 +1,6 @@
 --- @meta
 
---- @class ClimateForecaster
---- TurboTuTone.
+--- @class ClimateForecaster TurboTuTone.
 ClimateForecaster = {};
 
 ------------------------------------

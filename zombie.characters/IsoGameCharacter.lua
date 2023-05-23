@@ -22,22 +22,22 @@ IsoGameCharacter = {};
 
 --- @public
 --- @static
---- @return ColorInfo
+--- @return ColorInfo the inf
 function IsoGameCharacter.getInf() end
 
 --- @public
 --- @static
---- @return int[]
+--- @return int[] the LevelUpLevels
 function IsoGameCharacter.getLevelUpLevels() end
 
 --- @public
 --- @static
---- @return HashMap
+--- @return HashMap the SurvivorMap
 function IsoGameCharacter.getSurvivorMap() end
 
 --- @public
 --- @static
---- @return Vector2
+--- @return Vector2 the tempo
 function IsoGameCharacter.getTempo() end
 
 
@@ -313,7 +313,10 @@ function IsoGameCharacter:PlayAnimWithSpeed(string, framesSpeedPerFrame) end
 function IsoGameCharacter:QueueAction(act) end
 
 --- @public
---- @param literature Literature
+---
+---  Used when you read a book, magazine or newspaper
+---
+--- @param literature Literature the book to read
 --- @return void
 --- @overload fun(literature: Literature): void
 function IsoGameCharacter:ReadLiterature(literature) end
@@ -633,7 +636,12 @@ function IsoGameCharacter:climbThroughWindowFrame(obj) end
 function IsoGameCharacter:closeWindow(w) end
 
 --- @public
---- @param itemGuid String
+---
+---  clothingItemChanged Called when a ClothingItem file has changed on disk,
+---  the OutfitManager to broadcast this event. Checks if this item is currently
+---  by this player's Outfit. Reloads and re-equips if so.
+---
+--- @param itemGuid String The item's Globally Unique Identifier (GUID).
 --- @return void
 --- @overload fun(itemGuid: String): void
 function IsoGameCharacter:clothingItemChanged(itemGuid) end
@@ -721,6 +729,9 @@ function IsoGameCharacter:dressInPersistentOutfit(outfitName) end
 function IsoGameCharacter:dressInPersistentOutfitID(outfitID) end
 
 --- @public
+---
+---  Picks a random outfit from the OutfitManager
+---
 --- @return void
 function IsoGameCharacter:dressInRandomOutfit() end
 
@@ -874,11 +885,11 @@ function IsoGameCharacter:getAttachedItems() end
 function IsoGameCharacter:getAttachedLocationGroup() end
 
 --- @public
---- @return IsoGridSquare
+--- @return IsoGridSquare the attackTargetSquare
 function IsoGameCharacter:getAttackTargetSquare() end
 
 --- @public
---- @return IsoGameCharacter
+--- @return IsoGameCharacter the AttackedBy
 function IsoGameCharacter:getAttackedBy() end
 
 --- @public
@@ -912,31 +923,31 @@ function IsoGameCharacter:getBeenMovingFor() end
 function IsoGameCharacter:getBeenSprintingFor() end
 
 --- @public
---- @return float
+--- @return float the BetaDelta
 function IsoGameCharacter:getBetaDelta() end
 
 --- @public
---- @return float
+--- @return float the BetaEffect
 function IsoGameCharacter:getBetaEffect() end
 
 --- @public
---- @return float
+--- @return float the BloodImpactX
 function IsoGameCharacter:getBloodImpactX() end
 
 --- @public
---- @return float
+--- @return float the BloodImpactY
 function IsoGameCharacter:getBloodImpactY() end
 
 --- @public
---- @return float
+--- @return float the BloodImpactZ
 function IsoGameCharacter:getBloodImpactZ() end
 
 --- @public
---- @return IsoSprite
+--- @return IsoSprite the bloodSplat
 function IsoGameCharacter:getBloodSplat() end
 
 --- @public
---- @return BodyDamage
+--- @return BodyDamage the BodyDamage
 function IsoGameCharacter:getBodyDamage() end
 
 --- @public
@@ -971,12 +982,12 @@ function IsoGameCharacter:getBumpType() end
 function IsoGameCharacter:getBumpedChr() end
 
 --- @public
---- @return Stack
+--- @return Stack the CharacterActions
 --- @overload fun(): Stack
 function IsoGameCharacter:getCharacterActions() end
 
 --- @public
---- @return CharacterTraits
+--- @return CharacterTraits the CharacterTraits, a TraitCollection extended with direct links to known traits
 function IsoGameCharacter:getCharacterTraits() end
 
 --- @public
@@ -996,23 +1007,23 @@ function IsoGameCharacter:getClickSound() end
 function IsoGameCharacter:getClothingItem_Back() end
 
 --- @public
---- @return InventoryItem
+--- @return InventoryItem the ClothingItem_Feet
 function IsoGameCharacter:getClothingItem_Feet() end
 
 --- @public
---- @return InventoryItem
+--- @return InventoryItem the ClothingItem_Hands
 function IsoGameCharacter:getClothingItem_Hands() end
 
 --- @public
---- @return InventoryItem
+--- @return InventoryItem the ClothingItem_Head
 function IsoGameCharacter:getClothingItem_Head() end
 
 --- @public
---- @return InventoryItem
+--- @return InventoryItem the ClothingItem_Legs
 function IsoGameCharacter:getClothingItem_Legs() end
 
 --- @public
---- @return InventoryItem
+--- @return InventoryItem the ClothingItem_Torso
 function IsoGameCharacter:getClothingItem_Torso() end
 
 --- @public
@@ -1045,7 +1056,7 @@ function IsoGameCharacter:getCurrentState() end
 function IsoGameCharacter:getCurrentStateName() end
 
 --- @public
---- @return float
+--- @return float the dangerLevels
 function IsoGameCharacter:getDangerLevels() end
 
 --- @public
@@ -1054,7 +1065,7 @@ function IsoGameCharacter:getDangerLevels() end
 function IsoGameCharacter:getDebugMonitor() end
 
 --- @public
---- @return State
+--- @return State the defaultState
 function IsoGameCharacter:getDefaultState() end
 
 --- @public
@@ -1071,23 +1082,26 @@ function IsoGameCharacter:getDeferredMovement(out_result) end
 function IsoGameCharacter:getDeferredRotationWeight() end
 
 --- @public
---- @return float
+--- @return float the DepressDelta
 function IsoGameCharacter:getDepressDelta() end
 
 --- @public
---- @return float
+--- @return float the DepressEffect
 function IsoGameCharacter:getDepressEffect() end
 
 --- @public
---- @return SurvivorDesc
+--- @return SurvivorDesc the descriptor
 --- @overload fun(): SurvivorDesc
 function IsoGameCharacter:getDescriptor() end
 
 --- @public
---- @return int
+--- @return int the DieCount
 function IsoGameCharacter:getDieCount() end
 
 --- @public
+---
+---  The forward direction angle, in degrees.
+---
 --- @return float
 function IsoGameCharacter:getDirectionAngle() end
 
@@ -1103,7 +1117,7 @@ function IsoGameCharacter:getDotWithForwardDirection(bonePos) end
 function IsoGameCharacter:getEmitter() end
 
 --- @public
---- @return Stack
+--- @return Stack the EnemyList
 function IsoGameCharacter:getEnemyList() end
 
 --- @public
@@ -1111,6 +1125,12 @@ function IsoGameCharacter:getEnemyList() end
 function IsoGameCharacter:getEquipedRadio() end
 
 --- @public
+---
+---  The character's excess twist, in degrees. The excess is > 0 if the character is
+---  to twist further than their current maximum twist. ie. The amount that the
+---  twist exceeds the maximum twist. eg. If the character is trying to twist by 90
+---  but their maximum is set to 70, then excess = 20
+---
 --- @return float
 function IsoGameCharacter:getExcessTwist() end
 
@@ -1120,11 +1140,11 @@ function IsoGameCharacter:getExcessTwist() end
 function IsoGameCharacter:getFMODParameters() end
 
 --- @public
---- @return float
+--- @return float the fallTime
 function IsoGameCharacter:getFallTime() end
 
 --- @public
---- @return Stack
+--- @return Stack the FamiliarBuildings
 function IsoGameCharacter:getFamiliarBuildings() end
 
 --- @public
@@ -1136,27 +1156,27 @@ function IsoGameCharacter:getFatigueMod() end
 function IsoGameCharacter:getFatiqueMultiplier() end
 
 --- @public
---- @return AStarPathFinderResult
+--- @return AStarPathFinderResult the finder
 function IsoGameCharacter:getFinder() end
 
 --- @public
---- @return float
+--- @return float the FireKillRate
 function IsoGameCharacter:getFireKillRate() end
 
 --- @public
---- @return int
+--- @return int the FireSpreadProbability
 function IsoGameCharacter:getFireSpreadProbability() end
 
 --- @public
---- @return IsoGameCharacter
+--- @return IsoGameCharacter the FollowingTarget
 function IsoGameCharacter:getFollowingTarget() end
 
 --- @public
---- @return float
+--- @return float the ForceWakeUpTime
 function IsoGameCharacter:getForceWakeUpTime() end
 
 --- @public
---- @return Vector2
+--- @return Vector2 the character's forward direction vector
 function IsoGameCharacter:getForwardDirection() end
 
 --- @public
@@ -1169,6 +1189,9 @@ function IsoGameCharacter:getFullName() end
 function IsoGameCharacter:getGameCharacterAIBrain() end
 
 --- @public
+---
+---  Description copied from interface: IAnimationVariableSource
+---
 --- @return Iterable
 function IsoGameCharacter:getGameVariables() end
 
@@ -1187,7 +1210,7 @@ function IsoGameCharacter:getHaloTimerCount() end
 function IsoGameCharacter:getHammerSoundMod() end
 
 --- @public
---- @return float
+--- @return float the Health
 function IsoGameCharacter:getHealth() end
 
 --- @public
@@ -1216,7 +1239,7 @@ function IsoGameCharacter:getHoursSurvived() end
 function IsoGameCharacter:getHungerMultiplier() end
 
 --- @public
---- @return String
+--- @return String the hurtSound
 function IsoGameCharacter:getHurtSound() end
 
 --- @public
@@ -1228,7 +1251,7 @@ function IsoGameCharacter:getHyperthermiaMod() end
 function IsoGameCharacter:getIgnoreMovement() end
 
 --- @public
---- @return ItemContainer
+--- @return ItemContainer the inventory
 --- @overload fun(): ItemContainer
 function IsoGameCharacter:getInventory() end
 
@@ -1260,11 +1283,11 @@ function IsoGameCharacter:getLastBump() end
 function IsoGameCharacter:getLastChatMessage() end
 
 --- @public
---- @return float
+--- @return float the lastFallSpeed
 function IsoGameCharacter:getLastFallSpeed() end
 
 --- @public
---- @return Location
+--- @return Location the LastHeardSound
 function IsoGameCharacter:getLastHeardSound() end
 
 --- @public
@@ -1276,7 +1299,7 @@ function IsoGameCharacter:getLastHitCount() end
 function IsoGameCharacter:getLastHourSleeped() end
 
 --- @public
---- @return HashMap
+--- @return HashMap the LastKnownLocation
 function IsoGameCharacter:getLastKnownLocation() end
 
 --- @public
@@ -1285,7 +1308,7 @@ function IsoGameCharacter:getLastKnownLocation() end
 function IsoGameCharacter:getLastKnownLocationOf(character) end
 
 --- @public
---- @return int
+--- @return int the LastLocalEnemies
 function IsoGameCharacter:getLastLocalEnemies() end
 
 --- @public
@@ -1293,15 +1316,15 @@ function IsoGameCharacter:getLastLocalEnemies() end
 function IsoGameCharacter:getLastSpokenLine() end
 
 --- @public
---- @return int
+--- @return int the LastZombieKills
 function IsoGameCharacter:getLastZombieKills() end
 
 --- @public
---- @return float
+--- @return float the leaveBodyTimedown
 function IsoGameCharacter:getLeaveBodyTimedown() end
 
 --- @public
---- @return IsoSprite
+--- @return IsoSprite the legsSprite
 function IsoGameCharacter:getLegsSprite() end
 
 --- @public
@@ -1314,7 +1337,7 @@ function IsoGameCharacter:getLevelMaxForXp() end
 function IsoGameCharacter:getLevelUpLevels(level) end
 
 --- @public
---- @return float
+--- @return float the LevelUpMultiplier
 function IsoGameCharacter:getLevelUpMultiplier() end
 
 --- @public
@@ -1326,35 +1349,35 @@ function IsoGameCharacter:getLightInfo2() end
 function IsoGameCharacter:getLightfootMod() end
 
 --- @public
---- @return float
+--- @return float the llx
 function IsoGameCharacter:getLlx() end
 
 --- @public
---- @return float
+--- @return float the lly
 function IsoGameCharacter:getLly() end
 
 --- @public
---- @return float
+--- @return float the llz
 function IsoGameCharacter:getLlz() end
 
 --- @public
---- @return Stack
+--- @return Stack the LocalEnemyList
 function IsoGameCharacter:getLocalEnemyList() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the LocalGroupList
 function IsoGameCharacter:getLocalGroupList() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the LocalList
 function IsoGameCharacter:getLocalList() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the LocalNeutralList
 function IsoGameCharacter:getLocalNeutralList() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the LocalRelevantEnemyList
 function IsoGameCharacter:getLocalRelevantEnemyList() end
 
 --- @public
@@ -1373,11 +1396,11 @@ function IsoGameCharacter:getLookVector(vector2) end
 function IsoGameCharacter:getLowDangerInVicinity(attempts, range) end
 
 --- @public
---- @return float
+--- @return float the lrx
 function IsoGameCharacter:getLrx() end
 
 --- @public
---- @return float
+--- @return float the lry
 function IsoGameCharacter:getLry() end
 
 --- @public
@@ -1394,16 +1417,19 @@ function IsoGameCharacter:getMapKnowledge() end
 function IsoGameCharacter:getMaxChatLines() end
 
 --- @public
+---
+---  The maximum twist angle, in degrees.
+---
 --- @return float
 function IsoGameCharacter:getMaxTwist() end
 
 --- @public
---- @return int
+--- @return int the maxWeight
 --- @overload fun(): int
 function IsoGameCharacter:getMaxWeight() end
 
 --- @public
---- @return int
+--- @return int the maxWeightBase
 function IsoGameCharacter:getMaxWeightBase() end
 
 --- @public
@@ -1433,7 +1459,7 @@ function IsoGameCharacter:getModelInstance() end
 function IsoGameCharacter:getMomentumScalar() end
 
 --- @public
---- @return Moodles
+--- @return Moodles the Moodles
 --- @overload fun(): Moodles
 function IsoGameCharacter:getMoodles() end
 
@@ -1442,7 +1468,7 @@ function IsoGameCharacter:getMoodles() end
 function IsoGameCharacter:getMoveDelta() end
 
 --- @public
---- @return Vector2
+--- @return Vector2 the moveForwardVec
 function IsoGameCharacter:getMoveForwardVec() end
 
 --- @public
@@ -1462,7 +1488,7 @@ function IsoGameCharacter:getNetworkCharacterAI() end
 function IsoGameCharacter:getNextAnimationTranslationLength() end
 
 --- @public
---- @return int
+--- @return int the NextWander
 function IsoGameCharacter:getNextWander() end
 
 --- @public
@@ -1470,7 +1496,7 @@ function IsoGameCharacter:getNextWander() end
 function IsoGameCharacter:getNimbleMod() end
 
 --- @public
---- @return int
+--- @return int the NumSurvivorsInVicinity
 function IsoGameCharacter:getNumSurvivorsInVicinity() end
 
 --- @public
@@ -1482,6 +1508,9 @@ function IsoGameCharacter:getOnlineID() end
 function IsoGameCharacter:getOrCreateSleepingEventData() end
 
 --- @public
+---
+---  Description copied from interface: IAnimationVariableMap
+---
 --- @param key String
 --- @return IAnimationVariableSlot
 --- @overload fun(key: String): IAnimationVariableSlot
@@ -1496,11 +1525,11 @@ function IsoGameCharacter:getOutfitName() end
 function IsoGameCharacter:getPacingMod() end
 
 --- @public
---- @return float
+--- @return float the PainDelta
 function IsoGameCharacter:getPainDelta() end
 
 --- @public
---- @return float
+--- @return float the PainEffect
 function IsoGameCharacter:getPainEffect() end
 
 --- @public
@@ -1514,31 +1543,31 @@ function IsoGameCharacter:getPath2() end
 function IsoGameCharacter:getPathFindBehavior2() end
 
 --- @public
---- @return int
+--- @return int the pathIndex
 function IsoGameCharacter:getPathIndex() end
 
 --- @public
---- @return int
+--- @return int the PathTargetX
 function IsoGameCharacter:getPathTargetX() end
 
 --- @public
---- @return int
+--- @return int the PathTargetY
 function IsoGameCharacter:getPathTargetY() end
 
 --- @public
---- @return int
+--- @return int the PathTargetZ
 function IsoGameCharacter:getPathTargetZ() end
 
 --- @public
---- @return int
+--- @return int the Patience
 function IsoGameCharacter:getPatience() end
 
 --- @public
---- @return int
+--- @return int the PatienceMax
 function IsoGameCharacter:getPatienceMax() end
 
 --- @public
---- @return int
+--- @return int the PatienceMin
 function IsoGameCharacter:getPatienceMin() end
 
 --- @public
@@ -1554,7 +1583,7 @@ function IsoGameCharacter:getPerkInfo(arg0) end
 function IsoGameCharacter:getPerkLevel(arg0) end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the PerkList
 function IsoGameCharacter:getPerkList() end
 
 --- @public
@@ -1570,7 +1599,7 @@ function IsoGameCharacter:getPreviousActionContextStateName() end
 function IsoGameCharacter:getPreviousStateName() end
 
 --- @public
---- @return InventoryItem
+--- @return InventoryItem the leftHandItem
 --- @overload fun(): InventoryItem
 function IsoGameCharacter:getPrimaryHandItem() end
 
@@ -1587,15 +1616,15 @@ function IsoGameCharacter:getRandomDefaultOutfit() end
 function IsoGameCharacter:getReadyModelData() end
 
 --- @public
---- @return int
+--- @return int the ReanimAnimDelay
 function IsoGameCharacter:getReanimAnimDelay() end
 
 --- @public
---- @return int
+--- @return int the ReanimAnimFrame
 function IsoGameCharacter:getReanimAnimFrame() end
 
 --- @public
---- @return float
+--- @return float the ReanimateTimer
 function IsoGameCharacter:getReanimateTimer() end
 
 --- @public
@@ -1612,7 +1641,7 @@ function IsoGameCharacter:getRecoveryMod() end
 function IsoGameCharacter:getReduceInfectionPower() end
 
 --- @public
---- @return int
+--- @return int the RemoteID
 function IsoGameCharacter:getRemoteID() end
 
 --- @public
@@ -1630,7 +1659,7 @@ function IsoGameCharacter:getSafety() end
 function IsoGameCharacter:getSayLine() end
 
 --- @public
---- @return InventoryItem
+--- @return InventoryItem the rightHandItem
 --- @overload fun(): InventoryItem
 function IsoGameCharacter:getSecondaryHandItem() end
 
@@ -1639,6 +1668,9 @@ function IsoGameCharacter:getSecondaryHandItem() end
 function IsoGameCharacter:getSecondaryHandType() end
 
 --- @public
+---
+---  The character's current shoulder-twist angle, in degrees.
+---
 --- @return float
 function IsoGameCharacter:getShoulderTwist() end
 
@@ -1647,19 +1679,19 @@ function IsoGameCharacter:getShoulderTwist() end
 function IsoGameCharacter:getShovingMod() end
 
 --- @public
---- @return float
+--- @return float the SleepingTabletDelta
 function IsoGameCharacter:getSleepingTabletDelta() end
 
 --- @public
---- @return float
+--- @return float the SleepingTabletEffect
 function IsoGameCharacter:getSleepingTabletEffect() end
 
 --- @public
---- @return float
+--- @return float the slowFactor
 function IsoGameCharacter:getSlowFactor() end
 
 --- @public
---- @return float
+--- @return float the slowTimer
 function IsoGameCharacter:getSlowTimer() end
 
 --- @public
@@ -1667,15 +1699,15 @@ function IsoGameCharacter:getSlowTimer() end
 function IsoGameCharacter:getSneakSpotMod() end
 
 --- @public
---- @return Color
+--- @return Color the SpeakColour
 function IsoGameCharacter:getSpeakColour() end
 
 --- @public
---- @return float
+--- @return float the SpeakTime
 function IsoGameCharacter:getSpeakTime() end
 
 --- @public
---- @return float
+--- @return float the speedMod
 function IsoGameCharacter:getSpeedMod() end
 
 --- @public
@@ -1692,11 +1724,11 @@ function IsoGameCharacter:getSpriteDef() end
 function IsoGameCharacter:getSquare() end
 
 --- @public
---- @return float
+--- @return float the staggerTimeMod
 function IsoGameCharacter:getStaggerTimeMod() end
 
 --- @public
---- @return StateMachine
+--- @return StateMachine the stateMachine
 function IsoGameCharacter:getStateMachine() end
 
 --- @public
@@ -1705,7 +1737,7 @@ function IsoGameCharacter:getStateMachine() end
 function IsoGameCharacter:getStateMachineParams(state) end
 
 --- @public
---- @return Stats
+--- @return Stats the stats
 --- @overload fun(): Stats
 function IsoGameCharacter:getStats() end
 
@@ -1723,6 +1755,9 @@ function IsoGameCharacter:getSurvivorKills() end
 function IsoGameCharacter:getTalkerType() end
 
 --- @public
+---
+---  The desired twist, unclamped, in degrees.
+---
 --- @return float
 function IsoGameCharacter:getTargetTwist() end
 
@@ -1752,7 +1787,7 @@ function IsoGameCharacter:getThreatLevel() end
 function IsoGameCharacter:getTimeSinceLastSmoke() end
 
 --- @public
---- @return int
+--- @return int the TimeThumping
 function IsoGameCharacter:getTimeThumping() end
 
 --- @public
@@ -1768,7 +1803,7 @@ function IsoGameCharacter:getTorchStrength() end
 function IsoGameCharacter:getTotalBlood() end
 
 --- @public
---- @return TraitCollection
+--- @return TraitCollection the Traits
 --- @overload fun(): TraitCollection
 function IsoGameCharacter:getTraits() end
 
@@ -1777,6 +1812,9 @@ function IsoGameCharacter:getTraits() end
 function IsoGameCharacter:getTurnDelta() end
 
 --- @public
+---
+---  The character's current twist angle, in degrees.
+---
 --- @return float
 function IsoGameCharacter:getTwist() end
 
@@ -1786,11 +1824,11 @@ function IsoGameCharacter:getTwist() end
 function IsoGameCharacter:getUID() end
 
 --- @public
---- @return HandWeapon
+--- @return HandWeapon the useHandWeapon
 function IsoGameCharacter:getUseHandWeapon() end
 
 --- @public
---- @return Stack
+--- @return Stack the UsedItemsOn
 function IsoGameCharacter:getUsedItemsOn() end
 
 --- @public
@@ -1798,24 +1836,36 @@ function IsoGameCharacter:getUsedItemsOn() end
 function IsoGameCharacter:getUserNameHeight() end
 
 --- @public
+---
+---  Description copied from interface: IAnimationVariableSource
+---
 --- @param key String
 --- @return IAnimationVariableSlot
 --- @overload fun(handle: AnimationVariableHandle): IAnimationVariableSlot
 function IsoGameCharacter:getVariable(key) end
 
 --- @public
+---
+---  Description copied from interface: IAnimationVariableSource
+---
 --- @param name String
 --- @return boolean
 --- @overload fun(key: String, defaultVal: boolean): boolean
 function IsoGameCharacter:getVariableBoolean(name) end
 
 --- @public
+---
+---  Description copied from interface: IAnimationVariableSource
+---
 --- @param name String
 --- @param defaultVal float
 --- @return float
 function IsoGameCharacter:getVariableFloat(name, defaultVal) end
 
 --- @public
+---
+---  Description copied from interface: IAnimationVariableSource
+---
 --- @param name String
 --- @return String
 function IsoGameCharacter:getVariableString(name) end
@@ -1826,7 +1876,7 @@ function IsoGameCharacter:getVariableString(name) end
 function IsoGameCharacter:getVehicle() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the VeryCloseEnemyList
 function IsoGameCharacter:getVeryCloseEnemyList() end
 
 --- @public
@@ -1866,7 +1916,7 @@ function IsoGameCharacter:getWornItems() end
 function IsoGameCharacter:getX() end
 
 --- @public
---- @return XP
+--- @return XP the xp
 --- @overload fun(): XP
 function IsoGameCharacter:getXp() end
 
@@ -1885,7 +1935,7 @@ function IsoGameCharacter:getY() end
 function IsoGameCharacter:getZ() end
 
 --- @public
---- @return int
+--- @return int the ZombieKills
 --- @overload fun(): int
 function IsoGameCharacter:getZombieKills() end
 
@@ -1985,7 +2035,7 @@ function IsoGameCharacter:isAiming() end
 function IsoGameCharacter:isAlive() end
 
 --- @public
---- @return boolean
+--- @return boolean the AllowConversation
 function IsoGameCharacter:isAllowConversation() end
 
 --- @public
@@ -1998,7 +2048,7 @@ function IsoGameCharacter:isAnimForecasted() end
 function IsoGameCharacter:isAnimationRecorderActive() end
 
 --- @public
---- @return boolean
+--- @return boolean the Asleep
 --- @overload fun(): boolean
 function IsoGameCharacter:isAsleep() end
 
@@ -2013,7 +2063,7 @@ function IsoGameCharacter:isAttachedItem(item) end
 function IsoGameCharacter:isAttackAnim() end
 
 --- @public
---- @return boolean
+--- @return boolean the AttackWasSuperAttack
 function IsoGameCharacter:isAttackWasSuperAttack() end
 
 --- @public
@@ -2063,7 +2113,7 @@ function IsoGameCharacter:isBumped() end
 function IsoGameCharacter:isCanShout() end
 
 --- @public
---- @return boolean
+--- @return boolean the bClimbing
 function IsoGameCharacter:isClimbing() end
 
 --- @public
@@ -2180,11 +2230,11 @@ function IsoGameCharacter:isHideWeaponModel() end
 function IsoGameCharacter:isHitFromBehind() end
 
 --- @public
---- @return boolean
+--- @return boolean the IgnoreMovementForDirection
 function IsoGameCharacter:isIgnoreMovementForDirection() end
 
 --- @public
---- @return boolean
+--- @return boolean the IgnoreStaggerBack
 function IsoGameCharacter:isIgnoreStaggerBack() end
 
 --- @public
@@ -2237,11 +2287,11 @@ function IsoGameCharacter:isKnownMediaLine(guid) end
 function IsoGameCharacter:isKnownPoison(item) end
 
 --- @public
---- @return boolean
+--- @return boolean the lastCollidedN
 function IsoGameCharacter:isLastCollidedN() end
 
 --- @public
---- @return boolean
+--- @return boolean the lastCollidedW
 function IsoGameCharacter:isLastCollidedW() end
 
 --- @public
@@ -2282,7 +2332,7 @@ function IsoGameCharacter:isNPC() end
 function IsoGameCharacter:isOnDeathDone() end
 
 --- @public
---- @return boolean
+--- @return boolean the OnFire
 function IsoGameCharacter:isOnFire() end
 
 --- @public
@@ -2295,7 +2345,7 @@ function IsoGameCharacter:isOnKillDone() end
 function IsoGameCharacter:isOutside() end
 
 --- @public
---- @return boolean
+--- @return boolean the pathing
 function IsoGameCharacter:isPathing() end
 
 --- @public
@@ -2336,7 +2386,7 @@ function IsoGameCharacter:isRangedWeaponEmpty() end
 function IsoGameCharacter:isReading() end
 
 --- @public
---- @return boolean
+--- @return boolean the Reanim
 function IsoGameCharacter:isReanim() end
 
 --- @public
@@ -2352,7 +2402,11 @@ function IsoGameCharacter:isRecipeKnown(name) end
 function IsoGameCharacter:isRunning() end
 
 --- @public
---- @return boolean
+---
+---  Is this character currently culled from the visible scene graph. Eg. Zombies
+---  seen by the player. Objects outside the rendered window etc.
+---
+--- @return boolean TRUE if this character should be drawn. FALSE otherwise.
 function IsoGameCharacter:isSceneCulled() end
 
 --- @public
@@ -2383,7 +2437,7 @@ function IsoGameCharacter:isSkipResolveCollision() end
 function IsoGameCharacter:isSneaking() end
 
 --- @public
---- @return boolean
+--- @return boolean the Speaking
 --- @overload fun(): boolean
 function IsoGameCharacter:isSpeaking() end
 
@@ -2396,7 +2450,7 @@ function IsoGameCharacter:isSprinting() end
 function IsoGameCharacter:isStrafing() end
 
 --- @public
---- @return boolean
+--- @return boolean the superAttack
 function IsoGameCharacter:isSuperAttack() end
 
 --- @public
@@ -2431,6 +2485,10 @@ function IsoGameCharacter:isUnlimitedEndurance() end
 function IsoGameCharacter:isUsingWornItems() end
 
 --- @public
+---
+---  Compares (ignoring case) the value of the specified variable. Returns TRUE if
+---  match.
+---
 --- @param name String
 --- @param val String
 --- @return boolean
@@ -2442,7 +2500,7 @@ function IsoGameCharacter:isVariable(name, val) end
 function IsoGameCharacter:isVehicleCollisionActive(testVehicle) end
 
 --- @public
---- @return boolean
+--- @return boolean the VisibleToNPCs
 function IsoGameCharacter:isVisibleToNPCs() end
 
 --- @public
@@ -2456,19 +2514,19 @@ function IsoGameCharacter:isZombie() end
 function IsoGameCharacter:isZombieAttacking() end
 
 --- @public
---- @return boolean
+--- @return boolean the bDoDefer
 function IsoGameCharacter:isbDoDefer() end
 
 --- @public
---- @return boolean
+--- @return boolean the bFalling
 function IsoGameCharacter:isbFalling() end
 
 --- @public
---- @return boolean
+--- @return boolean the bOnBed
 function IsoGameCharacter:isbOnBed() end
 
 --- @public
---- @return boolean
+--- @return boolean the bUseParts
 function IsoGameCharacter:isbUseParts() end
 
 --- @public
@@ -2495,7 +2553,10 @@ function IsoGameCharacter:load(input, WorldVersion, IS_DEBUG_SAVE) end
 function IsoGameCharacter:loadChange(change, bb) end
 
 --- @public
---- @param modelManager ModelManager
+---
+---  Callback from ModelManager.Add/Remove functions.
+---
+--- @param modelManager ModelManager Event sender.
 --- @param isCulled boolean
 --- @return void
 function IsoGameCharacter:onCullStateChanged(modelManager, isCulled) end
@@ -2748,7 +2809,7 @@ function IsoGameCharacter:setAge(age) end
 function IsoGameCharacter:setAimAtFloor(b) end
 
 --- @public
---- @param AllowConversation boolean
+--- @param AllowConversation boolean the AllowConversation to set
 --- @return void
 function IsoGameCharacter:setAllowConversation(AllowConversation) end
 
@@ -2770,7 +2831,7 @@ function IsoGameCharacter:setAnimForecasted(timeMs) end
 function IsoGameCharacter:setAnimated(b) end
 
 --- @public
---- @param Asleep boolean
+--- @param Asleep boolean the Asleep to set
 --- @return void
 --- @overload fun(Asleep: boolean): void
 function IsoGameCharacter:setAsleep(Asleep) end
@@ -2792,17 +2853,17 @@ function IsoGameCharacter:setAttachedItems(other) end
 function IsoGameCharacter:setAttackAnim(attackAnim) end
 
 --- @public
---- @param attackTargetSquare IsoGridSquare
+--- @param attackTargetSquare IsoGridSquare the attackTargetSquare to set
 --- @return void
 function IsoGameCharacter:setAttackTargetSquare(attackTargetSquare) end
 
 --- @public
---- @param AttackWasSuperAttack boolean
+--- @param AttackWasSuperAttack boolean the AttackWasSuperAttack to set
 --- @return void
 function IsoGameCharacter:setAttackWasSuperAttack(AttackWasSuperAttack) end
 
 --- @public
---- @param AttackedBy IsoGameCharacter
+--- @param AttackedBy IsoGameCharacter the AttackedBy to set
 --- @return void
 function IsoGameCharacter:setAttackedBy(AttackedBy) end
 
@@ -2844,32 +2905,32 @@ function IsoGameCharacter:setBeenMovingFor(beenMovingFor) end
 function IsoGameCharacter:setBeenSprintingFor(beenSprintingFor) end
 
 --- @public
---- @param BetaDelta float
+--- @param BetaDelta float the BetaDelta to set
 --- @return void
 function IsoGameCharacter:setBetaDelta(BetaDelta) end
 
 --- @public
---- @param BetaEffect float
+--- @param BetaEffect float the BetaEffect to set
 --- @return void
 function IsoGameCharacter:setBetaEffect(BetaEffect) end
 
 --- @public
---- @param BloodImpactX float
+--- @param BloodImpactX float the BloodImpactX to set
 --- @return void
 function IsoGameCharacter:setBloodImpactX(BloodImpactX) end
 
 --- @public
---- @param BloodImpactY float
+--- @param BloodImpactY float the BloodImpactY to set
 --- @return void
 function IsoGameCharacter:setBloodImpactY(BloodImpactY) end
 
 --- @public
---- @param BloodImpactZ float
+--- @param BloodImpactZ float the BloodImpactZ to set
 --- @return void
 function IsoGameCharacter:setBloodImpactZ(BloodImpactZ) end
 
 --- @public
---- @param bloodSplat IsoSprite
+--- @param bloodSplat IsoSprite the bloodSplat to set
 --- @return void
 function IsoGameCharacter:setBloodSplat(bloodSplat) end
 
@@ -2925,22 +2986,22 @@ function IsoGameCharacter:setClickSound(clickSound) end
 function IsoGameCharacter:setClothingItem_Back(item) end
 
 --- @public
---- @param item InventoryItem
+--- @param item InventoryItem the ClothingItem_Feet to set
 --- @return void
 function IsoGameCharacter:setClothingItem_Feet(item) end
 
 --- @public
---- @param item InventoryItem
+--- @param item InventoryItem the ClothingItem_Hands to set
 --- @return void
 function IsoGameCharacter:setClothingItem_Hands(item) end
 
 --- @public
---- @param item InventoryItem
+--- @param item InventoryItem the ClothingItem_Head to set
 --- @return void
 function IsoGameCharacter:setClothingItem_Head(item) end
 
 --- @public
---- @param item InventoryItem
+--- @param item InventoryItem the ClothingItem_Legs to set
 --- @return void
 function IsoGameCharacter:setClothingItem_Legs(item) end
 
@@ -2955,7 +3016,7 @@ function IsoGameCharacter:setClothingItem_Torso(item) end
 function IsoGameCharacter:setCriticalHit(isCrit) end
 
 --- @public
---- @param dangerLevels float
+--- @param dangerLevels float the dangerLevels to set
 --- @return void
 function IsoGameCharacter:setDangerLevels(dangerLevels) end
 
@@ -2981,28 +3042,28 @@ function IsoGameCharacter:setDefaultState() end
 function IsoGameCharacter:setDelayToSleep(delay) end
 
 --- @public
---- @param DepressDelta float
+--- @param DepressDelta float the DepressDelta to set
 --- @return void
 function IsoGameCharacter:setDepressDelta(DepressDelta) end
 
 --- @public
---- @param DepressEffect float
+--- @param DepressEffect float the DepressEffect to set
 --- @return void
 function IsoGameCharacter:setDepressEffect(DepressEffect) end
 
 --- @public
---- @param descriptor SurvivorDesc
+--- @param descriptor SurvivorDesc the descriptor to set
 --- @return void
 --- @overload fun(descriptor: SurvivorDesc): void
 function IsoGameCharacter:setDescriptor(descriptor) end
 
 --- @public
---- @param DieCount int
+--- @param DieCount int the DieCount to set
 --- @return void
 function IsoGameCharacter:setDieCount(DieCount) end
 
 --- @public
---- @param directions IsoDirections
+--- @param directions IsoDirections the dir to set
 --- @return void
 --- @overload fun(directions: IsoDirections): void
 function IsoGameCharacter:setDir(directions) end
@@ -3023,7 +3084,7 @@ function IsoGameCharacter:setDoDeathSound(doDeathSound) end
 function IsoGameCharacter:setFallOnFront(fallOnFront) end
 
 --- @public
---- @param fallTime float
+--- @param fallTime float the fallTime to set
 --- @return void
 function IsoGameCharacter:setFallTime(fallTime) end
 
@@ -3040,17 +3101,17 @@ function IsoGameCharacter:setFarmingCheat(b) end
 function IsoGameCharacter:setFemale(isFemale) end
 
 --- @public
---- @param FireKillRate float
+--- @param FireKillRate float the FireKillRate to set
 --- @return void
 function IsoGameCharacter:setFireKillRate(FireKillRate) end
 
 --- @public
---- @param FireSpreadProbability int
+--- @param FireSpreadProbability int the FireSpreadProbability to set
 --- @return void
 function IsoGameCharacter:setFireSpreadProbability(FireSpreadProbability) end
 
 --- @public
---- @param FollowingTarget IsoGameCharacter
+--- @param FollowingTarget IsoGameCharacter the FollowingTarget to set
 --- @return void
 function IsoGameCharacter:setFollowingTarget(FollowingTarget) end
 
@@ -3060,13 +3121,13 @@ function IsoGameCharacter:setFollowingTarget(FollowingTarget) end
 function IsoGameCharacter:setForceShove(forceShove) end
 
 --- @public
---- @param ForceWakeUpTime float
+--- @param ForceWakeUpTime float the ForceWakeUpTime to set
 --- @return void
 --- @overload fun(ForceWakeUpTime: float): void
 function IsoGameCharacter:setForceWakeUpTime(ForceWakeUpTime) end
 
 --- @public
---- @param dir Vector2
+--- @param dir Vector2 The character's new forward direction.
 --- @return void
 --- @overload fun(x: float, y: float): void
 function IsoGameCharacter:setForwardDirection(dir) end
@@ -3088,7 +3149,7 @@ function IsoGameCharacter:setGodMod(b) end
 function IsoGameCharacter:setHaloNote(str) end
 
 --- @public
---- @param Health float
+--- @param Health float the Health to set
 --- @return void
 function IsoGameCharacter:setHealth(Health) end
 
@@ -3114,7 +3175,7 @@ function IsoGameCharacter:setHitFromBehind(hitFromBehind) end
 function IsoGameCharacter:setHitReaction(hitReaction) end
 
 --- @public
---- @param hurtSound String
+--- @param hurtSound String the hurtSound to set
 --- @return void
 function IsoGameCharacter:setHurtSound(hurtSound) end
 
@@ -3129,12 +3190,12 @@ function IsoGameCharacter:setIgnoreAimingInput(b) end
 function IsoGameCharacter:setIgnoreMovement(ignoreMovement) end
 
 --- @public
---- @param IgnoreStaggerBack boolean
+--- @param IgnoreStaggerBack boolean the IgnoreStaggerBack to set
 --- @return void
 function IsoGameCharacter:setIgnoreStaggerBack(IgnoreStaggerBack) end
 
 --- @public
---- @param inventory ItemContainer
+--- @param inventory ItemContainer the inventory to set
 --- @return void
 function IsoGameCharacter:setInventory(inventory) end
 
@@ -3175,17 +3236,17 @@ function IsoGameCharacter:setLastBump(lastBump) end
 function IsoGameCharacter:setLastChatMessage(lastChatMessage) end
 
 --- @public
---- @param lastCollidedN boolean
+--- @param lastCollidedN boolean the lastCollidedN to set
 --- @return void
 function IsoGameCharacter:setLastCollidedN(lastCollidedN) end
 
 --- @public
---- @param lastCollidedW boolean
+--- @param lastCollidedW boolean the lastCollidedW to set
 --- @return void
 function IsoGameCharacter:setLastCollidedW(lastCollidedW) end
 
 --- @public
---- @param lastFallSpeed float
+--- @param lastFallSpeed float the lastFallSpeed to set
 --- @return void
 function IsoGameCharacter:setLastFallSpeed(lastFallSpeed) end
 
@@ -3207,7 +3268,7 @@ function IsoGameCharacter:setLastHitCount(hitCount) end
 function IsoGameCharacter:setLastHourSleeped(lastHourSleeped) end
 
 --- @public
---- @param LastLocalEnemies int
+--- @param LastLocalEnemies int the LastLocalEnemies to set
 --- @return void
 function IsoGameCharacter:setLastLocalEnemies(LastLocalEnemies) end
 
@@ -3217,62 +3278,65 @@ function IsoGameCharacter:setLastLocalEnemies(LastLocalEnemies) end
 function IsoGameCharacter:setLastSpokenLine(line) end
 
 --- @public
---- @param LastZombieKills int
+--- @param LastZombieKills int the LastZombieKills to set
 --- @return void
 function IsoGameCharacter:setLastZombieKills(LastZombieKills) end
 
 --- @public
---- @param leaveBodyTimedown float
+--- @param leaveBodyTimedown float the leaveBodyTimedown to set
 --- @return void
 function IsoGameCharacter:setLeaveBodyTimedown(leaveBodyTimedown) end
 
 --- @public
---- @param legsSprite IsoSprite
+--- @param legsSprite IsoSprite the legsSprite to set
 --- @return void
 function IsoGameCharacter:setLegsSprite(legsSprite) end
 
 --- @public
---- @param LevelUpMultiplier float
+--- @param LevelUpMultiplier float the LevelUpMultiplier to set
 --- @return void
 function IsoGameCharacter:setLevelUpMultiplier(LevelUpMultiplier) end
 
 --- @public
---- @param llx float
+--- @param llx float the llx to set
 --- @return void
 function IsoGameCharacter:setLlx(llx) end
 
 --- @public
---- @param lly float
+--- @param lly float the lly to set
 --- @return void
 function IsoGameCharacter:setLly(lly) end
 
 --- @public
---- @param llz float
+--- @param llz float the llz to set
 --- @return void
 function IsoGameCharacter:setLlz(llz) end
 
 --- @public
---- @param lrx float
+--- @param lrx float the lrx to set
 --- @return void
 function IsoGameCharacter:setLrx(lrx) end
 
 --- @public
---- @param lry float
+--- @param lry float the lry to set
 --- @return void
 function IsoGameCharacter:setLry(lry) end
 
 --- @public
+---
+---  Specify the maximum twist angle, in degrees.
+---
 --- @param degrees float
 --- @return void
 function IsoGameCharacter:setMaxTwist(degrees) end
 
 --- @public
---- @param maxWeight int
+--- @param maxWeight int the maxWeight to set
 --- @return void
 function IsoGameCharacter:setMaxWeight(maxWeight) end
 
 --- @public
---- @param maxWeightBase int
+--- @param maxWeightBase int the maxWeightBase to set
 --- @return void
 function IsoGameCharacter:setMaxWeightBase(maxWeightBase) end
 
@@ -3311,7 +3375,7 @@ function IsoGameCharacter:setMovablesCheat(b) end
 function IsoGameCharacter:setMoveDelta(moveDelta) end
 
 --- @public
---- @param moveForwardVec Vector2
+--- @param moveForwardVec Vector2 the moveForwardVec to set
 --- @return void
 function IsoGameCharacter:setMoveForwardVec(moveForwardVec) end
 
@@ -3326,12 +3390,12 @@ function IsoGameCharacter:setMoving(val) end
 function IsoGameCharacter:setNPC(newvalue) end
 
 --- @public
---- @param NextWander int
+--- @param NextWander int the NextWander to set
 --- @return void
 function IsoGameCharacter:setNextWander(NextWander) end
 
 --- @public
---- @param NumSurvivorsInVicinity int
+--- @param NumSurvivorsInVicinity int the NumSurvivorsInVicinity to set
 --- @return void
 function IsoGameCharacter:setNumSurvivorsInVicinity(NumSurvivorsInVicinity) end
 
@@ -3341,7 +3405,7 @@ function IsoGameCharacter:setNumSurvivorsInVicinity(NumSurvivorsInVicinity) end
 function IsoGameCharacter:setOnDeathDone(done) end
 
 --- @public
---- @param OnFire boolean
+--- @param OnFire boolean the OnFire to set
 --- @return void
 function IsoGameCharacter:setOnFire(OnFire) end
 
@@ -3351,12 +3415,12 @@ function IsoGameCharacter:setOnFire(OnFire) end
 function IsoGameCharacter:setOnKillDone(done) end
 
 --- @public
---- @param PainDelta float
+--- @param PainDelta float the PainDelta to set
 --- @return void
 function IsoGameCharacter:setPainDelta(PainDelta) end
 
 --- @public
---- @param PainEffect float
+--- @param PainEffect float the PainEffect to set
 --- @return void
 function IsoGameCharacter:setPainEffect(PainEffect) end
 
@@ -3367,27 +3431,27 @@ function IsoGameCharacter:setPainEffect(PainEffect) end
 function IsoGameCharacter:setPath2(arg0) end
 
 --- @public
---- @param pathIndex int
+--- @param pathIndex int the pathIndex to set
 --- @return void
 function IsoGameCharacter:setPathIndex(pathIndex) end
 
 --- @public
---- @param pathing boolean
+--- @param pathing boolean the pathing to set
 --- @return void
 function IsoGameCharacter:setPathing(pathing) end
 
 --- @public
---- @param Patience int
+--- @param Patience int the Patience to set
 --- @return void
 function IsoGameCharacter:setPatience(Patience) end
 
 --- @public
---- @param PatienceMax int
+--- @param PatienceMax int the PatienceMax to set
 --- @return void
 function IsoGameCharacter:setPatienceMax(PatienceMax) end
 
 --- @public
---- @param PatienceMin int
+--- @param PatienceMin int the PatienceMin to set
 --- @return void
 function IsoGameCharacter:setPatienceMin(PatienceMin) end
 
@@ -3410,7 +3474,7 @@ function IsoGameCharacter:setPersistentOutfitID(outfitID) end
 function IsoGameCharacter:setPlayingDeathSound(playing) end
 
 --- @public
---- @param leftHandItem InventoryItem
+--- @param leftHandItem InventoryItem the leftHandItem to set
 --- @return void
 --- @overload fun(leftHandItem: InventoryItem): void
 function IsoGameCharacter:setPrimaryHandItem(leftHandItem) end
@@ -3428,22 +3492,22 @@ function IsoGameCharacter:setRangedWeaponEmpty(val) end
 function IsoGameCharacter:setReading(isReading) end
 
 --- @public
---- @param Reanim boolean
+--- @param Reanim boolean the Reanim to set
 --- @return void
 function IsoGameCharacter:setReanim(Reanim) end
 
 --- @public
---- @param ReanimAnimDelay int
+--- @param ReanimAnimDelay int the ReanimAnimDelay to set
 --- @return void
 function IsoGameCharacter:setReanimAnimDelay(ReanimAnimDelay) end
 
 --- @public
---- @param ReanimAnimFrame int
+--- @param ReanimAnimFrame int the ReanimAnimFrame to set
 --- @return void
 function IsoGameCharacter:setReanimAnimFrame(ReanimAnimFrame) end
 
 --- @public
---- @param ReanimateTimer float
+--- @param ReanimateTimer float the ReanimateTimer to set
 --- @return void
 function IsoGameCharacter:setReanimateTimer(ReanimateTimer) end
 
@@ -3459,7 +3523,7 @@ function IsoGameCharacter:setRecoilDelay(recoilDelay) end
 function IsoGameCharacter:setReduceInfectionPower(reduceInfectionPower) end
 
 --- @public
---- @param RemoteID int
+--- @param RemoteID int the RemoteID to set
 --- @return void
 function IsoGameCharacter:setRemoteID(RemoteID) end
 
@@ -3475,17 +3539,22 @@ function IsoGameCharacter:setRunning(bRunning) end
 function IsoGameCharacter:setSafety(safety) end
 
 --- @public
---- @param sayLine String
+--- @param sayLine String the sayLine to set
 --- @return void
 function IsoGameCharacter:setSayLine(sayLine) end
 
 --- @public
+---
+---  Specify whether this character is currently not to be drawn, as it is outside
+---  visible area. Eg. Zombies not seen by the player. Objects outside the rendered
+---  etc.
+---
 --- @param isCulled boolean
 --- @return void
 function IsoGameCharacter:setSceneCulled(isCulled) end
 
 --- @public
---- @param rightHandItem InventoryItem
+--- @param rightHandItem InventoryItem the rightHandItem to set
 --- @return void
 --- @overload fun(rightHandItem: InventoryItem): void
 function IsoGameCharacter:setSecondaryHandItem(rightHandItem) end
@@ -3502,22 +3571,22 @@ function IsoGameCharacter:setShowAdminTag(showAdminTag) end
 function IsoGameCharacter:setSitOnGround(sitOnGround) end
 
 --- @public
---- @param SleepingTabletDelta float
+--- @param SleepingTabletDelta float the SleepingTabletDelta to set
 --- @return void
 function IsoGameCharacter:setSleepingTabletDelta(SleepingTabletDelta) end
 
 --- @public
---- @param SleepingTabletEffect float
+--- @param SleepingTabletEffect float the SleepingTabletEffect to set
 --- @return void
 function IsoGameCharacter:setSleepingTabletEffect(SleepingTabletEffect) end
 
 --- @public
---- @param slowFactor float
+--- @param slowFactor float the slowFactor to set
 --- @return void
 function IsoGameCharacter:setSlowFactor(slowFactor) end
 
 --- @public
---- @param slowTimer float
+--- @param slowTimer float the slowTimer to set
 --- @return void
 function IsoGameCharacter:setSlowTimer(slowTimer) end
 
@@ -3527,7 +3596,7 @@ function IsoGameCharacter:setSlowTimer(slowTimer) end
 function IsoGameCharacter:setSneaking(bSneaking) end
 
 --- @public
---- @param SpeakColour Color
+--- @param SpeakColour Color the SpeakColour to set
 --- @return void
 function IsoGameCharacter:setSpeakColour(SpeakColour) end
 
@@ -3538,17 +3607,17 @@ function IsoGameCharacter:setSpeakColour(SpeakColour) end
 function IsoGameCharacter:setSpeakColourInfo(info) end
 
 --- @public
---- @param SpeakTime int
+--- @param SpeakTime int the SpeakTime to set
 --- @return void
 function IsoGameCharacter:setSpeakTime(SpeakTime) end
 
 --- @public
---- @param Speaking boolean
+--- @param Speaking boolean the Speaking to set
 --- @return void
 function IsoGameCharacter:setSpeaking(Speaking) end
 
 --- @public
---- @param speedMod float
+--- @param speedMod float the speedMod to set
 --- @return void
 function IsoGameCharacter:setSpeedMod(speedMod) end
 
@@ -3558,7 +3627,7 @@ function IsoGameCharacter:setSpeedMod(speedMod) end
 function IsoGameCharacter:setSprinting(bSprinting) end
 
 --- @public
---- @param staggerTimeMod float
+--- @param staggerTimeMod float the staggerTimeMod to set
 --- @return void
 function IsoGameCharacter:setStaggerTimeMod(staggerTimeMod) end
 
@@ -3568,7 +3637,7 @@ function IsoGameCharacter:setStaggerTimeMod(staggerTimeMod) end
 function IsoGameCharacter:setStateMachineLocked(val) end
 
 --- @public
---- @param superAttack boolean
+--- @param superAttack boolean the superAttack to set
 --- @return void
 function IsoGameCharacter:setSuperAttack(superAttack) end
 
@@ -3604,7 +3673,7 @@ function IsoGameCharacter:setTimeOfSleep(timeOfSleep) end
 function IsoGameCharacter:setTimeSinceLastSmoke(timeSinceLastSmoke) end
 
 --- @public
---- @param TimeThumping int
+--- @param TimeThumping int the TimeThumping to set
 --- @return void
 function IsoGameCharacter:setTimeThumping(TimeThumping) end
 
@@ -3631,11 +3700,14 @@ function IsoGameCharacter:setUnlimitedCarry(unlimitedCarry) end
 function IsoGameCharacter:setUnlimitedEndurance(unlimitedEndurance) end
 
 --- @public
---- @param useHandWeapon HandWeapon
+--- @param useHandWeapon HandWeapon the useHandWeapon to set
 --- @return void
 function IsoGameCharacter:setUseHandWeapon(useHandWeapon) end
 
 --- @public
+---
+---  Description copied from interface: IAnimationVariableMap
+---
 --- @param var IAnimationVariableSlot
 --- @return void
 --- @overload fun(slot: IAnimationVariableSlot): void
@@ -3662,7 +3734,7 @@ function IsoGameCharacter:setVariable(var) end
 function IsoGameCharacter:setVehicle(v) end
 
 --- @public
---- @param VisibleToNPCs boolean
+--- @param VisibleToNPCs boolean the VisibleToNPCs to set
 --- @return void
 function IsoGameCharacter:setVisibleToNPCs(VisibleToNPCs) end
 
@@ -3684,32 +3756,32 @@ function IsoGameCharacter:setWornItems(other) end
 function IsoGameCharacter:setXp(arg0) end
 
 --- @public
---- @param ZombieKills int
+--- @param ZombieKills int the ZombieKills to set
 --- @return void
 function IsoGameCharacter:setZombieKills(ZombieKills) end
 
 --- @public
---- @param bClimbing boolean
+--- @param bClimbing boolean the bClimbing to set
 --- @return void
 function IsoGameCharacter:setbClimbing(bClimbing) end
 
 --- @public
---- @param bDoDefer boolean
+--- @param bDoDefer boolean the bDoDefer to set
 --- @return void
 function IsoGameCharacter:setbDoDefer(bDoDefer) end
 
 --- @public
---- @param bFalling boolean
+--- @param bFalling boolean the bFalling to set
 --- @return void
 function IsoGameCharacter:setbFalling(bFalling) end
 
 --- @public
---- @param bOnBed boolean
+--- @param bOnBed boolean the bOnBed to set
 --- @return void
 function IsoGameCharacter:setbOnBed(bOnBed) end
 
 --- @public
---- @param bUseParts boolean
+--- @param bUseParts boolean the bUseParts to set
 --- @return void
 function IsoGameCharacter:setbUseParts(bUseParts) end
 
@@ -3798,6 +3870,10 @@ function IsoGameCharacter:stopEvent(eventInstance, clip, parameterSet) end
 function IsoGameCharacter:stopOrTriggerSound(eventInstance) end
 
 --- @public
+---
+---  Test if we're able to defend a zombie bite Can only happen if zombie is
+---  from front Calcul include current weapon skills, fitness & strength
+---
 --- @param zomb IsoZombie
 --- @return boolean
 function IsoGameCharacter:testDefense(zomb) end

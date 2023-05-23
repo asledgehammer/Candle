@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSStagDo: RandomizedDeadSurvivorBase
---- Create some zombies male zombies with 1 naked female, some alcohol around
+--- @class RDSStagDo: RandomizedDeadSurvivorBase Create some zombies male zombies with 1 naked female, some alcohol around
 RDSStagDo = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RDSStagDo = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class DataPoint
---- Turbo
+--- @class DataPoint Turbo
 DataPoint = {};
 
 ------------------------------------

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RBPileOCrepe: RandomizedBuildingBase
---- Add some food on table
+--- @class RBPileOCrepe: RandomizedBuildingBase Add some food on table
 RBPileOCrepe = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RBPileOCrepe = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

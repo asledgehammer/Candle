@@ -18,7 +18,11 @@ function BehaviorResult.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return BehaviorResult[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return BehaviorResult[] an array containing the constants of this enum class, in the order they are declared
 function BehaviorResult.values() end
 
 

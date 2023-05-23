@@ -1,7 +1,6 @@
 --- @meta
 
---- @class IsoWeatherFX
---- TurboTuTone.
+--- @class IsoWeatherFX TurboTuTone.
 --- @field public ZoomMod float
 IsoWeatherFX = {};
 

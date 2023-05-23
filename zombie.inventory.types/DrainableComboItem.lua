@@ -31,7 +31,7 @@ function DrainableComboItem:canConsolidate() end
 function DrainableComboItem:finishupdate() end
 
 --- @public
---- @return float
+--- @return float the delta
 function DrainableComboItem:getDelta() end
 
 --- @public
@@ -51,7 +51,7 @@ function DrainableComboItem:getHeat() end
 function DrainableComboItem:getInvHeat() end
 
 --- @public
---- @return String
+--- @return String the OnCooked
 function DrainableComboItem:getOnCooked() end
 
 --- @public
@@ -63,11 +63,11 @@ function DrainableComboItem:getRainFactor() end
 function DrainableComboItem:getRemainingUses() end
 
 --- @public
---- @return List
+--- @return List the ReplaceOnCooked
 function DrainableComboItem:getReplaceOnCooked() end
 
 --- @public
---- @return String
+--- @return String the ReplaceOnDeplete
 function DrainableComboItem:getReplaceOnDeplete() end
 
 --- @public
@@ -79,15 +79,15 @@ function DrainableComboItem:getReplaceOnDepleteFullType() end
 function DrainableComboItem:getSaveType() end
 
 --- @public
---- @return float
+--- @return float the ticks
 function DrainableComboItem:getTicks() end
 
 --- @public
---- @return int
+--- @return int the ticksPerEquipUse
 function DrainableComboItem:getTicksPerEquipUse() end
 
 --- @public
---- @return float
+--- @return float the useDelta
 function DrainableComboItem:getUseDelta() end
 
 --- @public
@@ -96,15 +96,15 @@ function DrainableComboItem:getUseDelta() end
 function DrainableComboItem:getUsedDelta() end
 
 --- @public
---- @return float
+--- @return float the EmptyWeight
 function DrainableComboItem:getWeightEmpty() end
 
 --- @public
---- @return boolean
+--- @return boolean the bUseWhileEquiped
 function DrainableComboItem:isUseWhileEquiped() end
 
 --- @public
---- @return boolean
+--- @return boolean the bUseWhileUnequiped
 function DrainableComboItem:isUseWhileUnequiped() end
 
 --- @public
@@ -123,7 +123,7 @@ function DrainableComboItem:renderlast() end
 function DrainableComboItem:setCanConsolidate(canConsolidate) end
 
 --- @public
---- @param delta float
+--- @param delta float the delta to set
 --- @return void
 function DrainableComboItem:setDelta(delta) end
 
@@ -133,7 +133,7 @@ function DrainableComboItem:setDelta(delta) end
 function DrainableComboItem:setHeat(heat) end
 
 --- @public
---- @param onCooked String
+--- @param onCooked String the onCooked to set
 --- @return void
 function DrainableComboItem:setOnCooked(onCooked) end
 
@@ -143,7 +143,7 @@ function DrainableComboItem:setOnCooked(onCooked) end
 function DrainableComboItem:setRainFactor(rainFactor) end
 
 --- @public
---- @param replaceOnCooked List
+--- @param replaceOnCooked List the ReplaceOnCooked to set
 --- @return void
 function DrainableComboItem:setReplaceOnCooked(replaceOnCooked) end
 
@@ -153,27 +153,27 @@ function DrainableComboItem:setReplaceOnCooked(replaceOnCooked) end
 function DrainableComboItem:setReplaceOnDeplete(ReplaceOnDeplete) end
 
 --- @public
---- @param ticks float
+--- @param ticks float the ticks to set
 --- @return void
 function DrainableComboItem:setTicks(ticks) end
 
 --- @public
---- @param ticksPerEquipUse int
+--- @param ticksPerEquipUse int the ticksPerEquipUse to set
 --- @return void
 function DrainableComboItem:setTicksPerEquipUse(ticksPerEquipUse) end
 
 --- @public
---- @param useDelta float
+--- @param useDelta float the useDelta to set
 --- @return void
 function DrainableComboItem:setUseDelta(useDelta) end
 
 --- @public
---- @param bUseWhileEquiped boolean
+--- @param bUseWhileEquiped boolean the bUseWhileEquiped to set
 --- @return void
 function DrainableComboItem:setUseWhileEquiped(bUseWhileEquiped) end
 
 --- @public
---- @param bUseWhileUnequiped boolean
+--- @param bUseWhileUnequiped boolean the bUseWhileUnequiped to set
 --- @return void
 function DrainableComboItem:setUseWhileUnequiped(bUseWhileUnequiped) end
 
@@ -184,7 +184,7 @@ function DrainableComboItem:setUseWhileUnequiped(bUseWhileUnequiped) end
 function DrainableComboItem:setUsedDelta(usedDelta) end
 
 --- @public
---- @param weight float
+--- @param weight float the EmptyWeight to set
 --- @return void
 function DrainableComboItem:setWeightEmpty(weight) end
 

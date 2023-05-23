@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RVSBurntCar: RandomizedVehicleStoryBase
---- Just a burnt car with 0, 1 or 2 burnt corpses near it
+--- @class RVSBurntCar: RandomizedVehicleStoryBase Just a burnt car with 0, 1 or 2 burnt corpses near it
 RVSBurntCar = {};
 
 ------------------------------------

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class StorySoundEvent
---- Turbo
+--- @class StorySoundEvent Turbo
 StorySoundEvent = {};
 
 ------------------------------------

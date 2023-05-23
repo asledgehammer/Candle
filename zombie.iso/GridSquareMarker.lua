@@ -78,6 +78,9 @@ function GridSquareMarker:isActive() end
 function GridSquareMarker:isDoAlpha() end
 
 --- @public
+---
+---  If blink set uses Core.blinkAlpha, this takes precedence over other alpha
+---
 --- @return boolean
 function GridSquareMarker:isDoBlink() end
 

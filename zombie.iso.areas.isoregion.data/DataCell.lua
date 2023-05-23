@@ -1,6 +1,5 @@
 --- @meta
 
---- @class DataCell
---- TurboTuTone.
+--- @class DataCell TurboTuTone.
 DataCell = {};
 

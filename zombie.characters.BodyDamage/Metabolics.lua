@@ -1,7 +1,6 @@
 --- @meta
 
---- @class Metabolics: Enum
---- TurboTuTone.
+--- @class Metabolics: Enum TurboTuTone.
 --- @field public ClimbRope Metabolics
 --- @field public Default Metabolics
 --- @field public DefaultExercise Metabolics
@@ -58,7 +57,11 @@ function Metabolics.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return Metabolics[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return Metabolics[] an array containing the constants of this enum class, in the order they are declared
 function Metabolics.values() end
 
 

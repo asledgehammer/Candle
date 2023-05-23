@@ -1,7 +1,6 @@
 --- @meta
 
---- @class SearchMode
---- TurboTuTone.
+--- @class SearchMode TurboTuTone.
 SearchMode = {};
 
 ------------------------------------

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RBShopLooted: RandomizedBuildingBase
---- Shop being looted by bandits + 2 cops and corpses inside the shop
+--- @class RBShopLooted: RandomizedBuildingBase Shop being looted by bandits + 2 cops and corpses inside the shop
 RBShopLooted = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RBShopLooted = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

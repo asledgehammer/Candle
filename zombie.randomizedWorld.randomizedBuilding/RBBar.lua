@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RBBar: RandomizedBuildingBase
---- Add some food on table
+--- @class RBBar: RandomizedBuildingBase Add some food on table
 RBBar = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RBBar = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

@@ -130,7 +130,7 @@ function IsoBarbecue:setLit(lit) end
 function IsoBarbecue:setPropaneTank(tank) end
 
 --- @public
---- @param newsprite IsoSprite
+--- @param newsprite IsoSprite the sprite to set
 --- @return void
 function IsoBarbecue:setSprite(newsprite) end
 

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RecordedMedia
---- TurboTuTone.
+--- @class RecordedMedia TurboTuTone.
 --- @field public DISABLE_LINE_LEARNING boolean
 --- @field public SAVE_FILE String
 --- @field public VERSION int

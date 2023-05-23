@@ -16,6 +16,9 @@ function Clothing.CreateFromSprite(Sprite) end
 
 --- @public
 --- @static
+---
+---  Used from lua tooltip when repairing clothing
+---
 --- @param chr IsoGameCharacter
 --- @param fabric InventoryItem
 --- @return int
@@ -23,6 +26,9 @@ function Clothing.getBiteDefenseFromItem(chr, fabric) end
 
 --- @public
 --- @static
+---
+---  Used from lua tooltip when repairing clothing
+---
 --- @param chr IsoGameCharacter
 --- @param fabric InventoryItem
 --- @return int
@@ -171,7 +177,7 @@ function Clothing:getHolesNumber() end
 function Clothing:getInsulation() end
 
 --- @public
---- @return String
+--- @return String the name
 function Clothing:getName() end
 
 --- @public
@@ -183,7 +189,7 @@ function Clothing:getNbrOfCoveredParts() end
 function Clothing:getNeckProtectionModifier() end
 
 --- @public
---- @return String
+--- @return String the palette
 function Clothing:getPalette() end
 
 --- @public
@@ -208,7 +214,7 @@ function Clothing:getSaveType() end
 function Clothing:getScratchDefense() end
 
 --- @public
---- @return String
+--- @return String the SpriteName
 function Clothing:getSpriteName() end
 
 --- @public
@@ -224,7 +230,7 @@ function Clothing:getTemperature() end
 function Clothing:getWaterResistance() end
 
 --- @public
---- @return float
+--- @return float the Weight
 function Clothing:getWeight() end
 
 --- @public
@@ -307,7 +313,7 @@ function Clothing:setChanceToFall(chanceToFall) end
 function Clothing:setCombatSpeedModifier(combatSpeedModifier) end
 
 --- @public
---- @param Condition int
+--- @param Condition int the Condition to set
 --- @return void
 function Clothing:setCondition(Condition) end
 
@@ -332,7 +338,7 @@ function Clothing:setInsulation(insulation) end
 function Clothing:setNeckProtectionModifier(neckProtectionModifier) end
 
 --- @public
---- @param palette String
+--- @param palette String the palette to set
 --- @return void
 function Clothing:setPalette(palette) end
 
@@ -352,7 +358,7 @@ function Clothing:setRunSpeedModifier(runSpeedModifier) end
 function Clothing:setScratchDefense(scratchDefense) end
 
 --- @public
---- @param SpriteName String
+--- @param SpriteName String the SpriteName to set
 --- @return void
 function Clothing:setSpriteName(SpriteName) end
 

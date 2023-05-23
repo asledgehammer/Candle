@@ -6,7 +6,7 @@
 --- @implement Serializable
 --- @field public ASSET_TYPE AssetType
 --- @field public bDoingQuad boolean
---- @field public BindCount int
+--- @field public BindCount int indicates if all the texture will auto create the masks on load The auto creation works only with the getTexture() methods
 --- @field public la float
 --- @field public lastlastTextureID int
 --- @field public lastTextureID int
@@ -80,8 +80,12 @@ function Texture.getSteamAvatar(steamID) end
 
 --- @public
 --- @static
---- @param name String
---- @return Texture
+---
+---  gets a texture from it's name; If the texture isn't already loaded this method
+---  load it.
+---
+--- @param name String the name of texture
+--- @return Texture returns the texture from the given name
 function Texture.getTexture(name) end
 
 --- @public
@@ -124,6 +128,9 @@ function Texture.trygetTexture(name) end
 ------------------------------------
 
 --- @public
+---
+---  Blinds the image
+---
 --- @return void
 --- @overload fun(): void
 --- @overload fun(unit: int): void
@@ -140,6 +147,9 @@ function Texture:bind() end
 function Texture:copyMaskRegion(from, x, y, width, height) end
 
 --- @public
+---
+---  creates the mask of collisions
+---
 --- @return void
 --- @overload fun(mask: boolean[]): void
 --- @overload fun(mask: BooleanGrid): void
@@ -147,6 +157,9 @@ function Texture:copyMaskRegion(from, x, y, width, height) end
 function Texture:createMask() end
 
 --- @public
+---
+---  destroys the image and release all resources
+---
 --- @return void
 --- @overload fun(): void
 function Texture:destroy() end
@@ -157,16 +170,25 @@ function Texture:destroy() end
 function Texture:equals(other) end
 
 --- @public
+---
+---  returns the texture's pixel in a ByteBuffer
+---
 --- @return WrappedBuffer
 --- @overload fun(): WrappedBuffer
 function Texture:getData() end
 
 --- @public
---- @return int
---- @overload fun(): int
+---
+---  Description copied from interface: ITexture
+---
+--- @return int the height of image
+--- @overload fun(): int the height of image
 function Texture:getHeight() end
 
 --- @public
+---
+---  Description copied from interface: ITexture
+---
 --- @return int
 --- @overload fun(): int
 function Texture:getHeightHW() end
@@ -176,12 +198,18 @@ function Texture:getHeightHW() end
 function Texture:getHeightOrig() end
 
 --- @public
---- @return int
---- @overload fun(): int
+---
+---  Description copied from interface: ITexture
+---
+--- @return int the ID of image in the Vram
+--- @overload fun(): int the ID of image in the Vram
 function Texture:getID() end
 
 --- @public
---- @return Mask
+---
+---  returns the mask of collisions
+---
+--- @return Mask mask of collisions
 function Texture:getMask() end
 
 --- @public
@@ -218,15 +246,24 @@ function Texture:getType() end
 function Texture:getUVScale(uvScale) end
 
 --- @public
---- @return boolean
+---
+---  indicates if the image will use the alpha channel or note
+---
+--- @return boolean if the image will use the alpha channel or note
 function Texture:getUseAlphaChannel() end
 
 --- @public
---- @return int
---- @overload fun(): int
+---
+---  Description copied from interface: ITexture
+---
+--- @return int the width of image
+--- @overload fun(): int the width of image
 function Texture:getWidth() end
 
 --- @public
+---
+---  Description copied from interface: ITexture
+---
 --- @return int
 --- @overload fun(): int
 function Texture:getWidthHW() end
@@ -236,37 +273,58 @@ function Texture:getWidthHW() end
 function Texture:getWidthOrig() end
 
 --- @public
---- @return float
---- @overload fun(): float
+---
+---  Description copied from interface: ITexture
+---
+--- @return float the end X-coordinate
+--- @overload fun(): float the end X-coordinate
 function Texture:getXEnd() end
 
 --- @public
---- @return float
---- @overload fun(): float
+---
+---  Description copied from interface: ITexture
+---
+--- @return float the start X-coordinate
+--- @overload fun(): float the start X-coordinate
 function Texture:getXStart() end
 
 --- @public
---- @return float
---- @overload fun(): float
+---
+---  Description copied from interface: ITexture
+---
+--- @return float the end Y-coordinate
+--- @overload fun(): float the end Y-coordinate
 function Texture:getYEnd() end
 
 --- @public
---- @return float
---- @overload fun(): float
+---
+---  Description copied from interface: ITexture
+---
+--- @return float the start Y-coordinate
+--- @overload fun(): float the start Y-coordinate
 function Texture:getYStart() end
 
 --- @public
+---
+---  indicates if the texture has a mask of collisions or not
+---
 --- @return boolean
 function Texture:isCollisionable() end
 
 --- @public
+---
+---  returns if the texture is destroyed or not
+---
 --- @return boolean
 --- @overload fun(): boolean
 function Texture:isDestroyed() end
 
 --- @public
---- @return boolean
---- @overload fun(): boolean
+---
+---  Description copied from interface: ITexture
+---
+--- @return boolean if the texture is solid or not.
+--- @overload fun(): boolean if the texture is solid or not.
 function Texture:isSolid() end
 
 --- @public
@@ -279,7 +337,10 @@ function Texture:isValid() end
 function Texture:loadMaskRegion(cache) end
 
 --- @public
---- @param red int
+---
+---  Description copied from interface: ITexture
+---
+--- @param red int color used in the test
 --- @param green int
 --- @param blue int
 --- @return void
@@ -409,7 +470,10 @@ function Texture:saveToCurrentSavefileDirectory(filename) end
 function Texture:saveToZomboidDirectory(filename) end
 
 --- @public
---- @param red int
+---
+---  Description copied from interface: ITexture
+---
+--- @param red int color used in the test
 --- @param green int
 --- @param blue int
 --- @param alpha int
@@ -422,7 +486,10 @@ function Texture:setAlphaForeach(red, green, blue, alpha) end
 function Texture:setCustomizedTexture() end
 
 --- @public
---- @param data ByteBuffer
+---
+---  sets the texture's pixel from a ByteBuffer
+---
+--- @param data ByteBuffer texture's pixel data
 --- @return void
 --- @overload fun(data: ByteBuffer): void
 function Texture:setData(data) end
@@ -433,7 +500,10 @@ function Texture:setData(data) end
 function Texture:setHeight(height) end
 
 --- @public
---- @param mask Mask
+---
+---  sets the mask of collisions
+---
+--- @param mask Mask the mask of collisions to set
 --- @return void
 --- @overload fun(mask: Mask): void
 function Texture:setMask(mask) end
@@ -469,7 +539,10 @@ function Texture:setRealHeight(realHeight) end
 function Texture:setRealWidth(realWidth) end
 
 --- @public
---- @param x int
+---
+---  Description copied from interface: ITexture
+---
+--- @param x int xstart position
 --- @param y int
 --- @param width int
 --- @param height int
@@ -478,7 +551,10 @@ function Texture:setRealWidth(realWidth) end
 function Texture:setRegion(x, y, width, height) end
 
 --- @public
---- @param value boolean
+---
+---  indicates if the texture contains the alpha channel or not
+---
+--- @param value boolean if true, the image will use the alpha channel
 --- @return void
 function Texture:setUseAlphaChannel(value) end
 
@@ -517,6 +593,9 @@ function Texture:toString() end
 ------------------------------------
 
 --- @public
+---
+---  creates an emptiy texture and adds it to the game engine's texture list
+---
 --- @return Texture
 --- @overload fun(file: String): Texture
 --- @overload fun(t: Texture): Texture

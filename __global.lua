@@ -256,6 +256,10 @@ function createNewScriptItem(base, name, display, type, icon) end
 --- @return IsoDeadBody
 function createRandomDeadBody(square, blood) end
 
+---
+---  Create a dynamic table containing all spawnpoints.lua we find in vanilla folder
+---  in loaded mods
+---
 --- @return KahluaTable
 function createRegionFile() end
 

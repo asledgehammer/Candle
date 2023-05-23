@@ -334,11 +334,11 @@ function UIElement:getAbsoluteY() end
 function UIElement:getClickedValue() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the Controls
 function UIElement:getControls() end
 
 --- @public
---- @return Double
+--- @return Double the height
 function UIElement:getHeight() end
 
 --- @public
@@ -346,7 +346,7 @@ function UIElement:getHeight() end
 function UIElement:getMaxDrawHeight() end
 
 --- @public
---- @return UIElement
+--- @return UIElement the Parent
 function UIElement:getParent() end
 
 --- @public
@@ -370,7 +370,7 @@ function UIElement:getScrollHeight() end
 function UIElement:getScrollWithParent() end
 
 --- @public
---- @return KahluaTable
+--- @return KahluaTable the table
 function UIElement:getTable() end
 
 --- @public
@@ -378,11 +378,11 @@ function UIElement:getTable() end
 function UIElement:getUIName() end
 
 --- @public
---- @return Double
+--- @return Double the width
 function UIElement:getWidth() end
 
 --- @public
---- @return Double
+--- @return Double the x
 function UIElement:getX() end
 
 --- @public
@@ -395,7 +395,7 @@ function UIElement:getXScroll() end
 function UIElement:getXScrolled(parent) end
 
 --- @public
---- @return Double
+--- @return Double the y
 function UIElement:getY() end
 
 --- @public
@@ -416,23 +416,23 @@ function UIElement:ignoreHeightChange() end
 function UIElement:ignoreWidthChange() end
 
 --- @public
---- @return Boolean
+--- @return Boolean the anchorBottom
 function UIElement:isAnchorBottom() end
 
 --- @public
---- @return Boolean
+--- @return Boolean the anchorLeft
 function UIElement:isAnchorLeft() end
 
 --- @public
---- @return Boolean
+--- @return Boolean the anchorRight
 function UIElement:isAnchorRight() end
 
 --- @public
---- @return boolean
+--- @return boolean the anchorTop
 function UIElement:isAnchorTop() end
 
 --- @public
---- @return Boolean
+--- @return Boolean the capture
 function UIElement:isCapture() end
 
 --- @public
@@ -440,7 +440,7 @@ function UIElement:isCapture() end
 function UIElement:isConsumeMouseEvents() end
 
 --- @public
---- @return Boolean
+--- @return Boolean the defaultDraw
 function UIElement:isDefaultDraw() end
 
 --- @public
@@ -448,7 +448,7 @@ function UIElement:isDefaultDraw() end
 function UIElement:isEnabled() end
 
 --- @public
---- @return Boolean
+--- @return Boolean the followGameWorld
 function UIElement:isFollowGameWorld() end
 
 --- @public
@@ -456,7 +456,7 @@ function UIElement:isFollowGameWorld() end
 function UIElement:isForceCursorVisible() end
 
 --- @public
---- @return Boolean
+--- @return Boolean the IgnoreLossControl
 function UIElement:isIgnoreLossControl() end
 
 --- @public
@@ -475,7 +475,7 @@ function UIElement:isMouseOver() end
 function UIElement:isPointOver(screenX, screenY) end
 
 --- @public
---- @return Boolean
+--- @return Boolean the visible
 function UIElement:isVisible() end
 
 --- @public
@@ -574,32 +574,32 @@ function UIElement:resumeStencil() end
 function UIElement:setAlwaysOnTop(b) end
 
 --- @public
---- @param anchorBottom boolean
+--- @param anchorBottom boolean the anchorBottom to set
 --- @return void
 function UIElement:setAnchorBottom(anchorBottom) end
 
 --- @public
---- @param anchorLeft boolean
+--- @param anchorLeft boolean the anchorLeft to set
 --- @return void
 function UIElement:setAnchorLeft(anchorLeft) end
 
 --- @public
---- @param anchorRight boolean
+--- @param anchorRight boolean the anchorRight to set
 --- @return void
 function UIElement:setAnchorRight(anchorRight) end
 
 --- @public
---- @param anchorTop boolean
+--- @param anchorTop boolean the anchorTop to set
 --- @return void
 function UIElement:setAnchorTop(anchorTop) end
 
 --- @public
---- @param capture boolean
+--- @param capture boolean the capture to set
 --- @return void
 function UIElement:setCapture(capture) end
 
 --- @public
---- @param clickedValue String
+--- @param clickedValue String the clickedValue to set
 --- @return void
 function UIElement:setClickedValue(clickedValue) end
 
@@ -609,12 +609,12 @@ function UIElement:setClickedValue(clickedValue) end
 function UIElement:setConsumeMouseEvents(bConsume) end
 
 --- @public
---- @param Controls Vector
+--- @param Controls Vector the Controls to set
 --- @return void
 function UIElement:setControls(Controls) end
 
 --- @public
---- @param defaultDraw boolean
+--- @param defaultDraw boolean the defaultDraw to set
 --- @return void
 function UIElement:setDefaultDraw(defaultDraw) end
 
@@ -624,7 +624,7 @@ function UIElement:setDefaultDraw(defaultDraw) end
 function UIElement:setEnabled(en) end
 
 --- @public
---- @param followGameWorld boolean
+--- @param followGameWorld boolean the followGameWorld to set
 --- @return void
 function UIElement:setFollowGameWorld(followGameWorld) end
 
@@ -634,7 +634,7 @@ function UIElement:setFollowGameWorld(followGameWorld) end
 function UIElement:setForceCursorVisible(force) end
 
 --- @public
---- @param height double
+--- @param height double the height to set
 --- @return void
 function UIElement:setHeight(height) end
 
@@ -649,7 +649,7 @@ function UIElement:setHeightOnly(height) end
 function UIElement:setHeightSilent(height) end
 
 --- @public
---- @param IgnoreLossControl boolean
+--- @param IgnoreLossControl boolean the IgnoreLossControl to set
 --- @return void
 function UIElement:setIgnoreLossControl(IgnoreLossControl) end
 
@@ -659,7 +659,7 @@ function UIElement:setIgnoreLossControl(IgnoreLossControl) end
 function UIElement:setMaxDrawHeight(height) end
 
 --- @public
---- @param Parent UIElement
+--- @param Parent UIElement the Parent to set
 --- @return void
 function UIElement:setParent(Parent) end
 
@@ -712,7 +712,7 @@ function UIElement:setTable(arg0) end
 function UIElement:setUIName(name) end
 
 --- @public
---- @param visible boolean
+--- @param visible boolean the visible to set
 --- @return void
 function UIElement:setVisible(visible) end
 
@@ -722,7 +722,7 @@ function UIElement:setVisible(visible) end
 function UIElement:setWantKeyEvents(want) end
 
 --- @public
---- @param width double
+--- @param width double the width to set
 --- @return void
 function UIElement:setWidth(width) end
 
@@ -737,7 +737,7 @@ function UIElement:setWidthOnly(width) end
 function UIElement:setWidthSilent(width) end
 
 --- @public
---- @param x double
+--- @param x double the x to set
 --- @return void
 function UIElement:setX(x) end
 
@@ -747,7 +747,7 @@ function UIElement:setX(x) end
 function UIElement:setXScroll(x) end
 
 --- @public
---- @param y double
+--- @param y double the y to set
 --- @return void
 function UIElement:setY(y) end
 

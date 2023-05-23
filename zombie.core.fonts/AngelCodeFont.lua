@@ -1,7 +1,6 @@
 --- @meta
 
---- @class AngelCodeFont
---- A font implementation that will parse BMFont format font files. The font files can be output by Hiero, which is included with Slick, and also the AngelCode font tool available at:
+--- @class AngelCodeFont A font implementation that will parse BMFont format font files. The font files can be output by Hiero, which is included with Slick, and also the AngelCode font tool available at:
 --- @implement Font
 --- @implement AssetStateObserver
 --- @field public curA float
@@ -22,7 +21,10 @@ AngelCodeFont = {};
 function AngelCodeFont:destroy() end
 
 --- @public
---- @param x float
+---
+---  Description copied from interface: Font
+---
+--- @param x float The x location at which to draw the string
 --- @param y float
 --- @param text String
 --- @return void
@@ -38,20 +40,29 @@ function AngelCodeFont:destroy() end
 function AngelCodeFont:drawString(x, y, text) end
 
 --- @public
---- @param text String
---- @return int
---- @overload fun(str: String): int
+---
+---  Description copied from interface: Font
+---
+--- @param text String The string to obtain the rendered with of
+--- @return int The width of the given string
+--- @overload fun(str: String): int The width of the given string
 function AngelCodeFont:getHeight(text) end
 
 --- @public
---- @return int
---- @overload fun(): int
+---
+---  Description copied from interface: Font
+---
+--- @return int The maxium height of any line drawn by this font
+--- @overload fun(): int The maxium height of any line drawn by this font
 function AngelCodeFont:getLineHeight() end
 
 --- @public
---- @param text String
---- @return int
---- @overload fun(str: String): int
+---
+---  Description copied from interface: Font
+---
+--- @param text String The string to obtain the rendered with of
+--- @return int The width of the given string
+--- @overload fun(str: String): int The width of the given string
 --- @overload fun(text: String, xAdvance: boolean): int
 --- @overload fun(str: String, xAdvance: boolean): int
 --- @overload fun(text: String, start: int, __end: int): int
@@ -61,8 +72,12 @@ function AngelCodeFont:getLineHeight() end
 function AngelCodeFont:getWidth(text) end
 
 --- @public
---- @param text String
---- @return int
+---
+---  Returns the distance from the y drawing location to the top most pixel of the
+---  text.
+---
+--- @param text String The text that is to be tested
+--- @return int The yoffset from the y draw location at which text will start
 function AngelCodeFont:getYOffset(text) end
 
 --- @public
@@ -83,6 +98,10 @@ function AngelCodeFont:onStateChanged(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
+---
+---  Create a new font based on a font definition from AngelCode's tool and the font
+---  generated from the tool.
+---
 --- @param fntFile String
 --- @param imgFile String
 --- @return AngelCodeFont

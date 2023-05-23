@@ -176,11 +176,17 @@ function SandboxOptions:newCopy() end
 function SandboxOptions:newCustomOption(customSandboxOption) end
 
 --- @public
+---
+---  Random the number of day for the selectricity shut off
+---
 --- @param electricityShutoffModifier int
 --- @return int
 function SandboxOptions:randomElectricityShut(electricityShutoffModifier) end
 
 --- @public
+---
+---  Random the number of day for the water shut off
+---
 --- @param waterShutoffModifier int
 --- @return int
 function SandboxOptions:randomWaterShut(waterShutoffModifier) end

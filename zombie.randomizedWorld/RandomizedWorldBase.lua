@@ -193,6 +193,9 @@ function RandomizedWorldBase:addVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
 function RandomizedWorldBase:addVehicleFlipped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public
+---
+---  Create and return a weapon, if it's ranged you can ask for some bullets in it
+---
 --- @param type String
 --- @param addRandomBullets boolean
 --- @return HandWeapon
@@ -207,6 +210,10 @@ function RandomizedWorldBase:addWeapon(type, addRandomBullets) end
 function RandomizedWorldBase:addZombiesOnSquare(totalZombies, outfit, femaleChance, square) end
 
 --- @public
+---
+---  Add zombies near the vehicles, around a 4x4 square around it, avoiding being ON
+---  vehicle & randomizing square for each zombies
+---
 --- @param totalZombies int
 --- @param outfit String
 --- @param femaleChance Integer
@@ -224,6 +231,9 @@ function RandomizedWorldBase:createSkeletonCorpse(room) end
 function RandomizedWorldBase:getDebugLine() end
 
 --- @public
+---
+---  Get either the living room or kitchen (in this order)
+---
 --- @param bDef BuildingDef
 --- @return RoomDef
 function RandomizedWorldBase:getLivingRoomOrKitchen(bDef) end
@@ -237,12 +247,18 @@ function RandomizedWorldBase:getMaximumDays() end
 function RandomizedWorldBase:getName() end
 
 --- @public
+---
+---  Get a random room in the building
+---
 --- @param bDef BuildingDef
 --- @param minArea int
 --- @return RoomDef
 function RandomizedWorldBase:getRandomRoom(bDef, minArea) end
 
 --- @public
+---
+---  Return the wanted room
+---
 --- @param bDef BuildingDef
 --- @param roomName String
 --- @return RoomDef
@@ -256,6 +272,9 @@ function RandomizedWorldBase:getRoom(bDef, roomName) end
 function RandomizedWorldBase:getSq(x, y, z) end
 
 --- @public
+---
+---  Check if the world age is correct for our definition
+---
 --- @param force boolean
 --- @return boolean
 function RandomizedWorldBase:isTimeValid(force) end

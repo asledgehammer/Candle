@@ -1,7 +1,6 @@
 --- @meta
 
---- @class IsoWorldRegion
---- TurboTuTone.
+--- @class IsoWorldRegion TurboTuTone.
 --- @implement IWorldRegion
 IsoWorldRegion = {};
 

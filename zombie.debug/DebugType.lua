@@ -1,7 +1,6 @@
 --- @meta
 
---- @class DebugType: Enum
---- Created by LEMMYPC on 31/12/13.
+--- @class DebugType: Enum Created by LEMMYPC on 31/12/13.
 --- @field public ActionSystem DebugType
 --- @field public Animation DebugType
 --- @field public Asset DebugType
@@ -54,7 +53,11 @@ function DebugType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return DebugType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return DebugType[] an array containing the constants of this enum class, in the order they are declared
 function DebugType.values() end
 
 

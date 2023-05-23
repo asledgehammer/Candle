@@ -1,7 +1,6 @@
 --- @meta
 
---- @class WorldMarkers
---- TurboTuTone.
+--- @class WorldMarkers TurboTuTone.
 --- @field public instance WorldMarkers
 WorldMarkers = {};
 

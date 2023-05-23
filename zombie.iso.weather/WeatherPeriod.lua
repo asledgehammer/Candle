@@ -1,7 +1,6 @@
 --- @meta
 
---- @class WeatherPeriod
---- TurboTuTone.
+--- @class WeatherPeriod TurboTuTone.
 --- @field public FRONT_STRENGTH_THRESHOLD float
 --- @field public STAGE_BLIZZARD int
 --- @field public STAGE_CLEARING int
@@ -192,6 +191,9 @@ function WeatherPeriod:load(input, worldVersion) end
 function WeatherPeriod:readNetWeatherData(input) end
 
 --- @public
+---
+---  IO
+---
 --- @param output DataOutputStream
 --- @return void
 function WeatherPeriod:save(output) end

@@ -25,7 +25,11 @@ function StrLerpVal.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return StrLerpVal[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return StrLerpVal[] an array containing the constants of this enum class, in the order they are declared
 function StrLerpVal.values() end
 
 

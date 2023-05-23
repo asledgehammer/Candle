@@ -1,7 +1,6 @@
 --- @meta
 
---- @class IsoRegionsRenderer
---- TurboTuTone. Base functionality copied from ZombiePopulationRenderer
+--- @class IsoRegionsRenderer TurboTuTone. Base functionality copied from ZombiePopulationRenderer
 IsoRegionsRenderer = {};
 
 ------------------------------------

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSSkeletonPsycho: RandomizedDeadSurvivorBase
---- Create skeleton corpses in a bedroom with one zombie as doctor
+--- @class RDSSkeletonPsycho: RandomizedDeadSurvivorBase Create skeleton corpses in a bedroom with one zombie as doctor
 RDSSkeletonPsycho = {};
 
 ------------------------------------

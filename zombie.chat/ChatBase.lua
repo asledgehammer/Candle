@@ -17,8 +17,11 @@ function ChatBase:addMember(playerID) end
 function ChatBase:close() end
 
 --- @public
---- @param text String
---- @return ChatMessage
+---
+---  Message creator. Every chat know how to create its own message
+---
+--- @param text String text of the message
+--- @return ChatMessage corresponding object to message
 function ChatBase:createMessage(text) end
 
 --- @public
@@ -172,6 +175,9 @@ function ChatBase:unpackMessage(bb) end
 ------------------------------------
 
 --- @public
+---
+---  Should be called only on server side of chat system
+---
 --- @param id int
 --- @param type ChatType
 --- @param tab ChatTab

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class DataChunk
---- TurboTuTone.
+--- @class DataChunk TurboTuTone.
 DataChunk = {};
 
 ------------------------------------
@@ -43,6 +42,9 @@ function DataChunk:getSquare(x, y, z) end
 function DataChunk:load(bb, worldVersion, readLength) end
 
 --- @public
+---
+---  SAVE/LOAD
+---
 --- @param bb ByteBuffer
 --- @return void
 function DataChunk:save(bb) end

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSZombieLockedBathroom: RandomizedDeadSurvivorBase
---- Zombie inside the barricaded bathroom and a dead corpse in front of it with a pistol
+--- @class RDSZombieLockedBathroom: RandomizedDeadSurvivorBase Zombie inside the barricaded bathroom and a dead corpse in front of it with a pistol
 RDSZombieLockedBathroom = {};
 
 ------------------------------------

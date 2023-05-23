@@ -116,6 +116,10 @@ function Translator.getRecipeName(name) end
 
 --- @public
 --- @static
+---
+---  Return the translated text for the selected language If we don't fnid any
+---  for the selected language, we return the default text (in English)
+---
 --- @param desc String
 --- @return String
 --- @overload fun(desc: String, arg1: Object): String

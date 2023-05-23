@@ -68,6 +68,9 @@ function IsoBuilding:addWindow(obj, bOtherTile) end
 function IsoBuilding:containsRoom(room) end
 
 --- @public
+---
+---  Check for player inside the house and awake them all
+---
 --- @return void
 function IsoBuilding:forceAwake() end
 

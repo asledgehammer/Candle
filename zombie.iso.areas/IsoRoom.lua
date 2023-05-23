@@ -63,7 +63,7 @@ function IsoRoom:getSquares() end
 function IsoRoom:getTileList() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the WaterSources
 function IsoRoom:getWaterSources() end
 
 --- @public
@@ -99,7 +99,7 @@ function IsoRoom:refreshSquares() end
 function IsoRoom:removeSquare(sq) end
 
 --- @public
---- @param WaterSources ArrayList
+--- @param WaterSources ArrayList the WaterSources to set
 --- @return void
 function IsoRoom:setWaterSources(WaterSources) end
 

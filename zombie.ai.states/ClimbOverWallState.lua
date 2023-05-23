@@ -39,6 +39,9 @@ function ClimbOverWallState:execute(owner) end
 function ClimbOverWallState:exit(owner) end
 
 --- @public
+---
+---  Description copied from class: State
+---
 --- @param owner IsoGameCharacter
 --- @param fromX int
 --- @param fromY int

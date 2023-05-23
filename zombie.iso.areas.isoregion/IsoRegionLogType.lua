@@ -1,7 +1,6 @@
 --- @meta
 
---- @class IsoRegionLogType: Enum
---- TurboTuTone.
+--- @class IsoRegionLogType: Enum TurboTuTone.
 --- @field public Normal IsoRegionLogType
 --- @field public Warn IsoRegionLogType
 IsoRegionLogType = {};
@@ -18,7 +17,11 @@ function IsoRegionLogType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return IsoRegionLogType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return IsoRegionLogType[] an array containing the constants of this enum class, in the order they are declared
 function IsoRegionLogType.values() end
 
 

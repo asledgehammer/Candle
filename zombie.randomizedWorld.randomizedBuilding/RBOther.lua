@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RBOther: RandomizedBuildingBase
---- Building full of toilet paper
+--- @class RBOther: RandomizedBuildingBase Building full of toilet paper
 RBOther = {};
 
 ------------------------------------

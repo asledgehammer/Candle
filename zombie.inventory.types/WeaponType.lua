@@ -32,7 +32,11 @@ function WeaponType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return WeaponType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return WeaponType[] an array containing the constants of this enum class, in the order they are declared
 function WeaponType.values() end
 
 

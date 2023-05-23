@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RBOffice: RandomizedBuildingBase
---- Random clutter in office
+--- @class RBOffice: RandomizedBuildingBase Random clutter in office
 RBOffice = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RBOffice = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

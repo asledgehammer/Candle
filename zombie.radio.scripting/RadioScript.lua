@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RadioScript
---- Turbo
+--- @class RadioScript Turbo
 RadioScript = {};
 
 ------------------------------------

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSTinFoilHat: RandomizedDeadSurvivorBase
---- Zombies family with tin foil hat
+--- @class RDSTinFoilHat: RandomizedDeadSurvivorBase Zombies family with tin foil hat
 RDSTinFoilHat = {};
 
 ------------------------------------

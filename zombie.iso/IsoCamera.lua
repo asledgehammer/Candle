@@ -24,37 +24,37 @@ function IsoCamera.SetCharacterToFollow(GameChar) end
 
 --- @public
 --- @static
---- @return IsoGameCharacter
+--- @return IsoGameCharacter the CamCharacter
 function IsoCamera.getCamCharacter() end
 
 --- @public
 --- @static
---- @return Vector2
+--- @return Vector2 the FakePos
 function IsoCamera.getFakePos() end
 
 --- @public
 --- @static
---- @return Vector2
+--- @return Vector2 the FakePosVec
 function IsoCamera.getFakePosVec() end
 
 --- @public
 --- @static
---- @return float
+--- @return float the lastOffX
 function IsoCamera.getLastOffX() end
 
 --- @public
 --- @static
---- @return float
+--- @return float the lastOffY
 function IsoCamera.getLastOffY() end
 
 --- @public
 --- @static
---- @return float
+--- @return float the OffX
 function IsoCamera.getOffX() end
 
 --- @public
 --- @static
---- @return float
+--- @return float the OffY
 function IsoCamera.getOffY() end
 
 --- @public
@@ -127,12 +127,12 @@ function IsoCamera.getTOffY() end
 
 --- @public
 --- @static
---- @return int
+--- @return int the TargetTileX
 function IsoCamera.getTargetTileX() end
 
 --- @public
 --- @static
---- @return int
+--- @return int the TargetTileY
 function IsoCamera.getTargetTileY() end
 
 --- @public
@@ -142,55 +142,55 @@ function IsoCamera.init() end
 
 --- @public
 --- @static
---- @param aCamCharacter IsoGameCharacter
+--- @param aCamCharacter IsoGameCharacter the CamCharacter to set
 --- @return void
 function IsoCamera.setCamCharacter(aCamCharacter) end
 
 --- @public
 --- @static
---- @param aFakePos Vector2
+--- @param aFakePos Vector2 the FakePos to set
 --- @return void
 function IsoCamera.setFakePos(aFakePos) end
 
 --- @public
 --- @static
---- @param aFakePosVec Vector2
+--- @param aFakePosVec Vector2 the FakePosVec to set
 --- @return void
 function IsoCamera.setFakePosVec(aFakePosVec) end
 
 --- @public
 --- @static
---- @param aLastOffX float
+--- @param aLastOffX float the lastOffX to set
 --- @return void
 function IsoCamera.setLastOffX(aLastOffX) end
 
 --- @public
 --- @static
---- @param aLastOffY float
+--- @param aLastOffY float the lastOffY to set
 --- @return void
 function IsoCamera.setLastOffY(aLastOffY) end
 
 --- @public
 --- @static
---- @param aOffX float
+--- @param aOffX float the OffX to set
 --- @return void
 function IsoCamera.setOffX(aOffX) end
 
 --- @public
 --- @static
---- @param aOffY float
+--- @param aOffY float the OffY to set
 --- @return void
 function IsoCamera.setOffY(aOffY) end
 
 --- @public
 --- @static
---- @param aTargetTileX int
+--- @param aTargetTileX int the TargetTileX to set
 --- @return void
 function IsoCamera.setTargetTileX(aTargetTileX) end
 
 --- @public
 --- @static
---- @param aTargetTileY int
+--- @param aTargetTileY int the TargetTileY to set
 --- @return void
 function IsoCamera.setTargetTileY(aTargetTileY) end
 

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RBLooted: RandomizedBuildingBase
---- This building will be almost empty of loot, and lot of the doors/windows will be broken
+--- @class RBLooted: RandomizedBuildingBase This building will be almost empty of loot, and lot of the doors/windows will be broken
 RBLooted = {};
 
 ------------------------------------

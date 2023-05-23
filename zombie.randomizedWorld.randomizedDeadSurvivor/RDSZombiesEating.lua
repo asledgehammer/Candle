@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSZombiesEating: RandomizedDeadSurvivorBase
---- Create a dead survivor in the livingroom with zombies eating him
+--- @class RDSZombiesEating: RandomizedDeadSurvivorBase Create a dead survivor in the livingroom with zombies eating him
 RDSZombiesEating = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RDSZombiesEating = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

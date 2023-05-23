@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSPoliceAtHouse: RandomizedDeadSurvivorBase
---- 2-3 zombies Cops in the house too with a police car waiting outside.
+--- @class RDSPoliceAtHouse: RandomizedDeadSurvivorBase 2-3 zombies Cops in the house too with a police car waiting outside.
 RDSPoliceAtHouse = {};
 
 ------------------------------------

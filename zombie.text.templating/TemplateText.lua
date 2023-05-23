@@ -1,7 +1,6 @@
 --- @meta
 
---- @class TemplateText
---- TurboTuTone.
+--- @class TemplateText TurboTuTone.
 TemplateText = {};
 
 ------------------------------------

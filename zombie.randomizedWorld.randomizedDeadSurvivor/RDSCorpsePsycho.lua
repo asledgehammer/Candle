@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSCorpsePsycho: RandomizedDeadSurvivorBase
---- Create corpses in a kitchen with one zombie as doctor
+--- @class RDSCorpsePsycho: RandomizedDeadSurvivorBase Create corpses in a kitchen with one zombie as doctor
 RDSCorpsePsycho = {};
 
 ------------------------------------

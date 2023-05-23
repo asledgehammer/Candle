@@ -1,7 +1,6 @@
 --- @meta
 
---- @class ImprovedFog
---- TurboTuTone.
+--- @class ImprovedFog TurboTuTone.
 ImprovedFog = {};
 
 ------------------------------------

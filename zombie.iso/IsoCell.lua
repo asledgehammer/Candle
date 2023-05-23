@@ -29,7 +29,7 @@ function IsoCell.getBComponent(col) end
 
 --- @public
 --- @static
---- @return Stack
+--- @return Stack the getBuildings
 function IsoCell.getBuildings() end
 
 --- @public
@@ -45,7 +45,7 @@ function IsoCell.getInstance() end
 
 --- @public
 --- @static
---- @return int
+--- @return int the MaxHeight
 function IsoCell.getMaxHeight() end
 
 --- @public
@@ -266,7 +266,7 @@ function IsoCell:clearCacheGridSquare(playerIndex) end
 function IsoCell:createNewGridSquare(x, y, z, recalcAll) end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the addList
 function IsoCell:getAddList() end
 
 --- @public
@@ -276,11 +276,11 @@ function IsoCell:getAddList() end
 function IsoCell:getBestBuildings(arg0, arg1) end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the BuildingList
 function IsoCell:getBuildingList() end
 
 --- @public
---- @return HashMap
+--- @return HashMap the BuildingScores
 function IsoCell:getBuildingScores() end
 
 --- @public
@@ -308,15 +308,15 @@ function IsoCell:getChunkMap(pl) end
 function IsoCell:getClosestBuildingExcept(chr, except) end
 
 --- @public
---- @return int
+--- @return int the currentLX
 function IsoCell:getCurrentLightX() end
 
 --- @public
---- @return int
+--- @return int the currentLY
 function IsoCell:getCurrentLightY() end
 
 --- @public
---- @return int
+--- @return int the currentLZ
 function IsoCell:getCurrentLightZ() end
 
 --- @public
@@ -330,7 +330,7 @@ function IsoCell:getCurrentLotHeader() end
 function IsoCell:getDangerScore(x, y) end
 
 --- @public
---- @return OnceEvery
+--- @return OnceEvery the dangerUpdate
 function IsoCell:getDangerUpdate() end
 
 --- @public
@@ -380,7 +380,7 @@ function IsoCell:getHeatSourceHighestTemperature(surroundingAirTemperature, x, y
 function IsoCell:getHeatSourceTemperature(x, y, z) end
 
 --- @public
---- @return int
+--- @return int the height
 function IsoCell:getHeight() end
 
 --- @public
@@ -388,11 +388,11 @@ function IsoCell:getHeight() end
 function IsoCell:getHeightInTiles() end
 
 --- @public
---- @return Stack
+--- @return Stack the LamppostPositions
 function IsoCell:getLamppostPositions() end
 
 --- @public
---- @return Thread
+--- @return Thread the LightInfoUpdate
 function IsoCell:getLightInfoUpdate() end
 
 --- @public
@@ -411,27 +411,27 @@ function IsoCell:getLuaObjectList() end
 function IsoCell:getMaxFloors() end
 
 --- @public
---- @return int
+--- @return int the maxX
 function IsoCell:getMaxX() end
 
 --- @public
---- @return int
+--- @return int the maxY
 function IsoCell:getMaxY() end
 
 --- @public
---- @return int
+--- @return int the maxZ
 function IsoCell:getMaxZ() end
 
 --- @public
---- @return int
+--- @return int the minX
 function IsoCell:getMinX() end
 
 --- @public
---- @return int
+--- @return int the minY
 function IsoCell:getMinY() end
 
 --- @public
---- @return int
+--- @return int the minZ
 function IsoCell:getMinZ() end
 
 --- @public
@@ -445,7 +445,7 @@ function IsoCell:getNearestVisibleZombie(playerIndex) end
 function IsoCell:getNetworkPlayer(RemoteID) end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the ObjectList
 function IsoCell:getObjectList() end
 
 --- @public
@@ -464,11 +464,11 @@ function IsoCell:getProcessIsoObjectRemove() end
 function IsoCell:getProcessIsoObjects() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the ProcessItems
 function IsoCell:getProcessItems() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the ProcessItemsRemove
 function IsoCell:getProcessItemsRemove() end
 
 --- @public
@@ -476,7 +476,7 @@ function IsoCell:getProcessItemsRemove() end
 function IsoCell:getProcessWorldItems() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the PushableObjectList
 function IsoCell:getPushableObjectList() end
 
 --- @public
@@ -495,11 +495,11 @@ function IsoCell:getRandomOutdoorTile() end
 function IsoCell:getRelativeGridSquare(x, y, z) end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the RemoteSurvivorList
 function IsoCell:getRemoteSurvivorList() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the removeList
 function IsoCell:getRemoveList() end
 
 --- @public
@@ -508,7 +508,7 @@ function IsoCell:getRemoveList() end
 function IsoCell:getRoom(ID) end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the RoomList
 function IsoCell:getRoomList() end
 
 --- @public
@@ -516,7 +516,7 @@ function IsoCell:getRoomList() end
 function IsoCell:getSpriteManager() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the StaticUpdaterObjectList
 function IsoCell:getStaticUpdaterObjectList() end
 
 --- @public
@@ -546,7 +546,7 @@ function IsoCell:getVehicles() end
 function IsoCell:getWeatherFX() end
 
 --- @public
---- @return int
+--- @return int the width
 function IsoCell:getWidth() end
 
 --- @public
@@ -558,15 +558,15 @@ function IsoCell:getWidthInTiles() end
 function IsoCell:getWindowList() end
 
 --- @public
---- @return int
+--- @return int the worldX
 function IsoCell:getWorldX() end
 
 --- @public
---- @return int
+--- @return int the worldY
 function IsoCell:getWorldY() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the ZombieList
 function IsoCell:getZombieList() end
 
 --- @public
@@ -595,7 +595,7 @@ function IsoCell:isInChunkMap(x, y) end
 function IsoCell:isNull(x, y, z) end
 
 --- @public
---- @return boolean
+--- @return boolean the safeToAdd
 function IsoCell:isSafeToAdd() end
 
 --- @public
@@ -671,22 +671,22 @@ function IsoCell:setCacheGridSquare(x, y, z, square) end
 function IsoCell:setCacheGridSquareLocal(x, y, z, square, playerIndex) end
 
 --- @public
---- @param currentLX int
+--- @param currentLX int the currentLX to set
 --- @return void
 function IsoCell:setCurrentLightX(currentLX) end
 
 --- @public
---- @param currentLY int
+--- @param currentLY int the currentLY to set
 --- @return void
 function IsoCell:setCurrentLightY(currentLY) end
 
 --- @public
---- @param currentLZ int
+--- @param currentLZ int the currentLZ to set
 --- @return void
 function IsoCell:setCurrentLightZ(currentLZ) end
 
 --- @public
---- @param dangerUpdate OnceEvery
+--- @param dangerUpdate OnceEvery the dangerUpdate to set
 --- @return void
 function IsoCell:setDangerUpdate(dangerUpdate) end
 
@@ -697,42 +697,42 @@ function IsoCell:setDangerUpdate(dangerUpdate) end
 function IsoCell:setDrag(arg0, arg1) end
 
 --- @public
---- @param height int
+--- @param height int the height to set
 --- @return void
 function IsoCell:setHeight(height) end
 
 --- @public
---- @param LightInfoUpdate Thread
+--- @param LightInfoUpdate Thread the LightInfoUpdate to set
 --- @return void
 function IsoCell:setLightInfoUpdate(LightInfoUpdate) end
 
 --- @public
---- @param maxX int
+--- @param maxX int the maxX to set
 --- @return void
 function IsoCell:setMaxX(maxX) end
 
 --- @public
---- @param maxY int
+--- @param maxY int the maxY to set
 --- @return void
 function IsoCell:setMaxY(maxY) end
 
 --- @public
---- @param maxZ int
+--- @param maxZ int the maxZ to set
 --- @return void
 function IsoCell:setMaxZ(maxZ) end
 
 --- @public
---- @param minX int
+--- @param minX int the minX to set
 --- @return void
 function IsoCell:setMinX(minX) end
 
 --- @public
---- @param minY int
+--- @param minY int the minY to set
 --- @return void
 function IsoCell:setMinY(minY) end
 
 --- @public
---- @param minZ int
+--- @param minZ int the minZ to set
 --- @return void
 function IsoCell:setMinZ(minZ) end
 
@@ -752,7 +752,7 @@ function IsoCell:setRainIntensity(intensity) end
 function IsoCell:setRainSpeed(speed) end
 
 --- @public
---- @param safeToAdd boolean
+--- @param safeToAdd boolean the safeToAdd to set
 --- @return void
 function IsoCell:setSafeToAdd(safeToAdd) end
 
@@ -778,17 +778,17 @@ function IsoCell:setStencilValue(x, y, z, stencil) end
 function IsoCell:setStencilValue2z(x, y, z, stencil) end
 
 --- @public
---- @param width int
+--- @param width int the width to set
 --- @return void
 function IsoCell:setWidth(width) end
 
 --- @public
---- @param worldX int
+--- @param worldX int the worldX to set
 --- @return void
 function IsoCell:setWorldX(worldX) end
 
 --- @public
---- @param worldY int
+--- @param worldY int the worldY to set
 --- @return void
 function IsoCell:setWorldY(worldY) end
 

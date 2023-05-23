@@ -1,7 +1,6 @@
 --- @meta
 
---- @class IsoRegionsLogger
---- TurboTuTone.
+--- @class IsoRegionsLogger TurboTuTone.
 IsoRegionsLogger = {};
 
 ------------------------------------

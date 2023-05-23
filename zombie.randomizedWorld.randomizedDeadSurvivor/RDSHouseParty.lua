@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSHouseParty: RandomizedDeadSurvivorBase
---- Zombies in party outfit, some food scattered around
+--- @class RDSHouseParty: RandomizedDeadSurvivorBase Zombies in party outfit, some food scattered around
 RDSHouseParty = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RDSHouseParty = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

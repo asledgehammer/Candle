@@ -158,6 +158,9 @@ function IsoThumpable:getBarricadeOppositeCharacter(chr) end
 function IsoThumpable:getBreakSound() end
 
 --- @public
+---
+---  Can you barricade/unbarricade the item
+---
 --- @return boolean
 function IsoThumpable:getCanBarricade() end
 
@@ -267,7 +270,7 @@ function IsoThumpable:getSpriteEdge(ignoreOpen) end
 function IsoThumpable:getSquare() end
 
 --- @public
---- @return KahluaTable
+--- @return KahluaTable the table
 function IsoThumpable:getTable() end
 
 --- @public
@@ -327,6 +330,10 @@ function IsoThumpable:isBarricaded() end
 function IsoThumpable:isBlockAllTheSquare() end
 
 --- @public
+---
+---  Can you pass through the item, if false we gonna test the collide default to
+---  (so it collide)
+---
 --- @return boolean
 function IsoThumpable:isCanPassThrough() end
 
@@ -452,11 +459,17 @@ function IsoThumpable:saveChange(arg0, arg1, arg2) end
 function IsoThumpable:setBlockAllTheSquare(blockAllTheSquare) end
 
 --- @public
+---
+---  The sound that be played if this object is broken default "BreakDoor"
+---
 --- @param pBreakSound String
 --- @return void
 function IsoThumpable:setBreakSound(pBreakSound) end
 
 --- @public
+---
+---  Can you barricade/unbarricade the item default true
+---
 --- @param pCanBarricade boolean
 --- @return void
 function IsoThumpable:setCanBarricade(pCanBarricade) end
@@ -654,6 +667,9 @@ function IsoThumpable:setSpriteFromName(name) end
 function IsoThumpable:setTable(arg0) end
 
 --- @public
+---
+---  Numbers of zeds need to hurt the object default 8
+---
 --- @param pThumpDmg Integer
 --- @return void
 function IsoThumpable:setThumpDmg(pThumpDmg) end

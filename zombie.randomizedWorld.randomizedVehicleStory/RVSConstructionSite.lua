@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RVSConstructionSite: RandomizedVehicleStoryBase
---- Van with a sewer hole & road cones around it, some construction worker and a foreman + some tools in ground
+--- @class RVSConstructionSite: RandomizedVehicleStoryBase Van with a sewer hole & road cones around it, some construction worker and a foreman + some tools in ground
 RVSConstructionSite = {};
 
 ------------------------------------

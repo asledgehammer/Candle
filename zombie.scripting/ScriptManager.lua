@@ -178,6 +178,9 @@ function ScriptManager:getRecipe(name) end
 function ScriptManager:getSoundTimeline(eventName) end
 
 --- @public
+---
+---  Attempts to get the specific item of "module.type" without defaulting to module
+---
 --- @param name String
 --- @return Item
 function ScriptManager:getSpecificItem(name) end

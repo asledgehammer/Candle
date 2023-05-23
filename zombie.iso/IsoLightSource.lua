@@ -13,11 +13,11 @@ IsoLightSource = {};
 function IsoLightSource:clearInfluence() end
 
 --- @public
---- @return float
+--- @return float the b
 function IsoLightSource:getB() end
 
 --- @public
---- @return float
+--- @return float the g
 function IsoLightSource:getG() end
 
 --- @public
@@ -25,31 +25,31 @@ function IsoLightSource:getG() end
 function IsoLightSource:getLocalToBuilding() end
 
 --- @public
---- @return float
+--- @return float the r
 function IsoLightSource:getR() end
 
 --- @public
---- @return int
+--- @return int the radius
 function IsoLightSource:getRadius() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the switches
 function IsoLightSource:getSwitches() end
 
 --- @public
---- @return int
+--- @return int the x
 function IsoLightSource:getX() end
 
 --- @public
---- @return int
+--- @return int the y
 function IsoLightSource:getY() end
 
 --- @public
---- @return int
+--- @return int the z
 function IsoLightSource:getZ() end
 
 --- @public
---- @return boolean
+--- @return boolean the bActive
 function IsoLightSource:isActive() end
 
 --- @public
@@ -62,52 +62,52 @@ function IsoLightSource:isHydroPowered() end
 function IsoLightSource:isInBounds() end
 
 --- @public
---- @param bActive boolean
+--- @param bActive boolean the bActive to set
 --- @return void
 function IsoLightSource:setActive(bActive) end
 
 --- @public
---- @param b float
+--- @param b float the b to set
 --- @return void
 function IsoLightSource:setB(b) end
 
 --- @public
---- @param g float
+--- @param g float the g to set
 --- @return void
 function IsoLightSource:setG(g) end
 
 --- @public
---- @param r float
+--- @param r float the r to set
 --- @return void
 function IsoLightSource:setR(r) end
 
 --- @public
---- @param radius int
+--- @param radius int the radius to set
 --- @return void
 function IsoLightSource:setRadius(radius) end
 
 --- @public
---- @param switches ArrayList
+--- @param switches ArrayList the switches to set
 --- @return void
 function IsoLightSource:setSwitches(switches) end
 
 --- @public
---- @param bWasActive boolean
+--- @param bWasActive boolean the bWasActive to set
 --- @return void
 function IsoLightSource:setWasActive(bWasActive) end
 
 --- @public
---- @param x int
+--- @param x int the x to set
 --- @return void
 function IsoLightSource:setX(x) end
 
 --- @public
---- @param y int
+--- @param y int the y to set
 --- @return void
 function IsoLightSource:setY(y) end
 
 --- @public
---- @param z int
+--- @param z int the z to set
 --- @return void
 function IsoLightSource:setZ(z) end
 
@@ -116,7 +116,7 @@ function IsoLightSource:setZ(z) end
 function IsoLightSource:update() end
 
 --- @public
---- @return boolean
+--- @return boolean the bWasActive
 function IsoLightSource:wasActive() end
 
 

@@ -67,12 +67,12 @@ function IsoObject.getFactoryVehicle() end
 
 --- @public
 --- @static
---- @return IsoObject
+--- @return IsoObject the lastRendered
 function IsoObject.getLastRendered() end
 
 --- @public
 --- @static
---- @return IsoObject
+--- @return IsoObject the lastRenderedRendered
 function IsoObject.getLastRenderedRendered() end
 
 --- @public
@@ -89,13 +89,13 @@ function IsoObject.setDefaultCondition(i) end
 
 --- @public
 --- @static
---- @param aLastRendered IsoObject
+--- @param aLastRendered IsoObject the lastRendered to set
 --- @return void
 function IsoObject.setLastRendered(aLastRendered) end
 
 --- @public
 --- @static
---- @param aLastRenderedRendered IsoObject
+--- @param aLastRenderedRendered IsoObject the lastRenderedRendered to set
 --- @return void
 function IsoObject.setLastRenderedRendered(aLastRenderedRendered) end
 
@@ -306,20 +306,20 @@ function IsoObject:destroyFence(dir) end
 function IsoObject:doFindExternalWaterSource() end
 
 --- @public
---- @return float
+--- @return float the alpha
 --- @overload fun(playerIndex: int): float
 function IsoObject:getAlpha() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the AttachedAnimSprite
 function IsoObject:getAttachedAnimSprite() end
 
 --- @public
---- @return IsoCell
+--- @return IsoCell the cell
 function IsoObject:getCell() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the AttachedAnimSprite
 function IsoObject:getChildSprites() end
 
 --- @public
@@ -327,7 +327,7 @@ function IsoObject:getChildSprites() end
 function IsoObject:getChunk() end
 
 --- @public
---- @return ItemContainer
+--- @return ItemContainer the container
 function IsoObject:getContainer() end
 
 --- @public
@@ -360,11 +360,11 @@ function IsoObject:getContainerIndex(container) end
 function IsoObject:getCustomColor() end
 
 --- @public
---- @return short
+--- @return short the Damage
 function IsoObject:getDamage() end
 
 --- @public
---- @return IsoDirections
+--- @return IsoDirections the dir
 function IsoObject:getDir() end
 
 --- @public
@@ -470,11 +470,11 @@ function IsoObject:getRenderEffectMaster() end
 function IsoObject:getRenderYOffset() end
 
 --- @public
---- @return IsoObject
+--- @return IsoObject the rerouteCollide
 function IsoObject:getRerouteCollide() end
 
 --- @public
---- @return IsoObject
+--- @return IsoObject the rerouteMask
 function IsoObject:getRerouteMask() end
 
 --- @public
@@ -490,7 +490,7 @@ function IsoObject:getScriptName() end
 function IsoObject:getSpecialObjectIndex() end
 
 --- @public
---- @return IsoSprite
+--- @return IsoSprite the sprite
 function IsoObject:getSprite() end
 
 --- @public
@@ -523,11 +523,11 @@ function IsoObject:getSurfaceOffset() end
 function IsoObject:getSurfaceOffsetNoTable() end
 
 --- @public
---- @return KahluaTable
+--- @return KahluaTable the table
 function IsoObject:getTable() end
 
 --- @public
---- @return float
+--- @return float the targetAlpha
 --- @overload fun(playerIndex: int): float
 function IsoObject:getTargetAlpha() end
 
@@ -551,7 +551,7 @@ function IsoObject:getThumpableFor(chr) end
 function IsoObject:getTile() end
 
 --- @public
---- @return IsoObjectType
+--- @return IsoObjectType the type
 function IsoObject:getType() end
 
 --- @public
@@ -607,11 +607,17 @@ function IsoObject:haveSheetRope() end
 function IsoObject:haveSpecialTooltip() end
 
 --- @public
+---
+---  Returns TRUE if both Alpha nad TargetAlpha are transparent, or near-zero.
+---
 --- @return boolean
 --- @overload fun(playerIndex: int): boolean
 function IsoObject:isAlphaAndTargetZero() end
 
 --- @public
+---
+---  Returns TRUE if Alpha is transparent, or near-zero.
+---
 --- @return boolean
 --- @overload fun(playerIndex: int): boolean
 function IsoObject:isAlphaZero() end
@@ -663,7 +669,7 @@ function IsoObject:isMaskClicked(x, y) end
 function IsoObject:isMovedThumpable() end
 
 --- @public
---- @return boolean
+--- @return boolean the NoPicking
 function IsoObject:isNoPicking() end
 
 --- @public
@@ -686,7 +692,7 @@ function IsoObject:isOutlineHlAttached() end
 function IsoObject:isOutlineHlBlink() end
 
 --- @public
---- @return boolean
+--- @return boolean the OutlineOnMouseover
 function IsoObject:isOutlineOnMouseover() end
 
 --- @public
@@ -911,24 +917,24 @@ function IsoObject:saveState(bb) end
 function IsoObject:sendObjectChange(change) end
 
 --- @public
---- @param alpha float
+--- @param alpha float the alpha to set
 --- @return void
 --- @overload fun(playerIndex: int, alpha: float): void
 function IsoObject:setAlpha(alpha) end
 
 --- @public
---- @param alpha float
+--- @param alpha float the alpha to set
 --- @return void
 --- @overload fun(playerIndex: int, alpha: float): void
 function IsoObject:setAlphaAndTarget(alpha) end
 
 --- @public
---- @param playerIndex int
+--- @param playerIndex int The playerIndex to use
 --- @return void
 function IsoObject:setAlphaToTarget(playerIndex) end
 
 --- @public
---- @param AttachedAnimSprite ArrayList
+--- @param AttachedAnimSprite ArrayList the AttachedAnimSprite to set
 --- @return void
 function IsoObject:setAttachedAnimSprite(AttachedAnimSprite) end
 
@@ -938,12 +944,12 @@ function IsoObject:setAttachedAnimSprite(AttachedAnimSprite) end
 function IsoObject:setBlink(blink) end
 
 --- @public
---- @param AttachedAnimSprite ArrayList
+--- @param AttachedAnimSprite ArrayList the AttachedAnimSprite to set
 --- @return void
 function IsoObject:setChildSprites(AttachedAnimSprite) end
 
 --- @public
---- @param container ItemContainer
+--- @param container ItemContainer the container to set
 --- @return void
 function IsoObject:setContainer(container) end
 
@@ -954,12 +960,12 @@ function IsoObject:setContainer(container) end
 function IsoObject:setCustomColor(col) end
 
 --- @public
---- @param Damage short
+--- @param Damage short the Damage to set
 --- @return void
 function IsoObject:setDamage(Damage) end
 
 --- @public
---- @param dir int
+--- @param dir int the dir to set
 --- @return void
 --- @overload fun(dir: IsoDirections): void
 function IsoObject:setDir(dir) end
@@ -987,22 +993,22 @@ function IsoObject:setKeyId(keyId) end
 function IsoObject:setMovedThumpable(movedThumpable) end
 
 --- @public
---- @param name String
+--- @param name String the name to set
 --- @return void
 function IsoObject:setName(name) end
 
 --- @public
---- @param NoPicking boolean
+--- @param NoPicking boolean the NoPicking to set
 --- @return void
 function IsoObject:setNoPicking(NoPicking) end
 
 --- @public
---- @param offsetX float
+--- @param offsetX float the offsetX to set
 --- @return void
 function IsoObject:setOffsetX(offsetX) end
 
 --- @public
---- @param offsetY float
+--- @param offsetY float the offsetY to set
 --- @return void
 function IsoObject:setOffsetY(offsetY) end
 
@@ -1033,7 +1039,7 @@ function IsoObject:setOutlineHlAttached(isOutlineHlAttached) end
 function IsoObject:setOutlineHlBlink(isOutlineHlBlink) end
 
 --- @public
---- @param OutlineOnMouseover boolean
+--- @param OutlineOnMouseover boolean the OutlineOnMouseover to set
 --- @return void
 function IsoObject:setOutlineOnMouseover(OutlineOnMouseover) end
 
@@ -1075,12 +1081,12 @@ function IsoObject:setRenderEffect(type) end
 function IsoObject:setRenderYOffset(f) end
 
 --- @public
---- @param rerouteCollide IsoObject
+--- @param rerouteCollide IsoObject the rerouteCollide to set
 --- @return void
 function IsoObject:setRerouteCollide(rerouteCollide) end
 
 --- @public
---- @param rerouteMask IsoObject
+--- @param rerouteMask IsoObject the rerouteMask to set
 --- @return void
 function IsoObject:setRerouteMask(rerouteMask) end
 
@@ -1101,7 +1107,7 @@ function IsoObject:setSprite(name) end
 function IsoObject:setSpriteFromName(name) end
 
 --- @public
---- @param square IsoGridSquare
+--- @param square IsoGridSquare the square to set
 --- @return void
 function IsoObject:setSquare(square) end
 
@@ -1116,7 +1122,7 @@ function IsoObject:setTable(arg0) end
 function IsoObject:setTaintedWater(tainted) end
 
 --- @public
---- @param targetAlpha float
+--- @param targetAlpha float the targetAlpha to set
 --- @return void
 --- @overload fun(playerIndex: int, targetAlpha: float): void
 function IsoObject:setTargetAlpha(targetAlpha) end

@@ -78,7 +78,11 @@ function IsoDirections.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return IsoDirections[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return IsoDirections[] an array containing the constants of this enum class, in the order they are declared
 function IsoDirections.values() end
 
 

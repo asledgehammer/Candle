@@ -1,7 +1,6 @@
 --- @meta
 
---- @class PresetEntry
---- turbo
+--- @class PresetEntry turbo
 PresetEntry = {};
 
 ------------------------------------

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class ServerChatMessage: ChatMessage
---- Messages which sent by server to any chat stream. This applied stream setting but author always Server
+--- @class ServerChatMessage: ChatMessage Messages which sent by server to any chat stream. This applied stream setting but author always Server
 ServerChatMessage = {};
 
 ------------------------------------

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class ClimateMoon
---- TurboTuTone.
+--- @class ClimateMoon TurboTuTone.
 ClimateMoon = {};
 
 ------------------------------------

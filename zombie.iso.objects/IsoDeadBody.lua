@@ -280,7 +280,7 @@ function IsoDeadBody:saveChange(arg0, arg1, arg2) end
 function IsoDeadBody:setAttachedItems(other) end
 
 --- @public
---- @param container ItemContainer
+--- @param container ItemContainer the container to set
 --- @return void
 function IsoDeadBody:setContainer(container) end
 

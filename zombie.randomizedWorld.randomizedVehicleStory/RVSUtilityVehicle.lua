@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RVSUtilityVehicle: RandomizedVehicleStoryBase
---- An utility vehicle (mccoys, fire dept, police, ranger, postal..) with corresponding outfit zeds and sometimes tools
+--- @class RVSUtilityVehicle: RandomizedVehicleStoryBase An utility vehicle (mccoys, fire dept, police, ranger, postal..) with corresponding outfit zeds and sometimes tools
 RVSUtilityVehicle = {};
 
 ------------------------------------

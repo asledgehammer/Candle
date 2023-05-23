@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSBedroomZed: RandomizedDeadSurvivorBase
---- Create 2 naked zombies in the bedroom with clothing lying around
+--- @class RDSBedroomZed: RandomizedDeadSurvivorBase Create 2 naked zombies in the bedroom with clothing lying around
 RDSBedroomZed = {};
 
 ------------------------------------

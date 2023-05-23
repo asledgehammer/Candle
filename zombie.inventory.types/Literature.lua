@@ -40,7 +40,7 @@ function Literature:getAlreadyReadPages() end
 function Literature:getBookName() end
 
 --- @public
---- @return float
+--- @return float the boredomChange
 function Literature:getBoredomChange() end
 
 --- @public
@@ -84,7 +84,7 @@ function Literature:getSaveType() end
 function Literature:getSkillTrained() end
 
 --- @public
---- @return float
+--- @return float the stressChange
 function Literature:getStressChange() end
 
 --- @public
@@ -92,7 +92,7 @@ function Literature:getStressChange() end
 function Literature:getTeachedRecipes() end
 
 --- @public
---- @return float
+--- @return float the unhappyChange
 function Literature:getUnhappyChange() end
 
 --- @public

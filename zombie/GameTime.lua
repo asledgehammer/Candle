@@ -98,19 +98,19 @@ function GameTime:TimeLerp(startVal, endVal, startTime, endTime) end
 function GameTime:daysInMonth(year, month) end
 
 --- @public
---- @return float
+--- @return float the Ambient
 function GameTime:getAmbient() end
 
 --- @public
---- @return float
+--- @return float the AmbientMax
 function GameTime:getAmbientMax() end
 
 --- @public
---- @return float
+--- @return float the AmbientMin
 function GameTime:getAmbientMin() end
 
 --- @public
---- @return PZCalendar
+--- @return PZCalendar the Calender
 function GameTime:getCalender() end
 
 --- @public
@@ -118,7 +118,7 @@ function GameTime:getCalender() end
 function GameTime:getDawn() end
 
 --- @public
---- @return int
+--- @return int the Day
 function GameTime:getDay() end
 
 --- @public
@@ -171,7 +171,7 @@ function GameTime:getHelicopterStartHour() end
 function GameTime:getHour() end
 
 --- @public
---- @return double
+--- @return double the HoursSurvived
 function GameTime:getHoursSurvived() end
 
 --- @public
@@ -179,23 +179,23 @@ function GameTime:getHoursSurvived() end
 function GameTime:getInvMultiplier() end
 
 --- @public
---- @return float
+--- @return float the LastTimeOfDay
 function GameTime:getLastTimeOfDay() end
 
 --- @public
---- @return float
+--- @return float the MaxZombieCount
 function GameTime:getMaxZombieCount() end
 
 --- @public
---- @return float
+--- @return float the MaxZombieCountStart
 function GameTime:getMaxZombieCountStart() end
 
 --- @public
---- @return float
+--- @return float the MinZombieCount
 function GameTime:getMinZombieCount() end
 
 --- @public
---- @return float
+--- @return float the MinZombieCountStart
 function GameTime:getMinZombieCountStart() end
 
 --- @public
@@ -203,7 +203,7 @@ function GameTime:getMinZombieCountStart() end
 function GameTime:getMinutes() end
 
 --- @public
---- @return float
+--- @return float the MinutesPerDay
 function GameTime:getMinutesPerDay() end
 
 --- @public
@@ -215,7 +215,7 @@ function GameTime:getMinutesStamp() end
 function GameTime:getModData() end
 
 --- @public
---- @return int
+--- @return int the Month
 function GameTime:getMonth() end
 
 --- @public
@@ -223,11 +223,11 @@ function GameTime:getMonth() end
 function GameTime:getMultipliedSecondsSinceLastUpdate() end
 
 --- @public
---- @return float
+--- @return float the Multiplier
 function GameTime:getMultiplier() end
 
 --- @public
---- @return float
+--- @return float the NightTint
 function GameTime:getNight() end
 
 --- @public
@@ -239,11 +239,11 @@ function GameTime:getNightMax() end
 function GameTime:getNightMin() end
 
 --- @public
---- @return float
+--- @return float the NightTint
 function GameTime:getNightTint() end
 
 --- @public
---- @return int
+--- @return int the NightsSurvived
 function GameTime:getNightsSurvived() end
 
 --- @public
@@ -255,19 +255,19 @@ function GameTime:getRealworldSecondsSinceLastUpdate() end
 function GameTime:getServerMultiplier() end
 
 --- @public
---- @return int
+--- @return int the StartDay
 function GameTime:getStartDay() end
 
 --- @public
---- @return int
+--- @return int the StartMonth
 function GameTime:getStartMonth() end
 
 --- @public
---- @return float
+--- @return float the StartTimeOfDay
 function GameTime:getStartTimeOfDay() end
 
 --- @public
---- @return int
+--- @return int the StartYear
 function GameTime:getStartYear() end
 
 --- @public
@@ -279,7 +279,7 @@ function GameTime:getThunderStorm() end
 function GameTime:getTimeDelta() end
 
 --- @public
---- @return float
+--- @return float the TimeOfDay
 function GameTime:getTimeOfDay() end
 
 --- @public
@@ -296,15 +296,15 @@ function GameTime:getTrueMultiplier() end
 function GameTime:getUnmoddedMultiplier() end
 
 --- @public
---- @return float
+--- @return float the ViewDist
 function GameTime:getViewDist() end
 
 --- @public
---- @return float
+--- @return float the ViewDistMax
 function GameTime:getViewDistMax() end
 
 --- @public
---- @return float
+--- @return float the ViewDistMin
 function GameTime:getViewDistMin() end
 
 --- @public
@@ -312,7 +312,7 @@ function GameTime:getViewDistMin() end
 function GameTime:getWorldAgeHours() end
 
 --- @public
---- @return int
+--- @return int the Year
 function GameTime:getYear() end
 
 --- @public
@@ -325,7 +325,7 @@ function GameTime:getZombieKilledText(playerObj) end
 function GameTime:init() end
 
 --- @public
---- @return boolean
+--- @return boolean the RainingToday
 function GameTime:isRainingToday() end
 
 --- @public
@@ -350,22 +350,22 @@ function GameTime:save() end
 function GameTime:saveToPacket(bb) end
 
 --- @public
---- @param Ambient float
+--- @param Ambient float the Ambient to set
 --- @return void
 function GameTime:setAmbient(Ambient) end
 
 --- @public
---- @param AmbientMax float
+--- @param AmbientMax float the AmbientMax to set
 --- @return void
 function GameTime:setAmbientMax(AmbientMax) end
 
 --- @public
---- @param AmbientMin float
+--- @param AmbientMin float the AmbientMin to set
 --- @return void
 function GameTime:setAmbientMin(AmbientMin) end
 
 --- @public
---- @param Calender PZCalendar
+--- @param Calender PZCalendar the Calender to set
 --- @return void
 function GameTime:setCalender(Calender) end
 
@@ -375,7 +375,7 @@ function GameTime:setCalender(Calender) end
 function GameTime:setDawn(dawn) end
 
 --- @public
---- @param Day int
+--- @param Day int the Day to set
 --- @return void
 function GameTime:setDay(Day) end
 
@@ -400,42 +400,42 @@ function GameTime:setHelicopterEndHour(hour) end
 function GameTime:setHelicopterStartHour(hour) end
 
 --- @public
---- @param HoursSurvived double
+--- @param HoursSurvived double the HoursSurvived to set
 --- @return void
 function GameTime:setHoursSurvived(HoursSurvived) end
 
 --- @public
---- @param LastTimeOfDay float
+--- @param LastTimeOfDay float the LastTimeOfDay to set
 --- @return void
 function GameTime:setLastTimeOfDay(LastTimeOfDay) end
 
 --- @public
---- @param MaxZombieCount float
+--- @param MaxZombieCount float the MaxZombieCount to set
 --- @return void
 function GameTime:setMaxZombieCount(MaxZombieCount) end
 
 --- @public
---- @param MaxZombieCountStart float
+--- @param MaxZombieCountStart float the MaxZombieCountStart to set
 --- @return void
 function GameTime:setMaxZombieCountStart(MaxZombieCountStart) end
 
 --- @public
---- @param MinZombieCount float
+--- @param MinZombieCount float the MinZombieCount to set
 --- @return void
 function GameTime:setMinZombieCount(MinZombieCount) end
 
 --- @public
---- @param MinZombieCountStart float
+--- @param MinZombieCountStart float the MinZombieCountStart to set
 --- @return void
 function GameTime:setMinZombieCountStart(MinZombieCountStart) end
 
 --- @public
---- @param MinutesPerDay float
+--- @param MinutesPerDay float the MinutesPerDay to set
 --- @return void
 function GameTime:setMinutesPerDay(MinutesPerDay) end
 
 --- @public
---- @param Month int
+--- @param Month int the Month to set
 --- @return void
 function GameTime:setMonth(Month) end
 
@@ -445,12 +445,12 @@ function GameTime:setMonth(Month) end
 function GameTime:setMoon(moon) end
 
 --- @public
---- @param Multiplier float
+--- @param Multiplier float the Multiplier to set
 --- @return void
 function GameTime:setMultiplier(Multiplier) end
 
 --- @public
---- @param NightTint float
+--- @param NightTint float the NightTint to set
 --- @return void
 function GameTime:setNight(NightTint) end
 
@@ -465,37 +465,37 @@ function GameTime:setNightMax(max) end
 function GameTime:setNightMin(min) end
 
 --- @public
---- @param NightTint float
+--- @param NightTint float the NightTint to set
 --- @return void
 function GameTime:setNightTint(NightTint) end
 
 --- @public
---- @param NightsSurvived int
+--- @param NightsSurvived int the NightsSurvived to set
 --- @return void
 function GameTime:setNightsSurvived(NightsSurvived) end
 
 --- @public
---- @param StartDay int
+--- @param StartDay int the StartDay to set
 --- @return void
 function GameTime:setStartDay(StartDay) end
 
 --- @public
---- @param StartMonth int
+--- @param StartMonth int the StartMonth to set
 --- @return void
 function GameTime:setStartMonth(StartMonth) end
 
 --- @public
---- @param StartTimeOfDay float
+--- @param StartTimeOfDay float the StartTimeOfDay to set
 --- @return void
 function GameTime:setStartTimeOfDay(StartTimeOfDay) end
 
 --- @public
---- @param StartYear int
+--- @param StartYear int the StartYear to set
 --- @return void
 function GameTime:setStartYear(StartYear) end
 
 --- @public
---- @param TargetZombies int
+--- @param TargetZombies int the TargetZombies to set
 --- @return void
 function GameTime:setTargetZombies(TargetZombies) end
 
@@ -505,22 +505,22 @@ function GameTime:setTargetZombies(TargetZombies) end
 function GameTime:setThunderDay(thunderDay) end
 
 --- @public
---- @param TimeOfDay float
+--- @param TimeOfDay float the TimeOfDay to set
 --- @return void
 function GameTime:setTimeOfDay(TimeOfDay) end
 
 --- @public
---- @param ViewDistMax float
+--- @param ViewDistMax float the ViewDistMax to set
 --- @return void
 function GameTime:setViewDistMax(ViewDistMax) end
 
 --- @public
---- @param ViewDistMin float
+--- @param ViewDistMin float the ViewDistMin to set
 --- @return void
 function GameTime:setViewDistMin(ViewDistMin) end
 
 --- @public
---- @param Year int
+--- @param Year int the Year to set
 --- @return void
 function GameTime:setYear(Year) end
 

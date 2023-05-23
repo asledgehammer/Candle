@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RBBurnt: RandomizedBuildingBase
---- This building will be 90% burnt (no fire started tho)
+--- @class RBBurnt: RandomizedBuildingBase This building will be 90% burnt (no fire started tho)
 RBBurnt = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RBBurnt = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

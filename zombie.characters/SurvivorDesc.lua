@@ -24,7 +24,7 @@ function SurvivorDesc.addTrouserColor(color) end
 
 --- @public
 --- @static
---- @return int
+--- @return int the IDCount
 function SurvivorDesc.getIDCount() end
 
 --- @public
@@ -34,7 +34,7 @@ function SurvivorDesc.getRandomSkinColor() end
 
 --- @public
 --- @static
---- @param aIDCount int
+--- @param aIDCount int the IDCount to set
 --- @return void
 function SurvivorDesc.setIDCount(aIDCount) end
 
@@ -54,11 +54,11 @@ function SurvivorDesc:addObservation(obv) end
 function SurvivorDesc:dressInNamedOutfit(outfitName) end
 
 --- @public
---- @return float
+--- @return float the aggressiveness
 function SurvivorDesc:getAggressiveness() end
 
 --- @public
---- @return float
+--- @return float the bravery
 function SurvivorDesc:getBravery() end
 
 --- @public
@@ -70,7 +70,7 @@ function SurvivorDesc:getCalculatedToughness() end
 function SurvivorDesc:getCommonHairColor() end
 
 --- @public
---- @return float
+--- @return float the compassion
 function SurvivorDesc:getCompassion() end
 
 --- @public
@@ -78,15 +78,15 @@ function SurvivorDesc:getCompassion() end
 function SurvivorDesc:getExtras() end
 
 --- @public
---- @return float
+--- @return float the favourindoors
 function SurvivorDesc:getFavourindoors() end
 
 --- @public
---- @return String
+--- @return String the forename
 function SurvivorDesc:getForename() end
 
 --- @public
---- @return float
+--- @return float the friendliness
 function SurvivorDesc:getFriendliness() end
 
 --- @public
@@ -99,15 +99,15 @@ function SurvivorDesc:getGroup() end
 function SurvivorDesc:getHumanVisual() end
 
 --- @public
---- @return int
+--- @return int the ID
 function SurvivorDesc:getID() end
 
 --- @public
---- @return IsoGameCharacter
+--- @return IsoGameCharacter the Instance
 function SurvivorDesc:getInstance() end
 
 --- @public
---- @return String
+--- @return String the InventoryScript
 function SurvivorDesc:getInventoryScript() end
 
 --- @public
@@ -117,15 +117,15 @@ function SurvivorDesc:getInventoryScript() end
 function SurvivorDesc:getItemVisuals(itemVisuals) end
 
 --- @public
---- @return float
+--- @return float the loner
 function SurvivorDesc:getLoner() end
 
 --- @public
---- @return float
+--- @return float the loyalty
 function SurvivorDesc:getLoyalty() end
 
 --- @public
---- @return HashMap
+--- @return HashMap the MetCount
 --- @overload fun(descriptor: SurvivorDesc): int
 function SurvivorDesc:getMetCount() end
 
@@ -138,19 +138,19 @@ function SurvivorDesc:getMeta() end
 function SurvivorDesc:getObservations() end
 
 --- @public
---- @return String
+--- @return String the Profession
 function SurvivorDesc:getProfession() end
 
 --- @public
---- @return String
+--- @return String the surname
 function SurvivorDesc:getSurname() end
 
 --- @public
---- @return float
+--- @return float the temper
 function SurvivorDesc:getTemper() end
 
 --- @public
---- @return String
+--- @return String the torso
 function SurvivorDesc:getTorso() end
 
 --- @public
@@ -234,22 +234,22 @@ function SurvivorDesc:save(output) end
 function SurvivorDesc:saveCompact(output) end
 
 --- @public
---- @param aggressiveness float
+--- @param aggressiveness float the aggressiveness to set
 --- @return void
 function SurvivorDesc:setAggressiveness(aggressiveness) end
 
 --- @public
---- @param bravery float
+--- @param bravery float the bravery to set
 --- @return void
 function SurvivorDesc:setBravery(bravery) end
 
 --- @public
---- @param compassion float
+--- @param compassion float the compassion to set
 --- @return void
 function SurvivorDesc:setCompassion(compassion) end
 
 --- @public
---- @param favourindoors float
+--- @param favourindoors float the favourindoors to set
 --- @return void
 function SurvivorDesc:setFavourindoors(favourindoors) end
 
@@ -259,42 +259,42 @@ function SurvivorDesc:setFavourindoors(favourindoors) end
 function SurvivorDesc:setFemale(bFemale) end
 
 --- @public
---- @param forename String
+--- @param forename String the forename to set
 --- @return void
 function SurvivorDesc:setForename(forename) end
 
 --- @public
---- @param friendliness float
+--- @param friendliness float the friendliness to set
 --- @return void
 function SurvivorDesc:setFriendliness(friendliness) end
 
 --- @public
---- @param ID int
+--- @param ID int the ID to set
 --- @return void
 function SurvivorDesc:setID(ID) end
 
 --- @public
---- @param Instance IsoGameCharacter
+--- @param Instance IsoGameCharacter the Instance to set
 --- @return void
 function SurvivorDesc:setInstance(Instance) end
 
 --- @public
---- @param InventoryScript String
+--- @param InventoryScript String the InventoryScript to set
 --- @return void
 function SurvivorDesc:setInventoryScript(InventoryScript) end
 
 --- @public
---- @param loner float
+--- @param loner float the loner to set
 --- @return void
 function SurvivorDesc:setLoner(loner) end
 
 --- @public
---- @param loyalty float
+--- @param loyalty float the loyalty to set
 --- @return void
 function SurvivorDesc:setLoyalty(loyalty) end
 
 --- @public
---- @param Profession String
+--- @param Profession String the Profession to set
 --- @return void
 function SurvivorDesc:setProfession(Profession) end
 
@@ -304,17 +304,17 @@ function SurvivorDesc:setProfession(Profession) end
 function SurvivorDesc:setProfessionSkills(arg0) end
 
 --- @public
---- @param surname String
+--- @param surname String the surname to set
 --- @return void
 function SurvivorDesc:setSurname(surname) end
 
 --- @public
---- @param temper float
+--- @param temper float the temper to set
 --- @return void
 function SurvivorDesc:setTemper(temper) end
 
 --- @public
---- @param torso String
+--- @param torso String the torso to set
 --- @return void
 function SurvivorDesc:setTorso(torso) end
 

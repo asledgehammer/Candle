@@ -117,6 +117,10 @@ function BodyPart:damageFromFirearm(damage) end
 function BodyPart:deepWounded() end
 
 --- @public
+---
+---  Generate an amount of bleeding time will depend on injuries type and body part
+---  Use this instead of setBleedingTime() so all is automated.
+---
 --- @return void
 function BodyPart:generateBleeding() end
 

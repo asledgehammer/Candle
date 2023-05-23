@@ -1,7 +1,6 @@
 --- @meta
 
---- @class ClimateManager
---- TurboTuTone.
+--- @class ClimateManager TurboTuTone.
 --- @field public A_STORM_IS_COMING boolean
 --- @field public AVG_FAV_AIR_TEMPERATURE float
 --- @field public BOOL_IS_SNOW int
@@ -526,6 +525,9 @@ function ClimateManager:resetModded() end
 function ClimateManager:resetOverrides() end
 
 --- @public
+---
+---  IO
+---
 --- @param output DataOutputStream
 --- @return void
 function ClimateManager:save(output) end

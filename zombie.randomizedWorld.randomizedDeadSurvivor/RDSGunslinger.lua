@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSGunslinger: RandomizedDeadSurvivorBase
---- Create a dead survivor somewhere with lot of modified guns/ammo on him
+--- @class RDSGunslinger: RandomizedDeadSurvivorBase Create a dead survivor somewhere with lot of modified guns/ammo on him
 RDSGunslinger = {};
 
 ------------------------------------

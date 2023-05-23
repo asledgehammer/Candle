@@ -20,11 +20,11 @@ function Profession:addFreeTrait(trait) end
 function Profession:addXPBoost(arg0, arg1) end
 
 --- @public
---- @return int
+--- @return int the cost
 function Profession:getCost() end
 
 --- @public
---- @return String
+--- @return String the description
 function Profession:getDescription() end
 
 --- @public
@@ -32,7 +32,7 @@ function Profession:getDescription() end
 function Profession:getFreeRecipes() end
 
 --- @public
---- @return Stack
+--- @return Stack the FreeTraitStack
 function Profession:getFreeTraitStack() end
 
 --- @public
@@ -54,7 +54,7 @@ function Profession:getLabel() end
 function Profession:getLeftLabel() end
 
 --- @public
---- @return String
+--- @return String the name
 function Profession:getName() end
 
 --- @public
@@ -67,7 +67,7 @@ function Profession:getRightLabel() end
 function Profession:getTexture() end
 
 --- @public
---- @return String
+--- @return String the type
 function Profession:getType() end
 
 --- @public
@@ -75,12 +75,12 @@ function Profession:getType() end
 function Profession:getXPBoostMap() end
 
 --- @public
---- @param cost int
+--- @param cost int the cost to set
 --- @return void
 function Profession:setCost(cost) end
 
 --- @public
---- @param description String
+--- @param description String the description to set
 --- @return void
 function Profession:setDescription(description) end
 
@@ -90,22 +90,22 @@ function Profession:setDescription(description) end
 function Profession:setFreeRecipes(freeRecipes) end
 
 --- @public
---- @param FreeTraitStack Stack
+--- @param FreeTraitStack Stack the FreeTraitStack to set
 --- @return void
 function Profession:setFreeTraitStack(FreeTraitStack) end
 
 --- @public
---- @param IconPath String
+--- @param IconPath String the IconPath to set
 --- @return void
 function Profession:setIconPath(IconPath) end
 
 --- @public
---- @param name String
+--- @param name String the name to set
 --- @return void
 function Profession:setName(name) end
 
 --- @public
---- @param type String
+--- @param type String the type to set
 --- @return void
 function Profession:setType(type) end
 

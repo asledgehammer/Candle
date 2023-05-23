@@ -1,7 +1,6 @@
 --- @meta
 
---- @class Thermoregulator
---- TurboTuTone. Thermoregulator for living bodies.
+--- @class Thermoregulator TurboTuTone. Thermoregulator for living bodies.
 Thermoregulator = {};
 
 ------------------------------------

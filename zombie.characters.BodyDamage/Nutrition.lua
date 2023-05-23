@@ -8,6 +8,10 @@ Nutrition = {};
 ------------------------------------
 
 --- @public
+---
+---  > 100 obese 85 to 100 over weight 75 to 85 normal 65 to 75 underweight 50 to 65
+---  underweight <= 50 emaciated
+---
 --- @return void
 function Nutrition:applyTraitFromWeight() end
 
@@ -16,6 +20,10 @@ function Nutrition:applyTraitFromWeight() end
 function Nutrition:applyWeightFromTraits() end
 
 --- @public
+---
+---  You gain xp only if you're in good shape As underweight or overweight you can
+---  be "fit"
+---
 --- @return boolean
 function Nutrition:canAddFitnessXp() end
 

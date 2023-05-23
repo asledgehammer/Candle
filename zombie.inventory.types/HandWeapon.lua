@@ -42,7 +42,7 @@ function HandWeapon:canBeReused() end
 function HandWeapon:detachWeaponPart(part) end
 
 --- @public
---- @return float
+--- @return float the ActualWeight
 function HandWeapon:getActualWeight() end
 
 --- @public
@@ -87,6 +87,9 @@ function HandWeapon:getAmmoPerShoot() end
 function HandWeapon:getBaseSpeed() end
 
 --- @public
+---
+---  Get the magazine with the most bullets in it
+---
 --- @param owner IsoGameCharacter
 --- @return InventoryItem
 function HandWeapon:getBestMagazine(owner) end
@@ -124,7 +127,7 @@ function HandWeapon:getClip() end
 function HandWeapon:getClipSize() end
 
 --- @public
---- @return int
+--- @return int the ConditionLowerChance
 function HandWeapon:getConditionLowerChance() end
 
 --- @public
@@ -149,15 +152,15 @@ function HandWeapon:getDamageCategory() end
 function HandWeapon:getDamageMod(chr) end
 
 --- @public
---- @return float
+--- @return float the doSwingBeforeImpact
 function HandWeapon:getDoSwingBeforeImpact() end
 
 --- @public
---- @return int
+--- @return int the DoorDamage
 function HandWeapon:getDoorDamage() end
 
 --- @public
---- @return String
+--- @return String the doorHitSound
 function HandWeapon:getDoorHitSound() end
 
 --- @public
@@ -173,7 +176,7 @@ function HandWeapon:getEjectAmmoStartSound() end
 function HandWeapon:getEjectAmmoStopSound() end
 
 --- @public
---- @return float
+--- @return float the EnduranceMod
 function HandWeapon:getEnduranceMod() end
 
 --- @public
@@ -222,7 +225,7 @@ function HandWeapon:getHitChance() end
 function HandWeapon:getHitFloorSound() end
 
 --- @public
---- @return String
+--- @return String the impactSound
 function HandWeapon:getImpactSound() end
 
 --- @public
@@ -247,7 +250,7 @@ function HandWeapon:getJamGunChance() end
 function HandWeapon:getKnockbackMod(chr) end
 
 --- @public
---- @return float
+--- @return float the KnockdownMod
 function HandWeapon:getKnockdownMod() end
 
 --- @public
@@ -255,32 +258,32 @@ function HandWeapon:getKnockdownMod() end
 function HandWeapon:getMagazineType() end
 
 --- @public
---- @return float
+--- @return float the maxAngle
 function HandWeapon:getMaxAngle() end
 
 --- @public
---- @return float
+--- @return float the maxDamage
 function HandWeapon:getMaxDamage() end
 
 --- @public
---- @return int
+--- @return int the maxHitCount
 function HandWeapon:getMaxHitCount() end
 
 --- @public
---- @return float
+--- @return float the maxRange
 --- @overload fun(owner: IsoGameCharacter): float
 function HandWeapon:getMaxRange() end
 
 --- @public
---- @return float
+--- @return float the minAngle
 function HandWeapon:getMinAngle() end
 
 --- @public
---- @return float
+--- @return float the minDamage
 function HandWeapon:getMinDamage() end
 
 --- @public
---- @return float
+--- @return float the minRange
 function HandWeapon:getMinRange() end
 
 --- @public
@@ -288,7 +291,7 @@ function HandWeapon:getMinRange() end
 function HandWeapon:getMinRangeRanged() end
 
 --- @public
---- @return float
+--- @return float the minimumSwingTime
 function HandWeapon:getMinimumSwingTime() end
 
 --- @public
@@ -300,7 +303,7 @@ function HandWeapon:getModelWeaponPart() end
 function HandWeapon:getNoiseDuration() end
 
 --- @public
---- @return float
+--- @return float the noiseFactor
 function HandWeapon:getNoiseFactor() end
 
 --- @public
@@ -312,15 +315,15 @@ function HandWeapon:getNoiseRange() end
 function HandWeapon:getOriginalWeaponSprite() end
 
 --- @public
---- @return float
+--- @return float the otherBoost
 function HandWeapon:getOtherBoost() end
 
 --- @public
---- @return String
+--- @return String the otherHandRequire
 function HandWeapon:getOtherHandRequire() end
 
 --- @public
---- @return String
+--- @return String the physicsObject
 function HandWeapon:getPhysicsObject() end
 
 --- @public
@@ -332,7 +335,7 @@ function HandWeapon:getPlacedSprite() end
 function HandWeapon:getProjectileCount() end
 
 --- @public
---- @return float
+--- @return float the pushBackMod
 function HandWeapon:getPushBackMod() end
 
 --- @public
@@ -394,11 +397,11 @@ function HandWeapon:getSmokeRange() end
 function HandWeapon:getSoundGain() end
 
 --- @public
---- @return int
+--- @return int the soundRadius
 function HandWeapon:getSoundRadius() end
 
 --- @public
---- @return int
+--- @return int the soundVolume
 function HandWeapon:getSoundVolume() end
 
 --- @public
@@ -411,7 +414,7 @@ function HandWeapon:getSpeedMod(chr) end
 function HandWeapon:getSpentRoundCount() end
 
 --- @public
---- @return int
+--- @return int the splatNumber
 function HandWeapon:getSplatNumber() end
 
 --- @public
@@ -435,11 +438,11 @@ function HandWeapon:getStopPower() end
 function HandWeapon:getSubCategory() end
 
 --- @public
---- @return String
+--- @return String the swingSound
 function HandWeapon:getSwingSound() end
 
 --- @public
---- @return float
+--- @return float the swingTime
 function HandWeapon:getSwingTime() end
 
 --- @public
@@ -448,7 +451,7 @@ function HandWeapon:getSwingTime() end
 function HandWeapon:getToHitMod(chr) end
 
 --- @public
---- @return float
+--- @return float the toHitModifier
 function HandWeapon:getToHitModifier() end
 
 --- @public
@@ -475,11 +478,11 @@ function HandWeapon:getWeaponPartWeightModifier(type) end
 function HandWeapon:getWeaponReloadType() end
 
 --- @public
---- @return String
+--- @return String the weaponSprite
 function HandWeapon:getWeaponSprite() end
 
 --- @public
---- @return float
+--- @return float the Weight
 function HandWeapon:getWeight() end
 
 --- @public
@@ -503,19 +506,19 @@ function HandWeapon:isAimedFirearm() end
 function HandWeapon:isAimedHandWeapon() end
 
 --- @public
---- @return boolean
+--- @return boolean the AlwaysKnockdown
 function HandWeapon:isAlwaysKnockdown() end
 
 --- @public
---- @return boolean
+--- @return boolean the angleFalloff
 function HandWeapon:isAngleFalloff() end
 
 --- @public
---- @return boolean
+--- @return boolean the bCanBarracade
 function HandWeapon:isCanBarracade() end
 
 --- @public
---- @return boolean
+--- @return boolean the CantAttackWithLowestEndurance
 function HandWeapon:isCantAttackWithLowestEndurance() end
 
 --- @public
@@ -539,7 +542,7 @@ function HandWeapon:isInstantExplosion() end
 function HandWeapon:isJammed() end
 
 --- @public
---- @return boolean
+--- @return boolean the knockBackOnNoDeath
 function HandWeapon:isKnockBackOnNoDeath() end
 
 --- @public
@@ -547,11 +550,11 @@ function HandWeapon:isKnockBackOnNoDeath() end
 function HandWeapon:isManuallyRemoveSpentRounds() end
 
 --- @public
---- @return boolean
+--- @return boolean the MultipleHitConditionAffected
 function HandWeapon:isMultipleHitConditionAffected() end
 
 --- @public
---- @return boolean
+--- @return boolean the otherHandUse
 function HandWeapon:isOtherHandUse() end
 
 --- @public
@@ -563,11 +566,11 @@ function HandWeapon:isPiercingBullets() end
 function HandWeapon:isRackAfterShoot() end
 
 --- @public
---- @return boolean
+--- @return boolean the rangeFalloff
 function HandWeapon:isRangeFalloff() end
 
 --- @public
---- @return boolean
+--- @return boolean the ranged
 function HandWeapon:isRanged() end
 
 --- @public
@@ -580,11 +583,11 @@ function HandWeapon:isReloadable(owner) end
 function HandWeapon:isRoundChambered() end
 
 --- @public
---- @return boolean
+--- @return boolean the shareDamage
 function HandWeapon:isShareDamage() end
 
 --- @public
---- @return boolean
+--- @return boolean the shareEndurance
 function HandWeapon:isShareEndurance() end
 
 --- @public
@@ -592,15 +595,15 @@ function HandWeapon:isShareEndurance() end
 function HandWeapon:isSpentRoundChambered() end
 
 --- @public
---- @return boolean
+--- @return boolean the splatBloodOnNoDeath
 function HandWeapon:isSplatBloodOnNoDeath() end
 
 --- @public
---- @return boolean
+--- @return boolean the useEndurance
 function HandWeapon:isUseEndurance() end
 
 --- @public
---- @return boolean
+--- @return boolean the useSelf
 function HandWeapon:isUseSelf() end
 
 --- @public
@@ -645,7 +648,7 @@ function HandWeapon:setAimingPerkRangeModifier(aimingPerkRangeModifier) end
 function HandWeapon:setAimingTime(aimingTime) end
 
 --- @public
---- @param AlwaysKnockdown boolean
+--- @param AlwaysKnockdown boolean the AlwaysKnockdown to set
 --- @return void
 function HandWeapon:setAlwaysKnockdown(AlwaysKnockdown) end
 
@@ -660,7 +663,7 @@ function HandWeapon:setAmmoBox(ammoBox) end
 function HandWeapon:setAmmoPerShoot(ammoPerShoot) end
 
 --- @public
---- @param angleFalloff boolean
+--- @param angleFalloff boolean the angleFalloff to set
 --- @return void
 function HandWeapon:setAngleFalloff(angleFalloff) end
 
@@ -680,7 +683,7 @@ function HandWeapon:setBloodLevel(level) end
 function HandWeapon:setBulletOutSound(bulletOutSound) end
 
 --- @public
---- @param bCanBarracade boolean
+--- @param bCanBarracade boolean the bCanBarracade to set
 --- @return void
 function HandWeapon:setCanBarracade(bCanBarracade) end
 
@@ -700,7 +703,7 @@ function HandWeapon:setCanBeReused(canBeReused) end
 function HandWeapon:setCanon(canon) end
 
 --- @public
---- @param CantAttackWithLowestEndurance boolean
+--- @param CantAttackWithLowestEndurance boolean the CantAttackWithLowestEndurance to set
 --- @return void
 function HandWeapon:setCantAttackWithLowestEndurance(CantAttackWithLowestEndurance) end
 
@@ -725,7 +728,7 @@ function HandWeapon:setClip(clip) end
 function HandWeapon:setClipSize(capacity) end
 
 --- @public
---- @param ConditionLowerChance int
+--- @param ConditionLowerChance int the ConditionLowerChance to set
 --- @return void
 function HandWeapon:setConditionLowerChance(ConditionLowerChance) end
 
@@ -755,22 +758,22 @@ function HandWeapon:setDamageCategory(damageCategory) end
 function HandWeapon:setDamageMakeHole(damageMakeHole) end
 
 --- @public
---- @param doSwingBeforeImpact float
+--- @param doSwingBeforeImpact float the doSwingBeforeImpact to set
 --- @return void
 function HandWeapon:setDoSwingBeforeImpact(doSwingBeforeImpact) end
 
 --- @public
---- @param DoorDamage int
+--- @param DoorDamage int the DoorDamage to set
 --- @return void
 function HandWeapon:setDoorDamage(DoorDamage) end
 
 --- @public
---- @param doorHitSound String
+--- @param doorHitSound String the doorHitSound to set
 --- @return void
 function HandWeapon:setDoorHitSound(doorHitSound) end
 
 --- @public
---- @param EnduranceMod float
+--- @param EnduranceMod float the EnduranceMod to set
 --- @return void
 function HandWeapon:setEnduranceMod(EnduranceMod) end
 
@@ -830,7 +833,7 @@ function HandWeapon:setHitChance(hitChance) end
 function HandWeapon:setHitFloorSound(hitFloorSound) end
 
 --- @public
---- @param impactSound String
+--- @param impactSound String the impactSound to set
 --- @return void
 function HandWeapon:setImpactSound(impactSound) end
 
@@ -850,12 +853,12 @@ function HandWeapon:setJamGunChance(jamGunChance) end
 function HandWeapon:setJammed(isJammed) end
 
 --- @public
---- @param knockBackOnNoDeath boolean
+--- @param knockBackOnNoDeath boolean the knockBackOnNoDeath to set
 --- @return void
 function HandWeapon:setKnockBackOnNoDeath(knockBackOnNoDeath) end
 
 --- @public
---- @param KnockdownMod float
+--- @param KnockdownMod float the KnockdownMod to set
 --- @return void
 function HandWeapon:setKnockdownMod(KnockdownMod) end
 
@@ -865,37 +868,37 @@ function HandWeapon:setKnockdownMod(KnockdownMod) end
 function HandWeapon:setMagazineType(magazineType) end
 
 --- @public
---- @param maxAngle float
+--- @param maxAngle float the maxAngle to set
 --- @return void
 function HandWeapon:setMaxAngle(maxAngle) end
 
 --- @public
---- @param maxDamage float
+--- @param maxDamage float the maxDamage to set
 --- @return void
 function HandWeapon:setMaxDamage(maxDamage) end
 
 --- @public
---- @param maxHitCount int
+--- @param maxHitCount int the maxHitCount to set
 --- @return void
 function HandWeapon:setMaxHitCount(maxHitCount) end
 
 --- @public
---- @param maxRange float
+--- @param maxRange float the maxRange to set
 --- @return void
 function HandWeapon:setMaxRange(maxRange) end
 
 --- @public
---- @param minAngle float
+--- @param minAngle float the minAngle to set
 --- @return void
 function HandWeapon:setMinAngle(minAngle) end
 
 --- @public
---- @param minDamage float
+--- @param minDamage float the minDamage to set
 --- @return void
 function HandWeapon:setMinDamage(minDamage) end
 
 --- @public
---- @param minRange float
+--- @param minRange float the minRange to set
 --- @return void
 function HandWeapon:setMinRange(minRange) end
 
@@ -905,7 +908,7 @@ function HandWeapon:setMinRange(minRange) end
 function HandWeapon:setMinRangeRanged(minRangeRanged) end
 
 --- @public
---- @param minimumSwingTime float
+--- @param minimumSwingTime float the minimumSwingTime to set
 --- @return void
 function HandWeapon:setMinimumSwingTime(minimumSwingTime) end
 
@@ -915,12 +918,12 @@ function HandWeapon:setMinimumSwingTime(minimumSwingTime) end
 function HandWeapon:setModelWeaponPart(modelWeaponPart) end
 
 --- @public
---- @param MultipleHitConditionAffected boolean
+--- @param MultipleHitConditionAffected boolean the MultipleHitConditionAffected to set
 --- @return void
 function HandWeapon:setMultipleHitConditionAffected(MultipleHitConditionAffected) end
 
 --- @public
---- @param noiseFactor float
+--- @param noiseFactor float the noiseFactor to set
 --- @return void
 function HandWeapon:setNoiseFactor(noiseFactor) end
 
@@ -935,22 +938,22 @@ function HandWeapon:setNoiseRange(noiseRange) end
 function HandWeapon:setOriginalWeaponSprite(originalWeaponSprite) end
 
 --- @public
---- @param otherBoost float
+--- @param otherBoost float the otherBoost to set
 --- @return void
 function HandWeapon:setOtherBoost(otherBoost) end
 
 --- @public
---- @param otherHandRequire String
+--- @param otherHandRequire String the otherHandRequire to set
 --- @return void
 function HandWeapon:setOtherHandRequire(otherHandRequire) end
 
 --- @public
---- @param otherHandUse boolean
+--- @param otherHandUse boolean the otherHandUse to set
 --- @return void
 function HandWeapon:setOtherHandUse(otherHandUse) end
 
 --- @public
---- @param physicsObject String
+--- @param physicsObject String the physicsObject to set
 --- @return void
 function HandWeapon:setPhysicsObject(physicsObject) end
 
@@ -970,7 +973,7 @@ function HandWeapon:setPlacedSprite(placedSprite) end
 function HandWeapon:setProjectileCount(count) end
 
 --- @public
---- @param pushBackMod float
+--- @param pushBackMod float the pushBackMod to set
 --- @return void
 function HandWeapon:setPushBackMod(pushBackMod) end
 
@@ -985,12 +988,12 @@ function HandWeapon:setRackAfterShoot(rackAfterShoot) end
 function HandWeapon:setRackSound(rackSound) end
 
 --- @public
---- @param rangeFalloff boolean
+--- @param rangeFalloff boolean the rangeFalloff to set
 --- @return void
 function HandWeapon:setRangeFalloff(rangeFalloff) end
 
 --- @public
---- @param ranged boolean
+--- @param ranged boolean the ranged to set
 --- @return void
 function HandWeapon:setRanged(ranged) end
 
@@ -1025,12 +1028,12 @@ function HandWeapon:setScope(scope) end
 function HandWeapon:setSensorRange(sensorRange) end
 
 --- @public
---- @param shareDamage boolean
+--- @param shareDamage boolean the shareDamage to set
 --- @return void
 function HandWeapon:setShareDamage(shareDamage) end
 
 --- @public
---- @param shareEndurance boolean
+--- @param shareEndurance boolean the shareEndurance to set
 --- @return void
 function HandWeapon:setShareEndurance(shareEndurance) end
 
@@ -1055,12 +1058,12 @@ function HandWeapon:setSmokeRange(smokeRange) end
 function HandWeapon:setSoundGain(soundGain) end
 
 --- @public
---- @param soundRadius int
+--- @param soundRadius int the soundRadius to set
 --- @return void
 function HandWeapon:setSoundRadius(soundRadius) end
 
 --- @public
---- @param soundVolume int
+--- @param soundVolume int the soundVolume to set
 --- @return void
 function HandWeapon:setSoundVolume(soundVolume) end
 
@@ -1075,12 +1078,12 @@ function HandWeapon:setSpentRoundChambered(roundChambered) end
 function HandWeapon:setSpentRoundCount(count) end
 
 --- @public
---- @param splatBloodOnNoDeath boolean
+--- @param splatBloodOnNoDeath boolean the splatBloodOnNoDeath to set
 --- @return void
 function HandWeapon:setSplatBloodOnNoDeath(splatBloodOnNoDeath) end
 
 --- @public
---- @param splatNumber int
+--- @param splatNumber int the splatNumber to set
 --- @return void
 function HandWeapon:setSplatNumber(splatNumber) end
 
@@ -1095,17 +1098,17 @@ function HandWeapon:setStock(stock) end
 function HandWeapon:setSubCategory(subcategory) end
 
 --- @public
---- @param swingSound String
+--- @param swingSound String the swingSound to set
 --- @return void
 function HandWeapon:setSwingSound(swingSound) end
 
 --- @public
---- @param swingTime float
+--- @param swingTime float the swingTime to set
 --- @return void
 function HandWeapon:setSwingTime(swingTime) end
 
 --- @public
---- @param toHitModifier float
+--- @param toHitModifier float the toHitModifier to set
 --- @return void
 function HandWeapon:setToHitModifier(toHitModifier) end
 
@@ -1120,12 +1123,12 @@ function HandWeapon:setTreeDamage(treeDamage) end
 function HandWeapon:setTriggerExplosionTimer(triggerExplosionTimer) end
 
 --- @public
---- @param useEndurance boolean
+--- @param useEndurance boolean the useEndurance to set
 --- @return void
 function HandWeapon:setUseEndurance(useEndurance) end
 
 --- @public
---- @param useSelf boolean
+--- @param useSelf boolean the useSelf to set
 --- @return void
 function HandWeapon:setUseSelf(useSelf) end
 
@@ -1146,7 +1149,7 @@ function HandWeapon:setWeaponPart(type, part) end
 function HandWeapon:setWeaponReloadType(weaponReloadType) end
 
 --- @public
---- @param weaponSprite String
+--- @param weaponSprite String the weaponSprite to set
 --- @return void
 function HandWeapon:setWeaponSprite(weaponSprite) end
 

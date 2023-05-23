@@ -78,6 +78,9 @@ function IsoFire:getLightRadius() end
 function IsoFire:getObjectName() end
 
 --- @public
+---
+---  The more this number is low, the faster it's gonna spread
+---
 --- @return int
 function IsoFire:getSpreadDelay() end
 
@@ -131,6 +134,9 @@ function IsoFire:save(output, IS_DEBUG_SAVE) end
 function IsoFire:saveChange(arg0, arg1, arg2) end
 
 --- @public
+---
+---  Up this number to make the fire life longer
+---
 --- @param Life int
 --- @return void
 function IsoFire:setLife(Life) end
@@ -146,6 +152,9 @@ function IsoFire:setLifeStage(lifeStage) end
 function IsoFire:setLightRadius(radius) end
 
 --- @public
+---
+---  The more this number is low, the faster it's gonna spread
+---
 --- @param SpreadDelay int
 --- @return void
 function IsoFire:setSpreadDelay(SpreadDelay) end

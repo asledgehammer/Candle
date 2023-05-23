@@ -47,7 +47,11 @@ function RandomizedBuildingBase:addRandomRangedWeapon(container, addBulletsInGun
 function RandomizedBuildingBase:addWorldItem(item, sq, obj) end
 
 --- @public
---- @param def BuildingDef
+---
+---  If you specify a outfit, make sure it works for both gender! (or force
+---  to 0 or 1 if it's gender-specific)
+---
+--- @param def BuildingDef buildingDef
 --- @param totalZombies int
 --- @param outfit String
 --- @param femaleChance Integer
@@ -100,6 +104,11 @@ function RandomizedBuildingBase:isAlwaysDo() end
 function RandomizedBuildingBase:isTableFor3DItems(obj, sq) end
 
 --- @public
+---
+---  Don't do any building change in a player's building Also check if the building
+---  a bathroom, a kitchen and a bedroom This is ignored for the alwaysDo building
+---  i can do stuff in spiffo, pizzawhirled, etc..)
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RadioBroadCast
---- Turbo
+--- @class RadioBroadCast Turbo
 RadioBroadCast = {};
 
 ------------------------------------

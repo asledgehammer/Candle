@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSHenDo: RandomizedDeadSurvivorBase
---- Create some zombies female zombies with 1 naked male, some alcohol around
+--- @class RDSHenDo: RandomizedDeadSurvivorBase Create some zombies female zombies with 1 naked male, some alcohol around
 RDSHenDo = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RDSHenDo = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

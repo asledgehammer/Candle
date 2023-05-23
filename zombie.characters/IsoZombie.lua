@@ -126,10 +126,18 @@ function IsoZombie:addItemToSpawnAtDeath(item) end
 function IsoZombie:addRandomBloodDirtHolesEtc() end
 
 --- @public
+---
+---  Possibly add visual bandages (bloody) on the zombie TODO: Make InventoryItem
+---  to it in DeadBodyAtlas to being able to remove them (like primary/secondary
+---
 --- @return void
 function IsoZombie:addRandomVisualBandages() end
 
 --- @public
+---
+---  Add some random visual damage (clothing actually) to the zombies. Those items
+---  appear in inventory.
+---
 --- @return void
 function IsoZombie:addRandomVisualDamages() end
 
@@ -170,7 +178,10 @@ function IsoZombie:clearAggroList() end
 function IsoZombie:clearItemsToSpawnAtDeath() end
 
 --- @public
---- @param itemGuid String
+---
+---  Description copied from class: IsoGameCharacter
+---
+--- @param itemGuid String The item's Globally Unique Identifier (GUID).
 --- @return void
 function IsoZombie:clothingItemChanged(itemGuid) end
 
@@ -195,6 +206,9 @@ function IsoZombie:dressInNamedOutfit(outfitName) end
 function IsoZombie:dressInPersistentOutfitID(outfitID) end
 
 --- @public
+---
+---  Description copied from class: IsoGameCharacter
+---
 --- @return void
 function IsoZombie:dressInRandomOutfit() end
 

@@ -93,6 +93,13 @@ function IsoPlayer.hasInstance() end
 
 --- @public
 --- @static
+---
+---  The IsoPlayer.instance thread-safe invoke. Calls the supplied callback if the
+---  is non-null. Performs this in a thread-safe manner. It is intended that, should
+---  thread intend to use the IsoPlayer.instance, and does not want another thread
+---  change the ptr in the meanwhile, it should call invokeOnPlayerInstance(Runnable
+---  eg. IsoPlayer.invokeOnPlayerInstance(()-> { IsoPlayer.instance.doStuff(); }
+---
 --- @param callback Runnable
 --- @return void
 function IsoPlayer.invokeOnPlayerInstance(callback) end
@@ -330,7 +337,7 @@ function IsoPlayer:getAsleepTime() end
 function IsoPlayer:getAttackType() end
 
 --- @public
---- @return IsoCell
+--- @return IsoCell the cell
 function IsoPlayer:getCell() end
 
 --- @public
@@ -522,7 +529,10 @@ function IsoPlayer:getPing() end
 function IsoPlayer:getPlayerClothingInsulation() end
 
 --- @public
---- @return float
+---
+---  Return the amount of temperature given by clothes wear
+---
+--- @return float temperature
 function IsoPlayer:getPlayerClothingTemperature() end
 
 --- @public
@@ -929,7 +939,10 @@ function IsoPlayer:load(fileName) end
 function IsoPlayer:nullifyAiming() end
 
 --- @public
---- @param modelManager ModelManager
+---
+---  Callback from ModelManager.Add/Remove functions.
+---
+--- @param modelManager ModelManager Event sender.
 --- @param isCulled boolean
 --- @return void
 function IsoPlayer:onCullStateChanged(modelManager, isCulled) end
@@ -1292,6 +1305,10 @@ function IsoPlayer:setShowMPInfos(b) end
 function IsoPlayer:setShowTag(show) end
 
 --- @public
+---
+---  If you've take more than 10 sleeping pills you lose some health If you're
+---  1 pills = 2
+---
 --- @param sleepingPillsTaken int
 --- @return void
 function IsoPlayer:setSleepingPillsTaken(sleepingPillsTaken) end

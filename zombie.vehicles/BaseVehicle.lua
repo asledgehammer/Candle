@@ -144,11 +144,21 @@ function BaseVehicle:Thump(thumper) end
 function BaseVehicle:WeaponHit(chr, weapon) end
 
 --- @public
+---
+---  When hitting a character (zombie or player) damage aren't the same as hitting a
+---  damaged will be mainly focus on windshield/hood, not on doors/windows like when
+---  a wall.
+---
 --- @param dmg int
 --- @return void
 function BaseVehicle:addDamageFrontHitAChr(dmg) end
 
 --- @public
+---
+---  When hitting a character (zombie or player) damage aren't the same as hitting a
+---  damaged will be mainly focus on windshield/truckbed, not on doors/windows like
+---  hitting a wall.
+---
 --- @param dmg int
 --- @return void
 function BaseVehicle:addDamageRearHitAChr(dmg) end
@@ -301,6 +311,9 @@ function BaseVehicle:canUninstallPart(chr, part) end
 function BaseVehicle:canUnlockDoor(part, chr) end
 
 --- @public
+---
+---  Change transmission, slow down the car if you change shift for a superior one
+---
 --- @param newTransmission TransmissionNumber
 --- @return void
 function BaseVehicle:changeTransmission(newTransmission) end
@@ -748,6 +761,10 @@ function BaseVehicle:getNumberOfPartsWithContainers() end
 function BaseVehicle:getObjectName() end
 
 --- @public
+---
+---  Give the offroad efficiency of the car, based on car's script + where the
+---  is (in forest you get more damage than vegitation) Currently x2 to balance
+---
 --- @return float
 function BaseVehicle:getOffroadEfficiency() end
 
@@ -1074,6 +1091,9 @@ function BaseVehicle:hasLightbar() end
 function BaseVehicle:hasRoof(seat) end
 
 --- @public
+---
+---  Check if one of the seat door is unlocked
+---
 --- @return boolean
 function BaseVehicle:haveOneDoorUnlocked() end
 
@@ -1514,6 +1534,11 @@ function BaseVehicle:saveChange(arg0, arg1, arg2) end
 function BaseVehicle:scriptReloaded() end
 
 --- @public
+---
+---  Used in mechanics UI, we enable the vehicle in Bullet when starting mechanics
+---  physic will be updated. When we close the UI, we should disable it in Bullet,
+---  if the engine is running.
+---
 --- @param active boolean
 --- @return void
 function BaseVehicle:setActiveInBullet(active) end
@@ -1976,6 +2001,10 @@ function BaseVehicle:transmitSkinIndex() end
 function BaseVehicle:triggerAlarm() end
 
 --- @public
+---
+---  Try to hotwire a car Calcul is: 100-Engine quality (capped to 5) + Skill
+---  electricityLvl * 4 % of hotwiring the car Failing may cause the ignition to
+---
 --- @param electricityLevel int
 --- @return void
 function BaseVehicle:tryHotwire(electricityLevel) end
@@ -2033,6 +2062,9 @@ function BaseVehicle:updateHitByVehicle(target) end
 function BaseVehicle:updateLights() end
 
 --- @public
+---
+---  Update the stats of the part depending on condition
+---
 --- @return void
 function BaseVehicle:updatePartStats() end
 

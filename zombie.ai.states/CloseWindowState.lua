@@ -44,7 +44,7 @@ function CloseWindowState:exit(owner) end
 function CloseWindowState:getWindow(owner) end
 
 --- @public
---- @return boolean
+--- @return boolean TRUE if this state handles the "Cancel Action" key or the B controller button.
 function CloseWindowState:isDoingActionThatCanBeCancelled() end
 
 

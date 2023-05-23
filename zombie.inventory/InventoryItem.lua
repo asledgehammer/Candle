@@ -12,7 +12,7 @@ InventoryItem = {};
 --- @param input ByteBuffer
 --- @param WorldVersion int
 --- @return InventoryItem
---- @overload fun(input: ByteBuffer, WorldVersion: int, doSaveTypeCheck: boolean): InventoryItem
+--- @overload fun(input: ByteBuffer, WorldVersion: int, doSaveTypeCheck: boolean): InventoryItem InventoryItem, or null if the item failed loading or if Creating the item failed due to being obsolete etc.
 function InventoryItem.loadItem(input, WorldVersion) end
 
 
@@ -141,11 +141,11 @@ function InventoryItem:finishupdate() end
 function InventoryItem:getA() end
 
 --- @public
---- @return float
+--- @return float the ActualWeight
 function InventoryItem:getActualWeight() end
 
 --- @public
---- @return float
+--- @return float the Age
 function InventoryItem:getAge() end
 
 --- @public
@@ -206,7 +206,7 @@ function InventoryItem:getBloodClothingType() end
 function InventoryItem:getBodyLocation() end
 
 --- @public
---- @return float
+--- @return float the boredomChange
 function InventoryItem:getBoredomChange() end
 
 --- @public
@@ -222,7 +222,7 @@ function InventoryItem:getBreakSound() end
 function InventoryItem:getBringToBearSound() end
 
 --- @public
---- @return String
+--- @return String the BurntString
 function InventoryItem:getBurntString() end
 
 --- @public
@@ -230,7 +230,7 @@ function InventoryItem:getBurntString() end
 function InventoryItem:getByteData() end
 
 --- @public
---- @return ItemType
+--- @return ItemType the cat
 function InventoryItem:getCat() end
 
 --- @public
@@ -283,7 +283,7 @@ function InventoryItem:getColorInfo() end
 function InventoryItem:getColorRed() end
 
 --- @public
---- @return int
+--- @return int the Condition
 function InventoryItem:getCondition() end
 
 --- @public
@@ -295,7 +295,7 @@ function InventoryItem:getConditionLowerNormal() end
 function InventoryItem:getConditionLowerOffroad() end
 
 --- @public
---- @return int
+--- @return int the ConditionMax
 function InventoryItem:getConditionMax() end
 
 --- @public
@@ -303,15 +303,15 @@ function InventoryItem:getConditionMax() end
 function InventoryItem:getConsolidateOption() end
 
 --- @public
---- @return ItemContainer
+--- @return ItemContainer the container
 function InventoryItem:getContainer() end
 
 --- @public
---- @return int
+--- @return int the containerX
 function InventoryItem:getContainerX() end
 
 --- @public
---- @return int
+--- @return int the containerY
 function InventoryItem:getContainerY() end
 
 --- @public
@@ -319,11 +319,11 @@ function InventoryItem:getContainerY() end
 function InventoryItem:getContentsWeight() end
 
 --- @public
---- @return String
+--- @return String the CookedString
 function InventoryItem:getCookedString() end
 
 --- @public
---- @return float
+--- @return float the CookingTime
 function InventoryItem:getCookingTime() end
 
 --- @public
@@ -339,7 +339,11 @@ function InventoryItem:getCountDownSound() end
 function InventoryItem:getCurrentAmmoCount() end
 
 --- @public
---- @return float
+---
+---  Return the real condition of the weapon, based on this calcul :
+---  * 100
+---
+--- @return float float
 function InventoryItem:getCurrentCondition() end
 
 --- @public
@@ -351,7 +355,7 @@ function InventoryItem:getCurrentUses() end
 function InventoryItem:getCustomMenuOption() end
 
 --- @public
---- @return String
+--- @return String the Description
 function InventoryItem:getDescription() end
 
 --- @public
@@ -532,11 +536,11 @@ function InventoryItem:getMeltingTime() end
 function InventoryItem:getMetalValue() end
 
 --- @public
---- @return float
+--- @return float the MinutesToBurn
 function InventoryItem:getMinutesToBurn() end
 
 --- @public
---- @return float
+--- @return float the MinutesToCook
 function InventoryItem:getMinutesToCook() end
 
 --- @public
@@ -552,27 +556,27 @@ function InventoryItem:getModID() end
 function InventoryItem:getModName() end
 
 --- @public
---- @return String
+--- @return String the module
 function InventoryItem:getModule() end
 
 --- @public
---- @return String
+--- @return String the name
 function InventoryItem:getName() end
 
 --- @public
---- @return IsoDirections
+--- @return IsoDirections the newPlaceDir
 function InventoryItem:getNewPlaceDir() end
 
 --- @public
---- @return int
+--- @return int the OffAge
 function InventoryItem:getOffAge() end
 
 --- @public
---- @return int
+--- @return int the OffAgeMax
 function InventoryItem:getOffAgeMax() end
 
 --- @public
---- @return String
+--- @return String the OffString
 function InventoryItem:getOffString() end
 
 --- @public
@@ -580,7 +584,7 @@ function InventoryItem:getOffString() end
 function InventoryItem:getOutermostContainer() end
 
 --- @public
---- @return IsoDirections
+--- @return IsoDirections the placeDir
 function InventoryItem:getPlaceDir() end
 
 --- @public
@@ -592,7 +596,7 @@ function InventoryItem:getPlaceMultipleSound() end
 function InventoryItem:getPlaceOneSound() end
 
 --- @public
---- @return IsoGameCharacter
+--- @return IsoGameCharacter the previousOwner
 function InventoryItem:getPreviousOwner() end
 
 --- @public
@@ -620,7 +624,7 @@ function InventoryItem:getRemoteControlID() end
 function InventoryItem:getRemoteRange() end
 
 --- @public
---- @return String
+--- @return String the replaceOnUse
 function InventoryItem:getReplaceOnUse() end
 
 --- @public
@@ -653,7 +657,7 @@ function InventoryItem:getReplaceTypesMap() end
 function InventoryItem:getRequireInHandOrInventory() end
 
 --- @public
---- @return ItemContainer
+--- @return ItemContainer the rightClickContainer
 function InventoryItem:getRightClickContainer() end
 
 --- @public
@@ -666,7 +670,7 @@ function InventoryItem:getSaveType() end
 function InventoryItem:getScore(desc) end
 
 --- @public
---- @return Item
+--- @return Item the ScriptItem
 function InventoryItem:getScriptItem() end
 
 --- @public
@@ -688,7 +692,7 @@ function InventoryItem:getStashChance() end
 function InventoryItem:getStaticModel() end
 
 --- @public
---- @return float
+--- @return float the stressChange
 function InventoryItem:getStressChange() end
 
 --- @public
@@ -704,7 +708,7 @@ function InventoryItem:getSuspensionCompression() end
 function InventoryItem:getSuspensionDamping() end
 
 --- @public
---- @return String
+--- @return String the swingAnim
 function InventoryItem:getSwingAnim() end
 
 --- @public
@@ -712,7 +716,7 @@ function InventoryItem:getSwingAnim() end
 function InventoryItem:getTags() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the Taken
 function InventoryItem:getTaken() end
 
 --- @public
@@ -720,19 +724,19 @@ function InventoryItem:getTaken() end
 function InventoryItem:getTex() end
 
 --- @public
---- @return Texture
+--- @return Texture the texture
 function InventoryItem:getTexture() end
 
 --- @public
---- @return Texture
+--- @return Texture the textureBurnt
 function InventoryItem:getTextureBurnt() end
 
 --- @public
---- @return Texture
+--- @return Texture the textureCooked
 function InventoryItem:getTextureCooked() end
 
 --- @public
---- @return Texture
+--- @return Texture the texturerotten
 function InventoryItem:getTexturerotten() end
 
 --- @public
@@ -748,7 +752,7 @@ function InventoryItem:getTorchDot() end
 function InventoryItem:getType() end
 
 --- @public
---- @return String
+--- @return String the UnCookedString
 function InventoryItem:getUnCookedString() end
 
 --- @public
@@ -760,11 +764,11 @@ function InventoryItem:getUnequipSound() end
 function InventoryItem:getUnequippedWeight() end
 
 --- @public
---- @return float
+--- @return float the unhappyChange
 function InventoryItem:getUnhappyChange() end
 
 --- @public
---- @return int
+--- @return int the uses
 function InventoryItem:getUses() end
 
 --- @public
@@ -772,7 +776,7 @@ function InventoryItem:getUses() end
 function InventoryItem:getVisual() end
 
 --- @public
---- @return float
+--- @return float the Weight
 function InventoryItem:getWeight() end
 
 --- @public
@@ -796,7 +800,7 @@ function InventoryItem:getWorldItem() end
 function InventoryItem:getWorldStaticItem() end
 
 --- @public
---- @return String
+--- @return String the WorldTexture
 function InventoryItem:getWorldTexture() end
 
 --- @public
@@ -838,7 +842,7 @@ function InventoryItem:isActivated() end
 function InventoryItem:isAlcoholic() end
 
 --- @public
---- @return boolean
+--- @return boolean the AlwaysWelcomeGift
 function InventoryItem:isAlwaysWelcomeGift() end
 
 --- @public
@@ -850,11 +854,11 @@ function InventoryItem:isBeingFilled() end
 function InventoryItem:isBroken() end
 
 --- @public
---- @return boolean
+--- @return boolean the Burnt
 function InventoryItem:isBurnt() end
 
 --- @public
---- @return boolean
+--- @return boolean the CanBandage
 function InventoryItem:isCanBandage() end
 
 --- @public
@@ -862,11 +866,11 @@ function InventoryItem:isCanBandage() end
 function InventoryItem:isConditionAffectsCapacity() end
 
 --- @public
---- @return boolean
+--- @return boolean the IsCookable
 function InventoryItem:isCookable() end
 
 --- @public
---- @return boolean
+--- @return boolean the Cooked
 function InventoryItem:isCooked() end
 
 --- @public
@@ -882,7 +886,7 @@ function InventoryItem:isCustomName() end
 function InventoryItem:isCustomWeight() end
 
 --- @public
---- @return boolean
+--- @return boolean the DisappearOnUse
 function InventoryItem:isDisappearOnUse() end
 
 --- @public
@@ -930,7 +934,7 @@ function InventoryItem:isInfected() end
 function InventoryItem:isInitialised() end
 
 --- @public
---- @return boolean
+--- @return boolean the IsCookable
 function InventoryItem:isIsCookable() end
 
 --- @public
@@ -974,7 +978,7 @@ function InventoryItem:isUseWorldItem() end
 function InventoryItem:isVanilla() end
 
 --- @public
---- @return boolean
+--- @return boolean the IsWaterSource
 function InventoryItem:isWaterSource() end
 
 --- @public
@@ -1010,12 +1014,12 @@ function InventoryItem:setActivated(activated) end
 function InventoryItem:setActivatedRemote(activated) end
 
 --- @public
---- @param ActualWeight float
+--- @param ActualWeight float the ActualWeight to set
 --- @return void
 function InventoryItem:setActualWeight(ActualWeight) end
 
 --- @public
---- @param Age float
+--- @param Age float the Age to set
 --- @return void
 function InventoryItem:setAge(Age) end
 
@@ -1090,7 +1094,7 @@ function InventoryItem:setBlood(bodyPartType, amount) end
 function InventoryItem:setBloodClothingType(bloodClothingType) end
 
 --- @public
---- @param boredomChange float
+--- @param boredomChange float the boredomChange to set
 --- @return void
 function InventoryItem:setBoredomChange(boredomChange) end
 
@@ -1110,12 +1114,12 @@ function InventoryItem:setBreakSound(breakSound) end
 function InventoryItem:setBroken(broken) end
 
 --- @public
---- @param Burnt boolean
+--- @param Burnt boolean the Burnt to set
 --- @return void
 function InventoryItem:setBurnt(Burnt) end
 
 --- @public
---- @param BurntString String
+--- @param BurntString String the BurntString to set
 --- @return void
 function InventoryItem:setBurntString(BurntString) end
 
@@ -1130,7 +1134,7 @@ function InventoryItem:setCanBeActivated(activatedItem) end
 function InventoryItem:setCanBeRemote(canBeRemote) end
 
 --- @public
---- @param cat ItemType
+--- @param cat ItemType the cat to set
 --- @return void
 function InventoryItem:setCat(cat) end
 
@@ -1160,7 +1164,7 @@ function InventoryItem:setColorGreen(colorGreen) end
 function InventoryItem:setColorRed(colorRed) end
 
 --- @public
---- @param Condition int
+--- @param Condition int the Condition to set
 --- @return void
 --- @overload fun(Condition: int, doSound: boolean): void
 function InventoryItem:setCondition(Condition) end
@@ -1181,37 +1185,37 @@ function InventoryItem:setConditionLowerNormal(conditionLowerNormal) end
 function InventoryItem:setConditionLowerOffroad(conditionLowerOffroad) end
 
 --- @public
---- @param ConditionMax int
+--- @param ConditionMax int the ConditionMax to set
 --- @return void
 function InventoryItem:setConditionMax(ConditionMax) end
 
 --- @public
---- @param container ItemContainer
+--- @param container ItemContainer the container to set
 --- @return void
 function InventoryItem:setContainer(container) end
 
 --- @public
---- @param containerX int
+--- @param containerX int the containerX to set
 --- @return void
 function InventoryItem:setContainerX(containerX) end
 
 --- @public
---- @param containerY int
+--- @param containerY int the containerY to set
 --- @return void
 function InventoryItem:setContainerY(containerY) end
 
 --- @public
---- @param Cooked boolean
+--- @param Cooked boolean the Cooked to set
 --- @return void
 function InventoryItem:setCooked(Cooked) end
 
 --- @public
---- @param CookedString String
+--- @param CookedString String the CookedString to set
 --- @return void
 function InventoryItem:setCookedString(CookedString) end
 
 --- @public
---- @param CookingTime float
+--- @param CookingTime float the CookingTime to set
 --- @return void
 function InventoryItem:setCookingTime(CookingTime) end
 
@@ -1251,7 +1255,7 @@ function InventoryItem:setCustomName(customName) end
 function InventoryItem:setCustomWeight(custom) end
 
 --- @public
---- @param Description String
+--- @param Description String the Description to set
 --- @return void
 function InventoryItem:setDescription(Description) end
 
@@ -1327,7 +1331,7 @@ function InventoryItem:setInfected(infected) end
 function InventoryItem:setInitialised(initialised) end
 
 --- @public
---- @param IsCookable boolean
+--- @param IsCookable boolean the IsCookable to set
 --- @return void
 function InventoryItem:setIsCookable(IsCookable) end
 
@@ -1407,52 +1411,52 @@ function InventoryItem:setMeltingTime(meltingTime) end
 function InventoryItem:setMetalValue(metalValue) end
 
 --- @public
---- @param MinutesToBurn float
+--- @param MinutesToBurn float the MinutesToBurn to set
 --- @return void
 function InventoryItem:setMinutesToBurn(MinutesToBurn) end
 
 --- @public
---- @param MinutesToCook float
+--- @param MinutesToCook float the MinutesToCook to set
 --- @return void
 function InventoryItem:setMinutesToCook(MinutesToCook) end
 
 --- @public
---- @param module String
+--- @param module String the module to set
 --- @return void
 function InventoryItem:setModule(module) end
 
 --- @public
---- @param name String
+--- @param name String the name to set
 --- @return void
 function InventoryItem:setName(name) end
 
 --- @public
---- @param newPlaceDir IsoDirections
+--- @param newPlaceDir IsoDirections the newPlaceDir to set
 --- @return void
 function InventoryItem:setNewPlaceDir(newPlaceDir) end
 
 --- @public
---- @param OffAge int
+--- @param OffAge int the OffAge to set
 --- @return void
 function InventoryItem:setOffAge(OffAge) end
 
 --- @public
---- @param OffAgeMax int
+--- @param OffAgeMax int the OffAgeMax to set
 --- @return void
 function InventoryItem:setOffAgeMax(OffAgeMax) end
 
 --- @public
---- @param OffString String
+--- @param OffString String the OffString to set
 --- @return void
 function InventoryItem:setOffString(OffString) end
 
 --- @public
---- @param placeDir IsoDirections
+--- @param placeDir IsoDirections the placeDir to set
 --- @return void
 function InventoryItem:setPlaceDir(placeDir) end
 
 --- @public
---- @param previousOwner IsoGameCharacter
+--- @param previousOwner IsoGameCharacter the previousOwner to set
 --- @return void
 function InventoryItem:setPreviousOwner(previousOwner) end
 
@@ -1497,7 +1501,7 @@ function InventoryItem:setRemoteController(remoteController) end
 function InventoryItem:setRemoteRange(remoteRange) end
 
 --- @public
---- @param replaceOnUse String
+--- @param replaceOnUse String the replaceOnUse to set
 --- @return void
 function InventoryItem:setReplaceOnUse(replaceOnUse) end
 
@@ -1512,12 +1516,12 @@ function InventoryItem:setReplaceOnUseOn(ReplaceOnUseOn) end
 function InventoryItem:setRequireInHandOrInventory(requireInHandOrInventory) end
 
 --- @public
---- @param rightClickContainer ItemContainer
+--- @param rightClickContainer ItemContainer the rightClickContainer to set
 --- @return void
 function InventoryItem:setRightClickContainer(rightClickContainer) end
 
 --- @public
---- @param ScriptItem Item
+--- @param ScriptItem Item the ScriptItem to set
 --- @return void
 function InventoryItem:setScriptItem(ScriptItem) end
 
@@ -1532,7 +1536,7 @@ function InventoryItem:setStashChance(stashChance) end
 function InventoryItem:setStashMap(stashMap) end
 
 --- @public
---- @param stressChange float
+--- @param stressChange float the stressChange to set
 --- @return void
 function InventoryItem:setStressChange(stressChange) end
 
@@ -1552,27 +1556,27 @@ function InventoryItem:setSuspensionDamping(suspensionDamping) end
 function InventoryItem:setTaintedWater(taintedWater) end
 
 --- @public
---- @param Taken ArrayList
+--- @param Taken ArrayList the Taken to set
 --- @return void
 function InventoryItem:setTaken(Taken) end
 
 --- @public
---- @param texture Texture
+--- @param texture Texture the texture to set
 --- @return void
 function InventoryItem:setTexture(texture) end
 
 --- @public
---- @param textureBurnt Texture
+--- @param textureBurnt Texture the textureBurnt to set
 --- @return void
 function InventoryItem:setTextureBurnt(textureBurnt) end
 
 --- @public
---- @param textureCooked Texture
+--- @param textureCooked Texture the textureCooked to set
 --- @return void
 function InventoryItem:setTextureCooked(textureCooked) end
 
 --- @public
---- @param texturerotten Texture
+--- @param texturerotten Texture the texturerotten to set
 --- @return void
 function InventoryItem:setTexturerotten(texturerotten) end
 
@@ -1587,27 +1591,27 @@ function InventoryItem:setTooltip(tooltip) end
 function InventoryItem:setTorchCone(isTorchCone) end
 
 --- @public
---- @param type String
+--- @param type String the type to set
 --- @return void
 function InventoryItem:setType(type) end
 
 --- @public
---- @param UnCookedString String
+--- @param UnCookedString String the UnCookedString to set
 --- @return void
 function InventoryItem:setUnCookedString(UnCookedString) end
 
 --- @public
---- @param unhappyChange float
+--- @param unhappyChange float the unhappyChange to set
 --- @return void
 function InventoryItem:setUnhappyChange(unhappyChange) end
 
 --- @public
---- @param uses int
+--- @param uses int the uses to set
 --- @return void
 function InventoryItem:setUses(uses) end
 
 --- @public
---- @param Weight float
+--- @param Weight float the Weight to set
 --- @return void
 function InventoryItem:setWeight(Weight) end
 
@@ -1642,7 +1646,7 @@ function InventoryItem:setWorldItem(w) end
 function InventoryItem:setWorldScale(scale) end
 
 --- @public
---- @param WorldTexture String
+--- @param WorldTexture String the WorldTexture to set
 --- @return void
 function InventoryItem:setWorldTexture(WorldTexture) end
 

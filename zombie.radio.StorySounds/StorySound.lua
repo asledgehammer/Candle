@@ -1,7 +1,6 @@
 --- @meta
 
---- @class StorySound
---- Turbo
+--- @class StorySound Turbo
 StorySound = {};
 
 ------------------------------------

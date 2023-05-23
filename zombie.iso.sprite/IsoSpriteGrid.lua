@@ -1,7 +1,6 @@
 --- @meta
 
---- @class IsoSpriteGrid
---- Turbo
+--- @class IsoSpriteGrid Turbo
 IsoSpriteGrid = {};
 
 ------------------------------------

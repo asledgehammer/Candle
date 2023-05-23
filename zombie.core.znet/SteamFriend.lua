@@ -1,7 +1,6 @@
 --- @meta
 
---- @class SteamFriend
---- Created by Gennadiy on 11.06.2015.
+--- @class SteamFriend Created by Gennadiy on 11.06.2015.
 SteamFriend = {};
 
 ------------------------------------

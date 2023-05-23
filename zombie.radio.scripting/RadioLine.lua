@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RadioLine
---- Turbo
+--- @class RadioLine Turbo
 RadioLine = {};
 
 ------------------------------------

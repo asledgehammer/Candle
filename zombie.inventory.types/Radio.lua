@@ -1,7 +1,6 @@
 --- @meta
 
---- @class Radio: Moveable
---- Turbo
+--- @class Radio: Moveable Turbo
 --- @implement Talker
 --- @implement IUpdater
 --- @implement WaveSignalDevice

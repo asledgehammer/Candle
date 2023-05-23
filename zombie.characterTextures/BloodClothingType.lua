@@ -32,6 +32,9 @@ BloodClothingType = {};
 
 --- @public
 --- @static
+---
+---  Should be used only for debug, use Clothing.addPatch for gameplay stuff
+---
 --- @param part BloodBodyPartType
 --- @param humanVisual HumanVisual
 --- @param itemVisuals ArrayList
@@ -107,7 +110,11 @@ function BloodClothingType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return BloodClothingType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return BloodClothingType[] an array containing the constants of this enum class, in the order they are declared
 function BloodClothingType.values() end
 
 

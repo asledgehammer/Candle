@@ -1,7 +1,6 @@
 --- @meta
 
---- @class ClimateValues
---- TurboTuTone.
+--- @class ClimateValues TurboTuTone.
 ClimateValues = {};
 
 ------------------------------------

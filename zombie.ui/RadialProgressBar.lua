@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RadialProgressBar: UIElement
---- TurboTuTone.
+--- @class RadialProgressBar: UIElement TurboTuTone.
 RadialProgressBar = {};
 
 ------------------------------------

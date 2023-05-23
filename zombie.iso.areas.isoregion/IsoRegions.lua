@@ -1,7 +1,6 @@
 --- @meta
 
---- @class IsoRegions
---- TurboTuTone.
+--- @class IsoRegions TurboTuTone.
 --- @field public BIT_EMPTY byte
 --- @field public BIT_HAS_FLOOR byte
 --- @field public BIT_HAS_ROOF byte
@@ -57,17 +56,25 @@ function IsoRegions.getChunkFile(chunkX, chunkY) end
 
 --- @public
 --- @static
+---
+---  Returns a IChunkRegion for the square. Note: Returned objects from this
+---  should not be retained as the DataRoot may get swapped.
+---
 --- @param x int
 --- @param y int
 --- @param z int
---- @return IChunkRegion
+--- @return IChunkRegion can be null.
 function IsoRegions.getChunkRegion(x, y, z) end
 
 --- @public
 --- @static
+---
+---  Returns a DataChunk for the square. Note: Returned objects from this function
+---  not be retained as the DataRoot may get swapped.
+---
 --- @param chunkx int
 --- @param chunky int
---- @return DataChunk
+--- @return DataChunk can be null.
 function IsoRegions.getDataChunk(chunkx, chunky) end
 
 --- @public
@@ -82,10 +89,15 @@ function IsoRegions.getHeaderFile() end
 
 --- @public
 --- @static
+---
+---  Returns a IWorldRegion for the square. Note: Returned objects from this
+---  should not be retained as the DataRoot may get swapped. Note: The IWorldRegion
+---  get cached in IsoGridSquare for optimizing purposes but this gets handled in
+---
 --- @param x int
 --- @param y int
 --- @param z int
---- @return IWorldRegion
+--- @return IWorldRegion can be null.
 function IsoRegions.getIsoWorldRegion(x, y, z) end
 
 --- @public
@@ -151,12 +163,21 @@ function IsoRegions.setDebugLoadAllChunks(b) end
 
 --- @public
 --- @static
+---
+---  Needs to be called before a player manipulates the grid. Records bitFlags for
+---  state of the square that are compared to bitFlags for the state of the square
+---  manipulation to detect relevant changes.
+---
 --- @param gs IsoGridSquare
 --- @return void
 function IsoRegions.setPreviousFlags(gs) end
 
 --- @public
 --- @static
+---
+---  Called after the grid has been manipulated by a player. NOTE: setPreviousFlags
+---  to be called prior to the grid being manipulated by a player.
+---
 --- @param gs IsoGridSquare
 --- @return void
 --- @overload fun(gs: IsoGridSquare, isRemoval: boolean): void

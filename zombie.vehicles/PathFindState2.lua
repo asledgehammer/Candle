@@ -29,6 +29,9 @@ function PathFindState2:execute(owner) end
 function PathFindState2:exit(owner) end
 
 --- @public
+---
+---  Return TRUE if the owner is currently moving. Defaults to FALSE
+---
 --- @param owner IsoGameCharacter
 --- @return boolean
 function PathFindState2:isMoving(owner) end

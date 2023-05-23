@@ -102,6 +102,10 @@ function ItemContainer:HasType(itemType) end
 function ItemContainer:Remove(itemTypes) end
 
 --- @public
+---
+---  Remove all the item of the type in parameter inside the container Ex of
+---  : Broccoli (no need the module like Base.Broccoli)
+---
 --- @param itemType String
 --- @return void
 function ItemContainer:RemoveAll(itemType) end
@@ -238,7 +242,7 @@ function ItemContainer:emptyIt() end
 function ItemContainer:getAcceptItemFunction() end
 
 --- @public
---- @return float
+--- @return float the ageFactor
 function ItemContainer:getAgeFactor() end
 
 --- @public
@@ -539,7 +543,7 @@ function ItemContainer:getContainingItem() end
 function ItemContainer:getContentsWeight() end
 
 --- @public
---- @return float
+--- @return float the CookingFactor
 function ItemContainer:getCookingFactor() end
 
 --- @public
@@ -803,7 +807,7 @@ function ItemContainer:getItemWithID(id) end
 function ItemContainer:getItemWithIDRecursiv(id) end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the Items
 function ItemContainer:getItems() end
 
 --- @public
@@ -853,7 +857,7 @@ function ItemContainer:getOnlyAcceptCategory() end
 function ItemContainer:getOpenSound() end
 
 --- @public
---- @return IsoObject
+--- @return IsoObject the parent
 function ItemContainer:getParent() end
 
 --- @public
@@ -1015,7 +1019,7 @@ function ItemContainer:getSomeTypeEvalRecurse(arg0, arg1, arg2) end
 function ItemContainer:getSomeTypeRecurse(type, count) end
 
 --- @public
---- @return IsoGridSquare
+--- @return IsoGridSquare the SourceGrid
 function ItemContainer:getSourceGrid() end
 
 --- @public
@@ -1033,7 +1037,7 @@ function ItemContainer:getTotalFoodScore(desc) end
 function ItemContainer:getTotalWeaponScore(desc) end
 
 --- @public
---- @return String
+--- @return String the type
 function ItemContainer:getType() end
 
 --- @public
@@ -1080,11 +1084,11 @@ function ItemContainer:hasRoomFor(chr, weightVal) end
 function ItemContainer:haveThisKeyId(keyId) end
 
 --- @public
---- @return boolean
+--- @return boolean the active
 function ItemContainer:isActive() end
 
 --- @public
---- @return boolean
+--- @return boolean the dirty
 function ItemContainer:isDirty() end
 
 --- @public
@@ -1118,7 +1122,7 @@ function ItemContainer:isInCharacterInventory(chr) end
 function ItemContainer:isInside(item) end
 
 --- @public
---- @return boolean
+--- @return boolean the IsDevice
 function ItemContainer:isIsDevice() end
 
 --- @public
@@ -1197,12 +1201,12 @@ function ItemContainer:sendContentsToRemoteContainer() end
 function ItemContainer:setAcceptItemFunction(functionName) end
 
 --- @public
---- @param active boolean
+--- @param active boolean the active to set
 --- @return void
 function ItemContainer:setActive(active) end
 
 --- @public
---- @param ageFactor float
+--- @param ageFactor float the ageFactor to set
 --- @return void
 function ItemContainer:setAgeFactor(ageFactor) end
 
@@ -1222,7 +1226,7 @@ function ItemContainer:setCloseSound(closeSound) end
 function ItemContainer:setContainerPosition(containerPosition) end
 
 --- @public
---- @param CookingFactor float
+--- @param CookingFactor float the CookingFactor to set
 --- @return void
 function ItemContainer:setCookingFactor(CookingFactor) end
 
@@ -1232,7 +1236,7 @@ function ItemContainer:setCookingFactor(CookingFactor) end
 function ItemContainer:setCustomTemperature(newTemp) end
 
 --- @public
---- @param dirty boolean
+--- @param dirty boolean the dirty to set
 --- @return void
 function ItemContainer:setDirty(dirty) end
 
@@ -1257,12 +1261,12 @@ function ItemContainer:setFreezerPosition(freezerPosition) end
 function ItemContainer:setHasBeenLooted(hasBeenLooted) end
 
 --- @public
---- @param IsDevice boolean
+--- @param IsDevice boolean the IsDevice to set
 --- @return void
 function ItemContainer:setIsDevice(IsDevice) end
 
 --- @public
---- @param Items ArrayList
+--- @param Items ArrayList the Items to set
 --- @return void
 function ItemContainer:setItems(Items) end
 
@@ -1277,7 +1281,7 @@ function ItemContainer:setOnlyAcceptCategory(onlyAcceptCategory) end
 function ItemContainer:setOpenSound(openSound) end
 
 --- @public
---- @param parent IsoObject
+--- @param parent IsoObject the parent to set
 --- @return void
 function ItemContainer:setParent(parent) end
 
@@ -1287,12 +1291,12 @@ function ItemContainer:setParent(parent) end
 function ItemContainer:setPutSound(putSound) end
 
 --- @public
---- @param SourceGrid IsoGridSquare
+--- @param SourceGrid IsoGridSquare the SourceGrid to set
 --- @return void
 function ItemContainer:setSourceGrid(SourceGrid) end
 
 --- @public
---- @param type String
+--- @param type String the type to set
 --- @return void
 function ItemContainer:setType(type) end
 

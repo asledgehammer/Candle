@@ -1,7 +1,6 @@
 --- @meta
 
---- @class VehicleType
---- Contains all car model with their associated skin index
+--- @class VehicleType Contains all car model with their associated skin index
 --- @field public specialVehicles ArrayList
 --- @field public vehicles HashMap
 VehicleType = {};

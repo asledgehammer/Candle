@@ -50,6 +50,9 @@ function ClimbThroughWindowState:getDeltaModifiers(owner, modifiers) end
 function ClimbThroughWindowState:getWindow(owner) end
 
 --- @public
+---
+---  Description copied from class: State
+---
 --- @param owner IsoGameCharacter
 --- @param fromX int
 --- @param fromY int

@@ -14,6 +14,9 @@ IsoStove = {};
 function IsoStove:Activated() end
 
 --- @public
+---
+---  Turn on or off the stove, if no electricity it won't work
+---
 --- @return void
 --- @overload fun(): void
 function IsoStove:Toggle() end

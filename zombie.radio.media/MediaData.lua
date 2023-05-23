@@ -1,7 +1,6 @@
 --- @meta
 
---- @class MediaData
---- TurboTuTone.
+--- @class MediaData TurboTuTone.
 MediaData = {};
 
 ------------------------------------

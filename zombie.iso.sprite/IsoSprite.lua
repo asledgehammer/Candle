@@ -207,7 +207,7 @@ function IsoSprite:getName() end
 function IsoSprite:getParentObjectName() end
 
 --- @public
---- @return PropertyContainer
+--- @return PropertyContainer the Properties
 function IsoSprite:getProperties() end
 
 --- @public

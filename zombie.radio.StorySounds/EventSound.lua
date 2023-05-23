@@ -1,7 +1,6 @@
 --- @meta
 
---- @class EventSound
---- Turbo
+--- @class EventSound Turbo
 EventSound = {};
 
 ------------------------------------

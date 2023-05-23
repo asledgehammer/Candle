@@ -1,7 +1,6 @@
 --- @meta
 
---- @class DayInfo
---- DAY INFO
+--- @class DayInfo DAY INFO
 DayInfo = {};
 
 ------------------------------------

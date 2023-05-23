@@ -1,7 +1,6 @@
 --- @meta
 
---- @class Moveable: InventoryItem
---- Turbo.
+--- @class Moveable: InventoryItem Turbo.
 Moveable = {};
 
 ------------------------------------
@@ -54,7 +53,7 @@ function Moveable:getLightR() end
 function Moveable:getMovableFullName() end
 
 --- @public
---- @return String
+--- @return String the name
 function Moveable:getName() end
 
 --- @public

@@ -34,17 +34,17 @@ function IsoGridSquare.auth(username, pw) end
 
 --- @public
 --- @static
---- @return float
+--- @return float the darkStep
 function IsoGridSquare.getDarkStep() end
 
 --- @public
 --- @static
---- @return ColorInfo
+--- @return ColorInfo the defColorInfo
 function IsoGridSquare.getDefColorInfo() end
 
 --- @public
 --- @static
---- @return int
+--- @return int the lightcache
 function IsoGridSquare.getLightcache() end
 
 --- @public
@@ -70,7 +70,7 @@ function IsoGridSquare.getNew(cell, slice, x, y, z) end
 
 --- @public
 --- @static
---- @return int
+--- @return int the RecalcLightTime
 function IsoGridSquare.getRecalcLightTime() end
 
 --- @public
@@ -82,7 +82,7 @@ function IsoGridSquare.getSquaresForThread(isoGridSquareCacheDest, count) end
 
 --- @public
 --- @static
---- @return boolean
+--- @return boolean the bDoSlowPathfinding
 function IsoGridSquare.isbDoSlowPathfinding() end
 
 --- @public
@@ -92,13 +92,13 @@ function IsoGridSquare.setCollisionMode() end
 
 --- @public
 --- @static
---- @param aDarkStep float
+--- @param aDarkStep float the darkStep to set
 --- @return void
 function IsoGridSquare.setDarkStep(aDarkStep) end
 
 --- @public
 --- @static
---- @param aLightcache int
+--- @param aLightcache int the lightcache to set
 --- @return void
 function IsoGridSquare.setLightcache(aLightcache) end
 
@@ -115,13 +115,13 @@ function IsoGridSquare.setMatrixBit(matrix, x, y, z, val) end
 
 --- @public
 --- @static
---- @param aRecalcLightTime int
+--- @param aRecalcLightTime int the RecalcLightTime to set
 --- @return void
 function IsoGridSquare.setRecalcLightTime(aRecalcLightTime) end
 
 --- @public
 --- @static
---- @param abDoSlowPathfinding boolean
+--- @param abDoSlowPathfinding boolean the bDoSlowPathfinding to set
 --- @return void
 function IsoGridSquare.setbDoSlowPathfinding(abDoSlowPathfinding) end
 
@@ -497,6 +497,10 @@ function IsoGridSquare:clearPuddles() end
 function IsoGridSquare:clearWater() end
 
 --- @public
+---
+---  Check if there's at least one solid floor around this tile, used to build
+---  floor
+---
 --- @return boolean
 function IsoGridSquare:connectedWithFloor() end
 
@@ -573,7 +577,7 @@ function IsoGridSquare:getBuilding() end
 function IsoGridSquare:getCanSee(playerIndex) end
 
 --- @public
---- @return IsoCell
+--- @return IsoCell the getCell()
 function IsoGridSquare:getCell() end
 
 --- @public
@@ -603,7 +607,7 @@ function IsoGridSquare:getCurtain(curtainType) end
 
 --- @public
 --- @param playerIndex int
---- @return float
+--- @return float the darkMulti
 function IsoGridSquare:getDarkMulti(playerIndex) end
 
 --- @public
@@ -615,7 +619,7 @@ function IsoGridSquare:getDeadBody() end
 function IsoGridSquare:getDeadBodys() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the DeferedCharacters
 function IsoGridSquare:getDeferedCharacters() end
 
 --- @public
@@ -640,12 +644,15 @@ function IsoGridSquare:getDoorOrWindow(north) end
 function IsoGridSquare:getDoorOrWindowOrWindowFrame(dir, ignoreOpen) end
 
 --- @public
+---
+---  Get the door between this grid and the next in parameter
+---
 --- @param next IsoGridSquare
 --- @return IsoObject
 function IsoGridSquare:getDoorTo(next) end
 
 --- @public
---- @return IsoGridSquare
+--- @return IsoGridSquare the e
 function IsoGridSquare:getE() end
 
 --- @public
@@ -661,6 +668,10 @@ function IsoGridSquare:getFloor() end
 function IsoGridSquare:getGenerator() end
 
 --- @public
+---
+---  Check if there's any object on this grid that has a sneak modifier, we use this
+---  check if we reduce the chance of being spotted while crouching
+---
 --- @param onlySolidTrans boolean
 --- @return float
 function IsoGridSquare:getGridSneakModifier(onlySolidTrans) end
@@ -711,7 +722,7 @@ function IsoGridSquare:getHourLastSeen() end
 function IsoGridSquare:getHoursSinceLastSeen() end
 
 --- @public
---- @return Integer
+--- @return Integer the ID
 function IsoGridSquare:getID() end
 
 --- @public
@@ -729,27 +740,27 @@ function IsoGridSquare:getIsoDoor() end
 function IsoGridSquare:getIsoWorldRegion() end
 
 --- @public
---- @return float
+--- @return float the lampostTotalB
 function IsoGridSquare:getLampostTotalB() end
 
 --- @public
---- @return float
+--- @return float the lampostTotalG
 function IsoGridSquare:getLampostTotalG() end
 
 --- @public
---- @return float
+--- @return float the lampostTotalR
 function IsoGridSquare:getLampostTotalR() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the LightInfluenceB
 function IsoGridSquare:getLightInfluenceB() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the LightInfluenceG
 function IsoGridSquare:getLightInfluenceG() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the LightInfluenceR
 function IsoGridSquare:getLightInfluenceR() end
 
 --- @public
@@ -774,15 +785,15 @@ function IsoGridSquare:getLuaTileObjectList() end
 function IsoGridSquare:getModData() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the MovingObjects
 function IsoGridSquare:getMovingObjects() end
 
 --- @public
---- @return IsoGridSquare
+--- @return IsoGridSquare the n
 function IsoGridSquare:getN() end
 
 --- @public
---- @return PZArrayList
+--- @return PZArrayList the Objects
 function IsoGridSquare:getObjects() end
 
 --- @public
@@ -820,7 +831,7 @@ function IsoGridSquare:getPlayerBuiltFloor() end
 function IsoGridSquare:getPlayerCutawayFlag(playerIndex, currentTimeMillis) end
 
 --- @public
---- @return PropertyContainer
+--- @return PropertyContainer the Properties
 function IsoGridSquare:getProperties() end
 
 --- @public
@@ -848,7 +859,7 @@ function IsoGridSquare:getRainSplash() end
 function IsoGridSquare:getRoofHideBuilding() end
 
 --- @public
---- @return IsoRoom
+--- @return IsoRoom the room
 function IsoGridSquare:getRoom() end
 
 --- @public
@@ -860,7 +871,7 @@ function IsoGridSquare:getRoomID() end
 function IsoGridSquare:getRoomSize() end
 
 --- @public
---- @return IsoGridSquare
+--- @return IsoGridSquare the s
 function IsoGridSquare:getS() end
 
 --- @public
@@ -873,16 +884,16 @@ function IsoGridSquare:getSeen(playerIndex) end
 function IsoGridSquare:getSheetRope() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the SpecialObjects
 function IsoGridSquare:getSpecialObjects() end
 
 --- @public
---- @return ArrayList
+--- @return ArrayList the StaticMovingObjects
 function IsoGridSquare:getStaticMovingObjects() end
 
 --- @public
 --- @param playerIndex int
---- @return float
+--- @return float the targetDarkMulti
 function IsoGridSquare:getTargetDarkMulti(playerIndex) end
 
 --- @public
@@ -948,7 +959,7 @@ function IsoGridSquare:getVertLight(i, playerIndex) end
 function IsoGridSquare:getVisionMatrix(dx, dy, dz) end
 
 --- @public
---- @return IsoGridSquare
+--- @return IsoGridSquare the w
 function IsoGridSquare:getW() end
 
 --- @public
@@ -998,11 +1009,17 @@ function IsoGridSquare:getWindowFrame(north) end
 function IsoGridSquare:getWindowFrameTo(next) end
 
 --- @public
+---
+---  Get the IsoThumpable window between this grid and the next in parameter
+---
 --- @param next IsoGridSquare
 --- @return IsoThumpable
 function IsoGridSquare:getWindowThumpableTo(next) end
 
 --- @public
+---
+---  Get the IsoWindow window between this grid and the next in parameter
+---
 --- @param next IsoGridSquare
 --- @return IsoWindow
 function IsoGridSquare:getWindowTo(next) end
@@ -1061,7 +1078,12 @@ function IsoGridSquare:hasDoorOnEdge(edge, ignoreOpen) end
 function IsoGridSquare:hasFlies() end
 
 --- @public
---- @param north boolean
+---
+---  Check if a tile has a solid floor, used to build stuff at z level > 0 Also
+---  check the tile "behind" the one w<e're trying to build something has a floor
+---  one is required)
+---
+--- @param north boolean is the item we're trying to place facing north or not
 --- @return boolean
 function IsoGridSquare:hasFloor(north) end
 
@@ -1123,16 +1145,16 @@ function IsoGridSquare:isAdjacentToWindow() end
 function IsoGridSquare:isBlockedTo(other) end
 
 --- @public
---- @return boolean
+--- @return boolean the CacheIsFree
 function IsoGridSquare:isCacheIsFree() end
 
 --- @public
---- @return boolean
+--- @return boolean the CachedIsFree
 function IsoGridSquare:isCachedIsFree() end
 
 --- @public
 --- @param playerIndex int
---- @return boolean
+--- @return boolean the canSee
 function IsoGridSquare:isCanSee(playerIndex) end
 
 --- @public
@@ -1141,7 +1163,7 @@ function IsoGridSquare:isCommonGrass() end
 
 --- @public
 --- @param playerIndex int
---- @return boolean
+--- @return boolean the bCouldSee
 function IsoGridSquare:isCouldSee(playerIndex) end
 
 --- @public
@@ -1201,7 +1223,7 @@ function IsoGridSquare:isSameStaircase(x, y, z) end
 
 --- @public
 --- @param playerIndex int
---- @return boolean
+--- @return boolean the bSeen
 function IsoGridSquare:isSeen(playerIndex) end
 
 --- @public
@@ -1209,11 +1231,11 @@ function IsoGridSquare:isSeen(playerIndex) end
 function IsoGridSquare:isSolid() end
 
 --- @public
---- @return boolean
+--- @return boolean the SolidFloor
 function IsoGridSquare:isSolidFloor() end
 
 --- @public
---- @return boolean
+--- @return boolean the SolidFloorCached
 function IsoGridSquare:isSolidFloorCached() end
 
 --- @public
@@ -1333,35 +1355,35 @@ function IsoGridSquare:save(output, outputObj) end
 function IsoGridSquare:scoreAsWaypoint(x, y) end
 
 --- @public
---- @param CacheIsFree boolean
+--- @param CacheIsFree boolean the CacheIsFree to set
 --- @return void
 function IsoGridSquare:setCacheIsFree(CacheIsFree) end
 
 --- @public
---- @param CachedIsFree boolean
+--- @param CachedIsFree boolean the CachedIsFree to set
 --- @return void
 function IsoGridSquare:setCachedIsFree(CachedIsFree) end
 
 --- @public
 --- @param playerIndex int
---- @param canSee boolean
+--- @param canSee boolean the canSee to set
 --- @return void
 function IsoGridSquare:setCanSee(playerIndex, canSee) end
 
 --- @public
 --- @param playerIndex int
---- @param bCouldSee boolean
+--- @param bCouldSee boolean the bCouldSee to set
 --- @return void
 function IsoGridSquare:setCouldSee(playerIndex, bCouldSee) end
 
 --- @public
 --- @param playerIndex int
---- @param darkMulti float
+--- @param darkMulti float the darkMulti to set
 --- @return void
 function IsoGridSquare:setDarkMulti(playerIndex, darkMulti) end
 
 --- @public
---- @param e IsoGridSquare
+--- @param e IsoGridSquare the e to set
 --- @return void
 function IsoGridSquare:setE(e) end
 
@@ -1380,7 +1402,7 @@ function IsoGridSquare:setHaveElectricity(haveElectricity) end
 function IsoGridSquare:setHourSeenToCurrent() end
 
 --- @public
---- @param ID int
+--- @param ID int the ID to set
 --- @return void
 function IsoGridSquare:setID(ID) end
 
@@ -1393,7 +1415,7 @@ function IsoGridSquare:setIsDissolved(playerIndex, bDissolved, currentTimeMillis
 
 --- @public
 --- @param playerIndex int
---- @param bSeen boolean
+--- @param bSeen boolean the bSeen to set
 --- @return void
 function IsoGridSquare:setIsSeen(playerIndex, bSeen) end
 
@@ -1403,32 +1425,32 @@ function IsoGridSquare:setIsSeen(playerIndex, bSeen) end
 function IsoGridSquare:setIsoWorldRegion(mr) end
 
 --- @public
---- @param lampostTotalB float
+--- @param lampostTotalB float the lampostTotalB to set
 --- @return void
 function IsoGridSquare:setLampostTotalB(lampostTotalB) end
 
 --- @public
---- @param lampostTotalG float
+--- @param lampostTotalG float the lampostTotalG to set
 --- @return void
 function IsoGridSquare:setLampostTotalG(lampostTotalG) end
 
 --- @public
---- @param lampostTotalR float
+--- @param lampostTotalR float the lampostTotalR to set
 --- @return void
 function IsoGridSquare:setLampostTotalR(lampostTotalR) end
 
 --- @public
---- @param LightInfluenceB ArrayList
+--- @param LightInfluenceB ArrayList the LightInfluenceB to set
 --- @return void
 function IsoGridSquare:setLightInfluenceB(LightInfluenceB) end
 
 --- @public
---- @param LightInfluenceG ArrayList
+--- @param LightInfluenceG ArrayList the LightInfluenceG to set
 --- @return void
 function IsoGridSquare:setLightInfluenceG(LightInfluenceG) end
 
 --- @public
---- @param LightInfluenceR ArrayList
+--- @param LightInfluenceR ArrayList the LightInfluenceR to set
 --- @return void
 function IsoGridSquare:setLightInfluenceR(LightInfluenceR) end
 
@@ -1438,7 +1460,7 @@ function IsoGridSquare:setLightInfluenceR(LightInfluenceR) end
 function IsoGridSquare:setLightInfoServerGUIOnly(c) end
 
 --- @public
---- @param n IsoGridSquare
+--- @param n IsoGridSquare the n to set
 --- @return void
 function IsoGridSquare:setN(n) end
 
@@ -1465,7 +1487,7 @@ function IsoGridSquare:setRainDrop(drop) end
 function IsoGridSquare:setRainSplash(splash) end
 
 --- @public
---- @param room IsoRoom
+--- @param room IsoRoom the room to set
 --- @return void
 function IsoGridSquare:setRoom(room) end
 
@@ -1475,23 +1497,23 @@ function IsoGridSquare:setRoom(room) end
 function IsoGridSquare:setRoomID(roomID) end
 
 --- @public
---- @param s IsoGridSquare
+--- @param s IsoGridSquare the s to set
 --- @return void
 function IsoGridSquare:setS(s) end
 
 --- @public
---- @param SolidFloor boolean
+--- @param SolidFloor boolean the SolidFloor to set
 --- @return void
 function IsoGridSquare:setSolidFloor(SolidFloor) end
 
 --- @public
---- @param SolidFloorCached boolean
+--- @param SolidFloorCached boolean the SolidFloorCached to set
 --- @return void
 function IsoGridSquare:setSolidFloorCached(SolidFloorCached) end
 
 --- @public
 --- @param playerIndex int
---- @param targetDarkMulti float
+--- @param targetDarkMulti float the targetDarkMulti to set
 --- @return void
 function IsoGridSquare:setTargetDarkMulti(playerIndex, targetDarkMulti) end
 
@@ -1518,22 +1540,22 @@ function IsoGridSquare:setTrapPositionZ(trapPositionZ) end
 function IsoGridSquare:setVertLight(i, col, playerIndex) end
 
 --- @public
---- @param w IsoGridSquare
+--- @param w IsoGridSquare the w to set
 --- @return void
 function IsoGridSquare:setW(w) end
 
 --- @public
---- @param x int
+--- @param x int the x to set
 --- @return void
 function IsoGridSquare:setX(x) end
 
 --- @public
---- @param y int
+--- @param y int the y to set
 --- @return void
 function IsoGridSquare:setY(y) end
 
 --- @public
---- @param z int
+--- @param z int the z to set
 --- @return void
 function IsoGridSquare:setZ(z) end
 

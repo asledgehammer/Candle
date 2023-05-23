@@ -1,7 +1,6 @@
 --- @meta
 
---- @class CharacterSoundEmitter: BaseCharacterSoundEmitter
---- Created by LEMMYMAIN on 18/09/2014.
+--- @class CharacterSoundEmitter: BaseCharacterSoundEmitter Created by LEMMYMAIN on 18/09/2014.
 --- @implement ICommonSoundEmitter
 CharacterSoundEmitter = {};
 

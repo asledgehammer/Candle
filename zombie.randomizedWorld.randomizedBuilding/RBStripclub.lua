@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RBStripclub: RandomizedBuildingBase
---- Add money/alcohol on table Can also generate a rare male venue
+--- @class RBStripclub: RandomizedBuildingBase Add money/alcohol on table Can also generate a rare male venue
 RBStripclub = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RBStripclub = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

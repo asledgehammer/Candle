@@ -39,6 +39,9 @@ function AttackState:execute(owner) end
 function AttackState:exit(owner) end
 
 --- @public
+---
+---  Description copied from class: State
+---
 --- @param owner IsoGameCharacter
 --- @return boolean
 function AttackState:isAttacking(owner) end

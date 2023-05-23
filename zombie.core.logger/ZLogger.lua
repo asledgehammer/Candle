@@ -28,6 +28,9 @@ function ZLogger:writeUnsafe(arg0, arg1, arg2) end
 ------------------------------------
 
 --- @public
+---
+---  Write logs into file and console.
+---
 --- @param name String
 --- @param useConsole boolean
 --- @return ZLogger

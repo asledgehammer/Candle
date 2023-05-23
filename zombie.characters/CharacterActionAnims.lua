@@ -1,7 +1,6 @@
 --- @meta
 
---- @class CharacterActionAnims: Enum
---- TurboTuTone.
+--- @class CharacterActionAnims: Enum TurboTuTone.
 --- @field public Bandage CharacterActionAnims
 --- @field public Build CharacterActionAnims
 --- @field public BuildLow CharacterActionAnims
@@ -39,7 +38,11 @@ function CharacterActionAnims.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return CharacterActionAnims[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return CharacterActionAnims[] an array containing the constants of this enum class, in the order they are declared
 function CharacterActionAnims.values() end
 
 

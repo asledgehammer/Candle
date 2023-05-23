@@ -30,7 +30,11 @@ function ClothingPatchFabricType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return ClothingPatchFabricType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return ClothingPatchFabricType[] an array containing the constants of this enum class, in the order they are declared
 function ClothingPatchFabricType.values() end
 
 

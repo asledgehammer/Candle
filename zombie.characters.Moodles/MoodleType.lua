@@ -78,7 +78,11 @@ function MoodleType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return MoodleType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return MoodleType[] an array containing the constants of this enum class, in the order they are declared
 function MoodleType.values() end
 
 

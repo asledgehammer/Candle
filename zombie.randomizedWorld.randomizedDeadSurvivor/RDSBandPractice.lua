@@ -1,7 +1,6 @@
 --- @meta
 
---- @class RDSBandPractice: RandomizedDeadSurvivorBase
---- Need a garage with a size of at least 10 tiles Spawn some rocker zombies & music instruments on ground & shelves Corpse with a guitar in his hand
+--- @class RDSBandPractice: RandomizedDeadSurvivorBase Need a garage with a size of at least 10 tiles Spawn some rocker zombies & music instruments on ground & shelves Corpse with a guitar in his hand
 RDSBandPractice = {};
 
 ------------------------------------
@@ -9,6 +8,9 @@ RDSBandPractice = {};
 ------------------------------------
 
 --- @public
+---
+---  Description copied from class: RandomizedBuildingBase
+---
 --- @param def BuildingDef
 --- @param force boolean
 --- @return boolean

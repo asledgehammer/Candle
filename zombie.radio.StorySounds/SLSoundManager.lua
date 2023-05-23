@@ -1,7 +1,6 @@
 --- @meta
 
---- @class SLSoundManager
---- Turbo Story line sound manager
+--- @class SLSoundManager Turbo Story line sound manager
 --- @field public DEBUG boolean
 --- @field public Emitter StoryEmitter
 --- @field public ENABLED boolean

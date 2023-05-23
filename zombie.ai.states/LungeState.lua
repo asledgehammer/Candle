@@ -33,6 +33,9 @@ function LungeState:execute(owner) end
 function LungeState:exit(chr) end
 
 --- @public
+---
+---  Return TRUE if the owner is currently moving. Defaults to FALSE
+---
 --- @param owner IsoGameCharacter
 --- @return boolean
 function LungeState:isMoving(owner) end

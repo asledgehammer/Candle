@@ -32,5 +32,8 @@ function RVSCarCrashCorpse:spawnElement(arg0, arg1) end
 ------------------------------------
 
 --- @public
+---
+---  Vehicle alone, corpse not so far from the car's front with blood trail
+---
 --- @return RVSCarCrashCorpse
 function RVSCarCrashCorpse.new() end

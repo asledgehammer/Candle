@@ -1,7 +1,6 @@
 --- @meta
 
---- @class FishingState: State
---- TurboTuTone.
+--- @class FishingState: State TurboTuTone.
 FishingState = {};
 
 ------------------------------------

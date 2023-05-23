@@ -1,7 +1,6 @@
 --- @meta
 
---- @class IsoChunkRegion
---- TurboTuTone.
+--- @class IsoChunkRegion TurboTuTone.
 --- @implement IChunkRegion
 IsoChunkRegion = {};
 

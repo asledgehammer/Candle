@@ -173,6 +173,9 @@ function IsoDoor:checkKeyId() end
 function IsoDoor:destroy() end
 
 --- @public
+---
+---  Returns the square the player should stand on to add a sheet.
+---
 --- @param chr IsoGameCharacter
 --- @return IsoGridSquare
 function IsoDoor:getAddSheetSquare(chr) end
@@ -249,6 +252,9 @@ function IsoDoor:getOtherSideOfDoor(chr) end
 function IsoDoor:getRenderEffectMaster() end
 
 --- @public
+---
+---  Returns the square the player should stand on to open/close/remove a sheet.
+---
 --- @return IsoGridSquare
 function IsoDoor:getSheetSquare() end
 

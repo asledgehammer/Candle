@@ -77,6 +77,9 @@ function Key:setNumberOfKey(numberOfKey) end
 function Key:setPadlock(padlock) end
 
 --- @public
+---
+---  Get the key number of the building and set it to the key
+---
 --- @return void
 function Key:takeKeyId() end
 

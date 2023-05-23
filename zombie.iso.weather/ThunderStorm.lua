@@ -1,7 +1,6 @@
 --- @meta
 
---- @class ThunderStorm
---- TurboTuTone.
+--- @class ThunderStorm TurboTuTone.
 --- @field public MAP_MAX_X int
 --- @field public MAP_MAX_Y int
 --- @field public MAP_MIN_X int
@@ -66,6 +65,9 @@ function ThunderStorm:noise(s) end
 function ThunderStorm:readNetThunderEvent(input) end
 
 --- @public
+---
+---  IO
+---
 --- @param output DataOutputStream
 --- @return void
 function ThunderStorm:save(output) end

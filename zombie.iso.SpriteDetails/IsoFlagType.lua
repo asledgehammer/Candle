@@ -124,7 +124,11 @@ function IsoFlagType.valueOf(arg0) end
 
 --- @public
 --- @static
---- @return IsoFlagType[]
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return IsoFlagType[] an array containing the constants of this enum class, in the order they are declared
 function IsoFlagType.values() end
 
 

@@ -36,7 +36,7 @@ function Food:finishupdate() end
 function Food:freeze() end
 
 --- @public
---- @return float
+--- @return float the ActualWeight
 function Food:getActualWeight() end
 
 --- @public
@@ -48,7 +48,7 @@ function Food:getBaseHungChange() end
 function Food:getBaseHunger() end
 
 --- @public
---- @return float
+--- @return float the boredomChange
 function Food:getBoredomChange() end
 
 --- @public
@@ -136,7 +136,7 @@ function Food:getLastCookMinute() end
 function Food:getLipids() end
 
 --- @public
---- @return String
+--- @return String the name
 function Food:getName() end
 
 --- @public
@@ -197,7 +197,7 @@ function Food:getScore(desc) end
 function Food:getSpices() end
 
 --- @public
---- @return float
+--- @return float the stressChange
 function Food:getStressChange() end
 
 --- @public
@@ -217,7 +217,7 @@ function Food:getThirstChange() end
 function Food:getThirstChangeUnmodified() end
 
 --- @public
---- @return float
+--- @return float the unhappyChange
 function Food:getUnhappyChange() end
 
 --- @public
@@ -233,11 +233,11 @@ function Food:getUseForPoison() end
 function Food:getUseOnConsume() end
 
 --- @public
---- @return float
+--- @return float the Weight
 function Food:getWeight() end
 
 --- @public
---- @return String
+--- @return String the WorldTexture
 function Food:getWorldTexture() end
 
 --- @public
