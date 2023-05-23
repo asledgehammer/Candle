@@ -10,6 +10,7 @@ ChatMessage = {};
 
 --- @public
 --- @return ChatMessage
+--- @overload fun(): Object
 function ChatMessage:clone() end
 
 --- @public

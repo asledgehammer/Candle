@@ -26,7 +26,7 @@ function BufferedReader:markSupported() end
 
 --- @public
 --- @return int
---- @overload fun(arg0: char[], arg1: int, arg2: int)
+--- @overload fun(arg0: char[], arg1: int, arg2: int): int
 function BufferedReader:read() end
 
 --- @public

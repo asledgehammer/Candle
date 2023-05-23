@@ -15,6 +15,7 @@ function EnumMap:clear() end
 
 --- @public
 --- @return Object
+--- @overload fun(): EnumMap
 function EnumMap:clone() end
 
 --- @public
@@ -50,9 +51,10 @@ function EnumMap:hashCode() end
 function EnumMap:keySet() end
 
 --- @public
---- @param arg0 Object
+--- @param arg0 Enum
 --- @param arg1 Object
 --- @return Object
+--- @overload fun(arg0: Object, arg1: Object): Object
 function EnumMap:put(arg0, arg1) end
 
 --- @public
@@ -81,4 +83,6 @@ function EnumMap:values() end
 --- @public
 --- @param arg0 Class
 --- @return EnumMap
+--- @overload fun(arg0: EnumMap)
+--- @overload fun(arg0: Map)
 function EnumMap.new(arg0) end

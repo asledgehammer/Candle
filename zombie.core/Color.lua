@@ -32,7 +32,7 @@ Color = {};
 --- @param saturation float
 --- @param brightness float
 --- @return Color
---- @overload fun(hue: float, saturation: float, brightness: float, result: Color)
+--- @overload fun(hue: float, saturation: float, brightness: float, result: Color): Color
 function Color.HSBtoRGB(hue, saturation, brightness) end
 
 --- @public
@@ -60,7 +60,7 @@ function Color.blendBGR(valueABGR, targetABGR) end
 --- @static
 --- @param val Color
 --- @return int
---- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: float, g: float, b: float, a: float): int
 function Color.colorToABGR(val) end
 
 --- @public
@@ -172,7 +172,7 @@ function Color:addToCopy(c) end
 
 --- @public
 --- @return Color
---- @overload fun(scale: float)
+--- @overload fun(scale: float): Color
 function Color:brighter() end
 
 --- @public
@@ -184,7 +184,7 @@ function Color:changeHSBValue(hFactor, sFactor, bFactor) end
 
 --- @public
 --- @return Color
---- @overload fun(scale: float)
+--- @overload fun(scale: float): Color
 function Color:darker() end
 
 --- @public
@@ -286,8 +286,8 @@ function Color:scaleCopy(value) end
 --- @public
 --- @param other Color
 --- @return Color
---- @overload fun(r: float, g: float, b: float)
---- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: float, g: float, b: float): Color
+--- @overload fun(r: float, g: float, b: float, a: float): Color
 function Color:set(other) end
 
 --- @public
@@ -313,7 +313,11 @@ function Color:toString() end
 
 --- @public
 --- @return Color
+--- @overload fun(value: int)
 --- @overload fun(color: Color)
 --- @overload fun(r: float, g: float, b: float)
+--- @overload fun(r: int, g: int, b: int)
+--- @overload fun(A: Color, B: Color, delta: float)
 --- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: int, g: int, b: int, a: int)
 function Color.new() end

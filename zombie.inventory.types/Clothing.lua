@@ -396,7 +396,7 @@ function Clothing:update() end
 
 --- @public
 --- @return void
---- @overload fun(bIgnoreEquipped: boolean)
+--- @overload fun(bIgnoreEquipped: boolean): void
 function Clothing:updateWetness() end
 
 
@@ -408,8 +408,9 @@ function Clothing:updateWetness() end
 --- @param module String
 --- @param name String
 --- @param itemType String
---- @param item Item
+--- @param texName String
 --- @param palette String
 --- @param SpriteName String
 --- @return Clothing
-function Clothing.new(module, name, itemType, item, palette, SpriteName) end
+--- @overload fun(module: String, name: String, itemType: String, item: Item, palette: String, SpriteName: String)
+function Clothing.new(module, name, itemType, texName, palette, SpriteName) end

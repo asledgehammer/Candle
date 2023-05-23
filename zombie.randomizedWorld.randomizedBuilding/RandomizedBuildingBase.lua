@@ -42,8 +42,8 @@ function RandomizedBuildingBase:addRandomRangedWeapon(container, addBulletsInGun
 --- @param sq IsoGridSquare
 --- @param obj IsoObject
 --- @return InventoryItem
---- @overload fun(item: String, sq: IsoGridSquare, xoffset: float, yoffset: float, zoffset: float)
---- @overload fun(item: String, sq: IsoGridSquare, xoffset: float, yoffset: float, zoffset: float, worldZ: int)
+--- @overload fun(item: String, sq: IsoGridSquare, xoffset: float, yoffset: float, zoffset: float): InventoryItem
+--- @overload fun(item: String, sq: IsoGridSquare, xoffset: float, yoffset: float, zoffset: float, worldZ: int): InventoryItem
 function RandomizedBuildingBase:addWorldItem(item, sq, obj) end
 
 --- @public

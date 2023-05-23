@@ -24,16 +24,16 @@ function AbstractMap.entry(arg0, arg1) end
 --- @public
 --- @static
 --- @return Map
---- @overload fun(arg0: Object, arg1: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object, arg14: Object, arg15: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object, arg14: Object, arg15: Object, arg16: Object, arg17: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object, arg14: Object, arg15: Object, arg16: Object, arg17: Object, arg18: Object, arg19: Object)
+--- @overload fun(arg0: Object, arg1: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object, arg14: Object, arg15: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object, arg14: Object, arg15: Object, arg16: Object, arg17: Object): Map
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object, arg10: Object, arg11: Object, arg12: Object, arg13: Object, arg14: Object, arg15: Object, arg16: Object, arg17: Object, arg18: Object, arg19: Object): Map
 function AbstractMap.of() end
 
 --- @public
@@ -49,6 +49,7 @@ function AbstractMap.ofEntries(arg0) end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function AbstractMap:clear() end
 
 --- @public
@@ -72,20 +73,24 @@ function AbstractMap:computeIfPresent(arg0, arg1) end
 --- @public
 --- @param arg0 Object
 --- @return boolean
+--- @overload fun(arg0: Object): boolean
 function AbstractMap:containsKey(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
+--- @overload fun(arg0: Object): boolean
 function AbstractMap:containsValue(arg0) end
 
 --- @public
 --- @return Set
+--- @overload fun(): Set
 function AbstractMap:entrySet() end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
+--- @overload fun(arg0: Object): boolean
 function AbstractMap:equals(arg0) end
 
 --- @public
@@ -96,6 +101,7 @@ function AbstractMap:forEach(arg0) end
 --- @public
 --- @param arg0 Object
 --- @return Object
+--- @overload fun(arg0: Object): Object
 function AbstractMap:get(arg0) end
 
 --- @public
@@ -106,14 +112,17 @@ function AbstractMap:getOrDefault(arg0, arg1) end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function AbstractMap:hashCode() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function AbstractMap:isEmpty() end
 
 --- @public
 --- @return Set
+--- @overload fun(): Set
 function AbstractMap:keySet() end
 
 --- @public
@@ -127,11 +136,13 @@ function AbstractMap:merge(arg0, arg1, arg2) end
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
+--- @overload fun(arg0: Object, arg1: Object): Object
 function AbstractMap:put(arg0, arg1) end
 
 --- @public
 --- @param arg0 Map
 --- @return void
+--- @overload fun(arg0: Map): void
 function AbstractMap:putAll(arg0) end
 
 --- @public
@@ -143,14 +154,15 @@ function AbstractMap:putIfAbsent(arg0, arg1) end
 --- @public
 --- @param arg0 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object)
+--- @overload fun(arg0: Object): Object
+--- @overload fun(arg0: Object, arg1: Object): boolean
 function AbstractMap:remove(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object, arg2: Object)
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object): boolean
 function AbstractMap:replace(arg0, arg1) end
 
 --- @public
@@ -160,6 +172,7 @@ function AbstractMap:replaceAll(arg0) end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function AbstractMap:size() end
 
 --- @public
@@ -168,6 +181,7 @@ function AbstractMap:toString() end
 
 --- @public
 --- @return Collection
+--- @overload fun(): Collection
 function AbstractMap:values() end
 
 

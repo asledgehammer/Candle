@@ -92,6 +92,7 @@ function DrainableComboItem:getUseDelta() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function DrainableComboItem:getUsedDelta() end
 
 --- @public
@@ -108,10 +109,12 @@ function DrainableComboItem:isUseWhileUnequiped() end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function DrainableComboItem:render() end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function DrainableComboItem:renderlast() end
 
 --- @public
@@ -177,6 +180,7 @@ function DrainableComboItem:setUseWhileUnequiped(bUseWhileUnequiped) end
 --- @public
 --- @param usedDelta float
 --- @return void
+--- @overload fun(usedDelta: float): void
 function DrainableComboItem:setUsedDelta(usedDelta) end
 
 --- @public
@@ -190,6 +194,7 @@ function DrainableComboItem:shouldUpdateInWorld() end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function DrainableComboItem:update() end
 
 --- @public
@@ -207,4 +212,5 @@ function DrainableComboItem:updateWeight() end
 --- @param itemType String
 --- @param texName String
 --- @return DrainableComboItem
+--- @overload fun(module: String, name: String, itemType: String, item: Item)
 function DrainableComboItem.new(module, name, itemType, texName) end

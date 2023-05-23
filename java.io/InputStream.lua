@@ -24,6 +24,7 @@ function InputStream:available() end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function InputStream:close() end
 
 --- @public
@@ -37,8 +38,8 @@ function InputStream:markSupported() end
 
 --- @public
 --- @return int
---- @overload fun(arg0: byte[])
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
+--- @overload fun(arg0: byte[]): int
+--- @overload fun(arg0: byte[], arg1: int, arg2: int): int
 function InputStream:read() end
 
 --- @public
@@ -48,7 +49,7 @@ function InputStream:readAllBytes() end
 --- @public
 --- @param arg0 int
 --- @return byte[]
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
+--- @overload fun(arg0: byte[], arg1: int, arg2: int): int
 function InputStream:readNBytes(arg0) end
 
 --- @public

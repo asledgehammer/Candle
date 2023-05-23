@@ -58,7 +58,7 @@ function IsoLightSource:isHydroPowered() end
 
 --- @public
 --- @return boolean
---- @overload fun(minX: int, minY: int, maxX: int, maxY: int)
+--- @overload fun(minX: int, minY: int, maxX: int, maxY: int): boolean
 function IsoLightSource:isInBounds() end
 
 --- @public
@@ -134,4 +134,5 @@ function IsoLightSource:wasActive() end
 --- @param radius int
 --- @return IsoLightSource
 --- @overload fun(x: int, y: int, z: int, r: float, g: float, b: float, radius: int, life: int)
+--- @overload fun(x: int, y: int, z: int, r: float, g: float, b: float, radius: int, building: IsoBuilding)
 function IsoLightSource.new(x, y, z, r, g, b, radius) end

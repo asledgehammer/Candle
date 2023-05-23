@@ -199,13 +199,14 @@ function KahluaUtil.toBoolean(arg0) end
 --- @static
 --- @param arg0 double
 --- @return Double
+--- @overload fun(arg0: long): Double
 function KahluaUtil.toDouble(arg0) end
 
 --- @public
 --- @static
 --- @param arg0 String
 --- @return Double
---- @overload fun(arg0: String, arg1: int)
+--- @overload fun(arg0: String, arg1: int): Double
 function KahluaUtil.tonumber(arg0) end
 
 --- @public

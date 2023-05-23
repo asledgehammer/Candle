@@ -103,7 +103,7 @@ function RadioChannel:isVanilla() end
 --- @param scriptName String
 --- @param day int
 --- @return void
---- @overload fun(scriptName: String, day: int, loop: int, maxloops: int)
+--- @overload fun(scriptName: String, day: int, loop: int, maxloops: int): void
 function RadioChannel:setActiveScript(scriptName, day) end
 
 --- @public

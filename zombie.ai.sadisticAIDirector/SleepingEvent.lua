@@ -23,7 +23,7 @@ function SleepingEvent:update(chr) end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return void
---- @overload fun(chr: IsoGameCharacter, remote: boolean)
+--- @overload fun(chr: IsoGameCharacter, remote: boolean): void
 function SleepingEvent:wakeUp(chr) end
 
 

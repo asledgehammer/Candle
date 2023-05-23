@@ -52,6 +52,7 @@ function Moodles:getMoodleDisplayString(MoodleIndex) end
 --- @public
 --- @param MoodleIndex int
 --- @return int
+--- @overload fun(MType: MoodleType): int
 function Moodles:getMoodleLevel(MoodleIndex) end
 
 --- @public

@@ -103,13 +103,15 @@ function ChatBase:removeMember(playerID) end
 --- @public
 --- @param msg ChatMessage
 --- @return void
+--- @overload fun(msg: ServerChatMessage): void
 function ChatBase:sendMessageToChatMembers(msg) end
 
 --- @public
---- @param connection UdpConnection
+--- @param playerID short
 --- @param msg ChatMessage
 --- @return void
-function ChatBase:sendMessageToPlayer(connection, msg) end
+--- @overload fun(connection: UdpConnection, msg: ChatMessage): void
+function ChatBase:sendMessageToPlayer(playerID, msg) end
 
 --- @public
 --- @param playerConnection UdpConnection
@@ -119,6 +121,7 @@ function ChatBase:sendPlayerJoinChatPacket(playerConnection) end
 --- @public
 --- @param playerID short
 --- @return void
+--- @overload fun(connection: UdpConnection): void
 function ChatBase:sendPlayerLeaveChatPacket(playerID) end
 
 --- @public
@@ -150,7 +153,7 @@ function ChatBase:setShowTitle(showTitle) end
 --- @public
 --- @param msg ChatMessage
 --- @return void
---- @overload fun(text: String, author: String)
+--- @overload fun(text: String, author: String): void
 function ChatBase:showMessage(msg) end
 
 --- @public

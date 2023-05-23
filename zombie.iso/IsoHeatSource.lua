@@ -29,7 +29,7 @@ function IsoHeatSource:getZ() end
 
 --- @public
 --- @return boolean
---- @overload fun(minX: int, minY: int, maxX: int, maxY: int)
+--- @overload fun(minX: int, minY: int, maxX: int, maxY: int): boolean
 function IsoHeatSource:isInBounds() end
 
 --- @public

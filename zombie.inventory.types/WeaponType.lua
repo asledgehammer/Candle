@@ -21,6 +21,7 @@ WeaponType = {};
 --- @static
 --- @param chr IsoGameCharacter
 --- @return WeaponType
+--- @overload fun(weapon: HandWeapon): WeaponType
 function WeaponType.getWeaponType(chr) end
 
 --- @public

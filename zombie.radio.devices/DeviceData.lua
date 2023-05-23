@@ -270,7 +270,7 @@ function DeviceData:setBaseVolumeRange(f) end
 --- @public
 --- @param c int
 --- @return void
---- @overload fun(chan: int, setislistening: boolean)
+--- @overload fun(chan: int, setislistening: boolean): void
 function DeviceData:setChannel(c) end
 
 --- @public

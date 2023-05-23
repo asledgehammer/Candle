@@ -56,7 +56,7 @@ function ClimateColor:isEnableOverride() end
 --- @public
 --- @param targ ClimateColorInfo
 --- @return void
---- @overload fun(r: float, g: float, b: float, a: float, r1: float, g1: float, b1: float, a1: float)
+--- @overload fun(r: float, g: float, b: float, a: float, r1: float, g1: float, b1: float, a1: float): void
 function ClimateColor:setAdminValue(targ) end
 
 --- @public
@@ -109,6 +109,7 @@ function ClimateColor:setModdedValue(targ) end
 --- @param input ByteBuffer
 --- @param interp float
 --- @return void
+--- @overload fun(targ: ClimateColorInfo, inter: float): void
 function ClimateColor:setOverride(input, interp) end
 
 

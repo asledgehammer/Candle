@@ -70,11 +70,13 @@ function IsoMannequin:getCustomSettingsFromItem(item) end
 
 --- @public
 --- @return HumanVisual
+--- @overload fun(): HumanVisual
 function IsoMannequin:getHumanVisual() end
 
 --- @public
 --- @param itemVisuals ItemVisuals
 --- @return void
+--- @overload fun(itemVisuals: ItemVisuals): void
 function IsoMannequin:getItemVisuals(itemVisuals) end
 
 --- @public
@@ -96,6 +98,7 @@ function IsoMannequin:getVariables(vars) end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoMannequin:isFemale() end
 
 --- @public
@@ -106,10 +109,12 @@ function IsoMannequin:isItemAllowedInContainer(container, item) end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoMannequin:isSkeleton() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoMannequin:isZombie() end
 
 --- @public

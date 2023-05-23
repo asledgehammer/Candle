@@ -10,10 +10,12 @@ IsoStove = {};
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoStove:Activated() end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function IsoStove:Toggle() end
 
 --- @public
@@ -22,6 +24,7 @@ function IsoStove:addToWorld() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function IsoStove:getActivatableType() end
 
 --- @public

@@ -143,4 +143,5 @@ function AlarmClockClothing:updateSound(emitter) end
 --- @param palette String
 --- @param SpriteName String
 --- @return AlarmClockClothing
+--- @overload fun(module: String, name: String, itemType: String, item: Item, palette: String, SpriteName: String)
 function AlarmClockClothing.new(module, name, itemType, texName, palette, SpriteName) end

@@ -19,7 +19,7 @@ function VehicleType.Reset() end
 --- @static
 --- @param zoneName String
 --- @return VehicleType
---- @overload fun(zoneName: String, doNormalWhenSpecific: Boolean)
+--- @overload fun(zoneName: String, doNormalWhenSpecific: Boolean): VehicleType
 function VehicleType.getRandomVehicleType(zoneName) end
 
 --- @public

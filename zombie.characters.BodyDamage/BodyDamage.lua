@@ -20,10 +20,11 @@ function BodyDamage.getSicknessFromCorpsesRate(corpseCount) end
 ------------------------------------
 
 --- @public
---- @param BodyPart BodyPartType
---- @param Val float
+--- @param BodyPartIndex int
+--- @param val float
 --- @return void
-function BodyDamage:AddDamage(BodyPart, Val) end
+--- @overload fun(BodyPart: BodyPartType, Val: float): void
+function BodyDamage:AddDamage(BodyPartIndex, val) end
 
 --- @public
 --- @param Val float
@@ -77,29 +78,34 @@ function BodyDamage:IncreasePanic(NumNewZombiesSeen) end
 function BodyDamage:IncreasePanicFloat(delta) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @return boolean
-function BodyDamage:IsBandaged(BodyPart) end
+--- @overload fun(BodyPart: BodyPartType): boolean
+function BodyDamage:IsBandaged(BodyPartIndex) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @return boolean
-function BodyDamage:IsBitten(BodyPart) end
+--- @overload fun(BodyPart: BodyPartType): boolean
+function BodyDamage:IsBitten(BodyPartIndex) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @return boolean
-function BodyDamage:IsBleeding(BodyPart) end
+--- @overload fun(BodyPart: BodyPartType): boolean
+function BodyDamage:IsBleeding(BodyPartIndex) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @return boolean
-function BodyDamage:IsBleedingStemmed(BodyPart) end
+--- @overload fun(BodyPart: BodyPartType): boolean
+function BodyDamage:IsBleedingStemmed(BodyPartIndex) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @return boolean
-function BodyDamage:IsCortorised(BodyPart) end
+--- @overload fun(BodyPart: BodyPartType): boolean
+function BodyDamage:IsCortorised(BodyPartIndex) end
 
 --- @public
 --- @param BodyPart BodyPartType
@@ -113,12 +119,13 @@ function BodyDamage:IsDeepWounded(BodyPart) end
 
 --- @public
 --- @return boolean
---- @overload fun(BodyPartIndex: int)
+--- @overload fun(BodyPartIndex: int): boolean
 function BodyDamage:IsFakeInfected() end
 
 --- @public
 --- @return boolean
---- @overload fun(BodyPart: BodyPartType)
+--- @overload fun(BodyPartIndex: int): boolean
+--- @overload fun(BodyPart: BodyPartType): boolean
 function BodyDamage:IsInfected() end
 
 --- @public
@@ -128,6 +135,7 @@ function BodyDamage:IsOnFire() end
 --- @public
 --- @param BodyPartIndex int
 --- @return boolean
+--- @overload fun(BodyPart: BodyPartType): boolean
 function BodyDamage:IsScratched(BodyPartIndex) end
 
 --- @public
@@ -137,17 +145,19 @@ function BodyDamage:IsSneezingCoughing() end
 --- @public
 --- @param BodyPartIndex int
 --- @return boolean
+--- @overload fun(BodyPart: BodyPartType): boolean
 function BodyDamage:IsStitched(BodyPartIndex) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @return boolean
-function BodyDamage:IsWounded(BodyPart) end
+--- @overload fun(BodyPart: BodyPartType): boolean
+function BodyDamage:IsWounded(BodyPartIndex) end
 
 --- @public
 --- @param NewFood Food
 --- @return void
---- @overload fun(NewFood: Food, percentage: float)
+--- @overload fun(NewFood: Food, percentage: float): void
 function BodyDamage:JustAteFood(NewFood) end
 
 --- @public
@@ -201,26 +211,30 @@ function BodyDamage:SetBandaged(BodyPartIndex, Bandaged, bandageLife, isAlcoholi
 --- @param BodyPartIndex int
 --- @param Bitten boolean
 --- @return void
---- @overload fun(BodyPartIndex: int, Bitten: boolean, Infected: boolean)
+--- @overload fun(BodyPart: BodyPartType, Bitten: boolean): void
+--- @overload fun(BodyPartIndex: int, Bitten: boolean, Infected: boolean): void
 function BodyDamage:SetBitten(BodyPartIndex, Bitten) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @param Bleeding boolean
 --- @return void
-function BodyDamage:SetBleeding(BodyPart, Bleeding) end
+--- @overload fun(BodyPart: BodyPartType, Bleeding: boolean): void
+function BodyDamage:SetBleeding(BodyPartIndex, Bleeding) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @param BleedingStemmed boolean
 --- @return void
-function BodyDamage:SetBleedingStemmed(BodyPart, BleedingStemmed) end
+--- @overload fun(BodyPart: BodyPartType, BleedingStemmed: boolean): void
+function BodyDamage:SetBleedingStemmed(BodyPartIndex, BleedingStemmed) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @param Cortorised boolean
 --- @return void
-function BodyDamage:SetCortorised(BodyPart, Cortorised) end
+--- @overload fun(BodyPart: BodyPartType, Cortorised: boolean): void
+function BodyDamage:SetCortorised(BodyPartIndex, Cortorised) end
 
 --- @public
 --- @param BodyPartIndex int
@@ -229,10 +243,11 @@ function BodyDamage:SetCortorised(BodyPart, Cortorised) end
 function BodyDamage:SetCut(BodyPartIndex, Cut) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @param Scratched boolean
 --- @return void
-function BodyDamage:SetScratched(BodyPart, Scratched) end
+--- @overload fun(BodyPart: BodyPartType, Scratched: boolean): void
+function BodyDamage:SetScratched(BodyPartIndex, Scratched) end
 
 --- @public
 --- @param BodyPartIndex int
@@ -241,10 +256,11 @@ function BodyDamage:SetScratched(BodyPart, Scratched) end
 function BodyDamage:SetScratchedFromWeapon(BodyPartIndex, Scratched) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @param Wounded boolean
 --- @return void
-function BodyDamage:SetWounded(BodyPart, Wounded) end
+--- @overload fun(BodyPart: BodyPartType, Wounded: boolean): void
+function BodyDamage:SetWounded(BodyPartIndex, Wounded) end
 
 --- @public
 --- @return void
@@ -320,12 +336,14 @@ function BodyDamage:getBodyPart(type) end
 --- @public
 --- @param BodyPartIndex int
 --- @return float
+--- @overload fun(BodyPart: BodyPartType): float
 function BodyDamage:getBodyPartHealth(BodyPartIndex) end
 
 --- @public
---- @param BodyPart BodyPartType
+--- @param BodyPartIndex int
 --- @return String
-function BodyDamage:getBodyPartName(BodyPart) end
+--- @overload fun(BodyPart: BodyPartType): String
+function BodyDamage:getBodyPartName(BodyPartIndex) end
 
 --- @public
 --- @return ArrayList

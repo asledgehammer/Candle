@@ -11,7 +11,7 @@ IsoSpriteManager = {};
 --- @public
 --- @param tex String
 --- @return IsoSprite
---- @overload fun(tex: String, ID: int)
+--- @overload fun(tex: String, ID: int): IsoSprite
 function IsoSpriteManager:AddSprite(tex) end
 
 --- @public
@@ -21,12 +21,13 @@ function IsoSpriteManager:Dispose() end
 --- @public
 --- @param tex String
 --- @return IsoSprite
---- @overload fun(tex: String, col: Color)
+--- @overload fun(tex: String, col: Color): IsoSprite
 function IsoSpriteManager:getOrAddSpriteCache(tex) end
 
 --- @public
 --- @param gid int
 --- @return IsoSprite
+--- @overload fun(gid: String): IsoSprite
 function IsoSpriteManager:getSprite(gid) end
 
 

@@ -140,7 +140,7 @@ function IsoPlayer:AttemptAttack() end
 --- @public
 --- @param chargeDelta float
 --- @return boolean
---- @overload fun(chargeDelta: float, forceShove: boolean, clickSound: String)
+--- @overload fun(chargeDelta: float, forceShove: boolean, clickSound: String): boolean
 function IsoPlayer:DoAttack(chargeDelta) end
 
 --- @public
@@ -250,6 +250,7 @@ function IsoPlayer:canSeePlayerStats() end
 --- @public
 --- @param remoteChr IsoPlayer
 --- @return boolean
+--- @overload fun(remoteConnection: UdpConnection): boolean
 function IsoPlayer:checkCanSeeClient(remoteChr) end
 
 --- @public
@@ -416,6 +417,7 @@ function IsoPlayer:getHoursSurvived() end
 
 --- @public
 --- @return HumanVisual
+--- @overload fun(): HumanVisual
 function IsoPlayer:getHumanVisual() end
 
 --- @public
@@ -428,7 +430,8 @@ function IsoPlayer:getInvAimingRangeMod() end
 
 --- @public
 --- @return ItemVisuals
---- @overload fun(itemVisuals: ItemVisuals)
+--- @overload fun(itemVisuals: ItemVisuals): void
+--- @overload fun(itemVisuals: ItemVisuals): void
 function IsoPlayer:getItemVisuals() end
 
 --- @public
@@ -607,7 +610,7 @@ function IsoPlayer:getUseableVehicle() end
 
 --- @public
 --- @return String
---- @overload fun(canShowFirstname: Boolean)
+--- @overload fun(canShowFirstname: Boolean): String
 function IsoPlayer:getUsername() end
 
 --- @public
@@ -867,6 +870,7 @@ function IsoPlayer:isShowTag() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoPlayer:isSkeleton() end
 
 --- @public
@@ -917,7 +921,7 @@ function IsoPlayer:isbSeenThisFrame() end
 --- @public
 --- @param fileName String
 --- @return void
---- @overload fun(input: ByteBuffer, WorldVersion: int, IS_DEBUG_SAVE: boolean)
+--- @overload fun(input: ByteBuffer, WorldVersion: int, IS_DEBUG_SAVE: boolean): void
 function IsoPlayer:load(fileName) end
 
 --- @public
@@ -985,8 +989,8 @@ function IsoPlayer:renderlast() end
 
 --- @public
 --- @return void
---- @overload fun(fileName: String)
---- @overload fun(output: ByteBuffer, IS_DEBUG_SAVE: boolean)
+--- @overload fun(fileName: String): void
+--- @overload fun(output: ByteBuffer, IS_DEBUG_SAVE: boolean): void
 function IsoPlayer:save() end
 
 --- @public
@@ -1201,6 +1205,7 @@ function IsoPlayer:setMaxWeightDelta(maxWeightDelta) end
 --- @public
 --- @param material String
 --- @return void
+--- @overload fun(arg0: Material): void
 function IsoPlayer:setMeleeHitSurface(material) end
 
 --- @public

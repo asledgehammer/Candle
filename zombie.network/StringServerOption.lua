@@ -10,10 +10,12 @@ StringServerOption = {};
 
 --- @public
 --- @return ConfigOption
+--- @overload fun(): ConfigOption
 function StringServerOption:asConfigOption() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function StringServerOption:getTooltip() end
 
 

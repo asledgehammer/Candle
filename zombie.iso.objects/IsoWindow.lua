@@ -57,7 +57,7 @@ function IsoWindow.isSheetRopeHere(sq) end
 --- @static
 --- @param sq IsoGridSquare
 --- @return boolean
---- @overload fun(sq: IsoGridSquare, north: boolean)
+--- @overload fun(sq: IsoGridSquare, north: boolean): boolean
 function IsoWindow.isTopOfSheetRopeHere(sq) end
 
 --- @public
@@ -81,7 +81,8 @@ function IsoWindow:AttackObject(owner) end
 --- @public
 --- @param amount float
 --- @return void
---- @overload fun(amount: float, chr: IsoMovingObject)
+--- @overload fun(amount: float, isZombie: boolean): void
+--- @overload fun(amount: float, chr: IsoMovingObject): void
 function IsoWindow:Damage(amount) end
 
 --- @public
@@ -108,6 +109,7 @@ function IsoWindow:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return void
+--- @overload fun(thumper: IsoMovingObject): void
 function IsoWindow:Thump(thumper) end
 
 --- @public
@@ -119,6 +121,7 @@ function IsoWindow:ToggleWindow(chr) end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
+--- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
 function IsoWindow:WeaponHit(owner, weapon) end
 
 --- @public
@@ -130,6 +133,7 @@ function IsoWindow:addBarricadesDebug(numPlanks, metal) end
 --- @public
 --- @param onOppositeSquare boolean
 --- @return void
+--- @overload fun(chr: IsoMovingObject): void
 function IsoWindow:addBrokenGlass(onOppositeSquare) end
 
 --- @public
@@ -172,19 +176,23 @@ function IsoWindow:getAddSheetSquare(chr) end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
+--- @overload fun(chr: IsoGameCharacter): IsoBarricade
 function IsoWindow:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
+--- @overload fun(): IsoBarricade
 function IsoWindow:getBarricadeOnOppositeSquare() end
 
 --- @public
 --- @return IsoBarricade
+--- @overload fun(): IsoBarricade
 function IsoWindow:getBarricadeOnSameSquare() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
+--- @overload fun(chr: IsoGameCharacter): IsoBarricade
 function IsoWindow:getBarricadeOppositeCharacter(chr) end
 
 --- @public
@@ -194,12 +202,12 @@ function IsoWindow:getFacingPosition(pos) end
 
 --- @public
 --- @return IsoGameCharacter
---- @overload fun(square: IsoGridSquare)
+--- @overload fun(square: IsoGridSquare): IsoGameCharacter
 function IsoWindow:getFirstCharacterClimbingThrough() end
 
 --- @public
 --- @return IsoGameCharacter
---- @overload fun(square: IsoGridSquare)
+--- @overload fun(square: IsoGridSquare): IsoGameCharacter
 function IsoWindow:getFirstCharacterClosing() end
 
 --- @public
@@ -212,6 +220,7 @@ function IsoWindow:getInsideSquare() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoWindow:getNorth() end
 
 --- @public
@@ -224,6 +233,7 @@ function IsoWindow:getOpenSprite() end
 
 --- @public
 --- @return IsoGridSquare
+--- @overload fun(): IsoGridSquare
 function IsoWindow:getOppositeSquare() end
 
 --- @public
@@ -236,11 +246,13 @@ function IsoWindow:getSquare() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function IsoWindow:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
+--- @overload fun(chr: IsoGameCharacter): Thumpable
 function IsoWindow:getThumpableFor(chr) end
 
 --- @public
@@ -249,14 +261,17 @@ function IsoWindow:haveSheetRope() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoWindow:isBarricadeAllowed() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoWindow:isBarricaded() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoWindow:isDestroyed() end
 
 --- @public
@@ -378,8 +393,8 @@ function IsoWindow:setSmashedSprite(sprite) end
 
 --- @public
 --- @return void
---- @overload fun(bRemote: boolean)
---- @overload fun(bRemote: boolean, doAlarm: boolean)
+--- @overload fun(bRemote: boolean): void
+--- @overload fun(bRemote: boolean, doAlarm: boolean): void
 function IsoWindow:smashWindow() end
 
 --- @public

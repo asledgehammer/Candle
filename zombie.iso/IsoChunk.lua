@@ -22,7 +22,7 @@ function IsoChunk.FileExists(wx, wy) end
 --- @static
 --- @param tileName String
 --- @return String
---- @overload fun(square: IsoGridSquare, spriteID: int)
+--- @overload fun(square: IsoGridSquare, spriteID: int): int
 function IsoChunk.Fix2x(tileName) end
 
 --- @public
@@ -143,7 +143,7 @@ function IsoChunk:RandomizeModel(arg0, arg1, arg2, arg3) end
 --- @public
 --- @param bSaveQuit boolean
 --- @return void
---- @overload fun(bb: ByteBuffer, crc: CRC32)
+--- @overload fun(bb: ByteBuffer, crc: CRC32): ByteBuffer
 function IsoChunk:Save(bSaveQuit) end
 
 --- @public

@@ -20,16 +20,17 @@ function ArrayList.copyOf(arg0) end
 --- @public
 --- @static
 --- @return List
---- @overload fun(arg0: Object)
---- @overload fun(arg0: Object, arg1: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object)
---- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object)
+--- @overload fun(arg0: Object[]): List
+--- @overload fun(arg0: Object): List
+--- @overload fun(arg0: Object, arg1: Object): List
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object): List
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object): List
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object): List
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object): List
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object): List
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object): List
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object): List
+--- @overload fun(arg0: Object, arg1: Object, arg2: Object, arg3: Object, arg4: Object, arg5: Object, arg6: Object, arg7: Object, arg8: Object, arg9: Object): List
 function ArrayList.of() end
 
 
@@ -40,17 +41,22 @@ function ArrayList.of() end
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: int, arg1: Object)
+--- @overload fun(arg0: Object): boolean
+--- @overload fun(arg0: int, arg1: Object): void
+--- @overload fun(arg0: int, arg1: Object): void
 function ArrayList:add(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(arg0: int, arg1: Collection)
+--- @overload fun(arg0: Collection): boolean
+--- @overload fun(arg0: int, arg1: Collection): boolean
+--- @overload fun(arg0: int, arg1: Collection): boolean
 function ArrayList:addAll(arg0) end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function ArrayList:clear() end
 
 --- @public
@@ -60,6 +66,7 @@ function ArrayList:clone() end
 --- @public
 --- @param arg0 Object
 --- @return boolean
+--- @overload fun(arg0: Object): boolean
 function ArrayList:contains(arg0) end
 
 --- @public
@@ -75,6 +82,7 @@ function ArrayList:ensureCapacity(arg0) end
 --- @public
 --- @param arg0 Object
 --- @return boolean
+--- @overload fun(arg0: Object): boolean
 function ArrayList:equals(arg0) end
 
 --- @public
@@ -85,43 +93,55 @@ function ArrayList:forEach(arg0) end
 --- @public
 --- @param arg0 int
 --- @return Object
+--- @overload fun(arg0: int): Object
 function ArrayList:get(arg0) end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function ArrayList:hashCode() end
 
 --- @public
 --- @param arg0 Object
 --- @return int
+--- @overload fun(arg0: Object): int
 function ArrayList:indexOf(arg0) end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function ArrayList:isEmpty() end
 
 --- @public
 --- @return Iterator
+--- @overload fun(): Iterator
 function ArrayList:iterator() end
 
 --- @public
 --- @param arg0 Object
 --- @return int
+--- @overload fun(arg0: Object): int
 function ArrayList:lastIndexOf(arg0) end
 
 --- @public
 --- @return ListIterator
---- @overload fun(arg0: int)
+--- @overload fun(): ListIterator
+--- @overload fun(arg0: int): ListIterator
+--- @overload fun(arg0: int): ListIterator
 function ArrayList:listIterator() end
 
 --- @public
---- @param arg0 Object
---- @return boolean
+--- @param arg0 int
+--- @return Object
+--- @overload fun(arg0: int): Object
+--- @overload fun(arg0: Object): boolean
+--- @overload fun(arg0: Object): boolean
 function ArrayList:remove(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
+--- @overload fun(arg0: Collection): boolean
 function ArrayList:removeAll(arg0) end
 
 --- @public
@@ -132,41 +152,50 @@ function ArrayList:removeIf(arg0) end
 --- @public
 --- @param arg0 UnaryOperator
 --- @return void
+--- @overload fun(arg0: UnaryOperator): void
 function ArrayList:replaceAll(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
+--- @overload fun(arg0: Collection): boolean
 function ArrayList:retainAll(arg0) end
 
 --- @public
 --- @param arg0 int
 --- @param arg1 Object
 --- @return Object
+--- @overload fun(arg0: int, arg1: Object): Object
 function ArrayList:set(arg0, arg1) end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function ArrayList:size() end
 
 --- @public
 --- @param arg0 Comparator
 --- @return void
+--- @overload fun(arg0: Comparator): void
 function ArrayList:sort(arg0) end
 
 --- @public
 --- @return Spliterator
+--- @overload fun(): Spliterator
 function ArrayList:spliterator() end
 
 --- @public
 --- @param arg0 int
 --- @param arg1 int
 --- @return List
+--- @overload fun(arg0: int, arg1: int): List
 function ArrayList:subList(arg0, arg1) end
 
 --- @public
 --- @return Object[]
---- @overload fun(arg0: Object[])
+--- @overload fun(): Object[]
+--- @overload fun(arg0: Object[]): Object[]
+--- @overload fun(arg0: Object[]): Object[]
 function ArrayList:toArray() end
 
 --- @public
@@ -180,5 +209,6 @@ function ArrayList:trimToSize() end
 
 --- @public
 --- @return ArrayList
+--- @overload fun(arg0: int)
 --- @overload fun(arg0: Collection)
 function ArrayList.new() end

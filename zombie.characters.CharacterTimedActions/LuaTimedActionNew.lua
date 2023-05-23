@@ -11,6 +11,7 @@ LuaTimedActionNew = {};
 --- @public
 --- @param mover Mover
 --- @return void
+--- @overload fun(mover: Mover): void
 function LuaTimedActionNew:Failed(mover) end
 
 --- @public
@@ -30,6 +31,7 @@ function LuaTimedActionNew:Pathfind(chr, x, y, z) end
 --- @param path Path
 --- @param mover Mover
 --- @return void
+--- @overload fun(path: Path, mover: Mover): void
 function LuaTimedActionNew:Succeeded(path, mover) end
 
 --- @public
@@ -38,6 +40,7 @@ function LuaTimedActionNew:getMetaType() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function LuaTimedActionNew:getName() end
 
 --- @public

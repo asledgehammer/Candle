@@ -28,10 +28,10 @@ function TextDrawObject.RenderBatch(playerNum) end
 --- @param x double
 --- @param y double
 --- @return void
---- @overload fun(x: double, y: double, drawOutlines: boolean)
---- @overload fun(x: double, y: double, drawOutlines: boolean, alpha: float)
---- @overload fun(x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean)
---- @overload fun(horz: TextDrawHorizontal, x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean)
+--- @overload fun(x: double, y: double, drawOutlines: boolean): void
+--- @overload fun(x: double, y: double, drawOutlines: boolean, alpha: float): void
+--- @overload fun(x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean): void
+--- @overload fun(horz: TextDrawHorizontal, x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean): void
 function TextDrawObject:AddBatchedDraw(x, y) end
 
 --- @public
@@ -42,10 +42,10 @@ function TextDrawObject:Clear() end
 --- @param x double
 --- @param y double
 --- @return void
---- @overload fun(x: double, y: double, drawOutlines: boolean)
---- @overload fun(x: double, y: double, drawOutlines: boolean, alpha: float)
---- @overload fun(x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean)
---- @overload fun(horz: TextDrawHorizontal, x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean)
+--- @overload fun(x: double, y: double, drawOutlines: boolean): void
+--- @overload fun(x: double, y: double, drawOutlines: boolean, alpha: float): void
+--- @overload fun(x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean): void
+--- @overload fun(horz: TextDrawHorizontal, x: double, y: double, r: double, g: double, b: double, a: double, drawOutlines: boolean): void
 function TextDrawObject:Draw(x, y) end
 
 --- @public
@@ -63,8 +63,8 @@ function TextDrawObject:DrawRaw(horz, x, y, r, g, b, a, drawOutlines) end
 --- @public
 --- @param str String
 --- @return void
---- @overload fun(str: String, maxLineWidth: int)
---- @overload fun(font: UIFont, str: String, maxLineWidth: int)
+--- @overload fun(str: String, maxLineWidth: int): void
+--- @overload fun(font: UIFont, str: String, maxLineWidth: int): void
 function TextDrawObject:ReadString(str) end
 
 --- @public
@@ -173,7 +173,9 @@ function TextDrawObject:setCustomTag(tag) end
 --- @param g float
 --- @param b float
 --- @return void
---- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: int, g: int, b: int): void
+--- @overload fun(r: float, g: float, b: float, a: float): void
+--- @overload fun(r: int, g: int, b: int, a: int): void
 function TextDrawObject:setDefaultColors(r, g, b) end
 
 --- @public
@@ -202,8 +204,9 @@ function TextDrawObject:setEqualizeLineHeights(equalizeLineHeights) end
 function TextDrawObject:setHearRange(range) end
 
 --- @public
---- @param horz TextDrawHorizontal
+--- @param horz String
 --- @return void
+--- @overload fun(horz: TextDrawHorizontal): void
 function TextDrawObject:setHorizontalAlign(horz) end
 
 --- @public
@@ -221,7 +224,9 @@ function TextDrawObject:setMaxCharsPerLine(charsperline) end
 --- @param g float
 --- @param b float
 --- @return void
---- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: int, g: int, b: int): void
+--- @overload fun(r: float, g: float, b: float, a: float): void
+--- @overload fun(r: int, g: int, b: int, a: int): void
 function TextDrawObject:setOutlineColors(r, g, b) end
 
 --- @public
@@ -256,7 +261,7 @@ function TextDrawObject:setVisibleRadius(radius) end
 
 --- @public
 --- @return float
---- @overload fun(delta: float)
+--- @overload fun(delta: float): float
 function TextDrawObject:updateInternalTickClock() end
 
 

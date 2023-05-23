@@ -189,7 +189,7 @@ function IsoRegionsRenderer:renderString(x, y, str, r, g, b, a) end
 --- @param str String
 --- @param c Color
 --- @return void
---- @overload fun(x: float, y: float, str: String, r: double, g: double, b: double, a: double)
+--- @overload fun(x: float, y: float, str: String, r: double, g: double, b: double, a: double): void
 function IsoRegionsRenderer:renderStringUI(x, y, str, c) end
 
 --- @public

@@ -109,14 +109,16 @@ function IsoWorld.isAnimRecorderDiscardTriggered() end
 
 --- @public
 --- @static
---- @param __in RandomAccessFile
+--- @param __in InputStream
 --- @return int
+--- @overload fun(__in: RandomAccessFile): int
 function IsoWorld.readInt(__in) end
 
 --- @public
 --- @static
 --- @param __in InputStream
 --- @return String
+--- @overload fun(__in: RandomAccessFile): String
 function IsoWorld.readString(__in) end
 
 
@@ -177,7 +179,7 @@ function IsoWorld:checkVehiclesZones() end
 
 --- @public
 --- @return HashMap
---- @overload fun(filename: String)
+--- @overload fun(filename: String): ArrayList
 function IsoWorld:getAllTiles() end
 
 --- @public
@@ -202,7 +204,7 @@ function IsoWorld:getFrameNo() end
 
 --- @public
 --- @return BaseSoundEmitter
---- @overload fun(x: float, y: float, z: float)
+--- @overload fun(x: float, y: float, z: float): BaseSoundEmitter
 function IsoWorld:getFreeEmitter() end
 
 --- @public
@@ -472,9 +474,9 @@ function IsoWorld:setGameMode(mode) end
 function IsoWorld:setGlobalTemperature(globalTemperature) end
 
 --- @public
---- @param arg1 boolean
+--- @param __on boolean
 --- @return void
-function IsoWorld:setHydroPowerOn(arg1) end
+function IsoWorld:setHydroPowerOn(__on) end
 
 --- @public
 --- @param desc SurvivorDesc

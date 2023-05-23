@@ -39,7 +39,7 @@ function SendCommandToServer(command) end
 
 --- @param max double
 --- @return double
---- @overload fun(min: double, max: double)
+--- @overload fun(min: double, max: double): double
 function ZombRand(max) end
 
 --- @param min double
@@ -92,7 +92,7 @@ function addAllBurntVehicles() end
 function addAllSmashedVehicles() end
 
 --- @return void
---- @overload fun(predicate: Predicate)
+--- @overload fun(predicate: Predicate): void
 function addAllVehicles() end
 
 --- @return void
@@ -142,7 +142,7 @@ function addWarningPoint(user, reason, amount) end
 --- @param outfit String
 --- @param femaleChance Integer
 --- @return ArrayList
---- @overload fun(x: int, y: int, z: int, totalZombies: int, outfit: String, femaleChance: Integer, isCrawler: boolean, isFallOnFront: boolean, isFakeDead: boolean, isKnockedDown: boolean, health: float)
+--- @overload fun(x: int, y: int, z: int, totalZombies: int, outfit: String, femaleChance: Integer, isCrawler: boolean, isFallOnFront: boolean, isFakeDead: boolean, isKnockedDown: boolean, health: float): ArrayList
 function addZombiesInOutfit(x, y, z, totalZombies, outfit, femaleChance) end
 
 --- @return void
@@ -216,7 +216,7 @@ function connectionManagerLog(arg0, arg1) end
 
 --- @param arg0 KahluaTable
 --- @return KahluaTable
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable)
+--- @overload fun(arg0: KahluaTable, arg1: KahluaTable): KahluaTable
 function copyTable(arg0) end
 
 --- @param spawnX float
@@ -288,7 +288,7 @@ function debugFullyStreamedIn(x, y) end
 
 --- @param param Object
 --- @return void
---- @overload fun(param: Object, depth: int)
+--- @overload fun(param: Object, depth: int): void
 function debugLuaTable(param) end
 
 --- @param roomType Double
@@ -1066,10 +1066,10 @@ function getTableResult(tableName, numberPerPages) end
 
 --- @param txt String
 --- @return String
---- @overload fun(txt: String, arg1: Object)
---- @overload fun(txt: String, arg1: Object, arg2: Object)
---- @overload fun(txt: String, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(txt: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
+--- @overload fun(txt: String, arg1: Object): String
+--- @overload fun(txt: String, arg1: Object, arg2: Object): String
+--- @overload fun(txt: String, arg1: Object, arg2: Object, arg3: Object): String
+--- @overload fun(txt: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): String
 function getText(txt) end
 
 --- @return TextManager
@@ -1081,10 +1081,10 @@ function getTextMediaEN(txt) end
 
 --- @param txt String
 --- @return String
---- @overload fun(txt: String, arg1: Object)
---- @overload fun(txt: String, arg1: Object, arg2: Object)
---- @overload fun(txt: String, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(txt: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
+--- @overload fun(txt: String, arg1: Object): String
+--- @overload fun(txt: String, arg1: Object, arg2: Object): String
+--- @overload fun(txt: String, arg1: Object, arg2: Object, arg3: Object): String
+--- @overload fun(txt: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): String
 function getTextOrNull(txt) end
 
 --- @param filename String
@@ -1179,6 +1179,7 @@ function initUISystem() end
 
 --- @param item String
 --- @return InventoryItem
+--- @overload fun(item: Item): InventoryItem
 function instanceItem(item) end
 
 --- @param obj Object
@@ -1647,7 +1648,7 @@ function sendCleanBurn(wielder, target, bodyPart, bandage) end
 --- @param arg1 String
 --- @param arg2 KahluaTable
 --- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable): void
 function sendClientCommand(arg0, arg1, arg2) end
 
 --- @param player IsoPlayer
@@ -1722,7 +1723,7 @@ function sendSafehouseInvite(safehouse, host, invited) end
 --- @param arg1 String
 --- @param arg2 KahluaTable
 --- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable)
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable): void
 function sendServerCommand(arg0, arg1, arg2) end
 
 --- @param onlineID int
@@ -1966,7 +1967,7 @@ function stopSound(sound) end
 function tabToX(a, tabX) end
 
 --- @return void
---- @overload fun(fileName: String)
+--- @overload fun(fileName: String): void
 function takeScreenshot() end
 
 --- @return void
@@ -2063,10 +2064,10 @@ function translatePointYInOverheadMapToWorld(y, ui, zoom, ypos) end
 
 --- @param event String
 --- @return void
---- @overload fun(event: String, param: Object)
---- @overload fun(event: String, param: Object, param2: Object)
---- @overload fun(event: String, param: Object, param2: Object, param3: Object)
---- @overload fun(event: String, param: Object, param2: Object, param3: Object, param4: Object)
+--- @overload fun(event: String, param: Object): void
+--- @overload fun(event: String, param: Object, param2: Object): void
+--- @overload fun(event: String, param: Object, param2: Object, param3: Object): void
+--- @overload fun(event: String, param: Object, param2: Object, param3: Object, param4: Object): void
 function triggerEvent(event) end
 
 --- @param fontSize String

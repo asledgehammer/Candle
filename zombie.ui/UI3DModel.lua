@@ -11,6 +11,7 @@ UI3DModel = {};
 --- @public
 --- @param itemGuid String
 --- @return void
+--- @overload fun(itemGuid: String): void
 function UI3DModel:clothingItemChanged(itemGuid) end
 
 --- @public

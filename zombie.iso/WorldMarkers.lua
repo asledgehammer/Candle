@@ -43,8 +43,8 @@ function WorldMarkers:addDirectionArrow(player, x, y, z, texname, r, g, b, a) en
 --- @param doAlpha boolean
 --- @param size float
 --- @return GridSquareMarker
---- @overload fun(texid: String, overlay: String, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, size: float)
---- @overload fun(texid: String, overlay: String, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, size: float, fadeSpeed: float, fadeMin: float, fadeMax: float)
+--- @overload fun(texid: String, overlay: String, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, size: float): GridSquareMarker
+--- @overload fun(texid: String, overlay: String, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, size: float, fadeSpeed: float, fadeMin: float, fadeMax: float): GridSquareMarker
 function WorldMarkers:addGridSquareMarker(gs, r, g, b, doAlpha, size) end
 
 --- @public
@@ -52,8 +52,8 @@ function WorldMarkers:addGridSquareMarker(gs, r, g, b, doAlpha, size) end
 --- @param x int
 --- @param y int
 --- @return PlayerHomingPoint
---- @overload fun(player: IsoPlayer, x: int, y: int, r: float, g: float, b: float, a: float)
---- @overload fun(player: IsoPlayer, x: int, y: int, texname: String, r: float, g: float, b: float, a: float, homeOnTarget: boolean, homeOnDist: int)
+--- @overload fun(player: IsoPlayer, x: int, y: int, r: float, g: float, b: float, a: float): PlayerHomingPoint
+--- @overload fun(player: IsoPlayer, x: int, y: int, texname: String, r: float, g: float, b: float, a: float, homeOnTarget: boolean, homeOnDist: int): PlayerHomingPoint
 function WorldMarkers:addPlayerHomingPoint(player, x, y) end
 
 --- @public
@@ -92,29 +92,34 @@ function WorldMarkers:removeAllHomingPoints(player) end
 --- @public
 --- @param id int
 --- @return boolean
+--- @overload fun(arg0: DirectionArrow): boolean
 function WorldMarkers:removeDirectionArrow(id) end
-
---- @public
---- @param arg0 GridSquareMarker
---- @return boolean
-function WorldMarkers:removeGridSquareMarker(arg0) end
 
 --- @public
 --- @param id int
 --- @return boolean
+--- @overload fun(arg0: GridSquareMarker): boolean
+function WorldMarkers:removeGridSquareMarker(id) end
+
+--- @public
+--- @param id int
+--- @return boolean
+--- @overload fun(arg0: PlayerHomingPoint): boolean
 function WorldMarkers:removeHomingPoint(id) end
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 DirectionArrow
+--- @param player IsoPlayer
+--- @param id int
 --- @return boolean
-function WorldMarkers:removePlayerDirectionArrow(arg0, arg1) end
+--- @overload fun(arg0: IsoPlayer, arg1: DirectionArrow): boolean
+function WorldMarkers:removePlayerDirectionArrow(player, id) end
 
 --- @public
---- @param arg0 IsoPlayer
---- @param arg1 PlayerHomingPoint
+--- @param player IsoPlayer
+--- @param id int
 --- @return boolean
-function WorldMarkers:removePlayerHomingPoint(arg0, arg1) end
+--- @overload fun(arg0: IsoPlayer, arg1: PlayerHomingPoint): boolean
+function WorldMarkers:removePlayerHomingPoint(player, id) end
 
 --- @public
 --- @return void

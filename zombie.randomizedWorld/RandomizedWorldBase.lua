@@ -25,16 +25,17 @@ function RandomizedWorldBase.createBodyFromZombie(chr) end
 --- @param room RoomDef
 --- @param blood int
 --- @return IsoDeadBody
---- @overload fun(sq: IsoGridSquare, dir: IsoDirections, blood: int, crawlerChance: int, outfit: String)
---- @overload fun(x: int, y: int, z: int, dir: IsoDirections, blood: int, crawlerChance: int)
---- @overload fun(x: float, y: float, z: float, direction: float, alignToSquare: boolean, blood: int, crawlerChance: int, outfit: String)
+--- @overload fun(x: int, y: int, z: int, dir: IsoDirections, blood: int): IsoDeadBody
+--- @overload fun(sq: IsoGridSquare, dir: IsoDirections, blood: int, crawlerChance: int, outfit: String): IsoDeadBody
+--- @overload fun(x: int, y: int, z: int, dir: IsoDirections, blood: int, crawlerChance: int): IsoDeadBody
+--- @overload fun(x: float, y: float, z: float, direction: float, alignToSquare: boolean, blood: int, crawlerChance: int, outfit: String): IsoDeadBody
 function RandomizedWorldBase.createRandomDeadBody(room, blood) end
 
 --- @public
 --- @static
 --- @param room RoomDef
 --- @return IsoGameCharacter
---- @overload fun(x: int, y: int, z: int)
+--- @overload fun(x: int, y: int, z: int): IsoGameCharacter
 function RandomizedWorldBase.createRandomZombie(room) end
 
 --- @public
@@ -100,6 +101,7 @@ function RandomizedWorldBase:addBloodSplat(sq, nbr) end
 --- @param square IsoGridSquare
 --- @param type String
 --- @return InventoryItem
+--- @overload fun(square: IsoGridSquare, item: InventoryItem): InventoryItem
 function RandomizedWorldBase:addItemOnGround(square, type) end
 
 --- @public
@@ -113,6 +115,7 @@ function RandomizedWorldBase:addRandomItemOnGround(square, types) end
 --- @param type String
 --- @param count int
 --- @return void
+--- @overload fun(room: RoomDef, types: ArrayList, count: int): void
 function RandomizedWorldBase:addRandomItemsOnGround(room, type, count) end
 
 --- @public
@@ -133,7 +136,7 @@ function RandomizedWorldBase:addTentWestEast(x, y, z) end
 --- @param sq IsoGridSquare
 --- @param spriteName String
 --- @return IsoObject
---- @overload fun(x: int, y: int, z: int, spriteName: String)
+--- @overload fun(x: int, y: int, z: int, spriteName: String): IsoObject
 function RandomizedWorldBase:addTileObject(sq, spriteName) end
 
 --- @public
@@ -172,8 +175,8 @@ function RandomizedWorldBase:addTraitOfBlood(dir, time, x, y, z) end
 --- @param arg4 String
 --- @param arg5 IsoDirections
 --- @return BaseVehicle
---- @overload fun(arg0: Zone, arg1: IsoGridSquare, arg2: IsoChunk, arg3: String, arg4: String, arg5: Integer, arg6: IsoDirections, arg7: String)
---- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String)
+--- @overload fun(arg0: Zone, arg1: IsoGridSquare, arg2: IsoChunk, arg3: String, arg4: String, arg5: Integer, arg6: IsoDirections, arg7: String): BaseVehicle
+--- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String): BaseVehicle
 function RandomizedWorldBase:addVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
 
 --- @public
@@ -186,7 +189,7 @@ function RandomizedWorldBase:addVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
 --- @param arg6 IsoDirections
 --- @param arg7 String
 --- @return BaseVehicle
---- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String)
+--- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String): BaseVehicle
 function RandomizedWorldBase:addVehicleFlipped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
 
 --- @public

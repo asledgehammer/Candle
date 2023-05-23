@@ -55,15 +55,15 @@ function DebugLog.enableLog(type, severity) end
 --- @param affix Object
 --- @param formatNoParams String
 --- @return String
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object)
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object)
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object)
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object)
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object)
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object)
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object)
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object)
---- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object, param8: Object)
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object): String
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object): String
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object): String
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object): String
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object): String
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object): String
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object): String
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object): String
+--- @overload fun(type: DebugType, logSeverity: LogSeverity, prefix: String, affix: Object, format: String, param0: Object, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object, param8: Object): String
 function DebugLog.formatString(type, logSeverity, prefix, affix, formatNoParams) end
 
 --- @public
@@ -101,10 +101,11 @@ function DebugLog.isEnabled(type) end
 
 --- @public
 --- @static
---- @param logSeverity LogSeverity
 --- @param type DebugType
+--- @param logSeverity LogSeverity
 --- @return boolean
-function DebugLog.isLogEnabled(logSeverity, type) end
+--- @overload fun(logSeverity: LogSeverity, type: DebugType): boolean
+function DebugLog.isLogEnabled(type, logSeverity) end
 
 --- @public
 --- @static
@@ -113,10 +114,11 @@ function DebugLog.load() end
 
 --- @public
 --- @static
---- @param str String
+--- @param o Object
 --- @return void
---- @overload fun(type: DebugType, str: String)
-function DebugLog.log(str) end
+--- @overload fun(str: String): void
+--- @overload fun(type: DebugType, str: String): void
+function DebugLog.log(o) end
 
 --- @public
 --- @static

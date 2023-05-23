@@ -10,8 +10,9 @@ ZLogger = {};
 --- @public
 --- @param ex Exception
 --- @return void
---- @overload fun(logs: String, level: String)
---- @overload fun(arg0: String, arg1: String, arg2: boolean)
+--- @overload fun(logs: String): void
+--- @overload fun(logs: String, level: String): void
+--- @overload fun(arg0: String, arg1: String, arg2: boolean): void
 function ZLogger:write(ex) end
 
 --- @public

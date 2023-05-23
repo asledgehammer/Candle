@@ -20,15 +20,19 @@ Radio = {};
 --- @param codes String
 --- @param distance int
 --- @return void
---- @overload fun(player: IsoPlayer, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int)
+--- @overload fun(line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
+--- @overload fun(msg: ChatMessage, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
+--- @overload fun(player: IsoPlayer, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
 function Radio:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function Radio:HasPlayerInRange() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function Radio:IsSpeaking() end
 
 --- @public
@@ -39,6 +43,7 @@ function Radio:ReadFromWorldSprite(sprite) end
 --- @public
 --- @param line String
 --- @return void
+--- @overload fun(line: String): void
 function Radio:Say(line) end
 
 --- @public
@@ -48,10 +53,12 @@ function Radio:doReceiveSignal(distance) end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function Radio:getDelta() end
 
 --- @public
 --- @return DeviceData
+--- @overload fun(): DeviceData
 function Radio:getDeviceData() end
 
 --- @public
@@ -64,26 +71,32 @@ function Radio:getSaveType() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function Radio:getSayLine() end
 
 --- @public
 --- @return IsoGridSquare
+--- @overload fun(): IsoGridSquare
 function Radio:getSquare() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function Radio:getTalkerType() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function Radio:getX() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function Radio:getY() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function Radio:getZ() end
 
 --- @public
@@ -94,10 +107,12 @@ function Radio:load(input, WorldVersion) end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function Radio:render() end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function Radio:renderlast() end
 
 --- @public
@@ -109,15 +124,18 @@ function Radio:save(output, net) end
 --- @public
 --- @param delta float
 --- @return void
+--- @overload fun(d: float): void
 function Radio:setDelta(delta) end
 
 --- @public
 --- @param data DeviceData
 --- @return void
+--- @overload fun(data: DeviceData): void
 function Radio:setDeviceData(data) end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function Radio:update() end
 
 

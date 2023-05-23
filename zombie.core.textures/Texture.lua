@@ -67,8 +67,9 @@ function Texture.getErrorTexture() end
 --- @static
 --- @param name String
 --- @return Texture
---- @overload fun(name: String, palette: String)
---- @overload fun(name: String, palette: int[], paletteName: String)
+--- @overload fun(name: String, flags: int): Texture
+--- @overload fun(name: String, palette: String): Texture
+--- @overload fun(name: String, palette: int[], paletteName: String): Texture
 function Texture.getSharedTexture(name) end
 
 --- @public
@@ -124,7 +125,9 @@ function Texture.trygetTexture(name) end
 
 --- @public
 --- @return void
---- @overload fun(unit: int)
+--- @overload fun(): void
+--- @overload fun(unit: int): void
+--- @overload fun(unit: int): void
 function Texture:bind() end
 
 --- @public
@@ -138,11 +141,14 @@ function Texture:copyMaskRegion(from, x, y, width, height) end
 
 --- @public
 --- @return void
---- @overload fun(mask: boolean[])
+--- @overload fun(mask: boolean[]): void
+--- @overload fun(mask: BooleanGrid): void
+--- @overload fun(buf: WrappedBuffer): void
 function Texture:createMask() end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function Texture:destroy() end
 
 --- @public
@@ -152,14 +158,17 @@ function Texture:equals(other) end
 
 --- @public
 --- @return WrappedBuffer
+--- @overload fun(): WrappedBuffer
 function Texture:getData() end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function Texture:getHeight() end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function Texture:getHeightHW() end
 
 --- @public
@@ -168,6 +177,7 @@ function Texture:getHeightOrig() end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function Texture:getID() end
 
 --- @public
@@ -213,10 +223,12 @@ function Texture:getUseAlphaChannel() end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function Texture:getWidth() end
 
 --- @public
 --- @return int
+--- @overload fun(): int
 function Texture:getWidthHW() end
 
 --- @public
@@ -225,18 +237,22 @@ function Texture:getWidthOrig() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function Texture:getXEnd() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function Texture:getXStart() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function Texture:getYEnd() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function Texture:getYStart() end
 
 --- @public
@@ -245,10 +261,12 @@ function Texture:isCollisionable() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function Texture:isDestroyed() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function Texture:isSolid() end
 
 --- @public
@@ -265,6 +283,7 @@ function Texture:loadMaskRegion(cache) end
 --- @param green int
 --- @param blue int
 --- @return void
+--- @overload fun(red: int, green: int, blue: int): void
 function Texture:makeTransp(red, green, blue) end
 
 --- @public
@@ -280,9 +299,9 @@ function Texture:reloadFromFile(name) end
 --- @param x float
 --- @param y float
 --- @return void
---- @overload fun(x: float, y: float, width: float, height: float)
---- @overload fun(x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer)
---- @overload fun(dr: ObjectRenderEffects, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer)
+--- @overload fun(x: float, y: float, width: float, height: float): void
+--- @overload fun(x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer): void
+--- @overload fun(dr: ObjectRenderEffects, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer): void
 function Texture:render(x, y) end
 
 --- @public
@@ -395,6 +414,7 @@ function Texture:saveToZomboidDirectory(filename) end
 --- @param blue int
 --- @param alpha int
 --- @return void
+--- @overload fun(red: int, green: int, blue: int, alpha: int): void
 function Texture:setAlphaForeach(red, green, blue, alpha) end
 
 --- @public
@@ -404,6 +424,7 @@ function Texture:setCustomizedTexture() end
 --- @public
 --- @param data ByteBuffer
 --- @return void
+--- @overload fun(data: ByteBuffer): void
 function Texture:setData(data) end
 
 --- @public
@@ -414,6 +435,7 @@ function Texture:setHeight(height) end
 --- @public
 --- @param mask Mask
 --- @return void
+--- @overload fun(mask: Mask): void
 function Texture:setMask(mask) end
 
 --- @public
@@ -452,6 +474,7 @@ function Texture:setRealWidth(realWidth) end
 --- @param width int
 --- @param height int
 --- @return void
+--- @overload fun(x: int, y: int, width: int, height: int): void
 function Texture:setRegion(x, y, width, height) end
 
 --- @public
@@ -470,8 +493,8 @@ function Texture:setWidth(width) end
 --- @param width int
 --- @param height int
 --- @return Texture
---- @overload fun(name: String, xOffset: int, yOffset: int, width: int, height: int)
---- @overload fun(xOffset: int, yOffset: int, row: int, coloumn: int, width: int, height: int, spaceX: int, spaceY: int)
+--- @overload fun(name: String, xOffset: int, yOffset: int, width: int, height: int): Texture
+--- @overload fun(xOffset: int, yOffset: int, row: int, coloumn: int, width: int, height: int, spaceX: int, spaceY: int): Texture[]
 function Texture:split(xOffset, yOffset, width, height) end
 
 --- @public
@@ -495,8 +518,17 @@ function Texture:toString() end
 
 --- @public
 --- @return Texture
+--- @overload fun(file: String)
 --- @overload fun(t: Texture)
+--- @overload fun(name: String, palette: int[])
 --- @overload fun(file: String, useAlphaChannel: boolean)
+--- @overload fun(name: String, palette: String)
+--- @overload fun(data: TextureID, name: String)
 --- @overload fun(width: int, height: int, flags: int)
+--- @overload fun(file: String, bDelete: boolean, bUseAlpha: boolean)
+--- @overload fun(name: String, b: BufferedInputStream, bDoMask: boolean)
+--- @overload fun(arg0: AssetPath, arg1: AssetManager, arg2: TextureAssetParams)
+--- @overload fun(width: int, height: int, name: String, flags: int)
 --- @overload fun(file: String, red: int, green: int, blue: int)
+--- @overload fun(arg0: String, arg1: BufferedInputStream, arg2: boolean, arg3: PZFileformat)
 function Texture.new() end

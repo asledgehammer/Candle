@@ -9,18 +9,20 @@ MapObjects = {};
 
 --- @public
 --- @static
---- @param arg0 KahluaTable
+--- @param arg0 String
 --- @param arg1 LuaClosure
 --- @param arg2 int
 --- @return void
+--- @overload fun(arg0: KahluaTable, arg1: LuaClosure, arg2: int): void
 function MapObjects.OnLoadWithSprite(arg0, arg1, arg2) end
 
 --- @public
 --- @static
---- @param arg0 KahluaTable
+--- @param arg0 String
 --- @param arg1 LuaClosure
 --- @param arg2 int
 --- @return void
+--- @overload fun(arg0: KahluaTable, arg1: LuaClosure, arg2: int): void
 function MapObjects.OnNewWithSprite(arg0, arg1, arg2) end
 
 --- @public

@@ -12,7 +12,8 @@ XP = {};
 --- @param arg0 Perk
 --- @param arg1 float
 --- @return void
---- @overload fun(arg0: Perk, arg1: float, arg2: boolean, arg3: boolean, arg4: boolean)
+--- @overload fun(arg0: HandWeapon, arg1: int): void
+--- @overload fun(arg0: Perk, arg1: float, arg2: boolean, arg3: boolean, arg4: boolean): void
 function XP:AddXP(arg0, arg1) end
 
 --- @public

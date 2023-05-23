@@ -39,4 +39,5 @@ function IsoJukebox:update() end
 --- @param cell IsoCell
 --- @return IsoJukebox
 --- @overload fun(cell: IsoCell, sq: IsoGridSquare, gid: String)
+--- @overload fun(cell: IsoCell, sq: IsoGridSquare, spr: IsoSprite)
 function IsoJukebox.new(cell) end

@@ -77,4 +77,5 @@ function MapItem:setMapID(mapID) end
 --- @param type String
 --- @param tex String
 --- @return MapItem
+--- @overload fun(module: String, name: String, type: String, item: Item)
 function MapItem.new(module, name, type, tex) end

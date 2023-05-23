@@ -9,12 +9,15 @@ InventoryItemFactory = {};
 
 --- @public
 --- @static
---- @param registryID short
+--- @param itemType String
 --- @return InventoryItem
---- @overload fun(itemType: String, useDelta: float)
---- @overload fun(itemType: String, useDelta: float, moduleDefaultsToBase: boolean)
---- @overload fun(module: String, name: String, type: String, tex: String)
-function InventoryItemFactory.CreateItem(registryID) end
+--- @overload fun(registryID: short): InventoryItem
+--- @overload fun(itemType: String, useDelta: float): InventoryItem
+--- @overload fun(itemType: String, food: Food): InventoryItem
+--- @overload fun(itemType: String, useDelta: float, moduleDefaultsToBase: boolean): InventoryItem
+--- @overload fun(itemType: String, useDelta: float, param: String): InventoryItem
+--- @overload fun(module: String, name: String, type: String, tex: String): InventoryItem
+function InventoryItemFactory.CreateItem(itemType) end
 
 
 ------------------------------------

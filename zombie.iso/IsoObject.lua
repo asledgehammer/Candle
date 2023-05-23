@@ -23,7 +23,7 @@ IsoObject = {};
 --- @static
 --- @param square IsoGridSquare
 --- @return IsoObject
---- @overload fun(x: int, y: int, z: int)
+--- @overload fun(x: int, y: int, z: int): IsoObject
 function IsoObject.FindExternalWaterSource(square) end
 
 --- @public
@@ -44,6 +44,7 @@ function IsoObject.factoryClassFromFileInput(cell, classID) end
 --- @param cell IsoCell
 --- @param classID byte
 --- @return IsoObject
+--- @overload fun(cell: IsoCell, b: ByteBuffer): IsoObject
 function IsoObject.factoryFromFileInput(cell, classID) end
 
 --- @public
@@ -77,7 +78,7 @@ function IsoObject.getLastRenderedRendered() end
 --- @public
 --- @static
 --- @return IsoObject
---- @overload fun(sq: IsoGridSquare, spriteName: String, name: String, bShareTilesWithMap: boolean)
+--- @overload fun(sq: IsoGridSquare, spriteName: String, name: String, bShareTilesWithMap: boolean): IsoObject
 function IsoObject.getNew() end
 
 --- @public
@@ -127,7 +128,7 @@ function IsoObject:AttachAnim(ObjectName, AnimName, NumFrames, frameIncrease, Of
 --- @param DeleteWhenFinished boolean
 --- @param zBias float
 --- @return void
---- @overload fun(spr: IsoSprite, OffsetX: int, OffsetY: int, Looping: boolean, FinishHoldFrameIndex: int, DeleteWhenFinished: boolean, zBias: float, TintMod: ColorInfo)
+--- @overload fun(spr: IsoSprite, OffsetX: int, OffsetY: int, Looping: boolean, FinishHoldFrameIndex: int, DeleteWhenFinished: boolean, zBias: float, TintMod: ColorInfo): void
 function IsoObject:AttachExistingAnim(spr, OffsetX, OffsetY, Looping, FinishHoldFrameIndex, DeleteWhenFinished, zBias) end
 
 --- @public
@@ -224,6 +225,7 @@ function IsoObject:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return void
+--- @overload fun(thumper: IsoMovingObject): void
 function IsoObject:Thump(thumper) end
 
 --- @public
@@ -235,6 +237,7 @@ function IsoObject:UnCollision(object) end
 --- @param chr IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
+--- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
 function IsoObject:WeaponHit(chr, weapon) end
 
 --- @public
@@ -304,7 +307,7 @@ function IsoObject:doFindExternalWaterSource() end
 
 --- @public
 --- @return float
---- @overload fun(playerIndex: int)
+--- @overload fun(playerIndex: int): float
 function IsoObject:getAlpha() end
 
 --- @public
@@ -435,7 +438,7 @@ function IsoObject:getOffsetY() end
 
 --- @public
 --- @return int
---- @overload fun(playerIndex: int)
+--- @overload fun(playerIndex: int): int
 function IsoObject:getOutlineHighlightCol() end
 
 --- @public
@@ -525,7 +528,7 @@ function IsoObject:getTable() end
 
 --- @public
 --- @return float
---- @overload fun(playerIndex: int)
+--- @overload fun(playerIndex: int): float
 function IsoObject:getTargetAlpha() end
 
 --- @public
@@ -534,11 +537,13 @@ function IsoObject:getTextureName() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function IsoObject:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
+--- @overload fun(chr: IsoGameCharacter): Thumpable
 function IsoObject:getThumpableFor(chr) end
 
 --- @public
@@ -603,12 +608,12 @@ function IsoObject:haveSpecialTooltip() end
 
 --- @public
 --- @return boolean
---- @overload fun(playerIndex: int)
+--- @overload fun(playerIndex: int): boolean
 function IsoObject:isAlphaAndTargetZero() end
 
 --- @public
 --- @return boolean
---- @overload fun(playerIndex: int)
+--- @overload fun(playerIndex: int): boolean
 function IsoObject:isAlphaZero() end
 
 --- @public
@@ -621,6 +626,7 @@ function IsoObject:isCharacter() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoObject:isDestroyed() end
 
 --- @public
@@ -649,7 +655,7 @@ function IsoObject:isItemAllowedInContainer(container, item) end
 --- @param x int
 --- @param y int
 --- @return boolean
---- @overload fun(x: int, y: int, flip: boolean)
+--- @overload fun(x: int, y: int, flip: boolean): boolean
 function IsoObject:isMaskClicked(x, y) end
 
 --- @public
@@ -666,17 +672,17 @@ function IsoObject:isNorthHoppable() end
 
 --- @public
 --- @return boolean
---- @overload fun(playerIndex: int)
+--- @overload fun(playerIndex: int): boolean
 function IsoObject:isOutlineHighlight() end
 
 --- @public
 --- @return boolean
---- @overload fun(playerIndex: int)
+--- @overload fun(playerIndex: int): boolean
 function IsoObject:isOutlineHlAttached() end
 
 --- @public
 --- @return boolean
---- @overload fun(playerIndex: int)
+--- @overload fun(playerIndex: int): boolean
 function IsoObject:isOutlineHlBlink() end
 
 --- @public
@@ -730,7 +736,7 @@ function IsoObject:isZombie() end
 --- @param input ByteBuffer
 --- @param WorldVersion int
 --- @return void
---- @overload fun(input: ByteBuffer, WorldVersion: int, IS_DEBUG_SAVE: boolean)
+--- @overload fun(input: ByteBuffer, WorldVersion: int, IS_DEBUG_SAVE: boolean): void
 function IsoObject:load(input, WorldVersion) end
 
 --- @public
@@ -742,7 +748,7 @@ function IsoObject:loadChange(change, bb) end
 --- @public
 --- @param b ByteBuffer
 --- @return void
---- @overload fun(b: ByteBuffer, addToObjects: boolean)
+--- @overload fun(b: ByteBuffer, addToObjects: boolean): void
 function IsoObject:loadFromRemoteBuffer(b) end
 
 --- @public
@@ -882,7 +888,7 @@ function IsoObject:reuseGridSquare() end
 --- @public
 --- @param output ByteBuffer
 --- @return void
---- @overload fun(output: ByteBuffer, IS_DEBUG_SAVE: boolean)
+--- @overload fun(output: ByteBuffer, IS_DEBUG_SAVE: boolean): void
 function IsoObject:save(output) end
 
 --- @public
@@ -900,19 +906,20 @@ function IsoObject:saveState(bb) end
 --- @public
 --- @param change String
 --- @return void
---- @overload fun(arg0: String, arg1: KahluaTable)
+--- @overload fun(arg0: String, arg1: Object[]): void
+--- @overload fun(arg0: String, arg1: KahluaTable): void
 function IsoObject:sendObjectChange(change) end
 
 --- @public
 --- @param alpha float
 --- @return void
---- @overload fun(playerIndex: int, alpha: float)
+--- @overload fun(playerIndex: int, alpha: float): void
 function IsoObject:setAlpha(alpha) end
 
 --- @public
 --- @param alpha float
 --- @return void
---- @overload fun(playerIndex: int, alpha: float)
+--- @overload fun(playerIndex: int, alpha: float): void
 function IsoObject:setAlphaAndTarget(alpha) end
 
 --- @public
@@ -943,7 +950,7 @@ function IsoObject:setContainer(container) end
 --- @public
 --- @param col ColorInfo
 --- @return void
---- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: float, g: float, b: float, a: float): void
 function IsoObject:setCustomColor(col) end
 
 --- @public
@@ -954,18 +961,19 @@ function IsoObject:setDamage(Damage) end
 --- @public
 --- @param dir int
 --- @return void
+--- @overload fun(dir: IsoDirections): void
 function IsoObject:setDir(dir) end
 
 --- @public
 --- @param highlightColor ColorInfo
 --- @return void
---- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: float, g: float, b: float, a: float): void
 function IsoObject:setHighlightColor(highlightColor) end
 
 --- @public
 --- @param highlight boolean
 --- @return void
---- @overload fun(highlight: boolean, renderOnce: boolean)
+--- @overload fun(highlight: boolean, renderOnce: boolean): void
 function IsoObject:setHighlighted(highlight) end
 
 --- @public
@@ -1001,27 +1009,27 @@ function IsoObject:setOffsetY(offsetY) end
 --- @public
 --- @param isOutlineHighlight boolean
 --- @return void
---- @overload fun(playerIndex: int, isOutlineHighlight: boolean)
+--- @overload fun(playerIndex: int, isOutlineHighlight: boolean): void
 function IsoObject:setOutlineHighlight(isOutlineHighlight) end
 
 --- @public
 --- @param outlineHighlightCol ColorInfo
 --- @return void
---- @overload fun(playerIndex: int, outlineHighlightCol: ColorInfo)
---- @overload fun(r: float, g: float, b: float, a: float)
---- @overload fun(playerIndex: int, r: float, g: float, b: float, a: float)
+--- @overload fun(playerIndex: int, outlineHighlightCol: ColorInfo): void
+--- @overload fun(r: float, g: float, b: float, a: float): void
+--- @overload fun(playerIndex: int, r: float, g: float, b: float, a: float): void
 function IsoObject:setOutlineHighlightCol(outlineHighlightCol) end
 
 --- @public
 --- @param isOutlineHlAttached boolean
 --- @return void
---- @overload fun(playerIndex: int, isOutlineHlAttached: boolean)
+--- @overload fun(playerIndex: int, isOutlineHlAttached: boolean): void
 function IsoObject:setOutlineHlAttached(isOutlineHlAttached) end
 
 --- @public
 --- @param isOutlineHlBlink boolean
 --- @return void
---- @overload fun(playerIndex: int, isOutlineHlBlink: boolean)
+--- @overload fun(playerIndex: int, isOutlineHlBlink: boolean): void
 function IsoObject:setOutlineHlBlink(isOutlineHlBlink) end
 
 --- @public
@@ -1037,9 +1045,9 @@ function IsoObject:setOutlineThickness(outlineThickness) end
 --- @public
 --- @param spriteName String
 --- @return void
---- @overload fun(spriteName: String, bTransmit: boolean)
---- @overload fun(spriteName: String, r: float, g: float, b: float, a: float)
---- @overload fun(spriteName: String, r: float, g: float, b: float, a: float, bTransmit: boolean)
+--- @overload fun(spriteName: String, bTransmit: boolean): void
+--- @overload fun(spriteName: String, r: float, g: float, b: float, a: float): void
+--- @overload fun(spriteName: String, r: float, g: float, b: float, a: float, bTransmit: boolean): boolean
 function IsoObject:setOverlaySprite(spriteName) end
 
 --- @public
@@ -1058,7 +1066,7 @@ function IsoObject:setPipedFuelAmount(units) end
 --- @public
 --- @param type RenderEffectType
 --- @return void
---- @overload fun(type: RenderEffectType, reuseEqualType: boolean)
+--- @overload fun(type: RenderEffectType, reuseEqualType: boolean): void
 function IsoObject:setRenderEffect(type) end
 
 --- @public
@@ -1082,9 +1090,10 @@ function IsoObject:setRerouteMask(rerouteMask) end
 function IsoObject:setSpecialTooltip(specialTooltip) end
 
 --- @public
---- @param sprite IsoSprite
+--- @param name String
 --- @return void
-function IsoObject:setSprite(sprite) end
+--- @overload fun(sprite: IsoSprite): void
+function IsoObject:setSprite(name) end
 
 --- @public
 --- @param name String
@@ -1109,7 +1118,7 @@ function IsoObject:setTaintedWater(tainted) end
 --- @public
 --- @param targetAlpha float
 --- @return void
---- @overload fun(playerIndex: int, targetAlpha: float)
+--- @overload fun(playerIndex: int, targetAlpha: float): void
 function IsoObject:setTargetAlpha(targetAlpha) end
 
 --- @public
@@ -1166,7 +1175,7 @@ function IsoObject:transmitUpdatedSprite() end
 
 --- @public
 --- @return void
---- @overload fun(connection: UdpConnection)
+--- @overload fun(connection: UdpConnection): void
 function IsoObject:transmitUpdatedSpriteToClients() end
 
 --- @public
@@ -1205,6 +1214,9 @@ function IsoObject:writeToRemoteBuffer(b) end
 --- @return IsoObject
 --- @overload fun(cell: IsoCell)
 --- @overload fun(square: IsoGridSquare, tile: String)
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, gid: String)
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite)
 --- @overload fun(square: IsoGridSquare, tile: String, bShareTilesWithMap: boolean)
+--- @overload fun(square: IsoGridSquare, tile: String, name: String)
 --- @overload fun(square: IsoGridSquare, tile: String, name: String, bShareTilesWithMap: boolean)
 function IsoObject.new() end

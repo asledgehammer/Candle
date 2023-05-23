@@ -10,10 +10,12 @@ TextServerOption = {};
 
 --- @public
 --- @return ConfigOption
+--- @overload fun(): ConfigOption
 function TextServerOption:asConfigOption() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function TextServerOption:getTooltip() end
 
 --- @public

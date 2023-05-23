@@ -20,9 +20,9 @@ function WorldSoundManager:KillCell() end
 --- @param radius int
 --- @param volume int
 --- @return WorldSound
---- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean)
---- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean, zombieIgnoreDist: float, stressMod: float)
---- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean, zombieIgnoreDist: float, stressMod: float, sourceIsZombie: boolean, doSend: boolean, remote: boolean)
+--- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean): WorldSound
+--- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean, zombieIgnoreDist: float, stressMod: float): WorldSound
+--- @overload fun(source: Object, x: int, y: int, z: int, radius: int, volume: int, stressHumans: boolean, zombieIgnoreDist: float, stressMod: float, sourceIsZombie: boolean, doSend: boolean, remote: boolean): WorldSound
 function WorldSoundManager:addSound(source, x, y, z, radius, volume) end
 
 --- @public
@@ -48,6 +48,7 @@ function WorldSoundManager:getBiggestSoundZomb(x, y, z, ignoreBySameType, zom) e
 --- @public
 --- @param arg0 int
 --- @return float
+--- @overload fun(arg0: IsoZombie): float
 function WorldSoundManager:getHearingMultiplier(arg0) end
 
 --- @public

@@ -38,7 +38,7 @@ function ColorInfo:interp(to, delta, dest) end
 --- @public
 --- @param other ColorInfo
 --- @return ColorInfo
---- @overload fun(R: float, G: float, B: float, A: float)
+--- @overload fun(R: float, G: float, B: float, A: float): ColorInfo
 function ColorInfo:set(other) end
 
 --- @public

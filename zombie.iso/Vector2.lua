@@ -80,6 +80,7 @@ function Vector2:angleTo(other) end
 
 --- @public
 --- @return Object
+--- @overload fun(): Vector2
 function Vector2:clone() end
 
 --- @public
@@ -138,7 +139,7 @@ function Vector2:scale(scale) end
 --- @public
 --- @param other Vector2
 --- @return Vector2
---- @overload fun(x: float, y: float)
+--- @overload fun(x: float, y: float): Vector2
 function Vector2:set(other) end
 
 --- @public

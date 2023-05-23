@@ -190,7 +190,7 @@ function VehicleScript:getModel() end
 --- @public
 --- @param id String
 --- @return Model
---- @overload fun(id: String, models: ArrayList)
+--- @overload fun(id: String, models: ArrayList): Model
 function VehicleScript:getModelById(id) end
 
 --- @public
@@ -363,9 +363,10 @@ function VehicleScript:getWheelFriction() end
 function VehicleScript:globMatch(pattern, str) end
 
 --- @public
---- @param attach ModelAttachment
+--- @param index int
 --- @return ModelAttachment
-function VehicleScript:removeAttachment(attach) end
+--- @overload fun(attach: ModelAttachment): ModelAttachment
+function VehicleScript:removeAttachment(index) end
 
 --- @public
 --- @param engineRPMType String

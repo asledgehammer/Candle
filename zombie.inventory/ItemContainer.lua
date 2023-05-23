@@ -21,7 +21,8 @@ function ItemContainer.floatingPointCorrection(val) end
 --- @public
 --- @param type String
 --- @return InventoryItem
---- @overload fun(type: String, useDelta: float)
+--- @overload fun(item: InventoryItem): InventoryItem
+--- @overload fun(type: String, useDelta: float): boolean
 function ItemContainer:AddItem(type) end
 
 --- @public
@@ -30,9 +31,10 @@ function ItemContainer:AddItem(type) end
 function ItemContainer:AddItemBlind(item) end
 
 --- @public
---- @param item InventoryItem
+--- @param item String
 --- @param use int
---- @return void
+--- @return ArrayList
+--- @overload fun(item: InventoryItem, use: int): void
 function ItemContainer:AddItems(item, use) end
 
 --- @public
@@ -63,7 +65,8 @@ function ItemContainer:FindAll(type) end
 --- @public
 --- @param type String
 --- @return InventoryItem
---- @overload fun(type: String, itemToCheck: ArrayList)
+--- @overload fun(type: String, count: int): ArrayList
+--- @overload fun(type: String, itemToCheck: ArrayList): InventoryItem
 function ItemContainer:FindAndReturn(type) end
 
 --- @public
@@ -74,6 +77,7 @@ function ItemContainer:FindAndReturnCategory(category) end
 --- @public
 --- @param type String
 --- @return InventoryItem
+--- @overload fun(itemlike: InventoryItem): InventoryItem
 function ItemContainer:FindAndReturnStack(type) end
 
 --- @public
@@ -91,9 +95,11 @@ function ItemContainer:FindWaterSource() end
 function ItemContainer:HasType(itemType) end
 
 --- @public
---- @param item InventoryItem
+--- @param itemTypes String
 --- @return void
-function ItemContainer:Remove(item) end
+--- @overload fun(item: InventoryItem): void
+--- @overload fun(itemType: ItemType): InventoryItem
+function ItemContainer:Remove(itemTypes) end
 
 --- @public
 --- @param itemType String
@@ -103,7 +109,7 @@ function ItemContainer:RemoveAll(itemType) end
 --- @public
 --- @param String String
 --- @return void
---- @overload fun(String: String, insideInv: boolean)
+--- @overload fun(String: String, insideInv: boolean): boolean
 function ItemContainer:RemoveOneOf(String) end
 
 --- @public
@@ -125,11 +131,13 @@ function ItemContainer:addItemsToProcessItems() end
 function ItemContainer:clear() end
 
 --- @public
---- @param item InventoryItem
+--- @param type String
 --- @return boolean
---- @overload fun(type: String, doInv: boolean)
---- @overload fun(type: String, doInv: boolean, ignoreBroken: boolean)
-function ItemContainer:contains(item) end
+--- @overload fun(item: InventoryItem): boolean
+--- @overload fun(type: String, doInv: boolean): boolean
+--- @overload fun(itemToFind: InventoryItem, doInv: boolean): boolean
+--- @overload fun(type: String, doInv: boolean, ignoreBroken: boolean): boolean
+function ItemContainer:contains(type) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -218,7 +226,7 @@ function ItemContainer:containsTypeRecurse(type) end
 --- @public
 --- @param moduleType String
 --- @return boolean
---- @overload fun(moduleType: String, withDeltaLeft: boolean)
+--- @overload fun(moduleType: String, withDeltaLeft: boolean): boolean
 function ItemContainer:containsWithModule(moduleType) end
 
 --- @public
@@ -236,13 +244,13 @@ function ItemContainer:getAgeFactor() end
 --- @public
 --- @param predicate Predicate
 --- @return ArrayList
---- @overload fun(predicate: Predicate, result: ArrayList)
+--- @overload fun(predicate: Predicate, result: ArrayList): ArrayList
 function ItemContainer:getAll(predicate) end
 
 --- @public
 --- @param category String
 --- @return ArrayList
---- @overload fun(category: String, result: ArrayList)
+--- @overload fun(category: String, result: ArrayList): ArrayList
 function ItemContainer:getAllCategory(category) end
 
 --- @public
@@ -254,27 +262,27 @@ function ItemContainer:getAllCategoryRecurse(category, result) end
 --- @public
 --- @param arg0 LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: ArrayList)
+--- @overload fun(arg0: LuaClosure, arg1: ArrayList): ArrayList
 function ItemContainer:getAllEval(arg0) end
 
 --- @public
 --- @param arg0 LuaClosure
 --- @param arg1 Object
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: Object, arg2: ArrayList)
+--- @overload fun(arg0: LuaClosure, arg1: Object, arg2: ArrayList): ArrayList
 function ItemContainer:getAllEvalArg(arg0, arg1) end
 
 --- @public
 --- @param arg0 LuaClosure
 --- @param arg1 Object
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: Object, arg2: ArrayList)
+--- @overload fun(arg0: LuaClosure, arg1: Object, arg2: ArrayList): ArrayList
 function ItemContainer:getAllEvalArgRecurse(arg0, arg1) end
 
 --- @public
 --- @param arg0 LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: ArrayList)
+--- @overload fun(arg0: LuaClosure, arg1: ArrayList): ArrayList
 function ItemContainer:getAllEvalRecurse(arg0) end
 
 --- @public
@@ -299,7 +307,7 @@ function ItemContainer:getAllTag(tag, result) end
 --- @param arg0 String
 --- @param arg1 LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList): ArrayList
 function ItemContainer:getAllTagEval(arg0, arg1) end
 
 --- @public
@@ -307,7 +315,7 @@ function ItemContainer:getAllTagEval(arg0, arg1) end
 --- @param arg1 LuaClosure
 --- @param arg2 Object
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList): ArrayList
 function ItemContainer:getAllTagEvalArg(arg0, arg1, arg2) end
 
 --- @public
@@ -334,14 +342,14 @@ function ItemContainer:getAllTagRecurse(tag, result) end
 --- @public
 --- @param type String
 --- @return ArrayList
---- @overload fun(type: String, result: ArrayList)
+--- @overload fun(type: String, result: ArrayList): ArrayList
 function ItemContainer:getAllType(type) end
 
 --- @public
 --- @param arg0 String
 --- @param arg1 LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList): ArrayList
 function ItemContainer:getAllTypeEval(arg0, arg1) end
 
 --- @public
@@ -349,7 +357,7 @@ function ItemContainer:getAllTypeEval(arg0, arg1) end
 --- @param arg1 LuaClosure
 --- @param arg2 Object
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList): ArrayList
 function ItemContainer:getAllTypeEvalArg(arg0, arg1, arg2) end
 
 --- @public
@@ -357,20 +365,20 @@ function ItemContainer:getAllTypeEvalArg(arg0, arg1, arg2) end
 --- @param arg1 LuaClosure
 --- @param arg2 Object
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList): ArrayList
 function ItemContainer:getAllTypeEvalArgRecurse(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 String
 --- @param arg1 LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList): ArrayList
 function ItemContainer:getAllTypeEvalRecurse(arg0, arg1) end
 
 --- @public
 --- @param type String
 --- @return ArrayList
---- @overload fun(type: String, result: ArrayList)
+--- @overload fun(type: String, result: ArrayList): ArrayList
 function ItemContainer:getAllTypeRecurse(type) end
 
 --- @public
@@ -389,9 +397,10 @@ function ItemContainer:getBest(predicate, comparator) end
 function ItemContainer:getBestBandage(descriptor) end
 
 --- @public
---- @param predicate Predicate
+--- @param type String
 --- @return InventoryItem
-function ItemContainer:getBestCondition(predicate) end
+--- @overload fun(predicate: Predicate): InventoryItem
+function ItemContainer:getBestCondition(type) end
 
 --- @public
 --- @param arg0 LuaClosure
@@ -418,6 +427,7 @@ function ItemContainer:getBestConditionEvalRecurse(arg0) end
 --- @public
 --- @param type String
 --- @return InventoryItem
+--- @overload fun(predicate: Predicate): InventoryItem
 function ItemContainer:getBestConditionRecurse(type) end
 
 --- @public
@@ -497,7 +507,7 @@ function ItemContainer:getBestTypeRecurse(type, comparator) end
 
 --- @public
 --- @return InventoryItem
---- @overload fun(desc: SurvivorDesc)
+--- @overload fun(desc: SurvivorDesc): InventoryItem
 function ItemContainer:getBestWeapon() end
 
 --- @public
@@ -757,7 +767,7 @@ function ItemContainer:getItemById(id) end
 --- @public
 --- @param type String
 --- @return int
---- @overload fun(type: String, doBags: boolean)
+--- @overload fun(type: String, doBags: boolean): int
 function ItemContainer:getItemCount(type) end
 
 --- @public
@@ -773,8 +783,8 @@ function ItemContainer:getItemCountRecurse(type) end
 --- @public
 --- @param type String
 --- @return InventoryItem
---- @overload fun(type: String, ignoreBroken: boolean, includeInv: boolean)
---- @overload fun(type: String, chr: IsoGameCharacter, notEquipped: boolean, ignoreBroken: boolean, includeInv: boolean)
+--- @overload fun(type: String, ignoreBroken: boolean, includeInv: boolean): InventoryItem
+--- @overload fun(type: String, chr: IsoGameCharacter, notEquipped: boolean, ignoreBroken: boolean, includeInv: boolean): InventoryItem
 function ItemContainer:getItemFromType(type) end
 
 --- @public
@@ -808,13 +818,13 @@ function ItemContainer:getItemsFromCategory(category) end
 --- @public
 --- @param type String
 --- @return ArrayList
---- @overload fun(type: String, includeInv: boolean)
+--- @overload fun(type: String, includeInv: boolean): ArrayList
 function ItemContainer:getItemsFromFullType(type) end
 
 --- @public
 --- @param type String
 --- @return ArrayList
---- @overload fun(type: String, includeInv: boolean)
+--- @overload fun(type: String, includeInv: boolean): ArrayList
 function ItemContainer:getItemsFromType(type) end
 
 --- @public
@@ -829,8 +839,9 @@ function ItemContainer:getNumItems(item) end
 --- @public
 --- @param findItem String
 --- @return int
---- @overload fun(findItem: String, includeReplaceOnDeplete: boolean)
---- @overload fun(findItem: String, includeReplaceOnDeplete: boolean, containers: ArrayList)
+--- @overload fun(findItem: String, includeReplaceOnDeplete: boolean): int
+--- @overload fun(findItem: String, includeReplaceOnDeplete: boolean, insideInv: boolean): int
+--- @overload fun(findItem: String, includeReplaceOnDeplete: boolean, containers: ArrayList): int
 function ItemContainer:getNumberOfItem(findItem) end
 
 --- @public
@@ -860,7 +871,7 @@ function ItemContainer:getSome(predicate, count, result) end
 --- @param category String
 --- @param count int
 --- @return ArrayList
---- @overload fun(category: String, count: int, result: ArrayList)
+--- @overload fun(category: String, count: int, result: ArrayList): ArrayList
 function ItemContainer:getSomeCategory(category, count) end
 
 --- @public
@@ -874,7 +885,7 @@ function ItemContainer:getSomeCategoryRecurse(category, count, result) end
 --- @param arg0 LuaClosure
 --- @param arg1 int
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: int, arg2: ArrayList)
+--- @overload fun(arg0: LuaClosure, arg1: int, arg2: ArrayList): ArrayList
 function ItemContainer:getSomeEval(arg0, arg1) end
 
 --- @public
@@ -882,7 +893,7 @@ function ItemContainer:getSomeEval(arg0, arg1) end
 --- @param arg1 Object
 --- @param arg2 int
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: Object, arg2: int, arg3: ArrayList)
+--- @overload fun(arg0: LuaClosure, arg1: Object, arg2: int, arg3: ArrayList): ArrayList
 function ItemContainer:getSomeEvalArg(arg0, arg1, arg2) end
 
 --- @public
@@ -890,14 +901,14 @@ function ItemContainer:getSomeEvalArg(arg0, arg1, arg2) end
 --- @param arg1 Object
 --- @param arg2 int
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: Object, arg2: int, arg3: ArrayList)
+--- @overload fun(arg0: LuaClosure, arg1: Object, arg2: int, arg3: ArrayList): ArrayList
 function ItemContainer:getSomeEvalArgRecurse(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 LuaClosure
 --- @param arg1 int
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: int, arg2: ArrayList)
+--- @overload fun(arg0: LuaClosure, arg1: int, arg2: ArrayList): ArrayList
 function ItemContainer:getSomeEvalRecurse(arg0, arg1) end
 
 --- @public
@@ -911,7 +922,7 @@ function ItemContainer:getSomeRecurse(predicate, count, result) end
 --- @param tag String
 --- @param count int
 --- @return ArrayList
---- @overload fun(tag: String, count: int, result: ArrayList)
+--- @overload fun(tag: String, count: int, result: ArrayList): ArrayList
 function ItemContainer:getSomeTag(tag, count) end
 
 --- @public
@@ -937,7 +948,7 @@ function ItemContainer:getSomeTagEvalArg(arg0, arg1, arg2, arg3, arg4) end
 --- @param arg2 Object
 --- @param arg3 int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList): ArrayList
 function ItemContainer:getSomeTagEvalArgRecurse(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -945,21 +956,21 @@ function ItemContainer:getSomeTagEvalArgRecurse(arg0, arg1, arg2, arg3) end
 --- @param arg1 LuaClosure
 --- @param arg2 int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList): ArrayList
 function ItemContainer:getSomeTagEvalRecurse(arg0, arg1, arg2) end
 
 --- @public
 --- @param tag String
 --- @param count int
 --- @return ArrayList
---- @overload fun(tag: String, count: int, result: ArrayList)
+--- @overload fun(tag: String, count: int, result: ArrayList): ArrayList
 function ItemContainer:getSomeTagRecurse(tag, count) end
 
 --- @public
 --- @param type String
 --- @param count int
 --- @return ArrayList
---- @overload fun(type: String, count: int, result: ArrayList)
+--- @overload fun(type: String, count: int, result: ArrayList): ArrayList
 function ItemContainer:getSomeType(type, count) end
 
 --- @public
@@ -967,7 +978,7 @@ function ItemContainer:getSomeType(type, count) end
 --- @param arg1 LuaClosure
 --- @param arg2 int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList): ArrayList
 function ItemContainer:getSomeTypeEval(arg0, arg1, arg2) end
 
 --- @public
@@ -976,7 +987,7 @@ function ItemContainer:getSomeTypeEval(arg0, arg1, arg2) end
 --- @param arg2 Object
 --- @param arg3 int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList): ArrayList
 function ItemContainer:getSomeTypeEvalArg(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -985,7 +996,7 @@ function ItemContainer:getSomeTypeEvalArg(arg0, arg1, arg2, arg3) end
 --- @param arg2 Object
 --- @param arg3 int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList): ArrayList
 function ItemContainer:getSomeTypeEvalArgRecurse(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -993,14 +1004,14 @@ function ItemContainer:getSomeTypeEvalArgRecurse(arg0, arg1, arg2, arg3) end
 --- @param arg1 LuaClosure
 --- @param arg2 int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList)
+--- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList): ArrayList
 function ItemContainer:getSomeTypeEvalRecurse(arg0, arg1, arg2) end
 
 --- @public
 --- @param type String
 --- @param count int
 --- @return ArrayList
---- @overload fun(type: String, count: int, result: ArrayList)
+--- @overload fun(type: String, count: int, result: ArrayList): ArrayList
 function ItemContainer:getSomeTypeRecurse(type, count) end
 
 --- @public
@@ -1058,9 +1069,10 @@ function ItemContainer:getWeightReduction() end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @param item InventoryItem
+--- @param weightVal float
 --- @return boolean
-function ItemContainer:hasRoomFor(chr, item) end
+--- @overload fun(chr: IsoGameCharacter, item: InventoryItem): boolean
+function ItemContainer:hasRoomFor(chr, weightVal) end
 
 --- @public
 --- @param keyId int
@@ -1171,12 +1183,12 @@ function ItemContainer:requestSync() end
 --- @public
 --- @param output ByteBuffer
 --- @return ArrayList
---- @overload fun(output: ByteBuffer, noCompress: IsoGameCharacter)
+--- @overload fun(output: ByteBuffer, noCompress: IsoGameCharacter): ArrayList
 function ItemContainer:save(output) end
 
 --- @public
 --- @return void
---- @overload fun(connection: UdpConnection)
+--- @overload fun(connection: UdpConnection): void
 function ItemContainer:sendContentsToRemoteContainer() end
 
 --- @public

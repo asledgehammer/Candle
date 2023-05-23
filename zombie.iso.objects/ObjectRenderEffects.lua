@@ -20,7 +20,7 @@ function ObjectRenderEffects.alloc() end
 --- @param t RenderEffectType
 --- @param reuseEqualType boolean
 --- @return ObjectRenderEffects
---- @overload fun(parent: IsoObject, t: RenderEffectType, reuseEqualType: boolean, dontAdd: boolean)
+--- @overload fun(parent: IsoObject, t: RenderEffectType, reuseEqualType: boolean, dontAdd: boolean): ObjectRenderEffects
 function ObjectRenderEffects.getNew(parent, t, reuseEqualType) end
 
 --- @public

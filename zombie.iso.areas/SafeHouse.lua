@@ -12,7 +12,7 @@ SafeHouse = {};
 --- @param square IsoGridSquare
 --- @param player IsoPlayer
 --- @return SafeHouse
---- @overload fun(x: int, y: int, w: int, h: int, player: String, remote: boolean)
+--- @overload fun(x: int, y: int, w: int, h: int, player: String, remote: boolean): SafeHouse
 function SafeHouse.addSafeHouse(square, player) end
 
 --- @public
@@ -37,7 +37,7 @@ function SafeHouse.clearSafehouseList() end
 --- @static
 --- @param square IsoGridSquare
 --- @return SafeHouse
---- @overload fun(x: int, y: int, w: int, h: int)
+--- @overload fun(x: int, y: int, w: int, h: int): SafeHouse
 function SafeHouse.getSafeHouse(square) end
 
 --- @public
@@ -49,6 +49,7 @@ function SafeHouse.getSafehouseList() end
 --- @static
 --- @param username String
 --- @return SafeHouse
+--- @overload fun(player: IsoPlayer): SafeHouse
 function SafeHouse.hasSafehouse(username) end
 
 --- @public
@@ -94,9 +95,10 @@ function SafeHouse.updateSafehousePlayersConnected() end
 function SafeHouse:addPlayer(player) end
 
 --- @public
---- @param player IsoPlayer
+--- @param username String
 --- @return SafeHouse
-function SafeHouse:alreadyHaveSafehouse(player) end
+--- @overload fun(player: IsoPlayer): SafeHouse
+function SafeHouse:alreadyHaveSafehouse(username) end
 
 --- @public
 --- @param player IsoPlayer
@@ -177,9 +179,10 @@ function SafeHouse:isRespawnInSafehouse(username) end
 function SafeHouse:kickOutOfSafehouse(player) end
 
 --- @public
---- @param player IsoPlayer
+--- @param name String
 --- @return boolean
-function SafeHouse:playerAllowed(player) end
+--- @overload fun(player: IsoPlayer): boolean
+function SafeHouse:playerAllowed(name) end
 
 --- @public
 --- @param player String
@@ -189,7 +192,7 @@ function SafeHouse:removePlayer(player) end
 --- @public
 --- @param player IsoPlayer
 --- @return void
---- @overload fun(player: IsoPlayer, force: boolean)
+--- @overload fun(player: IsoPlayer, force: boolean): void
 function SafeHouse:removeSafeHouse(player) end
 
 --- @public

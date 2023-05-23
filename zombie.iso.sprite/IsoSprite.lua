@@ -49,7 +49,8 @@ function IsoSprite.getSheetGridIdFromName(name) end
 --- @param manager IsoSpriteManager
 --- @param id int
 --- @return IsoSprite
---- @overload fun(manager: IsoSpriteManager, spr: IsoSprite, offset: int)
+--- @overload fun(manager: IsoSpriteManager, name: String, offset: int): IsoSprite
+--- @overload fun(manager: IsoSpriteManager, spr: IsoSprite, offset: int): IsoSprite
 function IsoSprite.getSprite(manager, id) end
 
 --- @public
@@ -146,6 +147,7 @@ function IsoSprite:LoadFramesReverseAltName(ObjectName, AnimName, AltName, nFram
 --- @public
 --- @param name String
 --- @return void
+--- @overload fun(anim: IsoAnim): void
 function IsoSprite:PlayAnim(name) end
 
 --- @public
@@ -169,7 +171,7 @@ function IsoSprite:RenderGhostTile(x, y, z) end
 --- @param b float
 --- @param a float
 --- @return void
---- @overload fun(x: int, y: int, z: int, offsetX: float, offsetY: float, r: float, g: float, b: float, a: float)
+--- @overload fun(x: int, y: int, z: int, offsetX: float, offsetY: float, r: float, g: float, b: float, a: float): void
 function IsoSprite:RenderGhostTileColor(x, y, z, r, g, b, a) end
 
 --- @public
@@ -244,7 +246,7 @@ function IsoSprite:hasActiveModel() end
 --- @param x int
 --- @param y int
 --- @return boolean
---- @overload fun(dir: IsoDirections, x: int, y: int, flip: boolean)
+--- @overload fun(dir: IsoDirections, x: int, y: int, flip: boolean): boolean
 function IsoSprite:isMaskClicked(dir, x, y) end
 
 --- @public
@@ -271,8 +273,9 @@ function IsoSprite:newInstance() end
 --- @param info2 ColorInfo
 --- @param bDoRenderPrep boolean
 --- @return void
---- @overload fun(inst: IsoSpriteInstance, obj: IsoObject, x: float, y: float, z: float, dir: IsoDirections, offsetX: float, offsetY: float, info2: ColorInfo, bDoRenderPrep: boolean)
---- @overload fun(inst: IsoSpriteInstance, obj: IsoObject, x: float, y: float, z: float, dir: IsoDirections, offsetX: float, offsetY: float, info2: ColorInfo, bDoRenderPrep: boolean, texdModifier: Consumer)
+--- @overload fun(obj: IsoObject, x: float, y: float, z: float, dir: IsoDirections, offsetX: float, offsetY: float, info2: ColorInfo, bDoRenderPrep: boolean, texdModifier: Consumer): void
+--- @overload fun(inst: IsoSpriteInstance, obj: IsoObject, x: float, y: float, z: float, dir: IsoDirections, offsetX: float, offsetY: float, info2: ColorInfo, bDoRenderPrep: boolean): void
+--- @overload fun(inst: IsoSpriteInstance, obj: IsoObject, x: float, y: float, z: float, dir: IsoDirections, offsetX: float, offsetY: float, info2: ColorInfo, bDoRenderPrep: boolean, texdModifier: Consumer): void
 function IsoSprite:render(obj, x, y, z, dir, offsetX, offsetY, info2, bDoRenderPrep) end
 
 --- @public
@@ -370,7 +373,7 @@ function IsoSprite:setType(ntype) end
 
 --- @public
 --- @return void
---- @overload fun(def: IsoSpriteInstance)
+--- @overload fun(def: IsoSpriteInstance): void
 function IsoSprite:update() end
 
 

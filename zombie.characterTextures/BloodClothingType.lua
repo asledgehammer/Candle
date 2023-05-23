@@ -40,13 +40,14 @@ function BloodClothingType.addBasicPatch(part, humanVisual, itemVisuals) end
 
 --- @public
 --- @static
---- @param part BloodBodyPartType
+--- @param count int
 --- @param humanVisual HumanVisual
 --- @param itemVisuals ArrayList
 --- @param allLayers boolean
 --- @return void
---- @overload fun(part: BloodBodyPartType, intensity: float, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean)
-function BloodClothingType.addBlood(part, humanVisual, itemVisuals, allLayers) end
+--- @overload fun(part: BloodBodyPartType, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): void
+--- @overload fun(part: BloodBodyPartType, intensity: float, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): void
+function BloodClothingType.addBlood(count, humanVisual, itemVisuals, allLayers) end
 
 --- @public
 --- @static
@@ -55,7 +56,7 @@ function BloodClothingType.addBlood(part, humanVisual, itemVisuals, allLayers) e
 --- @param itemVisuals ArrayList
 --- @param allLayers boolean
 --- @return void
---- @overload fun(part: BloodBodyPartType, intensity: float, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean)
+--- @overload fun(part: BloodBodyPartType, intensity: float, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): void
 function BloodClothingType.addDirt(part, humanVisual, itemVisuals, allLayers) end
 
 --- @public
@@ -64,7 +65,7 @@ function BloodClothingType.addDirt(part, humanVisual, itemVisuals, allLayers) en
 --- @param humanVisual HumanVisual
 --- @param itemVisuals ArrayList
 --- @return void
---- @overload fun(part: BloodBodyPartType, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean)
+--- @overload fun(part: BloodBodyPartType, humanVisual: HumanVisual, itemVisuals: ArrayList, allLayers: boolean): boolean
 function BloodClothingType.addHole(part, humanVisual, itemVisuals) end
 
 --- @public
@@ -95,7 +96,7 @@ function BloodClothingType.getCoveredPartCount(bloodClothingType) end
 --- @static
 --- @param bloodClothingType ArrayList
 --- @return ArrayList
---- @overload fun(bloodClothingType: ArrayList, result: ArrayList)
+--- @overload fun(bloodClothingType: ArrayList, result: ArrayList): ArrayList
 function BloodClothingType.getCoveredParts(bloodClothingType) end
 
 --- @public

@@ -141,8 +141,8 @@ function IsoLightSwitch:save(output, IS_DEBUG_SAVE) end
 --- @public
 --- @param active boolean
 --- @return boolean
---- @overload fun(active: boolean, setActiveBoolOnly: boolean)
---- @overload fun(active: boolean, setActiveBoolOnly: boolean, ignoreSwitchCheck: boolean)
+--- @overload fun(active: boolean, setActiveBoolOnly: boolean): boolean
+--- @overload fun(active: boolean, setActiveBoolOnly: boolean, ignoreSwitchCheck: boolean): boolean
 function IsoLightSwitch:setActive(active) end
 
 --- @public
@@ -205,7 +205,7 @@ function IsoLightSwitch:syncCustomizedSettings(source) end
 --- @param val byte
 --- @param source UdpConnection
 --- @return void
---- @overload fun(bRemote: boolean, val: byte, source: UdpConnection, bb: ByteBuffer)
+--- @overload fun(bRemote: boolean, val: byte, source: UdpConnection, bb: ByteBuffer): void
 function IsoLightSwitch:syncIsoObject(bRemote, val, source) end
 
 --- @public

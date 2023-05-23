@@ -118,10 +118,10 @@ function Translator.getRecipeName(name) end
 --- @static
 --- @param desc String
 --- @return String
---- @overload fun(desc: String, arg1: Object)
---- @overload fun(desc: String, arg1: Object, arg2: Object)
---- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
+--- @overload fun(desc: String, arg1: Object): String
+--- @overload fun(desc: String, arg1: Object, arg2: Object): String
+--- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object): String
+--- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): String
 function Translator.getText(desc) end
 
 --- @public
@@ -134,10 +134,10 @@ function Translator.getTextMediaEN(desc) end
 --- @static
 --- @param desc String
 --- @return String
---- @overload fun(desc: String, arg1: Object)
---- @overload fun(desc: String, arg1: Object, arg2: Object)
---- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object)
---- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object)
+--- @overload fun(desc: String, arg1: Object): String
+--- @overload fun(desc: String, arg1: Object, arg2: Object): String
+--- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object): String
+--- @overload fun(desc: String, arg1: Object, arg2: Object, arg3: Object, arg4: Object): String
 function Translator.getTextOrNull(desc) end
 
 --- @public
@@ -154,9 +154,10 @@ function Translator.setDefaultItemEvolvedRecipeName(fullType, english) end
 
 --- @public
 --- @static
---- @param newlanguage Language
+--- @param languageId int
 --- @return void
-function Translator.setLanguage(newlanguage) end
+--- @overload fun(newlanguage: Language): void
+function Translator.setLanguage(languageId) end
 
 
 ------------------------------------

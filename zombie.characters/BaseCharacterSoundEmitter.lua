@@ -16,9 +16,10 @@ function BaseCharacterSoundEmitter:hasSoundsToStart() end
 function BaseCharacterSoundEmitter:isClear() end
 
 --- @public
---- @param channel long
+--- @param alias String
 --- @return boolean
-function BaseCharacterSoundEmitter:isPlaying(channel) end
+--- @overload fun(channel: long): boolean
+function BaseCharacterSoundEmitter:isPlaying(alias) end
 
 --- @public
 --- @param file String
@@ -29,7 +30,7 @@ function BaseCharacterSoundEmitter:playFootsteps(file, volume) end
 --- @public
 --- @param file String
 --- @return long
---- @overload fun(file: String, proxy: IsoObject)
+--- @overload fun(file: String, proxy: IsoObject): long
 function BaseCharacterSoundEmitter:playSound(file) end
 
 --- @public

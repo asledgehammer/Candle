@@ -99,10 +99,11 @@ function ObjectTooltip:DrawTextureScaledAspect(tex, x, y, width, height, r, g, b
 function ObjectTooltip:DrawValueRight(value, x, y, highGood) end
 
 --- @public
---- @param value int
+--- @param value float
 --- @param x int
 --- @param y int
 --- @return void
+--- @overload fun(value: int, x: int, y: int): void
 function ObjectTooltip:DrawValueRightNoPlus(value, x, y) end
 
 --- @public

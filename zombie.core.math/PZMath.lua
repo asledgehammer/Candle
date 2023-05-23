@@ -57,10 +57,12 @@ function PZMath.ceil(val) end
 
 --- @public
 --- @static
---- @param val int
---- @param min int
---- @param max int
---- @return int
+--- @param val float
+--- @param min float
+--- @param max float
+--- @return float
+--- @overload fun(val: int, min: int, max: int): int
+--- @overload fun(val: long, min: long, max: long): long
 function PZMath.clamp(val, min, max) end
 
 --- @public
@@ -82,6 +84,7 @@ function PZMath.clamp_01(val) end
 --- @param arg0 Matrix4f
 --- @param arg1 Matrix4f
 --- @return Matrix4f
+--- @overload fun(arg0: Matrix4f, arg1: Matrix4f): Matrix4f
 function PZMath.convertMatrix(arg0, arg1) end
 
 --- @public
@@ -95,13 +98,14 @@ function PZMath.degToRad(degrees) end
 --- @param a float
 --- @param b float
 --- @return boolean
---- @overload fun(a: float, b: float, delta: float)
+--- @overload fun(a: float, b: float, delta: float): boolean
 function PZMath.equal(a, b) end
 
 --- @public
 --- @static
---- @param x float
+--- @param x double
 --- @return int
+--- @overload fun(x: float): int
 function PZMath.fastfloor(x) end
 
 --- @public
@@ -143,7 +147,8 @@ function PZMath.getClosestAngleDegrees(in_degsA, in_degsB) end
 --- @param dest float
 --- @param alpha float
 --- @return float
---- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: Vector3f, arg3: float)
+--- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: Vector3f, arg3: float): Vector3f
+--- @overload fun(out: Vector2, a: Vector2, b: Vector2, t: float): Vector2
 function PZMath.lerp(src, dest, alpha) end
 
 --- @public
@@ -177,6 +182,7 @@ function PZMath.lerpFunc_EaseOutQuad(x) end
 --- @param a float
 --- @param b float
 --- @return float
+--- @overload fun(a: int, b: int): int
 function PZMath.max(a, b) end
 
 --- @public
@@ -184,6 +190,7 @@ function PZMath.max(a, b) end
 --- @param a float
 --- @param b float
 --- @return float
+--- @overload fun(a: int, b: int): int
 function PZMath.min(a, b) end
 
 --- @public
@@ -282,7 +289,7 @@ function PZMath.tryParseInt(varStr, defaultVal) end
 --- @param val float
 --- @param range float
 --- @return float
---- @overload fun(in_val: float, in_min: float, in_max: float)
+--- @overload fun(in_val: float, in_min: float, in_max: float): float
 function PZMath.wrap(val, range) end
 
 

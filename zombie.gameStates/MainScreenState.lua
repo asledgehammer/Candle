@@ -18,9 +18,10 @@ MainScreenState = {};
 --- @param y int
 --- @param width int
 --- @param height int
---- @param col Color
+--- @param alpha float
 --- @return void
-function MainScreenState.DrawTexture(tex, x, y, width, height, col) end
+--- @overload fun(tex: Texture, x: int, y: int, width: int, height: int, col: Color): void
+function MainScreenState.DrawTexture(tex, x, y, width, height, alpha) end
 
 --- @public
 --- @static

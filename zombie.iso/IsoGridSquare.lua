@@ -54,6 +54,7 @@ function IsoGridSquare.getLightcache() end
 --- @param y byte
 --- @param z byte
 --- @return boolean
+--- @overload fun(matrix: int, x: int, y: int, z: int): boolean
 function IsoGridSquare.getMatrixBit(matrix, x, y, z) end
 
 --- @public
@@ -64,7 +65,7 @@ function IsoGridSquare.getMatrixBit(matrix, x, y, z) end
 --- @param y int
 --- @param z int
 --- @return IsoGridSquare
---- @overload fun(isoGridSquareCache: ArrayDeque, cell: IsoCell, slice: SliceY, x: int, y: int, z: int)
+--- @overload fun(isoGridSquareCache: ArrayDeque, cell: IsoCell, slice: SliceY, x: int, y: int, z: int): IsoGridSquare
 function IsoGridSquare.getNew(cell, slice, x, y, z) end
 
 --- @public
@@ -104,11 +105,12 @@ function IsoGridSquare.setLightcache(aLightcache) end
 --- @public
 --- @static
 --- @param matrix int
---- @param x int
---- @param y int
---- @param z int
+--- @param x byte
+--- @param y byte
+--- @param z byte
 --- @param val boolean
 --- @return int
+--- @overload fun(matrix: int, x: int, y: int, z: int, val: boolean): int
 function IsoGridSquare.setMatrixBit(matrix, x, y, z, val) end
 
 --- @public
@@ -137,7 +139,7 @@ function IsoGridSquare.toBoolean(data) end
 --- @public
 --- @param obj IsoObject
 --- @return void
---- @overload fun(obj: IsoObject, index: int)
+--- @overload fun(obj: IsoObject, index: int): void
 function IsoGridSquare:AddSpecialObject(obj) end
 
 --- @public
@@ -157,21 +159,23 @@ function IsoGridSquare:AddStairs(arg0, arg1, arg2, arg3, arg4) end
 --- @public
 --- @param obj IsoObject
 --- @return void
---- @overload fun(obj: IsoObject, index: int)
+--- @overload fun(obj: IsoObject, index: int): void
 function IsoGridSquare:AddTileObject(obj) end
 
 --- @public
---- @param item InventoryItem
+--- @param String String
 --- @param x float
 --- @param y float
 --- @param height float
 --- @return InventoryItem
---- @overload fun(item: InventoryItem, x: float, y: float, height: float, transmit: boolean)
-function IsoGridSquare:AddWorldInventoryItem(item, x, y, height) end
+--- @overload fun(item: InventoryItem, x: float, y: float, height: float): InventoryItem
+--- @overload fun(String: String, x: float, y: float, height: float, nbr: int): void
+--- @overload fun(item: InventoryItem, x: float, y: float, height: float, transmit: boolean): InventoryItem
+function IsoGridSquare:AddWorldInventoryItem(String, x, y, height) end
 
 --- @public
 --- @return void
---- @overload fun(explode: boolean)
+--- @overload fun(explode: boolean): void
 function IsoGridSquare:Burn() end
 
 --- @public
@@ -198,14 +202,14 @@ function IsoGridSquare:CalcVisibility(playerIndex) end
 --- @param bPathfind boolean
 --- @param bIgnoreSolidTrans boolean
 --- @return boolean
---- @overload fun(gridSquare: IsoGridSquare, bVision: boolean, bPathfind: boolean, bIgnoreSolidTrans: boolean, bIgnoreSolid: boolean)
---- @overload fun(arg0: IsoGridSquare, arg1: boolean, arg2: boolean, arg3: boolean, arg4: boolean, arg5: GetSquare)
+--- @overload fun(gridSquare: IsoGridSquare, bVision: boolean, bPathfind: boolean, bIgnoreSolidTrans: boolean, bIgnoreSolid: boolean): boolean
+--- @overload fun(arg0: IsoGridSquare, arg1: boolean, arg2: boolean, arg3: boolean, arg4: boolean, arg5: GetSquare): boolean
 function IsoGridSquare:CalculateCollide(gridSquare, bVision, bPathfind, bIgnoreSolidTrans) end
 
 --- @public
 --- @param gridSquare IsoGridSquare
 --- @return boolean
---- @overload fun(arg0: IsoGridSquare, arg1: GetSquare)
+--- @overload fun(arg0: IsoGridSquare, arg1: GetSquare): boolean
 function IsoGridSquare:CalculateVisionBlocked(gridSquare) end
 
 --- @public
@@ -228,13 +232,15 @@ function IsoGridSquare:DirtySlice() end
 --- @public
 --- @param sq IsoGridSquare
 --- @return float
---- @overload fun(x: int, y: int)
+--- @overload fun(other: IsoMovingObject): float
+--- @overload fun(x: int, y: int): float
 function IsoGridSquare:DistTo(sq) end
 
 --- @public
---- @param other IsoMovingObject
+--- @param sq IsoGridSquare
 --- @return float
-function IsoGridSquare:DistToProper(other) end
+--- @overload fun(other: IsoMovingObject): float
+function IsoGridSquare:DistToProper(sq) end
 
 --- @public
 --- @param obj IsoObject
@@ -314,7 +320,7 @@ function IsoGridSquare:EnsureSurroundNotNull() end
 --- @param range int
 --- @param EnemyList ArrayList
 --- @return IsoGameCharacter
---- @overload fun(g: IsoGameCharacter, range: int, EnemyList: ArrayList, RangeTest: IsoGameCharacter, TestRangeMax: int)
+--- @overload fun(g: IsoGameCharacter, range: int, EnemyList: ArrayList, RangeTest: IsoGameCharacter, TestRangeMax: int): IsoGameCharacter
 function IsoGridSquare:FindEnemy(g, range, EnemyList) end
 
 --- @public
@@ -378,37 +384,38 @@ function IsoGridSquare:HasTree() end
 function IsoGridSquare:InvalidateSpecialObjectPaths() end
 
 --- @public
---- @param flag IsoFlagType
+--- @param flag String
 --- @return boolean
+--- @overload fun(flag: IsoFlagType): boolean
 function IsoGridSquare:Is(flag) end
 
 --- @public
 --- @return boolean
---- @overload fun(halfTileBorder: boolean)
+--- @overload fun(halfTileBorder: boolean): boolean
 function IsoGridSquare:IsOnScreen() end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return void
---- @overload fun(arg0: IsoGridSquare, arg1: GetSquare)
+--- @overload fun(arg0: IsoGridSquare, arg1: GetSquare): void
 function IsoGridSquare:ReCalculateCollide(square) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return void
---- @overload fun(arg0: IsoGridSquare, arg1: GetSquare)
+--- @overload fun(arg0: IsoGridSquare, arg1: GetSquare): void
 function IsoGridSquare:ReCalculatePathFind(square) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return void
---- @overload fun(arg0: IsoGridSquare, arg1: GetSquare)
+--- @overload fun(arg0: IsoGridSquare, arg1: GetSquare): void
 function IsoGridSquare:ReCalculateVisionBlocked(square) end
 
 --- @public
 --- @param bDoReverse boolean
 --- @return void
---- @overload fun(arg0: boolean, arg1: GetSquare)
+--- @overload fun(arg0: boolean, arg1: GetSquare): void
 function IsoGridSquare:RecalcAllWithNeighbours(bDoReverse) end
 
 --- @public
@@ -977,7 +984,7 @@ function IsoGridSquare:getWater() end
 
 --- @public
 --- @return IsoWindow
---- @overload fun(north: boolean)
+--- @overload fun(north: boolean): IsoWindow
 function IsoGridSquare:getWindow() end
 
 --- @public
@@ -1155,7 +1162,7 @@ function IsoGridSquare:isFree(bCountOtherCharacters) end
 --- @public
 --- @param bCountOtherCharacters boolean
 --- @return boolean
---- @overload fun(bCountOtherCharacters: boolean, bDoZombie: boolean)
+--- @overload fun(bCountOtherCharacters: boolean, bDoZombie: boolean): boolean
 function IsoGridSquare:isFreeOrMidair(bCountOtherCharacters) end
 
 --- @public
@@ -1182,7 +1189,7 @@ function IsoGridSquare:isOverlayDone() end
 
 --- @public
 --- @return boolean
---- @overload fun(sq: IsoGridSquare, depth: int)
+--- @overload fun(sq: IsoGridSquare, depth: int): void
 function IsoGridSquare:isSafeToSpawn() end
 
 --- @public
@@ -1241,7 +1248,7 @@ function IsoGridSquare:isWindowTo(other) end
 --- @param b ByteBuffer
 --- @param WorldVersion int
 --- @return void
---- @overload fun(b: ByteBuffer, WorldVersion: int, IS_DEBUG_SAVE: boolean)
+--- @overload fun(b: ByteBuffer, WorldVersion: int, IS_DEBUG_SAVE: boolean): void
 function IsoGridSquare:load(b, WorldVersion) end
 
 --- @public
@@ -1253,7 +1260,7 @@ function IsoGridSquare:placeWallAndDoorCheck(obj, index) end
 --- @public
 --- @param file String
 --- @return long
---- @overload fun(file: String, doWorldSound: boolean)
+--- @overload fun(file: String, doWorldSound: boolean): long
 function IsoGridSquare:playSound(file) end
 
 --- @public
@@ -1316,7 +1323,7 @@ function IsoGridSquare:restackSheetRope() end
 --- @param output ByteBuffer
 --- @param outputObj ObjectOutputStream
 --- @return void
---- @overload fun(output: ByteBuffer, outputObj: ObjectOutputStream, IS_DEBUG_SAVE: boolean)
+--- @overload fun(output: ByteBuffer, outputObj: ObjectOutputStream, IS_DEBUG_SAVE: boolean): void
 function IsoGridSquare:save(output, outputObj) end
 
 --- @public
@@ -1589,7 +1596,7 @@ function IsoGridSquare:testCollideSpecialObjects(next) end
 --- @param y int
 --- @param z int
 --- @return boolean
---- @overload fun(arg0: IsoMovingObject, arg1: int, arg2: int, arg3: int, arg4: GetSquare)
+--- @overload fun(arg0: IsoMovingObject, arg1: int, arg2: int, arg3: int, arg4: GetSquare): boolean
 function IsoGridSquare:testPathFindAdjacent(mover, x, y, z) end
 
 --- @public

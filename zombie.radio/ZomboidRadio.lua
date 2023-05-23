@@ -96,8 +96,8 @@ function ZomboidRadio:Save() end
 --- @param msg ChatMessage
 --- @param signalStrength int
 --- @return void
---- @overload fun(sourceX: int, sourceY: int, channel: int, msg: String, guid: String, codes: String, r: float, g: float, b: float, signalStrength: int, isTV: boolean)
---- @overload fun(source: long, sourceX: int, sourceY: int, channel: int, msg: String, guid: String, codes: String, r: float, g: float, b: float, signalStrength: int, isTV: boolean)
+--- @overload fun(sourceX: int, sourceY: int, channel: int, msg: String, guid: String, codes: String, r: float, g: float, b: float, signalStrength: int, isTV: boolean): void
+--- @overload fun(source: long, sourceX: int, sourceY: int, channel: int, msg: String, guid: String, codes: String, r: float, g: float, b: float, signalStrength: int, isTV: boolean): void
 function ZomboidRadio:SendTransmission(sourceX, sourceY, msg, signalStrength) end
 
 --- @public
@@ -121,7 +121,7 @@ function ZomboidRadio:WriteRadioServerDataPacket(bb) end
 --- @param frequency int
 --- @param category String
 --- @return void
---- @overload fun(name: String, frequency: int, category: String, overwrite: boolean)
+--- @overload fun(name: String, frequency: int, category: String, overwrite: boolean): void
 function ZomboidRadio:addChannelName(name, frequency, category) end
 
 --- @public
@@ -172,7 +172,7 @@ function ZomboidRadio:getRandomBzztFzzt() end
 
 --- @public
 --- @return int
---- @overload fun(rangemin: int, rangemax: int)
+--- @overload fun(rangemin: int, rangemax: int): int
 function ZomboidRadio:getRandomFrequency() end
 
 --- @public

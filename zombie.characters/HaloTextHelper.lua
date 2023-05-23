@@ -16,8 +16,8 @@ HaloTextHelper = {};
 --- @param player IsoPlayer
 --- @param text String
 --- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: ColorRGB)
---- @overload fun(player: IsoPlayer, text: String, r: int, g: int, b: int)
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: ColorRGB): void
+--- @overload fun(player: IsoPlayer, text: String, r: int, g: int, b: int): void
 function HaloTextHelper.addText(player, text) end
 
 --- @public
@@ -27,9 +27,9 @@ function HaloTextHelper.addText(player, text) end
 --- @param arg2 boolean
 --- @param arg3 ColorRGB
 --- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: boolean, arg3: ColorRGB, arg4: ColorRGB)
---- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, r: int, g: int, b: int)
---- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, r: int, g: int, b: int, aR: int, aG: int, aB: int)
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: boolean, arg3: ColorRGB, arg4: ColorRGB): void
+--- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, r: int, g: int, b: int): void
+--- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, r: int, g: int, b: int, aR: int, aG: int, aB: int): void
 function HaloTextHelper.addTextWithArrow(arg0, arg1, arg2, arg3) end
 
 --- @public

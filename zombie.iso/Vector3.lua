@@ -51,6 +51,7 @@ function Vector3:add(other) end
 --- @public
 --- @param other Vector2
 --- @return Vector3
+--- @overload fun(other: Vector3): Vector3
 function Vector3:addToThis(other) end
 
 --- @public
@@ -65,6 +66,7 @@ function Vector3:angleTo(other) end
 
 --- @public
 --- @return Object
+--- @overload fun(): Vector3
 function Vector3:clone() end
 
 --- @public
@@ -121,7 +123,7 @@ function Vector3:rotatey(rad) end
 --- @public
 --- @param other Vector3
 --- @return Vector3
---- @overload fun(x: float, y: float, z: float)
+--- @overload fun(x: float, y: float, z: float): Vector3
 function Vector3:set(other) end
 
 --- @public

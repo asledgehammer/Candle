@@ -253,7 +253,7 @@ function SpriteRenderer:glDoEndFrameFx(player) end
 --- @param zoom float
 --- @param player int
 --- @return void
---- @overload fun(w: int, h: int, zoom: float, player: int, isTextFrame: boolean)
+--- @overload fun(w: int, h: int, zoom: float, player: int, isTextFrame: boolean): void
 function SpriteRenderer:glDoStartFrame(w, h, zoom, player) end
 
 --- @public
@@ -361,11 +361,11 @@ function SpriteRenderer:pushFrameDown() end
 --- @param a float
 --- @param texdModifier Consumer
 --- @return void
---- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, c1: int, c2: int, c3: int, c4: int)
---- @overload fun(tex: Texture, x1: double, y1: double, x2: double, y2: double, x3: double, y3: double, x4: double, y4: double, r: float, g: float, b: float, a: float, texdModifier: Consumer)
---- @overload fun(tex: Texture, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float)
---- @overload fun(tex: Texture, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float, texdModifier: Consumer)
---- @overload fun(tex: Texture, x1: double, y1: double, x2: double, y2: double, x3: double, y3: double, x4: double, y4: double, r1: float, g1: float, b1: float, a1: float, r2: float, g2: float, b2: float, a2: float, r3: float, g3: float, b3: float, a3: float, r4: float, g4: float, b4: float, a4: float, texdModifier: Consumer)
+--- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, c1: int, c2: int, c3: int, c4: int): void
+--- @overload fun(tex: Texture, x1: double, y1: double, x2: double, y2: double, x3: double, y3: double, x4: double, y4: double, r: float, g: float, b: float, a: float, texdModifier: Consumer): void
+--- @overload fun(tex: Texture, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float): void
+--- @overload fun(tex: Texture, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float, texdModifier: Consumer): void
+--- @overload fun(tex: Texture, x1: double, y1: double, x2: double, y2: double, x3: double, y3: double, x4: double, y4: double, r1: float, g1: float, b1: float, a1: float, r2: float, g2: float, b2: float, a2: float, r3: float, g3: float, b3: float, a3: float, r4: float, g4: float, b4: float, a4: float, texdModifier: Consumer): void
 function SpriteRenderer:render(tex, x, y, width, height, r, g, b, a, texdModifier) end
 
 --- @public
@@ -400,8 +400,8 @@ function SpriteRenderer:renderClamped(tex, x, y, width, height, clampX, clampY, 
 --- @param b float
 --- @param a float
 --- @return void
---- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, r: float, g: float, b: float, a: float)
---- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float)
+--- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, r: float, g: float, b: float, a: float): void
+--- @overload fun(tex: Texture, x1: float, y1: float, x2: float, y2: float, x3: float, y3: float, x4: float, y4: float, r: float, g: float, b: float, a: float, u1: float, v1: float, u2: float, v2: float, u3: float, v3: float, u4: float, v4: float): void
 function SpriteRenderer:renderPoly(x1, y1, x2, y2, x3, y3, x4, y4, r, g, b, a) end
 
 --- @public
@@ -485,7 +485,7 @@ function SpriteRenderer:renderi(tex, x, y, width, height, r, g, b, a, texdModifi
 --- @param b float
 --- @param a float
 --- @return void
---- @overload fun(tex: Texture, x1: int, y1: int, x2: int, y2: int, r: float, g: float, b: float, a: float, thickness: int)
+--- @overload fun(tex: Texture, x1: int, y1: int, x2: int, y2: int, r: float, g: float, b: float, a: float, thickness: int): void
 function SpriteRenderer:renderline(tex, x1, y1, x2, y2, r, g, b, a) end
 
 --- @public

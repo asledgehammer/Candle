@@ -558,6 +558,7 @@ function Food:updateSound(emitter) end
 --- @param module String
 --- @param name String
 --- @param itemType String
---- @param item Item
+--- @param texName String
 --- @return Food
-function Food.new(module, name, itemType, item) end
+--- @overload fun(module: String, name: String, itemType: String, item: Item)
+function Food.new(module, name, itemType, texName) end

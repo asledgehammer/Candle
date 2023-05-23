@@ -21,9 +21,10 @@ function DummyCharacterSoundEmitter:hasSustainPoints(handle) end
 function DummyCharacterSoundEmitter:isClear() end
 
 --- @public
---- @param channel long
+--- @param alias String
 --- @return boolean
-function DummyCharacterSoundEmitter:isPlaying(channel) end
+--- @overload fun(channel: long): boolean
+function DummyCharacterSoundEmitter:isPlaying(alias) end
 
 --- @public
 --- @param file String
@@ -34,7 +35,7 @@ function DummyCharacterSoundEmitter:playFootsteps(file, volume) end
 --- @public
 --- @param file String
 --- @return long
---- @overload fun(file: String, proxy: IsoObject)
+--- @overload fun(file: String, proxy: IsoObject): long
 function DummyCharacterSoundEmitter:playSound(file) end
 
 --- @public

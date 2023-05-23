@@ -52,14 +52,14 @@ function IsoBuilding:TriggerAlarm() end
 --- @param obj IsoDoor
 --- @param bOtherTile boolean
 --- @return void
---- @overload fun(obj: IsoDoor, bOtherTile: boolean, from: IsoGridSquare, building: IsoBuilding)
+--- @overload fun(obj: IsoDoor, bOtherTile: boolean, from: IsoGridSquare, building: IsoBuilding): void
 function IsoBuilding:addDoor(obj, bOtherTile) end
 
 --- @public
 --- @param obj IsoWindow
 --- @param bOtherTile boolean
 --- @return void
---- @overload fun(obj: IsoWindow, bOtherTile: boolean, from: IsoGridSquare, building: IsoBuilding)
+--- @overload fun(obj: IsoWindow, bOtherTile: boolean, from: IsoGridSquare, building: IsoBuilding): void
 function IsoBuilding:addWindow(obj, bOtherTile) end
 
 --- @public
@@ -99,7 +99,7 @@ function IsoBuilding:getRandomFirstFloorWindow() end
 
 --- @public
 --- @return IsoRoom
---- @overload fun(room: String)
+--- @overload fun(room: String): IsoRoom
 function IsoBuilding:getRandomRoom() end
 
 --- @public

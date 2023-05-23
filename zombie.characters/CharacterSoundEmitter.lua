@@ -16,6 +16,7 @@ function CharacterSoundEmitter:hasSoundsToStart() end
 --- @public
 --- @param handle long
 --- @return boolean
+--- @overload fun(handle: long): boolean
 function CharacterSoundEmitter:hasSustainPoints(handle) end
 
 --- @public
@@ -24,12 +25,16 @@ function CharacterSoundEmitter:isClear() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function CharacterSoundEmitter:isEmpty() end
 
 --- @public
---- @param eventInstance long
+--- @param alias String
 --- @return boolean
-function CharacterSoundEmitter:isPlaying(eventInstance) end
+--- @overload fun(alias: String): boolean
+--- @overload fun(eventInstance: long): boolean
+--- @overload fun(channel: long): boolean
+function CharacterSoundEmitter:isPlaying(alias) end
 
 --- @public
 --- @param file String
@@ -40,7 +45,10 @@ function CharacterSoundEmitter:playFootsteps(file, volume) end
 --- @public
 --- @param file String
 --- @return long
---- @overload fun(file: String, doWorldSound: boolean)
+--- @overload fun(file: String): long
+--- @overload fun(file: String, doWorldSound: boolean): long
+--- @overload fun(file: String, doWorldSound: boolean): long
+--- @overload fun(file: String, proxy: IsoObject): long
 function CharacterSoundEmitter:playSound(file) end
 
 --- @public
@@ -76,6 +84,7 @@ function CharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
 --- @param handle long
 --- @param pitch float
 --- @return void
+--- @overload fun(handle: long, pitch: float): void
 function CharacterSoundEmitter:setPitch(handle, pitch) end
 
 --- @public
@@ -83,12 +92,14 @@ function CharacterSoundEmitter:setPitch(handle, pitch) end
 --- @param y float
 --- @param z float
 --- @return void
+--- @overload fun(x: float, y: float, z: float): void
 function CharacterSoundEmitter:setPos(x, y, z) end
 
 --- @public
 --- @param handle long
 --- @param volume float
 --- @return void
+--- @overload fun(handle: long, volume: float): void
 function CharacterSoundEmitter:setVolume(handle, volume) end
 
 --- @public
@@ -98,16 +109,19 @@ function CharacterSoundEmitter:stopAll() end
 --- @public
 --- @param eventInstance long
 --- @return void
+--- @overload fun(handle: long): void
 function CharacterSoundEmitter:stopOrTriggerSound(eventInstance) end
 
 --- @public
 --- @param name String
 --- @return void
+--- @overload fun(name: String): void
 function CharacterSoundEmitter:stopOrTriggerSoundByName(name) end
 
 --- @public
 --- @param eventInstance long
 --- @return int
+--- @overload fun(channel: long): int
 function CharacterSoundEmitter:stopSound(eventInstance) end
 
 --- @public
@@ -122,11 +136,13 @@ function CharacterSoundEmitter:stopSoundLocal(handle) end
 
 --- @public
 --- @return void
+--- @overload fun(): void
 function CharacterSoundEmitter:tick() end
 
 --- @public
 --- @param handle long
 --- @return void
+--- @overload fun(handle: long): void
 function CharacterSoundEmitter:triggerCue(handle) end
 
 --- @public

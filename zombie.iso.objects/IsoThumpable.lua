@@ -45,6 +45,7 @@ function IsoThumpable:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return void
+--- @overload fun(thumper: IsoMovingObject): void
 function IsoThumpable:Thump(thumper) end
 
 --- @public
@@ -65,6 +66,7 @@ function IsoThumpable:ToggleDoorSilent() end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
+--- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
 function IsoThumpable:WeaponHit(owner, weapon) end
 
 --- @public
@@ -132,19 +134,23 @@ function IsoThumpable:getAddSheetSquare(chr) end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
+--- @overload fun(chr: IsoGameCharacter): IsoBarricade
 function IsoThumpable:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
+--- @overload fun(): IsoBarricade
 function IsoThumpable:getBarricadeOnOppositeSquare() end
 
 --- @public
 --- @return IsoBarricade
+--- @overload fun(): IsoBarricade
 function IsoThumpable:getBarricadeOnSameSquare() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
+--- @overload fun(chr: IsoGameCharacter): IsoBarricade
 function IsoThumpable:getBarricadeOppositeCharacter(chr) end
 
 --- @public
@@ -226,6 +232,7 @@ function IsoThumpable:getModData() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoThumpable:getNorth() end
 
 --- @public
@@ -238,6 +245,7 @@ function IsoThumpable:getOpenSprite() end
 
 --- @public
 --- @return IsoGridSquare
+--- @overload fun(): IsoGridSquare
 function IsoThumpable:getOppositeSquare() end
 
 --- @public
@@ -264,6 +272,7 @@ function IsoThumpable:getTable() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function IsoThumpable:getThumpCondition() end
 
 --- @public
@@ -277,6 +286,7 @@ function IsoThumpable:getThumpSound() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
+--- @overload fun(chr: IsoGameCharacter): Thumpable
 function IsoThumpable:getThumpableFor(chr) end
 
 --- @public
@@ -304,10 +314,12 @@ function IsoThumpable:isAdjacentToSquare(square2) end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoThumpable:isBarricadeAllowed() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoThumpable:isBarricaded() end
 
 --- @public
@@ -324,6 +336,7 @@ function IsoThumpable:isCorner() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoThumpable:isDestroyed() end
 
 --- @public
@@ -506,6 +519,7 @@ function IsoThumpable:setIsDismantable(dismantable) end
 --- @public
 --- @param pIsDoor boolean
 --- @return void
+--- @overload fun(pIsDoor: Boolean): void
 function IsoThumpable:setIsDoor(pIsDoor) end
 
 --- @public
@@ -541,7 +555,7 @@ function IsoThumpable:setIsThumpable(thumpable) end
 --- @public
 --- @param keyId int
 --- @return void
---- @overload fun(keyId: int, doNetwork: boolean)
+--- @overload fun(keyId: int, doNetwork: boolean): void
 function IsoThumpable:setKeyId(keyId) end
 
 --- @public

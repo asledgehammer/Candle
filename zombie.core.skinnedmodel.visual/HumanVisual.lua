@@ -52,7 +52,7 @@ function HumanVisual:copyFrom(other_) end
 --- @param itemGUID String
 --- @param itemVisuals ItemVisuals
 --- @return void
---- @overload fun(itemGUID: String, itemVisuals: ItemVisuals, clearCurrentVisuals: boolean)
+--- @overload fun(itemGUID: String, itemVisuals: ItemVisuals, clearCurrentVisuals: boolean): void
 function HumanVisual:dressInClothingItem(itemGUID, itemVisuals) end
 
 --- @public

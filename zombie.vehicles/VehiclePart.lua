@@ -31,11 +31,13 @@ function VehiclePart.getNumberByCondition(number, cond, min) end
 --- @param codes String
 --- @param distance int
 --- @return void
---- @overload fun(player: IsoPlayer, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int)
+--- @overload fun(line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
+--- @overload fun(player: IsoPlayer, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
 function VehiclePart:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function VehiclePart:HasPlayerInRange() end
 
 --- @public
@@ -108,7 +110,7 @@ function VehiclePart:getCondition() end
 
 --- @public
 --- @return int
---- @overload fun(chr: IsoGameCharacter)
+--- @overload fun(chr: IsoGameCharacter): int
 function VehiclePart:getContainerCapacity() end
 
 --- @public
@@ -125,10 +127,12 @@ function VehiclePart:getContainerSeatNumber() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function VehiclePart:getDelta() end
 
 --- @public
 --- @return DeviceData
+--- @overload fun(): DeviceData
 function VehiclePart:getDeviceData() end
 
 --- @public
@@ -202,6 +206,8 @@ function VehiclePart:getScriptPart() end
 
 --- @public
 --- @return IsoGridSquare
+--- @overload fun(): IsoGridSquare
+--- @overload fun(): IsoGridSquare
 function VehiclePart:getSquare() end
 
 --- @public
@@ -235,14 +241,20 @@ function VehiclePart:getWindow() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
+--- @overload fun(): float
 function VehiclePart:getX() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
+--- @overload fun(): float
 function VehiclePart:getY() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
+--- @overload fun(): float
 function VehiclePart:getZ() end
 
 --- @public
@@ -307,17 +319,19 @@ function VehiclePart:setContainerCapacity(cap) end
 --- @public
 --- @param amount float
 --- @return void
---- @overload fun(amount: float, force: boolean, noUpdateMass: boolean)
+--- @overload fun(amount: float, force: boolean, noUpdateMass: boolean): void
 function VehiclePart:setContainerContentAmount(amount) end
 
 --- @public
 --- @param d float
 --- @return void
+--- @overload fun(d: float): void
 function VehiclePart:setDelta(d) end
 
 --- @public
 --- @param data DeviceData
 --- @return void
+--- @overload fun(data: DeviceData): void
 function VehiclePart:setDeviceData(data) end
 
 --- @public
@@ -335,7 +349,7 @@ function VehiclePart:setGeneralCondition(item, baseQuality, chanceToSpawnDamaged
 --- @public
 --- @param item InventoryItem
 --- @return void
---- @overload fun(item: InventoryItem, mechanicSkill: int)
+--- @overload fun(item: InventoryItem, mechanicSkill: int): void
 function VehiclePart:setInventoryItem(item) end
 
 --- @public

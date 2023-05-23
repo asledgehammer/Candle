@@ -141,4 +141,5 @@ function AlarmClock:updateSound(emitter) end
 --- @param itemType String
 --- @param texName String
 --- @return AlarmClock
+--- @overload fun(module: String, name: String, itemType: String, item: Item)
 function AlarmClock.new(module, name, itemType, texName) end

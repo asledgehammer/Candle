@@ -14,7 +14,7 @@ IsoUtils = {};
 --- @param toX float
 --- @param toY float
 --- @return float
---- @overload fun(fromX: float, fromY: float, toX: float, toY: float, fromZ: float, toZ: float)
+--- @overload fun(fromX: float, fromY: float, toX: float, toY: float, fromZ: float, toZ: float): float
 function IsoUtils.DistanceManhatten(fromX, fromY, toX, toY) end
 
 --- @public
@@ -33,7 +33,7 @@ function IsoUtils.DistanceManhattenSquare(fromX, fromY, toX, toY) end
 --- @param toX float
 --- @param toY float
 --- @return float
---- @overload fun(fromX: float, fromY: float, fromZ: float, toX: float, toY: float, toZ: float)
+--- @overload fun(fromX: float, fromY: float, fromZ: float, toX: float, toY: float, toZ: float): float
 function IsoUtils.DistanceTo(fromX, fromY, toX, toY) end
 
 --- @public
@@ -52,7 +52,7 @@ function IsoUtils.DistanceTo2D(fromX, fromY, toX, toY) end
 --- @param toX float
 --- @param toY float
 --- @return float
---- @overload fun(fromX: float, fromY: float, fromZ: float, toX: float, toY: float, toZ: float)
+--- @overload fun(fromX: float, fromY: float, fromZ: float, toX: float, toY: float, toZ: float): float
 function IsoUtils.DistanceToSquared(fromX, fromY, toX, toY) end
 
 --- @public

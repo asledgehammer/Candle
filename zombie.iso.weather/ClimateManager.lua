@@ -58,10 +58,11 @@ function ClimateManager.ToMph(val) end
 
 --- @public
 --- @static
---- @param min int
---- @param max int
---- @param val int
---- @return int
+--- @param min float
+--- @param max float
+--- @param val float
+--- @return float
+--- @overload fun(min: int, max: int, val: int): int
 function ClimateManager.clamp(min, max, val) end
 
 --- @public
@@ -151,7 +152,7 @@ function ClimateManager:CopyClimateValues(copy) end
 
 --- @public
 --- @return void
---- @overload fun(RainModOverride: int)
+--- @overload fun(RainModOverride: int): void
 function ClimateManager:execute_Simulation() end
 
 --- @public
@@ -173,14 +174,14 @@ function ClimateManager:getAirMassTemperature() end
 --- @public
 --- @param plr IsoGameCharacter
 --- @return float
---- @overload fun(plr: IsoGameCharacter, doWindChill: boolean)
+--- @overload fun(plr: IsoGameCharacter, doWindChill: boolean): float
 function ClimateManager:getAirTemperatureForCharacter(plr) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return float
---- @overload fun(square: IsoGridSquare, vehicle: BaseVehicle)
---- @overload fun(square: IsoGridSquare, vehicle: BaseVehicle, doWindChill: boolean)
+--- @overload fun(square: IsoGridSquare, vehicle: BaseVehicle): float
+--- @overload fun(square: IsoGridSquare, vehicle: BaseVehicle, doWindChill: boolean): float
 function ClimateManager:getAirTemperatureForSquare(square) end
 
 --- @public
@@ -697,7 +698,7 @@ function ClimateManager:triggerCustomWeatherStage(stage, duration) end
 --- @param angle float
 --- @param initialPuddles float
 --- @return void
---- @overload fun(centerX: int, centerY: int, duration: double, strength: float, initialProgress: float, angle: float, initialPuddles: float, cloudcolor: ClimateColorInfo)
+--- @overload fun(centerX: int, centerY: int, duration: double, strength: float, initialProgress: float, angle: float, initialPuddles: float, cloudcolor: ClimateColorInfo): void
 function ClimateManager:triggerKateBobIntroStorm(centerX, centerY, duration, strength, initialProgress, angle, initialPuddles) end
 
 --- @public

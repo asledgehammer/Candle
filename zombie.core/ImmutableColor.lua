@@ -55,12 +55,12 @@ function ImmutableColor:add(c) end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(scale: float)
+--- @overload fun(scale: float): ImmutableColor
 function ImmutableColor:brighter() end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(scale: float)
+--- @overload fun(scale: float): ImmutableColor
 function ImmutableColor:darker() end
 
 --- @public
@@ -152,6 +152,11 @@ function ImmutableColor:toString() end
 --- @public
 --- @param value int
 --- @return ImmutableColor
+--- @overload fun(color: Color)
+--- @overload fun(color: ImmutableColor)
+--- @overload fun(r: float, g: float, b: float)
+--- @overload fun(r: int, g: int, b: int)
 --- @overload fun(A: Color, B: Color, delta: float)
 --- @overload fun(r: float, g: float, b: float, a: float)
+--- @overload fun(r: int, g: int, b: int, a: int)
 function ImmutableColor.new(value) end

@@ -16,9 +16,10 @@ IsoBarricade = {};
 --- @public
 --- @static
 --- @param to BarricadeAble
---- @param chr IsoGameCharacter
+--- @param addOpposite boolean
 --- @return IsoBarricade
-function IsoBarricade.AddBarricadeToObject(to, chr) end
+--- @overload fun(to: BarricadeAble, chr: IsoGameCharacter): IsoBarricade
+function IsoBarricade.AddBarricadeToObject(to, addOpposite) end
 
 --- @public
 --- @static
@@ -72,12 +73,14 @@ function IsoBarricade:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return void
+--- @overload fun(thumper: IsoMovingObject): void
 function IsoBarricade:Thump(thumper) end
 
 --- @public
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
+--- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
 function IsoBarricade:WeaponHit(owner, weapon) end
 
 --- @public
@@ -121,11 +124,13 @@ function IsoBarricade:getObjectName() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function IsoBarricade:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
+--- @overload fun(chr: IsoGameCharacter): Thumpable
 function IsoBarricade:getThumpableFor(chr) end
 
 --- @public
@@ -134,6 +139,7 @@ function IsoBarricade:isBlockVision() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoBarricade:isDestroyed() end
 
 --- @public

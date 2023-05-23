@@ -25,7 +25,7 @@ function HandWeapon:IsWeapon() end
 --- @public
 --- @param part WeaponPart
 --- @return void
---- @overload fun(part: WeaponPart, doChange: boolean)
+--- @overload fun(part: WeaponPart, doChange: boolean): void
 function HandWeapon:attachWeaponPart(part) end
 
 --- @public
@@ -71,7 +71,7 @@ function HandWeapon:getAimingTime() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(result: ArrayList)
+--- @overload fun(result: ArrayList): ArrayList
 function HandWeapon:getAllWeaponParts() end
 
 --- @public
@@ -268,7 +268,7 @@ function HandWeapon:getMaxHitCount() end
 
 --- @public
 --- @return float
---- @overload fun(owner: IsoGameCharacter)
+--- @overload fun(owner: IsoGameCharacter): float
 function HandWeapon:getMaxRange() end
 
 --- @public
@@ -467,6 +467,7 @@ function HandWeapon:getWeaponPart(type) end
 --- @public
 --- @param type String
 --- @return float
+--- @overload fun(part: WeaponPart): float
 function HandWeapon:getWeaponPartWeightModifier(type) end
 
 --- @public
@@ -1163,6 +1164,7 @@ function HandWeapon:setZombieHitSound(hitSound) end
 --- @param module String
 --- @param name String
 --- @param itemType String
---- @param item Item
+--- @param texName String
 --- @return HandWeapon
-function HandWeapon.new(module, name, itemType, item) end
+--- @overload fun(module: String, name: String, itemType: String, item: Item)
+function HandWeapon.new(module, name, itemType, texName) end

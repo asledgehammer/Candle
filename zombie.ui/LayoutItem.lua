@@ -58,8 +58,9 @@ function LayoutItem:setValue(label, r, g, b, a) end
 function LayoutItem:setValueRight(value, highGood) end
 
 --- @public
---- @param value int
+--- @param value float
 --- @return void
+--- @overload fun(value: int): void
 function LayoutItem:setValueRightNoPlus(value) end
 
 

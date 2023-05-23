@@ -123,7 +123,7 @@ function Stats:isTripping() end
 --- @public
 --- @param input DataInputStream
 --- @return void
---- @overload fun(input: ByteBuffer, WorldVersion: int)
+--- @overload fun(input: ByteBuffer, WorldVersion: int): void
 function Stats:load(input) end
 
 --- @public
@@ -133,6 +133,7 @@ function Stats:resetStats() end
 --- @public
 --- @param output DataOutputStream
 --- @return void
+--- @overload fun(output: ByteBuffer): void
 function Stats:save(output) end
 
 --- @public

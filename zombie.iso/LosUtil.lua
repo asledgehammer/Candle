@@ -30,7 +30,7 @@ function LosUtil.init(width, height) end
 --- @param z1 int
 --- @param bIgnoreDoors boolean
 --- @return TestResults
---- @overload fun(cell: IsoCell, x0: int, y0: int, z0: int, x1: int, y1: int, z1: int, bIgnoreDoors: boolean, RangeTillWindows: int)
+--- @overload fun(cell: IsoCell, x0: int, y0: int, z0: int, x1: int, y1: int, z1: int, bIgnoreDoors: boolean, RangeTillWindows: int): TestResults
 function LosUtil.lineClear(cell, x0, y0, z0, x1, y1, z1, bIgnoreDoors) end
 
 --- @public

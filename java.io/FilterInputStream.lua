@@ -26,8 +26,8 @@ function FilterInputStream:markSupported() end
 
 --- @public
 --- @return int
---- @overload fun(arg0: byte[])
---- @overload fun(arg0: byte[], arg1: int, arg2: int)
+--- @overload fun(arg0: byte[]): int
+--- @overload fun(arg0: byte[], arg1: int, arg2: int): int
 function FilterInputStream:read() end
 
 --- @public

@@ -20,7 +20,7 @@ function ModData.add(arg0, arg1) end
 --- @public
 --- @static
 --- @return String
---- @overload fun(tag: String)
+--- @overload fun(tag: String): KahluaTable
 function ModData.create() end
 
 --- @public

@@ -22,9 +22,10 @@ function TraitCollection:addAll(c) end
 function TraitCollection:clear() end
 
 --- @public
---- @param trait String
+--- @param o Object
 --- @return boolean
-function TraitCollection:contains(trait) end
+--- @overload fun(trait: String): boolean
+function TraitCollection:contains(o) end
 
 --- @public
 --- @param n int
@@ -41,9 +42,10 @@ function TraitCollection:getTraitSlot(name) end
 function TraitCollection:isEmpty() end
 
 --- @public
---- @param name String
+--- @param o Object
 --- @return boolean
-function TraitCollection:remove(name) end
+--- @overload fun(name: String): boolean
+function TraitCollection:remove(o) end
 
 --- @public
 --- @param c Collection

@@ -18,7 +18,7 @@ function BaseSoundManager:BlendThenStart(arg0, arg1, arg2) end
 --- @param arg0 Audio
 --- @param arg1 float
 --- @return void
---- @overload fun(arg0: Audio, arg1: float, arg2: float)
+--- @overload fun(arg0: Audio, arg1: float, arg2: float): void
 function BaseSoundManager:BlendVolume(arg0, arg1) end
 
 --- @public
@@ -52,6 +52,7 @@ function BaseSoundManager:IsMusicPlaying() end
 --- @param arg2 boolean
 --- @param arg3 float
 --- @return void
+--- @overload fun(arg0: String, arg1: Audio, arg2: float, arg3: boolean): void
 function BaseSoundManager:PlayAsMusic(arg0, arg1, arg2, arg3) end
 
 --- @public
@@ -74,7 +75,7 @@ function BaseSoundManager:PlayMusic(n, name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain float
 --- @return Audio
---- @overload fun(name: String, loop: boolean, pitchVar: float, maxGain: float)
+--- @overload fun(name: String, loop: boolean, pitchVar: float, maxGain: float): Audio
 function BaseSoundManager:PlaySound(name, loop, maxGain) end
 
 --- @public
@@ -89,7 +90,8 @@ function BaseSoundManager:PlaySoundEvenSilent(name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain float
 --- @return Audio
---- @overload fun(name: String, variations: int, loop: boolean, maxGain: float)
+--- @overload fun(name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
+--- @overload fun(name: String, variations: int, loop: boolean, maxGain: float): Audio
 function BaseSoundManager:PlaySoundWav(name, loop, maxGain) end
 
 --- @public
@@ -100,7 +102,8 @@ function BaseSoundManager:PlaySoundWav(name, loop, maxGain) end
 --- @param maxGain float
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean)
+--- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
+--- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): Audio
 function BaseSoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
@@ -124,7 +127,8 @@ function BaseSoundManager:PlayWorldSoundImpl(name, loop, sx, sy, sz, pitchVar, r
 --- @param maxGain float
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean)
+--- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
+--- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): void
 function BaseSoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
@@ -215,9 +219,10 @@ function BaseSoundManager:isListenerInRange(x, y, range) end
 function BaseSoundManager:isPlayingMusic() end
 
 --- @public
---- @param eventInstance long
+--- @param name String
 --- @return boolean
-function BaseSoundManager:isPlayingUISound(eventInstance) end
+--- @overload fun(eventInstance: long): boolean
+function BaseSoundManager:isPlayingUISound(name) end
 
 --- @public
 --- @return boolean

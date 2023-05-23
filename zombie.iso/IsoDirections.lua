@@ -36,10 +36,11 @@ function IsoDirections.cardinalFromAngle(angle) end
 
 --- @public
 --- @static
---- @param angle Vector2
+--- @param angleRadians float
 --- @return IsoDirections
---- @overload fun(angleX: float, angleY: float)
-function IsoDirections.fromAngle(angle) end
+--- @overload fun(angle: Vector2): IsoDirections
+--- @overload fun(angleX: float, angleY: float): IsoDirections
+function IsoDirections.fromAngle(angleRadians) end
 
 --- @public
 --- @static
@@ -87,12 +88,12 @@ function IsoDirections.values() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(time: int)
+--- @overload fun(time: int): IsoDirections
 function IsoDirections:RotLeft() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(time: int)
+--- @overload fun(time: int): IsoDirections
 function IsoDirections:RotRight() end
 
 --- @public

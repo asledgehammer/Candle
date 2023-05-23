@@ -93,7 +93,7 @@ function IsoFireManager.Reset() end
 --- @param IgniteOnAny boolean
 --- @param FireStartingEnergy int
 --- @return void
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, IgniteOnAny: boolean, FireStartingEnergy: int, Life: int)
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, IgniteOnAny: boolean, FireStartingEnergy: int, Life: int): void
 function IsoFireManager.StartFire(cell, gridSquare, IgniteOnAny, FireStartingEnergy) end
 
 --- @public

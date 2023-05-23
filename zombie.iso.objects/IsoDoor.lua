@@ -125,6 +125,7 @@ function IsoDoor:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return void
+--- @overload fun(thumper: IsoMovingObject): void
 function IsoDoor:Thump(thumper) end
 
 --- @public
@@ -145,6 +146,7 @@ function IsoDoor:ToggleDoorSilent() end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
+--- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
 function IsoDoor:WeaponHit(owner, weapon) end
 
 --- @public
@@ -154,7 +156,7 @@ function IsoDoor:addRandomBarricades() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return void
---- @overload fun(inside: boolean, chr: IsoGameCharacter)
+--- @overload fun(inside: boolean, chr: IsoGameCharacter): void
 function IsoDoor:addSheet(chr) end
 
 --- @public
@@ -178,19 +180,23 @@ function IsoDoor:getAddSheetSquare(chr) end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
+--- @overload fun(chr: IsoGameCharacter): IsoBarricade
 function IsoDoor:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
+--- @overload fun(): IsoBarricade
 function IsoDoor:getBarricadeOnOppositeSquare() end
 
 --- @public
 --- @return IsoBarricade
+--- @overload fun(): IsoBarricade
 function IsoDoor:getBarricadeOnSameSquare() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
+--- @overload fun(chr: IsoGameCharacter): IsoBarricade
 function IsoDoor:getBarricadeOppositeCharacter(chr) end
 
 --- @public
@@ -217,6 +223,7 @@ function IsoDoor:getMaxHealth() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoDoor:getNorth() end
 
 --- @public
@@ -229,6 +236,7 @@ function IsoDoor:getOpenSprite() end
 
 --- @public
 --- @return IsoGridSquare
+--- @overload fun(): IsoGridSquare
 function IsoDoor:getOppositeSquare() end
 
 --- @public
@@ -255,6 +263,7 @@ function IsoDoor:getSquare() end
 
 --- @public
 --- @return float
+--- @overload fun(): float
 function IsoDoor:getThumpCondition() end
 
 --- @public
@@ -264,6 +273,7 @@ function IsoDoor:getThumpSound() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
+--- @overload fun(chr: IsoGameCharacter): Thumpable
 function IsoDoor:getThumpableFor(chr) end
 
 --- @public
@@ -277,10 +287,12 @@ function IsoDoor:isAdjacentToSquare(square2) end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoDoor:isBarricadeAllowed() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoDoor:isBarricaded() end
 
 --- @public
@@ -289,6 +301,7 @@ function IsoDoor:isCurtainOpen() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function IsoDoor:isDestroyed() end
 
 --- @public
@@ -465,6 +478,7 @@ function IsoDoor:transmitSetCurtainOpen(open) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoDoor
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean)
 --- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean)
 --- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable)
 function IsoDoor.new(cell) end

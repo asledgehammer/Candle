@@ -95,6 +95,7 @@ function SurvivorDesc:getGroup() end
 
 --- @public
 --- @return HumanVisual
+--- @overload fun(): HumanVisual
 function SurvivorDesc:getHumanVisual() end
 
 --- @public
@@ -112,6 +113,7 @@ function SurvivorDesc:getInventoryScript() end
 --- @public
 --- @param itemVisuals ItemVisuals
 --- @return void
+--- @overload fun(itemVisuals: ItemVisuals): void
 function SurvivorDesc:getItemVisuals(itemVisuals) end
 
 --- @public
@@ -124,7 +126,7 @@ function SurvivorDesc:getLoyalty() end
 
 --- @public
 --- @return HashMap
---- @overload fun(descriptor: SurvivorDesc)
+--- @overload fun(descriptor: SurvivorDesc): int
 function SurvivorDesc:getMetCount() end
 
 --- @public
@@ -183,6 +185,7 @@ function SurvivorDesc:isDead() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function SurvivorDesc:isFemale() end
 
 --- @public
@@ -195,10 +198,12 @@ function SurvivorDesc:isLeader() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function SurvivorDesc:isSkeleton() end
 
 --- @public
 --- @return boolean
+--- @overload fun(): boolean
 function SurvivorDesc:isZombie() end
 
 --- @public
@@ -331,5 +336,6 @@ function SurvivorDesc:setWornItem(bodyLocation, item) end
 
 --- @public
 --- @return SurvivorDesc
+--- @overload fun(bNew: boolean)
 --- @overload fun(other: SurvivorDesc)
 function SurvivorDesc.new() end

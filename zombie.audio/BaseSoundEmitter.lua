@@ -23,6 +23,7 @@ function BaseSoundEmitter:isEmpty() end
 --- @public
 --- @param alias String
 --- @return boolean
+--- @overload fun(channel: long): boolean
 function BaseSoundEmitter:isPlaying(alias) end
 
 --- @public
@@ -44,15 +45,19 @@ function BaseSoundEmitter:playClip(clip, parent) end
 --- @public
 --- @param file String
 --- @return long
---- @overload fun(file: String, parent: IsoObject)
---- @overload fun(file: String, x: int, y: int, z: int)
+--- @overload fun(file: String, doWorldSound: boolean): long
+--- @overload fun(file: String, character: IsoGameCharacter): long
+--- @overload fun(file: String, square: IsoGridSquare): long
+--- @overload fun(file: String, parent: IsoObject): long
+--- @overload fun(file: String, x: int, y: int, z: int): long
 function BaseSoundEmitter:playSound(file) end
 
 --- @public
 --- @param file String
 --- @param square IsoGridSquare
 --- @return long
---- @overload fun(file: String, doWorldSound: boolean, parent: IsoObject)
+--- @overload fun(file: String, parent: IsoObject): long
+--- @overload fun(file: String, doWorldSound: boolean, parent: IsoObject): long
 function BaseSoundEmitter:playSoundImpl(file, square) end
 
 --- @public

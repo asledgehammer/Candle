@@ -39,7 +39,7 @@ function RadioBroadCast:getLines() end
 
 --- @public
 --- @return RadioLine
---- @overload fun(doChildren: boolean)
+--- @overload fun(doChildren: boolean): RadioLine
 function RadioBroadCast:getNextLine() end
 
 --- @public
@@ -48,7 +48,7 @@ function RadioBroadCast:getStartStamp() end
 
 --- @public
 --- @return void
---- @overload fun(doChildren: boolean)
+--- @overload fun(doChildren: boolean): void
 function RadioBroadCast:resetLineCounter() end
 
 --- @public

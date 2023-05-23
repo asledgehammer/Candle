@@ -12,7 +12,8 @@ TemplateText = {};
 --- @static
 --- @param input String
 --- @return String
---- @overload fun(input: String, replaceProvider: IReplaceProvider)
+--- @overload fun(arg0: String, arg1: KahluaTableImpl): String
+--- @overload fun(input: String, replaceProvider: IReplaceProvider): String
 function TemplateText.Build(input) end
 
 --- @public
@@ -24,7 +25,9 @@ function TemplateText.Initialize() end
 --- @static
 --- @param bound float
 --- @return float
---- @overload fun(min: int, max: int)
+--- @overload fun(bound: int): int
+--- @overload fun(min: float, max: float): float
+--- @overload fun(min: int, max: int): int
 function TemplateText.RandNext(bound) end
 
 --- @public
@@ -32,6 +35,7 @@ function TemplateText.RandNext(bound) end
 --- @param arg0 String
 --- @param arg1 KahluaTableImpl
 --- @return void
+--- @overload fun(key: String, replace: IReplace): void
 function TemplateText.RegisterKey(arg0, arg1) end
 
 --- @public

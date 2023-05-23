@@ -48,14 +48,14 @@ function LuaEventManager.reroute(arg0, arg1) end
 --- @static
 --- @param event String
 --- @return void
---- @overload fun(event: String, param1: Object)
---- @overload fun(event: String, param1: Object, param2: Object)
---- @overload fun(event: String, param1: Object, param2: Object, param3: Object)
---- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object)
---- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object)
---- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object)
---- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object)
---- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object, param8: Object)
+--- @overload fun(event: String, param1: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object, param3: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object, param5: Object, param6: Object, param7: Object, param8: Object): void
 function LuaEventManager.triggerEvent(event) end
 
 --- @public
@@ -63,9 +63,9 @@ function LuaEventManager.triggerEvent(event) end
 --- @param event String
 --- @param param1 Object
 --- @return void
---- @overload fun(event: String, param1: Object, param2: Object)
---- @overload fun(event: String, param1: Object, param2: Object, param3: Object)
---- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object)
+--- @overload fun(event: String, param1: Object, param2: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object, param3: Object): void
+--- @overload fun(event: String, param1: Object, param2: Object, param3: Object, param4: Object): void
 function LuaEventManager.triggerEventGarbage(event, param1) end
 
 --- @public
@@ -84,6 +84,7 @@ function LuaEventManager.triggerEventUnique(event, param1) end
 --- @param arg0 LuaCallFrame
 --- @param arg1 int
 --- @return int
+--- @overload fun(arg0: LuaCallFrame, arg1: int): int
 function LuaEventManager:call(arg0, arg1) end
 
 

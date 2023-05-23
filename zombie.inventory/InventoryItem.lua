@@ -12,7 +12,7 @@ InventoryItem = {};
 --- @param input ByteBuffer
 --- @param WorldVersion int
 --- @return InventoryItem
---- @overload fun(input: ByteBuffer, WorldVersion: int, doSaveTypeCheck: boolean)
+--- @overload fun(input: ByteBuffer, WorldVersion: int, doSaveTypeCheck: boolean): InventoryItem
 function InventoryItem.loadItem(input, WorldVersion) end
 
 
@@ -33,7 +33,7 @@ function InventoryItem:CopyModData(arg0) end
 --- @public
 --- @param tooltipUI ObjectTooltip
 --- @return void
---- @overload fun(arg0: ObjectTooltip, arg1: Layout)
+--- @overload fun(arg0: ObjectTooltip, arg1: Layout): void
 function InventoryItem:DoTooltip(tooltipUI) end
 
 --- @public
@@ -85,8 +85,8 @@ function InventoryItem:SetContainerPosition(x, y) end
 
 --- @public
 --- @return void
---- @overload fun(bCrafting: boolean)
---- @overload fun(bCrafting: boolean, bInContainer: boolean)
+--- @overload fun(bCrafting: boolean): void
+--- @overload fun(bCrafting: boolean, bInContainer: boolean): void
 function InventoryItem:Use() end
 
 --- @public
@@ -1162,7 +1162,7 @@ function InventoryItem:setColorRed(colorRed) end
 --- @public
 --- @param Condition int
 --- @return void
---- @overload fun(Condition: int, doSound: boolean)
+--- @overload fun(Condition: int, doSound: boolean): void
 function InventoryItem:setCondition(Condition) end
 
 --- @public
@@ -1686,6 +1686,7 @@ function InventoryItem:updateSound(emitter) end
 --- @param module String
 --- @param name String
 --- @param type String
---- @param item Item
+--- @param tex String
 --- @return InventoryItem
-function InventoryItem.new(module, name, type, item) end
+--- @overload fun(module: String, name: String, type: String, item: Item)
+function InventoryItem.new(module, name, type, tex) end

@@ -11,10 +11,11 @@ ClothingItem = {};
 
 --- @public
 --- @static
---- @param itemRef ClothingItemReference
+--- @param item ClothingItem
 --- @param in_out_mask CharacterMask
 --- @return void
-function ClothingItem.tryGetCombinedMask(itemRef, in_out_mask) end
+--- @overload fun(itemRef: ClothingItemReference, in_out_mask: CharacterMask): void
+function ClothingItem.tryGetCombinedMask(item, in_out_mask) end
 
 
 ------------------------------------

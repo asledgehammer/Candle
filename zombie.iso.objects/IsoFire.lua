@@ -12,7 +12,7 @@ IsoFire = {};
 --- @param gridSquare IsoGridSquare
 --- @param CanBurnAnywhere boolean
 --- @return boolean
---- @overload fun(gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, smoke: boolean)
+--- @overload fun(gridSquare: IsoGridSquare, CanBurnAnywhere: boolean, smoke: boolean): boolean
 function IsoFire.CanAddFire(gridSquare, CanBurnAnywhere) end
 
 --- @public

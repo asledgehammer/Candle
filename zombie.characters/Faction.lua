@@ -42,12 +42,14 @@ function Faction.getFactions() end
 --- @static
 --- @param username String
 --- @return Faction
+--- @overload fun(player: IsoPlayer): Faction
 function Faction.getPlayerFaction(username) end
 
 --- @public
 --- @static
 --- @param username String
 --- @return boolean
+--- @overload fun(player: IsoPlayer): boolean
 function Faction.isAlreadyInFaction(username) end
 
 --- @public

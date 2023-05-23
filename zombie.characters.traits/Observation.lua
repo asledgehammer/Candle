@@ -14,10 +14,12 @@ function Observation:getDescription() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function Observation:getLabel() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function Observation:getLeftLabel() end
 
 --- @public
@@ -26,6 +28,7 @@ function Observation:getName() end
 
 --- @public
 --- @return String
+--- @overload fun(): String
 function Observation:getRightLabel() end
 
 --- @public

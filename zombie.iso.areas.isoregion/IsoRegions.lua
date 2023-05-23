@@ -122,7 +122,7 @@ function IsoRegions.isDebugLoadAllChunks() end
 --- @static
 --- @param str String
 --- @return void
---- @overload fun(str: String, col: Color)
+--- @overload fun(str: String, col: Color): void
 function IsoRegions.log(str) end
 
 --- @public
@@ -159,7 +159,7 @@ function IsoRegions.setPreviousFlags(gs) end
 --- @static
 --- @param gs IsoGridSquare
 --- @return void
---- @overload fun(gs: IsoGridSquare, isRemoval: boolean)
+--- @overload fun(gs: IsoGridSquare, isRemoval: boolean): void
 function IsoRegions.squareChanged(gs) end
 
 --- @public

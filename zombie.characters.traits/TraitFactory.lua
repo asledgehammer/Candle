@@ -21,7 +21,7 @@ function TraitFactory.Reset() end
 --- @param desc String
 --- @param profession boolean
 --- @return Trait
---- @overload fun(type: String, name: String, cost: int, desc: String, profession: boolean, removeInMP: boolean)
+--- @overload fun(type: String, name: String, cost: int, desc: String, profession: boolean, removeInMP: boolean): Trait
 function TraitFactory.addTrait(type, name, cost, desc, profession) end
 
 --- @public

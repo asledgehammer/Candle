@@ -77,21 +77,21 @@ function UIManager.CreateFBO(width, height) end
 --- @param x double
 --- @param y double
 --- @return void
---- @overload fun(tex: Texture, x: double, y: double, width: double, height: double, alpha: double)
+--- @overload fun(tex: Texture, x: double, y: double, width: double, height: double, alpha: double): void
 function UIManager.DrawTexture(tex, x, y) end
 
 --- @public
 --- @static
 --- @param seconds double
 --- @return void
---- @overload fun(playerIndex: double, seconds: double)
+--- @overload fun(playerIndex: double, seconds: double): void
 function UIManager.FadeIn(seconds) end
 
 --- @public
 --- @static
 --- @param seconds double
 --- @return void
---- @overload fun(playerIndex: double, seconds: double)
+--- @overload fun(playerIndex: double, seconds: double): void
 function UIManager.FadeOut(seconds) end
 
 --- @public
@@ -163,7 +163,7 @@ function UIManager.getDoubleClickInterval() end
 --- @public
 --- @static
 --- @return Double
---- @overload fun(playerIndex: double)
+--- @overload fun(playerIndex: double): float
 function UIManager.getFadeAlpha() end
 
 --- @public

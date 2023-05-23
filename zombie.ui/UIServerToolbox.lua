@@ -15,12 +15,14 @@ UIServerToolbox = {};
 --- @param x int
 --- @param y int
 --- @return void
+--- @overload fun(name: String, x: int, y: int): void
 function UIServerToolbox:DoubleClick(name, x, y) end
 
 --- @public
 --- @param name String
 --- @param chosen String
 --- @return void
+--- @overload fun(name: String, chosen: String): void
 function UIServerToolbox:ModalClick(name, chosen) end
 
 --- @public
@@ -28,6 +30,7 @@ function UIServerToolbox:ModalClick(name, chosen) end
 --- @param cookie String
 --- @param payload String
 --- @return void
+--- @overload fun(tag: String, cookie: String, payload: String): void
 function UIServerToolbox:OnCoopServerMessage(tag, cookie, payload) end
 
 --- @public
@@ -35,6 +38,7 @@ function UIServerToolbox:OnCoopServerMessage(tag, cookie, payload) end
 --- @param Selected int
 --- @param LastSelected int
 --- @return void
+--- @overload fun(name: String, Selected: int, LastSelected: int): void
 function UIServerToolbox:Selected(name, Selected, LastSelected) end
 
 --- @public
