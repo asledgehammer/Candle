@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ItemVisuals: ArrayList
+--- @field public class any
 ItemVisuals = {};
 
 ------------------------------------

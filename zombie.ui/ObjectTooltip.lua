@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ObjectTooltip: UIElement
+--- @field public class any
 --- @field public alphaStep float
 ObjectTooltip = {};
 

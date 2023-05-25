@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LuaTimedActionNew: BaseAction
+--- @field public class any
 --- @implement IPathfinder
 LuaTimedActionNew = {};
 

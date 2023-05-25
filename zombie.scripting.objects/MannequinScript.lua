@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MannequinScript: BaseScriptObject
+--- @field public class any
 MannequinScript = {};
 
 ------------------------------------

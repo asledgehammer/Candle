@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBClinic: RandomizedBuildingBase Add some food on table
+--- @field public class any
 RBClinic = {};
 
 ------------------------------------

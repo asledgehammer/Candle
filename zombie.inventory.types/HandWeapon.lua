@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class HandWeapon: InventoryItem
+--- @field public class any
 HandWeapon = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ComboItem: InventoryItem
+--- @field public class any
 ComboItem = {};
 
 ------------------------------------

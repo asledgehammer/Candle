@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DataPoint Turbo
+--- @field public class any
 DataPoint = {};
 
 ------------------------------------

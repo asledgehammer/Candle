@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RVSChangingTire: RandomizedVehicleStoryBase Good car with a couple changing its tire
+--- @field public class any
 RVSChangingTire = {};
 
 ------------------------------------

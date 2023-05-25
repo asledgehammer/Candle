@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBOther: RandomizedBuildingBase Building full of toilet paper
+--- @field public class any
 RBOther = {};
 
 ------------------------------------

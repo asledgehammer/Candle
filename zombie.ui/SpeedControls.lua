@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SpeedControls: UIElement
+--- @field public class any
 --- @field public FasterForward HUDButton
 --- @field public FastForward HUDButton
 --- @field public instance SpeedControls

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Recipe: BaseScriptObject
+--- @field public class any
 Recipe = {};
 
 ------------------------------------

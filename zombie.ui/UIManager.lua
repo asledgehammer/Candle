@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UIManager
+--- @field public class any
 --- @field public bFadeBeforeUI boolean
 --- @field public black Texture
 --- @field public bSuspend boolean

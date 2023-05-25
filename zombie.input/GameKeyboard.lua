@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameKeyboard
+--- @field public class any
 --- @field public bNoEventsWhileLoading boolean
 --- @field public doLuaKeyPressed boolean
 GameKeyboard = {};

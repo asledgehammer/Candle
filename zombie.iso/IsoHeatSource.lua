@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoHeatSource
+--- @field public class any
 IsoHeatSource = {};
 
 ------------------------------------

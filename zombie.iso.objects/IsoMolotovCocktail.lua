@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMolotovCocktail: IsoPhysicsObject
+--- @field public class any
 IsoMolotovCocktail = {};
 
 ------------------------------------

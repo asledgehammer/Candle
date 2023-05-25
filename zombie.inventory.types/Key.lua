@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Key: InventoryItem
+--- @field public class any
 --- @field public highlightDoor Key[]
 Key = {};
 

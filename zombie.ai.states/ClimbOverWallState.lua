@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClimbOverWallState: State
+--- @field public class any
 ClimbOverWallState = {};
 
 ------------------------------------

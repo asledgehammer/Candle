@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWaterGeometry
+--- @field public class any
 --- @field public pool ObjectPool
 IsoWaterGeometry = {};
 

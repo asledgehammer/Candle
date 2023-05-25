@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Stats
+--- @field public class any
 --- @field public NumCloseZombies int
 Stats = {};
 

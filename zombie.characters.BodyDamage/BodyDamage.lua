@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BodyDamage
+--- @field public class any
 --- @field public InfectionLevelToZombify float
 BodyDamage = {};
 

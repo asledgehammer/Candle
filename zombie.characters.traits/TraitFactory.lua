@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class TraitFactory
+--- @field public class any
 --- @field public TraitMap LinkedHashMap
 TraitFactory = {};
 

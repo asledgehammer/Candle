@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSHouseParty: RandomizedDeadSurvivorBase Zombies in party outfit, some food scattered around
+--- @field public class any
 RDSHouseParty = {};
 
 ------------------------------------

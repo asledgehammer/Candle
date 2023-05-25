@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Moveable: InventoryItem Turbo.
+--- @field public class any
 Moveable = {};
 
 ------------------------------------

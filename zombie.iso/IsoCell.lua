@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoCell
+--- @field public class any
 --- @field public ENABLE_SQUARE_CACHE boolean
 --- @field public ISOANGLEFACTOR int
 --- @field public MaxHeight int

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BSFurnace: IsoObject
+--- @field public class any
 BSFurnace = {};
 
 ------------------------------------

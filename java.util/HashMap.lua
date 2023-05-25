@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class HashMap: AbstractMap
+--- @field public class any
 --- @implement Map
 --- @implement Cloneable
 --- @implement Serializable

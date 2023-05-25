@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DebugChunkState: GameState
+--- @field public class any
 --- @field public instance DebugChunkState
 DebugChunkState = {};
 

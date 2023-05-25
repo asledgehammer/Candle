@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoLuaMover: IsoGameCharacter
+--- @field public class any
 IsoLuaMover = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClothingItem: Asset
+--- @field public class any
 --- @field public ASSET_TYPE AssetType
 --- @field public s_masksFolderDefault String
 ClothingItem = {};

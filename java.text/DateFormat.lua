@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DateFormat: Format
+--- @field public class any
 --- @field public AM_PM_FIELD int
 --- @field public DATE_FIELD int
 --- @field public DAY_OF_WEEK_FIELD int

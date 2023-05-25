@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameSounds
+--- @field public class any
 --- @field public soundIsPaused boolean
 --- @field public VERSION int
 GameSounds = {};

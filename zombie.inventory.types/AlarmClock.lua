@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AlarmClock: InventoryItem
+--- @field public class any
 --- @field public PacketPlayer short
 --- @field public PacketWorld short
 AlarmClock = {};

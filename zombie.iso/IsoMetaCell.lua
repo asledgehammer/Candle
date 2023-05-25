@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMetaCell
+--- @field public class any
 IsoMetaCell = {};
 
 ------------------------------------

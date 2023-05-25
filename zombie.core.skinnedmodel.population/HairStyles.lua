@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class HairStyles
+--- @field public class any
 --- @field public instance HairStyles
 HairStyles = {};
 

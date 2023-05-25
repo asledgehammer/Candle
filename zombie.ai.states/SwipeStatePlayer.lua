@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SwipeStatePlayer: State
+--- @field public class any
 SwipeStatePlayer = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ActionProgressBar: UIElement
+--- @field public class any
 ActionProgressBar = {};
 
 ------------------------------------

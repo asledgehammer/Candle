@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ZombieFallDownState: State
+--- @field public class any
 ZombieFallDownState = {};
 
 ------------------------------------

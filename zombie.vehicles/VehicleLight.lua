@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class VehicleLight
+--- @field public class any
 VehicleLight = {};
 
 ------------------------------------

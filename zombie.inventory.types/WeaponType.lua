@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WeaponType: Enum
+--- @field public class any
 --- @field public barehand WeaponType
 --- @field public chainsaw WeaponType
 --- @field public firearm WeaponType

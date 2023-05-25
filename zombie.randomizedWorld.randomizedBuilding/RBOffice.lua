@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBOffice: RandomizedBuildingBase Random clutter in office
+--- @field public class any
 RBOffice = {};
 
 ------------------------------------

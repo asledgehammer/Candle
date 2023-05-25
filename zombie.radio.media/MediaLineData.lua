@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MediaLineData
+--- @field public class any
 MediaLineData = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSHenDo: RandomizedDeadSurvivorBase Create some zombies female zombies with 1 naked male, some alcohol around
+--- @field public class any
 RDSHenDo = {};
 
 ------------------------------------

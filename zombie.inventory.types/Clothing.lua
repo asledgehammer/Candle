@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Clothing: InventoryItem
+--- @field public class any
 --- @field public CONDITION_PER_HOLES int
 Clothing = {};
 

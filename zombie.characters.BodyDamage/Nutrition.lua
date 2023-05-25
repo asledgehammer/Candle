@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Nutrition
+--- @field public class any
 Nutrition = {};
 
 ------------------------------------

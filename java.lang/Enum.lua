@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Enum
+--- @field public class any
 --- @implement Constable
 --- @implement Comparable
 --- @implement Serializable

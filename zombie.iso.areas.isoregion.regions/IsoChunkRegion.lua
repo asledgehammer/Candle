@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoChunkRegion TurboTuTone.
+--- @field public class any
 --- @implement IChunkRegion
 IsoChunkRegion = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Item: BaseScriptObject
+--- @field public class any
 --- @field public NetIDToItem HashMap
 --- @field public NetItemToID HashMap
 Item = {};

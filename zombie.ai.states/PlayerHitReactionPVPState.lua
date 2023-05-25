@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PlayerHitReactionPVPState: State
+--- @field public class any
 PlayerHitReactionPVPState = {};
 
 ------------------------------------

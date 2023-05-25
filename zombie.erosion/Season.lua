@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Season
+--- @field public class any
 Season = {};
 
 ------------------------------------

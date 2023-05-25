@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BufferedReader: Reader
+--- @field public class any
 BufferedReader = {};
 
 ------------------------------------

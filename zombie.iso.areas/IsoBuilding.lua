@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoBuilding: IsoArea
+--- @field public class any
 --- @field public GoodBuildingScore float
 --- @field public IDMax int
 --- @field public PoorBuildingScore float

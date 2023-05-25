@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StaggerBackState: State
+--- @field public class any
 StaggerBackState = {};
 
 ------------------------------------

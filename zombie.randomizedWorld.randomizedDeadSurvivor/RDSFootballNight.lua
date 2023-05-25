@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSFootballNight: RandomizedDeadSurvivorBase Create some zombies in sports outfits with crisps, alcohol & cigarettes lying around
+--- @field public class any
 RDSFootballNight = {};
 
 ------------------------------------

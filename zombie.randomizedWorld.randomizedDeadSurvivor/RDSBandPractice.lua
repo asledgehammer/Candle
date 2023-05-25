@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSBandPractice: RandomizedDeadSurvivorBase Need a garage with a size of at least 10 tiles Spawn some rocker zombies & music instruments on ground & shelves Corpse with a guitar in his hand
+--- @field public class any
 RDSBandPractice = {};
 
 ------------------------------------

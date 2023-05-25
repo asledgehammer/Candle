@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoChunkMap
+--- @field public class any
 --- @field public bSettingChunk ReentrantLock
 --- @field public ChunkGridWidth int
 --- @field public ChunksPerWidth int

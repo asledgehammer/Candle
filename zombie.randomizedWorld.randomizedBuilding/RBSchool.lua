@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBSchool: RandomizedBuildingBase Add pen, pencils, books... on school desk
+--- @field public class any
 RBSchool = {};
 
 ------------------------------------

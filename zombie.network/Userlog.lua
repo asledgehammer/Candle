@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Userlog
+--- @field public class any
 Userlog = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FMODSoundEmitter: BaseSoundEmitter
+--- @field public class any
 FMODSoundEmitter = {};
 
 ------------------------------------

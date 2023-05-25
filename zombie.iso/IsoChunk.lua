@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoChunk
+--- @field public class any
 --- @field public bDoServerRequests boolean
 --- @field public loadGridSquare ConcurrentLinkedQueue
 --- @field public renderByIndex byte[][]

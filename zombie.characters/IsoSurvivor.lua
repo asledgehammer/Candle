@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoSurvivor: IsoLivingCharacter
+--- @field public class any
 IsoSurvivor = {};
 
 ------------------------------------

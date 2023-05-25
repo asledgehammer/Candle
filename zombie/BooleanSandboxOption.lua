@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BooleanSandboxOption: BooleanConfigOption
+--- @field public class any
 --- @implement SandboxOption
 BooleanSandboxOption = {};
 

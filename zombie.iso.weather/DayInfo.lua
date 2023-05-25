@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DayInfo DAY INFO
+--- @field public class any
 DayInfo = {};
 
 ------------------------------------

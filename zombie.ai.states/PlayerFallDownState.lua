@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PlayerFallDownState: State
+--- @field public class any
 PlayerFallDownState = {};
 
 ------------------------------------

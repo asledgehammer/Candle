@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class VirtualZombieManager
+--- @field public class any
 --- @field public instance VirtualZombieManager
 VirtualZombieManager = {};
 

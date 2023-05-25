@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoSpriteGrid Turbo
+--- @field public class any
 IsoSpriteGrid = {};
 
 ------------------------------------

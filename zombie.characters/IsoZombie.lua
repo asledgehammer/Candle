@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoZombie: IsoGameCharacter
+--- @field public class any
 --- @implement IHumanVisual
 --- @field public AllowRepathDelayMax int
 --- @field public AttackAnimTimeMax int

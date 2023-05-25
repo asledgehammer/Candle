@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SurvivorFactory
+--- @field public class any
 --- @field public FemaleForenames ArrayList
 --- @field public MaleForenames ArrayList
 --- @field public Surnames ArrayList

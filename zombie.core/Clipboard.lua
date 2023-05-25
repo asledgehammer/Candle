@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Clipboard
+--- @field public class any
 Clipboard = {};
 
 ------------------------------------

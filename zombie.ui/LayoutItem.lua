@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LayoutItem
+--- @field public class any
 LayoutItem = {};
 
 ------------------------------------

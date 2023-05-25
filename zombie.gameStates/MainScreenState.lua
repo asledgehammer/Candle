@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MainScreenState: GameState
+--- @field public class any
 --- @field public ambient Audio
 --- @field public instance MainScreenState
 --- @field public totalScale float

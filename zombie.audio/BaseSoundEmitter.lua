@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BaseSoundEmitter
+--- @field public class any
 BaseSoundEmitter = {};
 
 ------------------------------------

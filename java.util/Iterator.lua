@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Iterator
+--- @field public class any
 Iterator = {};
 
 ------------------------------------

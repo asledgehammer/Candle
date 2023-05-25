@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Literature: InventoryItem
+--- @field public class any
 Literature = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class VehicleWindow
+--- @field public class any
 VehicleWindow = {};
 
 ------------------------------------

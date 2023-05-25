@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ThunderCloud
+--- @field public class any
 ThunderCloud = {};
 
 ------------------------------------

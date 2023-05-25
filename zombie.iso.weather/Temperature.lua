@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Temperature TurboTuTone.
+--- @field public class any
 --- @field public BodyMaxTemp float
 --- @field public BodyMinTemp float
 --- @field public CELSIUS_POSTFIX String

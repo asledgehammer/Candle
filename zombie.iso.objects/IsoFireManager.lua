@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoFireManager
+--- @field public class any
 --- @field public Blue_Oscilator double
 --- @field public Blue_Oscilator_Rate double
 --- @field public Blue_Oscilator_Val double

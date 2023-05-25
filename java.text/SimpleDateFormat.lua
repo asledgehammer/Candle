@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SimpleDateFormat: DateFormat
+--- @field public class any
 SimpleDateFormat = {};
 
 ------------------------------------

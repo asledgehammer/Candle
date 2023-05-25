@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoDummyCameraCharacter: IsoGameCharacter
+--- @field public class any
 IsoDummyCameraCharacter = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MultiStageBuilding
+--- @field public class any
 --- @field public stages ArrayList
 MultiStageBuilding = {};
 

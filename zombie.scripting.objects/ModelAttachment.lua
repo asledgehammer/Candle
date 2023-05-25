@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ModelAttachment
+--- @field public class any
 ModelAttachment = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SystemDisabler
+--- @field public class any
 --- @field public doCharacterStats boolean
 --- @field public doEnableDetectOpenGLErrorsInTexture boolean
 --- @field public doKickInDebug boolean

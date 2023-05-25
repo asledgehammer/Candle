@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RVSCarCrashCorpse: RandomizedVehicleStoryBase
+--- @field public class any
 RVSCarCrashCorpse = {};
 
 ------------------------------------

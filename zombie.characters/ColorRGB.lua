@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ColorRGB
+--- @field public class any
 ColorRGB = {};
 
 ------------------------------------

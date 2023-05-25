@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class KahluaUtil
+--- @field public class any
 KahluaUtil = {};
 
 ------------------------------------

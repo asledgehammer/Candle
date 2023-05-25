@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoCamera
+--- @field public class any
 --- @field public CamCharacter IsoGameCharacter
 --- @field public cameras PlayerCamera[]
 --- @field public FakePos Vector2

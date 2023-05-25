@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Trigger
+--- @field public class any
 Trigger = {};
 
 ------------------------------------

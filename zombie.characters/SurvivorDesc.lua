@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SurvivorDesc
+--- @field public class any
 --- @implement IHumanVisual
 --- @field public HairCommonColors ArrayList
 --- @field public TrouserCommonColors ArrayList

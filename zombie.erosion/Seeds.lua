@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Seeds
+--- @field public class any
 Seeds = {};
 
 ------------------------------------

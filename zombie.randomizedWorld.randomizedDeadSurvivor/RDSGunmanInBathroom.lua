@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSGunmanInBathroom: RandomizedDeadSurvivorBase Just a dead survivor in a bathroom with pistol or shotgun on him
+--- @field public class any
 RDSGunmanInBathroom = {};
 
 ------------------------------------

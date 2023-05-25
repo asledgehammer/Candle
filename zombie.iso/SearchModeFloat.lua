@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SearchModeFloat
+--- @field public class any
 SearchModeFloat = {};
 
 ------------------------------------

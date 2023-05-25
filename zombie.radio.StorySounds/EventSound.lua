@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class EventSound Turbo
+--- @field public class any
 EventSound = {};
 
 ------------------------------------

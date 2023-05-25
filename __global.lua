@@ -1,3 +1,4 @@
+--- @meta
 
 --- @param sq IsoGridSquare
 --- @param radius int
@@ -21,21 +22,22 @@ function InvMngGetItem(itemId, itemType, player) end
 --- @return void
 function InvMngRemoveItem(itemId, player) end
 
---- @param message String
+--- @param item InventoryItem
+--- @param sq IsoGridSquare
+--- @param xoffset float
+--- @param yoffset float
+--- @param zoffset float
+--- @param rotation float
 --- @return void
-function ProceedFactionMessage(message) end
-
---- @param message String
---- @return void
-function ProcessAdminChatMessage(message) end
-
---- @param message String
---- @return void
-function ProcessSafehouseMessage(message) end
+function Render3DItem(item, sq, xoffset, yoffset, zoffset, rotation) end
 
 --- @param command String
 --- @return void
 function SendCommandToServer(command) end
+
+--- @param player IsoPlayer
+--- @return void
+function SyncXp(player) end
 
 --- @param max double
 --- @return double
@@ -95,11 +97,25 @@ function addAllSmashedVehicles() end
 --- @overload fun(predicate: Predicate): void
 function addAllVehicles() end
 
+--- @param sq IsoGridSquare
+--- @param nbr int
+--- @return void
+function addBloodSplat(sq, nbr) end
+
 --- @return void
 function addCarCrash() end
 
 --- @return BaseVehicle
 function addPhysicsObject() end
+
+--- @param source IsoObject
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param radius int
+--- @param volume int
+--- @return void
+function addSound(source, x, y, z, radius, volume) end
 
 --- @param author String
 --- @param message String
@@ -138,12 +154,45 @@ function addWarningPoint(user, reason, amount) end
 --- @param x int
 --- @param y int
 --- @param z int
+--- @return void
+function addZombieSitting(x, y, z) end
+
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param totalZombies int
+--- @param skeletonBody boolean
+--- @return void
+function addZombiesEating(x, y, z, totalZombies, skeletonBody) end
+
+--- @param def BuildingDef
+--- @param totalZombies int
+--- @param outfit String
+--- @param room RoomDef
+--- @param femaleChance Integer
+--- @return ArrayList
+function addZombiesInBuilding(def, totalZombies, outfit, room, femaleChance) end
+
+--- @param x int
+--- @param y int
+--- @param z int
 --- @param totalZombies int
 --- @param outfit String
 --- @param femaleChance Integer
 --- @return ArrayList
 --- @overload fun(x: int, y: int, z: int, totalZombies: int, outfit: String, femaleChance: Integer, isCrawler: boolean, isFallOnFront: boolean, isFakeDead: boolean, isKnockedDown: boolean, health: float): ArrayList
 function addZombiesInOutfit(x, y, z, totalZombies, outfit, femaleChance) end
+
+--- @param x1 int
+--- @param y1 int
+--- @param x2 int
+--- @param y2 int
+--- @param z int
+--- @param totalZombies int
+--- @param outfit String
+--- @param femaleChance Integer
+--- @return ArrayList
+function addZombiesInOutfitArea(x1, y1, x2, y2, z, totalZombies, outfit, femaleChance) end
 
 --- @return void
 function assaultPlayer() end
@@ -191,6 +240,10 @@ function checkSaveFolderExists(f) end
 
 --- @return boolean
 function checkSavePlayerExists() end
+
+--- @param name String
+--- @return String
+function checkServerName(name) end
 
 --- @param pattern String
 --- @return boolean
@@ -426,6 +479,9 @@ function getAnimationViewerState() end
 --- @return AttachmentEditorState
 function getAttachmentEditorState() end
 
+--- @return Double
+function getAverageFPS() end
+
 --- @return BeardStyles
 function getBeardStylesInstance() end
 
@@ -475,6 +531,9 @@ function getClimateMoon() end
 
 --- @return ArrayList
 function getConnectedPlayers() end
+
+--- @return ContainerOverlays
+function getContainerOverlays() end
 
 --- @param c int
 --- @return int
@@ -762,6 +821,9 @@ function getLuaDebuggerErrorCount() end
 function getLuaDebuggerErrors() end
 
 --- @return KahluaTable
+function getMPStatistics() end
+
+--- @return KahluaTable
 function getMPStatus() end
 
 --- @return KahluaTable
@@ -1024,9 +1086,6 @@ function getSpriteManager(sprite) end
 --- @return IsoGridSquare
 function getSquare(x, y, z) end
 
---- @return KahluaTable
-function getStatistics() end
-
 --- @param steamID String
 --- @return Texture
 function getSteamAvatarFromSteamID(steamID) end
@@ -1103,6 +1162,9 @@ function getTextureFromSaveDir(filename, saveName) end
 --- @param author String
 --- @return void
 function getTickets(author) end
+
+--- @return TileOverlays
+function getTileOverlays() end
 
 --- @return long
 function getTimeInMillis() end
@@ -1189,7 +1251,7 @@ function instanceItem(item) end
 --- @param obj Object
 --- @param name String
 --- @return boolean
-function instof(obj, name) end
+function instanceof(obj, name) end
 
 --- @param steamID String
 --- @return void
@@ -1355,11 +1417,6 @@ function isSystemMacOS() end
 --- @return boolean
 function isSystemWindows() end
 
---- @param obj Object
---- @param name String
---- @return boolean
-function isType(obj, name) end
-
 --- @param s String
 --- @return boolean
 function isValidSteamID(s) end
@@ -1387,6 +1444,11 @@ function isoToScreenX(player, x, y, z) end
 --- @param z float
 --- @return float
 function isoToScreenY(player, x, y, z) end
+
+--- @param obj Object
+--- @param name String
+--- @return boolean
+function istype(obj, name) end
 
 --- @param name String
 --- @param loc String
@@ -1434,7 +1496,7 @@ function moduleDotType(module, type) end
 
 --- @param url String
 --- @return void
-function openURl(url) end
+function openUrl(url) end
 
 --- @return void
 function pauseSoundAndMusic() end
@@ -1451,13 +1513,25 @@ function ping(username, pwd, ip, port) end
 --- @return void
 function playServerSound(sound, sq) end
 
+--- @param message String
+--- @return void
+function proceedFactionMessage(message) end
+
 --- @param command String
 --- @return String
 function proceedPM(command) end
 
 --- @param message String
 --- @return void
+function processAdminChatMessage(message) end
+
+--- @param message String
+--- @return void
 function processGeneralMessage(message) end
+
+--- @param message String
+--- @return void
+function processSafehouseMessage(message) end
 
 --- @param message String
 --- @return void
@@ -1544,7 +1618,7 @@ function removeUserlog(user, type, text) end
 --- @param oldName String
 --- @param newName String
 --- @return boolean
-function renameSaveFile(gameMode, oldName, newName) end
+function renameSavefile(gameMode, oldName, newName) end
 
 --- @param x float
 --- @param y float
@@ -1623,6 +1697,18 @@ function screenToIsoX(player, x, y, z) end
 --- @param z float
 --- @return float
 function screenToIsoY(player, x, y, z) end
+
+--- @return void
+function screenZoomIn() end
+
+--- @return void
+function screenZoomOut() end
+
+--- @param arg0 IsoPlayer
+--- @param arg1 Perk
+--- @param arg2 int
+--- @return void
+function sendAddXp(arg0, arg1, arg2) end
 
 --- @param onlineID int
 --- @param i int
@@ -1939,11 +2025,11 @@ function spawnpointsExistsForMod(modID, mapFolder) end
 --- @return Server
 function steamGetInternetServerDetails(index) end
 
+--- @return int
+function steamGetInternetServersCount() end
+
 --- @return void
 function steamReleaseInternetServersRequest() end
-
---- @return int
-function steamRequestInternetServersCount() end
 
 --- @return void
 function steamRequestInternetServersList() end

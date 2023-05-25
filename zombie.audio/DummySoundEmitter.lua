@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DummySoundEmitter: BaseSoundEmitter
+--- @field public class any
 DummySoundEmitter = {};
 
 ------------------------------------

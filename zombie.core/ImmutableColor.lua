@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ImmutableColor
+--- @field public class any
 --- @field public black ImmutableColor
 --- @field public blue ImmutableColor
 --- @field public cyan ImmutableColor

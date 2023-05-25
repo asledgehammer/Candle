@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class TextDrawObject
+--- @field public class any
 TextDrawObject = {};
 
 ------------------------------------

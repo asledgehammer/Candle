@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class VehicleGauge: UIElement
+--- @field public class any
 VehicleGauge = {};
 
 ------------------------------------

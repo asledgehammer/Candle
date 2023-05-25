@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameSound
+--- @field public class any
 GameSound = {};
 
 ------------------------------------

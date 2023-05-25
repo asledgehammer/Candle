@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UITransition
+--- @field public class any
 UITransition = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameSoundScript: BaseScriptObject
+--- @field public class any
 GameSoundScript = {};
 
 ------------------------------------

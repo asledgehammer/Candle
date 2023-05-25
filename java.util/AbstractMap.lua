@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AbstractMap
+--- @field public class any
 --- @implement Map
 AbstractMap = {};
 

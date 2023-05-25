@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameState
+--- @field public class any
 GameState = {};
 
 ------------------------------------

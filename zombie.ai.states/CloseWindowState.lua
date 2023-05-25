@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class CloseWindowState: State
+--- @field public class any
 CloseWindowState = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoLot
+--- @field public class any
 --- @field public InfoFileNames HashMap
 --- @field public InfoHeaderNames ArrayList
 --- @field public InfoHeaders HashMap

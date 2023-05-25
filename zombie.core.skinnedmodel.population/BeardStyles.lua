@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BeardStyles
+--- @field public class any
 --- @field public instance BeardStyles
 BeardStyles = {};
 

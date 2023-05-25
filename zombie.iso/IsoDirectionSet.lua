@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoDirectionSet
+--- @field public class any
 IsoDirectionSet = {};
 
 ------------------------------------

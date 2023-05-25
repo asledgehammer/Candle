@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StringConfigOption: ConfigOption
+--- @field public class any
 StringConfigOption = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class NetworkAIParams
+--- @field public class any
 --- @field public CHARACTER_EXTRAPOLATION_UPDATE_INTERVAL_MS int
 --- @field public CHARACTER_PREDICTION_INTERVAL_MS int
 --- @field public CHARACTER_UPDATE_RATE_MS int

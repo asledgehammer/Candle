@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoClothingDryer: IsoObject
+--- @field public class any
 IsoClothingDryer = {};
 
 ------------------------------------

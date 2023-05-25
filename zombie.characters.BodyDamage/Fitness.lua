@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Fitness
+--- @field public class any
 Fitness = {};
 
 ------------------------------------

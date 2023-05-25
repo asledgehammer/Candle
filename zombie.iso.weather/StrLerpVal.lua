@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StrLerpVal: Enum
+--- @field public class any
 --- @field public Entry StrLerpVal
 --- @field public NextTarget StrLerpVal
 --- @field public None StrLerpVal

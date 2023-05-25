@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoSprite
+--- @field public class any
 --- @field public alphaStep float
 --- @field public globalOffsetX float
 --- @field public globalOffsetY float

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class EditVehicleState: GameState
+--- @field public class any
 --- @field public instance EditVehicleState
 EditVehicleState = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AirFront
+--- @field public class any
 AirFront = {};
 
 ------------------------------------

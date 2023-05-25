@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RandomizedBuildingBase: RandomizedWorldBase
+--- @field public class any
 RandomizedBuildingBase = {};
 
 ------------------------------------

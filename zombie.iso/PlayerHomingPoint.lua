@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PlayerHomingPoint
+--- @field public class any
 PlayerHomingPoint = {};
 
 ------------------------------------

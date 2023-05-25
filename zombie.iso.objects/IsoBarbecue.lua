@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoBarbecue: IsoObject
+--- @field public class any
 IsoBarbecue = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ItemRecipe
+--- @field public class any
 ItemRecipe = {};
 
 ------------------------------------

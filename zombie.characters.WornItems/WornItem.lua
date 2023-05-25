@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WornItem
+--- @field public class any
 WornItem = {};
 
 ------------------------------------

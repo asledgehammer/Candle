@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class TraitCollection
+--- @field public class any
 TraitCollection = {};
 
 ------------------------------------

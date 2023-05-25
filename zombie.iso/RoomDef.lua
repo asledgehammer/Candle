@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RoomDef
+--- @field public class any
 RoomDef = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadioAPI
+--- @field public class any
 RadioAPI = {};
 
 ------------------------------------

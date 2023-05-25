@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoRegionsLogger TurboTuTone.
+--- @field public class any
 IsoRegionsLogger = {};
 
 ------------------------------------

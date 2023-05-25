@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StorySoundEvent Turbo
+--- @field public class any
 StorySoundEvent = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Writer
+--- @field public class any
 --- @implement Appendable
 --- @implement Closeable
 --- @implement Flushable

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PuddlesFloat
+--- @field public class any
 PuddlesFloat = {};
 
 ------------------------------------

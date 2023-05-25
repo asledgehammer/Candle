@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BooleanConfigOption: ConfigOption
+--- @field public class any
 BooleanConfigOption = {};
 
 ------------------------------------

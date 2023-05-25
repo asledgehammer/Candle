@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DevicePresets Turrubo
+--- @field public class any
 --- @implement Cloneable
 DevicePresets = {};
 

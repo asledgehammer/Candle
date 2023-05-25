@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameTime
+--- @field public class any
 --- @field public instance GameTime
 --- @field public MULTIPLIER float
 GameTime = {};

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadialMenu: UIElement
+--- @field public class any
 RadialMenu = {};
 
 ------------------------------------

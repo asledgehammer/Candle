@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LosUtil
+--- @field public class any
 --- @field public cachecleared boolean[]
 --- @field public cachedresults byte[][][][]
 --- @field public XSIZE int

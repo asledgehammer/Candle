@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BaseAction
+--- @field public class any
 BaseAction = {};
 
 ------------------------------------

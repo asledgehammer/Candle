@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Trait
+--- @field public class any
 --- @implement IListBoxItem
 Trait = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoRegionLog
+--- @field public class any
 IsoRegionLog = {};
 
 ------------------------------------

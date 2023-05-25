@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PlayerAimState: State
+--- @field public class any
 PlayerAimState = {};
 
 ------------------------------------

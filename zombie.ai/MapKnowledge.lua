@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MapKnowledge
+--- @field public class any
 MapKnowledge = {};
 
 ------------------------------------

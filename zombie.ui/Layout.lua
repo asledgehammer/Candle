@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Layout
+--- @field public class any
 Layout = {};
 
 ------------------------------------

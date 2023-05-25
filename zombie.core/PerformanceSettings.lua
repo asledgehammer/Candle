@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PerformanceSettings
+--- @field public class any
 --- @field public AnimationSkip int
 --- @field public auto3DZombies boolean
 --- @field public BaseStaticAnimFramerate int

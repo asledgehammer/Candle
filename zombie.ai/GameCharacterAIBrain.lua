@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameCharacterAIBrain
+--- @field public class any
 GameCharacterAIBrain = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ModData TurboTuTone. Exposed class with only allowed functions accessible for modding
+--- @field public class any
 ModData = {};
 
 ------------------------------------

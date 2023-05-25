@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Position
+--- @field public class any
 Position = {};
 
 ------------------------------------

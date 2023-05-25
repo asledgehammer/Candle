@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MoodleType: Enum
+--- @field public class any
 --- @field public Angry MoodleType
 --- @field public Bleeding MoodleType
 --- @field public Bored MoodleType

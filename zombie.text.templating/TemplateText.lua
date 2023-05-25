@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class TemplateText TurboTuTone.
+--- @field public class any
 TemplateText = {};
 
 ------------------------------------

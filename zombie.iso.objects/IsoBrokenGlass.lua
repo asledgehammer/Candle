@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoBrokenGlass: IsoObject
+--- @field public class any
 IsoBrokenGlass = {};
 
 ------------------------------------

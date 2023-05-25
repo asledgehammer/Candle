@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Wheel
+--- @field public class any
 Wheel = {};
 
 ------------------------------------

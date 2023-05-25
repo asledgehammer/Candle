@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoGameCharacter: IsoMovingObject
+--- @field public class any
 --- @implement Talker
 --- @implement ChatElementOwner
 --- @implement IAnimatable

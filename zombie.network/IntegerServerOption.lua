@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IntegerServerOption: IntegerConfigOption
+--- @field public class any
 --- @implement ServerOption
 IntegerServerOption = {};
 

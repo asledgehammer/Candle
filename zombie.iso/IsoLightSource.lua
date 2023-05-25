@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoLightSource
+--- @field public class any
 --- @field public NextID int
 IsoLightSource = {};
 

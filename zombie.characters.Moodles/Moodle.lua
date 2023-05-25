@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Moodle
+--- @field public class any
 Moodle = {};
 
 ------------------------------------

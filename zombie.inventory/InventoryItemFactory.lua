@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class InventoryItemFactory
+--- @field public class any
 InventoryItemFactory = {};
 
 ------------------------------------

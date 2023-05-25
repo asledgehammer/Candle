@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Stack: Vector
+--- @field public class any
 Stack = {};
 
 ------------------------------------

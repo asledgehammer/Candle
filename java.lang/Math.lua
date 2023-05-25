@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Math
+--- @field public class any
 --- @field public E double
 --- @field public PI double
 Math = {};

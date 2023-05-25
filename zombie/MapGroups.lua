@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MapGroups
+--- @field public class any
 MapGroups = {};
 
 ------------------------------------

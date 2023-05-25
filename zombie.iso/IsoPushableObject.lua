@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoPushableObject: IsoMovingObject
+--- @field public class any
 IsoPushableObject = {};
 
 ------------------------------------

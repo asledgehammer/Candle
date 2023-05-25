@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GridSquareMarker
+--- @field public class any
 GridSquareMarker = {};
 
 ------------------------------------

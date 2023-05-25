@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SteamUGCDetails
+--- @field public class any
 SteamUGCDetails = {};
 
 ------------------------------------

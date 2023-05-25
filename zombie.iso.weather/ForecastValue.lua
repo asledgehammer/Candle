@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ForecastValue
+--- @field public class any
 ForecastValue = {};
 
 ------------------------------------

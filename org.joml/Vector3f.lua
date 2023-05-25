@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Vector3f
+--- @field public class any
 --- @implement Externalizable
 --- @implement Vector3fc
 Vector3f = {};

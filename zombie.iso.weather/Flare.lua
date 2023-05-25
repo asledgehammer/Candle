@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Flare
+--- @field public class any
 Flare = {};
 
 ------------------------------------

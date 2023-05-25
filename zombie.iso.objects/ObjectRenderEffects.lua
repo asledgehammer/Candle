@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ObjectRenderEffects TurboTuTone.
+--- @field public class any
 --- @field public ENABLED boolean
 ObjectRenderEffects = {};
 

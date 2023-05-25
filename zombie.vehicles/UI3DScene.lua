@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UI3DScene: UIElement
+--- @field public class any
 UI3DScene = {};
 
 ------------------------------------

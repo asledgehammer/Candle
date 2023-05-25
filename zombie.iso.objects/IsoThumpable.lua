@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoThumpable: IsoObject
+--- @field public class any
 --- @implement BarricadeAble
 --- @implement Thumpable
 --- @field public tempo Vector2

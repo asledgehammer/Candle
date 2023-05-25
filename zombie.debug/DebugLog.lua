@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DebugLog Created by LEMMYPC on 31/12/13.
+--- @field public class any
 --- @field public ActionSystem DebugLogStream
 --- @field public Animation DebugLogStream
 --- @field public Asset DebugLogStream

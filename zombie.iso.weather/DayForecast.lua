@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DayForecast
+--- @field public class any
 DayForecast = {};
 
 ------------------------------------

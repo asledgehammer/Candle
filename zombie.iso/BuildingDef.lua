@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BuildingDef
+--- @field public class any
 BuildingDef = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSDeadDrunk: RandomizedDeadSurvivorBase Create a dead survivor with alcohol bottles around him
+--- @field public class any
 RDSDeadDrunk = {};
 
 ------------------------------------

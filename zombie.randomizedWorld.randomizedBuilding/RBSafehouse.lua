@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBSafehouse: RandomizedBuildingBase This building will be barricaded, have a lot of canned food but also lot of zombies inside it
+--- @field public class any
 RBSafehouse = {};
 
 ------------------------------------

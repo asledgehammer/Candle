@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BodyPartType: Enum
+--- @field public class any
 --- @field public Foot_L BodyPartType
 --- @field public Foot_R BodyPartType
 --- @field public ForeArm_L BodyPartType

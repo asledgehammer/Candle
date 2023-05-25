@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SmashWindowState: State
+--- @field public class any
 SmashWindowState = {};
 
 ------------------------------------

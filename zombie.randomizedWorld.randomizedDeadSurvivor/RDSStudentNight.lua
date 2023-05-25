@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSStudentNight: RandomizedDeadSurvivorBase Create some zombies in varsity outfit + 2 naked zombies in bedroom
+--- @field public class any
 RDSStudentNight = {};
 
 ------------------------------------

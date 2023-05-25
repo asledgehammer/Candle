@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StringServerOption: StringConfigOption
+--- @field public class any
 --- @implement ServerOption
 StringServerOption = {};
 

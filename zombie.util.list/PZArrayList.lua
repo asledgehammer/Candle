@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PZArrayList: AbstractList
+--- @field public class any
 --- @implement List
 --- @implement RandomAccess
 PZArrayList = {};

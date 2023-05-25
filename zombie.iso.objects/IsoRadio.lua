@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoRadio: IsoWaveSignal
+--- @field public class any
 IsoRadio = {};
 
 ------------------------------------

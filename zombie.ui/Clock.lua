@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Clock: UIElement
+--- @field public class any
 --- @field public instance Clock
 Clock = {};
 

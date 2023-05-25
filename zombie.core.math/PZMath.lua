@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PZMath
+--- @field public class any
 --- @field public degToRads float Conversion ratios, Degrees to Radians and back
 --- @field public microsToNanos long
 --- @field public millisToMicros long

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClimbThroughWindowState: State
+--- @field public class any
 ClimbThroughWindowState = {};
 
 ------------------------------------

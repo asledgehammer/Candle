@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Format
+--- @field public class any
 --- @implement Serializable
 --- @implement Cloneable
 Format = {};

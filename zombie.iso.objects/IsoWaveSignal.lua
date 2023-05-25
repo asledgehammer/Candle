@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWaveSignal: IsoObject Turbo
+--- @field public class any
 --- @implement WaveSignalDevice
 --- @implement ChatElementOwner
 --- @implement Talker

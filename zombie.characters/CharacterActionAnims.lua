@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class CharacterActionAnims: Enum TurboTuTone.
+--- @field public class any
 --- @field public Bandage CharacterActionAnims
 --- @field public Build CharacterActionAnims
 --- @field public BuildLow CharacterActionAnims

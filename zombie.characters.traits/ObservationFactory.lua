@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ObservationFactory
+--- @field public class any
 --- @field public ObservationMap HashMap
 ObservationFactory = {};
 

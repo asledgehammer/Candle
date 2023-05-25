@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoBarricade: IsoObject
+--- @field public class any
 --- @implement Thumpable
 --- @field public MAX_PLANKS int
 --- @field public METAL_BAR_HEALTH int

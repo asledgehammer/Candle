@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ScriptManager
+--- @field public class any
 --- @implement IScriptObjectStore
 --- @field public instance ScriptManager
 --- @field public VanillaID String

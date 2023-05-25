@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoGenerator: IsoObject
+--- @field public class any
 IsoGenerator = {};
 
 ------------------------------------

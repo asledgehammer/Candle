@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMetaGrid
+--- @field public class any
 IsoMetaGrid = {};
 
 ------------------------------------

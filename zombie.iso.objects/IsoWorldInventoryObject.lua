@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWorldInventoryObject: IsoObject
+--- @field public class any
 IsoWorldInventoryObject = {};
 
 ------------------------------------

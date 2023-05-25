@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FilterInputStream: InputStream
+--- @field public class any
 FilterInputStream = {};
 
 ------------------------------------

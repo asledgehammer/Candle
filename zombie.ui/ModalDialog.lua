@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ModalDialog: NewWindow
+--- @field public class any
 ModalDialog = {};
 
 ------------------------------------

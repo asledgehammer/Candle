@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BodyLocationGroup
+--- @field public class any
 BodyLocationGroup = {};
 
 ------------------------------------

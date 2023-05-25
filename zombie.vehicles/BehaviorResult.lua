@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BehaviorResult: Enum
+--- @field public class any
 --- @field public Failed BehaviorResult
 --- @field public Succeeded BehaviorResult
 --- @field public Working BehaviorResult

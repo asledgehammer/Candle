@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DummySoundManager: BaseSoundManager
+--- @field public class any
 DummySoundManager = {};
 
 ------------------------------------

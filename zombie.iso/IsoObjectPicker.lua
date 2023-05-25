@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoObjectPicker
+--- @field public class any
 --- @field public Instance IsoObjectPicker
 IsoObjectPicker = {};
 

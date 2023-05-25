@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BufferedWriter: Writer
+--- @field public class any
 BufferedWriter = {};
 
 ------------------------------------

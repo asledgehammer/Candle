@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoCarBatteryCharger: IsoObject
+--- @field public class any
 IsoCarBatteryCharger = {};
 
 ------------------------------------

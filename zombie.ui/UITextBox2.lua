@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UITextBox2: UIElement
+--- @field public class any
 --- @field public ConsoleHasFocus boolean
 UITextBox2 = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MapItem: InventoryItem
+--- @field public class any
 --- @field public WORLD_MAP_INSTANCE MapItem
 MapItem = {};
 

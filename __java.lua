@@ -1,3 +1,5 @@
+--- @meta
+
 --- @alias byte number
 --- @alias short number
 --- @alias int number

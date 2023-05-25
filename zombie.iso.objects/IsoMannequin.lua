@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMannequin: IsoObject
+--- @field public class any
 --- @implement IHumanVisual
 IsoMannequin = {};
 

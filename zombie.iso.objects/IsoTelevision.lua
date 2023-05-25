@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoTelevision: IsoWaveSignal
+--- @field public class any
 IsoTelevision = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FixingManager
+--- @field public class any
 FixingManager = {};
 
 ------------------------------------

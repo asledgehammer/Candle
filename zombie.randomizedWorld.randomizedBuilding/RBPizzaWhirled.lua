@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBPizzaWhirled: RandomizedBuildingBase Add some food on table
+--- @field public class any
 RBPizzaWhirled = {};
 
 ------------------------------------

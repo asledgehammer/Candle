@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BaseAmbientStreamManager
+--- @field public class any
 BaseAmbientStreamManager = {};
 
 ------------------------------------

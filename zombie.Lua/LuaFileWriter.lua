@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LuaFileWriter
+--- @field public class any
 LuaFileWriter = {};
 
 ------------------------------------

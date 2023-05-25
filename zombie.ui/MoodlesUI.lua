@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MoodlesUI: UIElement
+--- @field public class any
 --- @field public chevronDown Texture
 --- @field public chevronDownBorder Texture
 --- @field public chevronUp Texture

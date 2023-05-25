@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClothingPatch
+--- @field public class any
 ClothingPatch = {};
 
 ------------------------------------

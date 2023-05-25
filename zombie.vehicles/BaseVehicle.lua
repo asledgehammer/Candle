@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BaseVehicle: IsoMovingObject
+--- @field public class any
 --- @implement Thumpable
 --- @implement IFMODParameterUpdater
 --- @field public CENTER_OF_MASS_MAGIC float

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class OpenWindowState: State
+--- @field public class any
 OpenWindowState = {};
 
 ------------------------------------

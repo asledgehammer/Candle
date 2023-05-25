@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoCurtain: IsoObject
+--- @field public class any
 IsoCurtain = {};
 
 ------------------------------------

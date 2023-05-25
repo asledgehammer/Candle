@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BaseVisual
+--- @field public class any
 BaseVisual = {};
 
 ------------------------------------

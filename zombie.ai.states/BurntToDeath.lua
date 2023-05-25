@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BurntToDeath: State
+--- @field public class any
 BurntToDeath = {};
 
 ------------------------------------

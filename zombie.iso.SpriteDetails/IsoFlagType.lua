@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoFlagType: Enum
+--- @field public class any
 --- @field public alwaysDraw IsoFlagType
 --- @field public attachedCeiling IsoFlagType
 --- @field public attachedE IsoFlagType

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DirectionArrow
+--- @field public class any
 --- @field public doDebug boolean
 DirectionArrow = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Keyboard
+--- @field public class any
 --- @field public CHAR_NONE int
 --- @field public KEY_0 int
 --- @field public KEY_1 int

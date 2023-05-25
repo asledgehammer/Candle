@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClimateBool
+--- @field public class any
 ClimateBool = {};
 
 ------------------------------------

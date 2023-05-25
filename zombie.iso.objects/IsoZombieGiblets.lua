@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoZombieGiblets: IsoPhysicsObject
+--- @field public class any
 IsoZombieGiblets = {};
 
 ------------------------------------

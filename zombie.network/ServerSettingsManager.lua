@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ServerSettingsManager
+--- @field public class any
 --- @field public instance ServerSettingsManager
 ServerSettingsManager = {};
 

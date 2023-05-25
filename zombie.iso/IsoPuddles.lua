@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoPuddles
+--- @field public class any
 --- @field public BOOL_MAX int
 --- @field public FLOAT_MAX int
 --- @field public FLOAT_MUDDYPUDDLES int

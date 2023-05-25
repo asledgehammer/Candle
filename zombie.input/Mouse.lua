@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Mouse
+--- @field public class any
 --- @field public bLeftDown boolean
 --- @field public bLeftWasDown boolean
 --- @field public bMiddleDown boolean

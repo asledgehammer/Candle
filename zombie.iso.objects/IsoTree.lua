@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoTree: IsoObject
+--- @field public class any
 --- @field public MAX_SIZE int
 IsoTree = {};
 

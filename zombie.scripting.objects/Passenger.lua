@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Passenger
+--- @field public class any
 Passenger = {};
 
 ------------------------------------

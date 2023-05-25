@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RecipeManager
+--- @field public class any
 RecipeManager = {};
 
 ------------------------------------

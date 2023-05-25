@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BentFences
+--- @field public class any
 BentFences = {};
 
 ------------------------------------

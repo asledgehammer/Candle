@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FitnessState: State
+--- @field public class any
 FitnessState = {};
 
 ------------------------------------

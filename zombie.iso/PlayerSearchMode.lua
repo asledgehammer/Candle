@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PlayerSearchMode
+--- @field public class any
 PlayerSearchMode = {};
 
 ------------------------------------

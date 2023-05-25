@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ExitOption
+--- @field public class any
 ExitOption = {};
 
 ------------------------------------

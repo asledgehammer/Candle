@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WeaponPart: InventoryItem
+--- @field public class any
 --- @field public TYPE_CANON String
 --- @field public TYPE_CLIP String
 --- @field public TYPE_RECOILPAD String

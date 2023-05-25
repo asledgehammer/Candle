@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoGridSquare
+--- @field public class any
 --- @field public bmod float
 --- @field public cellGetSquare CellGetSquare
 --- @field public choices ArrayList

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FMODAudio
+--- @field public class any
 --- @implement Audio
 FMODAudio = {};
 

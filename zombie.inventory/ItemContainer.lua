@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ItemContainer
+--- @field public class any
 ItemContainer = {};
 
 ------------------------------------

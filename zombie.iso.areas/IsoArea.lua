@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoArea
+--- @field public class any
 --- @field public Doobo boolean
 --- @field public version String
 IsoArea = {};

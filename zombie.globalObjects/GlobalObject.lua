@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GlobalObject
+--- @field public class any
 GlobalObject = {};
 
 ------------------------------------

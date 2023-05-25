@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ThumpState: State
+--- @field public class any
 ThumpState = {};
 
 ------------------------------------

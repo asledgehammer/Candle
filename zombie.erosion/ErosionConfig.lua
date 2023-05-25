@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ErosionConfig
+--- @field public class any
 ErosionConfig = {};
 
 ------------------------------------

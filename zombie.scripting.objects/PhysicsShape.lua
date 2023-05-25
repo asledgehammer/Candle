@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PhysicsShape
+--- @field public class any
 PhysicsShape = {};
 
 ------------------------------------

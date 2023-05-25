@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMarkers
+--- @field public class any
 --- @field public instance IsoMarkers
 IsoMarkers = {};
 

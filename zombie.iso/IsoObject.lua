@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoObject
+--- @field public class any
 --- @implement Serializable
 --- @implement Thumpable
 --- @field public bmod float

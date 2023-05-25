@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SearchMode TurboTuTone.
+--- @field public class any
 SearchMode = {};
 
 ------------------------------------

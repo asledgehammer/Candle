@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LinkedList: AbstractSequentialList
+--- @field public class any
 --- @implement List
 --- @implement Deque
 --- @implement Cloneable

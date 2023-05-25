@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBBurnt: RandomizedBuildingBase This building will be 90% burnt (no fire started tho)
+--- @field public class any
 RBBurnt = {};
 
 ------------------------------------

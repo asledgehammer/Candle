@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Food: InventoryItem
+--- @field public class any
 --- @field public FreezerAgeMultiplier float
 Food = {};
 

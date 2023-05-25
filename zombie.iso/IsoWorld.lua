@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWorld
+--- @field public class any
 --- @field public instance IsoWorld
 --- @field public mapPath String
 --- @field public mapUseJar boolean

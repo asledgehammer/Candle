@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BodyPart
+--- @field public class any
 BodyPart = {};
 
 ------------------------------------

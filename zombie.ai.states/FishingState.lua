@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FishingState: State TurboTuTone.
+--- @field public class any
 FishingState = {};
 
 ------------------------------------

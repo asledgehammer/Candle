@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Server
+--- @field public class any
 Server = {};
 
 ------------------------------------

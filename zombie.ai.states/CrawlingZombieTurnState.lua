@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class CrawlingZombieTurnState: State
+--- @field public class any
 CrawlingZombieTurnState = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SteamFriend Created by Gennadiy on 11.06.2015.
+--- @field public class any
 SteamFriend = {};
 
 ------------------------------------

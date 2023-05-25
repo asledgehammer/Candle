@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DataOutputStream: FilterOutputStream
+--- @field public class any
 --- @implement DataOutput
 DataOutputStream = {};
 

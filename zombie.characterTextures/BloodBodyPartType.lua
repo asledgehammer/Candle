@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BloodBodyPartType: Enum Created by LEMMY on 7/1/2016.
+--- @field public class any
 --- @field public Back BloodBodyPartType
 --- @field public Foot_L BloodBodyPartType
 --- @field public Foot_R BloodBodyPartType

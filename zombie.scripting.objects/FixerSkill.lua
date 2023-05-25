@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FixerSkill
+--- @field public class any
 FixerSkill = {};
 
 ------------------------------------

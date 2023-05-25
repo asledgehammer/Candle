@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMarker
+--- @field public class any
 IsoMarker = {};
 
 ------------------------------------

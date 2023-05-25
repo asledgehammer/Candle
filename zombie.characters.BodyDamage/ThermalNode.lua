@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ThermalNode
+--- @field public class any
 ThermalNode = {};
 
 ------------------------------------

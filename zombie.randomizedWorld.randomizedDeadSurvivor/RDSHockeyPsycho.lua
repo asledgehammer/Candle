@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSHockeyPsycho: RandomizedDeadSurvivorBase Well, it's friday the 13th... Basically.
+--- @field public class any
 RDSHockeyPsycho = {};
 
 ------------------------------------

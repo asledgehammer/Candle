@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SurvivorType: Enum
+--- @field public class any
 --- @field public Aggressive SurvivorType
 --- @field public Friendly SurvivorType
 --- @field public Neutral SurvivorType

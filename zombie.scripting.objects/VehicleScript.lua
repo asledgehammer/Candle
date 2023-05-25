@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class VehicleScript: BaseScriptObject
+--- @field public class any
 VehicleScript = {};
 
 ------------------------------------

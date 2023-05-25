@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class EvolvedRecipe: BaseScriptObject
+--- @field public class any
 EvolvedRecipe = {};
 
 ------------------------------------

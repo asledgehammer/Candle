@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoRegions TurboTuTone.
+--- @field public class any
 --- @field public BIT_EMPTY byte
 --- @field public BIT_HAS_FLOOR byte
 --- @field public BIT_HAS_ROOF byte

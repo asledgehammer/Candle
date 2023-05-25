@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ServerSettings
+--- @field public class any
 ServerSettings = {};
 
 ------------------------------------

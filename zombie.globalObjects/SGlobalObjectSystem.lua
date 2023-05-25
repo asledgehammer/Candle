@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SGlobalObjectSystem: GlobalObjectSystem
+--- @field public class any
 SGlobalObjectSystem = {};
 
 ------------------------------------

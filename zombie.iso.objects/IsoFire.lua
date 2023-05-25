@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoFire: IsoObject
+--- @field public class any
 IsoFire = {};
 
 ------------------------------------

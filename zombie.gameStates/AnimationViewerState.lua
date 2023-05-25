@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AnimationViewerState: GameState
+--- @field public class any
 --- @field public instance AnimationViewerState
 AnimationViewerState = {};
 

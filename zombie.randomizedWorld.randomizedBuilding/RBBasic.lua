@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBBasic: RandomizedBuildingBase This is a basic randomized building, some inside door will be opened, can have profession specific loots and cold cooked food in stove Also this type of house can have speicfic dead survivor/zombies/story inside them
+--- @field public class any
 RBBasic = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SpriteRenderer
+--- @field public class any
 --- @field public GL_BLENDFUNC_ENABLED boolean
 --- @field public instance SpriteRenderer
 --- @field public NUM_RENDER_STATES int

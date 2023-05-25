@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ThunderStorm TurboTuTone.
+--- @field public class any
 --- @field public MAP_MAX_X int
 --- @field public MAP_MAX_Y int
 --- @field public MAP_MIN_X int

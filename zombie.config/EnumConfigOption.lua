@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class EnumConfigOption: IntegerConfigOption
+--- @field public class any
 EnumConfigOption = {};
 
 ------------------------------------

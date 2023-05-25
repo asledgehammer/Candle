@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoPlayer: IsoLivingCharacter
+--- @field public class any
 --- @implement IHumanVisual
 --- @field public assumedPlayer int
 --- @field public DEATH_MUSIC_NAME String

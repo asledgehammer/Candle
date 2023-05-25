@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoDeadBody: IsoMovingObject
+--- @field public class any
 --- @implement Talker
 --- @implement IHumanVisual
 --- @field public MAX_ROT_STAGES int

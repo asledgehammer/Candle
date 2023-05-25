@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameLoadingState: GameState
+--- @field public class any
 --- @field public bDone boolean
 --- @field public build23Stop boolean
 --- @field public convertingFileCount int

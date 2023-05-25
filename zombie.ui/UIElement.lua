@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UIElement
+--- @field public class any
 UIElement = {};
 
 ------------------------------------

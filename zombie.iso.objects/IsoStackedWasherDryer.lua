@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoStackedWasherDryer: IsoObject
+--- @field public class any
 IsoStackedWasherDryer = {};
 
 ------------------------------------

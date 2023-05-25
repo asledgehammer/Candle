@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AnimatorDebugMonitor
+--- @field public class any
 AnimatorDebugMonitor = {};
 
 ------------------------------------

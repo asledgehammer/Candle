@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoSpriteInstance
+--- @field public class any
 --- @field public pool ObjectPool
 IsoSpriteInstance = {};
 

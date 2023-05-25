@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadioChannel Turbo
+--- @field public class any
 RadioChannel = {};
 
 ------------------------------------

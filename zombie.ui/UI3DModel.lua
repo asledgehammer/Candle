@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UI3DModel: UIElement
+--- @field public class any
 --- @implement IClothingItemListener
 UI3DModel = {};
 

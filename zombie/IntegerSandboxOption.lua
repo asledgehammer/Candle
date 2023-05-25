@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IntegerSandboxOption: IntegerConfigOption
+--- @field public class any
 --- @implement SandboxOption
 IntegerSandboxOption = {};
 

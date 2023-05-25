@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class EmitterType: Enum
+--- @field public class any
 --- @field public Extra EmitterType
 --- @field public Footstep EmitterType
 --- @field public Voice EmitterType

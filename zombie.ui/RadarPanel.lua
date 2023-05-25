@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadarPanel: UIElement
+--- @field public class any
 RadarPanel = {};
 
 ------------------------------------

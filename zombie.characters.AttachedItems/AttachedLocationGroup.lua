@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AttachedLocationGroup
+--- @field public class any
 AttachedLocationGroup = {};
 
 ------------------------------------

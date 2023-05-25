@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class VehicleZone: Zone
+--- @field public class any
 --- @field public VZF_FaceDirection short
 VehicleZone = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadioData Turbo
+--- @field public class any
 RadioData = {};
 
 ------------------------------------

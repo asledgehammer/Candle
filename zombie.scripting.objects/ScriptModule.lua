@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ScriptModule: BaseScriptObject
+--- @field public class any
 --- @implement IScriptObjectStore
 ScriptModule = {};
 

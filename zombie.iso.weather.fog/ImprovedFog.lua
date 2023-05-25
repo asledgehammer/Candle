@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ImprovedFog TurboTuTone.
+--- @field public class any
 ImprovedFog = {};
 
 ------------------------------------

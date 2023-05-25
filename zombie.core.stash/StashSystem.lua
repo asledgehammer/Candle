@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StashSystem
+--- @field public class any
 --- @field public allStashes ArrayList
 --- @field public buildingsToDo ArrayList
 --- @field public possibleStashes ArrayList

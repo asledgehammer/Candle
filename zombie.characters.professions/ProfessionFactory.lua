@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ProfessionFactory
+--- @field public class any
 --- @field public ProfessionMap LinkedHashMap
 ProfessionFactory = {};
 

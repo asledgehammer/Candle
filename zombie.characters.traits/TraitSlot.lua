@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class TraitSlot
+--- @field public class any
 TraitSlot = {};
 
 ------------------------------------

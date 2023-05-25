@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BarricadeAble
+--- @field public class any
 BarricadeAble = {};
 
 ------------------------------------

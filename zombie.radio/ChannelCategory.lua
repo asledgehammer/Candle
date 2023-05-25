@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ChannelCategory: Enum
+--- @field public class any
 --- @field public Amateur ChannelCategory
 --- @field public Bandit ChannelCategory
 --- @field public Emergency ChannelCategory

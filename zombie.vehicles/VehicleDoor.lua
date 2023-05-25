@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class VehicleDoor
+--- @field public class any
 VehicleDoor = {};
 
 ------------------------------------

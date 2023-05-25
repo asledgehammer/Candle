@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UIFont: Enum
+--- @field public class any
 --- @field public AutoNormLarge UIFont
 --- @field public AutoNormMedium UIFont
 --- @field public AutoNormSmall UIFont

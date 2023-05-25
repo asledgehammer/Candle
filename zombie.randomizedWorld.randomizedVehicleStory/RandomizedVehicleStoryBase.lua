@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RandomizedVehicleStoryBase: RandomizedWorldBase
+--- @field public class any
 --- @field public baseChance float
 RandomizedVehicleStoryBase = {};
 

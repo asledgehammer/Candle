@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ZLogger
+--- @field public class any
 ZLogger = {};
 
 ------------------------------------

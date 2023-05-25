@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AmbientSoundEffect
+--- @field public class any
 --- @implement Audio
 AmbientSoundEffect = {};
 

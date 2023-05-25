@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoJukebox: IsoObject
+--- @field public class any
 IsoJukebox = {};
 
 ------------------------------------

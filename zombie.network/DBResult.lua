@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DBResult
+--- @field public class any
 DBResult = {};
 
 ------------------------------------

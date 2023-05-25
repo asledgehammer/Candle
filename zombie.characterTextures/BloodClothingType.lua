@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BloodClothingType: Enum
+--- @field public class any
 --- @field public Apron BloodClothingType
 --- @field public Bag BloodClothingType
 --- @field public FullHelmet BloodClothingType

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoFireplace: IsoObject
+--- @field public class any
 IsoFireplace = {};
 
 ------------------------------------

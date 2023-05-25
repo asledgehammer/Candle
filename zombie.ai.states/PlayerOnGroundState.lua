@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PlayerOnGroundState: State
+--- @field public class any
 PlayerOnGroundState = {};
 
 ------------------------------------

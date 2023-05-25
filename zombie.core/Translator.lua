@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Translator
+--- @field public class any
 --- @field public debug boolean
 --- @field public language Language
 Translator = {};

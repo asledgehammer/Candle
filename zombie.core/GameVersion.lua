@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameVersion
+--- @field public class any
 GameVersion = {};
 
 ------------------------------------

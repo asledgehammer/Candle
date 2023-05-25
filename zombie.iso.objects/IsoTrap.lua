@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoTrap: IsoObject
+--- @field public class any
 IsoTrap = {};
 
 ------------------------------------

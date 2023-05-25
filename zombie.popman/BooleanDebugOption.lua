@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BooleanDebugOption: BooleanConfigOption
+--- @field public class any
 BooleanDebugOption = {};
 
 ------------------------------------

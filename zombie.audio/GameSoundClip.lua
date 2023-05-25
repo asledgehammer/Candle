@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameSoundClip
+--- @field public class any
 --- @field public INIT_FLAG_DISTANCE_MAX short
 --- @field public INIT_FLAG_DISTANCE_MIN short
 GameSoundClip = {};

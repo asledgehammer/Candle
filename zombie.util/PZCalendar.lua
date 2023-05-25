@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PZCalendar
+--- @field public class any
 PZCalendar = {};
 
 ------------------------------------

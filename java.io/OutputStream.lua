@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class OutputStream
+--- @field public class any
 --- @implement Closeable
 --- @implement Flushable
 OutputStream = {};

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Core
+--- @field public class any
 --- @field public bAltMoveMethod boolean
 --- @field public bDebug boolean
 --- @field public bDemo boolean

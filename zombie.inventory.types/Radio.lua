@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Radio: Moveable Turbo
+--- @field public class any
 --- @implement Talker
 --- @implement IUpdater
 --- @implement WaveSignalDevice

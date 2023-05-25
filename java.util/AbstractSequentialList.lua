@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AbstractSequentialList: AbstractList
+--- @field public class any
 AbstractSequentialList = {};
 
 ------------------------------------

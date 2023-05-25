@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class TermsOfServiceState: GameState
+--- @field public class any
 TermsOfServiceState = {};
 
 ------------------------------------

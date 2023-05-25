@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class CGlobalObjects
+--- @field public class any
 CGlobalObjects = {};
 
 ------------------------------------

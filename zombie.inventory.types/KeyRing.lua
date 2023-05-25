@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class KeyRing: InventoryItem
+--- @field public class any
 KeyRing = {};
 
 ------------------------------------

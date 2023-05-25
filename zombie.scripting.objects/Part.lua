@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Part
+--- @field public class any
 Part = {};
 
 ------------------------------------

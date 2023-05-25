@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class VehiclePart
+--- @field public class any
 --- @implement ChatElementOwner
 --- @implement WaveSignalDevice
 VehiclePart = {};

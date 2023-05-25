@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RequiredSkill
+--- @field public class any
 RequiredSkill = {};
 
 ------------------------------------

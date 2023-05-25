@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadioLine Turbo
+--- @field public class any
 RadioLine = {};
 
 ------------------------------------

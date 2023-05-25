@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DBTicket
+--- @field public class any
 DBTicket = {};
 
 ------------------------------------

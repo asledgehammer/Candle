@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BaseSoundBank
+--- @field public class any
 --- @field public instance BaseSoundBank
 BaseSoundBank = {};
 

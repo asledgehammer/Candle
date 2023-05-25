@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ZombieIdleState: State
+--- @field public class any
 ZombieIdleState = {};
 
 ------------------------------------

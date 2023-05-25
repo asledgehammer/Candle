@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBKateAndBaldspot: RandomizedBuildingBase
+--- @field public class any
 RBKateAndBaldspot = {};
 
 ------------------------------------

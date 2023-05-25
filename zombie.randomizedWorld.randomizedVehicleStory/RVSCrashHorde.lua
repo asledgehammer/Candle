@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RVSCrashHorde: RandomizedVehicleStoryBase Car crashed with quite some zombies around it
+--- @field public class any
 RVSCrashHorde = {};
 
 ------------------------------------

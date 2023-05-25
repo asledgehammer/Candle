@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ItemPickerJava
+--- @field public class any
 --- @field public containers THashMap
 --- @field public NoContainerFillRooms ArrayList
 --- @field public ProceduralDistributions THashMap

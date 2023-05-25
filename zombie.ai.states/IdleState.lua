@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IdleState: State
+--- @field public class any
 IdleState = {};
 
 ------------------------------------

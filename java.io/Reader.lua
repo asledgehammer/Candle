@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Reader
+--- @field public class any
 --- @implement Readable
 --- @implement Closeable
 Reader = {};

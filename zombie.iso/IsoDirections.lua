@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoDirections: Enum
+--- @field public class any
 --- @field public E IsoDirections
 --- @field public Max IsoDirections
 --- @field public N IsoDirections

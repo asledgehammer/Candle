@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoLightSwitch: IsoObject
+--- @field public class any
 IsoLightSwitch = {};
 
 ------------------------------------

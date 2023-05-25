@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SteamWorkshopItem
+--- @field public class any
 SteamWorkshopItem = {};
 
 ------------------------------------

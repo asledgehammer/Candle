@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Type: Enum
+--- @field public class any
 --- @field public AlarmClock Type
 --- @field public AlarmClockClothing Type
 --- @field public Clothing Type

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PlayerHitReactionState: State
+--- @field public class any
 PlayerHitReactionState = {};
 
 ------------------------------------

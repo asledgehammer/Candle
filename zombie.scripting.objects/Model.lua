@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Model
+--- @field public class any
 Model = {};
 
 ------------------------------------

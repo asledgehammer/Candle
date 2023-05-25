@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSSpecificProfession: RandomizedDeadSurvivorBase Create a dead survivor in the kitchen with empty bleach bottle around him
+--- @field public class any
 RDSSpecificProfession = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RandomizedDeadSurvivorBase: RandomizedBuildingBase
+--- @field public class any
 RandomizedDeadSurvivorBase = {};
 
 ------------------------------------

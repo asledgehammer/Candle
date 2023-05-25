@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PlayerStrafeState: State
+--- @field public class any
 PlayerStrafeState = {};
 
 ------------------------------------

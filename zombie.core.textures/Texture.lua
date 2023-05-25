@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Texture: Asset
+--- @field public class any
 --- @implement IDestroyable
 --- @implement ITexture
 --- @implement Serializable

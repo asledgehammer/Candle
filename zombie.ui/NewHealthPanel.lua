@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class NewHealthPanel: NewWindow
+--- @field public class any
 --- @field public instance NewHealthPanel
 NewHealthPanel = {};
 

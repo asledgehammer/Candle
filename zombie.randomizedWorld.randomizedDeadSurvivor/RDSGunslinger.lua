@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSGunslinger: RandomizedDeadSurvivorBase Create a dead survivor somewhere with lot of modified guns/ammo on him
+--- @field public class any
 RDSGunslinger = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RainManager
+--- @field public class any
 --- @field public AddNewSplashesDelay int
 --- @field public AddNewSplashesTimer int
 --- @field public DarkRaindropTintMod ColorInfo

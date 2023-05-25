@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoStove: IsoObject
+--- @field public class any
 --- @implement Activatable
 IsoStove = {};
 

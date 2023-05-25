@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Observation
+--- @field public class any
 --- @implement IListBoxItem
 Observation = {};
 

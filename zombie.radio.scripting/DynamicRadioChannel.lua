@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DynamicRadioChannel: RadioChannel TurboTuTone.
+--- @field public class any
 DynamicRadioChannel = {};
 
 ------------------------------------

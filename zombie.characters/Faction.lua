@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Faction
+--- @field public class any
 --- @field public factions ArrayList
 Faction = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Result
+--- @field public class any
 Result = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DummySoundBank: BaseSoundBank
+--- @field public class any
 DummySoundBank = {};
 
 ------------------------------------

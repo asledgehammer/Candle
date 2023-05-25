@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SleepingEvent
+--- @field public class any
 --- @field public instance SleepingEvent
 --- @field public zombiesInvasion boolean
 SleepingEvent = {};

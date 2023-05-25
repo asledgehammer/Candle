@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RZSMusicFestStage: RandomizedZoneStoryBase
+--- @field public class any
 RZSMusicFestStage = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ServerOptions
+--- @field public class any
 --- @field public cardList ArrayList
 --- @field public clientOptionsList HashMap
 --- @field public instance ServerOptions

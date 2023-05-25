@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WorldFlares TurboTuTone.
+--- @field public class any
 --- @field public DEBUG_DRAW boolean
 --- @field public ENABLED boolean
 --- @field public NEXT_ID int

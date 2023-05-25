@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadioBroadCast Turbo
+--- @field public class any
 RadioBroadCast = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadioScript Turbo
+--- @field public class any
 RadioScript = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWheelieBin: IsoPushableObject
+--- @field public class any
 IsoWheelieBin = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Perks
+--- @field public class any
 --- @field public Agility Perk
 --- @field public Aiming Perk
 --- @field public Axe Perk

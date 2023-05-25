@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WeatherStage
+--- @field public class any
 WeatherStage = {};
 
 ------------------------------------

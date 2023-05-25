@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Asset
+--- @field public class any
 Asset = {};
 
 ------------------------------------

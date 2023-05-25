@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AngelCodeFont A font implementation that will parse BMFont format font files. The font files can be output by Hiero, which is included with Slick, and also the AngelCode font tool available at:
+--- @field public class any
 --- @implement Font
 --- @implement AssetStateObserver
 --- @field public curA float

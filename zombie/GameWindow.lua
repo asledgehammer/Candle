@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class GameWindow
+--- @field public class any
 --- @field public ActivatedJoyPad Joypad
 --- @field public assetManagers AssetManagers
 --- @field public averageFPS float

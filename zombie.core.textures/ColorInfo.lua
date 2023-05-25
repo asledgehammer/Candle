@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ColorInfo
+--- @field public class any
 ColorInfo = {};
 
 ------------------------------------

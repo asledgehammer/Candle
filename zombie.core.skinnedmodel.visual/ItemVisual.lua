@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ItemVisual
+--- @field public class any
 --- @field public NULL_HUE float
 ItemVisual = {};
 

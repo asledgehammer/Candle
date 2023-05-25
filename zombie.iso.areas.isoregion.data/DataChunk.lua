@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DataChunk TurboTuTone.
+--- @field public class any
 DataChunk = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StashBuilding
+--- @field public class any
 StashBuilding = {};
 
 ------------------------------------

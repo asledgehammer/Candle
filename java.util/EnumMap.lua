@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class EnumMap: AbstractMap
+--- @field public class any
 --- @implement Serializable
 --- @implement Cloneable
 EnumMap = {};

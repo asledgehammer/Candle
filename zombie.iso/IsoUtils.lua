@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoUtils
+--- @field public class any
 IsoUtils = {};
 
 ------------------------------------

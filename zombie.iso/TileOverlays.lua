@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class TileOverlays
+--- @field public class any
 --- @field public instance TileOverlays
 TileOverlays = {};
 

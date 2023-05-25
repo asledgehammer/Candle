@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class HairStyle
+--- @field public class any
 HairStyle = {};
 
 ------------------------------------

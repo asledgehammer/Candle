@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMetaChunk
+--- @field public class any
 --- @field public zombiesFullPerChunk float
 --- @field public zombiesMinPerChunk float
 IsoMetaChunk = {};

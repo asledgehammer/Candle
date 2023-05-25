@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoMovingObject: IsoObject
+--- @field public class any
 --- @implement Mover
 --- @field public MAX_ZOMBIES_EATING int
 --- @field public treeSoundMgr TreeSoundManager

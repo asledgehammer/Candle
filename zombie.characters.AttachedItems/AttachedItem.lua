@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AttachedItem
+--- @field public class any
 AttachedItem = {};
 
 ------------------------------------

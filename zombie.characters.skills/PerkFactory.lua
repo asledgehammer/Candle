@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PerkFactory
+--- @field public class any
 --- @field public PerkList ArrayList
 PerkFactory = {};
 

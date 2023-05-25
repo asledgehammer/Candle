@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MediaData TurboTuTone.
+--- @field public class any
 MediaData = {};
 
 ------------------------------------

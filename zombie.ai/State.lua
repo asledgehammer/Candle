@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class State
+--- @field public class any
 State = {};
 
 ------------------------------------

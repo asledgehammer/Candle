@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RBPileOCrepe: RandomizedBuildingBase Add some food on table
+--- @field public class any
 RBPileOCrepe = {};
 
 ------------------------------------

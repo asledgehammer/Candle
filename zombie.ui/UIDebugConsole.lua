@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UIDebugConsole: NewWindow
+--- @field public class any
 --- @field public instance UIDebugConsole
 UIDebugConsole = {};
 

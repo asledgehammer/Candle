@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWindowFrame
+--- @field public class any
 IsoWindowFrame = {};
 
 ------------------------------------

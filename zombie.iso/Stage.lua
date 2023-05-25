@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Stage
+--- @field public class any
 Stage = {};
 
 ------------------------------------

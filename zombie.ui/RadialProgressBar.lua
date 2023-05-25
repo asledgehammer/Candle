@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RadialProgressBar: UIElement TurboTuTone.
+--- @field public class any
 RadialProgressBar = {};
 
 ------------------------------------

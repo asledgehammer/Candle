@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ErosionSeason
+--- @field public class any
 --- @field public NUM_SEASONS int
 --- @field public SEASON_AUTUMN int
 --- @field public SEASON_DEFAULT int

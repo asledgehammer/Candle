@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AmbientStreamManager: BaseAmbientStreamManager
+--- @field public class any
 --- @field public instance BaseAmbientStreamManager
 --- @field public MaxAmbientCount int
 --- @field public MaxRange float

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class NewWindow: UIElement
+--- @field public class any
 NewWindow = {};
 
 ------------------------------------

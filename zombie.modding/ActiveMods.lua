@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ActiveMods
+--- @field public class any
 ActiveMods = {};
 
 ------------------------------------

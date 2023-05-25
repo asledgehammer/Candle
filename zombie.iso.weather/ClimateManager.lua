@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClimateManager TurboTuTone.
+--- @field public class any
 --- @field public A_STORM_IS_COMING boolean
 --- @field public AVG_FAV_AIR_TEMPERATURE float
 --- @field public BOOL_IS_SNOW int

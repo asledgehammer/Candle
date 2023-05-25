@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AttackState: State
+--- @field public class any
 AttackState = {};
 
 ------------------------------------

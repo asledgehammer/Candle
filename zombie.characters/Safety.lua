@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Safety
+--- @field public class any
 Safety = {};
 
 ------------------------------------

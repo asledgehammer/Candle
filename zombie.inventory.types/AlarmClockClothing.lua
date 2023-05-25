@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AlarmClockClothing: Clothing
+--- @field public class any
 --- @field public PacketPlayer short
 --- @field public PacketWorld short
 AlarmClockClothing = {};

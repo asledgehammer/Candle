@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SoundManager: BaseSoundManager
+--- @field public class any
 --- @implement IFMODParameterUpdater
 --- @field public instance BaseSoundManager
 SoundManager = {};

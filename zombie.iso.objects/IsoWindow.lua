@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoWindow: IsoObject
+--- @field public class any
 --- @implement BarricadeAble
 --- @implement Thumpable
 IsoWindow = {};

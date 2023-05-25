@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class NonPvpZone
+--- @field public class any
 --- @field public nonPvpZoneList ArrayList
 NonPvpZone = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LuaEventManager
+--- @field public class any
 --- @implement JavaFunction
 --- @field public OnTickCallbacks ArrayList
 LuaEventManager = {};

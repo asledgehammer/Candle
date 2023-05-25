@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DebugGlobalObjectState: GameState
+--- @field public class any
 --- @field public instance DebugGlobalObjectState
 DebugGlobalObjectState = {};
 

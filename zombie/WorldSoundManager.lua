@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WorldSoundManager
+--- @field public class any
 --- @field public instance WorldSoundManager
 WorldSoundManager = {};
 

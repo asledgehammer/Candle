@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ZombieOnGroundState: State
+--- @field public class any
 ZombieOnGroundState = {};
 
 ------------------------------------

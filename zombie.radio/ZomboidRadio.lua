@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ZomboidRadio
+--- @field public class any
 --- @field public DEBUG_MODE boolean
 --- @field public DEBUG_SOUND boolean
 --- @field public DEBUG_XML boolean

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Source
+--- @field public class any
 Source = {};
 
 ------------------------------------

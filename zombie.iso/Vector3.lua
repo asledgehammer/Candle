@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Vector3
+--- @field public class any
 --- @implement Cloneable
 Vector3 = {};
 

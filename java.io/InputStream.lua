@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class InputStream
+--- @field public class any
 --- @implement Closeable
 InputStream = {};
 

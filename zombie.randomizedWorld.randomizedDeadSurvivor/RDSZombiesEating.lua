@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RDSZombiesEating: RandomizedDeadSurvivorBase Create a dead survivor in the livingroom with zombies eating him
+--- @field public class any
 RDSZombiesEating = {};
 
 ------------------------------------

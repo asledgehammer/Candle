@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClimateFloat
+--- @field public class any
 ClimateFloat = {};
 
 ------------------------------------

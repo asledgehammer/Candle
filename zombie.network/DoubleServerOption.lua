@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DoubleServerOption: DoubleConfigOption
+--- @field public class any
 --- @implement ServerOption
 DoubleServerOption = {};
 

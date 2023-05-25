@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Profession
+--- @field public class any
 --- @implement IListBoxItem
 Profession = {};
 

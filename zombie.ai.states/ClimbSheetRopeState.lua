@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClimbSheetRopeState: State
+--- @field public class any
 --- @field public CLIMB_SPEED float
 ClimbSheetRopeState = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClimbOverFenceState: State
+--- @field public class any
 --- @field public COLLIDE_WITH_WALL int
 --- @field public TRIP_METAL_BARS int
 --- @field public TRIP_TREE int

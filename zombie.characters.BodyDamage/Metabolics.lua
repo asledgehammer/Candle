@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Metabolics: Enum TurboTuTone.
+--- @field public class any
 --- @field public ClimbRope Metabolics
 --- @field public Default Metabolics
 --- @field public DefaultExercise Metabolics

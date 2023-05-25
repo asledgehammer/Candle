@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AbstractCollection
+--- @field public class any
 --- @implement Collection
 AbstractCollection = {};
 

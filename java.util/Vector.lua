@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Vector: AbstractList
+--- @field public class any
 --- @implement List
 --- @implement RandomAccess
 --- @implement Cloneable

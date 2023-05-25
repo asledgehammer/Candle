@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Fixing: BaseScriptObject
+--- @field public class any
 Fixing = {};
 
 ------------------------------------

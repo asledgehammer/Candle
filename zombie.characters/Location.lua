@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Location
+--- @field public class any
 Location = {};
 
 ------------------------------------

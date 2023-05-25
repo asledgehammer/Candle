@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Debug
+--- @field public class any
 Debug = {};
 
 ------------------------------------

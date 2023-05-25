@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoObjectType: Enum
+--- @field public class any
 --- @field public curtainE IsoObjectType
 --- @field public curtainN IsoObjectType
 --- @field public curtainS IsoObjectType

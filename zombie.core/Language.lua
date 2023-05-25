@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Language
+--- @field public class any
 Language = {};
 
 ------------------------------------

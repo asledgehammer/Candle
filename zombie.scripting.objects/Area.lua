@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Area
+--- @field public class any
 Area = {};
 
 ------------------------------------

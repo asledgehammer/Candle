@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LuaTimedAction: BaseAction
+--- @field public class any
 --- @field public statObj Object[]
 LuaTimedAction = {};
 

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WeatherPeriod TurboTuTone.
+--- @field public class any
 --- @field public FRONT_STRENGTH_THRESHOLD float
 --- @field public STAGE_BLIZZARD int
 --- @field public STAGE_CLEARING int

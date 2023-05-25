@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoPhysicsObject: IsoMovingObject
+--- @field public class any
 IsoPhysicsObject = {};
 
 ------------------------------------

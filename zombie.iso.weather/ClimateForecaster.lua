@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClimateForecaster TurboTuTone.
+--- @field public class any
 ClimateForecaster = {};
 
 ------------------------------------

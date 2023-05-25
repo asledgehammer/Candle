@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class StringSandboxOption: StringConfigOption
+--- @field public class any
 --- @implement SandboxOption
 StringSandboxOption = {};
 

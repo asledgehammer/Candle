@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ModelScript: BaseScriptObject
+--- @field public class any
 --- @field public DEFAULT_SHADER_NAME String
 ModelScript = {};
 

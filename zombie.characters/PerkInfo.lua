@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PerkInfo
+--- @field public class any
 PerkInfo = {};
 
 ------------------------------------

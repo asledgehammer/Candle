@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ChatBase
+--- @field public class any
 ChatBase = {};
 
 ------------------------------------

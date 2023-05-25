@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoSpriteManager
+--- @field public class any
 --- @field public instance IsoSpriteManager
 IsoSpriteManager = {};
 

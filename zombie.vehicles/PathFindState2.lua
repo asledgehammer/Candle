@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PathFindState2: State
+--- @field public class any
 PathFindState2 = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Colors TurboTuTone.
+--- @field public class any
 --- @field public Aqua Color
 --- @field public Aquamarine Color
 --- @field public Bisque Color

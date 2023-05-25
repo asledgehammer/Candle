@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MovableRecipe: Recipe TurboTuTone.
+--- @field public class any
 MovableRecipe = {};
 
 ------------------------------------

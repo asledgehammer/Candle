@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LungeState: State
+--- @field public class any
 LungeState = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class FMODSoundBank: BaseSoundBank
+--- @field public class any
 FMODSoundBank = {};
 
 ------------------------------------

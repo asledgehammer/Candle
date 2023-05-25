@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DoubleConfigOption: ConfigOption
+--- @field public class any
 DoubleConfigOption = {};
 
 ------------------------------------

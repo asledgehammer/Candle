@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class PresetEntry turbo
+--- @field public class any
 PresetEntry = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Color A simple wrapper round the values required for a colour
+--- @field public class any
 --- @implement Serializable
 --- @field public black Color The fixed colour black
 --- @field public blue Color The fixed colour blue

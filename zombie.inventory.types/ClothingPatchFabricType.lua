@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ClothingPatchFabricType: Enum
+--- @field public class any
 --- @field public Cotton ClothingPatchFabricType
 --- @field public Denim ClothingPatchFabricType
 --- @field public Leather ClothingPatchFabricType

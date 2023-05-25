@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RZSFishingTrip: RandomizedZoneStoryBase
+--- @field public class any
 RZSFishingTrip = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class LoadingQueueState: GameState
+--- @field public class any
 LoadingQueueState = {};
 
 ------------------------------------

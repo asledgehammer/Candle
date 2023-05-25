@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class UserlogType: Enum
+--- @field public class any
 --- @field public AdminLog UserlogType
 --- @field public Banned UserlogType
 --- @field public DupeItem UserlogType

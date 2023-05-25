@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class DrainableComboItem: InventoryItem
+--- @field public class any
 --- @implement Drainable
 --- @implement IUpdater
 DrainableComboItem = {};

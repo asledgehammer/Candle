@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class EnumSandboxOption: EnumConfigOption
+--- @field public class any
 --- @implement SandboxOption
 EnumSandboxOption = {};
 

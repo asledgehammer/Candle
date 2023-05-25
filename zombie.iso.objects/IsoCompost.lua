@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoCompost: IsoObject
+--- @field public class any
 IsoCompost = {};
 
 ------------------------------------

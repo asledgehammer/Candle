@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WalkTowardState: State
+--- @field public class any
 WalkTowardState = {};
 
 ------------------------------------

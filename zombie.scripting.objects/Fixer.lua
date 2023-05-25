@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class Fixer
+--- @field public class any
 Fixer = {};
 
 ------------------------------------

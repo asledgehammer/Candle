@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class InventoryItem
+--- @field public class any
 InventoryItem = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BodyLocations
+--- @field public class any
 BodyLocations = {};
 
 ------------------------------------

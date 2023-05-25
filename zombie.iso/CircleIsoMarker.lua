@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class CircleIsoMarker
+--- @field public class any
 CircleIsoMarker = {};
 
 ------------------------------------

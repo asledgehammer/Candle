@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class WorldSound
+--- @field public class any
 WorldSound = {};
 
 ------------------------------------

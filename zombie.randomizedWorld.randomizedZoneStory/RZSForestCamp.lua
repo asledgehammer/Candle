@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RZSForestCamp: RandomizedZoneStoryBase
+--- @field public class any
 RZSForestCamp = {};
 
 ------------------------------------

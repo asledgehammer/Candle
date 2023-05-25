@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class AttachmentEditorState: GameState
+--- @field public class any
 --- @field public instance AttachmentEditorState
 AttachmentEditorState = {};
 

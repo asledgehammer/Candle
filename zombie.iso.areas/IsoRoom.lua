@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class IsoRoom
+--- @field public class any
 IsoRoom = {};
 
 ------------------------------------

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class MetaObject
+--- @field public class any
 MetaObject = {};
 
 ------------------------------------

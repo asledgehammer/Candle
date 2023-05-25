@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SandboxOptions
+--- @field public class any
 --- @field public instance SandboxOptions
 SandboxOptions = {};
 

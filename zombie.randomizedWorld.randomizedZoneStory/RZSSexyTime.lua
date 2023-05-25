@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RZSSexyTime: RandomizedZoneStoryBase
+--- @field public class any
 RZSSexyTime = {};
 
 ------------------------------------

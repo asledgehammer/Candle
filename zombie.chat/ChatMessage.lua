@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ChatMessage
+--- @field public class any
 --- @implement Cloneable
 ChatMessage = {};
 

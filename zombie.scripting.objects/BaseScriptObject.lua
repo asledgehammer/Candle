@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class BaseScriptObject
+--- @field public class any
 BaseScriptObject = {};
 
 ------------------------------------

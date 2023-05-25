@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class RandomizedZoneStoryBase: RandomizedWorldBase
+--- @field public class any
 --- @field public baseChance int
 --- @field public totalChance int
 --- @field public zoneStory String

@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class ZombiePopulationRenderer
+--- @field public class any
 ZombiePopulationRenderer = {};
 
 ------------------------------------

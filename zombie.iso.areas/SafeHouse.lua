@@ -1,6 +1,7 @@
 --- @meta
 
 --- @class SafeHouse
+--- @field public class any
 SafeHouse = {};
 
 ------------------------------------
