@@ -1,6 +1,5 @@
 # Candle
-![](https://i.imgur.com/P48Eczs.png)
-
+![](https://i.imgur.com/CjmnIwo.png)
 Candle is EmmyLua typings for Project Zomboid's Java API. 
 
 ## Advantages
