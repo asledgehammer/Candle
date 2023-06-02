@@ -15,10 +15,10 @@ EnumSandboxOption = {};
 function EnumSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function EnumSandboxOption:fromTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function EnumSandboxOption:fromTable(table) end
 
 --- @public
 --- @return String
@@ -87,10 +87,10 @@ function EnumSandboxOption:setTranslation(translation) end
 function EnumSandboxOption:setValueTranslation(translation) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function EnumSandboxOption:toTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function EnumSandboxOption:toTable(table) end
 
 
 ------------------------------------

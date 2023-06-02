@@ -27,9 +27,9 @@ function InventoryItem.loadItem(input, WorldVersion) end
 function InventoryItem:CanStack(item) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param DefaultModData KahluaTable
 --- @return void
-function InventoryItem:CopyModData(arg0) end
+function InventoryItem:CopyModData(DefaultModData) end
 
 --- @public
 --- @param tooltipUI ObjectTooltip
@@ -125,9 +125,9 @@ function InventoryItem:canStoreWater() end
 function InventoryItem:copyConditionModData(other) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param modData KahluaTable
 --- @return void
-function InventoryItem:copyModData(arg0) end
+function InventoryItem:copyModData(modData) end
 
 --- @public
 --- @return void

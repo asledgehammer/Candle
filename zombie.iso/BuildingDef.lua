@@ -37,11 +37,11 @@ function BuildingDef:getChunkX() end
 function BuildingDef:getChunkY() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 Vector2f
+--- @param x float
+--- @param y float
+--- @param closestXY Vector2f
 --- @return float
-function BuildingDef:getClosestPoint(arg0, arg1, arg2) end
+function BuildingDef:getClosestPoint(x, y, closestXY) end
 
 --- @public
 --- @return RoomDef

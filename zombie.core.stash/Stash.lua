@@ -25,9 +25,9 @@ function Stash:getItem() end
 function Stash:getName() end
 
 --- @public
---- @param arg0 KahluaTableImpl
+--- @param stashDesc KahluaTableImpl
 --- @return void
-function Stash:load(arg0) end
+function Stash:load(stashDesc) end
 
 
 ------------------------------------

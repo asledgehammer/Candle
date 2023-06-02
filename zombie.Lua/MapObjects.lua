@@ -10,21 +10,21 @@ MapObjects = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 int
+--- @param spriteName String
+--- @param __function LuaClosure
+--- @param priority int
 --- @return void
---- @overload fun(arg0: KahluaTable, arg1: LuaClosure, arg2: int): void
-function MapObjects.OnLoadWithSprite(arg0, arg1, arg2) end
+--- @overload fun(spriteNames: KahluaTable, __function: LuaClosure, priority: int): void
+function MapObjects.OnLoadWithSprite(spriteName, __function, priority) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 int
+--- @param spriteName String
+--- @param __function LuaClosure
+--- @param priority int
 --- @return void
---- @overload fun(arg0: KahluaTable, arg1: LuaClosure, arg2: int): void
-function MapObjects.OnNewWithSprite(arg0, arg1, arg2) end
+--- @overload fun(spriteNames: KahluaTable, __function: LuaClosure, priority: int): void
+function MapObjects.OnNewWithSprite(spriteName, __function, priority) end
 
 --- @public
 --- @static
@@ -68,10 +68,10 @@ function MapObjects.newGridSquare(square) end
 
 --- @public
 --- @static
---- @param arg0 Prototype
---- @param arg1 LuaClosure
+--- @param prototype Prototype
+--- @param luaClosure LuaClosure
 --- @return void
-function MapObjects.reroute(arg0, arg1) end
+function MapObjects.reroute(prototype, luaClosure) end
 
 
 ------------------------------------

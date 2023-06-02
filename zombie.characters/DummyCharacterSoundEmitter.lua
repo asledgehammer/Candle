@@ -62,11 +62,11 @@ function DummyCharacterSoundEmitter:register() end
 function DummyCharacterSoundEmitter:set(x, y, z) end
 
 --- @public
---- @param arg0 long
---- @param arg1 FMOD_STUDIO_PARAMETER_DESCRIPTION
---- @param arg2 float
+--- @param soundRef long
+--- @param parameterDescription FMOD_STUDIO_PARAMETER_DESCRIPTION
+--- @param value float
 --- @return void
-function DummyCharacterSoundEmitter:setParameterValue(arg0, arg1, arg2) end
+function DummyCharacterSoundEmitter:setParameterValue(soundRef, parameterDescription, value) end
 
 --- @public
 --- @param handle long

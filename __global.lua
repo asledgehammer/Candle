@@ -267,10 +267,10 @@ function connectToServerStateCallback(button) end
 --- @return void
 function connectionManagerLog(arg0, arg1) end
 
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return KahluaTable
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable): KahluaTable
-function copyTable(arg0) end
+--- @overload fun(to: KahluaTable, from: KahluaTable): KahluaTable
+function copyTable(table) end
 
 --- @param spawnX float
 --- @param spawnY float
@@ -371,9 +371,9 @@ function deleteSave(file) end
 --- @return void
 function disconnect() end
 
---- @param arg0 KahluaTable
+--- @param challenge KahluaTable
 --- @return void
-function doChallenge(arg0) end
+function doChallenge(challenge) end
 
 --- @param doIt boolean
 --- @return void
@@ -383,9 +383,9 @@ function doKeyPress(doIt) end
 --- @return void
 function doLuaDebuggerAction(action) end
 
---- @param arg0 KahluaTable
+--- @param tutorial KahluaTable
 --- @return void
-function doTutorial(arg0) end
+function doTutorial(tutorial) end
 
 --- @param ui UIElement
 --- @param zoom float
@@ -406,10 +406,10 @@ function endHelicopter() end
 --- @return void
 function endTextFileInput() end
 
---- @param arg0 String
---- @param arg1 KahluaTable
+--- @param query String
+--- @param params KahluaTable
 --- @return void
-function executeQuery(arg0, arg1) end
+function executeQuery(query, params) end
 
 --- @param filename String
 --- @return boolean
@@ -492,9 +492,9 @@ function getBehaviourDebugPlayer() end
 --- @return int
 function getButtonCount(joypad) end
 
---- @param arg0 Coroutine
+--- @param c Coroutine
 --- @return int
-function getCallframeTop(arg0) end
+function getCallframeTop(c) end
 
 --- @return float
 function getCameraOffX() end
@@ -575,24 +575,24 @@ function getControllerPovY(c) end
 --- @return Core
 function getCore() end
 
---- @param arg0 Coroutine
---- @param arg1 int
+--- @param c Coroutine
+--- @param n int
 --- @return LuaCallFrame
-function getCoroutineCallframeStack(arg0, arg1) end
+function getCoroutineCallframeStack(c, n) end
 
---- @param arg0 Coroutine
---- @param arg1 int
+--- @param c Coroutine
+--- @param n int
 --- @return Object
-function getCoroutineObjStack(arg0, arg1) end
+function getCoroutineObjStack(c, n) end
 
---- @param arg0 Coroutine
---- @param arg1 int
+--- @param c Coroutine
+--- @param n int
 --- @return Object
-function getCoroutineObjStackWithBase(arg0, arg1) end
+function getCoroutineObjStackWithBase(c, n) end
 
---- @param arg0 Coroutine
+--- @param c Coroutine
 --- @return int
-function getCoroutineTop(arg0) end
+function getCoroutineTop(c) end
 
 --- @return Coroutine
 function getCurrentCoroutine() end
@@ -651,17 +651,17 @@ function getFileSeparator() end
 --- @return LuaFileWriter
 function getFileWriter(filename, createIfNull, append) end
 
---- @param arg0 LuaCallFrame
+--- @param c LuaCallFrame
 --- @return String
-function getFilenameOfCallframe(arg0) end
+function getFilenameOfCallframe(c) end
 
---- @param arg0 LuaClosure
+--- @param c LuaClosure
 --- @return String
-function getFilenameOfClosure(arg0) end
+function getFilenameOfClosure(c) end
 
---- @param arg0 LuaClosure
+--- @param c LuaClosure
 --- @return int
-function getFirstLineOfClosure(arg0) end
+function getFirstLineOfClosure(c) end
 
 --- @return KahluaTable
 function getFriendsList() end
@@ -786,9 +786,9 @@ function getLastStandPlayersDirectory() end
 --- @return KahluaTable
 function getLatestSave() end
 
---- @param arg0 LuaCallFrame
+--- @param c LuaCallFrame
 --- @return int
-function getLineNumber(arg0) end
+function getLineNumber(c) end
 
 --- @param n int
 --- @return String
@@ -797,19 +797,19 @@ function getLoadedLua(n) end
 --- @return int
 function getLoadedLuaCount() end
 
---- @param arg0 Coroutine
+--- @param c Coroutine
 --- @return int
-function getLocalVarCount(arg0) end
+function getLocalVarCount(c) end
 
---- @param arg0 Coroutine
---- @param arg1 int
+--- @param c Coroutine
+--- @param n int
 --- @return String
-function getLocalVarName(arg0, arg1) end
+function getLocalVarName(c, n) end
 
---- @param arg0 Coroutine
---- @param arg1 int
+--- @param c Coroutine
+--- @param n int
 --- @return int
-function getLocalVarStack(arg0, arg1) end
+function getLocalVarStack(c, n) end
 
 --- @return ArrayList
 function getLotDirectories() end
@@ -1230,15 +1230,15 @@ function getZones(x, y, z) end
 --- @return boolean
 function hasBreakpoint(file, line) end
 
---- @param arg0 KahluaTable
---- @param arg1 Object
+--- @param table KahluaTable
+--- @param key Object
 --- @return boolean
-function hasDataBreakpoint(arg0, arg1) end
+function hasDataBreakpoint(table, key) end
 
---- @param arg0 KahluaTable
---- @param arg1 Object
+--- @param table KahluaTable
+--- @param key Object
 --- @return boolean
-function hasDataReadBreakpoint(arg0, arg1) end
+function hasDataReadBreakpoint(table, key) end
 
 --- @return void
 function initUISystem() end
@@ -1476,10 +1476,10 @@ function loadVehicleModel(name, loc, tex) end
 --- @return Model
 function loadZomboidModel(name, mesh, tex, shader, bStatic) end
 
---- @param arg0 Coroutine
---- @param arg1 int
+--- @param c Coroutine
+--- @param n int
 --- @return String
-function localVarName(arg0, arg1) end
+function localVarName(c, n) end
 
 --- @return void
 function luaDebug() end
@@ -1541,11 +1541,11 @@ function processSayMessage(message) end
 --- @return void
 function processShoutMessage(message) end
 
---- @param arg0 ArrayList
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param itemIDs ArrayList
+--- @param functionObj LuaClosure
+--- @param arg1 Object
 --- @return void
-function querySteamWorkshopItemDetails(arg0, arg1, arg2) end
+function querySteamWorkshopItemDetails(itemIDs, functionObj, arg1) end
 
 --- @param eventChar String
 --- @return void
@@ -1734,12 +1734,12 @@ function sendCataplasm(onlineID, i, plantainFactor, comfreyFactor, garlicFactor)
 --- @return void
 function sendCleanBurn(wielder, target, bodyPart, bandage) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 KahluaTable
+--- @param module String
+--- @param command String
+--- @param args KahluaTable
 --- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable): void
-function sendClientCommand(arg0, arg1, arg2) end
+--- @overload fun(player: IsoPlayer, module: String, command: String, args: KahluaTable): void
+function sendClientCommand(module, command, args) end
 
 --- @param player IsoPlayer
 --- @return void
@@ -1809,12 +1809,12 @@ function sendRequestInventory(player) end
 --- @return void
 function sendSafehouseInvite(safehouse, host, invited) end
 
---- @param arg0 String
---- @param arg1 String
---- @param arg2 KahluaTable
+--- @param module String
+--- @param command String
+--- @param args KahluaTable
 --- @return void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: String, arg3: KahluaTable): void
-function sendServerCommand(arg0, arg1, arg2) end
+--- @overload fun(player: IsoPlayer, module: String, command: String, args: KahluaTable): void
+function sendServerCommand(module, command, args) end
 
 --- @param onlineID int
 --- @param i int
@@ -2066,24 +2066,24 @@ function testHelicopter() end
 --- @return void
 function testSound() end
 
---- @param arg0 KahluaTable
---- @param arg1 Object
+--- @param table KahluaTable
+--- @param functionObject Object
 --- @return void
-function timSort(arg0, arg1) end
+function timSort(table, functionObject) end
 
 --- @param val double
 --- @return int
 function toInt(val) end
 
---- @param arg0 KahluaTable
---- @param arg1 Object
+--- @param table KahluaTable
+--- @param key Object
 --- @return void
-function toggleBreakOnChange(arg0, arg1) end
+function toggleBreakOnChange(table, key) end
 
---- @param arg0 KahluaTable
---- @param arg1 Object
+--- @param table KahluaTable
+--- @param key Object
 --- @return void
-function toggleBreakOnRead(arg0, arg1) end
+function toggleBreakOnRead(table, key) end
 
 --- @param file String
 --- @param line int

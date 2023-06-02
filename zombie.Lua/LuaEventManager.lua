@@ -33,17 +33,17 @@ function LuaEventManager.clear() end
 
 --- @public
 --- @static
---- @param arg0 Platform
---- @param arg1 KahluaTable
+--- @param platform Platform
+--- @param environment KahluaTable
 --- @return void
-function LuaEventManager.register(arg0, arg1) end
+function LuaEventManager.register(platform, environment) end
 
 --- @public
 --- @static
---- @param arg0 Prototype
---- @param arg1 LuaClosure
+--- @param prototype Prototype
+--- @param luaClosure LuaClosure
 --- @return void
-function LuaEventManager.reroute(arg0, arg1) end
+function LuaEventManager.reroute(prototype, luaClosure) end
 
 --- @public
 --- @static
@@ -82,11 +82,14 @@ function LuaEventManager.triggerEventUnique(event, param1) end
 ------------------------------------
 
 --- @public
---- @param arg0 LuaCallFrame
---- @param arg1 int
---- @return int
+---
+---  Description copied from interface: se.krka.kahlua.vm.JavaFunction
+---
+--- @param callFrame LuaCallFrame
+--- @param nArguments int
+--- @return int N, number of return values. The top N objects on the stack are considered the return values.
 --- @overload fun(arg0: LuaCallFrame, arg1: int): int
-function LuaEventManager:call(arg0, arg1) end
+function LuaEventManager:call(callFrame, nArguments) end
 
 
 ------------------------------------

@@ -128,11 +128,11 @@ function IsoFire:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 function IsoFire:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoFire:saveChange(arg0, arg1, arg2) end
+function IsoFire:saveChange(change, tbl, bb) end
 
 --- @public
 ---

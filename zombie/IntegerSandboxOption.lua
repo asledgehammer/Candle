@@ -15,10 +15,10 @@ IntegerSandboxOption = {};
 function IntegerSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function IntegerSandboxOption:fromTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function IntegerSandboxOption:fromTable(table) end
 
 --- @public
 --- @return String
@@ -68,10 +68,10 @@ function IntegerSandboxOption:setPageName(pageName) end
 function IntegerSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function IntegerSandboxOption:toTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function IntegerSandboxOption:toTable(table) end
 
 
 ------------------------------------

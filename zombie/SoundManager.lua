@@ -11,18 +11,18 @@ SoundManager = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Audio
---- @param arg1 float
---- @param arg2 String
+--- @param musicTrack Audio
+--- @param f float
+--- @param PrefMusic String
 --- @return Audio
-function SoundManager:BlendThenStart(arg0, arg1, arg2) end
+function SoundManager:BlendThenStart(musicTrack, f, PrefMusic) end
 
 --- @public
---- @param arg0 Audio
---- @param arg1 float
+--- @param audio Audio
+--- @param targetVolume float
 --- @return void
---- @overload fun(arg0: Audio, arg1: float, arg2: float): void
-function SoundManager:BlendVolume(arg0, arg1) end
+--- @overload fun(audio: Audio, targetVolume: float, blendSpeedAlpha: float): void
+function SoundManager:BlendVolume(audio, targetVolume) end
 
 --- @public
 --- @param file String
@@ -50,13 +50,13 @@ function SoundManager:FadeOutMusic(name, milli) end
 function SoundManager:IsMusicPlaying() end
 
 --- @public
---- @param arg0 String
---- @param arg1 Audio
---- @param arg2 boolean
---- @param arg3 float
+--- @param name String
+--- @param musicTrack Audio
+--- @param loop boolean
+--- @param volume float
 --- @return void
---- @overload fun(arg0: String, arg1: Audio, arg2: float, arg3: boolean): void
-function SoundManager:PlayAsMusic(arg0, arg1, arg2, arg3) end
+--- @overload fun(name: String, musicTrack: Audio, volume: float, bloop: boolean): void
+function SoundManager:PlayAsMusic(name, musicTrack, loop, volume) end
 
 --- @public
 --- @param name String
@@ -155,20 +155,20 @@ function SoundManager:PrepareMusic(name) end
 function SoundManager:Purge() end
 
 --- @public
---- @param arg0 Audio
---- @param arg1 float
---- @param arg2 String
+--- @param musicTrack Audio
+--- @param f float
+--- @param PrefMusic String
 --- @return Audio
-function SoundManager:Start(arg0, arg1, arg2) end
+function SoundManager:Start(musicTrack, f, PrefMusic) end
 
 --- @public
 --- @return void
 function SoundManager:StopMusic() end
 
 --- @public
---- @param arg0 Audio
+--- @param SoundEffect Audio
 --- @return void
-function SoundManager:StopSound(arg0) end
+function SoundManager:StopSound(SoundEffect) end
 
 --- @public
 --- @return void

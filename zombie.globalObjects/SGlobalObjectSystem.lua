@@ -42,11 +42,11 @@ function SGlobalObjectSystem:load() end
 function SGlobalObjectSystem:loadedWorldVersion() end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoPlayer
---- @param arg2 KahluaTable
+--- @param command String
+--- @param playerObj IsoPlayer
+--- @param args KahluaTable
 --- @return void
-function SGlobalObjectSystem:receiveClientCommand(arg0, arg1, arg2) end
+function SGlobalObjectSystem:receiveClientCommand(command, playerObj, args) end
 
 --- @public
 --- @param globalObject SGlobalObject
@@ -59,25 +59,25 @@ function SGlobalObjectSystem:removeGlobalObjectOnClient(globalObject) end
 function SGlobalObjectSystem:save() end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
+--- @param command String
+--- @param args KahluaTable
 --- @return void
-function SGlobalObjectSystem:sendCommand(arg0, arg1) end
+function SGlobalObjectSystem:sendCommand(command, args) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param keys KahluaTable
 --- @return void
-function SGlobalObjectSystem:setModDataKeys(arg0) end
+function SGlobalObjectSystem:setModDataKeys(keys) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param keys KahluaTable
 --- @return void
-function SGlobalObjectSystem:setObjectModDataKeys(arg0) end
+function SGlobalObjectSystem:setObjectModDataKeys(keys) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param keys KahluaTable
 --- @return void
-function SGlobalObjectSystem:setObjectSyncKeys(arg0) end
+function SGlobalObjectSystem:setObjectSyncKeys(keys) end
 
 --- @public
 --- @return void

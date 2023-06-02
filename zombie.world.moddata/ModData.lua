@@ -10,10 +10,10 @@ ModData = {};
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 KahluaTable
+--- @param tag String
+--- @param table KahluaTable
 --- @return void
-function ModData.add(arg0, arg1) end
+function ModData.add(tag, table) end
 
 --- @public
 --- @static

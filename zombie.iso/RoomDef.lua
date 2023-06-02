@@ -42,11 +42,11 @@ function RoomDef:getAreaOverlapping(chunk) end
 function RoomDef:getBuilding() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 Vector2f
+--- @param x float
+--- @param y float
+--- @param closestXY Vector2f
 --- @return float
-function RoomDef:getClosestPoint(arg0, arg1, arg2) end
+function RoomDef:getClosestPoint(x, y, closestXY) end
 
 --- @public
 --- @return IsoGridSquare

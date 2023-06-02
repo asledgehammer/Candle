@@ -103,9 +103,9 @@ function DebugChunkState:save() end
 function DebugChunkState:setBoolean(name, value) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
-function DebugChunkState:setTable(arg0) end
+function DebugChunkState:setTable(table) end
 
 --- @public
 --- @return StateAction

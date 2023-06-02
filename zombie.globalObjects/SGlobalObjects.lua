@@ -68,12 +68,12 @@ function SGlobalObjects.noise(message) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 IsoPlayer
---- @param arg3 KahluaTable
+--- @param systemName String
+--- @param command String
+--- @param playerObj IsoPlayer
+--- @param args KahluaTable
 --- @return boolean
-function SGlobalObjects.receiveClientCommand(arg0, arg1, arg2, arg3) end
+function SGlobalObjects.receiveClientCommand(systemName, command, playerObj, args) end
 
 --- @public
 --- @static

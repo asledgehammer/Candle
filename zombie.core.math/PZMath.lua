@@ -102,11 +102,11 @@ function PZMath.clamp_01(val) end
 
 --- @public
 --- @static
---- @param arg0 Matrix4f
---- @param arg1 Matrix4f
+--- @param src Matrix4f
+--- @param dst Matrix4f
 --- @return Matrix4f
---- @overload fun(arg0: Matrix4f, arg1: Matrix4f): Matrix4f
-function PZMath.convertMatrix(arg0, arg1) end
+--- @overload fun(src: Matrix4f, dst: Matrix4f): Matrix4f
+function PZMath.convertMatrix(src, dst) end
 
 --- @public
 --- @static
@@ -176,7 +176,7 @@ function PZMath.getClosestAngleDegrees(in_degsA, in_degsB) end
 --- @param dest float
 --- @param alpha float
 --- @return float
---- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: Vector3f, arg3: float): Vector3f
+--- @overload fun(out: Vector3f, a: Vector3f, b: Vector3f, t: float): Vector3f
 --- @overload fun(out: Vector2, a: Vector2, b: Vector2, t: float): Vector2
 function PZMath.lerp(src, dest, alpha) end
 
@@ -260,12 +260,12 @@ function PZMath.sign(val) end
 
 --- @public
 --- @static
---- @param arg0 Quaternion
---- @param arg1 Quaternion
---- @param arg2 Quaternion
---- @param arg3 float
+--- @param result Quaternion
+--- @param from Quaternion
+--- @param to Quaternion
+--- @param alpha float
 --- @return Quaternion
-function PZMath.slerp(arg0, arg1, arg2, arg3) end
+function PZMath.slerp(result, from, to, alpha) end
 
 --- @public
 --- @static

@@ -95,9 +95,9 @@ function BaseVehicle.releaseVector2(v) end
 
 --- @public
 --- @static
---- @param arg0 Vector3f
+--- @param vector3f Vector3f
 --- @return void
-function BaseVehicle.releaseVector3f(arg0) end
+function BaseVehicle.releaseVector3f(vector3f) end
 
 
 ------------------------------------
@@ -165,10 +165,10 @@ function BaseVehicle:addDamageFrontHitAChr(dmg) end
 function BaseVehicle:addDamageRearHitAChr(dmg) end
 
 --- @public
---- @param arg0 Vector3f
---- @param arg1 Vector3f
+--- @param impulse Vector3f
+--- @param rel_pos Vector3f
 --- @return void
-function BaseVehicle:addImpulse(arg0, arg1) end
+function BaseVehicle:addImpulse(impulse, rel_pos) end
 
 --- @public
 --- @return void
@@ -335,11 +335,11 @@ function BaseVehicle:checkCollision(target) end
 function BaseVehicle:checkPhysicsValidWithServer() end
 
 --- @public
---- @param arg0 IsoGameCharacter
---- @param arg1 IsoGameCharacter
---- @param arg2 Vector3f
+--- @param target IsoGameCharacter
+--- @param attacker IsoGameCharacter
+--- @param worldPos Vector3f
 --- @return Vector3f
-function BaseVehicle:chooseBestAttackPosition(arg0, arg1, arg2) end
+function BaseVehicle:chooseBestAttackPosition(target, attacker, worldPos) end
 
 --- @public
 --- @param x float
@@ -453,7 +453,7 @@ function BaseVehicle:engineDoStartingSuccess() end
 --- @param seat int
 --- @param chr IsoGameCharacter
 --- @return boolean
---- @overload fun(arg0: int, arg1: IsoGameCharacter, arg2: Vector3f): boolean
+--- @overload fun(seat: int, chr: IsoGameCharacter, offset: Vector3f): boolean
 function BaseVehicle:enter(seat, chr) end
 
 --- @public
@@ -474,10 +474,10 @@ function BaseVehicle:exit(chr) end
 function BaseVehicle:exitRSync(chr) end
 
 --- @public
---- @param arg0 IsoLightSource
---- @param arg1 Vector3f
+--- @param ls IsoLightSource
+--- @param lightPos Vector3f
 --- @return void
-function BaseVehicle:fixLightbarModelLighting(arg0, arg1) end
+function BaseVehicle:fixLightbarModelLighting(ls, lightPos) end
 
 --- @public
 --- @return void
@@ -512,16 +512,16 @@ function BaseVehicle:getAreaCenter(areaId) end
 function BaseVehicle:getAreaDist(areaId, chr) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Vector3f
+--- @param attachmentName String
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getAttachmentLocalPos(arg0, arg1) end
+function BaseVehicle:getAttachmentLocalPos(attachmentName, v) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Vector3f
+--- @param attachmentName String
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getAttachmentWorldPos(arg0, arg1) end
+function BaseVehicle:getAttachmentWorldPos(attachmentName, v) end
 
 --- @public
 --- @return String
@@ -651,9 +651,9 @@ function BaseVehicle:getFacingPosition(chr, out) end
 function BaseVehicle:getForce() end
 
 --- @public
---- @param arg0 Vector3f
+--- @param out Vector3f
 --- @return Vector3f
-function BaseVehicle:getForwardVector(arg0) end
+function BaseVehicle:getForwardVector(out) end
 
 --- @public
 --- @return float
@@ -713,16 +713,16 @@ function BaseVehicle:getLightbarLightsMode() end
 function BaseVehicle:getLightbarSirenMode() end
 
 --- @public
---- @param arg0 Vector3f
+--- @param out Vector3f
 --- @return Vector3f
-function BaseVehicle:getLinearVelocity(arg0) end
+function BaseVehicle:getLinearVelocity(out) end
 
 --- @public
---- @param arg0 Vector3f
---- @param arg1 Vector3f
+--- @param worldPos Vector3f
+--- @param localPos Vector3f
 --- @return Vector3f
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f): Vector3f
-function BaseVehicle:getLocalPos(arg0, arg1) end
+--- @overload fun(worldX: float, worldY: float, worldZ: float, localPos: Vector3f): Vector3f
+function BaseVehicle:getLocalPos(worldPos, localPos) end
 
 --- @public
 --- @return float
@@ -815,10 +815,10 @@ function BaseVehicle:getPassengerDoor(seat) end
 function BaseVehicle:getPassengerDoor2(seat) end
 
 --- @public
---- @param arg0 int
---- @param arg1 Vector3f
+--- @param seat int
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getPassengerLocalPos(arg0, arg1) end
+function BaseVehicle:getPassengerLocalPos(seat, v) end
 
 --- @public
 --- @param seat int
@@ -830,7 +830,7 @@ function BaseVehicle:getPassengerPosition(seat, id) end
 --- @param arg0 Position
 --- @param arg1 Vector3f
 --- @return Vector3f
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f): Vector3f
+--- @overload fun(x: float, y: float, z: float, out: Vector3f): Vector3f
 function BaseVehicle:getPassengerPositionWorldPos(arg0, arg1) end
 
 --- @public
@@ -845,24 +845,24 @@ function BaseVehicle:getPassengerSwitchSeat(seat, index) end
 function BaseVehicle:getPassengerSwitchSeatCount(seat) end
 
 --- @public
---- @param arg0 int
---- @param arg1 Vector3f
+--- @param seat int
+--- @param out Vector3f
 --- @return Vector3f
-function BaseVehicle:getPassengerWorldPos(arg0, arg1) end
+function BaseVehicle:getPassengerWorldPos(seat, out) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 Vector3f
+--- @param attachmentName String
+--- @param left boolean
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getPlayerTrailerLocalPos(arg0, arg1, arg2) end
+function BaseVehicle:getPlayerTrailerLocalPos(attachmentName, left, v) end
 
 --- @public
---- @param arg0 String
---- @param arg1 boolean
---- @param arg2 Vector3f
+--- @param attachmentName String
+--- @param left boolean
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getPlayerTrailerWorldPos(arg0, arg1, arg2) end
+function BaseVehicle:getPlayerTrailerWorldPos(attachmentName, left, v) end
 
 --- @public
 --- @return VehiclePoly
@@ -975,28 +975,28 @@ function BaseVehicle:getTowAttachmentOther() end
 function BaseVehicle:getTowAttachmentSelf() end
 
 --- @public
---- @param arg0 String
---- @param arg1 Vector3f
+--- @param attachmentName String
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getTowedByLocalPos(arg0, arg1) end
+function BaseVehicle:getTowedByLocalPos(attachmentName, v) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Vector3f
+--- @param attachmentName String
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getTowedByWorldPos(arg0, arg1) end
+function BaseVehicle:getTowedByWorldPos(attachmentName, v) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Vector3f
+--- @param attachmentName String
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getTowingLocalPos(arg0, arg1) end
+function BaseVehicle:getTowingLocalPos(attachmentName, v) end
 
 --- @public
---- @param arg0 String
---- @param arg1 Vector3f
+--- @param attachmentName String
+--- @param v Vector3f
 --- @return Vector3f
-function BaseVehicle:getTowingWorldPos(arg0, arg1) end
+function BaseVehicle:getTowingWorldPos(attachmentName, v) end
 
 --- @public
 --- @return int
@@ -1007,9 +1007,9 @@ function BaseVehicle:getTransmissionNumber() end
 function BaseVehicle:getTransmissionNumberLetter() end
 
 --- @public
---- @param arg0 Vector3f
+--- @param out Vector3f
 --- @return Vector3f
-function BaseVehicle:getUpVector(arg0) end
+function BaseVehicle:getUpVector(out) end
 
 --- @public
 --- @return float
@@ -1038,23 +1038,23 @@ function BaseVehicle:getVehicleTowing() end
 function BaseVehicle:getVehicleType() end
 
 --- @public
---- @param arg0 int
---- @param arg1 Vector3f
+--- @param wheelIndex int
+--- @param out Vector3f
 --- @return void
-function BaseVehicle:getWheelForwardVector(arg0, arg1) end
+function BaseVehicle:getWheelForwardVector(wheelIndex, out) end
 
 --- @public
 --- @return boolean
 function BaseVehicle:getWindowLightsOn() end
 
 --- @public
---- @param arg0 Vector3f
---- @param arg1 Vector3f
+--- @param localPos Vector3f
+--- @param worldPos Vector3f
 --- @return Vector3f
---- @overload fun(arg0: Vector3f, arg1: Vector3f, arg2: VehicleScript): Vector3f
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f): Vector3f
---- @overload fun(arg0: float, arg1: float, arg2: float, arg3: Vector3f, arg4: VehicleScript): Vector3f
-function BaseVehicle:getWorldPos(arg0, arg1) end
+--- @overload fun(localPos: Vector3f, worldPos: Vector3f, script: VehicleScript): Vector3f
+--- @overload fun(localX: float, localY: float, localZ: float, worldPos: Vector3f): Vector3f
+--- @overload fun(localX: float, localY: float, localZ: float, worldPos: Vector3f, script: VehicleScript): Vector3f
+function BaseVehicle:getWorldPos(localPos, worldPos) end
 
 --- @public
 --- @param out Transform
@@ -1524,11 +1524,11 @@ function BaseVehicle:resumeRunningAfterLoad() end
 function BaseVehicle:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function BaseVehicle:saveChange(arg0, arg1, arg2) end
+function BaseVehicle:saveChange(change, tbl, bb) end
 
 --- @public
 --- @return void
@@ -1729,11 +1729,11 @@ function BaseVehicle:setNeedPartsUpdate(needPartsUpdate) end
 function BaseVehicle:setNetPlayerAuthorization(arg0, arg1) end
 
 --- @public
---- @param arg0 int
---- @param arg1 IsoGameCharacter
---- @param arg2 Vector3f
+--- @param seat int
+--- @param chr IsoGameCharacter
+--- @param offset Vector3f
 --- @return boolean
-function BaseVehicle:setPassenger(arg0, arg1, arg2) end
+function BaseVehicle:setPassenger(seat, chr, offset) end
 
 --- @public
 --- @param active boolean

@@ -750,11 +750,11 @@ function IsoGameCharacter:dropHeavyItems() end
 function IsoGameCharacter:endPlaybackGameVariables(playbackVars) end
 
 --- @public
---- @param arg0 BaseVehicle
---- @param arg1 int
---- @param arg2 Vector3f
+--- @param v BaseVehicle
+--- @param seat int
+--- @param offset Vector3f
 --- @return void
-function IsoGameCharacter:enterVehicle(arg0, arg1, arg2) end
+function IsoGameCharacter:enterVehicle(v, seat, offset) end
 
 --- @public
 --- @param f float
@@ -2784,11 +2784,11 @@ function IsoGameCharacter:resetModelNextFrame() end
 function IsoGameCharacter:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoGameCharacter:saveChange(arg0, arg1, arg2) end
+function IsoGameCharacter:saveChange(change, tbl, bb) end
 
 --- @public
 --- @return void

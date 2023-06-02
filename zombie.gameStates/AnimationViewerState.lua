@@ -80,9 +80,9 @@ function AnimationViewerState:save() end
 function AnimationViewerState:setBoolean(name, value) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
-function AnimationViewerState:setTable(arg0) end
+function AnimationViewerState:setTable(table) end
 
 --- @public
 --- @return StateAction

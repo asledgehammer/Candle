@@ -55,11 +55,11 @@ function CGlobalObjects.noise(message) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 String
---- @param arg2 KahluaTable
+--- @param systemName String
+--- @param command String
+--- @param args KahluaTable
 --- @return boolean
-function CGlobalObjects.receiveServerCommand(arg0, arg1, arg2) end
+function CGlobalObjects.receiveServerCommand(systemName, command, args) end
 
 --- @public
 --- @static

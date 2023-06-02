@@ -64,11 +64,11 @@ function IsoCombinationWasherDryer:removeFromWorld() end
 function IsoCombinationWasherDryer:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoCombinationWasherDryer:saveChange(arg0, arg1, arg2) end
+function IsoCombinationWasherDryer:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param activated boolean

@@ -149,13 +149,13 @@ function IsoGridSquare:AddSpecialObject(obj) end
 function IsoGridSquare:AddSpecialTileObject(obj) end
 
 --- @public
---- @param arg0 boolean
---- @param arg1 int
---- @param arg2 String
---- @param arg3 String
---- @param arg4 KahluaTable
+--- @param north boolean
+--- @param level int
+--- @param sprite String
+--- @param pillarSprite String
+--- @param table KahluaTable
 --- @return IsoThumpable
-function IsoGridSquare:AddStairs(arg0, arg1, arg2, arg3, arg4) end
+function IsoGridSquare:AddStairs(north, level, sprite, pillarSprite, table) end
 
 --- @public
 --- @param obj IsoObject

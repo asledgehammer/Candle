@@ -703,9 +703,9 @@ function UIElement:setScrollWithParent(bScroll) end
 function UIElement:setStencilRect(x, y, width, height) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable the table to set
 --- @return void
-function UIElement:setTable(arg0) end
+function UIElement:setTable(table) end
 
 --- @public
 --- @param name String

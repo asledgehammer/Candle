@@ -56,11 +56,11 @@ function IsoClothingDryer:removeFromWorld() end
 function IsoClothingDryer:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoClothingDryer:saveChange(arg0, arg1, arg2) end
+function IsoClothingDryer:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param activated boolean

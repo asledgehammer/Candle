@@ -27,8 +27,8 @@ function IsoMarkers:addCircleIsoMarker(gs, r, g, b, a) end
 --- @param doAlpha boolean
 --- @param doIsoObject boolean
 --- @return IsoMarker
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean, arg7: boolean): IsoMarker
---- @overload fun(arg0: KahluaTable, arg1: KahluaTable, arg2: IsoGridSquare, arg3: float, arg4: float, arg5: float, arg6: boolean, arg7: boolean, arg8: float, arg9: float, arg10: float): IsoMarker
+--- @overload fun(textureTable: KahluaTable, textureOverlayTable: KahluaTable, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, doIsoObject: boolean): IsoMarker
+--- @overload fun(textureTable: KahluaTable, textureOverlayTable: KahluaTable, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, doIsoObject: boolean, fadeSpeed: float, fadeMin: float, fadeMax: float): IsoMarker
 function IsoMarkers:addIsoMarker(spriteName, gs, r, g, b, doAlpha, doIsoObject) end
 
 --- @public

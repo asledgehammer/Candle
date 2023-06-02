@@ -87,11 +87,11 @@ function DummySoundEmitter:restart(handle) end
 function DummySoundEmitter:set3D(handle, is3D) end
 
 --- @public
---- @param arg0 long
---- @param arg1 FMOD_STUDIO_PARAMETER_DESCRIPTION
---- @param arg2 float
+--- @param handle long
+--- @param parameterDescription FMOD_STUDIO_PARAMETER_DESCRIPTION
+--- @param value float
 --- @return void
-function DummySoundEmitter:setParameterValue(arg0, arg1, arg2) end
+function DummySoundEmitter:setParameterValue(handle, parameterDescription, value) end
 
 --- @public
 --- @param handle long

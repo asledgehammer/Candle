@@ -23,14 +23,14 @@ function BrokenFences.getInstance() end
 function BrokenFences:Reset() end
 
 --- @public
---- @param arg0 KahluaTableImpl
+--- @param tiles KahluaTableImpl
 --- @return void
-function BrokenFences:addBrokenTiles(arg0) end
+function BrokenFences:addBrokenTiles(tiles) end
 
 --- @public
---- @param arg0 KahluaTableImpl
+--- @param tiles KahluaTableImpl
 --- @return void
-function BrokenFences:addDebrisTiles(arg0) end
+function BrokenFences:addDebrisTiles(tiles) end
 
 --- @public
 --- @param obj IsoObject

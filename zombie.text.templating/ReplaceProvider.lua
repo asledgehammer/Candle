@@ -13,7 +13,7 @@ ReplaceProvider = {};
 --- @param key String
 --- @param value String
 --- @return void
---- @overload fun(arg0: String, arg1: KahluaTableImpl): void
+--- @overload fun(key: String, table: KahluaTableImpl): void
 function ReplaceProvider:addKey(key, value) end
 
 --- @public

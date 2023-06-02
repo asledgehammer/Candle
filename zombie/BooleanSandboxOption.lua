@@ -15,10 +15,10 @@ BooleanSandboxOption = {};
 function BooleanSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function BooleanSandboxOption:fromTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function BooleanSandboxOption:fromTable(table) end
 
 --- @public
 --- @return String
@@ -68,10 +68,10 @@ function BooleanSandboxOption:setPageName(pageName) end
 function BooleanSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function BooleanSandboxOption:toTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function BooleanSandboxOption:toTable(table) end
 
 
 ------------------------------------

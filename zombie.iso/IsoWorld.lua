@@ -345,49 +345,49 @@ function IsoWorld:isHydroPowerOn() end
 function IsoWorld:isValidSquare(x, y, z) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 KahluaTable
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param width int
+--- @param height int
+--- @param properties KahluaTable
 --- @return Zone
-function IsoWorld:registerMannequinZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoWorld:registerMannequinZone(name, type, x, y, z, width, height, properties) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 KahluaTable
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param width int
+--- @param height int
+--- @param properties KahluaTable
 --- @return void
-function IsoWorld:registerRoomTone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoWorld:registerRoomTone(name, type, x, y, z, width, height, properties) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 int
---- @param arg4 KahluaTable
+--- @param x int
+--- @param y int
+--- @param width int
+--- @param height int
+--- @param properties KahluaTable
 --- @return void
-function IsoWorld:registerSpawnOrigin(arg0, arg1, arg2, arg3, arg4) end
+function IsoWorld:registerSpawnOrigin(x, y, width, height, properties) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 KahluaTable
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param width int
+--- @param height int
+--- @param properties KahluaTable
 --- @return Zone
-function IsoWorld:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoWorld:registerVehiclesZone(name, type, x, y, z, width, height, properties) end
 
 --- @public
 --- @param x float

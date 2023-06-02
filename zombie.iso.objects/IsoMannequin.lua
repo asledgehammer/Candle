@@ -167,11 +167,11 @@ function IsoMannequin:rotate(newDir) end
 function IsoMannequin:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoMannequin:saveChange(arg0, arg1, arg2) end
+function IsoMannequin:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param output ByteBuffer

@@ -75,11 +75,11 @@ function AmbientStreamManager:doGunEvent() end
 function AmbientStreamManager:doOneShotAmbients() end
 
 --- @public
---- @param arg0 float
---- @param arg1 float
---- @param arg2 Vector2f
+--- @param px float
+--- @param py float
+--- @param closestXY Vector2f
 --- @return BuildingDef
-function AmbientStreamManager:getNearestBuilding(arg0, arg1, arg2) end
+function AmbientStreamManager:getNearestBuilding(px, py, closestXY) end
 
 --- @public
 --- @return void

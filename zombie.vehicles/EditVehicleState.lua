@@ -52,9 +52,9 @@ function EditVehicleState:render() end
 function EditVehicleState:setScript(scriptName) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
-function EditVehicleState:setTable(arg0) end
+function EditVehicleState:setTable(table) end
 
 --- @public
 --- @return StateAction

@@ -15,10 +15,10 @@ StringSandboxOption = {};
 function StringSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function StringSandboxOption:fromTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function StringSandboxOption:fromTable(table) end
 
 --- @public
 --- @return String
@@ -68,10 +68,10 @@ function StringSandboxOption:setPageName(pageName) end
 function StringSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function StringSandboxOption:toTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function StringSandboxOption:toTable(table) end
 
 
 ------------------------------------

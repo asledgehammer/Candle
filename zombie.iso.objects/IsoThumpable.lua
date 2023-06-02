@@ -448,11 +448,11 @@ function IsoThumpable:removeSheetRope(player) end
 function IsoThumpable:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoThumpable:saveChange(arg0, arg1, arg2) end
+function IsoThumpable:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param blockAllTheSquare boolean
@@ -638,9 +638,9 @@ function IsoThumpable:setLockedByPadlock(lockedByPadlock) end
 function IsoThumpable:setMaxHealth(maxHealth) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param modData KahluaTable
 --- @return void
-function IsoThumpable:setModData(arg0) end
+function IsoThumpable:setModData(modData) end
 
 --- @public
 --- @param sprite IsoSprite
@@ -663,9 +663,9 @@ function IsoThumpable:setSprite(sprite) end
 function IsoThumpable:setSpriteFromName(name) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable the table to set
 --- @return void
-function IsoThumpable:setTable(arg0) end
+function IsoThumpable:setTable(table) end
 
 --- @public
 ---

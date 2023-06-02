@@ -14,9 +14,9 @@ ContainerOverlays = {};
 function ContainerOverlays:Reset() end
 
 --- @public
---- @param arg0 KahluaTableImpl
+--- @param overlayMap KahluaTableImpl
 --- @return void
-function ContainerOverlays:addOverlays(arg0) end
+function ContainerOverlays:addOverlays(overlayMap) end
 
 --- @public
 --- @param obj IsoObject

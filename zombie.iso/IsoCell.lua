@@ -692,10 +692,10 @@ function IsoCell:setCurrentLightZ(currentLZ) end
 function IsoCell:setDangerUpdate(dangerUpdate) end
 
 --- @public
---- @param arg0 KahluaTable
---- @param arg1 int
+--- @param item KahluaTable
+--- @param player int
 --- @return void
-function IsoCell:setDrag(arg0, arg1) end
+function IsoCell:setDrag(item, player) end
 
 --- @public
 --- @param height int the height to set

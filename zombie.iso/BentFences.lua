@@ -23,10 +23,10 @@ function BentFences.getInstance() end
 function BentFences:Reset() end
 
 --- @public
---- @param arg0 int
---- @param arg1 KahluaTableImpl
+--- @param VERSION int
+--- @param tiles KahluaTableImpl
 --- @return void
-function BentFences:addFenceTiles(arg0, arg1) end
+function BentFences:addFenceTiles(VERSION, tiles) end
 
 --- @public
 --- @param obj IsoObject

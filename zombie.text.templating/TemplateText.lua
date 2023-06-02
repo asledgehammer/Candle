@@ -12,7 +12,7 @@ TemplateText = {};
 --- @static
 --- @param input String
 --- @return String
---- @overload fun(arg0: String, arg1: KahluaTableImpl): String
+--- @overload fun(input: String, table: KahluaTableImpl): String
 --- @overload fun(input: String, replaceProvider: IReplaceProvider): String
 function TemplateText.Build(input) end
 
@@ -32,11 +32,11 @@ function TemplateText.RandNext(bound) end
 
 --- @public
 --- @static
---- @param arg0 String
---- @param arg1 KahluaTableImpl
+--- @param key String
+--- @param table KahluaTableImpl
 --- @return void
 --- @overload fun(key: String, replace: IReplace): void
-function TemplateText.RegisterKey(arg0, arg1) end
+function TemplateText.RegisterKey(key, table) end
 
 --- @public
 --- @static

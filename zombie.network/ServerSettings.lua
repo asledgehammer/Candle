@@ -89,10 +89,10 @@ function ServerSettings:resetToDefault() end
 function ServerSettings:saveFiles() end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
+--- @param file String
+--- @param professionsTable KahluaTable
 --- @return boolean
-function ServerSettings:saveSpawnPointsFile(arg0, arg1) end
+function ServerSettings:saveSpawnPointsFile(file, professionsTable) end
 
 
 ------------------------------------

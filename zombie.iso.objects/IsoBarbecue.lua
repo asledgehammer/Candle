@@ -109,11 +109,11 @@ function IsoBarbecue:render(x, y, z, col, bDoChild, bWallLightingPass, shader) e
 function IsoBarbecue:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoBarbecue:saveChange(arg0, arg1, arg2) end
+function IsoBarbecue:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param units int

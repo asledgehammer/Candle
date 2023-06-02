@@ -43,17 +43,17 @@ function IsoDeadBody.removeDeadBody(id) end
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 Vector3f
---- @param arg4 float
---- @param arg5 float
---- @param arg6 float
---- @param arg7 ColorInfo
---- @param arg8 float
+--- @param x float
+--- @param y float
+--- @param z float
+--- @param forward Vector3f
+--- @param w float
+--- @param fm float
+--- @param bm float
+--- @param lightInfo ColorInfo
+--- @param alpha float
 --- @return void
-function IsoDeadBody.renderShadow(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+function IsoDeadBody.renderShadow(x, y, z, forward, w, fm, bm, lightInfo, alpha) end
 
 --- @public
 --- @static
@@ -269,11 +269,11 @@ function IsoDeadBody:renderlast() end
 function IsoDeadBody:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoDeadBody:saveChange(arg0, arg1, arg2) end
+function IsoDeadBody:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param other AttachedItems

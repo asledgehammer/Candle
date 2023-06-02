@@ -142,14 +142,14 @@ function PathFindBehavior2:pathToLocation(x, y, z) end
 function PathFindBehavior2:pathToLocationF(x, y, z) end
 
 --- @public
---- @param arg0 TFloatArrayList
+--- @param locations TFloatArrayList
 --- @return void
-function PathFindBehavior2:pathToNearest(arg0) end
+function PathFindBehavior2:pathToNearest(locations) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param locationsTable KahluaTable
 --- @return void
-function PathFindBehavior2:pathToNearestTable(arg0) end
+function PathFindBehavior2:pathToNearestTable(locationsTable) end
 
 --- @public
 --- @param x int

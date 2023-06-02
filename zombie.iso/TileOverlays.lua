@@ -14,9 +14,9 @@ TileOverlays = {};
 function TileOverlays:Reset() end
 
 --- @public
---- @param arg0 KahluaTableImpl
+--- @param overlayMap KahluaTableImpl
 --- @return void
-function TileOverlays:addOverlays(arg0) end
+function TileOverlays:addOverlays(overlayMap) end
 
 --- @public
 --- @param square IsoGridSquare

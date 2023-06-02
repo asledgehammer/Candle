@@ -145,26 +145,26 @@ function ItemContainer:clear() end
 function ItemContainer:contains(type) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return boolean
-function ItemContainer:containsEval(arg0) end
+function ItemContainer:containsEval(functionObj) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return boolean
-function ItemContainer:containsEvalArg(arg0, arg1) end
+function ItemContainer:containsEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return boolean
-function ItemContainer:containsEvalArgRecurse(arg0, arg1) end
+function ItemContainer:containsEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return boolean
-function ItemContainer:containsEvalRecurse(arg0) end
+function ItemContainer:containsEvalRecurse(functionObj) end
 
 --- @public
 --- @param id int
@@ -182,23 +182,23 @@ function ItemContainer:containsRecursive(item) end
 function ItemContainer:containsTag(tag) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param tag String
+--- @param functionObj LuaClosure
 --- @return boolean
-function ItemContainer:containsTagEval(arg0, arg1) end
+function ItemContainer:containsTagEval(tag, functionObj) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return boolean
-function ItemContainer:containsTagEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:containsTagEvalArgRecurse(tag, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param tag String
+--- @param functionObj LuaClosure
 --- @return boolean
-function ItemContainer:containsTagEvalRecurse(arg0, arg1) end
+function ItemContainer:containsTagEvalRecurse(tag, functionObj) end
 
 --- @public
 --- @param tag String
@@ -211,17 +211,17 @@ function ItemContainer:containsTagRecurse(tag) end
 function ItemContainer:containsType(type) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return boolean
-function ItemContainer:containsTypeEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:containsTypeEvalArgRecurse(type, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param functionObj LuaClosure
 --- @return boolean
-function ItemContainer:containsTypeEvalRecurse(arg0, arg1) end
+function ItemContainer:containsTypeEvalRecurse(type, functionObj) end
 
 --- @public
 --- @param type String
@@ -265,30 +265,30 @@ function ItemContainer:getAllCategory(category) end
 function ItemContainer:getAllCategoryRecurse(category, result) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: ArrayList): ArrayList
-function ItemContainer:getAllEval(arg0) end
+--- @overload fun(functionObj: LuaClosure, result: ArrayList): ArrayList
+function ItemContainer:getAllEval(functionObj) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: Object, arg2: ArrayList): ArrayList
-function ItemContainer:getAllEvalArg(arg0, arg1) end
+--- @overload fun(functionObj: LuaClosure, arg: Object, result: ArrayList): ArrayList
+function ItemContainer:getAllEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: Object, arg2: ArrayList): ArrayList
-function ItemContainer:getAllEvalArgRecurse(arg0, arg1) end
+--- @overload fun(functionObj: LuaClosure, arg: Object, result: ArrayList): ArrayList
+function ItemContainer:getAllEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: ArrayList): ArrayList
-function ItemContainer:getAllEvalRecurse(arg0) end
+--- @overload fun(functionObj: LuaClosure, result: ArrayList): ArrayList
+function ItemContainer:getAllEvalRecurse(functionObj) end
 
 --- @public
 --- @param items LinkedHashMap
@@ -309,34 +309,34 @@ function ItemContainer:getAllRecurse(predicate, result) end
 function ItemContainer:getAllTag(tag, result) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param functionObj LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList): ArrayList
-function ItemContainer:getAllTagEval(arg0, arg1) end
+--- @overload fun(tag: String, functionObj: LuaClosure, result: ArrayList): ArrayList
+function ItemContainer:getAllTagEval(type, functionObj) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList): ArrayList
-function ItemContainer:getAllTagEvalArg(arg0, arg1, arg2) end
+--- @overload fun(tag: String, functionObj: LuaClosure, arg: Object, result: ArrayList): ArrayList
+function ItemContainer:getAllTagEvalArg(type, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
---- @param arg3 ArrayList
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param arg Object
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllTagEvalArgRecurse(arg0, arg1, arg2, arg3) end
+function ItemContainer:getAllTagEvalArgRecurse(tag, functionObj, arg, result) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 ArrayList
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getAllTagEvalRecurse(arg0, arg1, arg2) end
+function ItemContainer:getAllTagEvalRecurse(tag, functionObj, result) end
 
 --- @public
 --- @param tag String
@@ -351,34 +351,34 @@ function ItemContainer:getAllTagRecurse(tag, result) end
 function ItemContainer:getAllType(type) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param functionObj LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList): ArrayList
-function ItemContainer:getAllTypeEval(arg0, arg1) end
+--- @overload fun(type: String, functionObj: LuaClosure, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeEval(type, functionObj) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList): ArrayList
-function ItemContainer:getAllTypeEvalArg(arg0, arg1, arg2) end
+--- @overload fun(type: String, functionObj: LuaClosure, arg: Object, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeEvalArg(type, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: ArrayList): ArrayList
-function ItemContainer:getAllTypeEvalArgRecurse(arg0, arg1, arg2) end
+--- @overload fun(type: String, functionObj: LuaClosure, arg: Object, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeEvalArgRecurse(type, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param functionObj LuaClosure
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: ArrayList): ArrayList
-function ItemContainer:getAllTypeEvalRecurse(arg0, arg1) end
+--- @overload fun(type: String, functionObj: LuaClosure, result: ArrayList): ArrayList
+function ItemContainer:getAllTypeEvalRecurse(type, functionObj) end
 
 --- @public
 --- @param type String
@@ -408,26 +408,26 @@ function ItemContainer:getBestBandage(descriptor) end
 function ItemContainer:getBestCondition(type) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getBestConditionEval(arg0) end
+function ItemContainer:getBestConditionEval(functionObj) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getBestConditionEvalArg(arg0, arg1) end
+function ItemContainer:getBestConditionEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getBestConditionEvalArgRecurse(arg0, arg1) end
+function ItemContainer:getBestConditionEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getBestConditionEvalRecurse(arg0) end
+function ItemContainer:getBestConditionEvalRecurse(functionObj) end
 
 --- @public
 --- @param type String
@@ -436,30 +436,30 @@ function ItemContainer:getBestConditionEvalRecurse(arg0) end
 function ItemContainer:getBestConditionRecurse(type) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 LuaClosure
+--- @param predicateObj LuaClosure
+--- @param comparatorObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getBestEval(arg0, arg1) end
+function ItemContainer:getBestEval(predicateObj, comparatorObj) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param predicateObj LuaClosure
+--- @param comparatorObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getBestEvalArg(arg0, arg1, arg2) end
+function ItemContainer:getBestEvalArg(predicateObj, comparatorObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param predicateObj LuaClosure
+--- @param comparatorObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getBestEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getBestEvalArgRecurse(predicateObj, comparatorObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 LuaClosure
+--- @param predicateObj LuaClosure
+--- @param comparatorObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getBestEvalRecurse(arg0, arg1) end
+function ItemContainer:getBestEvalRecurse(predicateObj, comparatorObj) end
 
 --- @public
 --- @param descriptor SurvivorDesc
@@ -479,30 +479,30 @@ function ItemContainer:getBestRecurse(predicate, comparator) end
 function ItemContainer:getBestType(type, comparator) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param comparatorObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getBestTypeEval(arg0, arg1) end
+function ItemContainer:getBestTypeEval(type, comparatorObj) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param comparatorObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getBestTypeEvalArg(arg0, arg1, arg2) end
+function ItemContainer:getBestTypeEvalArg(type, comparatorObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param comparatorObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getBestTypeEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getBestTypeEvalArgRecurse(type, comparatorObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param comparatorObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getBestTypeEvalRecurse(arg0, arg1) end
+function ItemContainer:getBestTypeEvalRecurse(type, comparatorObj) end
 
 --- @public
 --- @param type String
@@ -553,26 +553,26 @@ function ItemContainer:getCookingFactor() end
 function ItemContainer:getCount(predicate) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return int
-function ItemContainer:getCountEval(arg0) end
+function ItemContainer:getCountEval(functionObj) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return int
-function ItemContainer:getCountEvalArg(arg0, arg1) end
+function ItemContainer:getCountEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return int
-function ItemContainer:getCountEvalArgRecurse(arg0, arg1) end
+function ItemContainer:getCountEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return int
-function ItemContainer:getCountEvalRecurse(arg0) end
+function ItemContainer:getCountEvalRecurse(functionObj) end
 
 --- @public
 --- @param predicate Predicate
@@ -585,30 +585,30 @@ function ItemContainer:getCountRecurse(predicate) end
 function ItemContainer:getCountTag(tag) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param tag String
+--- @param functionObj LuaClosure
 --- @return int
-function ItemContainer:getCountTagEval(arg0, arg1) end
+function ItemContainer:getCountTagEval(tag, functionObj) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return int
-function ItemContainer:getCountTagEvalArg(arg0, arg1, arg2) end
+function ItemContainer:getCountTagEvalArg(tag, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return int
-function ItemContainer:getCountTagEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getCountTagEvalArgRecurse(tag, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param tag String
+--- @param functionObj LuaClosure
 --- @return int
-function ItemContainer:getCountTagEvalRecurse(arg0, arg1) end
+function ItemContainer:getCountTagEvalRecurse(tag, functionObj) end
 
 --- @public
 --- @param tag String
@@ -621,30 +621,30 @@ function ItemContainer:getCountTagRecurse(tag) end
 function ItemContainer:getCountType(type) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param functionObj LuaClosure
 --- @return int
-function ItemContainer:getCountTypeEval(arg0, arg1) end
+function ItemContainer:getCountTypeEval(type, functionObj) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return int
-function ItemContainer:getCountTypeEvalArg(arg0, arg1, arg2) end
+function ItemContainer:getCountTypeEvalArg(type, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return int
-function ItemContainer:getCountTypeEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getCountTypeEvalArgRecurse(type, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param functionObj LuaClosure
 --- @return int
-function ItemContainer:getCountTypeEvalRecurse(arg0, arg1) end
+function ItemContainer:getCountTypeEvalRecurse(type, functionObj) end
 
 --- @public
 --- @param type String
@@ -676,26 +676,26 @@ function ItemContainer:getFirstCategory(category) end
 function ItemContainer:getFirstCategoryRecurse(category) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getFirstEval(arg0) end
+function ItemContainer:getFirstEval(functionObj) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getFirstEvalArg(arg0, arg1) end
+function ItemContainer:getFirstEvalArg(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getFirstEvalArgRecurse(arg0, arg1) end
+function ItemContainer:getFirstEvalArgRecurse(functionObj, arg) end
 
 --- @public
---- @param arg0 LuaClosure
+--- @param functionObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getFirstEvalRecurse(arg0) end
+function ItemContainer:getFirstEvalRecurse(functionObj) end
 
 --- @public
 --- @param predicate Predicate
@@ -708,23 +708,23 @@ function ItemContainer:getFirstRecurse(predicate) end
 function ItemContainer:getFirstTag(tag) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param tag String
+--- @param functionObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getFirstTagEval(arg0, arg1) end
+function ItemContainer:getFirstTagEval(tag, functionObj) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getFirstTagEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getFirstTagEvalArgRecurse(tag, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param tag String
+--- @param functionObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getFirstTagEvalRecurse(arg0, arg1) end
+function ItemContainer:getFirstTagEvalRecurse(tag, functionObj) end
 
 --- @public
 --- @param tag String
@@ -737,23 +737,23 @@ function ItemContainer:getFirstTagRecurse(tag) end
 function ItemContainer:getFirstType(type) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param functionObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getFirstTypeEval(arg0, arg1) end
+function ItemContainer:getFirstTypeEval(type, functionObj) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
 --- @return InventoryItem
-function ItemContainer:getFirstTypeEvalArgRecurse(arg0, arg1, arg2) end
+function ItemContainer:getFirstTypeEvalArgRecurse(type, functionObj, arg) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
+--- @param type String
+--- @param functionObj LuaClosure
 --- @return InventoryItem
-function ItemContainer:getFirstTypeEvalRecurse(arg0, arg1) end
+function ItemContainer:getFirstTypeEvalRecurse(type, functionObj) end
 
 --- @public
 --- @param type String
@@ -887,34 +887,34 @@ function ItemContainer:getSomeCategory(category, count) end
 function ItemContainer:getSomeCategoryRecurse(category, count, result) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 int
+--- @param functionObj LuaClosure
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: int, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeEval(arg0, arg1) end
+--- @overload fun(functionObj: LuaClosure, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeEval(functionObj, count) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
---- @param arg2 int
+--- @param functionObj LuaClosure
+--- @param arg Object
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: Object, arg2: int, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeEvalArg(arg0, arg1, arg2) end
+--- @overload fun(functionObj: LuaClosure, arg: Object, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeEvalArg(functionObj, arg, count) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 Object
---- @param arg2 int
+--- @param functionObj LuaClosure
+--- @param arg Object
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: Object, arg2: int, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeEvalArgRecurse(arg0, arg1, arg2) end
+--- @overload fun(functionObj: LuaClosure, arg: Object, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeEvalArgRecurse(functionObj, arg, count) end
 
 --- @public
---- @param arg0 LuaClosure
---- @param arg1 int
+--- @param functionObj LuaClosure
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: LuaClosure, arg1: int, arg2: ArrayList): ArrayList
-function ItemContainer:getSomeEvalRecurse(arg0, arg1) end
+--- @overload fun(functionObj: LuaClosure, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeEvalRecurse(functionObj, count) end
 
 --- @public
 --- @param predicate Predicate
@@ -931,38 +931,38 @@ function ItemContainer:getSomeRecurse(predicate, count, result) end
 function ItemContainer:getSomeTag(tag, count) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 int
---- @param arg3 ArrayList
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param count int
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSomeTagEval(arg0, arg1, arg2, arg3) end
+function ItemContainer:getSomeTagEval(tag, functionObj, count, result) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
---- @param arg3 int
---- @param arg4 ArrayList
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param arg Object
+--- @param count int
+--- @param result ArrayList
 --- @return ArrayList
-function ItemContainer:getSomeTagEvalArg(arg0, arg1, arg2, arg3, arg4) end
+function ItemContainer:getSomeTagEvalArg(tag, functionObj, arg, count, result) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
---- @param arg3 int
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param arg Object
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList): ArrayList
-function ItemContainer:getSomeTagEvalArgRecurse(arg0, arg1, arg2, arg3) end
+--- @overload fun(tag: String, functionObj: LuaClosure, arg: Object, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeTagEvalArgRecurse(tag, functionObj, arg, count) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 int
+--- @param tag String
+--- @param functionObj LuaClosure
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeTagEvalRecurse(arg0, arg1, arg2) end
+--- @overload fun(tag: String, functionObj: LuaClosure, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeTagEvalRecurse(tag, functionObj, count) end
 
 --- @public
 --- @param tag String
@@ -979,38 +979,38 @@ function ItemContainer:getSomeTagRecurse(tag, count) end
 function ItemContainer:getSomeType(type, count) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 int
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeTypeEval(arg0, arg1, arg2) end
+--- @overload fun(type: String, functionObj: LuaClosure, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeEval(type, functionObj, count) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
---- @param arg3 int
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList): ArrayList
-function ItemContainer:getSomeTypeEvalArg(arg0, arg1, arg2, arg3) end
+--- @overload fun(type: String, functionObj: LuaClosure, arg: Object, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeEvalArg(type, functionObj, arg, count) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 Object
---- @param arg3 int
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param arg Object
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: Object, arg3: int, arg4: ArrayList): ArrayList
-function ItemContainer:getSomeTypeEvalArgRecurse(arg0, arg1, arg2, arg3) end
+--- @overload fun(type: String, functionObj: LuaClosure, arg: Object, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeEvalArgRecurse(type, functionObj, arg, count) end
 
 --- @public
---- @param arg0 String
---- @param arg1 LuaClosure
---- @param arg2 int
+--- @param type String
+--- @param functionObj LuaClosure
+--- @param count int
 --- @return ArrayList
---- @overload fun(arg0: String, arg1: LuaClosure, arg2: int, arg3: ArrayList): ArrayList
-function ItemContainer:getSomeTypeEvalRecurse(arg0, arg1, arg2) end
+--- @overload fun(type: String, functionObj: LuaClosure, count: int, result: ArrayList): ArrayList
+function ItemContainer:getSomeTypeEvalRecurse(type, functionObj, count) end
 
 --- @public
 --- @param type String

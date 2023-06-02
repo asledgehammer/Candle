@@ -899,11 +899,11 @@ function IsoObject:reuseGridSquare() end
 function IsoObject:save(output) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
---- @param arg2 ByteBuffer
+--- @param change String
+--- @param tbl KahluaTable
+--- @param bb ByteBuffer
 --- @return void
-function IsoObject:saveChange(arg0, arg1, arg2) end
+function IsoObject:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param bb ByteBuffer
@@ -914,7 +914,7 @@ function IsoObject:saveState(bb) end
 --- @param change String
 --- @return void
 --- @overload fun(arg0: String, arg1: Object[]): void
---- @overload fun(arg0: String, arg1: KahluaTable): void
+--- @overload fun(change: String, tbl: KahluaTable): void
 function IsoObject:sendObjectChange(change) end
 
 --- @public
@@ -1113,9 +1113,9 @@ function IsoObject:setSpriteFromName(name) end
 function IsoObject:setSquare(square) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable the table to set
 --- @return void
-function IsoObject:setTable(arg0) end
+function IsoObject:setTable(table) end
 
 --- @public
 --- @param tainted boolean

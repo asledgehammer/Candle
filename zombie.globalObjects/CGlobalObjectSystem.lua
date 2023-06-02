@@ -13,12 +13,12 @@ CGlobalObjectSystem = {};
 function CGlobalObjectSystem:Reset() end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 KahluaTable
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param args KahluaTable
 --- @return void
-function CGlobalObjectSystem:receiveNewLuaObjectAt(arg0, arg1, arg2, arg3) end
+function CGlobalObjectSystem:receiveNewLuaObjectAt(x, y, z, args) end
 
 --- @public
 --- @param x int
@@ -28,25 +28,25 @@ function CGlobalObjectSystem:receiveNewLuaObjectAt(arg0, arg1, arg2, arg3) end
 function CGlobalObjectSystem:receiveRemoveLuaObjectAt(x, y, z) end
 
 --- @public
---- @param arg0 String
---- @param arg1 KahluaTable
+--- @param command String
+--- @param args KahluaTable
 --- @return void
-function CGlobalObjectSystem:receiveServerCommand(arg0, arg1) end
+function CGlobalObjectSystem:receiveServerCommand(command, args) end
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 KahluaTable
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param args KahluaTable
 --- @return void
-function CGlobalObjectSystem:receiveUpdateLuaObjectAt(arg0, arg1, arg2, arg3) end
+function CGlobalObjectSystem:receiveUpdateLuaObjectAt(x, y, z, args) end
 
 --- @public
---- @param arg0 String
---- @param arg1 IsoPlayer
---- @param arg2 KahluaTable
+--- @param command String
+--- @param player IsoPlayer
+--- @param args KahluaTable
 --- @return void
-function CGlobalObjectSystem:sendCommand(arg0, arg1, arg2) end
+function CGlobalObjectSystem:sendCommand(command, player, args) end
 
 
 ------------------------------------

@@ -15,10 +15,10 @@ DoubleSandboxOption = {};
 function DoubleSandboxOption:asConfigOption() end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function DoubleSandboxOption:fromTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function DoubleSandboxOption:fromTable(table) end
 
 --- @public
 --- @return String
@@ -68,10 +68,10 @@ function DoubleSandboxOption:setPageName(pageName) end
 function DoubleSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return void
---- @overload fun(arg0: KahluaTable): void
-function DoubleSandboxOption:toTable(arg0) end
+--- @overload fun(table: KahluaTable): void
+function DoubleSandboxOption:toTable(table) end
 
 
 ------------------------------------

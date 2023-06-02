@@ -265,50 +265,50 @@ function IsoMetaGrid:loadZones() end
 function IsoMetaGrid:processZones() end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 String
---- @param arg4 KahluaTable
---- @param arg5 KahluaTable
+--- @param name String
+--- @param type String
+--- @param z int
+--- @param geometry String
+--- @param pointsTable KahluaTable
+--- @param properties KahluaTable
 --- @return Zone
-function IsoMetaGrid:registerGeometryZone(arg0, arg1, arg2, arg3, arg4, arg5) end
+function IsoMetaGrid:registerGeometryZone(name, type, z, geometry, pointsTable, properties) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 KahluaTable
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param width int
+--- @param height int
+--- @param properties KahluaTable
 --- @return Zone
-function IsoMetaGrid:registerMannequinZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoMetaGrid:registerMannequinZone(name, type, x, y, z, width, height, properties) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 KahluaTable
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param width int
+--- @param height int
+--- @param properties KahluaTable
 --- @return void
-function IsoMetaGrid:registerRoomTone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoMetaGrid:registerRoomTone(name, type, x, y, z, width, height, properties) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 KahluaTable
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param width int
+--- @param height int
+--- @param properties KahluaTable
 --- @return Zone
-function IsoMetaGrid:registerVehiclesZone(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function IsoMetaGrid:registerVehiclesZone(name, type, x, y, z, width, height, properties) end
 
 --- @public
 --- @param name String
