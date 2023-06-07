@@ -66,7 +66,7 @@ function Color.colorToABGR(val) end
 --- @public
 --- @static
 ---
----  Decode a number in a string and process it as a colour reference.
+---  Decode a number in a string and process it as a colour  reference.
 ---
 --- @param nm String The number string to decode
 --- @return Color The color generated from the number read
@@ -213,8 +213,8 @@ function Color:equals(other) end
 --- @public
 ---
 ---  Converts the supplied binary value into color values, and sets the result to
----  object. Performs a clamp on the alpha channel. Performs a special-case on the
----  channel, where if it is 0, it is set to MAX instead.
+---  object.   Performs a clamp on the alpha channel.   Performs a special-case on
+---  alpha channel, where if it is 0, it is set to MAX instead.
 ---
 --- @param valueABGR int
 --- @return void

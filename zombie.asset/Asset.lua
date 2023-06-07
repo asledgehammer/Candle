@@ -50,9 +50,9 @@ function Asset:isFailure() end
 function Asset:isReady() end
 
 --- @public
---- @param arg0 State
+--- @param state State
 --- @return void
-function Asset:onCreated(arg0) end
+function Asset:onCreated(state) end
 
 --- @public
 --- @param dependent_asset Asset
@@ -60,8 +60,8 @@ function Asset:onCreated(arg0) end
 function Asset:removeDependency(dependent_asset) end
 
 --- @public
---- @param arg0 AssetParams
+--- @param params AssetParams
 --- @return void
-function Asset:setAssetParams(arg0) end
+function Asset:setAssetParams(params) end
 
 

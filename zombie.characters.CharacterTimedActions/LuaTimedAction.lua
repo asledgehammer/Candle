@@ -35,7 +35,7 @@ function LuaTimedAction:valid() end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
---- @param arg1 IsoGameCharacter
+--- @param table KahluaTable
+--- @param chr IsoGameCharacter
 --- @return LuaTimedAction
-function LuaTimedAction.new(arg0, arg1) end
+function LuaTimedAction.new(table, chr) end

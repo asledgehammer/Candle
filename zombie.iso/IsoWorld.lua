@@ -110,17 +110,17 @@ function IsoWorld.isAnimRecorderDiscardTriggered() end
 
 --- @public
 --- @static
---- @param __in InputStream
+--- @param __in__ InputStream
 --- @return int
---- @overload fun(__in: RandomAccessFile): int
-function IsoWorld.readInt(__in) end
+--- @overload fun(__in__: RandomAccessFile): int
+function IsoWorld.readInt(__in__) end
 
 --- @public
 --- @static
---- @param __in InputStream
+--- @param __in__ InputStream
 --- @return String
---- @overload fun(__in: RandomAccessFile): String
-function IsoWorld.readString(__in) end
+--- @overload fun(__in__: RandomAccessFile): String
+function IsoWorld.readString(__in__) end
 
 
 ------------------------------------
@@ -474,17 +474,17 @@ function IsoWorld:setGameMode(mode) end
 
 --- @public
 ---
----  setGlobalTemperature is now deprecated. Does nothing. member globalTemperature
----  replaced with ClimateManager.getTemperature()
+---  setGlobalTemperature is now deprecated. Does nothing.    member
+---  is replaced with ClimateManager.getTemperature()
 ---
 --- @param globalTemperature float
 --- @return void
 function IsoWorld:setGlobalTemperature(globalTemperature) end
 
 --- @public
---- @param __on boolean
+--- @param __on__ boolean
 --- @return void
-function IsoWorld:setHydroPowerOn(__on) end
+function IsoWorld:setHydroPowerOn(__on__) end
 
 --- @public
 --- @param desc SurvivorDesc

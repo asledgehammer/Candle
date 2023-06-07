@@ -10,30 +10,30 @@ FixingManager = {};
 
 --- @public
 --- @static
---- @param arg0 InventoryItem
---- @param arg1 IsoGameCharacter
---- @param arg2 Fixing
---- @param arg3 Fixer
+--- @param brokenItem InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fixing Fixing
+--- @param fixer Fixer
 --- @return InventoryItem
-function FixingManager.fixItem(arg0, arg1, arg2, arg3) end
+function FixingManager.fixItem(brokenItem, chr, fixing, fixer) end
 
 --- @public
 --- @static
---- @param arg0 InventoryItem
---- @param arg1 IsoGameCharacter
---- @param arg2 Fixing
---- @param arg3 Fixer
+--- @param brokenItem InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fixing Fixing
+--- @param fixer Fixer
 --- @return double
-function FixingManager.getChanceOfFail(arg0, arg1, arg2, arg3) end
+function FixingManager.getChanceOfFail(brokenItem, chr, fixing, fixer) end
 
 --- @public
 --- @static
---- @param arg0 InventoryItem
---- @param arg1 IsoGameCharacter
---- @param arg2 Fixing
---- @param arg3 Fixer
+--- @param brokenItem InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fixing Fixing
+--- @param fixer Fixer
 --- @return double
-function FixingManager.getCondRepaired(arg0, arg1, arg2, arg3) end
+function FixingManager.getCondRepaired(brokenItem, chr, fixing, fixer) end
 
 --- @public
 --- @static
@@ -43,11 +43,11 @@ function FixingManager.getFixes(item) end
 
 --- @public
 --- @static
---- @param arg0 IsoGameCharacter
---- @param arg1 Fixer
---- @param arg2 InventoryItem
+--- @param chr IsoGameCharacter
+--- @param fixer Fixer
+--- @param brokenItem InventoryItem
 --- @return void
-function FixingManager.useFixer(arg0, arg1, arg2) end
+function FixingManager.useFixer(chr, fixer, brokenItem) end
 
 
 ------------------------------------

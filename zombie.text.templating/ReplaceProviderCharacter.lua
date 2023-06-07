@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ReplaceProviderCharacter: ReplaceProvider TurboTuTone. Example of ReplaceProvider that registers firstname and lastname keys for the supplied character.
+--- @class ReplaceProviderCharacter: ReplaceProvider TurboTuTone.  Example of ReplaceProvider that registers firstname and lastname keys for the supplied character.
 --- @field public class any
 ReplaceProviderCharacter = {};
 

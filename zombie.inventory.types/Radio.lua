@@ -22,7 +22,7 @@ Radio = {};
 --- @return void
 --- @overload fun(line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
 --- @overload fun(msg: ChatMessage, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
---- @overload fun(player: IsoPlayer, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int): void
 function Radio:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
@@ -124,7 +124,7 @@ function Radio:save(output, net) end
 --- @public
 --- @param delta float
 --- @return void
---- @overload fun(d: float): void
+--- @overload fun(delta: float): void
 function Radio:setDelta(delta) end
 
 --- @public

@@ -119,8 +119,8 @@ function BodyPart:deepWounded() end
 
 --- @public
 ---
----  Generate an amount of bleeding time will depend on injuries type and body part
----  Use this instead of setBleedingTime() so all is automated.
+---  Generate an amount of bleeding time  will depend on injuries type and body part
+---   Use this instead of setBleedingTime() so all is automated.
 ---
 --- @return void
 function BodyPart:generateBleeding() end
@@ -540,7 +540,7 @@ function BodyPart:stitched() end
 --- @param bb ByteBuffer
 --- @param id byte
 --- @return void
---- @overload fun(arg0: BodyPart, arg1: Updater): void
+--- @overload fun(other: BodyPart, updater: Updater): void
 function BodyPart:sync(bb, id) end
 
 

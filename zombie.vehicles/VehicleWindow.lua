@@ -27,9 +27,9 @@ function VehicleWindow:getOpenDelta() end
 function VehicleWindow:hit(chr) end
 
 --- @public
---- @param arg0 Window
+--- @param scriptWindow Window
 --- @return void
-function VehicleWindow:init(arg0) end
+function VehicleWindow:init(scriptWindow) end
 
 --- @public
 --- @return boolean

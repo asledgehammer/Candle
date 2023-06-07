@@ -91,14 +91,14 @@ function SpriteRenderer:create() end
 function SpriteRenderer:doCoreIntParam(id, val) end
 
 --- @public
---- @param arg0 GenericDrawer
+--- @param gd GenericDrawer
 --- @return void
-function SpriteRenderer:drawGeneric(arg0) end
+function SpriteRenderer:drawGeneric(gd) end
 
 --- @public
---- @param arg0 ModelSlot
+--- @param model ModelSlot
 --- @return void
-function SpriteRenderer:drawModel(arg0) end
+function SpriteRenderer:drawModel(model) end
 
 --- @public
 --- @param playerIndex int
@@ -509,9 +509,9 @@ function SpriteRenderer:setDefaultStyle(style) end
 function SpriteRenderer:setDoAdditive(bDoAdditive) end
 
 --- @public
---- @param arg0 WallShaderTexRender
+--- @param wallTexRender WallShaderTexRender
 --- @return void
-function SpriteRenderer:setExtraWallShaderParams(arg0) end
+function SpriteRenderer:setExtraWallShaderParams(wallTexRender) end
 
 --- @public
 --- @param player int

@@ -34,7 +34,7 @@ function IsoWaveSignal.Reset() end
 --- @overload fun(line: String, r: int, g: int, b: int, guid: String, codes: String, distance: int): void
 --- @overload fun(line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int, attractZombies: boolean): void
 --- @overload fun(line: String, r: int, g: int, b: int, guid: String, codes: String, distance: int, attractZombies: boolean): void
---- @overload fun(player: IsoPlayer, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int): void
 function IsoWaveSignal:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
@@ -152,7 +152,7 @@ function IsoWaveSignal:saveState(bb) end
 --- @public
 --- @param delta float
 --- @return void
---- @overload fun(d: float): void
+--- @overload fun(delta: float): void
 function IsoWaveSignal:setDelta(delta) end
 
 --- @public

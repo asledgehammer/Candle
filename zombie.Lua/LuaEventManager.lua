@@ -83,12 +83,12 @@ function LuaEventManager.triggerEventUnique(event, param1) end
 
 --- @public
 ---
----  Description copied from interface: se.krka.kahlua.vm.JavaFunction
+---  Description copied from interface: se.krka.kahlua.vm.JavaFunction
 ---
 --- @param callFrame LuaCallFrame
 --- @param nArguments int
 --- @return int N, number of return values. The top N objects on the stack are considered the return values.
---- @overload fun(arg0: LuaCallFrame, arg1: int): int
+--- @overload fun(callFrame: LuaCallFrame, nArguments: int): int N, number of return values. The top N objects on the stack are considered the return values.
 function LuaEventManager:call(callFrame, nArguments) end
 
 

@@ -147,8 +147,8 @@ function BaseVehicle:WeaponHit(chr, weapon) end
 --- @public
 ---
 ---  When hitting a character (zombie or player) damage aren't the same as hitting a
----  damaged will be mainly focus on windshield/hood, not on doors/windows like when
----  a wall.
+---   damaged will be mainly focus on windshield/hood, not on doors/windows like
+---  hitting a wall.
 ---
 --- @param dmg int
 --- @return void
@@ -157,7 +157,7 @@ function BaseVehicle:addDamageFrontHitAChr(dmg) end
 --- @public
 ---
 ---  When hitting a character (zombie or player) damage aren't the same as hitting a
----  damaged will be mainly focus on windshield/truckbed, not on doors/windows like
+---   damaged will be mainly focus on windshield/truckbed, not on doors/windows like
 ---  hitting a wall.
 ---
 --- @param dmg int
@@ -207,16 +207,16 @@ function BaseVehicle:addToWorld() end
 function BaseVehicle:areAllDoorsLocked() end
 
 --- @public
---- @param arg0 Area
+--- @param area Area
 --- @return Vector2
---- @overload fun(arg0: Area, arg1: Vector2): Vector2
-function BaseVehicle:areaPositionWorld(arg0) end
+--- @overload fun(area: Area, out: Vector2): Vector2
+function BaseVehicle:areaPositionWorld(area) end
 
 --- @public
---- @param arg0 Area
+--- @param area Area
 --- @return Vector2
---- @overload fun(arg0: Area, arg1: Vector2): Vector2
-function BaseVehicle:areaPositionWorld4PlayerInteract(arg0) end
+--- @overload fun(area: Area, out: Vector2): Vector2
+function BaseVehicle:areaPositionWorld4PlayerInteract(area) end
 
 --- @public
 --- @param attachmentName String
@@ -764,7 +764,7 @@ function BaseVehicle:getObjectName() end
 --- @public
 ---
 ---  Give the offroad efficiency of the car, based on car's script + where the
----  is (in forest you get more damage than vegitation) Currently x2 to balance
+---  is (in forest you get more  damage than vegitation)  Currently x2 to balance
 ---
 --- @return float
 function BaseVehicle:getOffroadEfficiency() end
@@ -827,11 +827,11 @@ function BaseVehicle:getPassengerLocalPos(seat, v) end
 function BaseVehicle:getPassengerPosition(seat, id) end
 
 --- @public
---- @param arg0 Position
---- @param arg1 Vector3f
+--- @param posn Position
+--- @param out Vector3f
 --- @return Vector3f
 --- @overload fun(x: float, y: float, z: float, out: Vector3f): Vector3f
-function BaseVehicle:getPassengerPositionWorldPos(arg0, arg1) end
+function BaseVehicle:getPassengerPositionWorldPos(posn, out) end
 
 --- @public
 --- @param seat int
@@ -1101,7 +1101,7 @@ function BaseVehicle:haveOneDoorUnlocked() end
 --- @public
 --- @param chr IsoZombie
 --- @return void
---- @overload fun(arg0: IsoGameCharacter, arg1: HitVars): void
+--- @overload fun(character: IsoGameCharacter, vars: HitVars): void
 function BaseVehicle:hitCharacter(chr) end
 
 --- @public
@@ -1276,9 +1276,9 @@ function BaseVehicle:isLocalPhysicSim() end
 function BaseVehicle:isMechanicUIOpen() end
 
 --- @public
---- @param arg0 Authorization
+--- @param netPlayerAuthorization Authorization
 --- @return boolean
-function BaseVehicle:isNetPlayerAuthorization(arg0) end
+function BaseVehicle:isNetPlayerAuthorization(netPlayerAuthorization) end
 
 --- @public
 --- @param netPlayerId short
@@ -1358,10 +1358,10 @@ function BaseVehicle:lockServerUpdate(lockTimeMs) end
 function BaseVehicle:needPartsUpdate() end
 
 --- @public
---- @param arg0 Authorization
---- @param arg1 short
+--- @param authorization Authorization
+--- @param authorizationPlayer short
 --- @return void
-function BaseVehicle:netPlayerFromServerUpdate(arg0, arg1) end
+function BaseVehicle:netPlayerFromServerUpdate(authorization, authorizationPlayer) end
 
 --- @public
 --- @param bb ByteBuffer
@@ -1537,7 +1537,7 @@ function BaseVehicle:scriptReloaded() end
 --- @public
 ---
 ---  Used in mechanics UI, we enable the vehicle in Bullet when starting mechanics
----  physic will be updated. When we close the UI, we should disable it in Bullet,
+---  physic will be updated. When  we close the UI, we should  disable it in Bullet,
 ---  if the engine is running.
 ---
 --- @param active boolean
@@ -1658,9 +1658,9 @@ function BaseVehicle:setGeneralPartCondition(baseQuality, chanceToSpawnDamaged) 
 function BaseVehicle:setGoodCar(isGoodCar) end
 
 --- @public
---- @param __on boolean
+--- @param __on__ boolean
 --- @return void
-function BaseVehicle:setHeadlightsOn(__on) end
+function BaseVehicle:setHeadlightsOn(__on__) end
 
 --- @public
 --- @param hotwired boolean
@@ -1723,10 +1723,10 @@ function BaseVehicle:setMechanicalID(mechanicalID) end
 function BaseVehicle:setNeedPartsUpdate(needPartsUpdate) end
 
 --- @public
---- @param arg0 Authorization
---- @param arg1 int
+--- @param netPlayerAuthorization Authorization
+--- @param netPlayerId int
 --- @return void
-function BaseVehicle:setNetPlayerAuthorization(arg0, arg1) end
+function BaseVehicle:setNetPlayerAuthorization(netPlayerAuthorization, netPlayerId) end
 
 --- @public
 --- @param seat int
@@ -1787,9 +1787,9 @@ function BaseVehicle:setSkinIndex(index) end
 function BaseVehicle:setSmashed(location) end
 
 --- @public
---- @param __on boolean
+--- @param __on__ boolean
 --- @return void
-function BaseVehicle:setStoplightsOn(__on) end
+function BaseVehicle:setStoplightsOn(__on__) end
 
 --- @public
 --- @param wheelIndex int
@@ -1828,14 +1828,14 @@ function BaseVehicle:setVehicleTowing(vehicleB, attachmentA, attachmentB) end
 function BaseVehicle:setVehicleType(type) end
 
 --- @public
---- @param __on boolean
+--- @param __on__ boolean
 --- @return void
-function BaseVehicle:setWindowLightsOn(__on) end
+function BaseVehicle:setWindowLightsOn(__on__) end
 
 --- @public
---- @param __in Transform
+--- @param __in__ Transform
 --- @return void
-function BaseVehicle:setWorldTransform(__in) end
+function BaseVehicle:setWorldTransform(__in__) end
 
 --- @public
 --- @param name String
@@ -1873,7 +1873,7 @@ function BaseVehicle:softReset() end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return void
---- @overload fun(arg0: long, arg1: GameSoundClip, arg2: BitSet): void
+--- @overload fun(eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
 function BaseVehicle:startEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -1881,7 +1881,7 @@ function BaseVehicle:startEvent(eventInstance, clip, parameterSet) end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return void
---- @overload fun(arg0: long, arg1: GameSoundClip, arg2: BitSet): void
+--- @overload fun(eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
 function BaseVehicle:stopEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -2004,7 +2004,7 @@ function BaseVehicle:triggerAlarm() end
 --- @public
 ---
 ---  Try to hotwire a car Calcul is: 100-Engine quality (capped to 5) + Skill
----  electricityLvl * 4 % of hotwiring the car Failing may cause the ignition to
+---  electricityLvl * 4 % of  hotwiring the car Failing may cause the ignition to
 ---
 --- @param electricityLevel int
 --- @return void
@@ -2035,7 +2035,7 @@ function BaseVehicle:updateControls() end
 --- @param eventInstance long
 --- @param clip GameSoundClip
 --- @return void
---- @overload fun(arg0: long, arg1: GameSoundClip): void
+--- @overload fun(eventInstance: long, clip: GameSoundClip): void
 function BaseVehicle:updateEvent(eventInstance, clip) end
 
 --- @public

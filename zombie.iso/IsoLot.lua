@@ -35,21 +35,21 @@ function IsoLot.put(lot) end
 
 --- @public
 --- @static
---- @param __in RandomAccessFile
+--- @param __in__ RandomAccessFile
 --- @return int
-function IsoLot.readInt(__in) end
+function IsoLot.readInt(__in__) end
 
 --- @public
 --- @static
---- @param __in RandomAccessFile
+--- @param __in__ RandomAccessFile
 --- @return int
-function IsoLot.readShort(__in) end
+function IsoLot.readShort(__in__) end
 
 --- @public
 --- @static
---- @param __in BufferedRandomAccessFile
+--- @param __in__ BufferedRandomAccessFile
 --- @return String
-function IsoLot.readString(__in) end
+function IsoLot.readString(__in__) end
 
 
 ------------------------------------

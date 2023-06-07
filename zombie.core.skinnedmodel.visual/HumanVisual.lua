@@ -164,10 +164,10 @@ function HumanVisual:isZombie() end
 
 --- @public
 --- @param start float
---- @param __end float
+--- @param __end__ float
 --- @param delta float
 --- @return float
-function HumanVisual:lerp(start, __end, delta) end
+function HumanVisual:lerp(start, __end__, delta) end
 
 --- @public
 --- @param input ByteBuffer

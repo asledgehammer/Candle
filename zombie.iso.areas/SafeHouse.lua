@@ -68,9 +68,9 @@ function SafeHouse.isPlayerAllowedOnSquare(player, sq) end
 --- @public
 --- @static
 ---
----  Return if the square is a safehouse non allowed for the player You need to be
----  a safehouse AND not be allowed to return the safe If you're allowed, you'll
----  null in return If username is null, you basically just return if there's a
+---  Return if the square is a safehouse non allowed for the player You need to be 
+---  a safehouse AND not be allowed to return the safe If you're allowed,  you'll
+---  null in return If username is null, you basically just return if  there's a
 ---  here
 ---
 --- @param square IsoGridSquare
@@ -273,8 +273,8 @@ function SafeHouse:updatePlayersConnected() end
 
 --- @public
 ---
----  Update the last visited value everytime someone is in this safehouse If it's
----  visited for some time (SafehouseRemoval serveroption) it's automatically
+---  Update the last visited value everytime someone is in this safehouse If it's 
+---  visited for some time (SafehouseRemoval serveroption) it's automatically 
 ---
 --- @param player IsoPlayer
 --- @return void

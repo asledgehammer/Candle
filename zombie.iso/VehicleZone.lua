@@ -19,13 +19,13 @@ function VehicleZone:isFaceDirection() end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 KahluaTable
+--- @param name String
+--- @param type String
+--- @param x int
+--- @param y int
+--- @param z int
+--- @param w int
+--- @param h int
+--- @param properties KahluaTable
 --- @return VehicleZone
-function VehicleZone.new(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+function VehicleZone.new(name, type, x, y, z, w, h, properties) end

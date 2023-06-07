@@ -14,10 +14,10 @@ HandWeapon = {};
 function HandWeapon:CanStack(item) end
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return void
-function HandWeapon:DoTooltip(arg0, arg1) end
+function HandWeapon:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return boolean

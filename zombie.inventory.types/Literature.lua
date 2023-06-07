@@ -9,10 +9,10 @@ Literature = {};
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return void
-function Literature:DoTooltip(arg0, arg1) end
+function Literature:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return boolean

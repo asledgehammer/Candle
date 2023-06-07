@@ -122,7 +122,7 @@ function IsoWindow:ToggleWindow(chr) end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
---- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
+--- @overload fun(owner: IsoGameCharacter, weapon: HandWeapon): void
 function IsoWindow:WeaponHit(owner, weapon) end
 
 --- @public

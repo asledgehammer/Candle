@@ -24,9 +24,9 @@ function RZSFishingTrip.getFishingTools() end
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function RZSFishingTrip:randomizeZoneStory(arg0) end
+function RZSFishingTrip:randomizeZoneStory(zone) end
 
 
 ------------------------------------

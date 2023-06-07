@@ -11,9 +11,9 @@ MultiStageBuilding = {};
 
 --- @public
 --- @static
---- @param arg0 Stage
+--- @param stage Stage
 --- @return void
-function MultiStageBuilding.addStage(arg0) end
+function MultiStageBuilding.addStage(stage) end
 
 --- @public
 --- @static

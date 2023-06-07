@@ -64,7 +64,7 @@ function PZArrayList:clear() end
 --- @public
 --- @param o Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(o: Object): boolean
 function PZArrayList:contains(o) end
 
 --- @public
@@ -80,7 +80,7 @@ function PZArrayList:equals(arg0) end
 --- @public
 --- @param index int
 --- @return Object
---- @overload fun(arg0: int): Object
+--- @overload fun(index: int): Object
 function PZArrayList:get(index) end
 
 --- @public
@@ -94,7 +94,7 @@ function PZArrayList:hashCode() end
 --- @public
 --- @param o Object
 --- @return int
---- @overload fun(arg0: Object): int
+--- @overload fun(o: Object): int
 function PZArrayList:indexOf(o) end
 
 --- @public
@@ -116,15 +116,15 @@ function PZArrayList:lastIndexOf(arg0) end
 --- @return ListIterator
 --- @overload fun(): ListIterator
 --- @overload fun(index: int): ListIterator
---- @overload fun(arg0: int): ListIterator
+--- @overload fun(index: int): ListIterator
 function PZArrayList:listIterator() end
 
 --- @public
 --- @param index int
 --- @return Object
---- @overload fun(arg0: int): Object
+--- @overload fun(index: int): Object
 --- @overload fun(o: Object): boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(o: Object): boolean
 function PZArrayList:remove(index) end
 
 --- @public

@@ -47,7 +47,7 @@ function WalkTowardState:exit(owner) end
 
 --- @public
 ---
----  Return TRUE if the owner is currently moving. Defaults to FALSE
+---  Return TRUE if the owner is currently moving.  Defaults to FALSE
 ---
 --- @param owner IsoGameCharacter
 --- @return boolean

@@ -538,9 +538,9 @@ function UIManager.setMouseGrab(aMouseGrab) end
 
 --- @public
 --- @static
---- @param arg0 ClickObject
+--- @param aPicked ClickObject the Picked to set
 --- @return void
-function UIManager.setPicked(arg0) end
+function UIManager.setPicked(aPicked) end
 
 --- @public
 --- @static

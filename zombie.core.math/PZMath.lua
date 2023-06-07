@@ -5,7 +5,7 @@
 --- @field public degToRads float Conversion ratios, Degrees to Radians and back
 --- @field public microsToNanos long
 --- @field public millisToMicros long
---- @field public PI float The double value that is closer than any other to pi, the ratio of the circumference of a circle to its diameter.
+--- @field public PI float The double value that is closer than any other to  pi, the ratio of the circumference of a circle to its  diameter.
 --- @field public PI2 float
 --- @field public radToDegs float
 --- @field public secondsToMillis long
@@ -25,13 +25,13 @@ function PZMath.abs(val) end
 --- @public
 --- @static
 ---
----  Almost Identity Imagine you don't want to modify a signal unless it's drops to
----  or close to it, in which case you want to replace the value with a small
----  constant. Then, rather than clamping the value and introduce a discontinuity,
+---  Almost Identity   Imagine you don't want to modify a signal unless it's drops
+---  zero or close to it, in which case you want  to replace the value with a small
+---  constant. Then, rather than clamping the value and introduce  a discontinuity,
 ---  can smoothly blend the signal into the desired clipped value. So, let m be the
----  (anything above m stays unchanged), and n the value things will take when the
----  is zero. Then, the following function does the soft clipping (in a cubic
----  https://iquilezles.org/www/articles/functions/functions.htm
+---   (anything above m stays unchanged), and n the value things will take when the
+---  is zero.  Then, the following function does the soft clipping (in a cubic
+---    https://iquilezles.org/www/articles/functions/functions.htm
 ---
 --- @param x float value in [0..1]
 --- @param m float
@@ -42,12 +42,12 @@ function PZMath.almostIdentity(x, m, n) end
 --- @public
 --- @static
 ---
----  Almost Unit Identity This is a near-identiy function that maps the unit
----  into itself. It is the cousin of smoothstep(), in that it maps 0 to 0, 1 to 1,
----  has a 0 derivative at the origin, just like smoothstep. However, instead of
+---  Almost Unit Identity   This is a near-identiy function that maps the unit
+---  into itself. It is the cousin of smoothstep(), in  that it maps 0 to 0, 1 to 1,
+---  has a 0 derivative at the origin, just like smoothstep. However, instead of 
 ---  a 0 derivative at 1, it has a derivative of 1 at that point. It's equivalent to
----  Almost Identiy above with n=0 and m=1. Since it's a cubic just like
----  it is very fast to evaluate.
+---  Almost Identiy above  with n=0 and m=1. Since it's a cubic just like
+---  it is very fast to evaluate.  
 ---
 --- @param x float value in [0..1]
 --- @return float value in [0..1]
@@ -144,12 +144,12 @@ function PZMath.frac(val) end
 --- @public
 --- @static
 ---
----  Gain Remapping the unit interval into the unit interval by expanding the sides
----  compressing the center, and keeping 1/2 mapped to 1/2, that can be done with
----  gain() function. This was a common function in RSL tutorials (the Renderman
----  Language). k=1 is the identity curve, k<1 produces the classic gain() shape,
----  k>1 produces "s" shaped curces. The curves are symmetric (and inverse) for k=a
----  k=1/a. https://iquilezles.org/www/articles/functions/functions.htm
+---  Gain   Remapping the unit interval into the unit interval by expanding the
+---  and compressing the center, and  keeping 1/2 mapped to 1/2, that can be done
+---  the gain() function. This was a common function in RSL tutorials  (the
+---  Shading Language). k=1 is the identity curve, k<1 produces the classic gain()
+---  and k>1  produces "s" shaped curces. The curves are symmetric (and inverse) for
+---  and k=1/a.   https://iquilezles.org/www/articles/functions/functions.htm
 ---
 --- @param x float
 --- @param k float

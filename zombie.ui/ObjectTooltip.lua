@@ -118,9 +118,9 @@ function ObjectTooltip:adjustWidth(textX, text) end
 function ObjectTooltip:beginLayout() end
 
 --- @public
---- @param arg0 Layout
+--- @param layout Layout
 --- @return void
-function ObjectTooltip:endLayout(arg0) end
+function ObjectTooltip:endLayout(layout) end
 
 --- @public
 --- @return IsoGameCharacter

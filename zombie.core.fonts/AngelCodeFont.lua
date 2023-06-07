@@ -1,6 +1,6 @@
 --- @meta
 
---- @class AngelCodeFont A font implementation that will parse BMFont format font files. The font files can be output by Hiero, which is included with Slick, and also the AngelCode font tool available at:
+--- @class AngelCodeFont A font implementation that will parse BMFont format font files. The font files can be output  by Hiero, which is included with Slick, and also the AngelCode font tool available at:
 --- @field public class any
 --- @implement Font
 --- @implement AssetStateObserver
@@ -23,7 +23,7 @@ function AngelCodeFont:destroy() end
 
 --- @public
 ---
----  Description copied from interface: Font
+---  Description copied from interface: Font
 ---
 --- @param x float The x location at which to draw the string
 --- @param y float
@@ -42,16 +42,16 @@ function AngelCodeFont:drawString(x, y, text) end
 
 --- @public
 ---
----  Description copied from interface: Font
+---  Description copied from interface: Font
 ---
 --- @param text String The string to obtain the rendered with of
 --- @return int The width of the given string
---- @overload fun(str: String): int The width of the given string
+--- @overload fun(text: String): int The width of the given string
 function AngelCodeFont:getHeight(text) end
 
 --- @public
 ---
----  Description copied from interface: Font
+---  Description copied from interface: Font
 ---
 --- @return int The maxium height of any line drawn by this font
 --- @overload fun(): int The maxium height of any line drawn by this font
@@ -59,17 +59,17 @@ function AngelCodeFont:getLineHeight() end
 
 --- @public
 ---
----  Description copied from interface: Font
+---  Description copied from interface: Font
 ---
 --- @param text String The string to obtain the rendered with of
 --- @return int The width of the given string
---- @overload fun(str: String): int The width of the given string
+--- @overload fun(text: String): int The width of the given string
 --- @overload fun(text: String, xAdvance: boolean): int
---- @overload fun(str: String, xAdvance: boolean): int
---- @overload fun(text: String, start: int, __end: int): int
---- @overload fun(str: String, startIndex: int, endIndex: int): int
---- @overload fun(text: String, start: int, __end: int, xadvance: boolean): int
---- @overload fun(str: String, startIndex: int, endIndex: int, xAdvance: boolean): int
+--- @overload fun(text: String, xAdvance: boolean): int
+--- @overload fun(text: String, start: int, __end__: int): int
+--- @overload fun(text: String, start: int, __end__: int): int
+--- @overload fun(text: String, start: int, __end__: int, xadvance: boolean): int
+--- @overload fun(text: String, start: int, __end__: int, xadvance: boolean): int
 function AngelCodeFont:getWidth(text) end
 
 --- @public
@@ -86,12 +86,12 @@ function AngelCodeFont:getYOffset(text) end
 function AngelCodeFont:isEmpty() end
 
 --- @public
---- @param arg0 State
---- @param arg1 State
---- @param arg2 Asset
+--- @param oldState State
+--- @param newState State
+--- @param asset Asset
 --- @return void
---- @overload fun(arg0: State, arg1: State, arg2: Asset): void
-function AngelCodeFont:onStateChanged(arg0, arg1, arg2) end
+--- @overload fun(oldState: State, newState: State, asset: Asset): void
+function AngelCodeFont:onStateChanged(oldState, newState, asset) end
 
 
 ------------------------------------
@@ -100,8 +100,8 @@ function AngelCodeFont:onStateChanged(arg0, arg1, arg2) end
 
 --- @public
 ---
----  Create a new font based on a font definition from AngelCode's tool and the font
----  generated from the tool.
+---  Create a new font based on a font definition from AngelCode's tool and  the
+---  image generated from the tool.
 ---
 --- @param fntFile String
 --- @param imgFile String

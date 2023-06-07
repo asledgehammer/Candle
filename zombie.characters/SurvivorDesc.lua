@@ -300,9 +300,9 @@ function SurvivorDesc:setLoyalty(loyalty) end
 function SurvivorDesc:setProfession(Profession) end
 
 --- @public
---- @param arg0 Profession
+--- @param profession Profession
 --- @return void
-function SurvivorDesc:setProfessionSkills(arg0) end
+function SurvivorDesc:setProfessionSkills(profession) end
 
 --- @public
 --- @param surname String the surname to set
@@ -320,9 +320,9 @@ function SurvivorDesc:setTemper(temper) end
 function SurvivorDesc:setTorso(torso) end
 
 --- @public
---- @param arg0 SurvivorType
+--- @param type SurvivorType
 --- @return void
-function SurvivorDesc:setType(arg0) end
+function SurvivorDesc:setType(type) end
 
 --- @public
 --- @param bodyLocation String

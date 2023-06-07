@@ -14,9 +14,9 @@ AirFront = {};
 function AirFront:addDaySample(noiseval) end
 
 --- @public
---- @param arg0 AirFront
+--- @param other AirFront
 --- @return void
-function AirFront:copyFrom(arg0) end
+function AirFront:copyFrom(other) end
 
 --- @public
 --- @return float

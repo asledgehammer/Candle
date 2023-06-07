@@ -45,7 +45,7 @@ function State:getStatePermissions() end
 
 --- @public
 ---
----  Return TRUE if the owner is currently attacking. Defaults to FALSE
+---  Return TRUE if the owner is currently attacking.   Defaults to FALSE
 ---
 --- @param owner IsoGameCharacter
 --- @return boolean
@@ -58,7 +58,7 @@ function State:isDoingActionThatCanBeCancelled() end
 --- @public
 ---
 ---  Return TRUE if the owner should ignore collisions when passing between two
----  Defaults to FALSE
+---   Defaults to FALSE
 ---
 --- @param owner IsoGameCharacter
 --- @param fromX int
@@ -72,7 +72,7 @@ function State:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
 ---
----  Return TRUE if the owner is currently moving. Defaults to FALSE
+---  Return TRUE if the owner is currently moving.   Defaults to FALSE
 ---
 --- @param owner IsoGameCharacter
 --- @return boolean

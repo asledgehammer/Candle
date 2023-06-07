@@ -19,9 +19,9 @@ function RZSTrapperCamp.getTrapList() end
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function RZSTrapperCamp:randomizeZoneStory(arg0) end
+function RZSTrapperCamp:randomizeZoneStory(zone) end
 
 
 ------------------------------------

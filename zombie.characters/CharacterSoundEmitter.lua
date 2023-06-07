@@ -33,7 +33,7 @@ function CharacterSoundEmitter:isEmpty() end
 --- @return boolean
 --- @overload fun(alias: String): boolean
 --- @overload fun(eventInstance: long): boolean
---- @overload fun(channel: long): boolean
+--- @overload fun(eventInstance: long): boolean
 function CharacterSoundEmitter:isPlaying(alias) end
 
 --- @public
@@ -109,7 +109,7 @@ function CharacterSoundEmitter:stopAll() end
 --- @public
 --- @param eventInstance long
 --- @return void
---- @overload fun(handle: long): void
+--- @overload fun(eventInstance: long): void
 function CharacterSoundEmitter:stopOrTriggerSound(eventInstance) end
 
 --- @public
@@ -121,7 +121,7 @@ function CharacterSoundEmitter:stopOrTriggerSoundByName(name) end
 --- @public
 --- @param eventInstance long
 --- @return int
---- @overload fun(channel: long): int
+--- @overload fun(eventInstance: long): int
 function CharacterSoundEmitter:stopSound(eventInstance) end
 
 --- @public

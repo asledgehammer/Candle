@@ -11,20 +11,20 @@ MapObjects = {};
 --- @public
 --- @static
 --- @param spriteName String
---- @param __function LuaClosure
+--- @param __function__ LuaClosure
 --- @param priority int
 --- @return void
---- @overload fun(spriteNames: KahluaTable, __function: LuaClosure, priority: int): void
-function MapObjects.OnLoadWithSprite(spriteName, __function, priority) end
+--- @overload fun(spriteNames: KahluaTable, __function__: LuaClosure, priority: int): void
+function MapObjects.OnLoadWithSprite(spriteName, __function__, priority) end
 
 --- @public
 --- @static
 --- @param spriteName String
---- @param __function LuaClosure
+--- @param __function__ LuaClosure
 --- @param priority int
 --- @return void
---- @overload fun(spriteNames: KahluaTable, __function: LuaClosure, priority: int): void
-function MapObjects.OnNewWithSprite(spriteName, __function, priority) end
+--- @overload fun(spriteNames: KahluaTable, __function__: LuaClosure, priority: int): void
+function MapObjects.OnNewWithSprite(spriteName, __function__, priority) end
 
 --- @public
 --- @static

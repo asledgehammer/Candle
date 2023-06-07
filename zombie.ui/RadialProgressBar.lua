@@ -40,7 +40,7 @@ function RadialProgressBar:update() end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
---- @param arg1 Texture
+--- @param table KahluaTable
+--- @param tex Texture
 --- @return RadialProgressBar
-function RadialProgressBar.new(arg0, arg1) end
+function RadialProgressBar.new(table, tex) end

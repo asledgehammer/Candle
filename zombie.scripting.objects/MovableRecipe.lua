@@ -48,10 +48,10 @@ function MovableRecipe:setOnCreate(onCreate) end
 function MovableRecipe:setOnXP(onXP) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 int
+--- @param perk Perk
+--- @param level int
 --- @return void
-function MovableRecipe:setRequiredSkill(arg0, arg1) end
+function MovableRecipe:setRequiredSkill(perk, level) end
 
 --- @public
 --- @param resultItem String
@@ -86,9 +86,9 @@ function MovableRecipe:setValid(valid) end
 function MovableRecipe:setWorldSprite(worldSprite) end
 
 --- @public
---- @param arg0 Perk
+--- @param perk Perk
 --- @return void
-function MovableRecipe:setXpPerk(arg0) end
+function MovableRecipe:setXpPerk(perk) end
 
 
 ------------------------------------

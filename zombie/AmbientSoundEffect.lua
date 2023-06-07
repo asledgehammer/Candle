@@ -27,13 +27,13 @@ function AmbientSoundEffect:pause() end
 --- @public
 --- @param choice String
 --- @return void
---- @overload fun(arg0: String): void
+--- @overload fun(choice: String): void
 function AmbientSoundEffect:setName(choice) end
 
 --- @public
 --- @param volume float
 --- @return void
---- @overload fun(arg0: float): void
+--- @overload fun(volume: float): void
 function AmbientSoundEffect:setVolume(volume) end
 
 --- @public

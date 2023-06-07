@@ -128,7 +128,7 @@ function IsoZombie:addRandomBloodDirtHolesEtc() end
 
 --- @public
 ---
----  Possibly add visual bandages (bloody) on the zombie TODO: Make InventoryItem
+---  Possibly add visual bandages (bloody) on the zombie  TODO: Make InventoryItem
 ---  to it in DeadBodyAtlas to being able to remove them (like primary/secondary
 ---
 --- @return void
@@ -136,7 +136,7 @@ function IsoZombie:addRandomVisualBandages() end
 
 --- @public
 ---
----  Add some random visual damage (clothing actually) to the zombies. Those items
+---  Add some random visual damage (clothing actually) to the zombies.  Those items
 ---  appear in inventory.
 ---
 --- @return void
@@ -180,7 +180,7 @@ function IsoZombie:clearItemsToSpawnAtDeath() end
 
 --- @public
 ---
----  Description copied from class: IsoGameCharacter
+---  Description copied from class: IsoGameCharacter
 ---
 --- @param itemGuid String The item's Globally Unique Identifier (GUID).
 --- @return void
@@ -208,7 +208,7 @@ function IsoZombie:dressInPersistentOutfitID(outfitID) end
 
 --- @public
 ---
----  Description copied from class: IsoGameCharacter
+---  Description copied from class: IsoGameCharacter
 ---
 --- @return void
 function IsoZombie:dressInRandomOutfit() end
@@ -828,9 +828,9 @@ function IsoZombie:update() end
 function IsoZombie:updateVocalProperties() end
 
 --- @public
---- @param arg0 Descriptor
+--- @param sharedDesc Descriptor
 --- @return void
-function IsoZombie:useDescriptor(arg0) end
+function IsoZombie:useDescriptor(sharedDesc) end
 
 --- @public
 --- @return boolean

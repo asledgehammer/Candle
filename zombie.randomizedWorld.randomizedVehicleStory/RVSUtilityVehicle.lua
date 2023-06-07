@@ -9,37 +9,37 @@ RVSUtilityVehicle = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 String
---- @param arg3 String
---- @param arg4 String
---- @param arg5 Integer
---- @param arg6 String
---- @param arg7 ArrayList
---- @param arg8 int
---- @param arg9 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param zoneName String
+--- @param scriptName String
+--- @param outfits String
+--- @param femaleChance Integer
+--- @param vehicleDistrib String
+--- @param items ArrayList
+--- @param nbrOfItem int
+--- @param addTrailer boolean
 --- @return void
-function RVSUtilityVehicle:doUtilityVehicle(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+function RVSUtilityVehicle:doUtilityVehicle(zone, chunk, zoneName, scriptName, outfits, femaleChance, vehicleDistrib, items, nbrOfItem, addTrailer) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param debug boolean
 --- @return boolean
-function RVSUtilityVehicle:initVehicleStorySpawner(arg0, arg1, arg2) end
+function RVSUtilityVehicle:initVehicleStorySpawner(zone, chunk, debug) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return void
-function RVSUtilityVehicle:randomizeVehicleStory(arg0, arg1) end
+function RVSUtilityVehicle:randomizeVehicleStory(zone, chunk) end
 
 --- @public
---- @param arg0 VehicleStorySpawner
---- @param arg1 Element
+--- @param spawner VehicleStorySpawner
+--- @param element Element
 --- @return void
-function RVSUtilityVehicle:spawnElement(arg0, arg1) end
+function RVSUtilityVehicle:spawnElement(spawner, element) end
 
 
 ------------------------------------

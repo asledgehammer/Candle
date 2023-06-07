@@ -99,15 +99,15 @@ function GameWindow.getCoopServerHome() end
 
 --- @public
 --- @static
---- @param __in DataInputStream
+--- @param __in__ DataInputStream
 --- @return int
-function GameWindow.readInt(__in) end
+function GameWindow.readInt(__in__) end
 
 --- @public
 --- @static
---- @param __in DataInputStream
+--- @param __in__ DataInputStream
 --- @return long
-function GameWindow.readLong(__in) end
+function GameWindow.readLong(__in__) end
 
 --- @public
 --- @static

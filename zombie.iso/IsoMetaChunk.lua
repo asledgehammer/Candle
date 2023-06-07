@@ -20,9 +20,9 @@ function IsoMetaChunk:Dispose() end
 function IsoMetaChunk:addRoom(room) end
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function IsoMetaChunk:addZone(arg0) end
+function IsoMetaChunk:addZone(zone) end
 
 --- @public
 --- @return void
@@ -112,9 +112,9 @@ function IsoMetaChunk:getZonesUnique(result) end
 function IsoMetaChunk:numZones() end
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function IsoMetaChunk:removeZone(arg0) end
+function IsoMetaChunk:removeZone(zone) end
 
 --- @public
 --- @param zombieIntensity int

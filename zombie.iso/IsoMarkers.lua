@@ -48,13 +48,13 @@ function IsoMarkers:init() end
 --- @public
 --- @param id int
 --- @return boolean
---- @overload fun(arg0: CircleIsoMarker): boolean
+--- @overload fun(marker: CircleIsoMarker): boolean
 function IsoMarkers:removeCircleIsoMarker(id) end
 
 --- @public
 --- @param id int
 --- @return boolean
---- @overload fun(arg0: IsoMarker): boolean
+--- @overload fun(marker: IsoMarker): boolean
 function IsoMarkers:removeIsoMarker(id) end
 
 --- @public
@@ -62,32 +62,32 @@ function IsoMarkers:removeIsoMarker(id) end
 function IsoMarkers:render() end
 
 --- @public
---- @param arg0 PerPlayerRender
---- @param arg1 int
---- @param arg2 int
+--- @param perPlayerRender PerPlayerRender
+--- @param zLayer int
+--- @param playerIndex int
 --- @return void
-function IsoMarkers:renderCircleIsoMarkers(arg0, arg1, arg2) end
+function IsoMarkers:renderCircleIsoMarkers(perPlayerRender, zLayer, playerIndex) end
 
 --- @public
---- @param arg0 PerPlayerRender
---- @param arg1 int
---- @param arg2 int
+--- @param perPlayerRender PerPlayerRender
+--- @param zLayer int
+--- @param playerIndex int
 --- @return void
-function IsoMarkers:renderIsoMarkers(arg0, arg1, arg2) end
+function IsoMarkers:renderIsoMarkers(perPlayerRender, zLayer, playerIndex) end
 
 --- @public
---- @param arg0 PerPlayerRender
---- @param arg1 int
---- @param arg2 int
+--- @param perPlayerRender PerPlayerRender
+--- @param zLayer int
+--- @param playerIndex int
 --- @return void
-function IsoMarkers:renderIsoMarkersDeferred(arg0, arg1, arg2) end
+function IsoMarkers:renderIsoMarkersDeferred(perPlayerRender, zLayer, playerIndex) end
 
 --- @public
---- @param arg0 PerPlayerRender
---- @param arg1 int
---- @param arg2 int
+--- @param perPlayerRender PerPlayerRender
+--- @param zLayer int
+--- @param playerIndex int
 --- @return void
-function IsoMarkers:renderIsoMarkersOnSquare(arg0, arg1, arg2) end
+function IsoMarkers:renderIsoMarkersOnSquare(perPlayerRender, zLayer, playerIndex) end
 
 --- @public
 --- @return void

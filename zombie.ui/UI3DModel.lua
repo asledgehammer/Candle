@@ -96,6 +96,6 @@ function UI3DModel:setZoom(newZoom) end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return UI3DModel
-function UI3DModel.new(arg0) end
+function UI3DModel.new(table) end

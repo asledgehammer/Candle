@@ -28,11 +28,11 @@ function IsoMetaCell:addRoom(room, cellX, cellY) end
 function IsoMetaCell:addTrigger(def, triggerRange, zombieExclusionRange, type) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 int
---- @param arg2 int
+--- @param zone Zone
+--- @param cellX int
+--- @param cellY int
 --- @return void
-function IsoMetaCell:addZone(arg0, arg1, arg2) end
+function IsoMetaCell:addZone(zone, cellX, cellY) end
 
 --- @public
 --- @return void
@@ -69,9 +69,9 @@ function IsoMetaCell:getZonesIntersecting(x, y, z, w, h, result) end
 function IsoMetaCell:getZonesUnique(result) end
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function IsoMetaCell:removeZone(arg0) end
+function IsoMetaCell:removeZone(zone) end
 
 
 ------------------------------------

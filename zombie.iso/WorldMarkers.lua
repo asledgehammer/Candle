@@ -11,11 +11,11 @@ WorldMarkers = {};
 
 --- @public
 --- @static
---- @param arg0 Line
---- @param arg1 Line
---- @param arg2 Point
+--- @param l1 Line
+--- @param l2 Line
+--- @param intersection Point
 --- @return boolean
-function WorldMarkers.intersectLineSegments(arg0, arg1, arg2) end
+function WorldMarkers.intersectLineSegments(l1, l2, intersection) end
 
 
 ------------------------------------
@@ -92,33 +92,33 @@ function WorldMarkers:removeAllHomingPoints(player) end
 --- @public
 --- @param id int
 --- @return boolean
---- @overload fun(arg0: DirectionArrow): boolean
+--- @overload fun(arrow: DirectionArrow): boolean
 function WorldMarkers:removeDirectionArrow(id) end
 
 --- @public
 --- @param id int
 --- @return boolean
---- @overload fun(arg0: GridSquareMarker): boolean
+--- @overload fun(marker: GridSquareMarker): boolean
 function WorldMarkers:removeGridSquareMarker(id) end
 
 --- @public
 --- @param id int
 --- @return boolean
---- @overload fun(arg0: PlayerHomingPoint): boolean
+--- @overload fun(point: PlayerHomingPoint): boolean
 function WorldMarkers:removeHomingPoint(id) end
 
 --- @public
 --- @param player IsoPlayer
 --- @param id int
 --- @return boolean
---- @overload fun(arg0: IsoPlayer, arg1: DirectionArrow): boolean
+--- @overload fun(player: IsoPlayer, arrow: DirectionArrow): boolean
 function WorldMarkers:removePlayerDirectionArrow(player, id) end
 
 --- @public
 --- @param player IsoPlayer
 --- @param id int
 --- @return boolean
---- @overload fun(arg0: IsoPlayer, arg1: PlayerHomingPoint): boolean
+--- @overload fun(player: IsoPlayer, point: PlayerHomingPoint): boolean
 function WorldMarkers:removePlayerHomingPoint(player, id) end
 
 --- @public
@@ -131,11 +131,11 @@ function WorldMarkers:render() end
 function WorldMarkers:renderDirectionArrow(worldDraw) end
 
 --- @public
---- @param arg0 PerPlayerRender
---- @param arg1 int
---- @param arg2 int
+--- @param perPlayerRender PerPlayerRender
+--- @param zLayer int
+--- @param playerIndex int
 --- @return void
-function WorldMarkers:renderGridSquareMarkers(arg0, arg1, arg2) end
+function WorldMarkers:renderGridSquareMarkers(perPlayerRender, zLayer, playerIndex) end
 
 --- @public
 --- @return void

@@ -58,7 +58,7 @@ function IsoRegions.getChunkFile(chunkX, chunkY) end
 --- @public
 --- @static
 ---
----  Returns a IChunkRegion for the square. Note: Returned objects from this
+---  Returns a IChunkRegion for the square.  Note: Returned objects from this
 ---  should not be retained as the DataRoot may get swapped.
 ---
 --- @param x int
@@ -70,7 +70,7 @@ function IsoRegions.getChunkRegion(x, y, z) end
 --- @public
 --- @static
 ---
----  Returns a DataChunk for the square. Note: Returned objects from this function
+---  Returns a DataChunk for the square.  Note: Returned objects from this function
 ---  not be retained as the DataRoot may get swapped.
 ---
 --- @param chunkx int
@@ -91,8 +91,8 @@ function IsoRegions.getHeaderFile() end
 --- @public
 --- @static
 ---
----  Returns a IWorldRegion for the square. Note: Returned objects from this
----  should not be retained as the DataRoot may get swapped. Note: The IWorldRegion
+---  Returns a IWorldRegion for the square.  Note: Returned objects from this
+---  should not be retained as the DataRoot may get swapped.  Note: The IWorldRegion
 ---  get cached in IsoGridSquare for optimizing purposes but this gets handled in
 ---
 --- @param x int
@@ -165,7 +165,7 @@ function IsoRegions.setDebugLoadAllChunks(b) end
 --- @public
 --- @static
 ---
----  Needs to be called before a player manipulates the grid. Records bitFlags for
+---  Needs to be called before a player manipulates the grid.  Records bitFlags for
 ---  state of the square that are compared to bitFlags for the state of the square
 ---  manipulation to detect relevant changes.
 ---
@@ -176,7 +176,7 @@ function IsoRegions.setPreviousFlags(gs) end
 --- @public
 --- @static
 ---
----  Called after the grid has been manipulated by a player. NOTE: setPreviousFlags
+---  Called after the grid has been manipulated by a player.  NOTE: setPreviousFlags
 ---  to be called prior to the grid being manipulated by a player.
 ---
 --- @param gs IsoGridSquare

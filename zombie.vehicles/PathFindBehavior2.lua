@@ -11,14 +11,14 @@ PathFindBehavior2 = {};
 
 --- @public
 --- @static
---- @param arg0 float
---- @param arg1 float
---- @param arg2 float
---- @param arg3 IsoMovingObject
---- @param arg4 Path
---- @param arg5 PointOnPath
+--- @param x3 float
+--- @param y3 float
+--- @param z float
+--- @param mover IsoMovingObject
+--- @param path Path
+--- @param pop PointOnPath
 --- @return void
-function PathFindBehavior2.closestPointOnPath(arg0, arg1, arg2, arg3, arg4, arg5) end
+function PathFindBehavior2.closestPointOnPath(x3, y3, z, mover, path, pop) end
 
 
 ------------------------------------
@@ -32,11 +32,11 @@ function PathFindBehavior2.closestPointOnPath(arg0, arg1, arg2, arg3, arg4, arg5
 function PathFindBehavior2:Failed(mover) end
 
 --- @public
---- @param arg0 Path
---- @param arg1 Mover
+--- @param path Path
+--- @param mover Mover
 --- @return void
---- @overload fun(arg0: Path, arg1: Mover): void
-function PathFindBehavior2:Succeeded(arg0, arg1) end
+--- @overload fun(path: Path, mover: Mover): void
+function PathFindBehavior2:Succeeded(path, mover) end
 
 --- @public
 --- @return void

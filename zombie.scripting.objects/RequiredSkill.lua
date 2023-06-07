@@ -22,7 +22,7 @@ function RequiredSkill:getPerk() end
 ------------------------------------
 
 --- @public
---- @param arg0 Perk
---- @param arg1 int
+--- @param perk Perk
+--- @param level int
 --- @return RequiredSkill
-function RequiredSkill.new(arg0, arg1) end
+function RequiredSkill.new(perk, level) end

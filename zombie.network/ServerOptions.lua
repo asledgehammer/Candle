@@ -39,9 +39,9 @@ function ServerOptions.initClientCommandsHelp() end
 ------------------------------------
 
 --- @public
---- @param arg0 ServerOption
+--- @param option ServerOption
 --- @return void
-function ServerOptions:addOption(arg0) end
+function ServerOptions:addOption(option) end
 
 --- @public
 --- @param key String

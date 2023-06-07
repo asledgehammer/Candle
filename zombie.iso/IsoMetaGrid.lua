@@ -237,13 +237,13 @@ function IsoMetaGrid:isValidChunk(wx, wy) end
 function IsoMetaGrid:isValidSquare(x, y) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 Zone
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
+--- @param zone1 Zone
+--- @param zone2 Zone
+--- @param x int
+--- @param y int
+--- @param z int
 --- @return boolean
-function IsoMetaGrid:isZoneAbove(arg0, arg1, arg2, arg3, arg4) end
+function IsoMetaGrid:isZoneAbove(zone1, zone2, x, y, z) end
 
 --- @public
 --- @return void
@@ -319,7 +319,7 @@ function IsoMetaGrid:registerVehiclesZone(name, type, x, y, z, width, height, pr
 --- @param width int
 --- @param height int
 --- @return Zone
---- @overload fun(arg0: String, arg1: String, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: ZoneGeometryType, arg8: TIntArrayList, arg9: int): Zone
+--- @overload fun(name: String, type: String, x: int, y: int, z: int, width: int, height: int, geometryType: ZoneGeometryType, points: TIntArrayList, polylineWidth: int): Zone
 function IsoMetaGrid:registerZone(name, type, x, y, z, width, height) end
 
 --- @public
@@ -334,9 +334,9 @@ function IsoMetaGrid:registerZone(name, type, x, y, z, width, height) end
 function IsoMetaGrid:registerZoneNoOverlap(name, type, x, y, z, width, height) end
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function IsoMetaGrid:removeZone(arg0) end
+function IsoMetaGrid:removeZone(zone) end
 
 --- @public
 --- @param cellX int

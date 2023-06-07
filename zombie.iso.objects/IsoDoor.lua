@@ -147,7 +147,7 @@ function IsoDoor:ToggleDoorSilent() end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
---- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
+--- @overload fun(owner: IsoGameCharacter, weapon: HandWeapon): void
 function IsoDoor:WeaponHit(owner, weapon) end
 
 --- @public
@@ -487,5 +487,5 @@ function IsoDoor:transmitSetCurtainOpen(open) end
 --- @return IsoDoor
 --- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean): IsoDoor
 --- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean): IsoDoor
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable): IsoDoor
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean, table: KahluaTable): IsoDoor
 function IsoDoor.new(cell) end

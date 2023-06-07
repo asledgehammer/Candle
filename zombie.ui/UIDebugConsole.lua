@@ -15,10 +15,10 @@ function UIDebugConsole:ProcessCommand() end
 
 --- @public
 --- @param b byte[]
---- @param __off int
+--- @param __off__ int
 --- @param len int
 --- @return void
-function UIDebugConsole:addOutput(b, __off, len) end
+function UIDebugConsole:addOutput(b, __off__, len) end
 
 --- @public
 --- @param lhs CharSequence

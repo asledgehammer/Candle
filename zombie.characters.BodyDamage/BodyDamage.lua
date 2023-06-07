@@ -38,8 +38,8 @@ function BodyDamage:AddRandomDamage() end
 
 --- @public
 ---
----  This gonna decide the strength of the damage you'll get. Getting surrounded can
----  trigger an instant death animation.
+---  This gonna decide the strength of the damage you'll get.  Getting surrounded
+---  also trigger an instant death animation.
 ---
 --- @param zombie IsoZombie
 --- @param hitReaction String

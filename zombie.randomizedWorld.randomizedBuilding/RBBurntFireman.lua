@@ -1,6 +1,6 @@
 --- @meta
 
---- @class RBBurntFireman: RandomizedBuildingBase This building will be 70% burnt (no fire started tho) Also spawn 1 to 3 fireman zombies inside it (65% of them to be male)
+--- @class RBBurntFireman: RandomizedBuildingBase This building will be 70% burnt (no fire started tho)  Also spawn 1 to 3 fireman zombies inside it (65% of them to be male)
 --- @field public class any
 RBBurntFireman = {};
 

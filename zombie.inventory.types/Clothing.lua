@@ -46,10 +46,10 @@ function Clothing.getScratchDefenseFromItem(chr, fabric) end
 function Clothing:CanStack(item) end
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return void
-function Clothing:DoTooltip(arg0, arg1) end
+function Clothing:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return boolean

@@ -138,12 +138,12 @@ function ClimateManager.setInstance(inst) end
 ------------------------------------
 
 --- @public
---- @param arg0 int
---- @param arg1 int
---- @param arg2 int
---- @param arg3 AirFront
+--- @param year int
+--- @param month int
+--- @param day int
+--- @param front AirFront
 --- @return void
-function ClimateManager:CalculateWeatherFrontStrength(arg0, arg1, arg2, arg3) end
+function ClimateManager:CalculateWeatherFrontStrength(year, month, day, front) end
 
 --- @public
 --- @param copy ClimateValues

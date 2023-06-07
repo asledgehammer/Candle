@@ -11,23 +11,23 @@ PerkFactory = {};
 
 --- @public
 --- @static
---- @param arg0 Perk
---- @param arg1 String
---- @param arg2 int
---- @param arg3 int
---- @param arg4 int
---- @param arg5 int
---- @param arg6 int
---- @param arg7 int
---- @param arg8 int
---- @param arg9 int
---- @param arg10 int
---- @param arg11 int
+--- @param perk Perk
+--- @param translation String
+--- @param xp1 int
+--- @param xp2 int
+--- @param xp3 int
+--- @param xp4 int
+--- @param xp5 int
+--- @param xp6 int
+--- @param xp7 int
+--- @param xp8 int
+--- @param xp9 int
+--- @param xp10 int
 --- @return Perk
---- @overload fun(arg0: Perk, arg1: String, arg2: int, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int, arg8: int, arg9: int, arg10: int, arg11: int, arg12: boolean): Perk
---- @overload fun(arg0: Perk, arg1: String, arg2: Perk, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int, arg8: int, arg9: int, arg10: int, arg11: int, arg12: int): Perk
---- @overload fun(arg0: Perk, arg1: String, arg2: Perk, arg3: int, arg4: int, arg5: int, arg6: int, arg7: int, arg8: int, arg9: int, arg10: int, arg11: int, arg12: int, arg13: boolean): Perk
-function PerkFactory.AddPerk(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) end
+--- @overload fun(perk: Perk, translation: String, xp1: int, xp2: int, xp3: int, xp4: int, xp5: int, xp6: int, xp7: int, xp8: int, xp9: int, xp10: int, passiv: boolean): Perk
+--- @overload fun(perk: Perk, translation: String, parent: Perk, xp1: int, xp2: int, xp3: int, xp4: int, xp5: int, xp6: int, xp7: int, xp8: int, xp9: int, xp10: int): Perk
+--- @overload fun(perk: Perk, translation: String, parent: Perk, xp1: int, xp2: int, xp3: int, xp4: int, xp5: int, xp6: int, xp7: int, xp8: int, xp9: int, xp10: int, passiv: boolean): Perk
+function PerkFactory.AddPerk(perk, translation, xp1, xp2, xp3, xp4, xp5, xp6, xp7, xp8, xp9, xp10) end
 
 --- @public
 --- @static
@@ -36,9 +36,9 @@ function PerkFactory.Reset() end
 
 --- @public
 --- @static
---- @param arg0 Perk
+--- @param perk Perk
 --- @return Perk
-function PerkFactory.getPerk(arg0) end
+function PerkFactory.getPerk(perk) end
 
 --- @public
 --- @static
@@ -48,9 +48,9 @@ function PerkFactory.getPerkFromName(name) end
 
 --- @public
 --- @static
---- @param arg0 Perk
+--- @param type Perk
 --- @return String
-function PerkFactory.getPerkName(arg0) end
+function PerkFactory.getPerkName(type) end
 
 --- @public
 --- @static

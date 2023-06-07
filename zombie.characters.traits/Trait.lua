@@ -10,10 +10,10 @@ Trait = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Perk
---- @param arg1 int
+--- @param perk Perk
+--- @param level int
 --- @return void
-function Trait:addXPBoost(arg0, arg1) end
+function Trait:addXPBoost(perk, level) end
 
 --- @public
 --- @return int

@@ -104,7 +104,7 @@ function ItemContainer:Remove(itemTypes) end
 
 --- @public
 ---
----  Remove all the item of the type in parameter inside the container Ex of
+---  Remove all the item of the type in parameter inside the container Ex of 
 ---  : Broccoli (no need the module like Base.Broccoli)
 ---
 --- @param itemType String

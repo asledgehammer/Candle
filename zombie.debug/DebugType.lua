@@ -42,9 +42,9 @@ DebugType = {};
 
 --- @public
 --- @static
---- @param type DebugType
+--- @param arg0 DebugType
 --- @return boolean
-function DebugType.Do(type) end
+function DebugType.Do(arg0) end
 
 --- @public
 --- @static

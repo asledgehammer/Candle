@@ -1012,9 +1012,9 @@ function Item:setTicksPerEquipUse(TicksPerEquipUse) end
 function Item:setToHitModifier(ToHitModifier) end
 
 --- @public
---- @param arg0 Type
+--- @param type Type the type to set
 --- @return void
-function Item:setType(arg0) end
+function Item:setType(type) end
 
 --- @public
 --- @param UnhappyChange float the UnhappyChange to set

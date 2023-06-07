@@ -134,12 +134,15 @@ function IsoChunk:LoadFromDiskOrBuffer(bb) end
 function IsoChunk:LoadOrCreate(wx, wy, fromServer) end
 
 --- @public
---- @param arg0 BaseVehicle
---- @param arg1 Zone
---- @param arg2 String
---- @param arg3 VehicleType
---- @return boolean
-function IsoChunk:RandomizeModel(arg0, arg1, arg2, arg3) end
+---
+---  Randomize a model with his corresponding texture defined in VehicleType
+---
+--- @param v BaseVehicle vehicle
+--- @param zone Zone
+--- @param name String
+--- @param type VehicleType
+--- @return boolean true if succed
+function IsoChunk:RandomizeModel(v, zone, name, type) end
 
 --- @public
 --- @param bSaveQuit boolean
@@ -148,10 +151,10 @@ function IsoChunk:RandomizeModel(arg0, arg1, arg2, arg3) end
 function IsoChunk:Save(bSaveQuit) end
 
 --- @public
---- @param arg0 Chunk
---- @param arg1 CRC32
+--- @param ccrc Chunk
+--- @param crc32 CRC32
 --- @return void
-function IsoChunk:SaveLoadedChunk(arg0, arg1) end
+function IsoChunk:SaveLoadedChunk(ccrc, crc32) end
 
 --- @public
 --- @param x float
@@ -169,16 +172,16 @@ function IsoChunk:addBloodSplat(x, y, z, Type) end
 function IsoChunk:addGeneratorPos(x, y, z) end
 
 --- @public
---- @param arg0 IsoObject
---- @param arg1 PerObjectLogic
+--- @param object IsoObject
+--- @param logic PerObjectLogic
 --- @return void
-function IsoChunk:addObjectAmbientEmitter(arg0, arg1) end
+function IsoChunk:addObjectAmbientEmitter(object, logic) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 boolean
+--- @param zone Zone
+--- @param addToWorld boolean
 --- @return void
-function IsoChunk:addRandomCarCrash(arg0, arg1) end
+function IsoChunk:addRandomCarCrash(zone, addToWorld) end
 
 --- @public
 --- @param roomID int
@@ -191,10 +194,10 @@ function IsoChunk:addSpawnedRoom(roomID) end
 function IsoChunk:addSurvivorInHorde(forced) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 boolean
+--- @param zone Zone
+--- @param force boolean
 --- @return boolean
-function IsoChunk:canAddRandomCarCrash(arg0, arg1) end
+function IsoChunk:canAddRandomCarCrash(zone, force) end
 
 --- @public
 --- @return void

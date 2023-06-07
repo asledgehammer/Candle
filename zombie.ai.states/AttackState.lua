@@ -41,7 +41,7 @@ function AttackState:exit(owner) end
 
 --- @public
 ---
----  Description copied from class: State
+---  Description copied from class: State
 ---
 --- @param owner IsoGameCharacter
 --- @return boolean

@@ -102,5 +102,5 @@ function Perk:toString() end
 --- @public
 --- @param id String
 --- @return Perk
---- @overload fun(arg0: String, arg1: Perk): Perk
+--- @overload fun(id: String, parent: Perk): Perk
 function Perk.new(id) end

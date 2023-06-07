@@ -95,11 +95,12 @@ function IsoPlayer.hasInstance() end
 --- @public
 --- @static
 ---
----  The IsoPlayer.instance thread-safe invoke. Calls the supplied callback if the
----  is non-null. Performs this in a thread-safe manner. It is intended that, should
----  thread intend to use the IsoPlayer.instance, and does not want another thread
----  change the ptr in the meanwhile, it should call invokeOnPlayerInstance(Runnable
----  eg. IsoPlayer.invokeOnPlayerInstance(()-> { IsoPlayer.instance.doStuff(); }
+---  The IsoPlayer.instance thread-safe invoke.   Calls the supplied callback if the
+---  is non-null.   Performs this in a thread-safe manner.    It is intended that,
+---  any thread intend to use the IsoPlayer.instance, and does not want another
+---    to change the ptr in the meanwhile, it should call
+---  callback)    eg.   IsoPlayer.invokeOnPlayerInstance(()->     {        
+---      }
 ---
 --- @param callback Runnable
 --- @return void
@@ -1219,7 +1220,7 @@ function IsoPlayer:setMaxWeightDelta(maxWeightDelta) end
 --- @public
 --- @param material String
 --- @return void
---- @overload fun(arg0: Material): void
+--- @overload fun(material: Material): void
 function IsoPlayer:setMeleeHitSurface(material) end
 
 --- @public
@@ -1307,7 +1308,7 @@ function IsoPlayer:setShowTag(show) end
 
 --- @public
 ---
----  If you've take more than 10 sleeping pills you lose some health If you're
+---  If you've take more than 10 sleeping pills you lose some health If you're 
 ---  1 pills = 2
 ---
 --- @param sleepingPillsTaken int

@@ -310,8 +310,8 @@ function createNewScriptItem(base, name, display, type, icon) end
 function createRandomDeadBody(square, blood) end
 
 ---
----  Create a dynamic table containing all spawnpoints.lua we find in vanilla folder
----  in loaded mods
+---  Create a dynamic table containing all spawnpoints.lua we find in vanilla 
+---  + in loaded mods
 ---
 --- @return KahluaTable
 function createRegionFile() end
@@ -1369,9 +1369,9 @@ function isKeyDown(key) end
 --- @return boolean
 function isKeyPressed(key) end
 
---- @param arg0 Mod
+--- @param mod Mod
 --- @return boolean
-function isModActive(arg0) end
+function isModActive(mod) end
 
 --- @param number int
 --- @return boolean
@@ -1704,11 +1704,11 @@ function screenZoomIn() end
 --- @return void
 function screenZoomOut() end
 
---- @param arg0 IsoPlayer
---- @param arg1 Perk
---- @param arg2 int
+--- @param player IsoPlayer
+--- @param perk Perk
+--- @param amount int
 --- @return void
-function sendAddXp(arg0, arg1, arg2) end
+function sendAddXp(player, perk, amount) end
 
 --- @param onlineID int
 --- @param i int
@@ -2090,10 +2090,10 @@ function toggleBreakOnRead(table, key) end
 --- @return void
 function toggleBreakpoint(file, line) end
 
---- @param arg0 Mod
---- @param arg1 boolean
+--- @param mod Mod
+--- @param active boolean
 --- @return void
-function toggleModActive(arg0, arg1) end
+function toggleModActive(mod, active) end
 
 --- @param player IsoPlayer
 --- @return void

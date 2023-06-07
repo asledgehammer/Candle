@@ -1,6 +1,6 @@
 --- @meta
 
---- @class RBBurntCorpse: RandomizedBuildingBase This building will be 60% burnt (no fire started tho) Add some burnt skeleton in it
+--- @class RBBurntCorpse: RandomizedBuildingBase This building will be 60% burnt (no fire started tho)  Add some burnt skeleton in it
 --- @field public class any
 RBBurntCorpse = {};
 

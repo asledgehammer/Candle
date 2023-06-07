@@ -19,9 +19,9 @@ function RZSBeachParty.getBeachClutter() end
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function RZSBeachParty:randomizeZoneStory(arg0) end
+function RZSBeachParty:randomizeZoneStory(zone) end
 
 
 ------------------------------------

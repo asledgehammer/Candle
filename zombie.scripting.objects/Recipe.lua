@@ -30,10 +30,10 @@ function Recipe:FindIndexOf(a) end
 function Recipe:Load(name, strArray) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 int
+--- @param perk Perk
+--- @param level int
 --- @return void
-function Recipe:addRequiredSkill(arg0, arg1) end
+function Recipe:addRequiredSkill(perk, level) end
 
 --- @public
 --- @return void

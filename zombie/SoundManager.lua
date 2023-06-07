@@ -311,7 +311,7 @@ function SoundManager:setVehicleEngineVolume(volume) end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return void
---- @overload fun(arg0: long, arg1: GameSoundClip, arg2: BitSet): void
+--- @overload fun(eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
 function SoundManager:startEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -323,7 +323,7 @@ function SoundManager:stop() end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return void
---- @overload fun(arg0: long, arg1: GameSoundClip, arg2: BitSet): void
+--- @overload fun(eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
 function SoundManager:stopEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -365,7 +365,7 @@ function SoundManager:update4() end
 --- @param eventInstance long
 --- @param clip GameSoundClip
 --- @return void
---- @overload fun(arg0: long, arg1: GameSoundClip): void
+--- @overload fun(eventInstance: long, clip: GameSoundClip): void
 function SoundManager:updateEvent(eventInstance, clip) end
 
 

@@ -25,7 +25,7 @@ function DebugOptions.testThreadCrash(idx) end
 --- @public
 --- @param newChild IDebugOption
 --- @return void
---- @overload fun(childOption: IDebugOption): void
+--- @overload fun(newChild: IDebugOption): void
 function DebugOptions:addChild(newChild) end
 
 --- @public
@@ -71,13 +71,13 @@ function DebugOptions:load() end
 --- @public
 --- @param newOption IDebugOption
 --- @return void
---- @overload fun(newChild: IDebugOption): void
+--- @overload fun(newOption: IDebugOption): void
 function DebugOptions:onChildAdded(newOption) end
 
 --- @public
 --- @param newOption IDebugOption
 --- @return void
---- @overload fun(newDescendant: IDebugOption): void
+--- @overload fun(newOption: IDebugOption): void
 function DebugOptions:onDescendantAdded(newOption) end
 
 --- @public

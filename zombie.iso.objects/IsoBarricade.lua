@@ -81,7 +81,7 @@ function IsoBarricade:Thump(thumper) end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
---- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
+--- @overload fun(owner: IsoGameCharacter, weapon: HandWeapon): void
 function IsoBarricade:WeaponHit(owner, weapon) end
 
 --- @public

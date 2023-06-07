@@ -145,9 +145,9 @@ function Zone:isPolyline() end
 function Zone:isRectangle() end
 
 --- @public
---- @param arg0 Location
+--- @param location Location
 --- @return Location
-function Zone:pickRandomLocation(arg0) end
+function Zone:pickRandomLocation(location) end
 
 --- @public
 --- @param sq IsoGridSquare

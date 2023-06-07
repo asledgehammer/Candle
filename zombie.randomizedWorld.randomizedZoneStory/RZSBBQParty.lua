@@ -19,9 +19,9 @@ function RZSBBQParty.getBeachClutter() end
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function RZSBBQParty:randomizeZoneStory(arg0) end
+function RZSBBQParty:randomizeZoneStory(zone) end
 
 
 ------------------------------------

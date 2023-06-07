@@ -83,9 +83,9 @@ function RandomizedWorldBase.is2x2AreaClear(square) end
 
 --- @public
 --- @static
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function RandomizedWorldBase.removeAllVehiclesOnZone(arg0) end
+function RandomizedWorldBase.removeAllVehiclesOnZone(zone) end
 
 
 ------------------------------------
@@ -150,14 +150,14 @@ function RandomizedWorldBase:addTileObject(sq, spriteName) end
 function RandomizedWorldBase:addTrailOfBlood(x, y, z, direction, count) end
 
 --- @public
---- @param arg0 BaseVehicle
---- @param arg1 Zone
---- @param arg2 IsoChunk
---- @param arg3 String
---- @param arg4 String
---- @param arg5 String
+--- @param v BaseVehicle
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param zoneName String
+--- @param vehicleDistrib String
+--- @param trailerName String
 --- @return BaseVehicle
-function RandomizedWorldBase:addTrailer(arg0, arg1, arg2, arg3, arg4, arg5) end
+function RandomizedWorldBase:addTrailer(v, zone, chunk, zoneName, vehicleDistrib, trailerName) end
 
 --- @public
 --- @param dir IsoDirections
@@ -169,29 +169,29 @@ function RandomizedWorldBase:addTrailer(arg0, arg1, arg2, arg3, arg4, arg5) end
 function RandomizedWorldBase:addTraitOfBlood(dir, time, x, y, z) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoGridSquare
---- @param arg2 IsoChunk
---- @param arg3 String
---- @param arg4 String
---- @param arg5 IsoDirections
+--- @param zone Zone
+--- @param sq IsoGridSquare
+--- @param chunk IsoChunk
+--- @param zoneName String
+--- @param scriptName String
+--- @param dir IsoDirections
 --- @return BaseVehicle
---- @overload fun(arg0: Zone, arg1: IsoGridSquare, arg2: IsoChunk, arg3: String, arg4: String, arg5: Integer, arg6: IsoDirections, arg7: String): BaseVehicle
---- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String): BaseVehicle
-function RandomizedWorldBase:addVehicle(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(zone: Zone, sq: IsoGridSquare, chunk: IsoChunk, zoneName: String, scriptName: String, skinIndex: Integer, dir: IsoDirections, specificContainer: String): BaseVehicle
+--- @overload fun(zone: Zone, vehicleX: float, vehicleY: float, vehicleZ: float, direction: float, zoneName: String, scriptName: String, skinIndex: Integer, specificContainer: String): BaseVehicle
+function RandomizedWorldBase:addVehicle(zone, sq, chunk, zoneName, scriptName, dir) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoGridSquare
---- @param arg2 IsoChunk
---- @param arg3 String
---- @param arg4 String
---- @param arg5 Integer
---- @param arg6 IsoDirections
---- @param arg7 String
+--- @param zone Zone
+--- @param sq IsoGridSquare
+--- @param chunk IsoChunk
+--- @param zoneName String
+--- @param scriptName String
+--- @param skinIndex Integer
+--- @param dir IsoDirections
+--- @param specificContainer String
 --- @return BaseVehicle
---- @overload fun(arg0: Zone, arg1: float, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: Integer, arg8: String): BaseVehicle
-function RandomizedWorldBase:addVehicleFlipped(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) end
+--- @overload fun(zone: Zone, vehicleX: float, vehicleY: float, vehicleZ: float, direction: float, zoneName: String, scriptName: String, skinIndex: Integer, specificContainer: String): BaseVehicle
+function RandomizedWorldBase:addVehicleFlipped(zone, sq, chunk, zoneName, scriptName, skinIndex, dir, specificContainer) end
 
 --- @public
 ---
@@ -212,8 +212,8 @@ function RandomizedWorldBase:addZombiesOnSquare(totalZombies, outfit, femaleChan
 
 --- @public
 ---
----  Add zombies near the vehicles, around a 4x4 square around it, avoiding being ON
----  vehicle & randomizing square for each zombies
+---  Add zombies near the vehicles, around a 4x4 square around it, avoiding being 
+---  the vehicle & randomizing square for each zombies
 ---
 --- @param totalZombies int
 --- @param outfit String

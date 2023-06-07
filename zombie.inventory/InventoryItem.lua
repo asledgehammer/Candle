@@ -34,7 +34,7 @@ function InventoryItem:CopyModData(DefaultModData) end
 --- @public
 --- @param tooltipUI ObjectTooltip
 --- @return void
---- @overload fun(arg0: ObjectTooltip, arg1: Layout): void
+--- @overload fun(tooltipUI: ObjectTooltip, layout: Layout): void
 function InventoryItem:DoTooltip(tooltipUI) end
 
 --- @public
@@ -341,7 +341,7 @@ function InventoryItem:getCurrentAmmoCount() end
 
 --- @public
 ---
----  Return the real condition of the weapon, based on this calcul :
+---  Return the real condition of the weapon, based on this calcul : 
 ---  * 100
 ---
 --- @return float float

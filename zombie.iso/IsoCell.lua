@@ -118,10 +118,10 @@ function IsoCell:DistanceFromSupport(x, y, z) end
 function IsoCell:DoBuilding(player, bRender) end
 
 --- @public
---- @param arg0 IsoGridSquare
---- @param arg1 GetSquare
+--- @param newSquare IsoGridSquare
+--- @param getter GetSquare
 --- @return void
-function IsoCell:DoGridNav(arg0, arg1) end
+function IsoCell:DoGridNav(newSquare, getter) end
 
 --- @public
 --- @return void
@@ -271,10 +271,10 @@ function IsoCell:createNewGridSquare(x, y, z, recalcAll) end
 function IsoCell:getAddList() end
 
 --- @public
---- @param arg0 BuildingSearchCriteria
---- @param arg1 int
+--- @param criteria BuildingSearchCriteria
+--- @param count int
 --- @return Stack
-function IsoCell:getBestBuildings(arg0, arg1) end
+function IsoCell:getBestBuildings(criteria, count) end
 
 --- @public
 --- @return ArrayList the BuildingList

@@ -74,10 +74,10 @@ function GameTime.syncServerTime(timeClientSend, timeServer, timeClientReceive) 
 
 --- @public
 --- @param start float
---- @param __end float
+--- @param __end__ float
 --- @param delta float
 --- @return float
-function GameTime:Lerp(start, __end, delta) end
+function GameTime:Lerp(start, __end__, delta) end
 
 --- @public
 --- @param i int

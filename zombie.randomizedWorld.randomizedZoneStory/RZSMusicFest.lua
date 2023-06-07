@@ -9,9 +9,9 @@ RZSMusicFest = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function RZSMusicFest:randomizeZoneStory(arg0) end
+function RZSMusicFest:randomizeZoneStory(zone) end
 
 
 ------------------------------------

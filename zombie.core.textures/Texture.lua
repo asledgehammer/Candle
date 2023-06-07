@@ -7,7 +7,7 @@
 --- @implement Serializable
 --- @field public ASSET_TYPE AssetType
 --- @field public bDoingQuad boolean
---- @field public BindCount int indicates if all the texture will auto create the masks on load The auto creation works only with the getTexture() methods
+--- @field public BindCount int indicates if all the texture will auto create the masks on load  The auto creation works only with the getTexture() methods
 --- @field public la float
 --- @field public lastlastTextureID int
 --- @field public lastTextureID int
@@ -180,7 +180,7 @@ function Texture:getData() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return int the height of image
 --- @overload fun(): int the height of image
@@ -188,7 +188,7 @@ function Texture:getHeight() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return int
 --- @overload fun(): int
@@ -200,7 +200,7 @@ function Texture:getHeightOrig() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return int the ID of image in the Vram
 --- @overload fun(): int the ID of image in the Vram
@@ -255,7 +255,7 @@ function Texture:getUseAlphaChannel() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return int the width of image
 --- @overload fun(): int the width of image
@@ -263,7 +263,7 @@ function Texture:getWidth() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return int
 --- @overload fun(): int
@@ -275,7 +275,7 @@ function Texture:getWidthOrig() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return float the end X-coordinate
 --- @overload fun(): float the end X-coordinate
@@ -283,7 +283,7 @@ function Texture:getXEnd() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return float the start X-coordinate
 --- @overload fun(): float the start X-coordinate
@@ -291,7 +291,7 @@ function Texture:getXStart() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return float the end Y-coordinate
 --- @overload fun(): float the end Y-coordinate
@@ -299,7 +299,7 @@ function Texture:getYEnd() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return float the start Y-coordinate
 --- @overload fun(): float the start Y-coordinate
@@ -322,7 +322,7 @@ function Texture:isDestroyed() end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @return boolean if the texture is solid or not.
 --- @overload fun(): boolean if the texture is solid or not.
@@ -339,7 +339,7 @@ function Texture:loadMaskRegion(cache) end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @param red int color used in the test
 --- @param green int
@@ -472,7 +472,7 @@ function Texture:saveToZomboidDirectory(filename) end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @param red int color used in the test
 --- @param green int
@@ -541,7 +541,7 @@ function Texture:setRealWidth(realWidth) end
 
 --- @public
 ---
----  Description copied from interface: ITexture
+---  Description copied from interface: ITexture
 ---
 --- @param x int xstart position
 --- @param y int
@@ -607,8 +607,8 @@ function Texture:toString() end
 --- @overload fun(width: int, height: int, flags: int): Texture
 --- @overload fun(file: String, bDelete: boolean, bUseAlpha: boolean): Texture
 --- @overload fun(name: String, b: BufferedInputStream, bDoMask: boolean): Texture
---- @overload fun(arg0: AssetPath, arg1: AssetManager, arg2: TextureAssetParams): Texture
+--- @overload fun(path: AssetPath, manager: AssetManager, params: TextureAssetParams): Texture
 --- @overload fun(width: int, height: int, name: String, flags: int): Texture
 --- @overload fun(file: String, red: int, green: int, blue: int): Texture
---- @overload fun(arg0: String, arg1: BufferedInputStream, arg2: boolean, arg3: PZFileformat): Texture
+--- @overload fun(name: String, b: BufferedInputStream, bDoMask: boolean, format: PZFileformat): Texture
 function Texture.new() end

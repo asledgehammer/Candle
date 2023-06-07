@@ -1,6 +1,6 @@
 --- @meta
 
---- @class DeviceData Turbo Stores shared data for devices (used in iso and item)
+--- @class DeviceData Turbo  Stores shared data for devices (used in iso and item)
 --- @field public class any
 --- @implement Cloneable
 DeviceData = {};

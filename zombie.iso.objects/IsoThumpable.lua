@@ -67,7 +67,7 @@ function IsoThumpable:ToggleDoorSilent() end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
---- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
+--- @overload fun(owner: IsoGameCharacter, weapon: HandWeapon): void
 function IsoThumpable:WeaponHit(owner, weapon) end
 
 --- @public
@@ -714,6 +714,6 @@ function IsoThumpable:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoThumpable
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: boolean, arg4: KahluaTable): IsoThumpable
---- @overload fun(arg0: IsoCell, arg1: IsoGridSquare, arg2: String, arg3: String, arg4: boolean, arg5: KahluaTable): IsoThumpable
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, sprite: String, north: boolean, table: KahluaTable): IsoThumpable
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, closedSprite: String, openSprite: String, north: boolean, table: KahluaTable): IsoThumpable
 function IsoThumpable.new(cell) end

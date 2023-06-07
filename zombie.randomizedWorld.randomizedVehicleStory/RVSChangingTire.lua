@@ -9,23 +9,23 @@ RVSChangingTire = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param debug boolean
 --- @return boolean
-function RVSChangingTire:initVehicleStorySpawner(arg0, arg1, arg2) end
+function RVSChangingTire:initVehicleStorySpawner(zone, chunk, debug) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return void
-function RVSChangingTire:randomizeVehicleStory(arg0, arg1) end
+function RVSChangingTire:randomizeVehicleStory(zone, chunk) end
 
 --- @public
---- @param arg0 VehicleStorySpawner
---- @param arg1 Element
+--- @param spawner VehicleStorySpawner
+--- @param element Element
 --- @return void
-function RVSChangingTire:spawnElement(arg0, arg1) end
+function RVSChangingTire:spawnElement(spawner, element) end
 
 
 ------------------------------------

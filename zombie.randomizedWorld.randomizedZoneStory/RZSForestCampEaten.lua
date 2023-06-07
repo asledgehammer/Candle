@@ -9,9 +9,9 @@ RZSForestCampEaten = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
+--- @param zone Zone
 --- @return void
-function RZSForestCampEaten:randomizeZoneStory(arg0) end
+function RZSForestCampEaten:randomizeZoneStory(zone) end
 
 
 ------------------------------------

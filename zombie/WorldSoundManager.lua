@@ -57,10 +57,10 @@ function WorldSoundManager:getHearingMultiplier(arg0) end
 function WorldSoundManager:getNew() end
 
 --- @public
---- @param arg0 WorldSound
---- @param arg1 IsoZombie
+--- @param sound WorldSound
+--- @param zom IsoZombie
 --- @return float
-function WorldSoundManager:getSoundAttract(arg0, arg1) end
+function WorldSoundManager:getSoundAttract(sound, zom) end
 
 --- @public
 --- @param zom IsoZombie

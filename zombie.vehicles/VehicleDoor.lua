@@ -9,9 +9,9 @@ VehicleDoor = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Door
+--- @param scriptDoor Door
 --- @return void
-function VehicleDoor:init(arg0) end
+function VehicleDoor:init(scriptDoor) end
 
 --- @public
 --- @return boolean

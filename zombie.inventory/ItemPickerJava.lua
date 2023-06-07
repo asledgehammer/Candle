@@ -34,15 +34,15 @@ function ItemPickerJava.doOverlaySprite(sq) end
 
 --- @public
 --- @static
---- @param arg0 ItemPickerContainer
---- @param arg1 ItemContainer
---- @param arg2 float
---- @param arg3 IsoGameCharacter
---- @param arg4 boolean
---- @param arg5 boolean
---- @param arg6 ItemPickerRoom
+--- @param containerDist ItemPickerContainer
+--- @param container ItemContainer
+--- @param zombieDensity float
+--- @param character IsoGameCharacter
+--- @param doItemContainer boolean
+--- @param isJunk boolean
+--- @param roomDist ItemPickerRoom
 --- @return void
-function ItemPickerJava.doRollItem(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+function ItemPickerJava.doRollItem(containerDist, container, zombieDensity, character, doItemContainer, isJunk, roomDist) end
 
 --- @public
 --- @static
@@ -53,12 +53,12 @@ function ItemPickerJava.fillContainer(container, player) end
 
 --- @public
 --- @static
---- @param arg0 ItemPickerRoom
---- @param arg1 ItemContainer
---- @param arg2 String
---- @param arg3 IsoGameCharacter
+--- @param roomDist ItemPickerRoom
+--- @param container ItemContainer
+--- @param roomName String
+--- @param character IsoGameCharacter
 --- @return void
-function ItemPickerJava.fillContainerType(arg0, arg1, arg2, arg3) end
+function ItemPickerJava.fillContainerType(roomDist, container, roomName, character) end
 
 --- @public
 --- @static
@@ -77,29 +77,29 @@ function ItemPickerJava.getLootModifier(itemname) end
 
 --- @public
 --- @static
---- @param arg0 InventoryContainer
---- @param arg1 IsoGameCharacter
---- @param arg2 ItemPickerContainer
+--- @param bag InventoryContainer
+--- @param character IsoGameCharacter
+--- @param containerDist ItemPickerContainer
 --- @return void
-function ItemPickerJava.rollContainerItem(arg0, arg1, arg2) end
+function ItemPickerJava.rollContainerItem(bag, character, containerDist) end
 
 --- @public
 --- @static
---- @param arg0 ItemPickerContainer
---- @param arg1 ItemContainer
---- @param arg2 boolean
---- @param arg3 IsoGameCharacter
---- @param arg4 ItemPickerRoom
+--- @param containerDist ItemPickerContainer
+--- @param container ItemContainer
+--- @param doItemContainer boolean
+--- @param character IsoGameCharacter
+--- @param roomDist ItemPickerRoom
 --- @return void
-function ItemPickerJava.rollItem(arg0, arg1, arg2, arg3, arg4) end
+function ItemPickerJava.rollItem(containerDist, container, doItemContainer, character, roomDist) end
 
 --- @public
 --- @static
---- @param arg0 ItemContainer
---- @param arg1 String
---- @param arg2 ItemPickerContainer
+--- @param container ItemContainer
+--- @param itemType String
+--- @param containerDist ItemPickerContainer
 --- @return InventoryItem
-function ItemPickerJava.tryAddItemToContainer(arg0, arg1, arg2) end
+function ItemPickerJava.tryAddItemToContainer(container, itemType, containerDist) end
 
 --- @public
 --- @static

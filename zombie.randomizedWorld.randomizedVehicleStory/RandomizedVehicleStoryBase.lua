@@ -11,18 +11,21 @@ RandomizedVehicleStoryBase = {};
 
 --- @public
 --- @static
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param force boolean
 --- @return boolean
-function RandomizedVehicleStoryBase.doRandomStory(arg0, arg1, arg2) end
+function RandomizedVehicleStoryBase.doRandomStory(zone, chunk, force) end
 
 --- @public
 --- @static
---- @param arg0 Zone
---- @param arg1 IsoChunk
+---
+---  We init a map with every possible stories for this zone
+---
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return void
-function RandomizedVehicleStoryBase.initAllRVSMapChance(arg0, arg1) end
+function RandomizedVehicleStoryBase.initAllRVSMapChance(zone, chunk) end
 
 
 ------------------------------------
@@ -40,17 +43,21 @@ function RandomizedVehicleStoryBase.initAllRVSMapChance(arg0, arg1) end
 function RandomizedVehicleStoryBase:addSmashedOverlay(v1, v2, xOffset, yOffset, horizontalZone, addBlood) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 float
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param additionalRotationRadians float
 --- @return boolean
-function RandomizedVehicleStoryBase:callVehicleStorySpawner(arg0, arg1, arg2) end
+function RandomizedVehicleStoryBase:callVehicleStorySpawner(zone, chunk, additionalRotationRadians) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+---
+---  Get the center of the chunk according to the zone (so center of the 10x10 
+---  AND the zone)
+---
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return IsoGridSquare
-function RandomizedVehicleStoryBase:getCenterOfChunk(arg0, arg1) end
+function RandomizedVehicleStoryBase:getCenterOfChunk(zone, chunk) end
 
 --- @public
 --- @return int
@@ -81,38 +88,38 @@ function RandomizedVehicleStoryBase:getMinimumDays() end
 function RandomizedVehicleStoryBase:getName() end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 float[]
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param result float[]
 --- @return boolean
-function RandomizedVehicleStoryBase:getPolylineSpawnPoint(arg0, arg1, arg2) end
+function RandomizedVehicleStoryBase:getPolylineSpawnPoint(zone, chunk, result) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 float[]
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param result float[]
 --- @return boolean
-function RandomizedVehicleStoryBase:getRectangleSpawnPoint(arg0, arg1, arg2) end
+function RandomizedVehicleStoryBase:getRectangleSpawnPoint(zone, chunk, result) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 float[]
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param result float[]
 --- @return boolean
-function RandomizedVehicleStoryBase:getSpawnPoint(arg0, arg1, arg2) end
+function RandomizedVehicleStoryBase:getSpawnPoint(zone, chunk, result) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return VehicleStorySpawnData
-function RandomizedVehicleStoryBase:initSpawnDataForChunk(arg0, arg1) end
+function RandomizedVehicleStoryBase:initSpawnDataForChunk(zone, chunk) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param debug boolean
 --- @return boolean
-function RandomizedVehicleStoryBase:initVehicleStorySpawner(arg0, arg1, arg2) end
+function RandomizedVehicleStoryBase:initVehicleStorySpawner(zone, chunk, debug) end
 
 --- @public
 --- @param wx int
@@ -129,17 +136,17 @@ function RandomizedVehicleStoryBase:isChunkLoaded(wx, wy) end
 function RandomizedVehicleStoryBase:isFullyStreamedIn(x1, y1, x2, y2) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param force boolean
 --- @return boolean
-function RandomizedVehicleStoryBase:isValid(arg0, arg1, arg2) end
+function RandomizedVehicleStoryBase:isValid(zone, chunk, force) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return void
-function RandomizedVehicleStoryBase:randomizeVehicleStory(arg0, arg1) end
+function RandomizedVehicleStoryBase:randomizeVehicleStory(zone, chunk) end
 
 --- @public
 --- @return void
@@ -161,10 +168,10 @@ function RandomizedVehicleStoryBase:setMaximumDays(maximumDays) end
 function RandomizedVehicleStoryBase:setMinimumDays(minimumDays) end
 
 --- @public
---- @param arg0 VehicleStorySpawner
---- @param arg1 Element
+--- @param spawner VehicleStorySpawner
+--- @param element Element
 --- @return void
-function RandomizedVehicleStoryBase:spawnElement(arg0, arg1) end
+function RandomizedVehicleStoryBase:spawnElement(spawner, element) end
 
 
 ------------------------------------

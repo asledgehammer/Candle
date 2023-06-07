@@ -1,6 +1,6 @@
 --- @meta
 
---- @class ClimateColorInfo TurboTuTone. A pair of colors for global light interior and exterior, the alpha of the colors is blend intensity. When outside the shader is used to apply global light, when inside a room its using a different method (using the weather mask) to do the coloring of outside parts. This requires separate balancing of colors as using one and the same for both methods doesn't always look right.
+--- @class ClimateColorInfo TurboTuTone.  A pair of colors for global light interior and exterior, the alpha of the colors is blend intensity.  When outside the shader is used to apply global light, when inside a room its using a different method (using the weather mask) to do the coloring of outside parts.  This requires separate balancing of colors as using one and the same for both methods doesn't always look right.
 --- @field public class any
 ClimateColorInfo = {};
 

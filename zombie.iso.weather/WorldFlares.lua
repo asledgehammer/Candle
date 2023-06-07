@@ -18,11 +18,11 @@ function WorldFlares.Clear() end
 
 --- @public
 --- @static
---- @param arg0 PlayerRenderSettings
---- @param arg1 int
---- @param arg2 IsoPlayer
+--- @param renderSettings PlayerRenderSettings
+--- @param plrIndex int
+--- @param player IsoPlayer
 --- @return void
-function WorldFlares.applyFlaresForPlayer(arg0, arg1, arg2) end
+function WorldFlares.applyFlaresForPlayer(renderSettings, plrIndex, player) end
 
 --- @public
 --- @static

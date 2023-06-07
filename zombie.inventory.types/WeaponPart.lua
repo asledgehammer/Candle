@@ -15,10 +15,10 @@ WeaponPart = {};
 ------------------------------------
 
 --- @public
---- @param arg0 ObjectTooltip
---- @param arg1 Layout
+--- @param tooltipUI ObjectTooltip
+--- @param layout Layout
 --- @return void
-function WeaponPart:DoTooltip(arg0, arg1) end
+function WeaponPart:DoTooltip(tooltipUI, layout) end
 
 --- @public
 --- @return int

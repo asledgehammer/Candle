@@ -27,11 +27,11 @@ function ThunderStorm.getMapDiagonal() end
 function ThunderStorm:HasActiveThunderClouds() end
 
 --- @public
---- @param arg0 PlayerRenderSettings
---- @param arg1 int
---- @param arg2 IsoPlayer
+--- @param renderSettings PlayerRenderSettings
+--- @param plrIndex int
+--- @param player IsoPlayer
 --- @return void
-function ThunderStorm:applyLightningForPlayer(arg0, arg1, arg2) end
+function ThunderStorm:applyLightningForPlayer(renderSettings, plrIndex, player) end
 
 --- @public
 --- @param x int

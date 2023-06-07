@@ -10,11 +10,11 @@ UI3DScene = {};
 
 --- @public
 --- @static
---- @param arg0 Plane
---- @param arg1 Ray
---- @param arg2 Vector3f
+--- @param Pn Plane
+--- @param S Ray
+--- @param out Vector3f
 --- @return int
-function UI3DScene.intersect_ray_plane(arg0, arg1, arg2) end
+function UI3DScene.intersect_ray_plane(Pn, S, out) end
 
 
 ------------------------------------
@@ -126,6 +126,6 @@ function UI3DScene:uiToSceneY(uiX, uiY) end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
+--- @param table KahluaTable
 --- @return UI3DScene
-function UI3DScene.new(arg0) end
+function UI3DScene.new(table) end

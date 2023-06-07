@@ -46,9 +46,9 @@ function WeatherStage:getStageStart() end
 
 --- @public
 --- @param mid int
---- @param __end int
+--- @param __end__ int
 --- @return void
-function WeatherStage:lerpEntryTo(mid, __end) end
+function WeatherStage:lerpEntryTo(mid, __end__) end
 
 --- @public
 --- @param input DataInputStream

@@ -84,7 +84,7 @@ function LuaTimedActionNew:waitToStart() end
 ------------------------------------
 
 --- @public
---- @param arg0 KahluaTable
---- @param arg1 IsoGameCharacter
+--- @param table KahluaTable
+--- @param chr IsoGameCharacter
 --- @return LuaTimedActionNew
-function LuaTimedActionNew.new(arg0, arg1) end
+function LuaTimedActionNew.new(table, chr) end

@@ -33,7 +33,7 @@ function VehiclePart.getNumberByCondition(number, cond, min) end
 --- @param distance int
 --- @return void
 --- @overload fun(line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
---- @overload fun(player: IsoPlayer, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
+--- @overload fun(arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int): void
 function VehiclePart:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
@@ -385,9 +385,9 @@ function VehiclePart:setModelVisible(id, visible) end
 function VehiclePart:setRandomCondition(item) end
 
 --- @public
---- @param arg0 Part
+--- @param scriptPart Part
 --- @return void
-function VehiclePart:setScriptPart(arg0) end
+function VehiclePart:setScriptPart(scriptPart) end
 
 --- @public
 --- @param specificItem boolean

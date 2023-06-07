@@ -49,7 +49,7 @@ function RandomizedBuildingBase:addWorldItem(item, sq, obj) end
 
 --- @public
 ---
----  If you specify a outfit, make sure it works for both gender! (or force
+---  If you specify a outfit, make sure it works for both gender! (or force 
 ---  to 0 or 1 if it's gender-specific)
 ---
 --- @param def BuildingDef buildingDef
@@ -106,8 +106,8 @@ function RandomizedBuildingBase:isTableFor3DItems(obj, sq) end
 
 --- @public
 ---
----  Don't do any building change in a player's building Also check if the building
----  a bathroom, a kitchen and a bedroom This is ignored for the alwaysDo building
+---  Don't do any building change in a player's building Also check if the  building
+---  a bathroom, a kitchen and a bedroom  This is ignored for the alwaysDo building
 ---  i can do stuff in spiffo, pizzawhirled, etc..)
 ---
 --- @param def BuildingDef

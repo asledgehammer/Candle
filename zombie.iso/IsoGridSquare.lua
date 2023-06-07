@@ -204,13 +204,13 @@ function IsoGridSquare:CalcVisibility(playerIndex) end
 --- @param bIgnoreSolidTrans boolean
 --- @return boolean
 --- @overload fun(gridSquare: IsoGridSquare, bVision: boolean, bPathfind: boolean, bIgnoreSolidTrans: boolean, bIgnoreSolid: boolean): boolean
---- @overload fun(arg0: IsoGridSquare, arg1: boolean, arg2: boolean, arg3: boolean, arg4: boolean, arg5: GetSquare): boolean
+--- @overload fun(gridSquare: IsoGridSquare, bVision: boolean, bPathfind: boolean, bIgnoreSolidTrans: boolean, bIgnoreSolid: boolean, getter: GetSquare): boolean
 function IsoGridSquare:CalculateCollide(gridSquare, bVision, bPathfind, bIgnoreSolidTrans) end
 
 --- @public
 --- @param gridSquare IsoGridSquare
 --- @return boolean
---- @overload fun(arg0: IsoGridSquare, arg1: GetSquare): boolean
+--- @overload fun(gridSquare: IsoGridSquare, getter: GetSquare): boolean
 function IsoGridSquare:CalculateVisionBlocked(gridSquare) end
 
 --- @public
@@ -398,25 +398,25 @@ function IsoGridSquare:IsOnScreen() end
 --- @public
 --- @param square IsoGridSquare
 --- @return void
---- @overload fun(arg0: IsoGridSquare, arg1: GetSquare): void
+--- @overload fun(square: IsoGridSquare, getter: GetSquare): void
 function IsoGridSquare:ReCalculateCollide(square) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return void
---- @overload fun(arg0: IsoGridSquare, arg1: GetSquare): void
+--- @overload fun(square: IsoGridSquare, getter: GetSquare): void
 function IsoGridSquare:ReCalculatePathFind(square) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return void
---- @overload fun(arg0: IsoGridSquare, arg1: GetSquare): void
+--- @overload fun(square: IsoGridSquare, getter: GetSquare): void
 function IsoGridSquare:ReCalculateVisionBlocked(square) end
 
 --- @public
 --- @param bDoReverse boolean
 --- @return void
---- @overload fun(arg0: boolean, arg1: GetSquare): void
+--- @overload fun(bDoReverse: boolean, getter: GetSquare): void
 function IsoGridSquare:RecalcAllWithNeighbours(bDoReverse) end
 
 --- @public
@@ -520,11 +520,11 @@ function IsoGridSquare:disableErosion() end
 function IsoGridSquare:discard() end
 
 --- @public
---- @param arg0 int
---- @param arg1 IsoTrap
---- @param arg2 ExplosionMode
+--- @param radius int
+--- @param trap IsoTrap
+--- @param explosionMode ExplosionMode
 --- @return void
-function IsoGridSquare:drawCircleExplosion(arg0, arg1, arg2) end
+function IsoGridSquare:drawCircleExplosion(radius, trap, explosionMode) end
 
 --- @public
 --- @return void
@@ -1080,7 +1080,7 @@ function IsoGridSquare:hasFlies() end
 
 --- @public
 ---
----  Check if a tile has a solid floor, used to build stuff at z level > 0 Also
+---  Check if a tile has a solid floor, used to build stuff at z level > 0  Also
 ---  check the tile "behind" the one w<e're trying to build something has a floor
 ---  one is required)
 ---
@@ -1619,7 +1619,7 @@ function IsoGridSquare:testCollideSpecialObjects(next) end
 --- @param y int
 --- @param z int
 --- @return boolean
---- @overload fun(arg0: IsoMovingObject, arg1: int, arg2: int, arg3: int, arg4: GetSquare): boolean
+--- @overload fun(mover: IsoMovingObject, x: int, y: int, z: int, getter: GetSquare): boolean
 function IsoGridSquare:testPathFindAdjacent(mover, x, y, z) end
 
 --- @public

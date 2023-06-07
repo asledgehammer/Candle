@@ -11,7 +11,7 @@ InventoryContainer = {};
 --- @public
 --- @param tooltipUI ObjectTooltip
 --- @return void
---- @overload fun(arg0: ObjectTooltip, arg1: Layout): void
+--- @overload fun(tooltipUI: ObjectTooltip, layout: Layout): void
 function InventoryContainer:DoTooltip(tooltipUI) end
 
 --- @public

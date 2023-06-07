@@ -123,9 +123,9 @@ function ChatMessage:setCustomTag(customTag) end
 function ChatMessage:setDatetime(datetime) end
 
 --- @public
---- @param __local boolean
+--- @param __local__ boolean
 --- @return void
-function ChatMessage:setLocal(__local) end
+function ChatMessage:setLocal(__local__) end
 
 --- @public
 --- @param overHeadSpeech boolean

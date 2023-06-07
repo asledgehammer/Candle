@@ -9,23 +9,23 @@ RVSPoliceBlockade = {};
 ------------------------------------
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
---- @param arg2 boolean
+--- @param zone Zone
+--- @param chunk IsoChunk
+--- @param debug boolean
 --- @return boolean
-function RVSPoliceBlockade:initVehicleStorySpawner(arg0, arg1, arg2) end
+function RVSPoliceBlockade:initVehicleStorySpawner(zone, chunk, debug) end
 
 --- @public
---- @param arg0 Zone
---- @param arg1 IsoChunk
+--- @param zone Zone
+--- @param chunk IsoChunk
 --- @return void
-function RVSPoliceBlockade:randomizeVehicleStory(arg0, arg1) end
+function RVSPoliceBlockade:randomizeVehicleStory(zone, chunk) end
 
 --- @public
---- @param arg0 VehicleStorySpawner
---- @param arg1 Element
+--- @param spawner VehicleStorySpawner
+--- @param element Element
 --- @return void
-function RVSPoliceBlockade:spawnElement(arg0, arg1) end
+function RVSPoliceBlockade:spawnElement(spawner, element) end
 
 
 ------------------------------------

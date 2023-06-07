@@ -15,10 +15,10 @@ Profession = {};
 function Profession:addFreeTrait(trait) end
 
 --- @public
---- @param arg0 Perk
---- @param arg1 int
+--- @param perk Perk
+--- @param level int
 --- @return void
-function Profession:addXPBoost(arg0, arg1) end
+function Profession:addXPBoost(perk, level) end
 
 --- @public
 --- @return int the cost
