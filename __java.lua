@@ -21,3 +21,6 @@
 --- @alias Character string
 --- @alias String string
 --- @alias KahluaTable table
+---
+--- @alias Map AbstractMap|EnumMap|HashMap
+--- @alias List AbstractList|AbstractSequentialList|ArrayList|LinkedList|Stack|Vector

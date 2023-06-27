@@ -208,7 +208,6 @@
 --- @class LightbarSirenMode
 --- @class Line
 --- @class LinkedHashMap
---- @class List
 --- @class ListIterator
 --- @class LoadingQueueUI
 --- @class LocalDateTime
