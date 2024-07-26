@@ -11,7 +11,7 @@ IsoStove = {};
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoStove): boolean
 function IsoStove:Activated() end
 
 --- @public
@@ -19,7 +19,7 @@ function IsoStove:Activated() end
 ---  Turn on or off the stove, if no electricity it won't work
 ---
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: IsoStove): void
 function IsoStove:Toggle() end
 
 --- @public
@@ -28,7 +28,7 @@ function IsoStove:addToWorld() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: IsoStove): String
 function IsoStove:getActivatableType() end
 
 --- @public

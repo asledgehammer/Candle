@@ -15,7 +15,7 @@ function BooleanDebugOption:getName() end
 
 --- @public
 --- @return IDebugOptionGroup
---- @overload fun(): IDebugOptionGroup
+--- @overload fun(self: BooleanDebugOption): IDebugOptionGroup
 function BooleanDebugOption:getParent() end
 
 --- @public
@@ -29,7 +29,7 @@ function BooleanDebugOption:isDebugOnly() end
 --- @public
 --- @param parent IDebugOptionGroup
 --- @return void
---- @overload fun(parent: IDebugOptionGroup): void
+--- @overload fun(self: BooleanDebugOption, parent: IDebugOptionGroup): void
 function BooleanDebugOption:setParent(parent) end
 
 

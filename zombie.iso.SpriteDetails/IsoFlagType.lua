@@ -97,8 +97,8 @@
 --- @field public WallWTrans IsoFlagType
 --- @field public water IsoFlagType
 --- @field public waterPiped IsoFlagType
---- @field public WindowN IsoFlagType
---- @field public WindowW IsoFlagType
+--- @field public windowN IsoFlagType
+--- @field public windowW IsoFlagType
 IsoFlagType = {};
 
 ------------------------------------

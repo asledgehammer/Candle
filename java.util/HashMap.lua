@@ -52,7 +52,7 @@ function HashMap.ofEntries(arg0) end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: HashMap): void
 function HashMap:clear() end
 
 --- @public
@@ -63,38 +63,38 @@ function HashMap:clone() end
 --- @param arg0 Object
 --- @param arg1 BiFunction
 --- @return Object
---- @overload fun(arg0: Object, arg1: BiFunction): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: BiFunction): Object
 function HashMap:compute(arg0, arg1) end
 
 --- @public
 --- @param arg0 Object
 --- @param arg1 Function
 --- @return Object
---- @overload fun(arg0: Object, arg1: Function): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: Function): Object
 function HashMap:computeIfAbsent(arg0, arg1) end
 
 --- @public
 --- @param arg0 Object
 --- @param arg1 BiFunction
 --- @return Object
---- @overload fun(arg0: Object, arg1: BiFunction): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: BiFunction): Object
 function HashMap:computeIfPresent(arg0, arg1) end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: HashMap, arg0: Object): boolean
 function HashMap:containsKey(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: HashMap, arg0: Object): boolean
 function HashMap:containsValue(arg0) end
 
 --- @public
 --- @return Set
---- @overload fun(): Set
+--- @overload fun(self: HashMap): Set
 function HashMap:entrySet() end
 
 --- @public
@@ -105,20 +105,20 @@ function HashMap:equals(arg0) end
 --- @public
 --- @param arg0 BiConsumer
 --- @return void
---- @overload fun(arg0: BiConsumer): void
+--- @overload fun(self: HashMap, arg0: BiConsumer): void
 function HashMap:forEach(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @return Object
---- @overload fun(arg0: Object): Object
+--- @overload fun(self: HashMap, arg0: Object): Object
 function HashMap:get(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object): Object
 function HashMap:getOrDefault(arg0, arg1) end
 
 --- @public
@@ -127,12 +127,12 @@ function HashMap:hashCode() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: HashMap): boolean
 function HashMap:isEmpty() end
 
 --- @public
 --- @return Set
---- @overload fun(): Set
+--- @overload fun(self: HashMap): Set
 function HashMap:keySet() end
 
 --- @public
@@ -140,60 +140,60 @@ function HashMap:keySet() end
 --- @param arg1 Object
 --- @param arg2 BiFunction
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object, arg2: BiFunction): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object, arg2: BiFunction): Object
 function HashMap:merge(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object): Object
 function HashMap:put(arg0, arg1) end
 
 --- @public
 --- @param arg0 Map
 --- @return void
---- @overload fun(arg0: Map): void
+--- @overload fun(self: HashMap, arg0: Map): void
 function HashMap:putAll(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object): Object
 function HashMap:putIfAbsent(arg0, arg1) end
 
 --- @public
 --- @param arg0 Object
 --- @return Object
---- @overload fun(arg0: Object): Object
---- @overload fun(arg0: Object, arg1: Object): boolean
---- @overload fun(arg0: Object, arg1: Object): boolean
+--- @overload fun(self: HashMap, arg0: Object): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object): boolean
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object): boolean
 function HashMap:remove(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object): Object
---- @overload fun(arg0: Object, arg1: Object, arg2: Object): boolean
---- @overload fun(arg0: Object, arg1: Object, arg2: Object): boolean
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object): Object
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object, arg2: Object): boolean
+--- @overload fun(self: HashMap, arg0: Object, arg1: Object, arg2: Object): boolean
 function HashMap:replace(arg0, arg1) end
 
 --- @public
 --- @param arg0 BiFunction
 --- @return void
---- @overload fun(arg0: BiFunction): void
+--- @overload fun(self: HashMap, arg0: BiFunction): void
 function HashMap:replaceAll(arg0) end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: HashMap): int
 function HashMap:size() end
 
 --- @public
 --- @return Collection
---- @overload fun(): Collection
+--- @overload fun(self: HashMap): Collection
 function HashMap:values() end
 
 

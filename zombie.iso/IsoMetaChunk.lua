@@ -69,7 +69,7 @@ function IsoMetaChunk:getUnadjustedZombieIntensity() end
 
 --- @public
 --- @return float
---- @overload fun(bRandom: boolean): float
+--- @overload fun(self: IsoMetaChunk, bRandom: boolean): float
 function IsoMetaChunk:getZombieIntensity() end
 
 --- @public

@@ -11,12 +11,12 @@ IntegerServerOption = {};
 
 --- @public
 --- @return ConfigOption
---- @overload fun(): ConfigOption
+--- @overload fun(self: IntegerServerOption): ConfigOption
 function IntegerServerOption:asConfigOption() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: IntegerServerOption): String
 function IntegerServerOption:getTooltip() end
 
 

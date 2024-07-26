@@ -11,12 +11,12 @@ BooleanServerOption = {};
 
 --- @public
 --- @return ConfigOption
---- @overload fun(): ConfigOption
+--- @overload fun(self: BooleanServerOption): ConfigOption
 function BooleanServerOption:asConfigOption() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: BooleanServerOption): String
 function BooleanServerOption:getTooltip() end
 
 

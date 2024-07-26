@@ -27,8 +27,8 @@ function IsoMarkers:addCircleIsoMarker(gs, r, g, b, a) end
 --- @param doAlpha boolean
 --- @param doIsoObject boolean
 --- @return IsoMarker
---- @overload fun(textureTable: KahluaTable, textureOverlayTable: KahluaTable, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, doIsoObject: boolean): IsoMarker
---- @overload fun(textureTable: KahluaTable, textureOverlayTable: KahluaTable, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, doIsoObject: boolean, fadeSpeed: float, fadeMin: float, fadeMax: float): IsoMarker
+--- @overload fun(self: IsoMarkers, textureTable: KahluaTable, textureOverlayTable: KahluaTable, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, doIsoObject: boolean): IsoMarker
+--- @overload fun(self: IsoMarkers, textureTable: KahluaTable, textureOverlayTable: KahluaTable, gs: IsoGridSquare, r: float, g: float, b: float, doAlpha: boolean, doIsoObject: boolean, fadeSpeed: float, fadeMin: float, fadeMax: float): IsoMarker
 function IsoMarkers:addIsoMarker(spriteName, gs, r, g, b, doAlpha, doIsoObject) end
 
 --- @public
@@ -48,13 +48,13 @@ function IsoMarkers:init() end
 --- @public
 --- @param id int
 --- @return boolean
---- @overload fun(marker: CircleIsoMarker): boolean
+--- @overload fun(self: IsoMarkers, marker: CircleIsoMarker): boolean
 function IsoMarkers:removeCircleIsoMarker(id) end
 
 --- @public
 --- @param id int
 --- @return boolean
---- @overload fun(marker: IsoMarker): boolean
+--- @overload fun(self: IsoMarkers, marker: IsoMarker): boolean
 function IsoMarkers:removeIsoMarker(id) end
 
 --- @public

@@ -53,9 +53,9 @@ function UIElement:DrawSubTextureRGBA(tex, subX, subY, subW, subH, x, y, w, h, r
 --- @param b double
 --- @param alpha double
 --- @return void
---- @overload fun(font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
---- @overload fun(text: String, x: double, y: double, width: double, height: double, r: double, g: double, b: double, alpha: double): void
---- @overload fun(font: UIFont, text: String, x: double, y: double, zoom: double, r: double, g: double, b: double, alpha: double): void
+--- @overload fun(self: UIElement, font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
+--- @overload fun(self: UIElement, text: String, x: double, y: double, width: double, height: double, r: double, g: double, b: double, alpha: double): void
+--- @overload fun(self: UIElement, font: UIFont, text: String, x: double, y: double, zoom: double, r: double, g: double, b: double, alpha: double): void
 function UIElement:DrawText(text, x, y, r, g, b, alpha) end
 
 --- @public
@@ -67,7 +67,7 @@ function UIElement:DrawText(text, x, y, r, g, b, alpha) end
 --- @param b double
 --- @param alpha double
 --- @return void
---- @overload fun(font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
+--- @overload fun(self: UIElement, font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
 function UIElement:DrawTextCentre(text, x, y, r, g, b, alpha) end
 
 --- @public
@@ -79,7 +79,7 @@ function UIElement:DrawTextCentre(text, x, y, r, g, b, alpha) end
 --- @param b double
 --- @param alpha double
 --- @return void
---- @overload fun(font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
+--- @overload fun(self: UIElement, font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
 function UIElement:DrawTextRight(text, x, y, r, g, b, alpha) end
 
 --- @public
@@ -100,7 +100,7 @@ function UIElement:DrawTextUntrimmed(font, text, x, y, r, g, b, alpha) end
 --- @param y double
 --- @param alpha double
 --- @return void
---- @overload fun(tex: Texture, tlx: double, tly: double, trx: double, try2: double, brx: double, bry: double, blx: double, bly: double, r: double, g: double, b: double, a: double): void
+--- @overload fun(self: UIElement, tex: Texture, tlx: double, tly: double, trx: double, try2: double, brx: double, bry: double, blx: double, bly: double, r: double, g: double, b: double, a: double): void
 function UIElement:DrawTexture(tex, x, y, alpha) end
 
 --- @public
@@ -109,7 +109,7 @@ function UIElement:DrawTexture(tex, x, y, alpha) end
 --- @param centerY double
 --- @param angle double
 --- @return void
---- @overload fun(tex: Texture, centerX: double, centerY: double, angle: double, r: double, g: double, b: double, a: double): void
+--- @overload fun(self: UIElement, tex: Texture, centerX: double, centerY: double, angle: double, r: double, g: double, b: double, a: double): void
 function UIElement:DrawTextureAngle(tex, centerX, centerY, angle) end
 
 --- @public
@@ -185,7 +185,7 @@ function UIElement:DrawTextureScaledAspect2(tex, x, y, width, height, r, g, b, a
 --- @param height double
 --- @param col Color
 --- @return void
---- @overload fun(tex: Texture, x: double, y: double, width: double, height: double, r: double, g: double, b: double, a: double): void
+--- @overload fun(self: UIElement, tex: Texture, x: double, y: double, width: double, height: double, r: double, g: double, b: double, a: double): void
 function UIElement:DrawTextureScaledCol(tex, x, y, width, height, col) end
 
 --- @public

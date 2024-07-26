@@ -11,7 +11,7 @@ RadioScript = {};
 --- @public
 --- @param broadcast RadioBroadCast
 --- @return void
---- @overload fun(broadcast: RadioBroadCast, ignoreTimestamps: boolean): void
+--- @overload fun(self: RadioScript, broadcast: RadioBroadCast, ignoreTimestamps: boolean): void
 function RadioScript:AddBroadcast(broadcast) end
 
 --- @public

@@ -133,9 +133,9 @@ function Texture.trygetTexture(name) end
 ---  Blinds the image
 ---
 --- @return void
---- @overload fun(): void
---- @overload fun(unit: int): void
---- @overload fun(unit: int): void
+--- @overload fun(self: Texture): void
+--- @overload fun(self: Texture, unit: int): void
+--- @overload fun(self: Texture, unit: int): void
 function Texture:bind() end
 
 --- @public
@@ -152,9 +152,9 @@ function Texture:copyMaskRegion(from, x, y, width, height) end
 ---  creates the mask of collisions
 ---
 --- @return void
---- @overload fun(mask: boolean[]): void
---- @overload fun(mask: BooleanGrid): void
---- @overload fun(buf: WrappedBuffer): void
+--- @overload fun(self: Texture, mask: boolean[]): void
+--- @overload fun(self: Texture, mask: BooleanGrid): void
+--- @overload fun(self: Texture, buf: WrappedBuffer): void
 function Texture:createMask() end
 
 --- @public
@@ -162,7 +162,7 @@ function Texture:createMask() end
 ---  destroys the image and release all resources
 ---
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: Texture): void
 function Texture:destroy() end
 
 --- @public
@@ -175,7 +175,7 @@ function Texture:equals(other) end
 ---  returns the texture's pixel in a ByteBuffer
 ---
 --- @return WrappedBuffer
---- @overload fun(): WrappedBuffer
+--- @overload fun(self: Texture): WrappedBuffer
 function Texture:getData() end
 
 --- @public
@@ -183,7 +183,7 @@ function Texture:getData() end
 ---  Description copied from interface: ITexture
 ---
 --- @return int the height of image
---- @overload fun(): int the height of image
+--- @overload fun(self: Texture): int the height of image
 function Texture:getHeight() end
 
 --- @public
@@ -191,7 +191,7 @@ function Texture:getHeight() end
 ---  Description copied from interface: ITexture
 ---
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: Texture): int
 function Texture:getHeightHW() end
 
 --- @public
@@ -203,7 +203,7 @@ function Texture:getHeightOrig() end
 ---  Description copied from interface: ITexture
 ---
 --- @return int the ID of image in the Vram
---- @overload fun(): int the ID of image in the Vram
+--- @overload fun(self: Texture): int the ID of image in the Vram
 function Texture:getID() end
 
 --- @public
@@ -258,7 +258,7 @@ function Texture:getUseAlphaChannel() end
 ---  Description copied from interface: ITexture
 ---
 --- @return int the width of image
---- @overload fun(): int the width of image
+--- @overload fun(self: Texture): int the width of image
 function Texture:getWidth() end
 
 --- @public
@@ -266,7 +266,7 @@ function Texture:getWidth() end
 ---  Description copied from interface: ITexture
 ---
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: Texture): int
 function Texture:getWidthHW() end
 
 --- @public
@@ -278,7 +278,7 @@ function Texture:getWidthOrig() end
 ---  Description copied from interface: ITexture
 ---
 --- @return float the end X-coordinate
---- @overload fun(): float the end X-coordinate
+--- @overload fun(self: Texture): float the end X-coordinate
 function Texture:getXEnd() end
 
 --- @public
@@ -286,7 +286,7 @@ function Texture:getXEnd() end
 ---  Description copied from interface: ITexture
 ---
 --- @return float the start X-coordinate
---- @overload fun(): float the start X-coordinate
+--- @overload fun(self: Texture): float the start X-coordinate
 function Texture:getXStart() end
 
 --- @public
@@ -294,7 +294,7 @@ function Texture:getXStart() end
 ---  Description copied from interface: ITexture
 ---
 --- @return float the end Y-coordinate
---- @overload fun(): float the end Y-coordinate
+--- @overload fun(self: Texture): float the end Y-coordinate
 function Texture:getYEnd() end
 
 --- @public
@@ -302,7 +302,7 @@ function Texture:getYEnd() end
 ---  Description copied from interface: ITexture
 ---
 --- @return float the start Y-coordinate
---- @overload fun(): float the start Y-coordinate
+--- @overload fun(self: Texture): float the start Y-coordinate
 function Texture:getYStart() end
 
 --- @public
@@ -317,7 +317,7 @@ function Texture:isCollisionable() end
 ---  returns if the texture is destroyed or not
 ---
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: Texture): boolean
 function Texture:isDestroyed() end
 
 --- @public
@@ -325,7 +325,7 @@ function Texture:isDestroyed() end
 ---  Description copied from interface: ITexture
 ---
 --- @return boolean if the texture is solid or not.
---- @overload fun(): boolean if the texture is solid or not.
+--- @overload fun(self: Texture): boolean if the texture is solid or not.
 function Texture:isSolid() end
 
 --- @public
@@ -345,7 +345,7 @@ function Texture:loadMaskRegion(cache) end
 --- @param green int
 --- @param blue int
 --- @return void
---- @overload fun(red: int, green: int, blue: int): void
+--- @overload fun(self: Texture, red: int, green: int, blue: int): void
 function Texture:makeTransp(red, green, blue) end
 
 --- @public
@@ -361,9 +361,9 @@ function Texture:reloadFromFile(name) end
 --- @param x float
 --- @param y float
 --- @return void
---- @overload fun(x: float, y: float, width: float, height: float): void
---- @overload fun(x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer): void
---- @overload fun(dr: ObjectRenderEffects, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer): void
+--- @overload fun(self: Texture, x: float, y: float, width: float, height: float): void
+--- @overload fun(self: Texture, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer): void
+--- @overload fun(self: Texture, dr: ObjectRenderEffects, x: float, y: float, width: float, height: float, r: float, g: float, b: float, a: float, texdModifier: Consumer): void
 function Texture:render(x, y) end
 
 --- @public
@@ -479,7 +479,7 @@ function Texture:saveToZomboidDirectory(filename) end
 --- @param blue int
 --- @param alpha int
 --- @return void
---- @overload fun(red: int, green: int, blue: int, alpha: int): void
+--- @overload fun(self: Texture, red: int, green: int, blue: int, alpha: int): void
 function Texture:setAlphaForeach(red, green, blue, alpha) end
 
 --- @public
@@ -492,7 +492,7 @@ function Texture:setCustomizedTexture() end
 ---
 --- @param data ByteBuffer texture's pixel data
 --- @return void
---- @overload fun(data: ByteBuffer): void
+--- @overload fun(self: Texture, data: ByteBuffer): void
 function Texture:setData(data) end
 
 --- @public
@@ -506,7 +506,7 @@ function Texture:setHeight(height) end
 ---
 --- @param mask Mask the mask of collisions to set
 --- @return void
---- @overload fun(mask: Mask): void
+--- @overload fun(self: Texture, mask: Mask): void
 function Texture:setMask(mask) end
 
 --- @public
@@ -548,7 +548,7 @@ function Texture:setRealWidth(realWidth) end
 --- @param width int
 --- @param height int
 --- @return void
---- @overload fun(x: int, y: int, width: int, height: int): void
+--- @overload fun(self: Texture, x: int, y: int, width: int, height: int): void
 function Texture:setRegion(x, y, width, height) end
 
 --- @public
@@ -570,8 +570,8 @@ function Texture:setWidth(width) end
 --- @param width int
 --- @param height int
 --- @return Texture
---- @overload fun(name: String, xOffset: int, yOffset: int, width: int, height: int): Texture
---- @overload fun(xOffset: int, yOffset: int, row: int, coloumn: int, width: int, height: int, spaceX: int, spaceY: int): Texture[]
+--- @overload fun(self: Texture, name: String, xOffset: int, yOffset: int, width: int, height: int): Texture
+--- @overload fun(self: Texture, xOffset: int, yOffset: int, row: int, coloumn: int, width: int, height: int, spaceX: int, spaceY: int): Texture[]
 function Texture:split(xOffset, yOffset, width, height) end
 
 --- @public

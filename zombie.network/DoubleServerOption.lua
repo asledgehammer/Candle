@@ -11,12 +11,12 @@ DoubleServerOption = {};
 
 --- @public
 --- @return ConfigOption
---- @overload fun(): ConfigOption
+--- @overload fun(self: DoubleServerOption): ConfigOption
 function DoubleServerOption:asConfigOption() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: DoubleServerOption): String
 function DoubleServerOption:getTooltip() end
 
 

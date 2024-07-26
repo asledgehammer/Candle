@@ -93,12 +93,12 @@ function IsoDirections.values() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(time: int): IsoDirections
+--- @overload fun(self: IsoDirections, time: int): IsoDirections
 function IsoDirections:RotLeft() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(time: int): IsoDirections
+--- @overload fun(self: IsoDirections, time: int): IsoDirections
 function IsoDirections:RotRight() end
 
 --- @public

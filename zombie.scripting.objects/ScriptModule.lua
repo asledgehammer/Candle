@@ -36,7 +36,7 @@ function ScriptModule:Reset() end
 --- @public
 --- @param name String
 --- @return Item
---- @overload fun(name: String): Item
+--- @overload fun(self: ScriptModule, name: String): Item
 function ScriptModule:getItem(name) end
 
 --- @public
@@ -51,7 +51,7 @@ function ScriptModule:getName() end
 --- @public
 --- @param name String
 --- @return Recipe
---- @overload fun(name: String): Recipe
+--- @overload fun(self: ScriptModule, name: String): Recipe
 function ScriptModule:getRecipe(name) end
 
 --- @public

@@ -19,7 +19,7 @@ function DummySoundManager:BlendThenStart(musicTrack, f, PrefMusic) end
 --- @param audio Audio
 --- @param targetVolume float
 --- @return void
---- @overload fun(audio: Audio, targetVolume: float, blendSpeedAlpha: float): void
+--- @overload fun(self: DummySoundManager, audio: Audio, targetVolume: float, blendSpeedAlpha: float): void
 function DummySoundManager:BlendVolume(audio, targetVolume) end
 
 --- @public
@@ -53,7 +53,7 @@ function DummySoundManager:IsMusicPlaying() end
 --- @param loop boolean
 --- @param volume float
 --- @return void
---- @overload fun(name: String, musicTrack: Audio, volume: float, bloop: boolean): void
+--- @overload fun(self: DummySoundManager, name: String, musicTrack: Audio, volume: float, bloop: boolean): void
 function DummySoundManager:PlayAsMusic(name, musicTrack, loop, volume) end
 
 --- @public
@@ -76,7 +76,7 @@ function DummySoundManager:PlayMusic(n, name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain float
 --- @return Audio
---- @overload fun(name: String, loop: boolean, pitchVar: float, maxGain: float): Audio
+--- @overload fun(self: DummySoundManager, name: String, loop: boolean, pitchVar: float, maxGain: float): Audio
 function DummySoundManager:PlaySound(name, loop, maxGain) end
 
 --- @public
@@ -91,8 +91,8 @@ function DummySoundManager:PlaySoundEvenSilent(name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain float
 --- @return Audio
---- @overload fun(name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
---- @overload fun(name: String, variations: int, loop: boolean, maxGain: float): Audio
+--- @overload fun(self: DummySoundManager, name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
+--- @overload fun(self: DummySoundManager, name: String, variations: int, loop: boolean, maxGain: float): Audio
 function DummySoundManager:PlaySoundWav(name, loop, maxGain) end
 
 --- @public
@@ -103,8 +103,8 @@ function DummySoundManager:PlaySoundWav(name, loop, maxGain) end
 --- @param maxGain float
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
---- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): Audio
+--- @overload fun(self: DummySoundManager, name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
+--- @overload fun(self: DummySoundManager, name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): Audio
 function DummySoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
@@ -128,8 +128,8 @@ function DummySoundManager:PlayWorldSoundImpl(name, loop, sx, sy, sz, pitchVar, 
 --- @param maxGain float
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
---- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): void
+--- @overload fun(self: DummySoundManager, name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
+--- @overload fun(self: DummySoundManager, name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): void
 function DummySoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
@@ -222,7 +222,7 @@ function DummySoundManager:isPlayingMusic() end
 --- @public
 --- @param name String
 --- @return boolean
---- @overload fun(eventInstance: long): boolean
+--- @overload fun(self: DummySoundManager, eventInstance: long): boolean
 function DummySoundManager:isPlayingUISound(name) end
 
 --- @public

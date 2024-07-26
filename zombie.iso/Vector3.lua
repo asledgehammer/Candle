@@ -64,7 +64,7 @@ function Vector3:add(other) end
 ---
 --- @param other Vector2 The other Vector2 to add to this one
 --- @return Vector3 This vector, with the other vector added
---- @overload fun(other: Vector3): Vector3
+--- @overload fun(self: Vector3, other: Vector3): Vector3
 function Vector3:addToThis(other) end
 
 --- @public
@@ -88,7 +88,7 @@ function Vector3:angleTo(other) end
 ---  Clone this vector
 ---
 --- @return Object
---- @overload fun(): Vector3
+--- @overload fun(self: Vector3): Vector3
 function Vector3:clone() end
 
 --- @public
@@ -163,7 +163,7 @@ function Vector3:rotatey(rad) end
 ---
 --- @param other Vector3 The Vector2 to copy
 --- @return Vector3
---- @overload fun(x: float, y: float, z: float): Vector3
+--- @overload fun(self: Vector3, x: float, y: float, z: float): Vector3
 function Vector3:set(other) end
 
 --- @public

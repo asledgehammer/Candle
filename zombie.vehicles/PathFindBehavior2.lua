@@ -28,14 +28,14 @@ function PathFindBehavior2.closestPointOnPath(x3, y3, z, mover, path, pop) end
 --- @public
 --- @param mover Mover
 --- @return void
---- @overload fun(mover: Mover): void
+--- @overload fun(self: PathFindBehavior2, mover: Mover): void
 function PathFindBehavior2:Failed(mover) end
 
 --- @public
 --- @param path Path
 --- @param mover Mover
 --- @return void
---- @overload fun(path: Path, mover: Mover): void
+--- @overload fun(self: PathFindBehavior2, path: Path, mover: Mover): void
 function PathFindBehavior2:Succeeded(path, mover) end
 
 --- @public

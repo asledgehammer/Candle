@@ -187,7 +187,7 @@ function Color:addToCopy(c) end
 ---  Make a brighter instance of this colour
 ---
 --- @return Color The brighter version of this colour
---- @overload fun(scale: float): Color The brighter version of this colour
+--- @overload fun(self: Color, scale: float): Color The brighter version of this colour
 function Color:brighter() end
 
 --- @public
@@ -202,7 +202,7 @@ function Color:changeHSBValue(hFactor, sFactor, bFactor) end
 ---  Make a darker instance of this colour
 ---
 --- @return Color The darker version of this colour
---- @overload fun(scale: float): Color The darker version of this colour
+--- @overload fun(self: Color, scale: float): Color The darker version of this colour
 function Color:darker() end
 
 --- @public
@@ -342,8 +342,8 @@ function Color:scaleCopy(value) end
 --- @public
 --- @param other Color
 --- @return Color
---- @overload fun(r: float, g: float, b: float): Color
---- @overload fun(r: float, g: float, b: float, a: float): Color
+--- @overload fun(self: Color, r: float, g: float, b: float): Color
+--- @overload fun(self: Color, r: float, g: float, b: float, a: float): Color
 function Color:set(other) end
 
 --- @public

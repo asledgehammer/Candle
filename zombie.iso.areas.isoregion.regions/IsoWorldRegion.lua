@@ -25,12 +25,12 @@ function IsoWorldRegion:getColor() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(): ArrayList
+--- @overload fun(self: IsoWorldRegion): ArrayList
 function IsoWorldRegion:getDebugConnectedNeighborCopy() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(): ArrayList
+--- @overload fun(self: IsoWorldRegion): ArrayList
 function IsoWorldRegion:getDebugIsoChunkRegionCopy() end
 
 --- @public
@@ -39,12 +39,12 @@ function IsoWorldRegion:getID() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(): ArrayList
+--- @overload fun(self: IsoWorldRegion): ArrayList
 function IsoWorldRegion:getNeighbors() end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: IsoWorldRegion): int
 function IsoWorldRegion:getRoofCnt() end
 
 --- @public
@@ -53,7 +53,7 @@ function IsoWorldRegion:getRoofedPercentage() end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: IsoWorldRegion): int
 function IsoWorldRegion:getSquareSize() end
 
 --- @public
@@ -62,17 +62,17 @@ function IsoWorldRegion:isEnclosed() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoWorldRegion): boolean
 function IsoWorldRegion:isFogMask() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoWorldRegion): boolean
 function IsoWorldRegion:isFullyRoofed() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoWorldRegion): boolean
 function IsoWorldRegion:isPlayerRoom() end
 
 --- @public

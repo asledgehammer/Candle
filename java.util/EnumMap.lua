@@ -16,7 +16,7 @@ function EnumMap:clear() end
 
 --- @public
 --- @return Object
---- @overload fun(): EnumMap
+--- @overload fun(self: EnumMap): EnumMap
 function EnumMap:clone() end
 
 --- @public
@@ -55,7 +55,7 @@ function EnumMap:keySet() end
 --- @param arg0 Enum
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object): Object
+--- @overload fun(self: EnumMap, arg0: Object, arg1: Object): Object
 function EnumMap:put(arg0, arg1) end
 
 --- @public

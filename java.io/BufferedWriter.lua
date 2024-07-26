@@ -23,8 +23,8 @@ function BufferedWriter:newLine() end
 --- @public
 --- @param arg0 int
 --- @return void
---- @overload fun(arg0: char[], arg1: int, arg2: int): void
---- @overload fun(arg0: String, arg1: int, arg2: int): void
+--- @overload fun(self: BufferedWriter, arg0: char[], arg1: int, arg2: int): void
+--- @overload fun(self: BufferedWriter, arg0: String, arg1: int, arg2: int): void
 function BufferedWriter:write(arg0) end
 
 

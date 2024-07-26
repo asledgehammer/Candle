@@ -34,7 +34,7 @@ function SGlobalObjectSystem:getInitialStateForClient() end
 
 --- @public
 --- @return void
---- @overload fun(bb: ByteBuffer, WorldVersion: int): void
+--- @overload fun(self: SGlobalObjectSystem, bb: ByteBuffer, WorldVersion: int): void
 function SGlobalObjectSystem:load() end
 
 --- @public
@@ -55,7 +55,7 @@ function SGlobalObjectSystem:removeGlobalObjectOnClient(globalObject) end
 
 --- @public
 --- @return void
---- @overload fun(bb: ByteBuffer): void
+--- @overload fun(self: SGlobalObjectSystem, bb: ByteBuffer): void
 function SGlobalObjectSystem:save() end
 
 --- @public

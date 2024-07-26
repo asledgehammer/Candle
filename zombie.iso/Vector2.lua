@@ -105,7 +105,7 @@ function Vector2:angleTo(other) end
 ---  Clone this vector
 ---
 --- @return Object
---- @overload fun(): Vector2
+--- @overload fun(self: Vector2): Vector2
 function Vector2:clone() end
 
 --- @public
@@ -182,7 +182,7 @@ function Vector2:scale(scale) end
 ---
 --- @param other Vector2 The Vector2 to copy
 --- @return Vector2
---- @overload fun(x: float, y: float): Vector2
+--- @overload fun(self: Vector2, x: float, y: float): Vector2
 function Vector2:set(other) end
 
 --- @public

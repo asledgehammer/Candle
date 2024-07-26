@@ -155,8 +155,8 @@ function IsoCell:LoadPlayer(WorldVersion) end
 --- @param sz int
 --- @param bClearExisting boolean
 --- @return void
---- @overload fun(lot: IsoLot, sx: int, sy: int, sz: int, bClearExisting: boolean): void
---- @overload fun(lot: IsoLot, sx: int, sy: int, sz: int, ch: IsoChunk, WX: int, WY: int): void
+--- @overload fun(self: IsoCell, lot: IsoLot, sx: int, sy: int, sz: int, bClearExisting: boolean): void
+--- @overload fun(self: IsoCell, lot: IsoLot, sx: int, sy: int, sz: int, ch: IsoChunk, WX: int, WY: int): void
 function IsoCell:PlaceLot(filename, sx, sy, sz, bClearExisting) end
 
 --- @public
@@ -186,7 +186,7 @@ function IsoCell:addHeatSource(heatSource) end
 --- @public
 --- @param light IsoLightSource
 --- @return void
---- @overload fun(x: int, y: int, z: int, r: float, g: float, b: float, rad: int): IsoLightSource
+--- @overload fun(self: IsoCell, x: int, y: int, z: int, r: float, g: float, b: float, rad: int): IsoLightSource
 function IsoCell:addLamppost(light) end
 
 --- @public
@@ -207,13 +207,13 @@ function IsoCell:addToProcessIsoObjectRemove(object) end
 --- @public
 --- @param items ArrayList
 --- @return void
---- @overload fun(item: InventoryItem): void
+--- @overload fun(self: IsoCell, item: InventoryItem): void
 function IsoCell:addToProcessItems(items) end
 
 --- @public
 --- @param items ArrayList
 --- @return void
---- @overload fun(item: InventoryItem): void
+--- @overload fun(self: IsoCell, item: InventoryItem): void
 function IsoCell:addToProcessItemsRemove(items) end
 
 --- @public
@@ -353,8 +353,8 @@ function IsoCell:getFreeTile(def) end
 --- @param y double
 --- @param z double
 --- @return IsoGridSquare
---- @overload fun(x: int, y: int, z: int): IsoGridSquare
---- @overload fun(x: Double, y: Double, z: Double): IsoGridSquare
+--- @overload fun(self: IsoCell, x: int, y: int, z: int): IsoGridSquare
+--- @overload fun(self: IsoCell, x: Double, y: Double, z: Double): IsoGridSquare
 function IsoCell:getGridSquare(x, y, z) end
 
 --- @public
@@ -621,7 +621,7 @@ function IsoCell:removeHeatSource(heatSource) end
 --- @public
 --- @param light IsoLightSource
 --- @return void
---- @overload fun(x: int, y: int, z: int): void
+--- @overload fun(self: IsoCell, x: int, y: int, z: int): void
 function IsoCell:removeLamppost(light) end
 
 --- @public
@@ -651,7 +651,7 @@ function IsoCell:savePlayer() end
 --- @public
 --- @param chunk IsoChunk
 --- @return void
---- @overload fun(chunk: IsoChunk, playerIndex: int): void
+--- @overload fun(self: IsoCell, chunk: IsoChunk, playerIndex: int): void
 function IsoCell:setCacheChunk(chunk) end
 
 --- @public

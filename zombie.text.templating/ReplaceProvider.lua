@@ -13,7 +13,7 @@ ReplaceProvider = {};
 --- @param key String
 --- @param value String
 --- @return void
---- @overload fun(key: String, table: KahluaTableImpl): void
+--- @overload fun(self: ReplaceProvider, key: String, table: KahluaTableImpl): void
 function ReplaceProvider:addKey(key, value) end
 
 --- @public
@@ -25,13 +25,13 @@ function ReplaceProvider:addReplacer(key, replace) end
 --- @public
 --- @param key String
 --- @return IReplace
---- @overload fun(key: String): IReplace
+--- @overload fun(self: ReplaceProvider, key: String): IReplace
 function ReplaceProvider:getReplacer(key) end
 
 --- @public
 --- @param key String
 --- @return boolean
---- @overload fun(key: String): boolean
+--- @overload fun(self: ReplaceProvider, key: String): boolean
 function ReplaceProvider:hasReplacer(key) end
 
 

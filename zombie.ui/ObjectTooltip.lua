@@ -104,7 +104,7 @@ function ObjectTooltip:DrawValueRight(value, x, y, highGood) end
 --- @param x int
 --- @param y int
 --- @return void
---- @overload fun(value: int, x: int, y: int): void
+--- @overload fun(self: ObjectTooltip, value: int, x: int, y: int): void
 function ObjectTooltip:DrawValueRightNoPlus(value, x, y) end
 
 --- @public

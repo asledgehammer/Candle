@@ -34,7 +34,7 @@ function VirtualZombieManager:addDeadZombiesToMap(nSize, room) end
 --- @param chunk IsoChunk
 --- @param room IsoRoom
 --- @return void
---- @overload fun(chunk: IsoChunk, room: IsoRoom, zombieCountForRoom: int, zombies: ArrayList): void
+--- @overload fun(self: VirtualZombieManager, chunk: IsoChunk, room: IsoRoom, zombieCountForRoom: int, zombies: ArrayList): void
 function VirtualZombieManager:addIndoorZombiesToChunk(chunk, room) end
 
 --- @public
@@ -46,7 +46,7 @@ function VirtualZombieManager:addToReusable(z) end
 --- @param nSize int
 --- @param room RoomDef
 --- @return ArrayList
---- @overload fun(nSize: int, room: RoomDef, bAllowDead: boolean): ArrayList
+--- @overload fun(self: VirtualZombieManager, nSize: int, room: RoomDef, bAllowDead: boolean): ArrayList
 function VirtualZombieManager:addZombiesToMap(nSize, room) end
 
 --- @public
@@ -82,8 +82,8 @@ function VirtualZombieManager:createRealZombie(x, y, z) end
 --- @param ZombieDir int
 --- @param bDead boolean
 --- @return IsoZombie
---- @overload fun(ZombieDir: int, bDead: boolean, outfitID: int): IsoZombie
---- @overload fun(descriptorID: int, ZombieDir: int, bDead: boolean): IsoZombie
+--- @overload fun(self: VirtualZombieManager, ZombieDir: int, bDead: boolean, outfitID: int): IsoZombie
+--- @overload fun(self: VirtualZombieManager, descriptorID: int, ZombieDir: int, bDead: boolean): IsoZombie
 function VirtualZombieManager:createRealZombieAlways(ZombieDir, bDead) end
 
 --- @public

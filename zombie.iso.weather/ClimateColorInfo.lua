@@ -66,13 +66,13 @@ function ClimateColorInfo:scale(val) end
 --- @public
 --- @param other Color
 --- @return void
---- @overload fun(r: float, g: float, b: float, a: float): void
+--- @overload fun(self: ClimateColorInfo, r: float, g: float, b: float, a: float): void
 function ClimateColorInfo:setExterior(other) end
 
 --- @public
 --- @param other Color
 --- @return void
---- @overload fun(r: float, g: float, b: float, a: float): void
+--- @overload fun(self: ClimateColorInfo, r: float, g: float, b: float, a: float): void
 function ClimateColorInfo:setInterior(other) end
 
 --- @public

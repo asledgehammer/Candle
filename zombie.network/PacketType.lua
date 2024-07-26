@@ -1,0 +1,276 @@
+--- @meta
+
+--- @class PacketType: Enum
+--- @field public class any
+--- @field public AcceptedFactionInvite PacketType
+--- @field public AcceptedSafehouseInvite PacketType
+--- @field public AccessDenied PacketType
+--- @field public ActionPacket PacketType
+--- @field public AddAlarm PacketType
+--- @field public AddAmbient PacketType
+--- @field public AddBrokenGlass PacketType
+--- @field public AddChatTab PacketType
+--- @field public AddCoopPlayer PacketType
+--- @field public AddCorpseToMap PacketType
+--- @field public AddExplosiveTrap PacketType
+--- @field public AddInventoryItemToContainer PacketType
+--- @field public AddItemInInventory PacketType
+--- @field public AddItemToMap PacketType
+--- @field public AdditionalPain PacketType
+--- @field public AddTicket PacketType
+--- @field public AddUserlog PacketType
+--- @field public AddWarningPoint PacketType
+--- @field public AddXP PacketType
+--- @field public AddXpCommand PacketType
+--- @field public AddXpFromPlayerStatsUI PacketType
+--- @field public Bandage PacketType
+--- @field public BecomeCorpse PacketType
+--- @field public BloodSplatter PacketType
+--- @field public BodyDamageUpdate PacketType
+--- @field public BurnCorpse PacketType
+--- @field public Cataplasm PacketType
+--- @field public ChangePlayerStats PacketType
+--- @field public ChangeSafety PacketType
+--- @field public ChangeTextColor PacketType
+--- @field public ChatMessageFromPlayer PacketType
+--- @field public ChatMessageToPlayer PacketType
+--- @field public Checksum PacketType
+--- @field public ChunkObjectState PacketType
+--- @field public CleanBurn PacketType
+--- @field public ClientCommand PacketType
+--- @field public ClimateManagerPacket PacketType
+--- @field public ConstructedZone PacketType
+--- @field public Disinfect PacketType
+--- @field public Drink PacketType
+--- @field public EatBody PacketType
+--- @field public EatFood PacketType
+--- @field public Equip PacketType
+--- @field public EventPacket PacketType
+--- @field public ExecuteQuery PacketType
+--- @field public ExtraInfo PacketType
+--- @field public GetDBSchema PacketType
+--- @field public getModData PacketType
+--- @field public GetTableResult PacketType
+--- @field public GlobalModData PacketType
+--- @field public GlobalModDataRequest PacketType
+--- @field public GlobalObjects PacketType
+--- @field public Helicopter PacketType
+--- @field public HitCharacter PacketType
+--- @field public HumanVisual PacketType
+--- @field public InitPlayerChat PacketType
+--- @field public InvMngGetItem PacketType
+--- @field public InvMngRemoveItem PacketType
+--- @field public InvMngReqItem PacketType
+--- @field public IsoRegionClientRequestFullUpdate PacketType
+--- @field public IsoRegionServerPacket PacketType
+--- @field public ItemStats PacketType
+--- @field public ItemTransaction PacketType
+--- @field public KeepAlive PacketType
+--- @field public Kicked PacketType
+--- @field public KickOutOfSafehouse PacketType
+--- @field public KillZombie PacketType
+--- @field public LoadPlayerProfile PacketType
+--- @field public Login PacketType
+--- @field public LoginQueueDone2 PacketType
+--- @field public LoginQueueRequest2 PacketType
+--- @field public MessageForAdmin PacketType
+--- @field public MetaGrid PacketType
+--- @field public NotRequiredInZip PacketType
+--- @field public ObjectChange PacketType
+--- @field public ObjectModData PacketType
+--- @field public PacketCounts PacketType
+--- @field public PacketTypeShort PacketType
+--- @field public PassengerMap PacketType
+--- @field public Ping PacketType
+--- @field public PingFromClient PacketType
+--- @field public PlayerAttachedItem PacketType
+--- @field public PlayerConnect PacketType
+--- @field public PlayerConnectedToChat PacketType
+--- @field public PlayerDamage PacketType
+--- @field public PlayerDamageFromCarCrash PacketType
+--- @field public PlayerDataRequest PacketType
+--- @field public PlayerDeath PacketType
+--- @field public PlayerJoinChat PacketType
+--- @field public PlayerLeaveChat PacketType
+--- @field public PlayerListensChannel PacketType
+--- @field public PlayerNotFound PacketType
+--- @field public PlayerSave PacketType
+--- @field public PlayerStartPMChat PacketType
+--- @field public PlayerTimeout PacketType
+--- @field public PlayerUpdate PacketType
+--- @field public PlayerUpdateReliable PacketType
+--- @field public PlaySound PacketType
+--- @field public PlaySoundEveryPlayer PacketType
+--- @field public PlayWorldSound PacketType
+--- @field public RadioDeviceDataState PacketType
+--- @field public RadioPostSilenceEvent PacketType
+--- @field public RadioServerData PacketType
+--- @field public ReadAnnotedMap PacketType
+--- @field public ReceiveCommand PacketType
+--- @field public ReceiveModData PacketType
+--- @field public RegisterZone PacketType
+--- @field public ReloadOptions PacketType
+--- @field public RemoveBlood PacketType
+--- @field public RemoveBullet PacketType
+--- @field public RemoveChatTab PacketType
+--- @field public RemoveContestedItemsFromInventory PacketType
+--- @field public RemoveCorpseFromMap PacketType
+--- @field public RemoveGlass PacketType
+--- @field public RemoveInventoryItemFromContainer PacketType
+--- @field public RemoveItemFromSquare PacketType
+--- @field public RemoveTicket PacketType
+--- @field public RemoveUserlog PacketType
+--- @field public ReplaceOnCooked PacketType
+--- @field public RequestData PacketType
+--- @field public RequestInventory PacketType
+--- @field public RequestItemsForContainer PacketType
+--- @field public RequestLargeAreaZip PacketType
+--- @field public RequestPlayerData PacketType
+--- @field public RequestTrading PacketType
+--- @field public RequestZipList PacketType
+--- @field public SandboxOptions PacketType
+--- @field public ScoreboardUpdate PacketType
+--- @field public SendCustomColor PacketType
+--- @field public SendFactionInvite PacketType
+--- @field public SendInventory PacketType
+--- @field public SendItemListNet PacketType
+--- @field public SendModData PacketType
+--- @field public SendPlayerProfile PacketType
+--- @field public SendSafehouseInvite PacketType
+--- @field public SendTransactionID PacketType
+--- @field public SentChunk PacketType
+--- @field public ServerMap PacketType
+--- @field public ServerQuit PacketType
+--- @field public SledgehammerDestroy PacketType
+--- @field public SlowFactor PacketType
+--- @field public SmashWindow PacketType
+--- @field public SneezeCough PacketType
+--- @field public SpawnRegion PacketType
+--- @field public Splint PacketType
+--- @field public StartFire PacketType
+--- @field public StartPause PacketType
+--- @field public StartRain PacketType
+--- @field public Statistic PacketType
+--- @field public StatisticRequest PacketType
+--- @field public Stitch PacketType
+--- @field public StopFire PacketType
+--- @field public StopPause PacketType
+--- @field public StopRain PacketType
+--- @field public StopSound PacketType
+--- @field public SyncAlarmClock PacketType
+--- @field public SyncClock PacketType
+--- @field public SyncClothing PacketType
+--- @field public SyncCompost PacketType
+--- @field public SyncCustomLightSettings PacketType
+--- @field public SyncDoorKey PacketType
+--- @field public SyncEquippedRadioFreq PacketType
+--- @field public SyncFaction PacketType
+--- @field public SyncFurnace PacketType
+--- @field public SyncInjuries PacketType
+--- @field public SyncIsoObject PacketType
+--- @field public SyncIsoObjectReq PacketType
+--- @field public SyncNonPvpZone PacketType
+--- @field public SyncObjects PacketType
+--- @field public SyncPerks PacketType
+--- @field public SyncRadioData PacketType
+--- @field public SyncSafehouse PacketType
+--- @field public SyncThumpable PacketType
+--- @field public SyncWeight PacketType
+--- @field public SyncWorldObjectsReq PacketType
+--- @field public SyncXP PacketType
+--- @field public Teleport PacketType
+--- @field public Thump PacketType
+--- @field public TimeSync PacketType
+--- @field public TradingUIAddItem PacketType
+--- @field public TradingUIRemoveItem PacketType
+--- @field public TradingUIUpdateState PacketType
+--- @field public UpdateItemSprite PacketType
+--- @field public UpdateOverlaySprite PacketType
+--- @field public Userlog PacketType
+--- @field public Validate PacketType
+--- @field public VehicleAuthorization PacketType
+--- @field public Vehicles PacketType
+--- @field public VehiclesUnreliable PacketType
+--- @field public ViewTickets PacketType
+--- @field public WakeUpPlayer PacketType
+--- @field public WaveSignal PacketType
+--- @field public WeaponHit PacketType
+--- @field public Weather PacketType
+--- @field public WorldMapPlayerPosition PacketType
+--- @field public WorldMessage PacketType
+--- @field public WorldSound PacketType
+--- @field public WoundInfection PacketType
+--- @field public WriteLog PacketType
+--- @field public ZombieControl PacketType
+--- @field public ZombieDeath PacketType
+--- @field public ZombieDescriptors PacketType
+--- @field public ZombieHelmetFalling PacketType
+--- @field public ZombieSimulation PacketType
+--- @field public ZombieSimulationReliable PacketType
+--- @field public ZombieSound PacketType
+PacketType = {};
+
+------------------------------------
+---------- STATIC METHODS ----------
+------------------------------------
+
+--- @public
+--- @static
+--- @param arg0 String
+--- @return PacketType
+function PacketType.valueOf(arg0) end
+
+--- @public
+--- @static
+---
+---  Returns an array containing the constants of this enum class, in the order they
+---  declared.
+---
+--- @return PacketType[] an array containing the constants of this enum class, in the order they are declared
+function PacketType.values() end
+
+
+------------------------------------
+------------- METHODS --------------
+------------------------------------
+
+--- @public
+--- @param bb ByteBufferWriter
+--- @return void
+function PacketType:doPacket(bb) end
+
+--- @public
+--- @return short
+function PacketType:getId() end
+
+--- @public
+--- @param bb ByteBuffer
+--- @return boolean
+function PacketType:onGameLoadingDealWithNetData(bb) end
+
+--- @public
+--- @param bb ByteBuffer
+--- @return void
+function PacketType:onMainLoopHandlePacketInternal(bb) end
+
+--- @public
+--- @param bb ByteBuffer
+--- @param connection UdpConnection
+--- @return void
+function PacketType:onServerPacket(bb, connection) end
+
+--- @public
+--- @param connection UdpConnection
+--- @return void
+function PacketType:onUnauthorized(connection) end
+
+--- @public
+--- @return void
+function PacketType:resetStatistics() end
+
+--- @public
+--- @param connection UdpConnection
+--- @return void
+function PacketType:send(connection) end
+
+

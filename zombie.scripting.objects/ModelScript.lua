@@ -72,13 +72,13 @@ function ModelScript:getShaderName() end
 
 --- @public
 --- @return String
---- @overload fun(allowNull: boolean): String
+--- @overload fun(self: ModelScript, allowNull: boolean): String
 function ModelScript:getTextureName() end
 
 --- @public
 --- @param index int
 --- @return ModelAttachment
---- @overload fun(attach: ModelAttachment): ModelAttachment
+--- @overload fun(self: ModelScript, attach: ModelAttachment): ModelAttachment
 function ModelScript:removeAttachment(index) end
 
 --- @public

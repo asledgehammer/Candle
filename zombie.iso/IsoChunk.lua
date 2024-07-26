@@ -147,7 +147,7 @@ function IsoChunk:RandomizeModel(v, zone, name, type) end
 --- @public
 --- @param bSaveQuit boolean
 --- @return void
---- @overload fun(bb: ByteBuffer, crc: CRC32): ByteBuffer
+--- @overload fun(self: IsoChunk, bb: ByteBuffer, crc: CRC32): ByteBuffer
 function IsoChunk:Save(bSaveQuit) end
 
 --- @public

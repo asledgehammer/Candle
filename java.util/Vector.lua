@@ -42,17 +42,17 @@ function Vector.of() end
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
---- @overload fun(arg0: int, arg1: Object): void
---- @overload fun(arg0: int, arg1: Object): void
+--- @overload fun(self: Vector, arg0: Object): boolean
+--- @overload fun(self: Vector, arg0: int, arg1: Object): void
+--- @overload fun(self: Vector, arg0: int, arg1: Object): void
 function Vector:add(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(arg0: Collection): boolean
---- @overload fun(arg0: int, arg1: Collection): boolean
---- @overload fun(arg0: int, arg1: Collection): boolean
+--- @overload fun(self: Vector, arg0: Collection): boolean
+--- @overload fun(self: Vector, arg0: int, arg1: Collection): boolean
+--- @overload fun(self: Vector, arg0: int, arg1: Collection): boolean
 function Vector:addAll(arg0) end
 
 --- @public
@@ -66,7 +66,7 @@ function Vector:capacity() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: Vector): void
 function Vector:clear() end
 
 --- @public
@@ -76,13 +76,13 @@ function Vector:clone() end
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: Vector, arg0: Object): boolean
 function Vector:contains(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(arg0: Collection): boolean
+--- @overload fun(self: Vector, arg0: Collection): boolean
 function Vector:containsAll(arg0) end
 
 --- @public
@@ -107,7 +107,7 @@ function Vector:ensureCapacity(arg0) end
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: Vector, arg0: Object): boolean
 function Vector:equals(arg0) end
 
 --- @public
@@ -122,19 +122,19 @@ function Vector:forEach(arg0) end
 --- @public
 --- @param arg0 int
 --- @return Object
---- @overload fun(arg0: int): Object
+--- @overload fun(self: Vector, arg0: int): Object
 function Vector:get(arg0) end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: Vector): int
 function Vector:hashCode() end
 
 --- @public
 --- @param arg0 Object
 --- @return int
---- @overload fun(arg0: Object): int
---- @overload fun(arg0: Object, arg1: int): int
+--- @overload fun(self: Vector, arg0: Object): int
+--- @overload fun(self: Vector, arg0: Object, arg1: int): int
 function Vector:indexOf(arg0) end
 
 --- @public
@@ -145,12 +145,12 @@ function Vector:insertElementAt(arg0, arg1) end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: Vector): boolean
 function Vector:isEmpty() end
 
 --- @public
 --- @return Iterator
---- @overload fun(): Iterator
+--- @overload fun(self: Vector): Iterator
 function Vector:iterator() end
 
 --- @public
@@ -160,29 +160,29 @@ function Vector:lastElement() end
 --- @public
 --- @param arg0 Object
 --- @return int
---- @overload fun(arg0: Object): int
---- @overload fun(arg0: Object, arg1: int): int
+--- @overload fun(self: Vector, arg0: Object): int
+--- @overload fun(self: Vector, arg0: Object, arg1: int): int
 function Vector:lastIndexOf(arg0) end
 
 --- @public
 --- @return ListIterator
---- @overload fun(): ListIterator
---- @overload fun(arg0: int): ListIterator
---- @overload fun(arg0: int): ListIterator
+--- @overload fun(self: Vector): ListIterator
+--- @overload fun(self: Vector, arg0: int): ListIterator
+--- @overload fun(self: Vector, arg0: int): ListIterator
 function Vector:listIterator() end
 
 --- @public
 --- @param arg0 int
 --- @return Object
---- @overload fun(arg0: int): Object
---- @overload fun(arg0: Object): boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: Vector, arg0: int): Object
+--- @overload fun(self: Vector, arg0: Object): boolean
+--- @overload fun(self: Vector, arg0: Object): boolean
 function Vector:remove(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(arg0: Collection): boolean
+--- @overload fun(self: Vector, arg0: Collection): boolean
 function Vector:removeAll(arg0) end
 
 --- @public
@@ -207,20 +207,20 @@ function Vector:removeIf(arg0) end
 --- @public
 --- @param arg0 UnaryOperator
 --- @return void
---- @overload fun(arg0: UnaryOperator): void
+--- @overload fun(self: Vector, arg0: UnaryOperator): void
 function Vector:replaceAll(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(arg0: Collection): boolean
+--- @overload fun(self: Vector, arg0: Collection): boolean
 function Vector:retainAll(arg0) end
 
 --- @public
 --- @param arg0 int
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: int, arg1: Object): Object
+--- @overload fun(self: Vector, arg0: int, arg1: Object): Object
 function Vector:set(arg0, arg1) end
 
 --- @public
@@ -236,32 +236,32 @@ function Vector:setSize(arg0) end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: Vector): int
 function Vector:size() end
 
 --- @public
 --- @param arg0 Comparator
 --- @return void
---- @overload fun(arg0: Comparator): void
+--- @overload fun(self: Vector, arg0: Comparator): void
 function Vector:sort(arg0) end
 
 --- @public
 --- @return Spliterator
---- @overload fun(): Spliterator
+--- @overload fun(self: Vector): Spliterator
 function Vector:spliterator() end
 
 --- @public
 --- @param arg0 int
 --- @param arg1 int
 --- @return List
---- @overload fun(arg0: int, arg1: int): List
+--- @overload fun(self: Vector, arg0: int, arg1: int): List
 function Vector:subList(arg0, arg1) end
 
 --- @public
 --- @return Object[]
---- @overload fun(): Object[]
---- @overload fun(arg0: Object[]): Object[]
---- @overload fun(arg0: Object[]): Object[]
+--- @overload fun(self: Vector): Object[]
+--- @overload fun(self: Vector, arg0: Object[]): Object[]
+--- @overload fun(self: Vector, arg0: Object[]): Object[]
 function Vector:toArray() end
 
 --- @public

@@ -93,7 +93,7 @@ function DrainableComboItem:getUseDelta() end
 
 --- @public
 --- @return float
---- @overload fun(): float
+--- @overload fun(self: DrainableComboItem): float
 function DrainableComboItem:getUsedDelta() end
 
 --- @public
@@ -110,12 +110,12 @@ function DrainableComboItem:isUseWhileUnequiped() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: DrainableComboItem): void
 function DrainableComboItem:render() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: DrainableComboItem): void
 function DrainableComboItem:renderlast() end
 
 --- @public
@@ -181,7 +181,7 @@ function DrainableComboItem:setUseWhileUnequiped(bUseWhileUnequiped) end
 --- @public
 --- @param usedDelta float
 --- @return void
---- @overload fun(usedDelta: float): void
+--- @overload fun(self: DrainableComboItem, usedDelta: float): void
 function DrainableComboItem:setUsedDelta(usedDelta) end
 
 --- @public
@@ -195,7 +195,7 @@ function DrainableComboItem:shouldUpdateInWorld() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: DrainableComboItem): void
 function DrainableComboItem:update() end
 
 --- @public

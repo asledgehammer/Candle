@@ -152,9 +152,9 @@ function ClimateValues:isTemperatureIsSnow() end
 --- @public
 --- @param calendar GregorianCalendar
 --- @return void
---- @overload fun(year: int, month: int, dayOfMonth: int): void
---- @overload fun(year: int, month: int, dayOfMonth: int, hourOfDay: int): void
---- @overload fun(year: int, month: int, dayOfMonth: int, hourOfDay: int, minute: int): void
+--- @overload fun(self: ClimateValues, year: int, month: int, dayOfMonth: int): void
+--- @overload fun(self: ClimateValues, year: int, month: int, dayOfMonth: int, hourOfDay: int): void
+--- @overload fun(self: ClimateValues, year: int, month: int, dayOfMonth: int, hourOfDay: int, minute: int): void
 function ClimateValues:pollDate(calendar) end
 
 --- @public

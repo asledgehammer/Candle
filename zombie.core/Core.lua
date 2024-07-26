@@ -238,7 +238,7 @@ function Core:DoPushIsoStuff(ox, oy, oz, useangle, vehicle) end
 --- @param zoom float
 --- @param player int
 --- @return void
---- @overload fun(w: int, h: int, zoom: float, player: int, isTextFrame: boolean): void
+--- @overload fun(self: Core, w: int, h: int, zoom: float, player: int, isTextFrame: boolean): void
 function Core:DoStartFrameStuff(w, h, zoom, player) end
 
 --- @public
@@ -250,7 +250,7 @@ function Core:DoStartFrameStuffSmartTextureFx(w, h, player) end
 
 --- @public
 --- @return void
---- @overload fun(nPlayer: int): void
+--- @overload fun(self: Core, nPlayer: int): void
 function Core:EndFrame() end
 
 --- @public
@@ -274,12 +274,12 @@ function Core:RenderOffScreenBuffer() end
 --- @param sp boolean
 --- @param reason String
 --- @return void
---- @overload fun(activeMods: String, reason: String): void
+--- @overload fun(self: Core, activeMods: String, reason: String): void
 function Core:ResetLua(sp, reason) end
 
 --- @public
 --- @return void
---- @overload fun(nPlayer: int, clear: boolean): void
+--- @overload fun(self: Core, nPlayer: int, clear: boolean): void
 function Core:StartFrame() end
 
 --- @public
@@ -298,8 +298,8 @@ function Core:TakeFullScreenshot(filename) end
 
 --- @public
 --- @return void
---- @overload fun(width: int, height: int, readBuffer: int): void
---- @overload fun(x: int, y: int, width: int, height: int, readBuffer: int): void
+--- @overload fun(self: Core, width: int, height: int, readBuffer: int): void
+--- @overload fun(self: Core, x: int, y: int, width: int, height: int, readBuffer: int): void
 function Core:TakeScreenshot() end
 
 --- @public
@@ -434,7 +434,7 @@ function Core:getObjectHighlitedColor() end
 
 --- @public
 --- @return TextureFBO
---- @overload fun(nPlayer: int): TextureFBO
+--- @overload fun(self: Core, nPlayer: int): TextureFBO
 function Core:getOffscreenBuffer() end
 
 --- @public

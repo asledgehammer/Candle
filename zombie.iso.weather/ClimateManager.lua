@@ -152,7 +152,7 @@ function ClimateManager:CopyClimateValues(copy) end
 
 --- @public
 --- @return void
---- @overload fun(RainModOverride: int): void
+--- @overload fun(self: ClimateManager, RainModOverride: int): void
 function ClimateManager:execute_Simulation() end
 
 --- @public
@@ -174,14 +174,14 @@ function ClimateManager:getAirMassTemperature() end
 --- @public
 --- @param plr IsoGameCharacter
 --- @return float
---- @overload fun(plr: IsoGameCharacter, doWindChill: boolean): float
+--- @overload fun(self: ClimateManager, plr: IsoGameCharacter, doWindChill: boolean): float
 function ClimateManager:getAirTemperatureForCharacter(plr) end
 
 --- @public
 --- @param square IsoGridSquare
 --- @return float
---- @overload fun(square: IsoGridSquare, vehicle: BaseVehicle): float
---- @overload fun(square: IsoGridSquare, vehicle: BaseVehicle, doWindChill: boolean): float
+--- @overload fun(self: ClimateManager, square: IsoGridSquare, vehicle: BaseVehicle): float
+--- @overload fun(self: ClimateManager, square: IsoGridSquare, vehicle: BaseVehicle, doWindChill: boolean): float
 function ClimateManager:getAirTemperatureForSquare(square) end
 
 --- @public
@@ -701,7 +701,7 @@ function ClimateManager:triggerCustomWeatherStage(stage, duration) end
 --- @param angle float
 --- @param initialPuddles float
 --- @return void
---- @overload fun(centerX: int, centerY: int, duration: double, strength: float, initialProgress: float, angle: float, initialPuddles: float, cloudcolor: ClimateColorInfo): void
+--- @overload fun(self: ClimateManager, centerX: int, centerY: int, duration: double, strength: float, initialProgress: float, angle: float, initialPuddles: float, cloudcolor: ClimateColorInfo): void
 function ClimateManager:triggerKateBobIntroStorm(centerX, centerY, duration, strength, initialProgress, angle, initialPuddles) end
 
 --- @public

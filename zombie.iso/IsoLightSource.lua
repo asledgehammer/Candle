@@ -59,7 +59,7 @@ function IsoLightSource:isHydroPowered() end
 
 --- @public
 --- @return boolean
---- @overload fun(minX: int, minY: int, maxX: int, maxY: int): boolean
+--- @overload fun(self: IsoLightSource, minX: int, minY: int, maxX: int, maxY: int): boolean
 function IsoLightSource:isInBounds() end
 
 --- @public

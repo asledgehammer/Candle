@@ -102,7 +102,7 @@ function RandomizedWorldBase:addBloodSplat(sq, nbr) end
 --- @param square IsoGridSquare
 --- @param type String
 --- @return InventoryItem
---- @overload fun(square: IsoGridSquare, item: InventoryItem): InventoryItem
+--- @overload fun(self: RandomizedWorldBase, square: IsoGridSquare, item: InventoryItem): InventoryItem
 function RandomizedWorldBase:addItemOnGround(square, type) end
 
 --- @public
@@ -116,7 +116,7 @@ function RandomizedWorldBase:addRandomItemOnGround(square, types) end
 --- @param type String
 --- @param count int
 --- @return void
---- @overload fun(room: RoomDef, types: ArrayList, count: int): void
+--- @overload fun(self: RandomizedWorldBase, room: RoomDef, types: ArrayList, count: int): void
 function RandomizedWorldBase:addRandomItemsOnGround(room, type, count) end
 
 --- @public
@@ -137,7 +137,7 @@ function RandomizedWorldBase:addTentWestEast(x, y, z) end
 --- @param sq IsoGridSquare
 --- @param spriteName String
 --- @return IsoObject
---- @overload fun(x: int, y: int, z: int, spriteName: String): IsoObject
+--- @overload fun(self: RandomizedWorldBase, x: int, y: int, z: int, spriteName: String): IsoObject
 function RandomizedWorldBase:addTileObject(sq, spriteName) end
 
 --- @public
@@ -176,8 +176,8 @@ function RandomizedWorldBase:addTraitOfBlood(dir, time, x, y, z) end
 --- @param scriptName String
 --- @param dir IsoDirections
 --- @return BaseVehicle
---- @overload fun(zone: Zone, sq: IsoGridSquare, chunk: IsoChunk, zoneName: String, scriptName: String, skinIndex: Integer, dir: IsoDirections, specificContainer: String): BaseVehicle
---- @overload fun(zone: Zone, vehicleX: float, vehicleY: float, vehicleZ: float, direction: float, zoneName: String, scriptName: String, skinIndex: Integer, specificContainer: String): BaseVehicle
+--- @overload fun(self: RandomizedWorldBase, zone: Zone, sq: IsoGridSquare, chunk: IsoChunk, zoneName: String, scriptName: String, skinIndex: Integer, dir: IsoDirections, specificContainer: String): BaseVehicle
+--- @overload fun(self: RandomizedWorldBase, zone: Zone, vehicleX: float, vehicleY: float, vehicleZ: float, direction: float, zoneName: String, scriptName: String, skinIndex: Integer, specificContainer: String): BaseVehicle
 function RandomizedWorldBase:addVehicle(zone, sq, chunk, zoneName, scriptName, dir) end
 
 --- @public
@@ -190,7 +190,7 @@ function RandomizedWorldBase:addVehicle(zone, sq, chunk, zoneName, scriptName, d
 --- @param dir IsoDirections
 --- @param specificContainer String
 --- @return BaseVehicle
---- @overload fun(zone: Zone, vehicleX: float, vehicleY: float, vehicleZ: float, direction: float, zoneName: String, scriptName: String, skinIndex: Integer, specificContainer: String): BaseVehicle
+--- @overload fun(self: RandomizedWorldBase, zone: Zone, vehicleX: float, vehicleY: float, vehicleZ: float, direction: float, zoneName: String, scriptName: String, skinIndex: Integer, specificContainer: String): BaseVehicle
 function RandomizedWorldBase:addVehicleFlipped(zone, sq, chunk, zoneName, scriptName, skinIndex, dir, specificContainer) end
 
 --- @public

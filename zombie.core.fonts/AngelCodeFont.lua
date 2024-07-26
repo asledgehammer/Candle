@@ -29,15 +29,15 @@ function AngelCodeFont:destroy() end
 --- @param y float
 --- @param text String
 --- @return void
---- @overload fun(x: float, y: float, text: String): void
---- @overload fun(x: float, y: float, text: String, col: Color): void
---- @overload fun(x: float, y: float, text: String, col: Color): void
---- @overload fun(x: float, y: float, text: String, col: Color, startIndex: int, endIndex: int): void
---- @overload fun(x: float, y: float, text: String, col: Color, startIndex: int, endIndex: int): void
---- @overload fun(x: float, y: float, text: String, r: float, g: float, b: float, a: float): void
---- @overload fun(x: float, y: float, scale: float, text: String, r: float, g: float, b: float, a: float): void
---- @overload fun(x: float, y: float, text: String, r: float, g: float, b: float, a: float, startIndex: int, endIndex: int): void
---- @overload fun(x: float, y: float, scale: float, text: String, r: float, g: float, b: float, a: float, startIndex: int, endIndex: int): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, text: String): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, text: String, col: Color): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, text: String, col: Color): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, text: String, col: Color, startIndex: int, endIndex: int): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, text: String, col: Color, startIndex: int, endIndex: int): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, text: String, r: float, g: float, b: float, a: float): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, scale: float, text: String, r: float, g: float, b: float, a: float): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, text: String, r: float, g: float, b: float, a: float, startIndex: int, endIndex: int): void
+--- @overload fun(self: AngelCodeFont, x: float, y: float, scale: float, text: String, r: float, g: float, b: float, a: float, startIndex: int, endIndex: int): void
 function AngelCodeFont:drawString(x, y, text) end
 
 --- @public
@@ -46,7 +46,7 @@ function AngelCodeFont:drawString(x, y, text) end
 ---
 --- @param text String The string to obtain the rendered with of
 --- @return int The width of the given string
---- @overload fun(text: String): int The width of the given string
+--- @overload fun(self: AngelCodeFont, text: String): int The width of the given string
 function AngelCodeFont:getHeight(text) end
 
 --- @public
@@ -54,7 +54,7 @@ function AngelCodeFont:getHeight(text) end
 ---  Description copied from interface: Font
 ---
 --- @return int The maxium height of any line drawn by this font
---- @overload fun(): int The maxium height of any line drawn by this font
+--- @overload fun(self: AngelCodeFont): int The maxium height of any line drawn by this font
 function AngelCodeFont:getLineHeight() end
 
 --- @public
@@ -63,13 +63,13 @@ function AngelCodeFont:getLineHeight() end
 ---
 --- @param text String The string to obtain the rendered with of
 --- @return int The width of the given string
---- @overload fun(text: String): int The width of the given string
---- @overload fun(text: String, xAdvance: boolean): int
---- @overload fun(text: String, xAdvance: boolean): int
---- @overload fun(text: String, start: int, __end__: int): int
---- @overload fun(text: String, start: int, __end__: int): int
---- @overload fun(text: String, start: int, __end__: int, xadvance: boolean): int
---- @overload fun(text: String, start: int, __end__: int, xadvance: boolean): int
+--- @overload fun(self: AngelCodeFont, text: String): int The width of the given string
+--- @overload fun(self: AngelCodeFont, text: String, xAdvance: boolean): int
+--- @overload fun(self: AngelCodeFont, text: String, xAdvance: boolean): int
+--- @overload fun(self: AngelCodeFont, text: String, start: int, __end__: int): int
+--- @overload fun(self: AngelCodeFont, text: String, start: int, __end__: int): int
+--- @overload fun(self: AngelCodeFont, text: String, start: int, __end__: int, xadvance: boolean): int
+--- @overload fun(self: AngelCodeFont, text: String, start: int, __end__: int, xadvance: boolean): int
 function AngelCodeFont:getWidth(text) end
 
 --- @public
@@ -90,7 +90,7 @@ function AngelCodeFont:isEmpty() end
 --- @param newState State
 --- @param asset Asset
 --- @return void
---- @overload fun(oldState: State, newState: State, asset: Asset): void
+--- @overload fun(self: AngelCodeFont, oldState: State, newState: State, asset: Asset): void
 function AngelCodeFont:onStateChanged(oldState, newState, asset) end
 
 

@@ -126,7 +126,7 @@ function IsoDoor:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return void
---- @overload fun(thumper: IsoMovingObject): void
+--- @overload fun(self: IsoDoor, thumper: IsoMovingObject): void
 function IsoDoor:Thump(thumper) end
 
 --- @public
@@ -147,7 +147,7 @@ function IsoDoor:ToggleDoorSilent() end
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
---- @overload fun(owner: IsoGameCharacter, weapon: HandWeapon): void
+--- @overload fun(self: IsoDoor, owner: IsoGameCharacter, weapon: HandWeapon): void
 function IsoDoor:WeaponHit(owner, weapon) end
 
 --- @public
@@ -157,7 +157,7 @@ function IsoDoor:addRandomBarricades() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return void
---- @overload fun(inside: boolean, chr: IsoGameCharacter): void
+--- @overload fun(self: IsoDoor, inside: boolean, chr: IsoGameCharacter): void
 function IsoDoor:addSheet(chr) end
 
 --- @public
@@ -184,23 +184,23 @@ function IsoDoor:getAddSheetSquare(chr) end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(chr: IsoGameCharacter): IsoBarricade
+--- @overload fun(self: IsoDoor, chr: IsoGameCharacter): IsoBarricade
 function IsoDoor:getBarricadeForCharacter(chr) end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(): IsoBarricade
+--- @overload fun(self: IsoDoor): IsoBarricade
 function IsoDoor:getBarricadeOnOppositeSquare() end
 
 --- @public
 --- @return IsoBarricade
---- @overload fun(): IsoBarricade
+--- @overload fun(self: IsoDoor): IsoBarricade
 function IsoDoor:getBarricadeOnSameSquare() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return IsoBarricade
---- @overload fun(chr: IsoGameCharacter): IsoBarricade
+--- @overload fun(self: IsoDoor, chr: IsoGameCharacter): IsoBarricade
 function IsoDoor:getBarricadeOppositeCharacter(chr) end
 
 --- @public
@@ -227,7 +227,7 @@ function IsoDoor:getMaxHealth() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoDoor): boolean
 function IsoDoor:getNorth() end
 
 --- @public
@@ -240,7 +240,7 @@ function IsoDoor:getOpenSprite() end
 
 --- @public
 --- @return IsoGridSquare
---- @overload fun(): IsoGridSquare
+--- @overload fun(self: IsoDoor): IsoGridSquare
 function IsoDoor:getOppositeSquare() end
 
 --- @public
@@ -270,7 +270,7 @@ function IsoDoor:getSquare() end
 
 --- @public
 --- @return float
---- @overload fun(): float
+--- @overload fun(self: IsoDoor): float
 function IsoDoor:getThumpCondition() end
 
 --- @public
@@ -280,7 +280,7 @@ function IsoDoor:getThumpSound() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(chr: IsoGameCharacter): Thumpable
+--- @overload fun(self: IsoDoor, chr: IsoGameCharacter): Thumpable
 function IsoDoor:getThumpableFor(chr) end
 
 --- @public
@@ -294,12 +294,12 @@ function IsoDoor:isAdjacentToSquare(square2) end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoDoor): boolean
 function IsoDoor:isBarricadeAllowed() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoDoor): boolean
 function IsoDoor:isBarricaded() end
 
 --- @public
@@ -308,7 +308,7 @@ function IsoDoor:isCurtainOpen() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoDoor): boolean
 function IsoDoor:isDestroyed() end
 
 --- @public

@@ -82,7 +82,7 @@ function ThunderStorm:save(output) end
 --- @param duration double
 --- @param targetRandomPlayer boolean
 --- @return void
---- @overload fun(str: float, angle: float, radius: float, eventFreq: float, thunderRatio: float, duration: double, targetRandomPlayer: boolean, percentageOffset: float): ThunderCloud
+--- @overload fun(self: ThunderStorm, str: float, angle: float, radius: float, eventFreq: float, thunderRatio: float, duration: double, targetRandomPlayer: boolean, percentageOffset: float): ThunderCloud
 function ThunderStorm:startThunderCloud(str, angle, radius, eventFreq, thunderRatio, duration, targetRandomPlayer) end
 
 --- @public

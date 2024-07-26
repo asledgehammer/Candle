@@ -19,7 +19,7 @@ function BaseSoundManager:BlendThenStart(musicTrack, f, PrefMusic) end
 --- @param audio Audio
 --- @param targetVolume float
 --- @return void
---- @overload fun(audio: Audio, targetVolume: float, blendSpeedAlpha: float): void
+--- @overload fun(self: BaseSoundManager, audio: Audio, targetVolume: float, blendSpeedAlpha: float): void
 function BaseSoundManager:BlendVolume(audio, targetVolume) end
 
 --- @public
@@ -53,7 +53,7 @@ function BaseSoundManager:IsMusicPlaying() end
 --- @param loop boolean
 --- @param volume float
 --- @return void
---- @overload fun(name: String, musicTrack: Audio, volume: float, bloop: boolean): void
+--- @overload fun(self: BaseSoundManager, name: String, musicTrack: Audio, volume: float, bloop: boolean): void
 function BaseSoundManager:PlayAsMusic(name, musicTrack, loop, volume) end
 
 --- @public
@@ -76,7 +76,7 @@ function BaseSoundManager:PlayMusic(n, name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain float
 --- @return Audio
---- @overload fun(name: String, loop: boolean, pitchVar: float, maxGain: float): Audio
+--- @overload fun(self: BaseSoundManager, name: String, loop: boolean, pitchVar: float, maxGain: float): Audio
 function BaseSoundManager:PlaySound(name, loop, maxGain) end
 
 --- @public
@@ -91,8 +91,8 @@ function BaseSoundManager:PlaySoundEvenSilent(name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain float
 --- @return Audio
---- @overload fun(name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
---- @overload fun(name: String, variations: int, loop: boolean, maxGain: float): Audio
+--- @overload fun(self: BaseSoundManager, name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
+--- @overload fun(self: BaseSoundManager, name: String, variations: int, loop: boolean, maxGain: float): Audio
 function BaseSoundManager:PlaySoundWav(name, loop, maxGain) end
 
 --- @public
@@ -103,8 +103,8 @@ function BaseSoundManager:PlaySoundWav(name, loop, maxGain) end
 --- @param maxGain float
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
---- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): Audio
+--- @overload fun(self: BaseSoundManager, name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
+--- @overload fun(self: BaseSoundManager, name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): Audio
 function BaseSoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
@@ -128,8 +128,8 @@ function BaseSoundManager:PlayWorldSoundImpl(name, loop, sx, sy, sz, pitchVar, r
 --- @param maxGain float
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
---- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): void
+--- @overload fun(self: BaseSoundManager, name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
+--- @overload fun(self: BaseSoundManager, name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): void
 function BaseSoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
@@ -222,7 +222,7 @@ function BaseSoundManager:isPlayingMusic() end
 --- @public
 --- @param name String
 --- @return boolean
---- @overload fun(eventInstance: long): boolean
+--- @overload fun(self: BaseSoundManager, eventInstance: long): boolean
 function BaseSoundManager:isPlayingUISound(name) end
 
 --- @public

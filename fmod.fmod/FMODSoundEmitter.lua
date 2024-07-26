@@ -43,7 +43,7 @@ function FMODSoundEmitter:isEmpty() end
 --- @public
 --- @param arg0 String
 --- @return boolean
---- @overload fun(arg0: long): boolean
+--- @overload fun(self: FMODSoundEmitter, arg0: long): boolean
 function FMODSoundEmitter:isPlaying(arg0) end
 
 --- @public
@@ -65,19 +65,19 @@ function FMODSoundEmitter:playClip(arg0, arg1) end
 --- @public
 --- @param arg0 String
 --- @return long
---- @overload fun(arg0: String, arg1: boolean): long
---- @overload fun(arg0: String, arg1: IsoGameCharacter): long
---- @overload fun(arg0: String, arg1: IsoGridSquare): long
---- @overload fun(arg0: String, arg1: IsoObject): long
---- @overload fun(arg0: String, arg1: int, arg2: int, arg3: int): long
+--- @overload fun(self: FMODSoundEmitter, arg0: String, arg1: boolean): long
+--- @overload fun(self: FMODSoundEmitter, arg0: String, arg1: IsoGameCharacter): long
+--- @overload fun(self: FMODSoundEmitter, arg0: String, arg1: IsoGridSquare): long
+--- @overload fun(self: FMODSoundEmitter, arg0: String, arg1: IsoObject): long
+--- @overload fun(self: FMODSoundEmitter, arg0: String, arg1: int, arg2: int, arg3: int): long
 function FMODSoundEmitter:playSound(arg0) end
 
 --- @public
 --- @param arg0 String
 --- @param arg1 IsoGridSquare
 --- @return long
---- @overload fun(arg0: String, arg1: IsoObject): long
---- @overload fun(arg0: String, arg1: boolean, arg2: IsoObject): long
+--- @overload fun(self: FMODSoundEmitter, arg0: String, arg1: IsoObject): long
+--- @overload fun(self: FMODSoundEmitter, arg0: String, arg1: boolean, arg2: IsoObject): long
 function FMODSoundEmitter:playSoundImpl(arg0, arg1) end
 
 --- @public

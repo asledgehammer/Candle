@@ -26,22 +26,22 @@ function PropertyContainer:CreateKeySet() end
 --- @public
 --- @param flag Double
 --- @return boolean
---- @overload fun(isoPropertyType: String): boolean
---- @overload fun(flag: IsoFlagType): boolean
+--- @overload fun(self: PropertyContainer, isoPropertyType: String): boolean
+--- @overload fun(self: PropertyContainer, flag: IsoFlagType): boolean
 function PropertyContainer:Is(flag) end
 
 --- @public
 --- @param flag IsoFlagType
 --- @return void
---- @overload fun(propName: String, propName2: String): void
---- @overload fun(flag: IsoFlagType, ignored: String): void
---- @overload fun(propName: String, propName2: String, checkIsoFlagType: boolean): void
+--- @overload fun(self: PropertyContainer, propName: String, propName2: String): void
+--- @overload fun(self: PropertyContainer, flag: IsoFlagType, ignored: String): void
+--- @overload fun(self: PropertyContainer, propName: String, propName2: String, checkIsoFlagType: boolean): void
 function PropertyContainer:Set(flag) end
 
 --- @public
 --- @param propName String
 --- @return void
---- @overload fun(flag: IsoFlagType): void
+--- @overload fun(self: PropertyContainer, flag: IsoFlagType): void
 function PropertyContainer:UnSet(propName) end
 
 --- @public

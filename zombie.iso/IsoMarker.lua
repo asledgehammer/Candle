@@ -77,8 +77,8 @@ function IsoMarker:hasTempSquareObject() end
 --- @param gs IsoGridSquare
 --- @param doTempIsoObject boolean
 --- @return void
---- @overload fun(textureTable: KahluaTable, textureOverlayTable: KahluaTable, x: int, y: int, z: int, gs: IsoGridSquare): void
---- @overload fun(textureTable: KahluaTable, textureOverlayTable: KahluaTable, x: int, y: int, z: int, gs: IsoGridSquare, doTempIsoObject: boolean): void
+--- @overload fun(self: IsoMarker, textureTable: KahluaTable, textureOverlayTable: KahluaTable, x: int, y: int, z: int, gs: IsoGridSquare): void
+--- @overload fun(self: IsoMarker, textureTable: KahluaTable, textureOverlayTable: KahluaTable, x: int, y: int, z: int, gs: IsoGridSquare, doTempIsoObject: boolean): void
 function IsoMarker:init(spriteName, x, y, z, gs, doTempIsoObject) end
 
 --- @public

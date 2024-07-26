@@ -74,14 +74,14 @@ function IsoBarricade:TestVision(from, to) end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return void
---- @overload fun(thumper: IsoMovingObject): void
+--- @overload fun(self: IsoBarricade, thumper: IsoMovingObject): void
 function IsoBarricade:Thump(thumper) end
 
 --- @public
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
---- @overload fun(owner: IsoGameCharacter, weapon: HandWeapon): void
+--- @overload fun(self: IsoBarricade, owner: IsoGameCharacter, weapon: HandWeapon): void
 function IsoBarricade:WeaponHit(owner, weapon) end
 
 --- @public
@@ -125,13 +125,13 @@ function IsoBarricade:getObjectName() end
 
 --- @public
 --- @return float
---- @overload fun(): float
+--- @overload fun(self: IsoBarricade): float
 function IsoBarricade:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(chr: IsoGameCharacter): Thumpable
+--- @overload fun(self: IsoBarricade, chr: IsoGameCharacter): Thumpable
 function IsoBarricade:getThumpableFor(chr) end
 
 --- @public
@@ -140,7 +140,7 @@ function IsoBarricade:isBlockVision() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoBarricade): boolean
 function IsoBarricade:isDestroyed() end
 
 --- @public

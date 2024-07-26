@@ -12,7 +12,7 @@ UI3DModel = {};
 --- @public
 --- @param itemGuid String
 --- @return void
---- @overload fun(itemGuid: String): void
+--- @overload fun(self: UI3DModel, itemGuid: String): void
 function UI3DModel:clothingItemChanged(itemGuid) end
 
 --- @public

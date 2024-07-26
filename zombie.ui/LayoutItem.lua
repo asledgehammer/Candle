@@ -61,7 +61,7 @@ function LayoutItem:setValueRight(value, highGood) end
 --- @public
 --- @param value float
 --- @return void
---- @overload fun(value: int): void
+--- @overload fun(self: LayoutItem, value: int): void
 function LayoutItem:setValueRightNoPlus(value) end
 
 

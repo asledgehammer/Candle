@@ -191,7 +191,7 @@ function VehicleScript:getModel() end
 --- @public
 --- @param id String
 --- @return Model
---- @overload fun(id: String, models: ArrayList): Model
+--- @overload fun(self: VehicleScript, id: String, models: ArrayList): Model
 function VehicleScript:getModelById(id) end
 
 --- @public
@@ -366,7 +366,7 @@ function VehicleScript:globMatch(pattern, str) end
 --- @public
 --- @param index int
 --- @return ModelAttachment
---- @overload fun(attach: ModelAttachment): ModelAttachment
+--- @overload fun(self: VehicleScript, attach: ModelAttachment): ModelAttachment
 function VehicleScript:removeAttachment(index) end
 
 --- @public

@@ -22,9 +22,9 @@ function StorySound:getName() end
 
 --- @public
 --- @return long
---- @overload fun(volumeOverride: float): long
---- @overload fun(x: float, y: float, z: float, minRange: float, maxRange: float): long
---- @overload fun(volumeMod: float, x: float, y: float, z: float, minRange: float, maxRange: float): long
+--- @overload fun(self: StorySound, volumeOverride: float): long
+--- @overload fun(self: StorySound, x: float, y: float, z: float, minRange: float, maxRange: float): long
+--- @overload fun(self: StorySound, volumeMod: float, x: float, y: float, z: float, minRange: float, maxRange: float): long
 function StorySound:playSound() end
 
 --- @public

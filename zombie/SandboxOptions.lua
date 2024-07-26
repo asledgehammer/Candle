@@ -135,7 +135,7 @@ function SandboxOptions:initSandboxVars() end
 
 --- @public
 --- @return void
---- @overload fun(input: ByteBuffer): void
+--- @overload fun(self: SandboxOptions, input: ByteBuffer): void
 function SandboxOptions:load() end
 
 --- @public

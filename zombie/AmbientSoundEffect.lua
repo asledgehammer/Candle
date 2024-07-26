@@ -11,39 +11,39 @@ AmbientSoundEffect = {};
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: AmbientSoundEffect): String
 function AmbientSoundEffect:getName() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: AmbientSoundEffect): boolean
 function AmbientSoundEffect:isPlaying() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: AmbientSoundEffect): void
 function AmbientSoundEffect:pause() end
 
 --- @public
 --- @param choice String
 --- @return void
---- @overload fun(choice: String): void
+--- @overload fun(self: AmbientSoundEffect, choice: String): void
 function AmbientSoundEffect:setName(choice) end
 
 --- @public
 --- @param volume float
 --- @return void
---- @overload fun(volume: float): void
+--- @overload fun(self: AmbientSoundEffect, volume: float): void
 function AmbientSoundEffect:setVolume(volume) end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: AmbientSoundEffect): void
 function AmbientSoundEffect:start() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: AmbientSoundEffect): void
 function AmbientSoundEffect:stop() end
 
 --- @public

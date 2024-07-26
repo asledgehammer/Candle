@@ -79,8 +79,8 @@ function DateFormat:equals(arg0) end
 --- @public
 --- @param arg0 Date
 --- @return String
---- @overload fun(arg0: Object, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
---- @overload fun(arg0: Date, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
+--- @overload fun(self: DateFormat, arg0: Object, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
+--- @overload fun(self: DateFormat, arg0: Date, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
 function DateFormat:format(arg0) end
 
 --- @public
@@ -106,7 +106,7 @@ function DateFormat:isLenient() end
 --- @public
 --- @param arg0 String
 --- @return Date
---- @overload fun(arg0: String, arg1: ParsePosition): Date
+--- @overload fun(self: DateFormat, arg0: String, arg1: ParsePosition): Date
 function DateFormat:parse(arg0) end
 
 --- @public

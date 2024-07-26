@@ -161,7 +161,7 @@ function WeatherPeriod:hasTropical() end
 --- @param front AirFront
 --- @param hoursSinceStart double
 --- @return void
---- @overload fun(front: AirFront, hoursSinceStart: double, doThisStageOnly: int, singleStageDuration: float): void
+--- @overload fun(self: WeatherPeriod, front: AirFront, hoursSinceStart: double, doThisStageOnly: int, singleStageDuration: float): void
 function WeatherPeriod:initSimulationDebug(front, hoursSinceStart) end
 
 --- @public

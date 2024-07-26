@@ -38,7 +38,7 @@ function IsoZombie:DoCorpseInventory() end
 --- @public
 --- @param volume float
 --- @return void
---- @overload fun(type: String): void
+--- @overload fun(self: IsoZombie, type: String): void
 function IsoZombie:DoFootstepSound(volume) end
 
 --- @public
@@ -64,19 +64,19 @@ function IsoZombie:GetAnimSetName() end
 --- @param isHitFromBehind boolean
 --- @param hitDir Vector2
 --- @return float
---- @overload fun(vehicle: BaseVehicle, speed: float, isHitFromBehind: boolean, hitDirX: float, hitDirY: float): float
---- @overload fun(weapon: HandWeapon, wielder: IsoGameCharacter, damageSplit: float, bIgnoreDamage: boolean, modDelta: float, bRemote: boolean): float
+--- @overload fun(self: IsoZombie, vehicle: BaseVehicle, speed: float, isHitFromBehind: boolean, hitDirX: float, hitDirY: float): float
+--- @overload fun(self: IsoZombie, weapon: HandWeapon, wielder: IsoGameCharacter, damageSplit: float, bIgnoreDamage: boolean, modDelta: float, bRemote: boolean): float
 function IsoZombie:Hit(vehicle, speed, isHitFromBehind, hitDir) end
 
 --- @public
 --- @return void
---- @overload fun(desc: SurvivorDesc): void
+--- @overload fun(self: IsoZombie, desc: SurvivorDesc): void
 function IsoZombie:InitSpritePartsZombie() end
 
 --- @public
 --- @param killer IsoGameCharacter
 --- @return void
---- @overload fun(killer: IsoGameCharacter, bGory: boolean): void
+--- @overload fun(self: IsoZombie, killer: IsoGameCharacter, bGory: boolean): void
 function IsoZombie:Kill(killer) end
 
 --- @public
@@ -251,13 +251,13 @@ function IsoZombie:getHitTime() end
 
 --- @public
 --- @return HumanVisual
---- @overload fun(): HumanVisual
+--- @overload fun(self: IsoZombie): HumanVisual
 function IsoZombie:getHumanVisual() end
 
 --- @public
 --- @return ItemVisuals
---- @overload fun(itemVisuals: ItemVisuals): void
---- @overload fun(itemVisuals: ItemVisuals): void
+--- @overload fun(self: IsoZombie, itemVisuals: ItemVisuals): void
+--- @overload fun(self: IsoZombie, itemVisuals: ItemVisuals): void
 function IsoZombie:getItemVisuals() end
 
 --- @public
@@ -458,7 +458,7 @@ function IsoZombie:isSitAgainstWall() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoZombie): boolean
 function IsoZombie:isSkeleton() end
 
 --- @public
@@ -498,12 +498,12 @@ function IsoZombie:isVehicleCollisionActive(testVehicle) end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoZombie): boolean
 function IsoZombie:isZombie() end
 
 --- @public
 --- @return boolean
---- @overload fun(other: IsoMovingObject): boolean
+--- @overload fun(self: IsoZombie, other: IsoMovingObject): boolean
 function IsoZombie:isZombieAttacking() end
 
 --- @public
@@ -632,7 +632,7 @@ function IsoZombie:setDressInRandomOutfit(dressInRandom) end
 --- @param target IsoMovingObject
 --- @param force boolean
 --- @return void
---- @overload fun(target: IsoMovingObject, force: boolean, eatSpeed: float): void
+--- @overload fun(self: IsoZombie, target: IsoMovingObject, force: boolean, eatSpeed: float): void
 function IsoZombie:setEatBodyTarget(target, force) end
 
 --- @public
@@ -743,7 +743,7 @@ function IsoZombie:setTargetSeenTime(seconds) end
 --- @public
 --- @param condition float
 --- @return void
---- @overload fun(condition: int, maxCondition: int): void
+--- @overload fun(self: IsoZombie, condition: int, maxCondition: int): void
 function IsoZombie:setThumpCondition(condition) end
 
 --- @public

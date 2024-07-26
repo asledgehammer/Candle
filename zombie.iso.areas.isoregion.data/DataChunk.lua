@@ -32,7 +32,7 @@ function DataChunk:getLastUpdateStamp() end
 --- @param y int
 --- @param z int
 --- @return byte
---- @overload fun(x: int, y: int, z: int, ignoreCoordCheck: boolean): byte
+--- @overload fun(self: DataChunk, x: int, y: int, z: int, ignoreCoordCheck: boolean): byte
 function DataChunk:getSquare(x, y, z) end
 
 --- @public

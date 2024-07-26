@@ -29,12 +29,12 @@ function Trait:getFreeRecipes() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: Trait): String
 function Trait:getLabel() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: Trait): String
 function Trait:getLeftLabel() end
 
 --- @public
@@ -43,7 +43,7 @@ function Trait:getMutuallyExclusiveTraits() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: Trait): String
 function Trait:getRightLabel() end
 
 --- @public

@@ -30,27 +30,27 @@ function IsoWaveSignal.Reset() end
 --- @param codes String
 --- @param distance int
 --- @return void
---- @overload fun(line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
---- @overload fun(line: String, r: int, g: int, b: int, guid: String, codes: String, distance: int): void
---- @overload fun(line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int, attractZombies: boolean): void
---- @overload fun(line: String, r: int, g: int, b: int, guid: String, codes: String, distance: int, attractZombies: boolean): void
---- @overload fun(arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int): void
+--- @overload fun(self: IsoWaveSignal, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
+--- @overload fun(self: IsoWaveSignal, line: String, r: int, g: int, b: int, guid: String, codes: String, distance: int): void
+--- @overload fun(self: IsoWaveSignal, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int, attractZombies: boolean): void
+--- @overload fun(self: IsoWaveSignal, line: String, r: int, g: int, b: int, guid: String, codes: String, distance: int, attractZombies: boolean): void
+--- @overload fun(self: IsoWaveSignal, arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int): void
 function IsoWaveSignal:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoWaveSignal): boolean
 function IsoWaveSignal:HasPlayerInRange() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoWaveSignal): boolean
 function IsoWaveSignal:IsSpeaking() end
 
 --- @public
 --- @param line String
 --- @return void
---- @overload fun(line: String): void
+--- @overload fun(self: IsoWaveSignal, line: String): void
 function IsoWaveSignal:Say(line) end
 
 --- @public
@@ -68,42 +68,42 @@ function IsoWaveSignal:getChatElement() end
 
 --- @public
 --- @return float
---- @overload fun(): float
+--- @overload fun(self: IsoWaveSignal): float
 function IsoWaveSignal:getDelta() end
 
 --- @public
 --- @return DeviceData
---- @overload fun(): DeviceData
+--- @overload fun(self: IsoWaveSignal): DeviceData
 function IsoWaveSignal:getDeviceData() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: IsoWaveSignal): String
 function IsoWaveSignal:getSayLine() end
 
 --- @public
 --- @return IsoGridSquare
---- @overload fun(): IsoGridSquare
+--- @overload fun(self: IsoWaveSignal): IsoGridSquare
 function IsoWaveSignal:getSquare() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: IsoWaveSignal): String
 function IsoWaveSignal:getTalkerType() end
 
 --- @public
 --- @return float
---- @overload fun(): float
+--- @overload fun(self: IsoWaveSignal): float
 function IsoWaveSignal:getX() end
 
 --- @public
 --- @return float
---- @overload fun(): float
+--- @overload fun(self: IsoWaveSignal): float
 function IsoWaveSignal:getY() end
 
 --- @public
 --- @return float
---- @overload fun(): float
+--- @overload fun(self: IsoWaveSignal): float
 function IsoWaveSignal:getZ() end
 
 --- @public
@@ -152,13 +152,13 @@ function IsoWaveSignal:saveState(bb) end
 --- @public
 --- @param delta float
 --- @return void
---- @overload fun(delta: float): void
+--- @overload fun(self: IsoWaveSignal, delta: float): void
 function IsoWaveSignal:setDelta(delta) end
 
 --- @public
 --- @param data DeviceData
 --- @return void
---- @overload fun(data: DeviceData): void
+--- @overload fun(self: IsoWaveSignal, data: DeviceData): void
 function IsoWaveSignal:setDeviceData(data) end
 
 --- @public

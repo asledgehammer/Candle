@@ -25,7 +25,7 @@ function TraitCollection:clear() end
 --- @public
 --- @param o Object
 --- @return boolean
---- @overload fun(trait: String): boolean
+--- @overload fun(self: TraitCollection, trait: String): boolean
 function TraitCollection:contains(o) end
 
 --- @public
@@ -45,7 +45,7 @@ function TraitCollection:isEmpty() end
 --- @public
 --- @param o Object
 --- @return boolean
---- @overload fun(name: String): boolean
+--- @overload fun(self: TraitCollection, name: String): boolean
 function TraitCollection:remove(o) end
 
 --- @public

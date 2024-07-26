@@ -134,14 +134,14 @@ function BaseVehicle:Serialize() end
 --- @public
 --- @param thumper IsoMovingObject
 --- @return void
---- @overload fun(thumper: IsoMovingObject): void
+--- @overload fun(self: BaseVehicle, thumper: IsoMovingObject): void
 function BaseVehicle:Thump(thumper) end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @param weapon HandWeapon
 --- @return void
---- @overload fun(chr: IsoGameCharacter, weapon: HandWeapon): void
+--- @overload fun(self: BaseVehicle, chr: IsoGameCharacter, weapon: HandWeapon): void
 function BaseVehicle:WeaponHit(chr, weapon) end
 
 --- @public
@@ -189,7 +189,7 @@ function BaseVehicle:addKeyToWorld() end
 --- @param attachmentA String
 --- @param attachmentB String
 --- @return void
---- @overload fun(player: IsoPlayer, vehicleB: BaseVehicle, attachmentA: String, attachmentB: String, remote: Boolean): void
+--- @overload fun(self: BaseVehicle, player: IsoPlayer, vehicleB: BaseVehicle, attachmentA: String, attachmentB: String, remote: Boolean): void
 function BaseVehicle:addPointConstraint(player, vehicleB, attachmentA, attachmentB) end
 
 --- @public
@@ -209,13 +209,13 @@ function BaseVehicle:areAllDoorsLocked() end
 --- @public
 --- @param area Area
 --- @return Vector2
---- @overload fun(area: Area, out: Vector2): Vector2
+--- @overload fun(self: BaseVehicle, area: Area, out: Vector2): Vector2
 function BaseVehicle:areaPositionWorld(area) end
 
 --- @public
 --- @param area Area
 --- @return Vector2
---- @overload fun(area: Area, out: Vector2): Vector2
+--- @overload fun(self: BaseVehicle, area: Area, out: Vector2): Vector2
 function BaseVehicle:areaPositionWorld4PlayerInteract(area) end
 
 --- @public
@@ -278,7 +278,7 @@ function BaseVehicle:canAccessContainer(partIndex, chr) end
 --- @param attachmentA String
 --- @param attachmentB String
 --- @return boolean
---- @overload fun(vehicleB: BaseVehicle, attachmentA: String, attachmentB: String, reconnect: boolean): boolean
+--- @overload fun(self: BaseVehicle, vehicleB: BaseVehicle, attachmentA: String, attachmentB: String, reconnect: boolean): boolean
 function BaseVehicle:canAttachTrailer(vehicleB, attachmentA, attachmentB) end
 
 --- @public
@@ -453,7 +453,7 @@ function BaseVehicle:engineDoStartingSuccess() end
 --- @param seat int
 --- @param chr IsoGameCharacter
 --- @return boolean
---- @overload fun(seat: int, chr: IsoGameCharacter, offset: Vector3f): boolean
+--- @overload fun(self: BaseVehicle, seat: int, chr: IsoGameCharacter, offset: Vector3f): boolean
 function BaseVehicle:enter(seat, chr) end
 
 --- @public
@@ -502,7 +502,7 @@ function BaseVehicle:getAnimationPlayer() end
 --- @public
 --- @param areaId String
 --- @return Vector2
---- @overload fun(areaId: String, out: Vector2): Vector2
+--- @overload fun(self: BaseVehicle, areaId: String, out: Vector2): Vector2
 function BaseVehicle:getAreaCenter(areaId) end
 
 --- @public
@@ -637,7 +637,7 @@ function BaseVehicle:getEngineSpeed() end
 
 --- @public
 --- @return FMODParameterList
---- @overload fun(): FMODParameterList
+--- @overload fun(self: BaseVehicle): FMODParameterList
 function BaseVehicle:getFMODParameters() end
 
 --- @public
@@ -721,7 +721,7 @@ function BaseVehicle:getLinearVelocity(out) end
 --- @param worldPos Vector3f
 --- @param localPos Vector3f
 --- @return Vector3f
---- @overload fun(worldX: float, worldY: float, worldZ: float, localPos: Vector3f): Vector3f
+--- @overload fun(self: BaseVehicle, worldX: float, worldY: float, worldZ: float, localPos: Vector3f): Vector3f
 function BaseVehicle:getLocalPos(worldPos, localPos) end
 
 --- @public
@@ -830,7 +830,7 @@ function BaseVehicle:getPassengerPosition(seat, id) end
 --- @param posn Position
 --- @param out Vector3f
 --- @return Vector3f
---- @overload fun(x: float, y: float, z: float, out: Vector3f): Vector3f
+--- @overload fun(self: BaseVehicle, x: float, y: float, z: float, out: Vector3f): Vector3f
 function BaseVehicle:getPassengerPositionWorldPos(posn, out) end
 
 --- @public
@@ -957,13 +957,13 @@ function BaseVehicle:getSwitchSeatSound(seatFrom, seatTo) end
 
 --- @public
 --- @return float
---- @overload fun(): float
+--- @overload fun(self: BaseVehicle): float
 function BaseVehicle:getThumpCondition() end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @return Thumpable
---- @overload fun(chr: IsoGameCharacter): Thumpable
+--- @overload fun(self: BaseVehicle, chr: IsoGameCharacter): Thumpable
 function BaseVehicle:getThumpableFor(chr) end
 
 --- @public
@@ -1018,7 +1018,7 @@ function BaseVehicle:getUpVectorDot() end
 --- @public
 --- @param chr IsoGameCharacter
 --- @return VehiclePart
---- @overload fun(chr: IsoGameCharacter, checkDir: boolean): VehiclePart
+--- @overload fun(self: BaseVehicle, chr: IsoGameCharacter, checkDir: boolean): VehiclePart
 function BaseVehicle:getUseablePart(chr) end
 
 --- @public
@@ -1051,9 +1051,9 @@ function BaseVehicle:getWindowLightsOn() end
 --- @param localPos Vector3f
 --- @param worldPos Vector3f
 --- @return Vector3f
---- @overload fun(localPos: Vector3f, worldPos: Vector3f, script: VehicleScript): Vector3f
---- @overload fun(localX: float, localY: float, localZ: float, worldPos: Vector3f): Vector3f
---- @overload fun(localX: float, localY: float, localZ: float, worldPos: Vector3f, script: VehicleScript): Vector3f
+--- @overload fun(self: BaseVehicle, localPos: Vector3f, worldPos: Vector3f, script: VehicleScript): Vector3f
+--- @overload fun(self: BaseVehicle, localX: float, localY: float, localZ: float, worldPos: Vector3f): Vector3f
+--- @overload fun(self: BaseVehicle, localX: float, localY: float, localZ: float, worldPos: Vector3f, script: VehicleScript): Vector3f
 function BaseVehicle:getWorldPos(localPos, worldPos) end
 
 --- @public
@@ -1101,7 +1101,7 @@ function BaseVehicle:haveOneDoorUnlocked() end
 --- @public
 --- @param chr IsoZombie
 --- @return void
---- @overload fun(character: IsoGameCharacter, vars: HitVars): void
+--- @overload fun(self: BaseVehicle, character: IsoGameCharacter, vars: HitVars): void
 function BaseVehicle:hitCharacter(chr) end
 
 --- @public
@@ -1192,7 +1192,7 @@ function BaseVehicle:isEnterBlocked2(chr, seat) end
 --- @public
 --- @param seat int
 --- @return boolean
---- @overload fun(chr: IsoGameCharacter, seat: int): boolean
+--- @overload fun(self: BaseVehicle, chr: IsoGameCharacter, seat: int): boolean
 function BaseVehicle:isExitBlocked(seat) end
 
 --- @public
@@ -1248,7 +1248,7 @@ function BaseVehicle:isInvalidChunkAhead() end
 
 --- @public
 --- @return boolean
---- @overload fun(moveW: boolean, moveE: boolean, moveN: boolean, moveS: boolean): boolean
+--- @overload fun(self: BaseVehicle, moveW: boolean, moveE: boolean, moveN: boolean, moveS: boolean): boolean
 function BaseVehicle:isInvalidChunkAround() end
 
 --- @public
@@ -1412,7 +1412,7 @@ function BaseVehicle:playPartSound(part, player, animId) end
 --- @param seat int
 --- @param animId String
 --- @return void
---- @overload fun(seat: int, animId: String, chr: IsoGameCharacter): void
+--- @overload fun(self: BaseVehicle, seat: int, animId: String, chr: IsoGameCharacter): void
 function BaseVehicle:playPassengerAnim(seat, animId) end
 
 --- @public
@@ -1762,7 +1762,7 @@ function BaseVehicle:setRust(rust) end
 
 --- @public
 --- @return void
---- @overload fun(name: String): void
+--- @overload fun(self: BaseVehicle, name: String): void
 function BaseVehicle:setScript() end
 
 --- @public
@@ -1783,7 +1783,7 @@ function BaseVehicle:setSkinIndex(index) end
 --- @public
 --- @param location String
 --- @return BaseVehicle
---- @overload fun(location: String, flipped: boolean): BaseVehicle
+--- @overload fun(self: BaseVehicle, location: String, flipped: boolean): BaseVehicle
 function BaseVehicle:setSmashed(location) end
 
 --- @public
@@ -1853,7 +1853,7 @@ function BaseVehicle:shouldCollideWithObjects() end
 --- @public
 --- @param seat int
 --- @return boolean
---- @overload fun(chr: IsoGameCharacter): boolean
+--- @overload fun(self: BaseVehicle, chr: IsoGameCharacter): boolean
 function BaseVehicle:showPassenger(seat) end
 
 --- @public
@@ -1873,7 +1873,7 @@ function BaseVehicle:softReset() end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return void
---- @overload fun(eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
+--- @overload fun(self: BaseVehicle, eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
 function BaseVehicle:startEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -1881,7 +1881,7 @@ function BaseVehicle:startEvent(eventInstance, clip, parameterSet) end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return void
---- @overload fun(eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
+--- @overload fun(self: BaseVehicle, eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
 function BaseVehicle:stopEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -1926,7 +1926,7 @@ function BaseVehicle:testCollisionWithObject(obj, circleRadius, out) end
 --- @param chr IsoGameCharacter
 --- @param doSound boolean
 --- @return int
---- @overload fun(chr: IsoMovingObject, angleX: float, angleY: float, doSound: boolean): int
+--- @overload fun(self: BaseVehicle, chr: IsoMovingObject, angleX: float, angleY: float, doSound: boolean): int
 function BaseVehicle:testCollisionWithProneCharacter(chr, doSound) end
 
 --- @public
@@ -2016,7 +2016,7 @@ function BaseVehicle:trySpawnKey() end
 
 --- @public
 --- @return void
---- @overload fun(haveKey: boolean): void
+--- @overload fun(self: BaseVehicle, haveKey: boolean): void
 function BaseVehicle:tryStartEngine() end
 
 --- @public
@@ -2035,7 +2035,7 @@ function BaseVehicle:updateControls() end
 --- @param eventInstance long
 --- @param clip GameSoundClip
 --- @return void
---- @overload fun(eventInstance: long, clip: GameSoundClip): void
+--- @overload fun(self: BaseVehicle, eventInstance: long, clip: GameSoundClip): void
 function BaseVehicle:updateEvent(eventInstance, clip) end
 
 --- @public

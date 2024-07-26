@@ -58,7 +58,7 @@ function BodyPart:RestoreToFullHealth() end
 --- @public
 --- @param Bitten boolean
 --- @return void
---- @overload fun(Bitten: boolean, Infected: boolean): void
+--- @overload fun(self: BodyPart, Bitten: boolean, Infected: boolean): void
 function BodyPart:SetBitten(Bitten) end
 
 --- @public
@@ -140,7 +140,7 @@ function BodyPart:generateZombieInfection(baseChance) end
 
 --- @public
 --- @return float
---- @overload fun(includeStiffness: boolean): float
+--- @overload fun(self: BodyPart, includeStiffness: boolean): float
 function BodyPart:getAdditionalPain() end
 
 --- @public
@@ -351,7 +351,7 @@ function BodyPart:setBandageType(bandageType) end
 --- @param Bandaged boolean
 --- @param bandageLife float
 --- @return void
---- @overload fun(Bandaged: boolean, bandageLife: float, isAlcoholic: boolean, bandageType: String): void
+--- @overload fun(self: BodyPart, Bandaged: boolean, bandageLife: float, isAlcoholic: boolean, bandageType: String): void
 function BodyPart:setBandaged(Bandaged, bandageLife) end
 
 --- @public
@@ -391,7 +391,7 @@ function BodyPart:setComfreyFactor(comfreyFactor) end
 --- @public
 --- @param cut boolean
 --- @return void
---- @overload fun(cut: boolean, forceNoInfection: boolean): void
+--- @overload fun(self: BodyPart, cut: boolean, forceNoInfection: boolean): void
 function BodyPart:setCut(cut) end
 
 --- @public
@@ -540,7 +540,7 @@ function BodyPart:stitched() end
 --- @param bb ByteBuffer
 --- @param id byte
 --- @return void
---- @overload fun(other: BodyPart, updater: Updater): void
+--- @overload fun(self: BodyPart, other: BodyPart, updater: Updater): void
 function BodyPart:sync(bb, id) end
 
 

@@ -335,14 +335,14 @@ function GameTime:isThunderDay() end
 
 --- @public
 --- @return void
---- @overload fun(input: DataInputStream): void
---- @overload fun(input: ByteBuffer): void
+--- @overload fun(self: GameTime, input: DataInputStream): void
+--- @overload fun(self: GameTime, input: ByteBuffer): void
 function GameTime:load() end
 
 --- @public
 --- @return void
---- @overload fun(output: DataOutputStream): void
---- @overload fun(output: ByteBuffer): void
+--- @overload fun(self: GameTime, output: DataOutputStream): void
+--- @overload fun(self: GameTime, output: ByteBuffer): void
 function GameTime:save() end
 
 --- @public

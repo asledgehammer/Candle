@@ -105,7 +105,7 @@ function UI3DScene:sceneToUIY(sceneX, sceneY, sceneZ) end
 --- @param uiZ float
 --- @param out Vector3f
 --- @return Vector3f
---- @overload fun(modelTransform: Matrix4f, uiX: float, uiY: float, uiZ: float, out: Vector3f): Vector3f
+--- @overload fun(self: UI3DScene, modelTransform: Matrix4f, uiX: float, uiY: float, uiZ: float, out: Vector3f): Vector3f
 function UI3DScene:uiToScene(uiX, uiY, uiZ, out) end
 
 --- @public

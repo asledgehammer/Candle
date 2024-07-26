@@ -1,0 +1,65 @@
+--- @meta
+
+--- @class TextAttribute: Attribute
+--- @field public class any
+--- @field public BACKGROUND TextAttribute
+--- @field public BIDI_EMBEDDING TextAttribute
+--- @field public CHAR_REPLACEMENT TextAttribute
+--- @field public FAMILY TextAttribute
+--- @field public FONT TextAttribute
+--- @field public FOREGROUND TextAttribute
+--- @field public INPUT_METHOD_HIGHLIGHT TextAttribute
+--- @field public INPUT_METHOD_UNDERLINE TextAttribute
+--- @field public JUSTIFICATION TextAttribute
+--- @field public JUSTIFICATION_FULL Float
+--- @field public JUSTIFICATION_NONE Float
+--- @field public KERNING TextAttribute
+--- @field public KERNING_ON Integer
+--- @field public LIGATURES TextAttribute
+--- @field public LIGATURES_ON Integer
+--- @field public NUMERIC_SHAPING TextAttribute
+--- @field public POSTURE TextAttribute
+--- @field public POSTURE_OBLIQUE Float
+--- @field public POSTURE_REGULAR Float
+--- @field public RUN_DIRECTION TextAttribute
+--- @field public RUN_DIRECTION_LTR Boolean
+--- @field public RUN_DIRECTION_RTL Boolean
+--- @field public SIZE TextAttribute
+--- @field public STRIKETHROUGH TextAttribute
+--- @field public STRIKETHROUGH_ON Boolean
+--- @field public SUPERSCRIPT TextAttribute
+--- @field public SUPERSCRIPT_SUB Integer
+--- @field public SUPERSCRIPT_SUPER Integer
+--- @field public SWAP_COLORS TextAttribute
+--- @field public SWAP_COLORS_ON Boolean
+--- @field public TRACKING TextAttribute
+--- @field public TRACKING_LOOSE Float
+--- @field public TRACKING_TIGHT Float
+--- @field public TRANSFORM TextAttribute
+--- @field public UNDERLINE TextAttribute
+--- @field public UNDERLINE_LOW_DASHED Integer
+--- @field public UNDERLINE_LOW_DOTTED Integer
+--- @field public UNDERLINE_LOW_GRAY Integer
+--- @field public UNDERLINE_LOW_ONE_PIXEL Integer
+--- @field public UNDERLINE_LOW_TWO_PIXEL Integer
+--- @field public UNDERLINE_ON Integer
+--- @field public WEIGHT TextAttribute
+--- @field public WEIGHT_BOLD Float
+--- @field public WEIGHT_DEMIBOLD Float
+--- @field public WEIGHT_DEMILIGHT Float
+--- @field public WEIGHT_EXTRA_LIGHT Float
+--- @field public WEIGHT_EXTRABOLD Float
+--- @field public WEIGHT_HEAVY Float
+--- @field public WEIGHT_LIGHT Float
+--- @field public WEIGHT_MEDIUM Float
+--- @field public WEIGHT_REGULAR Float
+--- @field public WEIGHT_SEMIBOLD Float
+--- @field public WEIGHT_ULTRABOLD Float
+--- @field public WIDTH TextAttribute
+--- @field public WIDTH_CONDENSED Float
+--- @field public WIDTH_EXTENDED Float
+--- @field public WIDTH_REGULAR Float
+--- @field public WIDTH_SEMI_CONDENSED Float
+--- @field public WIDTH_SEMI_EXTENDED Float
+TextAttribute = {};
+

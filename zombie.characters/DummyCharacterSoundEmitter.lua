@@ -24,7 +24,7 @@ function DummyCharacterSoundEmitter:isClear() end
 --- @public
 --- @param alias String
 --- @return boolean
---- @overload fun(channel: long): boolean
+--- @overload fun(self: DummyCharacterSoundEmitter, channel: long): boolean
 function DummyCharacterSoundEmitter:isPlaying(alias) end
 
 --- @public
@@ -36,7 +36,7 @@ function DummyCharacterSoundEmitter:playFootsteps(file, volume) end
 --- @public
 --- @param file String
 --- @return long
---- @overload fun(file: String, proxy: IsoObject): long
+--- @overload fun(self: DummyCharacterSoundEmitter, file: String, proxy: IsoObject): long
 function DummyCharacterSoundEmitter:playSound(file) end
 
 --- @public

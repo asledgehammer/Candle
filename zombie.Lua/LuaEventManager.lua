@@ -88,7 +88,7 @@ function LuaEventManager.triggerEventUnique(event, param1) end
 --- @param callFrame LuaCallFrame
 --- @param nArguments int
 --- @return int N, number of return values. The top N objects on the stack are considered the return values.
---- @overload fun(callFrame: LuaCallFrame, nArguments: int): int N, number of return values. The top N objects on the stack are considered the return values.
+--- @overload fun(self: LuaEventManager, callFrame: LuaCallFrame, nArguments: int): int N, number of return values. The top N objects on the stack are considered the return values.
 function LuaEventManager:call(callFrame, nArguments) end
 
 

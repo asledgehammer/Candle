@@ -219,7 +219,7 @@ function Thermoregulator:save(output) end
 --- @public
 --- @param target float
 --- @return void
---- @overload fun(meta: Metabolics): void
+--- @overload fun(self: Thermoregulator, meta: Metabolics): void
 function Thermoregulator:setMetabolicTarget(target) end
 
 --- @public

@@ -77,13 +77,13 @@ function IsoDeadBody:Collision(collision, object) end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoDeadBody): boolean
 function IsoDeadBody:IsSpeaking() end
 
 --- @public
 --- @param line String
 --- @return void
---- @overload fun(line: String): void
+--- @overload fun(self: IsoDeadBody, line: String): void
 function IsoDeadBody:Say(line) end
 
 --- @public
@@ -105,7 +105,7 @@ function IsoDeadBody:getAttachedItems() end
 
 --- @public
 --- @return HumanVisual
---- @overload fun(): HumanVisual
+--- @overload fun(self: IsoDeadBody): HumanVisual
 function IsoDeadBody:getHumanVisual() end
 
 --- @public
@@ -115,7 +115,7 @@ function IsoDeadBody:getItem() end
 --- @public
 --- @param itemVisuals ItemVisuals
 --- @return void
---- @overload fun(itemVisuals: ItemVisuals): void
+--- @overload fun(self: IsoDeadBody, itemVisuals: ItemVisuals): void
 function IsoDeadBody:getItemVisuals(itemVisuals) end
 
 --- @public
@@ -144,7 +144,7 @@ function IsoDeadBody:getReanimateTime() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: IsoDeadBody): String
 function IsoDeadBody:getSayLine() end
 
 --- @public
@@ -153,7 +153,7 @@ function IsoDeadBody:getSecondaryHandItem() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: IsoDeadBody): String
 function IsoDeadBody:getTalkerType() end
 
 --- @public
@@ -178,7 +178,7 @@ function IsoDeadBody:isFallOnFront() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoDeadBody): boolean
 function IsoDeadBody:isFemale() end
 
 --- @public
@@ -193,12 +193,12 @@ function IsoDeadBody:isPlayer() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoDeadBody): boolean
 function IsoDeadBody:isSkeleton() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: IsoDeadBody): boolean
 function IsoDeadBody:isZombie() end
 
 --- @public

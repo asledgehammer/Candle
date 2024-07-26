@@ -56,12 +56,12 @@ function ImmutableColor:add(c) end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(scale: float): ImmutableColor
+--- @overload fun(self: ImmutableColor, scale: float): ImmutableColor
 function ImmutableColor:brighter() end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(scale: float): ImmutableColor
+--- @overload fun(self: ImmutableColor, scale: float): ImmutableColor
 function ImmutableColor:darker() end
 
 --- @public

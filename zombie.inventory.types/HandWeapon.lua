@@ -26,7 +26,7 @@ function HandWeapon:IsWeapon() end
 --- @public
 --- @param part WeaponPart
 --- @return void
---- @overload fun(part: WeaponPart, doChange: boolean): void
+--- @overload fun(self: HandWeapon, part: WeaponPart, doChange: boolean): void
 function HandWeapon:attachWeaponPart(part) end
 
 --- @public
@@ -72,7 +72,7 @@ function HandWeapon:getAimingTime() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(result: ArrayList): ArrayList
+--- @overload fun(self: HandWeapon, result: ArrayList): ArrayList
 function HandWeapon:getAllWeaponParts() end
 
 --- @public
@@ -272,7 +272,7 @@ function HandWeapon:getMaxHitCount() end
 
 --- @public
 --- @return float the maxRange
---- @overload fun(owner: IsoGameCharacter): float
+--- @overload fun(self: HandWeapon, owner: IsoGameCharacter): float
 function HandWeapon:getMaxRange() end
 
 --- @public
@@ -471,7 +471,7 @@ function HandWeapon:getWeaponPart(type) end
 --- @public
 --- @param type String
 --- @return float
---- @overload fun(part: WeaponPart): float
+--- @overload fun(self: HandWeapon, part: WeaponPart): float
 function HandWeapon:getWeaponPartWeightModifier(type) end
 
 --- @public

@@ -11,66 +11,66 @@ StringSandboxOption = {};
 
 --- @public
 --- @return ConfigOption
---- @overload fun(): ConfigOption
+--- @overload fun(self: StringSandboxOption): ConfigOption
 function StringSandboxOption:asConfigOption() end
 
 --- @public
 --- @param table KahluaTable
 --- @return void
---- @overload fun(table: KahluaTable): void
+--- @overload fun(self: StringSandboxOption, table: KahluaTable): void
 function StringSandboxOption:fromTable(table) end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: StringSandboxOption): String
 function StringSandboxOption:getPageName() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: StringSandboxOption): String
 function StringSandboxOption:getShortName() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: StringSandboxOption): String
 function StringSandboxOption:getTableName() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: StringSandboxOption): String
 function StringSandboxOption:getTooltip() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: StringSandboxOption): String
 function StringSandboxOption:getTranslatedName() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: StringSandboxOption): boolean
 function StringSandboxOption:isCustom() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: StringSandboxOption): void
 function StringSandboxOption:setCustom() end
 
 --- @public
 --- @param pageName String
 --- @return SandboxOption
---- @overload fun(pageName: String): SandboxOption
+--- @overload fun(self: StringSandboxOption, pageName: String): SandboxOption
 function StringSandboxOption:setPageName(pageName) end
 
 --- @public
 --- @param translation String
 --- @return SandboxOption
---- @overload fun(translation: String): SandboxOption
+--- @overload fun(self: StringSandboxOption, translation: String): SandboxOption
 function StringSandboxOption:setTranslation(translation) end
 
 --- @public
 --- @param table KahluaTable
 --- @return void
---- @overload fun(table: KahluaTable): void
+--- @overload fun(self: StringSandboxOption, table: KahluaTable): void
 function StringSandboxOption:toTable(table) end
 
 

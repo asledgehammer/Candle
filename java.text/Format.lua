@@ -17,7 +17,7 @@ function Format:clone() end
 --- @public
 --- @param arg0 Object
 --- @return String
---- @overload fun(arg0: Object, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
+--- @overload fun(self: Format, arg0: Object, arg1: StringBuffer, arg2: FieldPosition): StringBuffer
 function Format:format(arg0) end
 
 --- @public
@@ -28,7 +28,7 @@ function Format:formatToCharacterIterator(arg0) end
 --- @public
 --- @param arg0 String
 --- @return Object
---- @overload fun(arg0: String, arg1: ParsePosition): Object
+--- @overload fun(self: Format, arg0: String, arg1: ParsePosition): Object
 function Format:parseObject(arg0) end
 
 

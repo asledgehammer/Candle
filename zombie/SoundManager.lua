@@ -21,7 +21,7 @@ function SoundManager:BlendThenStart(musicTrack, f, PrefMusic) end
 --- @param audio Audio
 --- @param targetVolume float
 --- @return void
---- @overload fun(audio: Audio, targetVolume: float, blendSpeedAlpha: float): void
+--- @overload fun(self: SoundManager, audio: Audio, targetVolume: float, blendSpeedAlpha: float): void
 function SoundManager:BlendVolume(audio, targetVolume) end
 
 --- @public
@@ -55,7 +55,7 @@ function SoundManager:IsMusicPlaying() end
 --- @param loop boolean
 --- @param volume float
 --- @return void
---- @overload fun(name: String, musicTrack: Audio, volume: float, bloop: boolean): void
+--- @overload fun(self: SoundManager, name: String, musicTrack: Audio, volume: float, bloop: boolean): void
 function SoundManager:PlayAsMusic(name, musicTrack, loop, volume) end
 
 --- @public
@@ -78,7 +78,7 @@ function SoundManager:PlayMusic(n, name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain float
 --- @return Audio
---- @overload fun(name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
+--- @overload fun(self: SoundManager, name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
 function SoundManager:PlaySound(name, loop, maxGain) end
 
 --- @public
@@ -93,8 +93,8 @@ function SoundManager:PlaySoundEvenSilent(name, loop, maxGain) end
 --- @param loop boolean
 --- @param maxGain float
 --- @return Audio
---- @overload fun(name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
---- @overload fun(name: String, variations: int, loop: boolean, maxGain: float): Audio
+--- @overload fun(self: SoundManager, name: String, loop: boolean, maxGain: float, pitchVar: float): Audio
+--- @overload fun(self: SoundManager, name: String, variations: int, loop: boolean, maxGain: float): Audio
 function SoundManager:PlaySoundWav(name, loop, maxGain) end
 
 --- @public
@@ -105,8 +105,8 @@ function SoundManager:PlaySoundWav(name, loop, maxGain) end
 --- @param maxGain float
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
---- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): Audio
+--- @overload fun(self: SoundManager, name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
+--- @overload fun(self: SoundManager, name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): Audio
 function SoundManager:PlayWorldSound(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
@@ -130,8 +130,8 @@ function SoundManager:PlayWorldSoundImpl(name, loop, sx, sy, sz, pitchVar, radiu
 --- @param maxGain float
 --- @param ignoreOutside boolean
 --- @return Audio
---- @overload fun(name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
---- @overload fun(name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): void
+--- @overload fun(self: SoundManager, name: String, loop: boolean, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, ignoreOutside: boolean): Audio
+--- @overload fun(self: SoundManager, name: String, source: IsoGridSquare, pitchVar: float, radius: float, maxGain: float, choices: int, ignoreOutside: boolean): void
 function SoundManager:PlayWorldSoundWav(name, source, pitchVar, radius, maxGain, ignoreOutside) end
 
 --- @public
@@ -196,7 +196,7 @@ function SoundManager:getCurrentMusicName() end
 
 --- @public
 --- @return FMODParameterList
---- @overload fun(): FMODParameterList
+--- @overload fun(self: SoundManager): FMODParameterList
 function SoundManager:getFMODParameters() end
 
 --- @public
@@ -229,7 +229,7 @@ function SoundManager:isPlayingMusic() end
 --- @public
 --- @param name String
 --- @return boolean
---- @overload fun(eventInstance: long): boolean
+--- @overload fun(self: SoundManager, eventInstance: long): boolean
 function SoundManager:isPlayingUISound(name) end
 
 --- @public
@@ -311,7 +311,7 @@ function SoundManager:setVehicleEngineVolume(volume) end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return void
---- @overload fun(eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
+--- @overload fun(self: SoundManager, eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
 function SoundManager:startEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -323,7 +323,7 @@ function SoundManager:stop() end
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
 --- @return void
---- @overload fun(eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
+--- @overload fun(self: SoundManager, eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
 function SoundManager:stopEvent(eventInstance, clip, parameterSet) end
 
 --- @public
@@ -365,7 +365,7 @@ function SoundManager:update4() end
 --- @param eventInstance long
 --- @param clip GameSoundClip
 --- @return void
---- @overload fun(eventInstance: long, clip: GameSoundClip): void
+--- @overload fun(self: SoundManager, eventInstance: long, clip: GameSoundClip): void
 function SoundManager:updateEvent(eventInstance, clip) end
 
 

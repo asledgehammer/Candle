@@ -180,7 +180,7 @@ function IsoWorld:checkVehiclesZones() end
 
 --- @public
 --- @return HashMap
---- @overload fun(filename: String): ArrayList
+--- @overload fun(self: IsoWorld, filename: String): ArrayList
 function IsoWorld:getAllTiles() end
 
 --- @public
@@ -205,7 +205,7 @@ function IsoWorld:getFrameNo() end
 
 --- @public
 --- @return BaseSoundEmitter
---- @overload fun(x: float, y: float, z: float): BaseSoundEmitter
+--- @overload fun(self: IsoWorld, x: float, y: float, z: float): BaseSoundEmitter
 function IsoWorld:getFreeEmitter() end
 
 --- @public

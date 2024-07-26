@@ -34,7 +34,7 @@ function InventoryItem:CopyModData(DefaultModData) end
 --- @public
 --- @param tooltipUI ObjectTooltip
 --- @return void
---- @overload fun(tooltipUI: ObjectTooltip, layout: Layout): void
+--- @overload fun(self: InventoryItem, tooltipUI: ObjectTooltip, layout: Layout): void
 function InventoryItem:DoTooltip(tooltipUI) end
 
 --- @public
@@ -86,8 +86,8 @@ function InventoryItem:SetContainerPosition(x, y) end
 
 --- @public
 --- @return void
---- @overload fun(bCrafting: boolean): void
---- @overload fun(bCrafting: boolean, bInContainer: boolean): void
+--- @overload fun(self: InventoryItem, bCrafting: boolean): void
+--- @overload fun(self: InventoryItem, bCrafting: boolean, bInContainer: boolean): void
 function InventoryItem:Use() end
 
 --- @public
@@ -1167,7 +1167,7 @@ function InventoryItem:setColorRed(colorRed) end
 --- @public
 --- @param Condition int the Condition to set
 --- @return void
---- @overload fun(Condition: int, doSound: boolean): void
+--- @overload fun(self: InventoryItem, Condition: int, doSound: boolean): void
 function InventoryItem:setCondition(Condition) end
 
 --- @public

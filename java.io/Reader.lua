@@ -22,7 +22,7 @@ function Reader.nullReader() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: Reader): void
 function Reader:close() end
 
 --- @public
@@ -36,10 +36,10 @@ function Reader:markSupported() end
 
 --- @public
 --- @return int
---- @overload fun(arg0: char[]): int
---- @overload fun(arg0: CharBuffer): int
---- @overload fun(arg0: CharBuffer): int
---- @overload fun(arg0: char[], arg1: int, arg2: int): int
+--- @overload fun(self: Reader, arg0: char[]): int
+--- @overload fun(self: Reader, arg0: CharBuffer): int
+--- @overload fun(self: Reader, arg0: CharBuffer): int
+--- @overload fun(self: Reader, arg0: char[], arg1: int, arg2: int): int
 function Reader:read() end
 
 --- @public

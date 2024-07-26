@@ -46,12 +46,12 @@ function Profession:getIconPath() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: Profession): String
 function Profession:getLabel() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: Profession): String
 function Profession:getLeftLabel() end
 
 --- @public
@@ -60,7 +60,7 @@ function Profession:getName() end
 
 --- @public
 --- @return String
---- @overload fun(): String
+--- @overload fun(self: Profession): String
 function Profession:getRightLabel() end
 
 --- @public

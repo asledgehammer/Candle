@@ -45,26 +45,26 @@ function PZArrayList.of() end
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
---- @overload fun(arg0: int, arg1: Object): void
---- @overload fun(arg0: int, arg1: Object): void
+--- @overload fun(self: PZArrayList, arg0: Object): boolean
+--- @overload fun(self: PZArrayList, arg0: int, arg1: Object): void
+--- @overload fun(self: PZArrayList, arg0: int, arg1: Object): void
 function PZArrayList:add(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(arg0: int, arg1: Collection): boolean
+--- @overload fun(self: PZArrayList, arg0: int, arg1: Collection): boolean
 function PZArrayList:addAll(arg0) end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: PZArrayList): void
 function PZArrayList:clear() end
 
 --- @public
 --- @param o Object
 --- @return boolean
---- @overload fun(o: Object): boolean
+--- @overload fun(self: PZArrayList, o: Object): boolean
 function PZArrayList:contains(o) end
 
 --- @public
@@ -80,7 +80,7 @@ function PZArrayList:equals(arg0) end
 --- @public
 --- @param index int
 --- @return Object
---- @overload fun(index: int): Object
+--- @overload fun(self: PZArrayList, index: int): Object
 function PZArrayList:get(index) end
 
 --- @public
@@ -94,17 +94,17 @@ function PZArrayList:hashCode() end
 --- @public
 --- @param o Object
 --- @return int
---- @overload fun(o: Object): int
+--- @overload fun(self: PZArrayList, o: Object): int
 function PZArrayList:indexOf(o) end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: PZArrayList): boolean
 function PZArrayList:isEmpty() end
 
 --- @public
 --- @return Iterator
---- @overload fun(): Iterator
+--- @overload fun(self: PZArrayList): Iterator
 function PZArrayList:iterator() end
 
 --- @public
@@ -114,17 +114,17 @@ function PZArrayList:lastIndexOf(arg0) end
 
 --- @public
 --- @return ListIterator
---- @overload fun(): ListIterator
---- @overload fun(index: int): ListIterator
---- @overload fun(index: int): ListIterator
+--- @overload fun(self: PZArrayList): ListIterator
+--- @overload fun(self: PZArrayList, index: int): ListIterator
+--- @overload fun(self: PZArrayList, index: int): ListIterator
 function PZArrayList:listIterator() end
 
 --- @public
 --- @param index int
 --- @return Object
---- @overload fun(index: int): Object
---- @overload fun(o: Object): boolean
---- @overload fun(o: Object): boolean
+--- @overload fun(self: PZArrayList, index: int): Object
+--- @overload fun(self: PZArrayList, o: Object): boolean
+--- @overload fun(self: PZArrayList, o: Object): boolean
 function PZArrayList:remove(index) end
 
 --- @public
@@ -146,12 +146,12 @@ function PZArrayList:retainAll(arg0) end
 --- @param arg0 int
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: int, arg1: Object): Object
+--- @overload fun(self: PZArrayList, arg0: int, arg1: Object): Object
 function PZArrayList:set(arg0, arg1) end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: PZArrayList): int
 function PZArrayList:size() end
 
 --- @public
@@ -171,7 +171,7 @@ function PZArrayList:subList(arg0, arg1) end
 
 --- @public
 --- @return Object[]
---- @overload fun(arg0: Object[]): Object[]
+--- @overload fun(self: PZArrayList, arg0: Object[]): Object[]
 function PZArrayList:toArray() end
 
 --- @public

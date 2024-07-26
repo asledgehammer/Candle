@@ -14,7 +14,7 @@ function MapKnowledge:forget() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(x: int, y: int, z: int): KnownBlockedEdges
+--- @overload fun(self: MapKnowledge, x: int, y: int, z: int): KnownBlockedEdges
 function MapKnowledge:getKnownBlockedEdges() end
 
 --- @public
@@ -28,7 +28,7 @@ function MapKnowledge:getOrCreateKnownBlockedEdges(x, y, z) end
 --- @param object IsoDoor
 --- @param blocked boolean
 --- @return void
---- @overload fun(object: IsoThumpable, blocked: boolean): void
+--- @overload fun(self: MapKnowledge, object: IsoThumpable, blocked: boolean): void
 function MapKnowledge:setKnownBlockedDoor(object, blocked) end
 
 --- @public

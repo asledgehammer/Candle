@@ -22,19 +22,19 @@ function OutputStream.nullOutputStream() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: OutputStream): void
 function OutputStream:close() end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: OutputStream): void
 function OutputStream:flush() end
 
 --- @public
 --- @param arg0 byte[]
 --- @return void
---- @overload fun(arg0: int): void
---- @overload fun(arg0: byte[], arg1: int, arg2: int): void
+--- @overload fun(self: OutputStream, arg0: int): void
+--- @overload fun(self: OutputStream, arg0: byte[], arg1: int, arg2: int): void
 function OutputStream:write(arg0) end
 
 

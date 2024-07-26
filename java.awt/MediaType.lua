@@ -1,0 +1,166 @@
+--- @meta
+
+--- @class MediaType: AttributeValue
+--- @field public class any
+--- @field public A MediaType
+--- @field public A0 MediaType
+--- @field public A1 MediaType
+--- @field public A10 MediaType
+--- @field public A2 MediaType
+--- @field public A3 MediaType
+--- @field public A4 MediaType
+--- @field public A5 MediaType
+--- @field public A6 MediaType
+--- @field public A7 MediaType
+--- @field public A8 MediaType
+--- @field public A9 MediaType
+--- @field public B MediaType
+--- @field public B0 MediaType
+--- @field public B1 MediaType
+--- @field public B10 MediaType
+--- @field public B2 MediaType
+--- @field public B3 MediaType
+--- @field public B4 MediaType
+--- @field public B5 MediaType
+--- @field public B6 MediaType
+--- @field public B7 MediaType
+--- @field public B8 MediaType
+--- @field public B9 MediaType
+--- @field public C MediaType
+--- @field public C0 MediaType
+--- @field public C1 MediaType
+--- @field public C10 MediaType
+--- @field public C2 MediaType
+--- @field public C3 MediaType
+--- @field public C4 MediaType
+--- @field public C5 MediaType
+--- @field public C6 MediaType
+--- @field public C7 MediaType
+--- @field public C8 MediaType
+--- @field public C9 MediaType
+--- @field public D MediaType
+--- @field public E MediaType
+--- @field public ENV_10 MediaType
+--- @field public ENV_10X13 MediaType
+--- @field public ENV_10X14 MediaType
+--- @field public ENV_10X15 MediaType
+--- @field public ENV_11 MediaType
+--- @field public ENV_12 MediaType
+--- @field public ENV_14 MediaType
+--- @field public ENV_6X9 MediaType
+--- @field public ENV_7X9 MediaType
+--- @field public ENV_9 MediaType
+--- @field public ENV_9X11 MediaType
+--- @field public ENV_9X12 MediaType
+--- @field public ENV_INVITE MediaType
+--- @field public ENV_ITALY MediaType
+--- @field public ENV_MONARCH MediaType
+--- @field public ENV_PERSONAL MediaType
+--- @field public EXECUTIVE MediaType
+--- @field public FOLIO MediaType
+--- @field public INVITE MediaType
+--- @field public INVITE_ENVELOPE MediaType
+--- @field public INVOICE MediaType
+--- @field public ISO_2A0 MediaType
+--- @field public ISO_4A0 MediaType
+--- @field public ISO_A0 MediaType
+--- @field public ISO_A1 MediaType
+--- @field public ISO_A10 MediaType
+--- @field public ISO_A2 MediaType
+--- @field public ISO_A3 MediaType
+--- @field public ISO_A4 MediaType
+--- @field public ISO_A5 MediaType
+--- @field public ISO_A6 MediaType
+--- @field public ISO_A7 MediaType
+--- @field public ISO_A8 MediaType
+--- @field public ISO_A9 MediaType
+--- @field public ISO_B0 MediaType
+--- @field public ISO_B1 MediaType
+--- @field public ISO_B10 MediaType
+--- @field public ISO_B2 MediaType
+--- @field public ISO_B3 MediaType
+--- @field public ISO_B4 MediaType
+--- @field public ISO_B4_ENVELOPE MediaType
+--- @field public ISO_B5 MediaType
+--- @field public ISO_B5_ENVELOPE MediaType
+--- @field public ISO_B6 MediaType
+--- @field public ISO_B7 MediaType
+--- @field public ISO_B8 MediaType
+--- @field public ISO_B9 MediaType
+--- @field public ISO_C0 MediaType
+--- @field public ISO_C0_ENVELOPE MediaType
+--- @field public ISO_C1 MediaType
+--- @field public ISO_C10 MediaType
+--- @field public ISO_C10_ENVELOPE MediaType
+--- @field public ISO_C1_ENVELOPE MediaType
+--- @field public ISO_C2 MediaType
+--- @field public ISO_C2_ENVELOPE MediaType
+--- @field public ISO_C3 MediaType
+--- @field public ISO_C3_ENVELOPE MediaType
+--- @field public ISO_C4 MediaType
+--- @field public ISO_C4_ENVELOPE MediaType
+--- @field public ISO_C5 MediaType
+--- @field public ISO_C5_ENVELOPE MediaType
+--- @field public ISO_C6 MediaType
+--- @field public ISO_C6_ENVELOPE MediaType
+--- @field public ISO_C7 MediaType
+--- @field public ISO_C7_ENVELOPE MediaType
+--- @field public ISO_C8 MediaType
+--- @field public ISO_C8_ENVELOPE MediaType
+--- @field public ISO_C9 MediaType
+--- @field public ISO_C9_ENVELOPE MediaType
+--- @field public ISO_DESIGNATED_LONG MediaType
+--- @field public ISO_DESIGNATED_LONG_ENVELOPE MediaType
+--- @field public ITALY MediaType
+--- @field public ITALY_ENVELOPE MediaType
+--- @field public JIS_B0 MediaType
+--- @field public JIS_B1 MediaType
+--- @field public JIS_B10 MediaType
+--- @field public JIS_B2 MediaType
+--- @field public JIS_B3 MediaType
+--- @field public JIS_B4 MediaType
+--- @field public JIS_B5 MediaType
+--- @field public JIS_B6 MediaType
+--- @field public JIS_B7 MediaType
+--- @field public JIS_B8 MediaType
+--- @field public JIS_B9 MediaType
+--- @field public LEDGER MediaType
+--- @field public LEGAL MediaType
+--- @field public LETTER MediaType
+--- @field public MONARCH MediaType
+--- @field public MONARCH_ENVELOPE MediaType
+--- @field public NA_10X13_ENVELOPE MediaType
+--- @field public NA_10X14_ENVELOPE MediaType
+--- @field public NA_10X15_ENVELOPE MediaType
+--- @field public NA_6X9_ENVELOPE MediaType
+--- @field public NA_7X9_ENVELOPE MediaType
+--- @field public NA_9X11_ENVELOPE MediaType
+--- @field public NA_9X12_ENVELOPE MediaType
+--- @field public NA_LEGAL MediaType
+--- @field public NA_LETTER MediaType
+--- @field public NA_NUMBER_10_ENVELOPE MediaType
+--- @field public NA_NUMBER_11_ENVELOPE MediaType
+--- @field public NA_NUMBER_12_ENVELOPE MediaType
+--- @field public NA_NUMBER_14_ENVELOPE MediaType
+--- @field public NA_NUMBER_9_ENVELOPE MediaType
+--- @field public NOTE MediaType
+--- @field public PERSONAL MediaType
+--- @field public PERSONAL_ENVELOPE MediaType
+--- @field public QUARTO MediaType
+--- @field public STATEMENT MediaType
+--- @field public TABLOID MediaType
+MediaType = {};
+
+------------------------------------
+------------- METHODS --------------
+------------------------------------
+
+--- @public
+--- @return int
+function MediaType:hashCode() end
+
+--- @public
+--- @return String
+function MediaType:toString() end
+
+

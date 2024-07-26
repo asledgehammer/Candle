@@ -14,9 +14,9 @@ TextManager = {};
 --- @param y double
 --- @param str String
 --- @return void
---- @overload fun(x: double, y: double, str: String, r: double, g: double, b: double, a: double): void
---- @overload fun(font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double): void
---- @overload fun(font: UIFont, x: double, y: double, zoom: double, str: String, r: double, g: double, b: double, a: double): void
+--- @overload fun(self: TextManager, x: double, y: double, str: String, r: double, g: double, b: double, a: double): void
+--- @overload fun(self: TextManager, font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double): void
+--- @overload fun(self: TextManager, font: UIFont, x: double, y: double, zoom: double, str: String, r: double, g: double, b: double, a: double): void
 function TextManager:DrawString(x, y, str) end
 
 --- @public
@@ -40,7 +40,7 @@ function TextManager:DrawStringBBcode(font, x, y, str, r, g, b, a) end
 --- @param b double
 --- @param a double
 --- @return void
---- @overload fun(font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double): void
+--- @overload fun(self: TextManager, font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double): void
 function TextManager:DrawStringCentre(x, y, str, r, g, b, a) end
 
 --- @public
@@ -64,7 +64,7 @@ function TextManager:DrawStringCentreDefered(font, x, y, str, r, g, b, a) end
 --- @param b double
 --- @param a double
 --- @return void
---- @overload fun(font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double): void
+--- @overload fun(self: TextManager, font: UIFont, x: double, y: double, str: String, r: double, g: double, b: double, a: double): void
 function TextManager:DrawStringRight(x, y, str, r, g, b, a) end
 
 --- @public

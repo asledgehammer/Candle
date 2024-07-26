@@ -25,8 +25,8 @@ function MapGroups:checkMapConflicts() end
 
 --- @public
 --- @return void
---- @overload fun(activeMods: ActiveMods, includeVanilla: boolean): void
---- @overload fun(activeMods: ActiveMods, includeVanilla: boolean, includeChallenges: boolean): void
+--- @overload fun(self: MapGroups, activeMods: ActiveMods, includeVanilla: boolean): void
+--- @overload fun(self: MapGroups, activeMods: ActiveMods, includeVanilla: boolean, includeChallenges: boolean): void
 function MapGroups:createGroups() end
 
 --- @public

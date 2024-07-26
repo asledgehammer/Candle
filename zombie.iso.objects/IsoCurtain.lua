@@ -71,7 +71,7 @@ function IsoCurtain:getSoundPrefix() end
 --- @public
 --- @param square2 IsoGridSquare
 --- @return boolean
---- @overload fun(square1: IsoGridSquare, square2: IsoGridSquare): boolean
+--- @overload fun(self: IsoCurtain, square1: IsoGridSquare, square2: IsoGridSquare): boolean
 function IsoCurtain:isAdjacentToSquare(square2) end
 
 --- @public
@@ -114,7 +114,7 @@ function IsoCurtain:save(output, IS_DEBUG_SAVE) end
 --- @param val byte
 --- @param source UdpConnection
 --- @return void
---- @overload fun(bRemote: boolean, val: byte, source: UdpConnection, bb: ByteBuffer): void
+--- @overload fun(self: IsoCurtain, bRemote: boolean, val: byte, source: UdpConnection, bb: ByteBuffer): void
 function IsoCurtain:syncIsoObject(bRemote, val, source) end
 
 --- @public

@@ -75,14 +75,14 @@ function BaseAction:resetJobDelta() end
 --- @public
 --- @param animNode String
 --- @return void
---- @overload fun(act: CharacterActionAnims): void
+--- @overload fun(self: BaseAction, act: CharacterActionAnims): void
 function BaseAction:setActionAnim(animNode) end
 
 --- @public
 --- @param key String
 --- @param val boolean
 --- @return void
---- @overload fun(key: String, val: String): void
+--- @overload fun(self: BaseAction, key: String, val: String): void
 function BaseAction:setAnimVariable(key, val) end
 
 --- @public
@@ -104,7 +104,7 @@ function BaseAction:setOverrideAnimation(override) end
 --- @param primaryHand InventoryItem
 --- @param secondaryHand InventoryItem
 --- @return void
---- @overload fun(primaryHand: InventoryItem, secondaryHand: InventoryItem, resetModel: boolean): void
+--- @overload fun(self: BaseAction, primaryHand: InventoryItem, secondaryHand: InventoryItem, resetModel: boolean): void
 function BaseAction:setOverrideHandModels(primaryHand, secondaryHand) end
 
 --- @public
@@ -118,7 +118,7 @@ function BaseAction:setOverrideHandModelsObject(primaryHand, secondaryHand, rese
 --- @param primaryHand String
 --- @param secondaryHand String
 --- @return void
---- @overload fun(primaryHand: String, secondaryHand: String, resetModel: boolean): void
+--- @overload fun(self: BaseAction, primaryHand: String, secondaryHand: String, resetModel: boolean): void
 function BaseAction:setOverrideHandModelsString(primaryHand, secondaryHand) end
 
 --- @public
