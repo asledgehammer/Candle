@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ClothingPatch
 --- @field public class any
@@ -9,44 +9,44 @@ ClothingPatch = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function ClothingPatch:getBiteDefense() end
 
 --- @public
---- @return int
+--- @return integer
 function ClothingPatch:getFabricType() end
 
 --- @public
---- @return String
+--- @return string
 function ClothingPatch:getFabricTypeName() end
 
 --- @public
---- @return int
+--- @return integer
 function ClothingPatch:getScratchDefense() end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function ClothingPatch:load(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
+--- @param arg1 integer
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function ClothingPatch:load_old(arg0, arg1, arg2) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function ClothingPatch:save(arg0, arg1) end
 
 --- @public
 --- @param arg0 ByteBuffer
 --- @param arg1 boolean
---- @return void
+--- @return nil
 function ClothingPatch:save_old(arg0, arg1) end
 
 
@@ -57,5 +57,5 @@ function ClothingPatch:save_old(arg0, arg1) end
 --- @public
 --- @param arg0 Clothing
 --- @return ClothingPatch
---- @overload fun(arg0: Clothing, arg1: int, arg2: int, arg3: boolean): ClothingPatch
+--- @overload fun(arg0: Clothing, arg1: integer, arg2: integer, arg3: boolean): ClothingPatch
 function ClothingPatch.new(arg0) end

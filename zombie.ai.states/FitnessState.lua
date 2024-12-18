@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class FitnessState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function FitnessState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function FitnessState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function FitnessState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function FitnessState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function FitnessState:exit(owner) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ZombieGetDownState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function ZombieGetDownState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function ZombieGetDownState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieGetDownState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieGetDownState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieGetDownState:exit(owner) end
 
 --- @public
@@ -46,7 +46,7 @@ function ZombieGetDownState:isNearStartXY(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieGetDownState:setParams(owner) end
 
 

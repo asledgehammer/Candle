@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Iterator
 --- @field public class any
@@ -10,7 +10,7 @@ Iterator = {};
 
 --- @public
 --- @param arg0 Consumer
---- @return void
+--- @return nil
 function Iterator:forEachRemaining(arg0) end
 
 --- @public
@@ -18,11 +18,11 @@ function Iterator:forEachRemaining(arg0) end
 function Iterator:hasNext() end
 
 --- @public
---- @return Object
+--- @return any
 function Iterator:next() end
 
 --- @public
---- @return void
+--- @return nil
 function Iterator:remove() end
 
 

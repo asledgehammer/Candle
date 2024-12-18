@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class BodyDamage
 --- @field public class any
---- @field public InfectionLevelToZombify float
+--- @field public InfectionLevelToZombify number
 BodyDamage = {};
 
 ------------------------------------
@@ -11,8 +11,17 @@ BodyDamage = {};
 
 --- @public
 --- @static
---- @param corpseCount int
---- @return float
+--- @param arg0 IsoGameCharacter
+--- @param arg1 IsoGameCharacter
+--- @param arg2 integer
+--- @param arg3 HandWeapon
+--- @return nil
+function BodyDamage.damageFromSpikedArmor(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @static
+--- @param corpseCount integer
+--- @return number
 function BodyDamage.getSicknessFromCorpsesRate(corpseCount) end
 
 
@@ -21,19 +30,19 @@ function BodyDamage.getSicknessFromCorpsesRate(corpseCount) end
 ------------------------------------
 
 --- @public
---- @param BodyPartIndex int
---- @param val float
---- @return void
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Val: float): void
+--- @param BodyPartIndex integer
+--- @param val number
+--- @return nil
+--- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Val: number): nil
 function BodyDamage:AddDamage(BodyPartIndex, val) end
 
 --- @public
---- @param Val float
---- @return void
+--- @param Val number
+--- @return nil
 function BodyDamage:AddGeneralHealth(Val) end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:AddRandomDamage() end
 
 --- @public
@@ -42,78 +51,85 @@ function BodyDamage:AddRandomDamage() end
 ---  also trigger an instant death animation.
 ---
 --- @param zombie IsoZombie
---- @param hitReaction String
+--- @param hitReaction string
 --- @return boolean
 function BodyDamage:AddRandomDamageFromZombie(zombie, hitReaction) end
 
 --- @public
----
----  When hit by another player in MP
----
---- @param weapon HandWeapon
---- @return void
-function BodyDamage:DamageFromWeapon(weapon) end
+--- @param arg0 IsoAnimal
+--- @return nil
+function BodyDamage:DamageFromAnimal(arg0) end
 
 --- @public
---- @param BodyPartIndex int
---- @return void
+--- @param arg0 HandWeapon
+--- @param arg1 integer
+--- @return nil
+function BodyDamage:DamageFromWeapon(arg0, arg1) end
+
+--- @public
+--- @param BodyPartIndex integer
+--- @return nil
 function BodyDamage:DisableFakeInfection(BodyPartIndex) end
 
 --- @public
---- @param X int
---- @param Y int
---- @param Width int
---- @param Height int
---- @param r float
---- @param g float
---- @param b float
---- @param a float
---- @return void
+--- @param X integer
+--- @param Y integer
+--- @param Width integer
+--- @param Height integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function BodyDamage:DrawUntexturedQuad(X, Y, Width, Height, r, g, b, a) end
+
+--- @public
+--- @return number
+function BodyDamage:GetBaseCorpseSickness() end
 
 --- @public
 --- @return boolean
 function BodyDamage:HasInjury() end
 
 --- @public
---- @param NumNewZombiesSeen int
---- @return void
+--- @param NumNewZombiesSeen integer
+--- @return nil
 function BodyDamage:IncreasePanic(NumNewZombiesSeen) end
 
 --- @public
---- @param delta float
---- @return void
+--- @param delta number
+--- @return nil
 function BodyDamage:IncreasePanicFloat(delta) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @return boolean
 --- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
 function BodyDamage:IsBandaged(BodyPartIndex) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @return boolean
 --- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
 function BodyDamage:IsBitten(BodyPartIndex) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @return boolean
 --- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
 function BodyDamage:IsBleeding(BodyPartIndex) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @return boolean
 --- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
 function BodyDamage:IsBleedingStemmed(BodyPartIndex) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param arg0 integer
 --- @return boolean
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
-function BodyDamage:IsCortorised(BodyPartIndex) end
+--- @overload fun(self: BodyDamage, arg0: BodyPartType): boolean
+function BodyDamage:IsCauterized(arg0) end
 
 --- @public
 --- @param BodyPart BodyPartType
@@ -127,12 +143,12 @@ function BodyDamage:IsDeepWounded(BodyPart) end
 
 --- @public
 --- @return boolean
---- @overload fun(self: BodyDamage, BodyPartIndex: int): boolean
+--- @overload fun(self: BodyDamage, BodyPartIndex: integer): boolean
 function BodyDamage:IsFakeInfected() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: BodyDamage, BodyPartIndex: int): boolean
+--- @overload fun(self: BodyDamage, BodyPartIndex: integer): boolean
 --- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
 function BodyDamage:IsInfected() end
 
@@ -141,165 +157,179 @@ function BodyDamage:IsInfected() end
 function BodyDamage:IsOnFire() end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @return boolean
 --- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
 function BodyDamage:IsScratched(BodyPartIndex) end
 
 --- @public
---- @return int
+--- @return integer
 function BodyDamage:IsSneezingCoughing() end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @return boolean
 --- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
 function BodyDamage:IsStitched(BodyPartIndex) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @return boolean
 --- @overload fun(self: BodyDamage, BodyPart: BodyPartType): boolean
 function BodyDamage:IsWounded(BodyPartIndex) end
 
 --- @public
 --- @param NewFood Food
---- @return void
---- @overload fun(self: BodyDamage, NewFood: Food, percentage: float): void
+--- @return nil
+--- @overload fun(self: BodyDamage, NewFood: Food, percentage: number): nil
+--- @overload fun(self: BodyDamage, arg0: Food, arg1: number, arg2: boolean): nil
 function BodyDamage:JustAteFood(NewFood) end
 
 --- @public
 --- @param food Food
---- @param percentage float
---- @return void
+--- @param percentage number
+--- @return nil
 function BodyDamage:JustDrankBooze(food, percentage) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function BodyDamage:JustDrankBoozeFluid(arg0) end
+
+--- @public
 --- @param lit Literature
---- @return void
+--- @return nil
 function BodyDamage:JustReadSomething(lit) end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:JustTookPainMeds() end
 
 --- @public
 --- @param Pill InventoryItem
---- @return void
+--- @return nil
 function BodyDamage:JustTookPill(Pill) end
 
 --- @public
 --- @param OnFire boolean
---- @return void
+--- @return nil
 function BodyDamage:OnFire(OnFire) end
 
 --- @public
---- @param Val float
---- @return void
+--- @param Val number
+--- @return nil
 function BodyDamage:ReduceGeneralHealth(Val) end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:ReducePanic() end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:RestoreToFullHealth() end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @param Bandaged boolean
---- @param bandageLife float
+--- @param bandageLife number
 --- @param isAlcoholic boolean
---- @param bandageType String
---- @return void
+--- @param bandageType string
+--- @return nil
 function BodyDamage:SetBandaged(BodyPartIndex, Bandaged, bandageLife, isAlcoholic, bandageType) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @param Bitten boolean
---- @return void
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Bitten: boolean): void
---- @overload fun(self: BodyDamage, BodyPartIndex: int, Bitten: boolean, Infected: boolean): void
+--- @return nil
+--- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Bitten: boolean): nil
+--- @overload fun(self: BodyDamage, BodyPartIndex: integer, Bitten: boolean, Infected: boolean): nil
 function BodyDamage:SetBitten(BodyPartIndex, Bitten) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @param Bleeding boolean
---- @return void
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Bleeding: boolean): void
+--- @return nil
+--- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Bleeding: boolean): nil
 function BodyDamage:SetBleeding(BodyPartIndex, Bleeding) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @param BleedingStemmed boolean
---- @return void
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType, BleedingStemmed: boolean): void
+--- @return nil
+--- @overload fun(self: BodyDamage, BodyPart: BodyPartType, BleedingStemmed: boolean): nil
 function BodyDamage:SetBleedingStemmed(BodyPartIndex, BleedingStemmed) end
 
 --- @public
---- @param BodyPartIndex int
---- @param Cortorised boolean
---- @return void
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Cortorised: boolean): void
-function BodyDamage:SetCortorised(BodyPartIndex, Cortorised) end
+--- @param arg0 integer
+--- @param arg1 boolean
+--- @return nil
+--- @overload fun(self: BodyDamage, arg0: BodyPartType, arg1: boolean): nil
+function BodyDamage:SetCauterized(arg0, arg1) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @param Cut boolean
---- @return void
+--- @return nil
 function BodyDamage:SetCut(BodyPartIndex, Cut) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @param Scratched boolean
---- @return void
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Scratched: boolean): void
+--- @return nil
+--- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Scratched: boolean): nil
 function BodyDamage:SetScratched(BodyPartIndex, Scratched) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @param Scratched boolean
---- @return void
+--- @return nil
 function BodyDamage:SetScratchedFromWeapon(BodyPartIndex, Scratched) end
 
 --- @public
---- @param BodyPartIndex int
+--- @param BodyPartIndex integer
 --- @param Wounded boolean
---- @return void
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Wounded: boolean): void
+--- @return nil
+--- @overload fun(self: BodyDamage, BodyPart: BodyPartType, Wounded: boolean): nil
 function BodyDamage:SetWounded(BodyPartIndex, Wounded) end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:ShowDebugInfo() end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:TriggerSneezeCough() end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:Update() end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:UpdateBoredom() end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:UpdateCold() end
 
 --- @public
---- @return void
+--- @return nil
+function BodyDamage:UpdateDiscomfort() end
+
+--- @public
+--- @return nil
+function BodyDamage:UpdateDraggingCorpse() end
+
+--- @public
+--- @return nil
 function BodyDamage:UpdatePanicState() end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:UpdateStrength() end
 
 --- @public
---- @return void
+--- @return nil
 function BodyDamage:UpdateWetness() end
 
 --- @public
@@ -311,6 +341,21 @@ function BodyDamage:UseBandageOnMostNeededPart() end
 function BodyDamage:WasBurntToDeath() end
 
 --- @public
+--- @param arg0 BodyPart
+--- @param arg1 number
+--- @return nil
+--- @overload fun(self: BodyDamage, arg0: BodyPartType, arg1: number): nil
+function BodyDamage:addStiffness(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 integer
+--- @param arg3 number
+--- @return nil
+function BodyDamage:applyDamageFromWeapon(arg0, arg1, arg2, arg3) end
+
+--- @public
 ---
 ---  Returns TRUE if either body part is bleeding. ie. A OR B
 ---
@@ -320,8 +365,8 @@ function BodyDamage:WasBurntToDeath() end
 function BodyDamage:areBodyPartsBleeding(partA, partB) end
 
 --- @public
---- @param amount float
---- @return void
+--- @param amount number
+--- @return nil
 function BodyDamage:decreaseBodyWetness(amount) end
 
 --- @public
@@ -339,7 +384,7 @@ function BodyDamage:doBodyPartsHaveInjuries(partA, partB) end
 function BodyDamage:doesBodyPartHaveInjury(part) end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getApparentInfectionLevel() end
 
 --- @public
@@ -348,15 +393,15 @@ function BodyDamage:getApparentInfectionLevel() end
 function BodyDamage:getBodyPart(type) end
 
 --- @public
---- @param BodyPartIndex int
---- @return float
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType): float
+--- @param BodyPartIndex integer
+--- @return number
+--- @overload fun(self: BodyDamage, BodyPart: BodyPartType): number
 function BodyDamage:getBodyPartHealth(BodyPartIndex) end
 
 --- @public
---- @param BodyPartIndex int
---- @return String
---- @overload fun(self: BodyDamage, BodyPart: BodyPartType): String
+--- @param BodyPartIndex integer
+--- @return string
+--- @overload fun(self: BodyDamage, BodyPart: BodyPartType): string
 function BodyDamage:getBodyPartName(BodyPartIndex) end
 
 --- @public
@@ -369,171 +414,179 @@ function BodyDamage:getBodyParts() end
 function BodyDamage:getBodyPartsLastState(type) end
 
 --- @public
---- @return float the BoredomDecreaseFromReading
+--- @return number the BoredomDecreaseFromReading
 function BodyDamage:getBoredomDecreaseFromReading() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getBoredomLevel() end
 
 --- @public
---- @return float the CatchACold
+--- @return number the CatchACold
 function BodyDamage:getCatchACold() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getColdDamageStage() end
 
 --- @public
---- @return float the ColdProgressionRate
+--- @return number the ColdProgressionRate
 function BodyDamage:getColdProgressionRate() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getColdReduction() end
 
 --- @public
---- @return int the ColdSneezeTimerMax
+--- @return integer the ColdSneezeTimerMax
 function BodyDamage:getColdSneezeTimerMax() end
 
 --- @public
---- @return int the ColdSneezeTimerMin
+--- @return integer the ColdSneezeTimerMin
 function BodyDamage:getColdSneezeTimerMin() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getColdStrength() end
 
 --- @public
---- @return float the ContinualPainIncrease
+--- @return number the ContinualPainIncrease
 function BodyDamage:getContinualPainIncrease() end
 
 --- @public
---- @return int the CurrentNumZombiesVisible
+--- @return integer the CurrentNumZombiesVisible
 function BodyDamage:getCurrentNumZombiesVisible() end
 
 --- @public
---- @return int the DamageModCount
+--- @return integer the DamageModCount
 function BodyDamage:getDamageModCount() end
 
 --- @public
---- @return float the DrunkIncreaseValue
+--- @return number
+function BodyDamage:getDiscomfortLevel() end
+
+--- @public
+--- @return number the DrunkIncreaseValue
 function BodyDamage:getDrunkIncreaseValue() end
 
 --- @public
---- @return float the DrunkReductionValue
+--- @return number the DrunkReductionValue
 function BodyDamage:getDrunkReductionValue() end
 
 --- @public
---- @return float the FakeInfectionLevel
+--- @return number the FakeInfectionLevel
 function BodyDamage:getFakeInfectionLevel() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getFoodSicknessLevel() end
 
 --- @public
---- @return float
+--- @return number
+function BodyDamage:getGeneralWoundInfectionLevel() end
+
+--- @public
+--- @return number
 function BodyDamage:getHealth() end
 
 --- @public
---- @return float the HealthFromFood
+--- @return number the HealthFromFood
 function BodyDamage:getHealthFromFood() end
 
 --- @public
---- @return float the HealthFromFoodTimer
+--- @return number the HealthFromFoodTimer
 function BodyDamage:getHealthFromFoodTimer() end
 
 --- @public
---- @return float the HealthReductionFromSevereBadMoodles
+--- @return number the HealthReductionFromSevereBadMoodles
 function BodyDamage:getHealthReductionFromSevereBadMoodles() end
 
 --- @public
---- @return float the InfectionGrowthRate
+--- @return number the InfectionGrowthRate
 function BodyDamage:getInfectionGrowthRate() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getInfectionLevel() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getInfectionMortalityDuration() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getInfectionTime() end
 
 --- @public
---- @return float the InitialBitePain
+--- @return number the InitialBitePain
 function BodyDamage:getInitialBitePain() end
 
 --- @public
---- @return float the InitialScratchPain
+--- @return number the InitialScratchPain
 function BodyDamage:getInitialScratchPain() end
 
 --- @public
---- @return float the InitialThumpPain
+--- @return number the InitialThumpPain
 function BodyDamage:getInitialThumpPain() end
 
 --- @public
---- @return float the InitialWoundPain
+--- @return number the InitialWoundPain
 function BodyDamage:getInitialWoundPain() end
 
 --- @public
---- @return int the MildColdSneezeTimerMax
+--- @return integer the MildColdSneezeTimerMax
 function BodyDamage:getMildColdSneezeTimerMax() end
 
 --- @public
---- @return int the MildColdSneezeTimerMin
+--- @return integer the MildColdSneezeTimerMin
 function BodyDamage:getMildColdSneezeTimerMin() end
 
 --- @public
---- @return int the NastyColdSneezeTimerMax
+--- @return integer the NastyColdSneezeTimerMax
 function BodyDamage:getNastyColdSneezeTimerMax() end
 
 --- @public
---- @return int the NastyColdSneezeTimerMin
+--- @return integer the NastyColdSneezeTimerMin
 function BodyDamage:getNastyColdSneezeTimerMin() end
 
 --- @public
---- @return int
+--- @return integer
 function BodyDamage:getNumPartsBitten() end
 
 --- @public
---- @return int
+--- @return integer
 function BodyDamage:getNumPartsBleeding() end
 
 --- @public
---- @return int
+--- @return integer
 function BodyDamage:getNumPartsScratched() end
 
 --- @public
---- @return int the OldNumZombiesVisible
+--- @return integer the OldNumZombiesVisible
 function BodyDamage:getOldNumZombiesVisible() end
 
 --- @public
---- @return float the OverallBodyHealth
+--- @return number the OverallBodyHealth
 function BodyDamage:getOverallBodyHealth() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getPainReduction() end
 
 --- @public
---- @return float the PainReductionFromMeds
+--- @return number the PainReductionFromMeds
 function BodyDamage:getPainReductionFromMeds() end
 
 --- @public
---- @return float the PanicIncreaseValue
+--- @return number the PanicIncreaseValue
 function BodyDamage:getPanicIncreaseValue() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getPanicIncreaseValueFrame() end
 
 --- @public
---- @return float the PanicReductionValue
+--- @return number the PanicReductionValue
 function BodyDamage:getPanicReductionValue() end
 
 --- @public
@@ -541,55 +594,63 @@ function BodyDamage:getPanicReductionValue() end
 function BodyDamage:getParentChar() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getPoisonLevel() end
 
 --- @public
---- @return float the ReducedHealthAddition
+--- @return number the ReducedHealthAddition
 function BodyDamage:getReducedHealthAddition() end
 
 --- @public
---- @return int
+--- @return integer
 function BodyDamage:getRemotePainLevel() end
 
 --- @public
---- @return float the SeverlyReducedHealthAddition
+--- @return number the SeverlyReducedHealthAddition
 function BodyDamage:getSeverlyReducedHealthAddition() end
 
 --- @public
---- @return float the SleepingHealthAddition
+--- @return number the SleepingHealthAddition
 function BodyDamage:getSleepingHealthAddition() end
 
 --- @public
---- @return int the SneezeCoughActive
+--- @return integer
+function BodyDamage:getSmokerSneezeTimerMax() end
+
+--- @public
+--- @return integer
+function BodyDamage:getSmokerSneezeTimerMin() end
+
+--- @public
+--- @return integer the SneezeCoughActive
 function BodyDamage:getSneezeCoughActive() end
 
 --- @public
---- @return int the SneezeCoughDelay
+--- @return integer the SneezeCoughDelay
 function BodyDamage:getSneezeCoughDelay() end
 
 --- @public
---- @return int the SneezeCoughTime
+--- @return integer the SneezeCoughTime
 function BodyDamage:getSneezeCoughTime() end
 
 --- @public
---- @return float the StandardHealthAddition
+--- @return number the StandardHealthAddition
 function BodyDamage:getStandardHealthAddition() end
 
 --- @public
---- @return int the StandardHealthFromFoodTime
+--- @return integer the StandardHealthFromFoodTime
 function BodyDamage:getStandardHealthFromFoodTime() end
 
 --- @public
---- @return float the StandardPainReductionWhenWell
+--- @return number the StandardPainReductionWhenWell
 function BodyDamage:getStandardPainReductionWhenWell() end
 
 --- @public
---- @return float the body temperature (updated by lua)
+--- @return number the body temperature (updated by lua)
 function BodyDamage:getTemperature() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getTemperatureChangeTick() end
 
 --- @public
@@ -597,20 +658,24 @@ function BodyDamage:getTemperatureChangeTick() end
 function BodyDamage:getThermoregulator() end
 
 --- @public
---- @return int the TimeToSneezeOrCough
+--- @return integer the TimeToSneezeOrCough
 function BodyDamage:getTimeToSneezeOrCough() end
 
 --- @public
---- @return float
+--- @return number
 function BodyDamage:getUnhappynessLevel() end
 
 --- @public
---- @return float
+--- @return boolean
+function BodyDamage:getWasDraggingCorpse() end
+
+--- @public
+--- @return number
 function BodyDamage:getWetness() end
 
 --- @public
---- @param amount float
---- @return void
+--- @param amount number
+--- @return nil
 function BodyDamage:increaseBodyWetness(amount) end
 
 --- @public
@@ -651,261 +716,277 @@ function BodyDamage:isReduceFakeInfection() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function BodyDamage:load(input, WorldVersion) end
 
 --- @public
---- @return float
+--- @param arg0 ByteBuffer
+--- @param arg1 integer
+--- @return nil
+function BodyDamage:loadMainFields(arg0, arg1) end
+
+--- @public
+--- @return number
 function BodyDamage:pickMortalityDuration() end
 
 --- @public
 --- @param output ByteBuffer
---- @return void
+--- @return nil
 function BodyDamage:save(output) end
 
 --- @public
---- @return void
+--- @param arg0 ByteBuffer
+--- @return nil
+function BodyDamage:saveMainFields(arg0) end
+
+--- @public
+--- @return nil
 function BodyDamage:setBodyPartsLastState() end
 
 --- @public
---- @param BoredomDecreaseFromReading float the BoredomDecreaseFromReading to set
---- @return void
+--- @param BoredomDecreaseFromReading number the BoredomDecreaseFromReading to set
+--- @return nil
 function BodyDamage:setBoredomDecreaseFromReading(BoredomDecreaseFromReading) end
 
 --- @public
---- @param BoredomLevel float the BoredomLevel to set
---- @return void
+--- @param BoredomLevel number the BoredomLevel to set
+--- @return nil
 function BodyDamage:setBoredomLevel(BoredomLevel) end
 
 --- @public
 --- @param BurntToDeath boolean the BurntToDeath to set
---- @return void
+--- @return nil
 function BodyDamage:setBurntToDeath(BurntToDeath) end
 
 --- @public
---- @param CatchACold float the CatchACold to set
---- @return void
+--- @param CatchACold number the CatchACold to set
+--- @return nil
 function BodyDamage:setCatchACold(CatchACold) end
 
 --- @public
---- @param coldDamageStage float
---- @return void
+--- @param coldDamageStage number
+--- @return nil
 function BodyDamage:setColdDamageStage(coldDamageStage) end
 
 --- @public
---- @param ColdProgressionRate float the ColdProgressionRate to set
---- @return void
+--- @param ColdProgressionRate number the ColdProgressionRate to set
+--- @return nil
 function BodyDamage:setColdProgressionRate(ColdProgressionRate) end
 
 --- @public
---- @param coldReduction float
---- @return void
+--- @param coldReduction number
+--- @return nil
 function BodyDamage:setColdReduction(coldReduction) end
 
 --- @public
---- @param ColdSneezeTimerMax int the ColdSneezeTimerMax to set
---- @return void
+--- @param ColdSneezeTimerMax integer the ColdSneezeTimerMax to set
+--- @return nil
 function BodyDamage:setColdSneezeTimerMax(ColdSneezeTimerMax) end
 
 --- @public
---- @param ColdSneezeTimerMin int the ColdSneezeTimerMin to set
---- @return void
+--- @param ColdSneezeTimerMin integer the ColdSneezeTimerMin to set
+--- @return nil
 function BodyDamage:setColdSneezeTimerMin(ColdSneezeTimerMin) end
 
 --- @public
---- @param ColdStrength float the ColdStrength to set
---- @return void
+--- @param ColdStrength number the ColdStrength to set
+--- @return nil
 function BodyDamage:setColdStrength(ColdStrength) end
 
 --- @public
---- @param ContinualPainIncrease float the ContinualPainIncrease to set
---- @return void
+--- @param ContinualPainIncrease number the ContinualPainIncrease to set
+--- @return nil
 function BodyDamage:setContinualPainIncrease(ContinualPainIncrease) end
 
 --- @public
---- @param CurrentNumZombiesVisible int the CurrentNumZombiesVisible to set
---- @return void
+--- @param CurrentNumZombiesVisible integer the CurrentNumZombiesVisible to set
+--- @return nil
 function BodyDamage:setCurrentNumZombiesVisible(CurrentNumZombiesVisible) end
 
 --- @public
---- @param DamageModCount int the DamageModCount to set
---- @return void
+--- @param DamageModCount integer the DamageModCount to set
+--- @return nil
 function BodyDamage:setDamageModCount(DamageModCount) end
 
 --- @public
---- @param DrunkIncreaseValue float the DrunkIncreaseValue to set
---- @return void
+--- @param arg0 number
+--- @return nil
+function BodyDamage:setDiscomfortLevel(arg0) end
+
+--- @public
+--- @param DrunkIncreaseValue number the DrunkIncreaseValue to set
+--- @return nil
 function BodyDamage:setDrunkIncreaseValue(DrunkIncreaseValue) end
 
 --- @public
---- @param DrunkReductionValue float the DrunkReductionValue to set
---- @return void
+--- @param DrunkReductionValue number the DrunkReductionValue to set
+--- @return nil
 function BodyDamage:setDrunkReductionValue(DrunkReductionValue) end
 
 --- @public
---- @param FakeInfectionLevel float the FakeInfectionLevel to set
---- @return void
+--- @param FakeInfectionLevel number the FakeInfectionLevel to set
+--- @return nil
 function BodyDamage:setFakeInfectionLevel(FakeInfectionLevel) end
 
 --- @public
---- @param foodSicknessLevel float
---- @return void
+--- @param foodSicknessLevel number
+--- @return nil
 function BodyDamage:setFoodSicknessLevel(foodSicknessLevel) end
 
 --- @public
 --- @param HasACold boolean the HasACold to set
---- @return void
+--- @return nil
 function BodyDamage:setHasACold(HasACold) end
 
 --- @public
---- @param HealthFromFood float the HealthFromFood to set
---- @return void
+--- @param HealthFromFood number the HealthFromFood to set
+--- @return nil
 function BodyDamage:setHealthFromFood(HealthFromFood) end
 
 --- @public
---- @param HealthFromFoodTimer float the HealthFromFoodTimer to set
---- @return void
+--- @param HealthFromFoodTimer number the HealthFromFoodTimer to set
+--- @return nil
 function BodyDamage:setHealthFromFoodTimer(HealthFromFoodTimer) end
 
 --- @public
---- @param HealthReductionFromSevereBadMoodles float the HealthReductionFromSevereBadMoodles to set
---- @return void
+--- @param HealthReductionFromSevereBadMoodles number the HealthReductionFromSevereBadMoodles to set
+--- @return nil
 function BodyDamage:setHealthReductionFromSevereBadMoodles(HealthReductionFromSevereBadMoodles) end
 
 --- @public
 --- @param inf boolean the inf to set
---- @return void
+--- @return nil
 function BodyDamage:setInf(inf) end
 
 --- @public
 --- @param infected boolean
---- @return void
+--- @return nil
 function BodyDamage:setInfected(infected) end
 
 --- @public
---- @param InfectionGrowthRate float the InfectionGrowthRate to set
---- @return void
+--- @param InfectionGrowthRate number the InfectionGrowthRate to set
+--- @return nil
 function BodyDamage:setInfectionGrowthRate(InfectionGrowthRate) end
 
 --- @public
---- @param InfectionLevel float the InfectionLevel to set
---- @return void
+--- @param InfectionLevel number the InfectionLevel to set
+--- @return nil
 function BodyDamage:setInfectionLevel(InfectionLevel) end
 
 --- @public
---- @param worldHours float
---- @return void
+--- @param worldHours number
+--- @return nil
 function BodyDamage:setInfectionMortalityDuration(worldHours) end
 
 --- @public
---- @param worldHours float
---- @return void
+--- @param worldHours number
+--- @return nil
 function BodyDamage:setInfectionTime(worldHours) end
 
 --- @public
---- @param InitialBitePain float the InitialBitePain to set
---- @return void
+--- @param InitialBitePain number the InitialBitePain to set
+--- @return nil
 function BodyDamage:setInitialBitePain(InitialBitePain) end
 
 --- @public
---- @param InitialScratchPain float the InitialScratchPain to set
---- @return void
+--- @param InitialScratchPain number the InitialScratchPain to set
+--- @return nil
 function BodyDamage:setInitialScratchPain(InitialScratchPain) end
 
 --- @public
---- @param InitialThumpPain float the InitialThumpPain to set
---- @return void
+--- @param InitialThumpPain number the InitialThumpPain to set
+--- @return nil
 function BodyDamage:setInitialThumpPain(InitialThumpPain) end
 
 --- @public
---- @param InitialWoundPain float the InitialWoundPain to set
---- @return void
+--- @param InitialWoundPain number the InitialWoundPain to set
+--- @return nil
 function BodyDamage:setInitialWoundPain(InitialWoundPain) end
 
 --- @public
 --- @param IsFakeInfected boolean the IsFakeInfected to set
---- @return void
+--- @return nil
 function BodyDamage:setIsFakeInfected(IsFakeInfected) end
 
 --- @public
 --- @param IsOnFire boolean the IsOnFire to set
---- @return void
+--- @return nil
 function BodyDamage:setIsOnFire(IsOnFire) end
 
 --- @public
---- @param MildColdSneezeTimerMax int the MildColdSneezeTimerMax to set
---- @return void
+--- @param MildColdSneezeTimerMax integer the MildColdSneezeTimerMax to set
+--- @return nil
 function BodyDamage:setMildColdSneezeTimerMax(MildColdSneezeTimerMax) end
 
 --- @public
---- @param MildColdSneezeTimerMin int the MildColdSneezeTimerMin to set
---- @return void
+--- @param MildColdSneezeTimerMin integer the MildColdSneezeTimerMin to set
+--- @return nil
 function BodyDamage:setMildColdSneezeTimerMin(MildColdSneezeTimerMin) end
 
 --- @public
---- @param NastyColdSneezeTimerMax int the NastyColdSneezeTimerMax to set
---- @return void
+--- @param NastyColdSneezeTimerMax integer the NastyColdSneezeTimerMax to set
+--- @return nil
 function BodyDamage:setNastyColdSneezeTimerMax(NastyColdSneezeTimerMax) end
 
 --- @public
---- @param NastyColdSneezeTimerMin int the NastyColdSneezeTimerMin to set
---- @return void
+--- @param NastyColdSneezeTimerMin integer the NastyColdSneezeTimerMin to set
+--- @return nil
 function BodyDamage:setNastyColdSneezeTimerMin(NastyColdSneezeTimerMin) end
 
 --- @public
---- @param OldNumZombiesVisible int the OldNumZombiesVisible to set
---- @return void
+--- @param OldNumZombiesVisible integer the OldNumZombiesVisible to set
+--- @return nil
 function BodyDamage:setOldNumZombiesVisible(OldNumZombiesVisible) end
 
 --- @public
---- @param OverallBodyHealth float the OverallBodyHealth to set
---- @return void
+--- @param OverallBodyHealth number the OverallBodyHealth to set
+--- @return nil
 function BodyDamage:setOverallBodyHealth(OverallBodyHealth) end
 
 --- @public
---- @param painReduction float
---- @return void
+--- @param painReduction number
+--- @return nil
 function BodyDamage:setPainReduction(painReduction) end
 
 --- @public
---- @param PainReductionFromMeds float the PainReductionFromMeds to set
---- @return void
+--- @param PainReductionFromMeds number the PainReductionFromMeds to set
+--- @return nil
 function BodyDamage:setPainReductionFromMeds(PainReductionFromMeds) end
 
 --- @public
---- @param PanicIncreaseValue float the PanicIncreaseValue to set
---- @return void
+--- @param PanicIncreaseValue number the PanicIncreaseValue to set
+--- @return nil
 function BodyDamage:setPanicIncreaseValue(PanicIncreaseValue) end
 
 --- @public
---- @param PanicReductionValue float the PanicReductionValue to set
---- @return void
+--- @param PanicReductionValue number the PanicReductionValue to set
+--- @return nil
 function BodyDamage:setPanicReductionValue(PanicReductionValue) end
 
 --- @public
 --- @param ParentChar IsoGameCharacter the ParentChar to set
---- @return void
+--- @return nil
 function BodyDamage:setParentChar(ParentChar) end
 
 --- @public
---- @param poisonLevel float
---- @return void
+--- @param poisonLevel number
+--- @return nil
 function BodyDamage:setPoisonLevel(poisonLevel) end
 
 --- @public
 --- @param reduceFakeInfection boolean
---- @return void
+--- @return nil
 function BodyDamage:setReduceFakeInfection(reduceFakeInfection) end
 
 --- @public
---- @param ReducedHealthAddition float the ReducedHealthAddition to set
---- @return void
+--- @param ReducedHealthAddition number the ReducedHealthAddition to set
+--- @return nil
 function BodyDamage:setReducedHealthAddition(ReducedHealthAddition) end
 
 --- @public
---- @param painLevel int
---- @return void
+--- @param painLevel integer
+--- @return nil
 function BodyDamage:setRemotePainLevel(painLevel) end
 
 --- @public
@@ -913,67 +994,76 @@ function BodyDamage:setRemotePainLevel(painLevel) end
 function BodyDamage:setScratchedWindow() end
 
 --- @public
---- @param SeverlyReducedHealthAddition float the SeverlyReducedHealthAddition to set
---- @return void
+--- @param SeverlyReducedHealthAddition number the SeverlyReducedHealthAddition to set
+--- @return nil
 function BodyDamage:setSeverlyReducedHealthAddition(SeverlyReducedHealthAddition) end
 
 --- @public
---- @param SleepingHealthAddition float the SleepingHealthAddition to set
---- @return void
+--- @param SleepingHealthAddition number the SleepingHealthAddition to set
+--- @return nil
 function BodyDamage:setSleepingHealthAddition(SleepingHealthAddition) end
 
 --- @public
---- @param SneezeCoughActive int the SneezeCoughActive to set
---- @return void
+--- @param SneezeCoughActive integer the SneezeCoughActive to set
+--- @return nil
 function BodyDamage:setSneezeCoughActive(SneezeCoughActive) end
 
 --- @public
---- @param SneezeCoughDelay int the SneezeCoughDelay to set
---- @return void
+--- @param SneezeCoughDelay integer the SneezeCoughDelay to set
+--- @return nil
 function BodyDamage:setSneezeCoughDelay(SneezeCoughDelay) end
 
 --- @public
---- @param SneezeCoughTime int the SneezeCoughTime to set
---- @return void
+--- @param SneezeCoughTime integer the SneezeCoughTime to set
+--- @return nil
 function BodyDamage:setSneezeCoughTime(SneezeCoughTime) end
 
 --- @public
---- @param StandardHealthAddition float the StandardHealthAddition to set
---- @return void
+--- @param StandardHealthAddition number the StandardHealthAddition to set
+--- @return nil
 function BodyDamage:setStandardHealthAddition(StandardHealthAddition) end
 
 --- @public
---- @param StandardHealthFromFoodTime int the StandardHealthFromFoodTime to set
---- @return void
+--- @param StandardHealthFromFoodTime integer the StandardHealthFromFoodTime to set
+--- @return nil
 function BodyDamage:setStandardHealthFromFoodTime(StandardHealthFromFoodTime) end
 
 --- @public
---- @param StandardPainReductionWhenWell float the StandardPainReductionWhenWell to set
---- @return void
+--- @param StandardPainReductionWhenWell number the StandardPainReductionWhenWell to set
+--- @return nil
 function BodyDamage:setStandardPainReductionWhenWell(StandardPainReductionWhenWell) end
 
 --- @public
---- @param t float
---- @return void
+--- @param t number
+--- @return nil
 function BodyDamage:setTemperature(t) end
 
 --- @public
---- @param TimeToSneezeOrCough int the TimeToSneezeOrCough to set
---- @return void
+--- @param TimeToSneezeOrCough integer the TimeToSneezeOrCough to set
+--- @return nil
 function BodyDamage:setTimeToSneezeOrCough(TimeToSneezeOrCough) end
 
 --- @public
---- @param UnhappynessLevel float the UnhappynessLevel to set
---- @return void
+--- @param UnhappynessLevel number the UnhappynessLevel to set
+--- @return nil
 function BodyDamage:setUnhappynessLevel(UnhappynessLevel) end
 
 --- @public
---- @param Wetness float the Wetness to set
---- @return void
+--- @param arg0 boolean
+--- @return nil
+function BodyDamage:setWasDraggingCorpse(arg0) end
+
+--- @public
+--- @param Wetness number the Wetness to set
+--- @return nil
 function BodyDamage:setWetness(Wetness) end
 
 --- @public
---- @return void
+--- @return nil
+function BodyDamage:splatBloodFloor() end
+
+--- @public
+--- @return nil
 function BodyDamage:splatBloodFloorBig() end
 
 

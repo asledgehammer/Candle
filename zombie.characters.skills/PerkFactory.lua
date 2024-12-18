@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PerkFactory
 --- @field public class any
@@ -12,26 +12,26 @@ PerkFactory = {};
 --- @public
 --- @static
 --- @param perk Perk
---- @param translation String
---- @param xp1 int
---- @param xp2 int
---- @param xp3 int
---- @param xp4 int
---- @param xp5 int
---- @param xp6 int
---- @param xp7 int
---- @param xp8 int
---- @param xp9 int
---- @param xp10 int
+--- @param translation string
+--- @param xp1 integer
+--- @param xp2 integer
+--- @param xp3 integer
+--- @param xp4 integer
+--- @param xp5 integer
+--- @param xp6 integer
+--- @param xp7 integer
+--- @param xp8 integer
+--- @param xp9 integer
+--- @param xp10 integer
 --- @return Perk
---- @overload fun(perk: Perk, translation: String, xp1: int, xp2: int, xp3: int, xp4: int, xp5: int, xp6: int, xp7: int, xp8: int, xp9: int, xp10: int, passiv: boolean): Perk
---- @overload fun(perk: Perk, translation: String, parent: Perk, xp1: int, xp2: int, xp3: int, xp4: int, xp5: int, xp6: int, xp7: int, xp8: int, xp9: int, xp10: int): Perk
---- @overload fun(perk: Perk, translation: String, parent: Perk, xp1: int, xp2: int, xp3: int, xp4: int, xp5: int, xp6: int, xp7: int, xp8: int, xp9: int, xp10: int, passiv: boolean): Perk
+--- @overload fun(perk: Perk, translation: string, xp1: integer, xp2: integer, xp3: integer, xp4: integer, xp5: integer, xp6: integer, xp7: integer, xp8: integer, xp9: integer, xp10: integer, passiv: boolean): Perk
+--- @overload fun(perk: Perk, translation: string, parent: Perk, xp1: integer, xp2: integer, xp3: integer, xp4: integer, xp5: integer, xp6: integer, xp7: integer, xp8: integer, xp9: integer, xp10: integer): Perk
+--- @overload fun(perk: Perk, translation: string, parent: Perk, xp1: integer, xp2: integer, xp3: integer, xp4: integer, xp5: integer, xp6: integer, xp7: integer, xp8: integer, xp9: integer, xp10: integer, passiv: boolean): Perk
 function PerkFactory.AddPerk(perk, translation, xp1, xp2, xp3, xp4, xp5, xp6, xp7, xp8, xp9, xp10) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function PerkFactory.Reset() end
 
 --- @public
@@ -42,24 +42,24 @@ function PerkFactory.getPerk(perk) end
 
 --- @public
 --- @static
---- @param name String
+--- @param name string
 --- @return Perk
 function PerkFactory.getPerkFromName(name) end
 
 --- @public
 --- @static
 --- @param type Perk
---- @return String
+--- @return string
 function PerkFactory.getPerkName(type) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function PerkFactory.init() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function PerkFactory.initTranslations() end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PathFindState: State
 --- @field public class any

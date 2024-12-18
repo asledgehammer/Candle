@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RadioBroadCast Turbo
 --- @field public class any
@@ -10,11 +10,11 @@ RadioBroadCast = {};
 
 --- @public
 --- @param radioLine RadioLine
---- @return void
+--- @return nil
 function RadioBroadCast:AddRadioLine(radioLine) end
 
 --- @public
---- @return String
+--- @return string
 function RadioBroadCast:PeekNextLineText() end
 
 --- @public
@@ -22,15 +22,15 @@ function RadioBroadCast:PeekNextLineText() end
 function RadioBroadCast:getCurrentLine() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioBroadCast:getCurrentLineNumber() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioBroadCast:getEndStamp() end
 
 --- @public
---- @return String
+--- @return string
 function RadioBroadCast:getID() end
 
 --- @public
@@ -43,27 +43,27 @@ function RadioBroadCast:getLines() end
 function RadioBroadCast:getNextLine() end
 
 --- @public
---- @return int
+--- @return integer
 function RadioBroadCast:getStartStamp() end
 
 --- @public
---- @return void
---- @overload fun(self: RadioBroadCast, doChildren: boolean): void
+--- @return nil
+--- @overload fun(self: RadioBroadCast, doChildren: boolean): nil
 function RadioBroadCast:resetLineCounter() end
 
 --- @public
---- @param n int
---- @return void
+--- @param n integer
+--- @return nil
 function RadioBroadCast:setCurrentLineNumber(n) end
 
 --- @public
 --- @param broadCast RadioBroadCast
---- @return void
+--- @return nil
 function RadioBroadCast:setPostSegment(broadCast) end
 
 --- @public
 --- @param broadCast RadioBroadCast
---- @return void
+--- @return nil
 function RadioBroadCast:setPreSegment(broadCast) end
 
 
@@ -72,8 +72,8 @@ function RadioBroadCast:setPreSegment(broadCast) end
 ------------------------------------
 
 --- @public
---- @param id String
---- @param startstamp int
---- @param endstamp int
+--- @param id string
+--- @param startstamp integer
+--- @param endstamp integer
 --- @return RadioBroadCast
 function RadioBroadCast.new(id, startstamp, endstamp) end

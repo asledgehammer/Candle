@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PropertyContainer
 --- @field public class any
@@ -12,41 +12,41 @@ PropertyContainer = {};
 
 --- @public
 --- @param other PropertyContainer
---- @return void
+--- @return nil
 function PropertyContainer:AddProperties(other) end
 
 --- @public
---- @return void
+--- @return nil
 function PropertyContainer:Clear() end
 
 --- @public
---- @return void
+--- @return nil
 function PropertyContainer:CreateKeySet() end
 
 --- @public
---- @param flag Double
+--- @param flag number
 --- @return boolean
---- @overload fun(self: PropertyContainer, isoPropertyType: String): boolean
+--- @overload fun(self: PropertyContainer, isoPropertyType: string): boolean
 --- @overload fun(self: PropertyContainer, flag: IsoFlagType): boolean
 function PropertyContainer:Is(flag) end
 
 --- @public
 --- @param flag IsoFlagType
---- @return void
---- @overload fun(self: PropertyContainer, propName: String, propName2: String): void
---- @overload fun(self: PropertyContainer, flag: IsoFlagType, ignored: String): void
---- @overload fun(self: PropertyContainer, propName: String, propName2: String, checkIsoFlagType: boolean): void
+--- @return nil
+--- @overload fun(self: PropertyContainer, propName: string, propName2: string): nil
+--- @overload fun(self: PropertyContainer, flag: IsoFlagType, ignored: string): nil
+--- @overload fun(self: PropertyContainer, propName: string, propName2: string, checkIsoFlagType: boolean): nil
 function PropertyContainer:Set(flag) end
 
 --- @public
---- @param propName String
---- @return void
---- @overload fun(self: PropertyContainer, flag: IsoFlagType): void
+--- @param propName string
+--- @return nil
+--- @overload fun(self: PropertyContainer, flag: IsoFlagType): nil
 function PropertyContainer:UnSet(propName) end
 
 --- @public
---- @param property String
---- @return String
+--- @param property string
+--- @return string
 function PropertyContainer:Val(property) end
 
 --- @public
@@ -54,7 +54,7 @@ function PropertyContainer:Val(property) end
 function PropertyContainer:getFlagsList() end
 
 --- @public
---- @return int
+--- @return integer
 function PropertyContainer:getItemHeight() end
 
 --- @public
@@ -62,11 +62,23 @@ function PropertyContainer:getItemHeight() end
 function PropertyContainer:getPropertyNames() end
 
 --- @public
---- @return int
+--- @return IsoDirections
+function PropertyContainer:getSlopedSurfaceDirection() end
+
+--- @public
+--- @return integer
+function PropertyContainer:getSlopedSurfaceHeightMax() end
+
+--- @public
+--- @return integer
+function PropertyContainer:getSlopedSurfaceHeightMin() end
+
+--- @public
+--- @return integer
 function PropertyContainer:getStackReplaceTileOffset() end
 
 --- @public
---- @return int
+--- @return integer
 function PropertyContainer:getSurface() end
 
 --- @public
@@ -80,6 +92,18 @@ function PropertyContainer:isTable() end
 --- @public
 --- @return boolean
 function PropertyContainer:isTableTop() end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @return boolean
+function PropertyContainer:valueEquals(arg0, arg1) end
+
+--- @public
+--- @param arg0 string
+--- @param arg1 string
+--- @return boolean
+function PropertyContainer:valueEqualsIgnoreCase(arg0, arg1) end
 
 
 ------------------------------------

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class WalkTowardState: State
 --- @field public class any
@@ -21,7 +21,7 @@ function WalkTowardState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function WalkTowardState:animEvent(owner, event) end
 
 --- @public
@@ -32,17 +32,17 @@ function WalkTowardState:calculateTargetLocation(zomb, location) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function WalkTowardState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function WalkTowardState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function WalkTowardState:exit(owner) end
 
 --- @public

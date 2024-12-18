@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class GameKeyboard
 --- @field public class any
@@ -12,8 +12,8 @@ GameKeyboard = {};
 
 --- @public
 --- @static
---- @param key int
---- @return void
+--- @param key integer
+--- @return nil
 function GameKeyboard.eatKeyPress(key) end
 
 --- @public
@@ -31,8 +31,9 @@ function GameKeyboard.getEventQueuePolling() end
 ---
 ---  Is the key down. Continuous.
 ---
---- @param key int
+--- @param key integer
 --- @return boolean
+--- @overload fun(arg0: string): boolean
 function GameKeyboard.isKeyDown(key) end
 
 --- @public
@@ -41,24 +42,25 @@ function GameKeyboard.isKeyDown(key) end
 ---  Has the key been pressed. Not continuous. That is, is the key down now, but was
 ---  down before.
 ---
---- @param key int
+--- @param key integer
 --- @return boolean
+--- @overload fun(arg0: string): boolean
 function GameKeyboard.isKeyPressed(key) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function GameKeyboard.poll() end
 
 --- @public
 --- @static
 --- @param doIt boolean
---- @return void
+--- @return nil
 function GameKeyboard.setDoLuaKeyPressed(doIt) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function GameKeyboard.update() end
 
 --- @public
@@ -66,9 +68,28 @@ function GameKeyboard.update() end
 ---
 ---  Was they key down last frame. Continuous.
 ---
---- @param key int
+--- @param key integer
 --- @return boolean
+--- @overload fun(arg0: string): boolean
 function GameKeyboard.wasKeyDown(key) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return integer
+function GameKeyboard.whichKeyDown(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return integer
+function GameKeyboard.whichKeyPressed(arg0) end
+
+--- @public
+--- @static
+--- @param arg0 string
+--- @return integer
+function GameKeyboard.whichKeyWasDown(arg0) end
 
 
 ------------------------------------

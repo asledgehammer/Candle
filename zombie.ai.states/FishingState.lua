@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class FishingState: State TurboTuTone.
 --- @field public class any
@@ -20,23 +20,17 @@ function FishingState.instance() end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @param event AnimEvent
---- @return void
-function FishingState:animEvent(owner, event) end
-
---- @public
---- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function FishingState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function FishingState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function FishingState:exit(owner) end
 
 

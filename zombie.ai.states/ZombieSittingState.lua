@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ZombieSittingState: State
 --- @field public class any
@@ -20,17 +20,17 @@ function ZombieSittingState.instance() end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieSittingState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieSittingState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieSittingState:exit(owner) end
 
 

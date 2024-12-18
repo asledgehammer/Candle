@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class NewHealthPanel: NewWindow
 --- @field public class any
@@ -11,19 +11,19 @@ NewHealthPanel = {};
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
+--- @return nil
 function NewHealthPanel:SetCharacter(chr) end
 
 --- @public
---- @return String
+--- @return string
 function NewHealthPanel:getDamageStatusString() end
 
 --- @public
---- @return void
+--- @return nil
 function NewHealthPanel:render() end
 
 --- @public
---- @return void
+--- @return nil
 function NewHealthPanel:update() end
 
 
@@ -32,8 +32,8 @@ function NewHealthPanel:update() end
 ------------------------------------
 
 --- @public
---- @param x int
---- @param y int
+--- @param x integer
+--- @param y integer
 --- @param ParentCharacter IsoGameCharacter
 --- @return NewHealthPanel
 function NewHealthPanel.new(x, y, ParentCharacter) end

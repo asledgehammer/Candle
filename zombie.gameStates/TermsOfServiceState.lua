@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class TermsOfServiceState: GameState
 --- @field public class any
@@ -9,20 +9,20 @@ TermsOfServiceState = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function TermsOfServiceState:enter() end
 
 --- @public
---- @return void
+--- @return nil
 function TermsOfServiceState:exit() end
 
 --- @public
---- @param arg0 String
---- @return Object
+--- @param arg0 string
+--- @return any
 function TermsOfServiceState:fromLua0(arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function TermsOfServiceState:render() end
 
 --- @public

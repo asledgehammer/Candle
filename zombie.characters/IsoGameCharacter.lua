@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoGameCharacter: IsoMovingObject
 --- @field public class any
@@ -9,17 +9,28 @@
 --- @implement IClothingItemListener
 --- @implement IActionStateChanged
 --- @implement IAnimEventCallback
+--- @implement IAnimEventWrappedBroadcaster
 --- @implement IFMODParameterUpdater
+--- @implement IGrappleableWrapper
 --- @implement ILuaVariableSource
 --- @implement ILuaGameCharacter
---- @field public RENDER_OFFSET_X int
---- @field public RENDER_OFFSET_Y int
---- @field public s_maxPossibleTwist float
+--- @field public RENDER_OFFSET_X integer
+--- @field public RENDER_OFFSET_Y integer
+--- @field public s_maxPossibleTwist number
 IsoGameCharacter = {};
 
 ------------------------------------
 ---------- STATIC METHODS ----------
 ------------------------------------
+
+--- @public
+--- @static
+--- @param arg0 AnimationPlayer
+--- @param arg1 number
+--- @param arg2 boolean
+--- @param arg3 ShadowParams
+--- @return ShadowParams
+function IsoGameCharacter.calculateShadowParams(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @static
@@ -41,39 +52,50 @@ function IsoGameCharacter.getSurvivorMap() end
 --- @return Vector2 the tempo
 function IsoGameCharacter.getTempo() end
 
+--- @public
+--- @static
+--- @return Vector2
+function IsoGameCharacter.getTempo2() end
+
 
 ------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @param amount int
---- @return void
+--- @param arg0 IGrappleable
+--- @param arg1 string
+--- @return nil
+function IsoGameCharacter:AcceptGrapple(arg0, arg1) end
+
+--- @public
+--- @param amount integer
+--- @return nil
 function IsoGameCharacter:Anger(amount) end
 
 --- @public
 --- @param apply boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:ApplyInBedOffset(apply) end
 
 --- @public
---- @param delta float
---- @return void
+--- @param delta number
+--- @return nil
 function IsoGameCharacter:BetaAntiDepress(delta) end
 
 --- @public
---- @param delta float
---- @return void
+--- @param delta number
+--- @return nil
 function IsoGameCharacter:BetaBlockers(delta) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:CacheEquipped() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
---- @overload fun(self: IsoGameCharacter, doAnim: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
+--- @overload fun(self: IsoGameCharacter, doAnim: boolean): nil
 function IsoGameCharacter:Callout() end
 
 --- @public
@@ -87,75 +109,89 @@ function IsoGameCharacter:CanAttack() end
 function IsoGameCharacter:CanSee(obj) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:ClearEquippedCache() end
 
 --- @public
---- @param key String
---- @return void
---- @overload fun(self: IsoGameCharacter, key: String): void
+--- @param key string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, key: string): nil
 function IsoGameCharacter:ClearVariable(key) end
 
 --- @public
 --- @param vecA Vector2
---- @return void
+--- @return nil
 function IsoGameCharacter:DirectionFromVector(vecA) end
 
 --- @public
 --- @param weapon HandWeapon
 --- @param wielder IsoGameCharacter
---- @return void
---- @overload fun(self: IsoGameCharacter, weapon: HandWeapon, wielder: IsoGameCharacter, bGory: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, weapon: HandWeapon, wielder: IsoGameCharacter, bGory: boolean): nil
 function IsoGameCharacter:DoDeath(weapon, wielder) end
 
 --- @public
 --- @param sq IsoGridSquare
---- @param id String
+--- @param id string
 --- @param bFlip boolean
---- @param offZ float
---- @param alpha float
---- @return void
+--- @param offZ number
+--- @param alpha number
+--- @return nil
 function IsoGameCharacter:DoFloorSplat(sq, id, bFlip, offZ, alpha) end
 
 --- @public
---- @param volume float
---- @return void
---- @overload fun(self: IsoGameCharacter, type: String): void
+--- @param volume number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, type: string): nil
 function IsoGameCharacter:DoFootstepSound(volume) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:DoSneezeText() end
 
 --- @public
 --- @param zombie IsoGameCharacter
---- @param bone int
---- @param tempoLengthTest float
+--- @param bone integer
+--- @param tempoLengthTest number
 --- @return boolean
 function IsoGameCharacter:DoSwingCollisionBoneCheck(zombie, bone, tempoLengthTest) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:DrawSneezeText() end
 
 --- @public
 --- @param desc SurvivorDesc
---- @return void
+--- @return nil
 function IsoGameCharacter:Dressup(desc) end
+
+--- @public
+--- @param arg0 InventoryItem
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter, arg0: InventoryItem, arg1: number): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: InventoryItem, arg1: number, arg2: boolean): boolean
+function IsoGameCharacter:DrinkFluid(arg0) end
 
 --- @public
 --- @param info InventoryItem
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, info: InventoryItem, percentage: float): boolean
+--- @overload fun(self: IsoGameCharacter, info: InventoryItem, percentage: number): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: InventoryItem, arg1: number, arg2: boolean): boolean
 function IsoGameCharacter:Eat(info) end
 
 --- @public
---- @return void
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @return boolean
+function IsoGameCharacter:EatOnClient(arg0, arg1) end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:FireCheck() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoGameCharacter): String
+--- @return string
+--- @overload fun(self: IsoGameCharacter): string
 function IsoGameCharacter:GetAnimSetName() end
 
 --- @public
@@ -167,42 +203,60 @@ function IsoGameCharacter:GetPrimaryEquippedCache() end
 function IsoGameCharacter:GetSecondaryEquippedCache() end
 
 --- @public
---- @param key String
---- @return String
---- @overload fun(self: IsoGameCharacter, key: String): String
+--- @param key string
+--- @return string
+--- @overload fun(self: IsoGameCharacter, key: string): string
 function IsoGameCharacter:GetVariable(key) end
 
 --- @public
---- @param string String
+--- @param arg0 IGrappleable
+--- @param arg1 HandWeapon
+--- @param arg2 number
+--- @param arg3 string
+--- @return nil
+function IsoGameCharacter:Grappled(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 IGrappleable
+--- @param arg1 string
+--- @return nil
+function IsoGameCharacter:GrapplerLetGo(arg0, arg1) end
+
+--- @public
+--- @param string string
 --- @return boolean
 function IsoGameCharacter:HasItem(string) end
 
 --- @public
---- @param trait String
+--- @param trait string
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, trait: String): boolean
+--- @overload fun(self: IsoGameCharacter, trait: string): boolean
 function IsoGameCharacter:HasTrait(trait) end
 
 --- @public
 --- @param weapon HandWeapon
 --- @param wielder IsoGameCharacter
---- @param damageSplit float
+--- @param damageSplit number
 --- @param bIgnoreDamage boolean
---- @param modDelta float
---- @return float
---- @overload fun(self: IsoGameCharacter, vehicle: BaseVehicle, speed: float, isHitFromBehind: boolean, hitDirX: float, hitDirY: float): float
---- @overload fun(self: IsoGameCharacter, weapon: HandWeapon, wielder: IsoGameCharacter, damageSplit: float, bIgnoreDamage: boolean, modDelta: float, bRemote: boolean): float
+--- @param modDelta number
+--- @return number
+--- @overload fun(self: IsoGameCharacter, vehicle: BaseVehicle, speed: number, isHitFromBehind: boolean, hitDirX: number, hitDirY: number): number
+--- @overload fun(self: IsoGameCharacter, weapon: HandWeapon, wielder: IsoGameCharacter, damageSplit: number, bIgnoreDamage: boolean, modDelta: number, bRemote: boolean): number
 function IsoGameCharacter:Hit(weapon, wielder, damageSplit, bIgnoreDamage, modDelta) end
 
 --- @public
 --- @param desc SurvivorDesc
---- @return void
+--- @return nil
 function IsoGameCharacter:InitSpriteParts(desc) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @return boolean
+function IsoGameCharacter:IsAiming() end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter, we: HandWeapon, obj: IsoMovingObject, bonePos: Vector3, extraRange: boolean): boolean
 function IsoGameCharacter:IsAttackRange(x, y, z) end
@@ -214,33 +268,42 @@ function IsoGameCharacter:IsAttackRange(x, y, z) end
 function IsoGameCharacter:IsSpeaking() end
 
 --- @public
+--- @return boolean
+function IsoGameCharacter:IsSpeakingNPC() end
+
+--- @public
 --- @param killer IsoGameCharacter
---- @return void
+--- @return nil
 function IsoGameCharacter:Kill(killer) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function IsoGameCharacter:LetGoOfGrappled(arg0) end
 
 --- @public
 ---
 ---  Level up a perk (max lvl 5)
 ---
 --- @param perk Perk the perk to lvl up (a skill points is removed)
---- @return void
---- @overload fun(self: IsoGameCharacter, perk: Perk): void
---- @overload fun(self: IsoGameCharacter, perk: Perk, removePick: boolean): void
---- @overload fun(self: IsoGameCharacter, perk: Perk, removePick: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, perk: Perk): nil
+--- @overload fun(self: IsoGameCharacter, perk: Perk, removePick: boolean): nil
+--- @overload fun(self: IsoGameCharacter, perk: Perk, removePick: boolean): nil
 function IsoGameCharacter:LevelPerk(perk) end
 
 --- @public
 --- @param perk Perk
---- @return void
---- @overload fun(self: IsoGameCharacter, perk: Perk): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, perk: Perk): nil
 function IsoGameCharacter:LoseLevel(perk) end
 
 --- @public
---- @param dist float
---- @param x float
---- @param y float
---- @param soundDelta float
---- @return void
+--- @param dist number
+--- @param x number
+--- @param y number
+--- @param soundDelta number
+--- @return nil
 function IsoGameCharacter:MoveForward(dist, x, y, soundDelta) end
 
 --- @public
@@ -253,67 +316,75 @@ function IsoGameCharacter:NPCGetRunning() end
 
 --- @public
 --- @param isAiming boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:NPCSetAiming(isAiming) end
 
 --- @public
 --- @param newvalue boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:NPCSetAttack(newvalue) end
 
 --- @public
 --- @param newvalue boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:NPCSetJustMoved(newvalue) end
 
 --- @public
 --- @param newvalue boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:NPCSetMelee(newvalue) end
 
 --- @public
 --- @param newvalue boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:NPCSetRunning(newvalue) end
 
 --- @public
 --- @param sender AnimLayer
 --- @param event AnimEvent
---- @return void
---- @overload fun(self: IsoGameCharacter, sender: AnimLayer, event: AnimEvent): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, sender: AnimLayer, event: AnimEvent): nil
 function IsoGameCharacter:OnAnimEvent(sender, event) end
 
 --- @public
---- @return void
+--- @return nil
+function IsoGameCharacter:OnClothingUpdated() end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:OnDeath() end
 
 --- @public
---- @param delta float
---- @return void
+--- @return nil
+function IsoGameCharacter:OnEquipmentUpdated() end
+
+--- @public
+--- @param delta number
+--- @return nil
 function IsoGameCharacter:PainMeds(delta) end
 
 --- @public
---- @param string String
---- @return void
---- @overload fun(self: IsoGameCharacter, string: String): void
+--- @param string string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, string: string): nil
 function IsoGameCharacter:PlayAnim(string) end
 
 --- @public
---- @param string String
---- @return void
---- @overload fun(self: IsoGameCharacter, string: String): void
+--- @param string string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, string: string): nil
 function IsoGameCharacter:PlayAnimUnlooped(string) end
 
 --- @public
---- @param string String
---- @param framesSpeedPerFrame float
---- @return void
---- @overload fun(self: IsoGameCharacter, string: String, framesSpeedPerFrame: float): void
+--- @param string string
+--- @param framesSpeedPerFrame number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, string: string, framesSpeedPerFrame: number): nil
 function IsoGameCharacter:PlayAnimWithSpeed(string, framesSpeedPerFrame) end
 
 --- @public
 --- @param act BaseAction
---- @return void
+--- @return nil
 function IsoGameCharacter:QueueAction(act) end
 
 --- @public
@@ -321,147 +392,189 @@ function IsoGameCharacter:QueueAction(act) end
 ---  Used when you read a book, magazine or newspaper
 ---
 --- @param literature Literature the book to read
---- @return void
---- @overload fun(self: IsoGameCharacter, literature: Literature): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, literature: Literature): nil
 function IsoGameCharacter:ReadLiterature(literature) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:ReduceHealthWhenBurning() end
 
 --- @public
---- @param line String
---- @return void
---- @overload fun(self: IsoGameCharacter, line: String): void
---- @overload fun(self: IsoGameCharacter, line: String): void
---- @overload fun(self: IsoGameCharacter, line: String, r: float, g: float, b: float, font: UIFont, baseRange: float, customTag: String): void
---- @overload fun(self: IsoGameCharacter, line: String, r: float, g: float, b: float, font: UIFont, baseRange: float, customTag: String): void
+--- @param arg0 IGrappleable
+--- @return nil
+function IsoGameCharacter:RejectGrapple(arg0) end
+
+--- @public
+--- @param line string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, line: string): nil
+--- @overload fun(self: IsoGameCharacter, line: string): nil
+--- @overload fun(self: IsoGameCharacter, line: string, r: number, g: number, b: number, font: UIFont, baseRange: number, customTag: string): nil
+--- @overload fun(self: IsoGameCharacter, line: string, r: number, g: number, b: number, font: UIFont, baseRange: number, customTag: string): nil
 function IsoGameCharacter:Say(line) end
 
 --- @public
---- @param text String
---- @return void
---- @overload fun(self: IsoGameCharacter, n: int, text: String): void
+--- @param text string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, n: integer, text: string): nil
 function IsoGameCharacter:SayDebug(text) end
 
 --- @public
---- @param line String
---- @param r float
---- @param g float
---- @param b float
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
 --- @param font UIFont
---- @param baseRange float
---- @param channel int
---- @param customTag String
---- @return void
+--- @param baseRange number
+--- @param channel integer
+--- @param customTag string
+--- @return nil
 function IsoGameCharacter:SayRadio(line, r, g, b, font, baseRange, channel, customTag) end
 
 --- @public
---- @param line String
---- @return void
+--- @param line string
+--- @return nil
 function IsoGameCharacter:SayShout(line) end
 
 --- @public
---- @param line String
---- @return void
+--- @param line string
+--- @return nil
 function IsoGameCharacter:SayWhisper(line) end
 
 --- @public
 --- @param SeenList Stack
---- @return void
+--- @return nil
 function IsoGameCharacter:Seen(SeenList) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:SetOnFire() end
 
 --- @public
---- @param key String
---- @param value String
---- @return void
---- @overload fun(self: IsoGameCharacter, key: String, value: String): void
+--- @param key string
+--- @param value string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, key: string, value: string): nil
 function IsoGameCharacter:SetVariable(key, value) end
 
 --- @public
---- @param SleepingTabletDelta float
---- @return void
+--- @param SleepingTabletDelta number
+--- @return nil
 function IsoGameCharacter:SleepingTablet(SleepingTabletDelta) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:SpreadFire() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:SpreadFireMP() end
 
 --- @public
 --- @param act BaseAction
---- @return void
---- @overload fun(self: IsoGameCharacter, act: BaseAction): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, act: BaseAction): nil
 function IsoGameCharacter:StartAction(act) end
 
 --- @public
---- @param event String
---- @return void
---- @overload fun(self: IsoGameCharacter, event: String): void
---- @overload fun(self: IsoGameCharacter, event: String, type: String): void
---- @overload fun(self: IsoGameCharacter, event: String, type: String): void
+--- @param event string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, event: string): nil
+--- @overload fun(self: IsoGameCharacter, event: string, type: string): nil
+--- @overload fun(self: IsoGameCharacter, event: string, type: string): nil
 function IsoGameCharacter:StartTimedActionAnim(event) end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:StopAllActionQueue() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:StopAllActionQueueAiming() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:StopAllActionQueueRunning() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:StopAllActionQueueWalking() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:StopBurning() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:StopTimedActionAnim() end
 
 --- @public
 --- @param weapon HandWeapon
---- @return void
+--- @return nil
 function IsoGameCharacter:Throw(weapon) end
 
 --- @public
 --- @param sender ActionContext
---- @return void
---- @overload fun(self: IsoGameCharacter, sender: ActionContext): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, sender: ActionContext): nil
 function IsoGameCharacter:actionStateChanged(sender) end
 
 --- @public
+--- @param arg0 IAnimEventListenerSetVariableString
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: IAnimEventListener): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: IAnimEventListenerBoolean): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: IAnimEventListenerFloat): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: IAnimEventListenerNoParam): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: IAnimEventListenerString): nil
+function IsoGameCharacter:addAnimEventListener(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:addArmMuscleStrain(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:addBackMuscleStrain(arg0) end
+
+--- @public
 --- @param part BloodBodyPartType
---- @return void
+--- @return nil
 function IsoGameCharacter:addBasicPatch(part) end
 
 --- @public
---- @param speed float
---- @return void
---- @overload fun(self: IsoGameCharacter, part: BloodBodyPartType, scratched: boolean, bitten: boolean, allLayers: boolean): void
+--- @param speed number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, part: BloodBodyPartType, scratched: boolean, bitten: boolean, allLayers: boolean): nil
 function IsoGameCharacter:addBlood(speed) end
 
 --- @public
+--- @param arg0 string
+--- @return ItemVisual
+function IsoGameCharacter:addBodyVisualFromItemType(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:addBothArmMuscleStrain(arg0) end
+
+--- @public
+--- @param arg0 HandWeapon
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: HandWeapon, arg1: integer): nil
+--- @overload fun(self: IsoGameCharacter, arg0: HandWeapon, arg1: integer, arg2: number): nil
+function IsoGameCharacter:addCombatMuscleStrain(arg0) end
+
+--- @public
 --- @param part BloodBodyPartType
---- @param nbr Integer
+--- @param nbr integer
 --- @param allLayers boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:addDirt(part, nbr, allLayers) end
 
 --- @public
@@ -477,44 +590,96 @@ function IsoGameCharacter:addHole(part) end
 function IsoGameCharacter:addHoleFromZombieAttacks(part, scratch) end
 
 --- @public
---- @param guid String
---- @return void
---- @overload fun(self: IsoGameCharacter, guid: String): void
+--- @param guid string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, guid: string): nil
 function IsoGameCharacter:addKnownMediaLine(guid) end
 
 --- @public
---- @param line String
---- @return void
---- @overload fun(self: IsoGameCharacter, line: String, r: float, g: float, b: float): void
---- @overload fun(self: IsoGameCharacter, line: String, r: float, g: float, b: float, font: UIFont, baseRange: float, customTag: String): void
---- @overload fun(self: IsoGameCharacter, line: String, r: float, g: float, b: float, font: UIFont, baseRange: float, customTag: String, bbcode: boolean, img: boolean, icons: boolean, colors: boolean, fonts: boolean, equalizeHeights: boolean): void
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:addLeftArmMuscleStrain(arg0) end
+
+--- @public
+--- @param line string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, line: string, r: number, g: number, b: number): nil
+--- @overload fun(self: IsoGameCharacter, line: string, r: number, g: number, b: number, font: UIFont, baseRange: number, customTag: string): nil
+--- @overload fun(self: IsoGameCharacter, line: string, r: number, g: number, b: number, font: UIFont, baseRange: number, customTag: string, bbcode: boolean, img: boolean, icons: boolean, colors: boolean, fonts: boolean, equalizeHeights: boolean): nil
 function IsoGameCharacter:addLineChatElement(line) end
 
 --- @public
---- @param itemType String
---- @return void
+--- @param arg0 BloodBodyPartType
+--- @param arg1 integer
+--- @param arg2 boolean
+--- @return nil
+function IsoGameCharacter:addLotsOfDirt(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:addNeckMuscleStrain(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: string): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: integer): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: integer): nil
+function IsoGameCharacter:addReadLiterature(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:addRightLegMuscleStrain(arg0) end
+
+--- @public
+--- @param arg0 BodyPartType
+--- @param arg1 number
+--- @return nil
+function IsoGameCharacter:addStiffness(arg0, arg1) end
+
+--- @public
+--- @param itemType string
+--- @return nil
 function IsoGameCharacter:addVisualDamage(itemType) end
 
 --- @public
---- @param radius int
---- @param volume int
+--- @param radius integer
+--- @param volume integer
 --- @param bStressHumans boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, radius: int, volume: int, bStressHumans: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, radius: integer, volume: integer, bStressHumans: boolean): nil
 function IsoGameCharacter:addWorldSoundUnlessInvisible(radius, volume, bStressHumans) end
 
 --- @public
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter): boolean
+function IsoGameCharacter:allowsTwist() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 AnimEvent
+--- @return nil
+function IsoGameCharacter:animEvent(arg0, arg1) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:applyDamage(arg0) end
+
+--- @public
 --- @param luaTraits ArrayList
---- @return void
+--- @return nil
 function IsoGameCharacter:applyTraits(luaTraits) end
 
 --- @public
 --- @param zombie IsoZombie
---- @return void
+--- @return nil
 function IsoGameCharacter:attackFromWindowsLunge(zombie) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:autoDrink() end
 
 --- @public
@@ -522,23 +687,95 @@ function IsoGameCharacter:autoDrink() end
 function IsoGameCharacter:avoidDamage() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:becomeCorpse() end
 
 --- @public
+--- @param arg0 integer
+--- @param arg1 string
+--- @return boolean
+function IsoGameCharacter:bodyPartHasTag(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+function IsoGameCharacter:bodyPartIsSpiked(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+function IsoGameCharacter:bodyPartIsSpikedBehind(arg0) end
+
+--- @public
 --- @param corpse IsoDeadBody
---- @return void
+--- @return nil
 function IsoGameCharacter:burnCorpse(corpse) end
 
 --- @public
+--- @return Vector2
+function IsoGameCharacter:calcCarForwardVector() end
+
+--- @public
+--- @param arg0 boolean
+--- @return Vector2
+function IsoGameCharacter:calcCarPositionOffset(arg0) end
+
+--- @public
+--- @return Vector2
+--- @overload fun(self: IsoGameCharacter, arg0: Vector2): Vector2
+function IsoGameCharacter:calcCarSpeedVector() end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @return Vector2
+--- @overload fun(self: IsoGameCharacter, arg0: IsoGameCharacter, arg1: Vector2): Vector2
+function IsoGameCharacter:calcCarToPlayerVector(arg0) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 boolean
+--- @return number
+function IsoGameCharacter:calcConeAngleMultiplier(arg0, arg1) end
+
+--- @public
+--- @param arg0 IsoGameCharacter
+--- @param arg1 boolean
+--- @return number
+function IsoGameCharacter:calcConeAngleOffset(arg0, arg1) end
+
+--- @public
 --- @param out Vector2
---- @return void
---- @overload fun(self: IsoGameCharacter, wielder: IsoGameCharacter, weapon: HandWeapon, out: Vector2): Float
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, wielder: IsoGameCharacter, weapon: HandWeapon, out: Vector2): number
 function IsoGameCharacter:calcHitDir(out) end
 
 --- @public
---- @return float
+--- @param arg0 Vector2
+--- @param arg1 boolean
+--- @return number
+function IsoGameCharacter:calcLengthMultiplier(arg0, arg1) end
+
+--- @public
+--- @return number
 function IsoGameCharacter:calculateBaseSpeed() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:calculateCombatSpeed() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:calculateGrappleEffectivenessFromTraits() end
+
+--- @public
+--- @param arg0 ShadowParams
+--- @return ShadowParams
+function IsoGameCharacter:calculateShadowParams(arg0) end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter): boolean
+function IsoGameCharacter:canBeGrappled() end
 
 --- @public
 --- @param sq IsoGridSquare
@@ -559,84 +796,119 @@ function IsoGameCharacter:canClimbSheetRope(sq) end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:canRagdoll() end
+
+--- @public
+--- @param arg0 IsoGridSquare
+--- @return boolean
+function IsoGameCharacter:canReachTo(arg0) end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:canSprint() end
 
 --- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return boolean
+function IsoGameCharacter:canStandAt(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
+function IsoGameCharacter:canTransitionToState(arg0) end
+
+--- @public
+--- @param arg0 IsoObject
+--- @return boolean
+function IsoGameCharacter:canUseAsGenericCraftingSurface(arg0) end
+
+--- @public
+--- @param arg0 Vector2
+--- @return boolean
+function IsoGameCharacter:carMovingBackward(arg0) end
+
+--- @public
 --- @param state State
---- @return void
---- @overload fun(self: IsoGameCharacter, state: State): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, state: State): nil
 function IsoGameCharacter:changeState(state) end
 
 --- @public
---- @return float
+--- @return boolean
+function IsoGameCharacter:checkIsNearVehicle() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:checkIsNearWall() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:checkUpdateModelTextures() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:clearAttachedItems() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:clearKnownMediaLines() end
 
 --- @public
---- @param key String
---- @return void
---- @overload fun(self: IsoGameCharacter, key: String): void
+--- @param key string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, key: string): nil
 function IsoGameCharacter:clearVariable(key) end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:clearVariables() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:clearWornItems() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:climbDownSheetRope() end
 
 --- @public
 --- @param dir IsoDirections
---- @return void
---- @overload fun(self: IsoGameCharacter, dir: IsoDirections): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, dir: IsoDirections): nil
 function IsoGameCharacter:climbOverFence(dir) end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:climbSheetRope() end
 
 --- @public
 --- @param w IsoThumpable
---- @return void
---- @overload fun(self: IsoGameCharacter, w: IsoThumpable): void
---- @overload fun(self: IsoGameCharacter, w: IsoWindow): void
---- @overload fun(self: IsoGameCharacter, w: IsoWindow): void
---- @overload fun(self: IsoGameCharacter, w: IsoThumpable, startingFrame: Integer): void
---- @overload fun(self: IsoGameCharacter, w: IsoThumpable, startingFrame: Integer): void
---- @overload fun(self: IsoGameCharacter, w: IsoWindow, startingFrame: Integer): void
---- @overload fun(self: IsoGameCharacter, w: IsoWindow, startingFrame: Integer): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, w: IsoThumpable): nil
+--- @overload fun(self: IsoGameCharacter, w: IsoWindow): nil
+--- @overload fun(self: IsoGameCharacter, w: IsoWindow): nil
+--- @overload fun(self: IsoGameCharacter, w: IsoThumpable, startingFrame: integer): nil
+--- @overload fun(self: IsoGameCharacter, w: IsoThumpable, startingFrame: integer): nil
+--- @overload fun(self: IsoGameCharacter, w: IsoWindow, startingFrame: integer): nil
+--- @overload fun(self: IsoGameCharacter, w: IsoWindow, startingFrame: integer): nil
 function IsoGameCharacter:climbThroughWindow(w) end
 
 --- @public
---- @param obj IsoObject
---- @return void
---- @overload fun(self: IsoGameCharacter, obj: IsoObject): void
-function IsoGameCharacter:climbThroughWindowFrame(obj) end
+--- @param arg0 IsoWindowFrame
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: IsoWindowFrame): nil
+function IsoGameCharacter:climbThroughWindowFrame(arg0) end
 
 --- @public
 --- @param w IsoWindow
---- @return void
---- @overload fun(self: IsoGameCharacter, w: IsoWindow): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, w: IsoWindow): nil
 function IsoGameCharacter:closeWindow(w) end
 
 --- @public
@@ -645,166 +917,196 @@ function IsoGameCharacter:closeWindow(w) end
 ---  the OutfitManager to broadcast this event.  Checks if this item is currently
 ---  by this player's Outfit.  Reloads and re-equips if so.
 ---
---- @param itemGuid String The item's Globally Unique Identifier (GUID).
---- @return void
---- @overload fun(self: IsoGameCharacter, itemGuid: String): void
+--- @param itemGuid string The item's Globally Unique Identifier (GUID).
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, itemGuid: string): nil
 function IsoGameCharacter:clothingItemChanged(itemGuid) end
 
 --- @public
 --- @param other IsoGameCharacter
---- @return int
+--- @return integer
 function IsoGameCharacter:compareMovePriority(other) end
 
 --- @public
---- @param name String
+--- @param name string
 --- @return boolean
 function IsoGameCharacter:containsVariable(name) end
 
 --- @public
---- @return void
+--- @return InventoryItem
+--- @overload fun(self: IsoGameCharacter, arg0: string): InventoryItem
 function IsoGameCharacter:createKeyRing() end
 
 --- @public
---- @param layerIdx int
---- @param trackIdx int
+--- @param layerIdx integer
+--- @param trackIdx integer
 --- @return AnimationTrack
 function IsoGameCharacter:dbgGetAnimTrack(layerIdx, trackIdx) end
 
 --- @public
---- @param layerIdx int
---- @param trackIdx int
---- @return String
+--- @param layerIdx integer
+--- @param trackIdx integer
+--- @return string
 function IsoGameCharacter:dbgGetAnimTrackName(layerIdx, trackIdx) end
 
 --- @public
---- @param layerIdx int
---- @param trackIdx int
---- @return float
+--- @param layerIdx integer
+--- @param trackIdx integer
+--- @return number
 function IsoGameCharacter:dbgGetAnimTrackTime(layerIdx, trackIdx) end
 
 --- @public
---- @param layerIdx int
---- @param trackIdx int
---- @return float
+--- @param layerIdx integer
+--- @param trackIdx integer
+--- @return number
 function IsoGameCharacter:dbgGetAnimTrackWeight(layerIdx, trackIdx) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:die() end
 
 --- @public
 --- @param baseVehicle BaseVehicle
 --- @param hitVars HitVars
---- @return void
+--- @return nil
 function IsoGameCharacter:doHitByVehicle(baseVehicle, hitVars) end
 
 --- @public
---- @param text String
---- @return void
+--- @param text string
+--- @return nil
 function IsoGameCharacter:drawDebugTextBelow(text) end
 
 --- @public
 --- @param dir Vector2
---- @param length float
---- @param r float
---- @param g float
---- @param b float
---- @return void
+--- @param length number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @return nil
 function IsoGameCharacter:drawDirectionLine(dir, length, r, g, b) end
 
 --- @public
---- @param itemGUID String
---- @return void
+--- @param arg0 Vector2
+--- @param arg1 Vector2
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @return nil
+function IsoGameCharacter:drawLine(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @param itemGUID string
+--- @return nil
 function IsoGameCharacter:dressInClothingItem(itemGUID) end
 
 --- @public
---- @param outfitName String
---- @return void
+--- @param outfitName string
+--- @return nil
 function IsoGameCharacter:dressInNamedOutfit(outfitName) end
 
 --- @public
---- @param outfitName String
---- @return void
+--- @param outfitName string
+--- @return nil
 function IsoGameCharacter:dressInPersistentOutfit(outfitName) end
 
 --- @public
---- @param outfitID int
---- @return void
+--- @param outfitID integer
+--- @return nil
 function IsoGameCharacter:dressInPersistentOutfitID(outfitID) end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:dressInRandomNonSillyOutfit() end
 
 --- @public
 ---
 ---  Picks a random outfit from the OutfitManager
 ---
---- @return void
+--- @return nil
 function IsoGameCharacter:dressInRandomOutfit() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:dropHandItems() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:dropHeavyItems() end
 
 --- @public
 --- @param playbackVars AnimationVariableSource
---- @return void
+--- @return nil
 function IsoGameCharacter:endPlaybackGameVariables(playbackVars) end
 
 --- @public
+--- @param arg0 IsoGameCharacter
+--- @return BallisticsTarget
+function IsoGameCharacter:ensureExitsBallisticsTarget(arg0) end
+
+--- @public
 --- @param v BaseVehicle
---- @param seat int
+--- @param seat integer
 --- @param offset Vector3f
---- @return void
+--- @return nil
 function IsoGameCharacter:enterVehicle(v, seat, offset) end
 
 --- @public
---- @param f float
---- @return void
+--- @param f number
+--- @return nil
 function IsoGameCharacter:exert(f) end
 
 --- @public
---- @param x float
---- @param y float
---- @return void
+--- @param arg0 IsoDirections
+--- @return nil
+function IsoGameCharacter:faceDirection(arg0) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @return nil
 function IsoGameCharacter:faceLocation(x, y) end
 
 --- @public
---- @param x float
---- @param y float
---- @return void
+--- @param x number
+--- @param y number
+--- @return nil
 function IsoGameCharacter:faceLocationF(x, y) end
 
 --- @public
---- @param x int
---- @param y int
---- @return void
---- @overload fun(self: IsoGameCharacter, x: int, y: int): void
+--- @param x integer
+--- @param y integer
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, x: integer, y: integer): nil
 function IsoGameCharacter:facePosition(x, y) end
 
 --- @public
 --- @param object IsoObject
---- @return void
---- @overload fun(self: IsoGameCharacter, object: IsoObject): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, object: IsoObject): nil
 function IsoGameCharacter:faceThisObject(object) end
 
 --- @public
 --- @param object IsoObject
---- @return void
---- @overload fun(self: IsoGameCharacter, object: IsoObject): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, object: IsoObject): nil
 function IsoGameCharacter:faceThisObjectAlt(object) end
 
 --- @public
---- @return void
+--- @return nil
+function IsoGameCharacter:fallFromRope() end
+
+--- @public
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: boolean): nil
 function IsoGameCharacter:fallenOnKnees() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:forceAwake() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getAbsoluteExcessTwist() end
 
 --- @public
@@ -813,7 +1115,7 @@ function IsoGameCharacter:getAbsoluteExcessTwist() end
 function IsoGameCharacter:getActionContext() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getActionStateName() end
 
 --- @public
@@ -827,30 +1129,44 @@ function IsoGameCharacter:getActiveLightItems(items) end
 function IsoGameCharacter:getAdvancedAnimator() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGameCharacter:getAge() end
 
 --- @public
---- @param fullType String
---- @return int
---- @overload fun(self: IsoGameCharacter, fullType: String): int
+--- @return number
+function IsoGameCharacter:getAimingDelay() end
+
+--- @public
+--- @param fullType string
+--- @return integer
+--- @overload fun(self: IsoGameCharacter, fullType: string): integer
 function IsoGameCharacter:getAlreadyReadPages(fullType) end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getAnimAngle() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getAnimAngleRadians() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getAnimAngleStepDelta() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getAnimAngleTwistDelta() end
+
+--- @public
+--- @return AnimEventBroadcaster
+--- @overload fun(self: IsoGameCharacter): AnimEventBroadcaster
+function IsoGameCharacter:getAnimEventBroadcaster() end
+
+--- @public
+--- @param arg0 Vector2
+--- @return Vector2
+function IsoGameCharacter:getAnimForwardDirection(arg0) end
 
 --- @public
 --- @param out Vector2
@@ -858,7 +1174,11 @@ function IsoGameCharacter:getAnimAngleTwistDelta() end
 function IsoGameCharacter:getAnimVector(out) end
 
 --- @public
---- @return String
+--- @return IAnimatable
+function IsoGameCharacter:getAnimatable() end
+
+--- @public
+--- @return string
 function IsoGameCharacter:getAnimationDebug() end
 
 --- @public
@@ -872,11 +1192,15 @@ function IsoGameCharacter:getAnimationPlayer() end
 function IsoGameCharacter:getAnimationPlayerRecorder() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getAnimationStateName() end
 
 --- @public
---- @param location String
+--- @return number
+function IsoGameCharacter:getAnimationTimeDelta() end
+
+--- @public
+--- @param location string
 --- @return InventoryItem
 function IsoGameCharacter:getAttachedItem(location) end
 
@@ -893,20 +1217,44 @@ function IsoGameCharacter:getAttachedLocationGroup() end
 function IsoGameCharacter:getAttackTargetSquare() end
 
 --- @public
+--- @return AttackVars
+function IsoGameCharacter:getAttackVars() end
+
+--- @public
 --- @return IsoGameCharacter the AttackedBy
 function IsoGameCharacter:getAttackedBy() end
+
+--- @public
+--- @return HandWeapon
+function IsoGameCharacter:getAttackingWeapon() end
 
 --- @public
 --- @return Vector2
 function IsoGameCharacter:getAutoWalkDirection() end
 
 --- @public
---- @return float
+--- @return BallisticsController
+function IsoGameCharacter:getBallisticsController() end
+
+--- @public
+--- @return BallisticsTarget
+function IsoGameCharacter:getBallisticsTarget() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getBarricadeStrengthMod() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getBarricadeTimeMod() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getBearingFromGrappledTarget() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getBearingToGrappledTarget() end
 
 --- @public
 --- @return IsoObject
@@ -914,41 +1262,45 @@ function IsoGameCharacter:getBarricadeTimeMod() end
 function IsoGameCharacter:getBed() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoGameCharacter): String
+--- @return string
+--- @overload fun(self: IsoGameCharacter): string
 function IsoGameCharacter:getBedType() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getBeenMovingFor() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getBeenSprintingFor() end
 
 --- @public
---- @return float the BetaDelta
+--- @return number the BetaDelta
 function IsoGameCharacter:getBetaDelta() end
 
 --- @public
---- @return float the BetaEffect
+--- @return number the BetaEffect
 function IsoGameCharacter:getBetaEffect() end
 
 --- @public
---- @return float the BloodImpactX
+--- @return number the BloodImpactX
 function IsoGameCharacter:getBloodImpactX() end
 
 --- @public
---- @return float the BloodImpactY
+--- @return number the BloodImpactY
 function IsoGameCharacter:getBloodImpactY() end
 
 --- @public
---- @return float the BloodImpactZ
+--- @return number the BloodImpactZ
 function IsoGameCharacter:getBloodImpactZ() end
 
 --- @public
 --- @return IsoSprite the bloodSplat
 function IsoGameCharacter:getBloodSplat() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getBlurFactor() end
 
 --- @public
 --- @return BodyDamage the BodyDamage
@@ -963,22 +1315,18 @@ function IsoGameCharacter:getBodyDamageRemote() end
 function IsoGameCharacter:getBodyLocationGroup() end
 
 --- @public
---- @param part Integer
+--- @param part integer
 --- @param bite boolean
 --- @param bullet boolean
---- @return float
+--- @return number
 function IsoGameCharacter:getBodyPartClothingDefense(part, bite, bullet) end
 
 --- @public
---- @return GameCharacterAIBrain
-function IsoGameCharacter:getBrain() end
-
---- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getBumpFallType() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getBumpType() end
 
 --- @public
@@ -999,12 +1347,33 @@ function IsoGameCharacter:getCharacterTraits() end
 function IsoGameCharacter:getChatElement() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getChopTreeSpeed() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getClickSound() end
+
+--- @public
+--- @param arg0 boolean
+--- @return number
+function IsoGameCharacter:getClimbRopeSpeed(arg0) end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getClimbRopeTime() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getClimbingFailChanceFloat() end
+
+--- @public
+--- @return integer
+function IsoGameCharacter:getClimbingFailChanceInt() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getClothingDiscomfortModifier() end
 
 --- @public
 --- @return InventoryItem
@@ -1035,7 +1404,17 @@ function IsoGameCharacter:getClothingItem_Torso() end
 function IsoGameCharacter:getClothingWetness() end
 
 --- @public
---- @return String
+--- @return number
+--- @overload fun(self: IsoGameCharacter, arg0: number): number
+--- @overload fun(self: IsoGameCharacter, arg0: number, arg1: boolean): number
+function IsoGameCharacter:getCorpseSicknessDefense() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getCorpseSicknessRate() end
+
+--- @public
+--- @return string
 function IsoGameCharacter:getCurrentActionContextStateName() end
 
 --- @public
@@ -1056,11 +1435,11 @@ function IsoGameCharacter:getCurrentRoomDef() end
 function IsoGameCharacter:getCurrentState() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getCurrentStateName() end
 
 --- @public
---- @return float the dangerLevels
+--- @return number the dangerLevels
 function IsoGameCharacter:getDangerLevels() end
 
 --- @public
@@ -1073,7 +1452,7 @@ function IsoGameCharacter:getDebugMonitor() end
 function IsoGameCharacter:getDefaultState() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getDeferredAngleDelta() end
 
 --- @public
@@ -1082,16 +1461,26 @@ function IsoGameCharacter:getDeferredAngleDelta() end
 function IsoGameCharacter:getDeferredMovement(out_result) end
 
 --- @public
---- @return float
+--- @param arg0 Vector2
+--- @return Vector2
+function IsoGameCharacter:getDeferredMovementFromRagdoll(arg0) end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getDeferredRotationWeight() end
 
 --- @public
---- @return float the DepressDelta
+--- @return number the DepressDelta
 function IsoGameCharacter:getDepressDelta() end
 
 --- @public
---- @return float the DepressEffect
+--- @return number the DepressEffect
 function IsoGameCharacter:getDepressEffect() end
+
+--- @public
+--- @param arg0 string
+--- @return string
+function IsoGameCharacter:getDescription(arg0) end
 
 --- @public
 --- @return SurvivorDesc the descriptor
@@ -1099,20 +1488,24 @@ function IsoGameCharacter:getDepressEffect() end
 function IsoGameCharacter:getDescriptor() end
 
 --- @public
---- @return int the DieCount
+--- @return integer the DieCount
 function IsoGameCharacter:getDieCount() end
 
 --- @public
 ---
 ---  The forward direction angle, in degrees.
 ---
---- @return float
+--- @return number
 function IsoGameCharacter:getDirectionAngle() end
 
 --- @public
+--- @return boolean
+function IsoGameCharacter:getDoRender() end
+
+--- @public
 --- @param bonePos Vector3
---- @return float
---- @overload fun(self: IsoGameCharacter, targetX: float, targetY: float): float
+--- @return number
+--- @overload fun(self: IsoGameCharacter, targetX: number, targetY: number): number
 function IsoGameCharacter:getDotWithForwardDirection(bonePos) end
 
 --- @public
@@ -1135,7 +1528,7 @@ function IsoGameCharacter:getEquipedRadio() end
 ---  desired twist exceeds the maximum twist.    eg. If the character is trying to
 ---  by 90 degrees, but their maximum is set to 70, then excess = 20
 ---
---- @return float
+--- @return number
 function IsoGameCharacter:getExcessTwist() end
 
 --- @public
@@ -1144,19 +1537,23 @@ function IsoGameCharacter:getExcessTwist() end
 function IsoGameCharacter:getFMODParameters() end
 
 --- @public
---- @return float the fallTime
+--- @return number the fallTime
 function IsoGameCharacter:getFallTime() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getFallTimeAdjusted() end
 
 --- @public
 --- @return Stack the FamiliarBuildings
 function IsoGameCharacter:getFamiliarBuildings() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getFatigueMod() end
 
 --- @public
---- @return double
+--- @return number
 function IsoGameCharacter:getFatiqueMultiplier() end
 
 --- @public
@@ -1164,11 +1561,15 @@ function IsoGameCharacter:getFatiqueMultiplier() end
 function IsoGameCharacter:getFinder() end
 
 --- @public
---- @return float the FireKillRate
+--- @return number the FireKillRate
 function IsoGameCharacter:getFireKillRate() end
 
 --- @public
---- @return int the FireSpreadProbability
+--- @return string
+function IsoGameCharacter:getFireMode() end
+
+--- @public
+--- @return integer the FireSpreadProbability
 function IsoGameCharacter:getFireSpreadProbability() end
 
 --- @public
@@ -1176,16 +1577,17 @@ function IsoGameCharacter:getFireSpreadProbability() end
 function IsoGameCharacter:getFollowingTarget() end
 
 --- @public
---- @return float the ForceWakeUpTime
+--- @return number the ForceWakeUpTime
 function IsoGameCharacter:getForceWakeUpTime() end
 
 --- @public
 --- @return Vector2 the character's forward direction vector
+--- @overload fun(self: IsoGameCharacter, arg0: Vector2): Vector2
 function IsoGameCharacter:getForwardDirection() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoGameCharacter): String
+--- @return string
+--- @overload fun(self: IsoGameCharacter): string
 function IsoGameCharacter:getFullName() end
 
 --- @public
@@ -1201,28 +1603,87 @@ function IsoGameCharacter:getGameVariables() end
 
 --- @public
 --- @param bDoNoises boolean
---- @return float
+--- @return number
 function IsoGameCharacter:getGlobalMovementMod(bDoNoises) end
 
 --- @public
---- @return float
+--- @param arg0 Vector3
+--- @return Vector3
+--- @overload fun(self: IsoGameCharacter, arg0: Vector3): Vector3
+function IsoGameCharacter:getGrappleOffset(arg0) end
+
+--- @public
+--- @return GrappleOffsetBehaviour
+function IsoGameCharacter:getGrappleOffsetBehaviour() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getGrapplePosOffsetForward() end
+
+--- @public
+--- @return string
+function IsoGameCharacter:getGrappleResult() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getGrappleRotOffsetYaw() end
+
+--- @public
+--- @return IGrappleable
+--- @overload fun(self: IsoGameCharacter): IGrappleable
+function IsoGameCharacter:getGrappleable() end
+
+--- @public
+--- @return IGrappleable
+function IsoGameCharacter:getGrappledBy() end
+
+--- @public
+--- @return string
+function IsoGameCharacter:getGrappledByString() end
+
+--- @public
+--- @return string
+function IsoGameCharacter:getGrappledByType() end
+
+--- @public
+--- @return IGrappleable
+function IsoGameCharacter:getGrapplingTarget() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getHaloTimerCount() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoGameCharacter): float
+--- @return number
+--- @overload fun(self: IsoGameCharacter): number
 function IsoGameCharacter:getHammerSoundMod() end
 
 --- @public
---- @return float the Health
+--- @return number the Health
 function IsoGameCharacter:getHealth() end
 
 --- @public
---- @return int
+--- @return number
+function IsoGameCharacter:getHearDistanceModifier() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getHeightAboveFloor() end
+
+--- @public
+--- @return integer
 function IsoGameCharacter:getHitChancesMod() end
 
 --- @public
---- @return String
+--- @return string
+function IsoGameCharacter:getHitDirEnum() end
+
+--- @public
+--- @return ArrayList
+function IsoGameCharacter:getHitInfoList() end
+
+--- @public
+--- @return string
 function IsoGameCharacter:getHitReaction() end
 
 --- @public
@@ -1230,24 +1691,24 @@ function IsoGameCharacter:getHitReaction() end
 function IsoGameCharacter:getHitReactionNetworkAI() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getHittingMod() end
 
 --- @public
---- @return double
---- @overload fun(self: IsoGameCharacter): double
+--- @return number
+--- @overload fun(self: IsoGameCharacter): number
 function IsoGameCharacter:getHoursSurvived() end
 
 --- @public
---- @return double
+--- @return number
 function IsoGameCharacter:getHungerMultiplier() end
 
 --- @public
---- @return String the hurtSound
+--- @return string the hurtSound
 function IsoGameCharacter:getHurtSound() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getHyperthermiaMod() end
 
 --- @public
@@ -1260,8 +1721,8 @@ function IsoGameCharacter:getIgnoreMovement() end
 function IsoGameCharacter:getInventory() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoGameCharacter): float
+--- @return number
+--- @overload fun(self: IsoGameCharacter): number
 function IsoGameCharacter:getInventoryWeight() end
 
 --- @public
@@ -1270,7 +1731,7 @@ function IsoGameCharacter:getIsNPC() end
 
 --- @public
 --- @return ItemVisuals
---- @overload fun(self: IsoGameCharacter, itemVisuals: ItemVisuals): void
+--- @overload fun(self: IsoGameCharacter, itemVisuals: ItemVisuals): nil
 function IsoGameCharacter:getItemVisuals() end
 
 --- @public
@@ -1279,7 +1740,7 @@ function IsoGameCharacter:getItemVisuals() end
 function IsoGameCharacter:getKnownRecipes() end
 
 --- @public
---- @return long
+--- @return integer
 function IsoGameCharacter:getLastBump() end
 
 --- @public
@@ -1287,7 +1748,7 @@ function IsoGameCharacter:getLastBump() end
 function IsoGameCharacter:getLastChatMessage() end
 
 --- @public
---- @return float the lastFallSpeed
+--- @return number the lastFallSpeed
 function IsoGameCharacter:getLastFallSpeed() end
 
 --- @public
@@ -1295,11 +1756,15 @@ function IsoGameCharacter:getLastFallSpeed() end
 function IsoGameCharacter:getLastHeardSound() end
 
 --- @public
---- @return int
+--- @return IsoGameCharacter
+function IsoGameCharacter:getLastHitCharacter() end
+
+--- @public
+--- @return integer
 function IsoGameCharacter:getLastHitCount() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGameCharacter:getLastHourSleeped() end
 
 --- @public
@@ -1307,24 +1772,24 @@ function IsoGameCharacter:getLastHourSleeped() end
 function IsoGameCharacter:getLastKnownLocation() end
 
 --- @public
---- @param character String
+--- @param character string
 --- @return Location
 function IsoGameCharacter:getLastKnownLocationOf(character) end
 
 --- @public
---- @return int the LastLocalEnemies
+--- @return integer the LastLocalEnemies
 function IsoGameCharacter:getLastLocalEnemies() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getLastSpokenLine() end
 
 --- @public
---- @return int the LastZombieKills
+--- @return integer the LastZombieKills
 function IsoGameCharacter:getLastZombieKills() end
 
 --- @public
---- @return float the leaveBodyTimedown
+--- @return number the leaveBodyTimedown
 function IsoGameCharacter:getLeaveBodyTimedown() end
 
 --- @public
@@ -1332,16 +1797,16 @@ function IsoGameCharacter:getLeaveBodyTimedown() end
 function IsoGameCharacter:getLegsSprite() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGameCharacter:getLevelMaxForXp() end
 
 --- @public
---- @param level int
---- @return int
+--- @param level integer
+--- @return integer
 function IsoGameCharacter:getLevelUpLevels(level) end
 
 --- @public
---- @return float the LevelUpMultiplier
+--- @return number the LevelUpMultiplier
 function IsoGameCharacter:getLevelUpMultiplier() end
 
 --- @public
@@ -1349,19 +1814,19 @@ function IsoGameCharacter:getLevelUpMultiplier() end
 function IsoGameCharacter:getLightInfo2() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getLightfootMod() end
 
 --- @public
---- @return float the llx
+--- @return number the llx
 function IsoGameCharacter:getLlx() end
 
 --- @public
---- @return float the lly
+--- @return number the lly
 function IsoGameCharacter:getLly() end
 
 --- @public
---- @return float the llz
+--- @return number the llz
 function IsoGameCharacter:getLlz() end
 
 --- @public
@@ -1385,7 +1850,7 @@ function IsoGameCharacter:getLocalNeutralList() end
 function IsoGameCharacter:getLocalRelevantEnemyList() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getLookAngleRadians() end
 
 --- @public
@@ -1394,22 +1859,14 @@ function IsoGameCharacter:getLookAngleRadians() end
 function IsoGameCharacter:getLookVector(vector2) end
 
 --- @public
---- @param attempts int
---- @param range int
+--- @param attempts integer
+--- @param range integer
 --- @return IsoGridSquare
 function IsoGameCharacter:getLowDangerInVicinity(attempts, range) end
 
 --- @public
---- @return float the lrx
-function IsoGameCharacter:getLrx() end
-
---- @public
---- @return float the lry
-function IsoGameCharacter:getLry() end
-
---- @public
---- @return int
---- @overload fun(self: IsoGameCharacter): int
+--- @return integer
+--- @overload fun(self: IsoGameCharacter): integer
 function IsoGameCharacter:getMaintenanceMod() end
 
 --- @public
@@ -1417,36 +1874,36 @@ function IsoGameCharacter:getMaintenanceMod() end
 function IsoGameCharacter:getMapKnowledge() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGameCharacter:getMaxChatLines() end
 
 --- @public
 ---
 ---  The maximum twist angle, in degrees.
 ---
---- @return float
+--- @return number
 function IsoGameCharacter:getMaxTwist() end
 
 --- @public
---- @return int the maxWeight
---- @overload fun(self: IsoGameCharacter): int the maxWeight
+--- @return integer the maxWeight
+--- @overload fun(self: IsoGameCharacter): integer the maxWeight
 function IsoGameCharacter:getMaxWeight() end
 
 --- @public
---- @return int the maxWeightBase
+--- @return integer the maxWeightBase
 function IsoGameCharacter:getMaxWeightBase() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGameCharacter:getMeleeCombatMod() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoGameCharacter): float
+--- @return number
+--- @overload fun(self: IsoGameCharacter): number
 function IsoGameCharacter:getMeleeDelay() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getMetalBarricadeStrengthMod() end
 
 --- @public
@@ -1459,7 +1916,7 @@ function IsoGameCharacter:getModel() end
 function IsoGameCharacter:getModelInstance() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getMomentumScalar() end
 
 --- @public
@@ -1468,7 +1925,7 @@ function IsoGameCharacter:getMomentumScalar() end
 function IsoGameCharacter:getMoodles() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getMoveDelta() end
 
 --- @public
@@ -1476,8 +1933,13 @@ function IsoGameCharacter:getMoveDelta() end
 function IsoGameCharacter:getMoveForwardVec() end
 
 --- @public
---- @return float
-function IsoGameCharacter:getMoveSpeed() end
+--- @return number
+function IsoGameCharacter:getMovementSpeed() end
+
+--- @public
+--- @param arg0 string
+--- @return any
+function IsoGameCharacter:getMusicIntensityEventModData(arg0) end
 
 --- @public
 --- @return BaseVehicle
@@ -1488,20 +1950,24 @@ function IsoGameCharacter:getNearVehicle() end
 function IsoGameCharacter:getNetworkCharacterAI() end
 
 --- @public
---- @return Float
+--- @return number
 function IsoGameCharacter:getNextAnimationTranslationLength() end
 
 --- @public
---- @return int the NextWander
+--- @return integer the NextWander
 function IsoGameCharacter:getNextWander() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getNimbleMod() end
 
 --- @public
---- @return int the NumSurvivorsInVicinity
+--- @return integer the NumSurvivorsInVicinity
 function IsoGameCharacter:getNumSurvivorsInVicinity() end
+
+--- @public
+--- @return integer
+function IsoGameCharacter:getNumTwistBones() end
 
 --- @public
 --- @return short
@@ -1512,28 +1978,27 @@ function IsoGameCharacter:getOnlineID() end
 function IsoGameCharacter:getOrCreateSleepingEventData() end
 
 --- @public
----
----  Description copied from interface: IAnimationVariableMap
----
---- @param key String
---- @return IAnimationVariableSlot
---- @overload fun(self: IsoGameCharacter, key: String): IAnimationVariableSlot
-function IsoGameCharacter:getOrCreateVariable(key) end
-
---- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getOutfitName() end
 
 --- @public
---- @return float
+--- @return UdpConnection
+function IsoGameCharacter:getOwner() end
+
+--- @public
+--- @return IsoPlayer
+function IsoGameCharacter:getOwnerPlayer() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getPacingMod() end
 
 --- @public
---- @return float the PainDelta
+--- @return number the PainDelta
 function IsoGameCharacter:getPainDelta() end
 
 --- @public
---- @return float the PainEffect
+--- @return number the PainEffect
 function IsoGameCharacter:getPainEffect() end
 
 --- @public
@@ -1547,31 +2012,31 @@ function IsoGameCharacter:getPath2() end
 function IsoGameCharacter:getPathFindBehavior2() end
 
 --- @public
---- @return int the pathIndex
+--- @return integer the pathIndex
 function IsoGameCharacter:getPathIndex() end
 
 --- @public
---- @return int the PathTargetX
+--- @return integer the PathTargetX
 function IsoGameCharacter:getPathTargetX() end
 
 --- @public
---- @return int the PathTargetY
+--- @return integer the PathTargetY
 function IsoGameCharacter:getPathTargetY() end
 
 --- @public
---- @return int the PathTargetZ
+--- @return integer the PathTargetZ
 function IsoGameCharacter:getPathTargetZ() end
 
 --- @public
---- @return int the Patience
+--- @return integer the Patience
 function IsoGameCharacter:getPatience() end
 
 --- @public
---- @return int the PatienceMax
+--- @return integer the PatienceMax
 function IsoGameCharacter:getPatienceMax() end
 
 --- @public
---- @return int the PatienceMin
+--- @return integer the PatienceMin
 function IsoGameCharacter:getPatienceMin() end
 
 --- @public
@@ -1585,8 +2050,8 @@ function IsoGameCharacter:getPerkInfo(perk) end
 ---  Return the current lvl of a perk (skill)
 ---
 --- @param perks Perk
---- @return int
---- @overload fun(self: IsoGameCharacter, perks: Perk): int
+--- @return integer
+--- @overload fun(self: IsoGameCharacter, perks: Perk): integer
 function IsoGameCharacter:getPerkLevel(perks) end
 
 --- @public
@@ -1594,15 +2059,21 @@ function IsoGameCharacter:getPerkLevel(perks) end
 function IsoGameCharacter:getPerkList() end
 
 --- @public
---- @return int
+--- @param arg0 Perk
+--- @return number
+--- @overload fun(self: IsoGameCharacter, arg0: Perk): number
+function IsoGameCharacter:getPerkToUnit(arg0) end
+
+--- @public
+--- @return integer
 function IsoGameCharacter:getPersistentOutfitID() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getPreviousActionContextStateName() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getPreviousStateName() end
 
 --- @public
@@ -1611,48 +2082,69 @@ function IsoGameCharacter:getPreviousStateName() end
 function IsoGameCharacter:getPrimaryHandItem() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getPrimaryHandType() end
+
+--- @public
+--- @return RagdollController
+function IsoGameCharacter:getRagdollController() end
 
 --- @public
 --- @return Outfit
 function IsoGameCharacter:getRandomDefaultOutfit() end
 
 --- @public
+--- @return HashMap
+--- @overload fun(self: IsoGameCharacter): HashMap
+function IsoGameCharacter:getReadLiterature() end
+
+--- @public
 --- @return ArrayList
 function IsoGameCharacter:getReadyModelData() end
 
 --- @public
---- @return int the ReanimAnimDelay
+--- @return integer the ReanimAnimDelay
 function IsoGameCharacter:getReanimAnimDelay() end
 
 --- @public
---- @return int the ReanimAnimFrame
+--- @return integer the ReanimAnimFrame
 function IsoGameCharacter:getReanimAnimFrame() end
 
 --- @public
---- @return float the ReanimateTimer
+--- @return number the ReanimateTimer
 function IsoGameCharacter:getReanimateTimer() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoGameCharacter): float
+--- @return IsoGameCharacter
+function IsoGameCharacter:getReanimatedCorpse() end
+
+--- @public
+--- @return number
+--- @overload fun(self: IsoGameCharacter): number
 function IsoGameCharacter:getRecoilDelay() end
 
 --- @public
---- @return float
+--- @return number
+function IsoGameCharacter:getRecoilVarX() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getRecoilVarY() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getRecoveryMod() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getReduceInfectionPower() end
 
 --- @public
---- @return int the RemoteID
+--- @return integer the RemoteID
 function IsoGameCharacter:getRemoteID() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getRunSpeedModifier() end
 
 --- @public
@@ -1661,8 +2153,8 @@ function IsoGameCharacter:getRunSpeedModifier() end
 function IsoGameCharacter:getSafety() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoGameCharacter): String
+--- @return string
+--- @overload fun(self: IsoGameCharacter): string
 function IsoGameCharacter:getSayLine() end
 
 --- @public
@@ -1671,38 +2163,74 @@ function IsoGameCharacter:getSayLine() end
 function IsoGameCharacter:getSecondaryHandItem() end
 
 --- @public
---- @return String
+--- @return string
 function IsoGameCharacter:getSecondaryHandType() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getSeeNearbyCharacterDistance() end
+
+--- @public
+--- @return string
+function IsoGameCharacter:getSharedGrappleAnimNode() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getSharedGrappleAnimTime() end
+
+--- @public
+--- @return string
+function IsoGameCharacter:getSharedGrappleType() end
 
 --- @public
 ---
 ---  The character's current shoulder-twist angle, in degrees.
 ---
---- @return float
+--- @return number
 function IsoGameCharacter:getShoulderTwist() end
 
 --- @public
---- @return float
+--- @return number
+function IsoGameCharacter:getShoulderTwistWeight() end
+
+--- @public
+--- @return string
+function IsoGameCharacter:getShoutItemModel() end
+
+--- @public
+--- @return string
+function IsoGameCharacter:getShoutType() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getShovingMod() end
 
 --- @public
---- @return float the SleepingTabletDelta
+--- @return IsoDirections
+function IsoGameCharacter:getSitOnFurnitureDirection() end
+
+--- @public
+--- @return IsoObject
+function IsoGameCharacter:getSitOnFurnitureObject() end
+
+--- @public
+--- @return number the SleepingTabletDelta
 function IsoGameCharacter:getSleepingTabletDelta() end
 
 --- @public
---- @return float the SleepingTabletEffect
+--- @return number the SleepingTabletEffect
 function IsoGameCharacter:getSleepingTabletEffect() end
 
 --- @public
---- @return float the slowFactor
+--- @return number the slowFactor
 function IsoGameCharacter:getSlowFactor() end
 
 --- @public
---- @return float the slowTimer
+--- @return number the slowTimer
 function IsoGameCharacter:getSlowTimer() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getSneakSpotMod() end
 
 --- @public
@@ -1710,15 +2238,15 @@ function IsoGameCharacter:getSneakSpotMod() end
 function IsoGameCharacter:getSpeakColour() end
 
 --- @public
---- @return float the SpeakTime
+--- @return number the SpeakTime
 function IsoGameCharacter:getSpeakTime() end
 
 --- @public
---- @return float the speedMod
+--- @return number the speedMod
 function IsoGameCharacter:getSpeedMod() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getSprintMod() end
 
 --- @public
@@ -1731,7 +2259,7 @@ function IsoGameCharacter:getSpriteDef() end
 function IsoGameCharacter:getSquare() end
 
 --- @public
---- @return float the staggerTimeMod
+--- @return number the staggerTimeMod
 function IsoGameCharacter:getStaggerTimeMod() end
 
 --- @public
@@ -1749,23 +2277,43 @@ function IsoGameCharacter:getStateMachineParams(state) end
 function IsoGameCharacter:getStats() end
 
 --- @public
---- @return int
+--- @param arg0 string
+--- @return IAnimationVariableSource
+function IsoGameCharacter:getSubVariableSource(arg0) end
+
+--- @public
+--- @return integer
+--- @overload fun(self: IsoGameCharacter, arg0: boolean): integer
 function IsoGameCharacter:getSurroundingAttackingZombies() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGameCharacter:getSurvivorKills() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoGameCharacter): String
+--- @return string
+--- @overload fun(self: IsoGameCharacter): string
 function IsoGameCharacter:getTalkerType() end
+
+--- @public
+--- @param arg0 Vector3
+--- @return Vector3
+--- @overload fun(self: IsoGameCharacter, arg0: Vector3): Vector3
+--- @overload fun(self: IsoGameCharacter, arg0: Vector3): Vector3
+--- @overload fun(self: IsoGameCharacter, arg0: Vector3): Vector3
+function IsoGameCharacter:getTargetGrapplePos(arg0) end
+
+--- @public
+--- @param arg0 Vector2
+--- @return Vector2
+--- @overload fun(self: IsoGameCharacter, arg0: Vector2): Vector2
+function IsoGameCharacter:getTargetGrappleRotation(arg0) end
 
 --- @public
 ---
 ---  The desired twist, unclamped, in degrees.
 ---
---- @return float
+--- @return number
 function IsoGameCharacter:getTargetTwist() end
 
 --- @public
@@ -1773,7 +2321,7 @@ function IsoGameCharacter:getTargetTwist() end
 function IsoGameCharacter:getTeleport() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getTemperature() end
 
 --- @public
@@ -1781,32 +2329,32 @@ function IsoGameCharacter:getTemperature() end
 function IsoGameCharacter:getTextureCreator() end
 
 --- @public
---- @return double
+--- @return number
 function IsoGameCharacter:getThirstMultiplier() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGameCharacter:getThreatLevel() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoGameCharacter): float
+--- @return number
+--- @overload fun(self: IsoGameCharacter): number
 function IsoGameCharacter:getTimeSinceLastSmoke() end
 
 --- @public
---- @return int the TimeThumping
+--- @return integer the TimeThumping
 function IsoGameCharacter:getTimeThumping() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getTimedActionTimeModifier() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getTorchStrength() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getTotalBlood() end
 
 --- @public
@@ -1815,19 +2363,19 @@ function IsoGameCharacter:getTotalBlood() end
 function IsoGameCharacter:getTraits() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getTurnDelta() end
 
 --- @public
 ---
 ---  The character's current twist angle, in degrees.
 ---
---- @return float
+--- @return number
 function IsoGameCharacter:getTwist() end
 
 --- @public
---- @return String
---- @overload fun(self: IsoGameCharacter): String
+--- @return string
+--- @overload fun(self: IsoGameCharacter): string
 function IsoGameCharacter:getUID() end
 
 --- @public
@@ -1839,14 +2387,14 @@ function IsoGameCharacter:getUseHandWeapon() end
 function IsoGameCharacter:getUsedItemsOn() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoGameCharacter:getUserNameHeight() end
 
 --- @public
 ---
 ---  Description copied from interface: IAnimationVariableSource
 ---
---- @param key String
+--- @param key string
 --- @return IAnimationVariableSlot
 --- @overload fun(self: IsoGameCharacter, handle: AnimationVariableHandle): IAnimationVariableSlot
 function IsoGameCharacter:getVariable(key) end
@@ -1855,26 +2403,26 @@ function IsoGameCharacter:getVariable(key) end
 ---
 ---  Description copied from interface: IAnimationVariableSource
 ---
---- @param name String
+--- @param name string
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: boolean): boolean
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: boolean): boolean
 function IsoGameCharacter:getVariableBoolean(name) end
 
 --- @public
 ---
 ---  Description copied from interface: IAnimationVariableSource
 ---
---- @param name String
---- @param defaultVal float
---- @return float
+--- @param name string
+--- @param defaultVal number
+--- @return number
 function IsoGameCharacter:getVariableFloat(name, defaultVal) end
 
 --- @public
 ---
 ---  Description copied from interface: IAnimationVariableSource
 ---
---- @param name String
---- @return String
+--- @param name string
+--- @return string
 function IsoGameCharacter:getVariableString(name) end
 
 --- @public
@@ -1897,20 +2445,27 @@ function IsoGameCharacter:getVisual() end
 function IsoGameCharacter:getWaterSource(items) end
 
 --- @public
---- @return int
+--- @return integer
+--- @overload fun(self: IsoGameCharacter): integer
+--- @overload fun(self: IsoGameCharacter, arg0: HandWeapon): integer
+--- @overload fun(self: IsoGameCharacter, arg0: HandWeapon): integer
 function IsoGameCharacter:getWeaponLevel() end
 
 --- @public
---- @return float
+--- @return number
+function IsoGameCharacter:getWeatherHearingMultiplier() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getWeightMod() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoGameCharacter): float
+--- @return number
+--- @overload fun(self: IsoGameCharacter): number
 function IsoGameCharacter:getWeldingSoundMod() end
 
 --- @public
---- @param location String
+--- @param location string
 --- @return InventoryItem
 function IsoGameCharacter:getWornItem(location) end
 
@@ -1919,7 +2474,29 @@ function IsoGameCharacter:getWornItem(location) end
 function IsoGameCharacter:getWornItems() end
 
 --- @public
---- @return float
+--- @return number
+function IsoGameCharacter:getWornItemsHearingModifier() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getWornItemsHearingMultiplier() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getWornItemsVisionModifier() end
+
+--- @public
+--- @return number
+function IsoGameCharacter:getWornItemsVisionMultiplier() end
+
+--- @public
+--- @return IGrappleable
+--- @overload fun(self: IsoGameCharacter): BaseGrappleable
+--- @overload fun(self: IsoGameCharacter): IGrappleable
+function IsoGameCharacter:getWrappedGrappleable() end
+
+--- @public
+--- @return number
 function IsoGameCharacter:getX() end
 
 --- @public
@@ -1928,22 +2505,22 @@ function IsoGameCharacter:getX() end
 function IsoGameCharacter:getXp() end
 
 --- @public
---- @param level int
---- @return int
---- @overload fun(self: IsoGameCharacter, level: int): int
+--- @param level integer
+--- @return integer
+--- @overload fun(self: IsoGameCharacter, level: integer): integer
 function IsoGameCharacter:getXpForLevel(level) end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getY() end
 
 --- @public
---- @return float
+--- @return number
 function IsoGameCharacter:getZ() end
 
 --- @public
---- @return int the ZombieKills
---- @overload fun(self: IsoGameCharacter): int the ZombieKills
+--- @return integer the ZombieKills
+--- @overload fun(self: IsoGameCharacter): integer the ZombieKills
 function IsoGameCharacter:getZombieKills() end
 
 --- @public
@@ -1952,18 +2529,33 @@ function IsoGameCharacter:hasActiveModel() end
 
 --- @public
 --- @return boolean
+--- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:hasAnimationPlayer() end
 
 --- @public
---- @param itemType String
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, itemType: String): boolean
+function IsoGameCharacter:hasAwkwardHands() end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+function IsoGameCharacter:hasBloodyClothing(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+function IsoGameCharacter:hasDirtyClothing(arg0) end
+
+--- @public
+--- @param itemType string
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter, itemType: string): boolean
 function IsoGameCharacter:hasEquipped(itemType) end
 
 --- @public
---- @param tag String
+--- @param tag string
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, tag: String): boolean
+--- @overload fun(self: IsoGameCharacter, tag: string): boolean
 function IsoGameCharacter:hasEquippedTag(tag) end
 
 --- @public
@@ -1975,10 +2567,10 @@ function IsoGameCharacter:hasFootInjury() end
 function IsoGameCharacter:hasHitReaction() end
 
 --- @public
---- @param type String
---- @param count int
+--- @param type string
+--- @param count integer
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, type: String, count: int): boolean
+--- @overload fun(self: IsoGameCharacter, type: string, count: integer): boolean
 function IsoGameCharacter:hasItems(type, count) end
 
 --- @public
@@ -1990,23 +2582,28 @@ function IsoGameCharacter:hasPath() end
 function IsoGameCharacter:hasTimedActions() end
 
 --- @public
+--- @param arg0 string
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter, arg0: string): boolean
+function IsoGameCharacter:hasWornTag(arg0) end
+
+--- @public
 --- @param hitHead boolean
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, hitHead: boolean, forcedItem: String): boolean
 function IsoGameCharacter:helmetFall(hitHead) end
 
 --- @public
 --- @param weapon HandWeapon
 --- @param wielder IsoGameCharacter
 --- @param bIgnoreDamage boolean
---- @param damage float
+--- @param damage number
 --- @param bRemote boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:hitConsequences(weapon, wielder, bIgnoreDamage, damage, bRemote) end
 
 --- @public
---- @param groupName String
---- @return void
+--- @param groupName string
+--- @return nil
 function IsoGameCharacter:initAttachedItems(groupName) end
 
 --- @public
@@ -2014,19 +2611,23 @@ function IsoGameCharacter:initAttachedItems(groupName) end
 function IsoGameCharacter:initLightInfo2() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:initSpritePartsEmpty() end
 
 --- @public
---- @param bodyLocationGroupName String
---- @return void
+--- @param bodyLocationGroupName string
+--- @return nil
 function IsoGameCharacter:initWornItems(bodyLocationGroupName) end
 
 --- @public
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isAboveTopOfStairs() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isActuallyAttackingWithMeleeWeapon() end
 
 --- @public
 --- @return boolean
@@ -2051,8 +2652,24 @@ function IsoGameCharacter:isAnimForecasted() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isAnimRecorderActive() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isAnimal() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isAnimatingBackwards() end
+
+--- @public
+--- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isAnimationRecorderActive() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isAnimationUpdatingThisFrame() end
 
 --- @public
 --- @return boolean the Asleep
@@ -2064,10 +2681,6 @@ function IsoGameCharacter:isAsleep() end
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter, item: InventoryItem): boolean
 function IsoGameCharacter:isAttachedItem(item) end
-
---- @public
---- @return boolean
-function IsoGameCharacter:isAttackAnim() end
 
 --- @public
 --- @return boolean the AttackWasSuperAttack
@@ -2089,6 +2702,15 @@ function IsoGameCharacter:isBehaviourMoving() end
 --- @param chr IsoGameCharacter
 --- @return boolean
 function IsoGameCharacter:isBehind(chr) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isBeingGrappled() end
+
+--- @public
+--- @param arg0 IGrappleable
+--- @return boolean
+function IsoGameCharacter:isBeingGrappledBy(arg0) end
 
 --- @public
 --- @return boolean
@@ -2120,8 +2742,16 @@ function IsoGameCharacter:isBumped() end
 function IsoGameCharacter:isCanShout() end
 
 --- @public
+--- @return boolean
+function IsoGameCharacter:isCanUseBrushTool() end
+
+--- @public
 --- @return boolean the bClimbing
 function IsoGameCharacter:isClimbing() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isClimbingRope() end
 
 --- @public
 --- @param window IsoWindow
@@ -2153,7 +2783,23 @@ function IsoGameCharacter:isDeathDragDown() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isDeferredMovementEnabled() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isDisguised() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isDoContinueGrapple() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isDoDeathSound() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isDoGrapple() end
 
 --- @public
 --- @return boolean
@@ -2161,8 +2807,16 @@ function IsoGameCharacter:isDoingActionThatCanBeCancelled() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isDraggingCorpse() end
+
+--- @public
+--- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isDriving() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isEditingRagdoll() end
 
 --- @public
 --- @param item InventoryItem
@@ -2177,15 +2831,15 @@ function IsoGameCharacter:isEquipped(item) end
 function IsoGameCharacter:isEquippedClothing(item) end
 
 --- @public
---- @param x float
---- @param y float
---- @param dot float
+--- @param x number
+--- @param y number
+--- @param dot number
 --- @return boolean
 function IsoGameCharacter:isFacingLocation(x, y, dot) end
 
 --- @public
 --- @param object IsoObject
---- @param dot float
+--- @param dot number
 --- @return boolean
 function IsoGameCharacter:isFacingObject(object, dot) end
 
@@ -2200,8 +2854,17 @@ function IsoGameCharacter:isFarmingCheat() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isFastMoveCheat() end
+
+--- @public
+--- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isFemale() end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter): boolean
+function IsoGameCharacter:isFishingCheat() end
 
 --- @public
 --- @return boolean
@@ -2211,6 +2874,19 @@ function IsoGameCharacter:isForceShove() end
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isGodMod() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isGrappleThrowOutWindow() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isGrappling() end
+
+--- @public
+--- @param arg0 IGrappleable
+--- @return boolean
+function IsoGameCharacter:isGrapplingTarget(arg0) end
 
 --- @public
 --- @param item InventoryItem
@@ -2246,6 +2922,10 @@ function IsoGameCharacter:isIgnoreStaggerBack() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isIgnoringAimingInput() end
+
+--- @public
+--- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isInARoom() end
 
@@ -2272,6 +2952,10 @@ function IsoGameCharacter:isInvincible() end
 function IsoGameCharacter:isInvisible() end
 
 --- @public
+--- @return boolean
+function IsoGameCharacter:isInvulnerable() end
+
+--- @public
 --- @param item InventoryItem
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter, item: InventoryItem): boolean
@@ -2279,18 +2963,28 @@ function IsoGameCharacter:isItemInBothHands(item) end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isKilledByFall() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isKilledBySlicingWeapon() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isKnockedDown() end
 
 --- @public
---- @param guid String
+--- @param guid string
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, guid: String): boolean
+--- @overload fun(self: IsoGameCharacter, guid: string): boolean
 function IsoGameCharacter:isKnownMediaLine(guid) end
 
 --- @public
 --- @param item InventoryItem
 --- @return boolean
 --- @overload fun(self: IsoGameCharacter, item: InventoryItem): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: Item): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: Item): boolean
 function IsoGameCharacter:isKnownPoison(item) end
 
 --- @public
@@ -2302,12 +2996,18 @@ function IsoGameCharacter:isLastCollidedN() end
 function IsoGameCharacter:isLastCollidedW() end
 
 --- @public
+--- @param arg0 string
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter, arg0: string): boolean
+function IsoGameCharacter:isLiteratureRead(arg0) end
+
+--- @public
 --- @return boolean
 function IsoGameCharacter:isLocal() end
 
 --- @public
---- @param x int
---- @param y int
+--- @param x integer
+--- @param y integer
 --- @param flip boolean
 --- @return boolean
 function IsoGameCharacter:isMaskClicked(x, y, flip) end
@@ -2336,11 +3036,27 @@ function IsoGameCharacter:isNPC() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isNearSirenVehicle() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isOnBack() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isOnBed() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isOnDeathDone() end
 
 --- @public
 --- @return boolean the OnFire
 function IsoGameCharacter:isOnFire() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isOnFloor() end
 
 --- @public
 --- @return boolean
@@ -2352,8 +3068,40 @@ function IsoGameCharacter:isOnKillDone() end
 function IsoGameCharacter:isOutside() end
 
 --- @public
+--- @return boolean
+function IsoGameCharacter:isOverEncumbered() end
+
+--- @public
 --- @return boolean the pathing
 function IsoGameCharacter:isPathing() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isPerformingAnyGrappleAnimation() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isPerformingAttackAnimation() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isPerformingGrappleAnimation() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isPerformingGrappleGrabAnimation() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isPerformingHostileAnimation() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isPerformingShoveAnimation() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isPerformingStompAnimation() end
 
 --- @public
 --- @return boolean
@@ -2368,7 +3116,7 @@ function IsoGameCharacter:isPlayerMoving() end
 function IsoGameCharacter:isPlayingDeathSound() end
 
 --- @public
---- @param item String
+--- @param item string
 --- @return boolean
 function IsoGameCharacter:isPrimaryEquipped(item) end
 
@@ -2381,6 +3129,28 @@ function IsoGameCharacter:isPrimaryHandItem(item) end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isProne() end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter, arg0: boolean): boolean
+function IsoGameCharacter:isProtectedFromToxic() end
+
+--- @public
+--- @param arg0 IsoMovingObject
+--- @return boolean
+function IsoGameCharacter:isPushedByForSeparate(arg0) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isRagdoll() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isRagdollFall() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isRagdollSimulationActive() end
 
 --- @public
 --- @return boolean
@@ -2397,12 +3167,26 @@ function IsoGameCharacter:isReading() end
 function IsoGameCharacter:isReanim() end
 
 --- @public
---- @param name String
+--- @param arg0 string
 --- @return boolean
---- @overload fun(self: IsoGameCharacter, name: String): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: CraftRecipe): boolean
+function IsoGameCharacter:isRecipeActuallyKnown(arg0) end
+
+--- @public
+--- @param name string
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter, name: string): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: CraftRecipe): boolean
 --- @overload fun(self: IsoGameCharacter, recipe: Recipe): boolean
 --- @overload fun(self: IsoGameCharacter, recipe: Recipe): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: boolean): boolean
+--- @overload fun(self: IsoGameCharacter, arg0: CraftRecipe, arg1: boolean): boolean
 function IsoGameCharacter:isRecipeKnown(name) end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter): boolean
+function IsoGameCharacter:isResting() end
 
 --- @public
 --- @return boolean
@@ -2428,12 +3212,25 @@ function IsoGameCharacter:isSecondaryHandItem(item) end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isShoving() end
+
+--- @public
+--- @return boolean
 --- @overload fun(self: IsoGameCharacter): boolean
 function IsoGameCharacter:isShowAdminTag() end
 
 --- @public
+--- @param arg0 IsoObject
+--- @return boolean
+function IsoGameCharacter:isSitOnFurnitureObject(arg0) end
+
+--- @public
 --- @return boolean
 function IsoGameCharacter:isSitOnGround() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isSittingOnFurniture() end
 
 --- @public
 --- @return boolean
@@ -2451,6 +3248,10 @@ function IsoGameCharacter:isSpeaking() end
 --- @public
 --- @return boolean
 function IsoGameCharacter:isSprinting() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isStomping() end
 
 --- @public
 --- @return boolean
@@ -2476,7 +3277,29 @@ function IsoGameCharacter:isTimedActionInstantCheat() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isTurning() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isTurning90() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isTurningAround() end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: IsoGameCharacter): boolean
+function IsoGameCharacter:isTwisting() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isUnderVehicle() end
+
+--- @public
+--- @param arg0 number
+--- @return boolean
+function IsoGameCharacter:isUnderVehicleRadius(arg0) end
 
 --- @public
 --- @return boolean
@@ -2489,6 +3312,10 @@ function IsoGameCharacter:isUnlimitedEndurance() end
 
 --- @public
 --- @return boolean
+function IsoGameCharacter:isUpright() end
+
+--- @public
+--- @return boolean
 function IsoGameCharacter:isUsingWornItems() end
 
 --- @public
@@ -2496,10 +3323,14 @@ function IsoGameCharacter:isUsingWornItems() end
 ---  Compares (ignoring case) the value of the specified variable.  Returns TRUE if
 ---  match.
 ---
---- @param name String
---- @param val String
+--- @param name string
+--- @param val string
 --- @return boolean
 function IsoGameCharacter:isVariable(name, val) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isVehicleCollision() end
 
 --- @public
 --- @param testVehicle BaseVehicle
@@ -2509,6 +3340,23 @@ function IsoGameCharacter:isVehicleCollisionActive(testVehicle) end
 --- @public
 --- @return boolean the VisibleToNPCs
 function IsoGameCharacter:isVisibleToNPCs() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isWearingAwkwardGloves() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isWearingGlasses() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:isWearingGloves() end
+
+--- @public
+--- @param arg0 string
+--- @return boolean
+function IsoGameCharacter:isWearingTag(arg0) end
 
 --- @public
 --- @return boolean
@@ -2537,26 +3385,27 @@ function IsoGameCharacter:isbOnBed() end
 function IsoGameCharacter:isbUseParts() end
 
 --- @public
---- @param name String
+--- @param name string
 --- @return boolean
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: boolean): boolean
 function IsoGameCharacter:learnRecipe(name) end
 
 --- @public
 --- @param perk Perk
---- @return void
+--- @return nil
 function IsoGameCharacter:level0(perk) end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
+--- @param WorldVersion integer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param change String
+--- @param change string
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoGameCharacter:loadChange(change, bb) end
 
 --- @public
@@ -2565,80 +3414,97 @@ function IsoGameCharacter:loadChange(change, bb) end
 ---
 --- @param modelManager ModelManager Event sender.
 --- @param isCulled boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:onCullStateChanged(modelManager, isCulled) end
 
 --- @public
---- @param x int
---- @param y int
+--- @param arg0 HandWeapon
+--- @param arg1 IsoGameCharacter
+--- @param arg2 boolean
+--- @return boolean
+function IsoGameCharacter:onDeath_ShouldDoSplatterAndSounds(arg0, arg1, arg2) end
+
+--- @public
+--- @param x integer
+--- @param y integer
 --- @return boolean
 function IsoGameCharacter:onMouseLeftClick(x, y) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:onWornItemsChanged() end
 
 --- @public
 --- @param w IsoWindow
---- @return void
---- @overload fun(self: IsoGameCharacter, w: IsoWindow): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, w: IsoWindow): nil
 function IsoGameCharacter:openWindow(w) end
 
 --- @public
 --- @param target IsoGameCharacter
---- @return void
+--- @return nil
 function IsoGameCharacter:pathToCharacter(target) end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
---- @return void
---- @overload fun(self: IsoGameCharacter, x: int, y: int, z: int): void
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, x: integer, y: integer, z: integer): nil
 function IsoGameCharacter:pathToLocation(x, y, z) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
---- @return void
---- @overload fun(self: IsoGameCharacter, x: float, y: float, z: float): void
+--- @param x number
+--- @param y number
+--- @param z number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, x: number, y: number, z: number): nil
 function IsoGameCharacter:pathToLocationF(x, y, z) end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
---- @return void
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return nil
 function IsoGameCharacter:pathToSound(x, y, z) end
 
 --- @public
---- @return void
+--- @param arg0 IsoDeadBody
+--- @return nil
+function IsoGameCharacter:pickUpCorpse(arg0) end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:playBloodSplatterSound() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:playDeadSound() end
 
 --- @public
---- @param emote String
---- @return void
+--- @param arg0 InventoryItem
+--- @return integer
+function IsoGameCharacter:playDropItemSound(arg0) end
+
+--- @public
+--- @param emote string
+--- @return nil
 function IsoGameCharacter:playEmote(emote) end
 
 --- @public
---- @return void
+--- @return integer
 function IsoGameCharacter:playHurtSound() end
 
 --- @public
---- @param file String
---- @return long
---- @overload fun(self: IsoGameCharacter, file: String): long
+--- @param file string
+--- @return integer
+--- @overload fun(self: IsoGameCharacter, file: string): integer
 function IsoGameCharacter:playSound(file) end
 
 --- @public
---- @param file String
---- @return long
---- @overload fun(self: IsoGameCharacter, file: String): long
+--- @param file string
+--- @return integer
+--- @overload fun(self: IsoGameCharacter, file: string): integer
 function IsoGameCharacter:playSoundLocal(file) end
 
 --- @public
@@ -2647,50 +3513,62 @@ function IsoGameCharacter:playbackRecordCurrentStateSnapshot() end
 
 --- @public
 --- @param snapshot ActionStateSnapshot
---- @return void
+--- @return nil
 function IsoGameCharacter:playbackSetCurrentStateSnapshot(snapshot) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:postUpdateEquippedTextures() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:postUpdateModelTextures() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:postupdate() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:preupdate() end
 
 --- @public
 --- @param weapon HandWeapon
 --- @param wielder IsoGameCharacter
---- @param damageSplit float
+--- @param damageSplit number
 --- @param bIgnoreDamage boolean
---- @param modDelta float
---- @return float
+--- @param modDelta number
+--- @return number
 function IsoGameCharacter:processHitDamage(weapon, wielder, damageSplit, bIgnoreDamage, modDelta) end
 
 --- @public
 --- @param b ByteBuffer
---- @return String
+--- @return string
 function IsoGameCharacter:readInventory(b) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:releaseAnimationPlayer() end
 
 --- @public
---- @return void
+--- @return nil
+function IsoGameCharacter:releaseBallisticsController() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:releaseBallisticsTarget() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:releaseRagdollController() end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:reloadOutfit() end
 
 --- @public
 --- @param item InventoryItem
---- @return void
+--- @return nil
 function IsoGameCharacter:removeAttachedItem(item) end
 
 --- @public
@@ -2700,854 +3578,1035 @@ function IsoGameCharacter:removeAttachedItem(item) end
 function IsoGameCharacter:removeFromHands(item) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:removeFromWorld() end
 
 --- @public
---- @param guid String
---- @return void
---- @overload fun(self: IsoGameCharacter, guid: String): void
+--- @param guid string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, guid: string): nil
 function IsoGameCharacter:removeKnownMediaLine(guid) end
 
 --- @public
 --- @param item InventoryItem
---- @return void
---- @overload fun(self: IsoGameCharacter, item: InventoryItem, forceDropTooHeavy: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, item: InventoryItem, forceDropTooHeavy: boolean): nil
 function IsoGameCharacter:removeWornItem(item) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param col ColorInfo
 --- @param bDoChild boolean
 --- @param bWallLightingPass boolean
 --- @param shader Shader
---- @return void
+--- @return nil
 function IsoGameCharacter:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param lightInfo ColorInfo
---- @return void
+--- @return nil
 function IsoGameCharacter:renderObjectPicker(x, y, z, lightInfo) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:renderServerGUI() end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
---- @return void
+--- @param x number
+--- @param y number
+--- @param z number
+--- @return nil
 function IsoGameCharacter:renderShadow(x, y, z) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:renderlast() end
 
 --- @public
---- @param name String
---- @return void
---- @overload fun(self: IsoGameCharacter, name: String): void
+--- @param name string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, name: string): nil
 function IsoGameCharacter:reportEvent(name) end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+function IsoGameCharacter:resetAimingDelay() end
+
+--- @public
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:resetBeardGrowingTime() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:resetBodyDamageRemote() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:resetEquippedHandsModels() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:resetHairGrowingTime() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:resetModel() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter): nil
 function IsoGameCharacter:resetModelNextFrame() end
 
 --- @public
 --- @param output ByteBuffer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param change String
---- @param tbl KahluaTable
+--- @param change string
+--- @param tbl table
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoGameCharacter:saveChange(change, tbl, bb) end
 
 --- @public
---- @return void
-function IsoGameCharacter:sendStopBurning() end
-
---- @public
---- @param item String
---- @return void
-function IsoGameCharacter:serverRemoveItemFromZombie(item) end
-
---- @public
---- @param age int
---- @return void
+--- @param age integer
+--- @return nil
 function IsoGameCharacter:setAge(age) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setAimAtFloor(b) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setAimingDelay(arg0) end
+
+--- @public
 --- @param AllowConversation boolean the AllowConversation to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setAllowConversation(AllowConversation) end
 
 --- @public
---- @param fullType String
---- @param pages int
---- @return void
---- @overload fun(self: IsoGameCharacter, fullType: String, pages: int): void
+--- @param fullType string
+--- @param pages integer
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, fullType: string, pages: integer): nil
 function IsoGameCharacter:setAlreadyReadPages(fullType, pages) end
 
 --- @public
---- @param timeMs int
---- @return void
+--- @param timeMs integer
+--- @return nil
 function IsoGameCharacter:setAnimForecasted(timeMs) end
 
 --- @public
+--- @param arg0 boolean
+--- @param arg1 boolean
+--- @return nil
+function IsoGameCharacter:setAnimRecorderActive(arg0, arg1) end
+
+--- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setAnimated(b) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setAnimatingBackwards(arg0) end
+
+--- @public
 --- @param Asleep boolean the Asleep to set
---- @return void
---- @overload fun(self: IsoGameCharacter, Asleep: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, Asleep: boolean): nil
 function IsoGameCharacter:setAsleep(Asleep) end
 
 --- @public
---- @param location String
+--- @param location string
 --- @param item InventoryItem
---- @return void
+--- @return nil
 function IsoGameCharacter:setAttachedItem(location, item) end
 
 --- @public
 --- @param other AttachedItems
---- @return void
+--- @return nil
 function IsoGameCharacter:setAttachedItems(other) end
 
 --- @public
---- @param attackAnim boolean
---- @return void
-function IsoGameCharacter:setAttackAnim(attackAnim) end
-
---- @public
 --- @param attackTargetSquare IsoGridSquare the attackTargetSquare to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setAttackTargetSquare(attackTargetSquare) end
 
 --- @public
 --- @param AttackWasSuperAttack boolean the AttackWasSuperAttack to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setAttackWasSuperAttack(AttackWasSuperAttack) end
 
 --- @public
 --- @param AttackedBy IsoGameCharacter the AttackedBy to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setAttackedBy(AttackedBy) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setAutoWalk(b) end
 
 --- @public
 --- @param v Vector2
---- @return void
+--- @return nil
 function IsoGameCharacter:setAutoWalkDirection(v) end
 
 --- @public
 --- @param avoid boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setAvoidDamage(avoid) end
 
 --- @public
 --- @param bed IsoObject
---- @return void
---- @overload fun(self: IsoGameCharacter, bed: IsoObject): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, bed: IsoObject): nil
 function IsoGameCharacter:setBed(bed) end
 
 --- @public
---- @param bedType String
---- @return void
---- @overload fun(self: IsoGameCharacter, bedType: String): void
+--- @param bedType string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, bedType: string): nil
 function IsoGameCharacter:setBedType(bedType) end
 
 --- @public
---- @param beenMovingFor float
---- @return void
+--- @param beenMovingFor number
+--- @return nil
 function IsoGameCharacter:setBeenMovingFor(beenMovingFor) end
 
 --- @public
---- @param beenSprintingFor float
---- @return void
+--- @param beenSprintingFor number
+--- @return nil
 function IsoGameCharacter:setBeenSprintingFor(beenSprintingFor) end
 
 --- @public
---- @param BetaDelta float the BetaDelta to set
---- @return void
+--- @param BetaDelta number the BetaDelta to set
+--- @return nil
 function IsoGameCharacter:setBetaDelta(BetaDelta) end
 
 --- @public
---- @param BetaEffect float the BetaEffect to set
---- @return void
+--- @param BetaEffect number the BetaEffect to set
+--- @return nil
 function IsoGameCharacter:setBetaEffect(BetaEffect) end
 
 --- @public
---- @param BloodImpactX float the BloodImpactX to set
---- @return void
+--- @param BloodImpactX number the BloodImpactX to set
+--- @return nil
 function IsoGameCharacter:setBloodImpactX(BloodImpactX) end
 
 --- @public
---- @param BloodImpactY float the BloodImpactY to set
---- @return void
+--- @param BloodImpactY number the BloodImpactY to set
+--- @return nil
 function IsoGameCharacter:setBloodImpactY(BloodImpactY) end
 
 --- @public
---- @param BloodImpactZ float the BloodImpactZ to set
---- @return void
+--- @param BloodImpactZ number the BloodImpactZ to set
+--- @return nil
 function IsoGameCharacter:setBloodImpactZ(BloodImpactZ) end
 
 --- @public
 --- @param bloodSplat IsoSprite the bloodSplat to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setBloodSplat(bloodSplat) end
 
 --- @public
 --- @param buildCheat boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, buildCheat: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, buildCheat: boolean): nil
 function IsoGameCharacter:setBuildCheat(buildCheat) end
 
 --- @public
 --- @param val boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setBumpDone(val) end
 
 --- @public
 --- @param val boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setBumpFall(val) end
 
 --- @public
---- @param val String
---- @return void
+--- @param val string
+--- @return nil
 function IsoGameCharacter:setBumpFallType(val) end
 
 --- @public
 --- @param val boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setBumpStaggered(val) end
 
 --- @public
---- @param bumpType String
---- @return void
+--- @param bumpType string
+--- @return nil
 function IsoGameCharacter:setBumpType(bumpType) end
 
 --- @public
 --- @param bumpedChr IsoGameCharacter
---- @return void
+--- @return nil
 function IsoGameCharacter:setBumpedChr(bumpedChr) end
 
 --- @public
 --- @param canShout boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setCanShout(canShout) end
 
 --- @public
---- @param clickSound String
---- @return void
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setCanUseBrushTool(arg0) end
+
+--- @public
+--- @param clickSound string
+--- @return nil
 function IsoGameCharacter:setClickSound(clickSound) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setClimbRopeTime(arg0) end
+
+--- @public
 --- @param item InventoryItem
---- @return void
+--- @return nil
 function IsoGameCharacter:setClothingItem_Back(item) end
 
 --- @public
 --- @param item InventoryItem the ClothingItem_Feet to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setClothingItem_Feet(item) end
 
 --- @public
 --- @param item InventoryItem the ClothingItem_Hands to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setClothingItem_Hands(item) end
 
 --- @public
 --- @param item InventoryItem the ClothingItem_Head to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setClothingItem_Head(item) end
 
 --- @public
 --- @param item InventoryItem the ClothingItem_Legs to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setClothingItem_Legs(item) end
 
 --- @public
 --- @param item InventoryItem
---- @return void
+--- @return nil
 function IsoGameCharacter:setClothingItem_Torso(item) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setCorpseSicknessRate(arg0) end
+
+--- @public
 --- @param isCrit boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setCriticalHit(isCrit) end
 
 --- @public
---- @param dangerLevels float the dangerLevels to set
---- @return void
+--- @param dangerLevels number the dangerLevels to set
+--- @return nil
 function IsoGameCharacter:setDangerLevels(dangerLevels) end
 
 --- @public
 --- @param dragDown boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setDeathDragDown(dragDown) end
 
 --- @public
 --- @param monitor AnimatorDebugMonitor
---- @return void
---- @overload fun(self: IsoGameCharacter, monitor: AnimatorDebugMonitor): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, monitor: AnimatorDebugMonitor): nil
 function IsoGameCharacter:setDebugMonitor(monitor) end
 
 --- @public
---- @return void
---- @overload fun(self: IsoGameCharacter, defaultState: State): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, defaultState: State): nil
 function IsoGameCharacter:setDefaultState() end
 
 --- @public
---- @param delay float
---- @return void
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setDeferredMovementEnabled(arg0) end
+
+--- @public
+--- @param delay number
+--- @return nil
 function IsoGameCharacter:setDelayToSleep(delay) end
 
 --- @public
---- @param DepressDelta float the DepressDelta to set
---- @return void
+--- @param DepressDelta number the DepressDelta to set
+--- @return nil
 function IsoGameCharacter:setDepressDelta(DepressDelta) end
 
 --- @public
---- @param DepressEffect float the DepressEffect to set
---- @return void
+--- @param DepressEffect number the DepressEffect to set
+--- @return nil
 function IsoGameCharacter:setDepressEffect(DepressEffect) end
 
 --- @public
 --- @param descriptor SurvivorDesc the descriptor to set
---- @return void
---- @overload fun(self: IsoGameCharacter, descriptor: SurvivorDesc): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, descriptor: SurvivorDesc): nil
 function IsoGameCharacter:setDescriptor(descriptor) end
 
 --- @public
---- @param DieCount int the DieCount to set
---- @return void
+--- @param DieCount integer the DieCount to set
+--- @return nil
 function IsoGameCharacter:setDieCount(DieCount) end
 
 --- @public
 --- @param directions IsoDirections the dir to set
---- @return void
---- @overload fun(self: IsoGameCharacter, directions: IsoDirections): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, directions: IsoDirections): nil
 function IsoGameCharacter:setDir(directions) end
 
 --- @public
---- @param angleDegrees float
---- @return void
+--- @param angleDegrees number
+--- @return nil
 function IsoGameCharacter:setDirectionAngle(angleDegrees) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setDoContinueGrapple(arg0) end
+
+--- @public
 --- @param doDeathSound boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setDoDeathSound(doDeathSound) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setDoGrapple(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setDoRender(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setEditingRagdoll(arg0) end
+
+--- @public
 --- @param fallOnFront boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setFallOnFront(fallOnFront) end
 
 --- @public
---- @param fallTime float the fallTime to set
---- @return void
+--- @param fallTime number the fallTime to set
+--- @return nil
 function IsoGameCharacter:setFallTime(fallTime) end
 
 --- @public
 --- @param b boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, b: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, b: boolean): nil
 function IsoGameCharacter:setFarmingCheat(b) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setFastMoveCheat(arg0) end
+
+--- @public
 --- @param isFemale boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, isFemale: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, isFemale: boolean): nil
 function IsoGameCharacter:setFemale(isFemale) end
 
 --- @public
---- @param FireKillRate float the FireKillRate to set
---- @return void
+--- @param FireKillRate number the FireKillRate to set
+--- @return nil
 function IsoGameCharacter:setFireKillRate(FireKillRate) end
 
 --- @public
---- @param FireSpreadProbability int the FireSpreadProbability to set
---- @return void
+--- @param arg0 string
+--- @return nil
+function IsoGameCharacter:setFireMode(arg0) end
+
+--- @public
+--- @param FireSpreadProbability integer the FireSpreadProbability to set
+--- @return nil
 function IsoGameCharacter:setFireSpreadProbability(FireSpreadProbability) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: boolean): nil
+function IsoGameCharacter:setFishingCheat(arg0) end
+
+--- @public
 --- @param FollowingTarget IsoGameCharacter the FollowingTarget to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setFollowingTarget(FollowingTarget) end
 
 --- @public
 --- @param forceShove boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setForceShove(forceShove) end
 
 --- @public
---- @param ForceWakeUpTime float the ForceWakeUpTime to set
---- @return void
---- @overload fun(self: IsoGameCharacter, ForceWakeUpTime: float): void
+--- @param ForceWakeUpTime number the ForceWakeUpTime to set
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, ForceWakeUpTime: number): nil
 function IsoGameCharacter:setForceWakeUpTime(ForceWakeUpTime) end
 
 --- @public
 --- @param dir Vector2 The character's new forward direction.
---- @return void
---- @overload fun(self: IsoGameCharacter, x: float, y: float): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, x: number, y: number): nil
 function IsoGameCharacter:setForwardDirection(dir) end
 
 --- @public
 --- @param b boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, b: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, b: boolean): nil
 function IsoGameCharacter:setGodMod(b) end
 
 --- @public
---- @param str String
---- @return void
---- @overload fun(self: IsoGameCharacter, str: String): void
---- @overload fun(self: IsoGameCharacter, str: String, dispTime: float): void
---- @overload fun(self: IsoGameCharacter, str: String, dispTime: float): void
---- @overload fun(self: IsoGameCharacter, str: String, r: int, g: int, b: int, dispTime: float): void
---- @overload fun(self: IsoGameCharacter, str: String, r: int, g: int, b: int, dispTime: float): void
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+function IsoGameCharacter:setGrappleDeferredOffset(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setGrapplePosOffsetForward(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function IsoGameCharacter:setGrappleResult(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setGrappleRotOffsetYaw(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setGrappleThrowOutWindow(arg0) end
+
+--- @public
+--- @param arg0 GrappleOffsetBehaviour
+--- @return nil
+function IsoGameCharacter:setGrappleoffsetBehaviour(arg0) end
+
+--- @public
+--- @param str string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, str: string): nil
+--- @overload fun(self: IsoGameCharacter, str: string, dispTime: number): nil
+--- @overload fun(self: IsoGameCharacter, str: string, dispTime: number): nil
+--- @overload fun(self: IsoGameCharacter, str: string, r: integer, g: integer, b: integer, dispTime: number): nil
+--- @overload fun(self: IsoGameCharacter, str: string, r: integer, g: integer, b: integer, dispTime: number): nil
 function IsoGameCharacter:setHaloNote(str) end
 
 --- @public
---- @param Health float the Health to set
---- @return void
+--- @param Health number the Health to set
+--- @return nil
 function IsoGameCharacter:setHealth(Health) end
 
 --- @public
 --- @param healthCheat boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, healthCheat: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, healthCheat: boolean): nil
 function IsoGameCharacter:setHealthCheat(healthCheat) end
 
 --- @public
 --- @param hideWeaponModel boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setHideWeaponModel(hideWeaponModel) end
 
 --- @public
+--- @param arg0 Vector2
+--- @return nil
+function IsoGameCharacter:setHitDir(arg0) end
+
+--- @public
 --- @param hitFromBehind boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setHitFromBehind(hitFromBehind) end
 
 --- @public
---- @param hitReaction String
---- @return void
+--- @param hitReaction string
+--- @return nil
 function IsoGameCharacter:setHitReaction(hitReaction) end
 
 --- @public
---- @param hurtSound String the hurtSound to set
---- @return void
+--- @param hurtSound string the hurtSound to set
+--- @return nil
 function IsoGameCharacter:setHurtSound(hurtSound) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setIgnoreAimingInput(b) end
 
 --- @public
 --- @param ignoreMovement boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setIgnoreMovement(ignoreMovement) end
 
 --- @public
 --- @param IgnoreStaggerBack boolean the IgnoreStaggerBack to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setIgnoreStaggerBack(IgnoreStaggerBack) end
 
 --- @public
 --- @param inventory ItemContainer the inventory to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setInventory(inventory) end
 
 --- @public
 --- @param invincible boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setInvincible(invincible) end
 
 --- @public
 --- @param b boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, b: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, b: boolean): nil
 function IsoGameCharacter:setInvisible(b) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setInvulnerable(arg0) end
+
+--- @public
 --- @param aIsAiming boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setIsAiming(aIsAiming) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setIsAnimal(arg0) end
+
+--- @public
 --- @param isAI boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setIsNPC(isAI) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setIsRagdoll(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: boolean): nil
+function IsoGameCharacter:setIsResting(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setKilledByFall(arg0) end
+
+--- @public
 --- @param bKnockedDown boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setKnockedDown(bKnockedDown) end
 
 --- @public
---- @param lastBump long
---- @return void
+--- @param lastBump integer
+--- @return nil
 function IsoGameCharacter:setLastBump(lastBump) end
 
 --- @public
 --- @param lastChatMessage ChatMessage
---- @return void
+--- @return nil
 function IsoGameCharacter:setLastChatMessage(lastChatMessage) end
 
 --- @public
 --- @param lastCollidedN boolean the lastCollidedN to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setLastCollidedN(lastCollidedN) end
 
 --- @public
 --- @param lastCollidedW boolean the lastCollidedW to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setLastCollidedW(lastCollidedW) end
 
 --- @public
---- @param lastFallSpeed float the lastFallSpeed to set
---- @return void
+--- @param lastFallSpeed number the lastFallSpeed to set
+--- @return nil
 function IsoGameCharacter:setLastFallSpeed(lastFallSpeed) end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
---- @return void
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return nil
 function IsoGameCharacter:setLastHeardSound(x, y, z) end
 
 --- @public
---- @param hitCount int
---- @return void
+--- @param arg0 IsoGameCharacter
+--- @return nil
+function IsoGameCharacter:setLastHitCharacter(arg0) end
+
+--- @public
+--- @param hitCount integer
+--- @return nil
 function IsoGameCharacter:setLastHitCount(hitCount) end
 
 --- @public
---- @param lastHourSleeped int
---- @return void
+--- @param lastHourSleeped integer
+--- @return nil
 function IsoGameCharacter:setLastHourSleeped(lastHourSleeped) end
 
 --- @public
---- @param LastLocalEnemies int the LastLocalEnemies to set
---- @return void
+--- @param LastLocalEnemies integer the LastLocalEnemies to set
+--- @return nil
 function IsoGameCharacter:setLastLocalEnemies(LastLocalEnemies) end
 
 --- @public
---- @param line String
---- @return void
+--- @param line string
+--- @return nil
 function IsoGameCharacter:setLastSpokenLine(line) end
 
 --- @public
---- @param LastZombieKills int the LastZombieKills to set
---- @return void
+--- @param LastZombieKills integer the LastZombieKills to set
+--- @return nil
 function IsoGameCharacter:setLastZombieKills(LastZombieKills) end
 
 --- @public
---- @param leaveBodyTimedown float the leaveBodyTimedown to set
---- @return void
+--- @param leaveBodyTimedown number the leaveBodyTimedown to set
+--- @return nil
 function IsoGameCharacter:setLeaveBodyTimedown(leaveBodyTimedown) end
 
 --- @public
 --- @param legsSprite IsoSprite the legsSprite to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setLegsSprite(legsSprite) end
 
 --- @public
---- @param LevelUpMultiplier float the LevelUpMultiplier to set
---- @return void
+--- @param LevelUpMultiplier number the LevelUpMultiplier to set
+--- @return nil
 function IsoGameCharacter:setLevelUpMultiplier(LevelUpMultiplier) end
 
 --- @public
---- @param llx float the llx to set
---- @return void
+--- @param llx number the llx to set
+--- @return nil
 function IsoGameCharacter:setLlx(llx) end
 
 --- @public
---- @param lly float the lly to set
---- @return void
+--- @param lly number the lly to set
+--- @return nil
 function IsoGameCharacter:setLly(lly) end
 
 --- @public
---- @param llz float the llz to set
---- @return void
+--- @param llz number the llz to set
+--- @return nil
 function IsoGameCharacter:setLlz(llz) end
-
---- @public
---- @param lrx float the lrx to set
---- @return void
-function IsoGameCharacter:setLrx(lrx) end
-
---- @public
---- @param lry float the lry to set
---- @return void
-function IsoGameCharacter:setLry(lry) end
 
 --- @public
 ---
 ---  Specify the maximum twist angle, in degrees.
 ---
---- @param degrees float
---- @return void
+--- @param degrees number
+--- @return nil
 function IsoGameCharacter:setMaxTwist(degrees) end
 
 --- @public
---- @param maxWeight int the maxWeight to set
---- @return void
+--- @param maxWeight integer the maxWeight to set
+--- @return nil
 function IsoGameCharacter:setMaxWeight(maxWeight) end
 
 --- @public
---- @param maxWeightBase int the maxWeightBase to set
---- @return void
+--- @param maxWeightBase integer the maxWeightBase to set
+--- @return nil
 function IsoGameCharacter:setMaxWeightBase(maxWeightBase) end
 
 --- @public
 --- @param mechanicsCheat boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, mechanicsCheat: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, mechanicsCheat: boolean): nil
 function IsoGameCharacter:setMechanicsCheat(mechanicsCheat) end
 
 --- @public
---- @param delay float
---- @return void
---- @overload fun(self: IsoGameCharacter, delay: float): void
+--- @param delay number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, delay: number): nil
 function IsoGameCharacter:setMeleeDelay(delay) end
 
 --- @public
---- @param target float
---- @return void
---- @overload fun(self: IsoGameCharacter, m: Metabolics): void
+--- @param target number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, m: Metabolics): nil
 function IsoGameCharacter:setMetabolicTarget(target) end
 
 --- @public
---- @param val float
---- @return void
+--- @param val number
+--- @return nil
 function IsoGameCharacter:setMomentumScalar(val) end
 
 --- @public
 --- @param b boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, b: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, b: boolean): nil
 function IsoGameCharacter:setMovablesCheat(b) end
 
 --- @public
---- @param moveDelta float
---- @return void
+--- @param moveDelta number
+--- @return nil
 function IsoGameCharacter:setMoveDelta(moveDelta) end
 
 --- @public
 --- @param moveForwardVec Vector2 the moveForwardVec to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setMoveForwardVec(moveForwardVec) end
 
 --- @public
 --- @param val boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setMoving(val) end
 
 --- @public
+--- @param arg0 string
+--- @param arg1 any
+--- @return nil
+function IsoGameCharacter:setMusicIntensityEventModData(arg0, arg1) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function IsoGameCharacter:setMuzzleFlashDuration(arg0) end
+
+--- @public
 --- @param newvalue boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setNPC(newvalue) end
 
 --- @public
---- @param NextWander int the NextWander to set
---- @return void
+--- @param NextWander integer the NextWander to set
+--- @return nil
 function IsoGameCharacter:setNextWander(NextWander) end
 
 --- @public
---- @param NumSurvivorsInVicinity int the NumSurvivorsInVicinity to set
---- @return void
+--- @param NumSurvivorsInVicinity integer the NumSurvivorsInVicinity to set
+--- @return nil
 function IsoGameCharacter:setNumSurvivorsInVicinity(NumSurvivorsInVicinity) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setOnBed(arg0) end
+
+--- @public
 --- @param done boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setOnDeathDone(done) end
 
 --- @public
 --- @param OnFire boolean the OnFire to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setOnFire(OnFire) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setOnFloor(arg0) end
+
+--- @public
 --- @param done boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setOnKillDone(done) end
 
 --- @public
---- @param PainDelta float the PainDelta to set
---- @return void
+--- @param PainDelta number the PainDelta to set
+--- @return nil
 function IsoGameCharacter:setPainDelta(PainDelta) end
 
 --- @public
---- @param PainEffect float the PainEffect to set
---- @return void
+--- @param PainEffect number the PainEffect to set
+--- @return nil
 function IsoGameCharacter:setPainEffect(PainEffect) end
 
 --- @public
 --- @param path Path
---- @return void
---- @overload fun(self: IsoGameCharacter, path: Path): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, path: Path): nil
 function IsoGameCharacter:setPath2(path) end
 
 --- @public
---- @param pathIndex int the pathIndex to set
---- @return void
+--- @param pathIndex integer the pathIndex to set
+--- @return nil
 function IsoGameCharacter:setPathIndex(pathIndex) end
 
 --- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setPathSpeed(arg0) end
+
+--- @public
 --- @param pathing boolean the pathing to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setPathing(pathing) end
 
 --- @public
---- @param Patience int the Patience to set
---- @return void
+--- @param Patience integer the Patience to set
+--- @return nil
 function IsoGameCharacter:setPatience(Patience) end
 
 --- @public
---- @param PatienceMax int the PatienceMax to set
---- @return void
+--- @param PatienceMax integer the PatienceMax to set
+--- @return nil
 function IsoGameCharacter:setPatienceMax(PatienceMax) end
 
 --- @public
---- @param PatienceMin int the PatienceMin to set
---- @return void
+--- @param PatienceMin integer the PatienceMin to set
+--- @return nil
 function IsoGameCharacter:setPatienceMin(PatienceMin) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setPerformingAttackAnimation(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setPerformingGrappleGrabAnimation(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setPerformingShoveAnimation(arg0) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setPerformingStompAnimation(arg0) end
+
+--- @public
 --- @param perks Perk
---- @param level int
---- @return void
---- @overload fun(self: IsoGameCharacter, perks: Perk, level: int): void
+--- @param level integer
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, perks: Perk, level: integer): nil
 function IsoGameCharacter:setPerkLevelDebug(perks, level) end
 
 --- @public
---- @param outfitID int
---- @return void
---- @overload fun(self: IsoGameCharacter, outfitID: int, init: boolean): void
+--- @param outfitID integer
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, outfitID: integer, init: boolean): nil
 function IsoGameCharacter:setPersistentOutfitID(outfitID) end
 
 --- @public
 --- @param playing boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setPlayingDeathSound(playing) end
 
 --- @public
 --- @param leftHandItem InventoryItem the leftHandItem to set
---- @return void
---- @overload fun(self: IsoGameCharacter, leftHandItem: InventoryItem): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, leftHandItem: InventoryItem): nil
 function IsoGameCharacter:setPrimaryHandItem(leftHandItem) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setRagdollFall(arg0) end
+
+--- @public
 --- @param val boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, val: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, val: boolean): nil
 function IsoGameCharacter:setRangedWeaponEmpty(val) end
 
 --- @public
 --- @param isReading boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, isReading: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, isReading: boolean): nil
 function IsoGameCharacter:setReading(isReading) end
 
 --- @public
 --- @param Reanim boolean the Reanim to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setReanim(Reanim) end
 
 --- @public
---- @param ReanimAnimDelay int the ReanimAnimDelay to set
---- @return void
+--- @param ReanimAnimDelay integer the ReanimAnimDelay to set
+--- @return nil
 function IsoGameCharacter:setReanimAnimDelay(ReanimAnimDelay) end
 
 --- @public
---- @param ReanimAnimFrame int the ReanimAnimFrame to set
---- @return void
+--- @param ReanimAnimFrame integer the ReanimAnimFrame to set
+--- @return nil
 function IsoGameCharacter:setReanimAnimFrame(ReanimAnimFrame) end
 
 --- @public
---- @param ReanimateTimer float the ReanimateTimer to set
---- @return void
+--- @param ReanimateTimer number the ReanimateTimer to set
+--- @return nil
 function IsoGameCharacter:setReanimateTimer(ReanimateTimer) end
 
 --- @public
---- @param recoilDelay float
---- @return void
---- @overload fun(self: IsoGameCharacter, recoilDelay: float): void
+--- @param recoilDelay number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, recoilDelay: number): nil
 function IsoGameCharacter:setRecoilDelay(recoilDelay) end
 
 --- @public
---- @param reduceInfectionPower float
---- @return void
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setRecoilVarX(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setRecoilVarY(arg0) end
+
+--- @public
+--- @param reduceInfectionPower number
+--- @return nil
 function IsoGameCharacter:setReduceInfectionPower(reduceInfectionPower) end
 
 --- @public
---- @param RemoteID int the RemoteID to set
---- @return void
+--- @param RemoteID integer the RemoteID to set
+--- @return nil
 function IsoGameCharacter:setRemoteID(RemoteID) end
 
 --- @public
 --- @param bRunning boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setRunning(bRunning) end
 
 --- @public
 --- @param safety Safety
---- @return void
---- @overload fun(self: IsoGameCharacter, safety: Safety): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, safety: Safety): nil
 function IsoGameCharacter:setSafety(safety) end
 
 --- @public
---- @param sayLine String the sayLine to set
---- @return void
+--- @param sayLine string the sayLine to set
+--- @return nil
 function IsoGameCharacter:setSayLine(sayLine) end
 
 --- @public
@@ -3557,240 +4616,312 @@ function IsoGameCharacter:setSayLine(sayLine) end
 ---  etc.
 ---
 --- @param isCulled boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setSceneCulled(isCulled) end
 
 --- @public
 --- @param rightHandItem InventoryItem the rightHandItem to set
---- @return void
---- @overload fun(self: IsoGameCharacter, rightHandItem: InventoryItem): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, rightHandItem: InventoryItem): nil
 function IsoGameCharacter:setSecondaryHandItem(rightHandItem) end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function IsoGameCharacter:setSharedGrappleAnimNode(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function IsoGameCharacter:setSharedGrappleAnimTime(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function IsoGameCharacter:setSharedGrappleType(arg0) end
+
+--- @public
 --- @param showAdminTag boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, showAdminTag: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, showAdminTag: boolean): nil
 function IsoGameCharacter:setShowAdminTag(showAdminTag) end
 
 --- @public
+--- @param arg0 IsoDirections
+--- @return nil
+function IsoGameCharacter:setSitOnFurnitureDirection(arg0) end
+
+--- @public
+--- @param arg0 IsoObject
+--- @return nil
+function IsoGameCharacter:setSitOnFurnitureObject(arg0) end
+
+--- @public
 --- @param sitOnGround boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setSitOnGround(sitOnGround) end
 
 --- @public
---- @param SleepingTabletDelta float the SleepingTabletDelta to set
---- @return void
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setSittingOnFurniture(arg0) end
+
+--- @public
+--- @param SleepingTabletDelta number the SleepingTabletDelta to set
+--- @return nil
 function IsoGameCharacter:setSleepingTabletDelta(SleepingTabletDelta) end
 
 --- @public
---- @param SleepingTabletEffect float the SleepingTabletEffect to set
---- @return void
+--- @param SleepingTabletEffect number the SleepingTabletEffect to set
+--- @return nil
 function IsoGameCharacter:setSleepingTabletEffect(SleepingTabletEffect) end
 
 --- @public
---- @param slowFactor float the slowFactor to set
---- @return void
+--- @param slowFactor number the slowFactor to set
+--- @return nil
 function IsoGameCharacter:setSlowFactor(slowFactor) end
 
 --- @public
---- @param slowTimer float the slowTimer to set
---- @return void
+--- @param slowTimer number the slowTimer to set
+--- @return nil
 function IsoGameCharacter:setSlowTimer(slowTimer) end
 
 --- @public
 --- @param bSneaking boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setSneaking(bSneaking) end
 
 --- @public
 --- @param SpeakColour Color the SpeakColour to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setSpeakColour(SpeakColour) end
 
 --- @public
 --- @param info ColorInfo
---- @return void
---- @overload fun(self: IsoGameCharacter, info: ColorInfo): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, info: ColorInfo): nil
 function IsoGameCharacter:setSpeakColourInfo(info) end
 
 --- @public
---- @param SpeakTime int the SpeakTime to set
---- @return void
+--- @param SpeakTime integer the SpeakTime to set
+--- @return nil
 function IsoGameCharacter:setSpeakTime(SpeakTime) end
 
 --- @public
 --- @param Speaking boolean the Speaking to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setSpeaking(Speaking) end
 
 --- @public
---- @param speedMod float the speedMod to set
---- @return void
+--- @param speedMod number the speedMod to set
+--- @return nil
 function IsoGameCharacter:setSpeedMod(speedMod) end
 
 --- @public
 --- @param bSprinting boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setSprinting(bSprinting) end
 
 --- @public
---- @param staggerTimeMod float the staggerTimeMod to set
---- @return void
+--- @param staggerTimeMod number the staggerTimeMod to set
+--- @return nil
 function IsoGameCharacter:setStaggerTimeMod(staggerTimeMod) end
 
 --- @public
 --- @param val boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setStateMachineLocked(val) end
 
 --- @public
 --- @param superAttack boolean the superAttack to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setSuperAttack(superAttack) end
 
 --- @public
---- @param survivorKills int
---- @return void
+--- @param survivorKills integer
+--- @return nil
 function IsoGameCharacter:setSurvivorKills(survivorKills) end
 
 --- @public
+--- @param arg0 Vector2
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: Vector2): nil
+function IsoGameCharacter:setTargetAndCurrentDirection(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: number, arg1: number, arg2: number): nil
+function IsoGameCharacter:setTargetGrapplePos(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @return nil
+function IsoGameCharacter:setTargetGrappleRotation(arg0, arg1) end
+
+--- @public
 --- @param _teleport NetworkTeleport
---- @return void
+--- @return nil
 function IsoGameCharacter:setTeleport(_teleport) end
 
 --- @public
---- @param t float
---- @return void
+--- @param t number
+--- @return nil
 function IsoGameCharacter:setTemperature(t) end
 
 --- @public
 --- @param textureCreator ModelInstanceTextureCreator
---- @return void
+--- @return nil
 function IsoGameCharacter:setTextureCreator(textureCreator) end
 
 --- @public
---- @param timeOfSleep float
---- @return void
+--- @param timeOfSleep number
+--- @return nil
 function IsoGameCharacter:setTimeOfSleep(timeOfSleep) end
 
 --- @public
---- @param timeSinceLastSmoke float
---- @return void
---- @overload fun(self: IsoGameCharacter, timeSinceLastSmoke: float): void
+--- @param timeSinceLastSmoke number
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, timeSinceLastSmoke: number): nil
 function IsoGameCharacter:setTimeSinceLastSmoke(timeSinceLastSmoke) end
 
 --- @public
---- @param TimeThumping int the TimeThumping to set
---- @return void
+--- @param TimeThumping integer the TimeThumping to set
+--- @return nil
 function IsoGameCharacter:setTimeThumping(TimeThumping) end
 
 --- @public
 --- @param b boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, b: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, b: boolean): nil
 function IsoGameCharacter:setTimedActionInstantCheat(b) end
 
 --- @public
---- @param m_turnDelta float
---- @return void
+--- @param m_turnDelta number
+--- @return nil
 function IsoGameCharacter:setTurnDelta(m_turnDelta) end
 
 --- @public
 --- @param unlimitedCarry boolean
---- @return void
---- @overload fun(self: IsoGameCharacter, unlimitedCarry: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, unlimitedCarry: boolean): nil
 function IsoGameCharacter:setUnlimitedCarry(unlimitedCarry) end
 
 --- @public
 --- @param unlimitedEndurance boolean
---- @return void
+--- @return nil
 function IsoGameCharacter:setUnlimitedEndurance(unlimitedEndurance) end
 
 --- @public
 --- @param useHandWeapon HandWeapon the useHandWeapon to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setUseHandWeapon(useHandWeapon) end
+
+--- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setUsePhysicHitReaction(arg0) end
 
 --- @public
 ---
 ---  Description copied from interface: IAnimationVariableMap
 ---
 --- @param var IAnimationVariableSlot
---- @return void
---- @overload fun(self: IsoGameCharacter, var: IAnimationVariableSlot): void
---- @overload fun(self: IsoGameCharacter, key: String, value: boolean): void
---- @overload fun(self: IsoGameCharacter, key: String, value: boolean): void
---- @overload fun(self: IsoGameCharacter, key: String, value: float): void
---- @overload fun(self: IsoGameCharacter, key: String, value: float): void
---- @overload fun(self: IsoGameCharacter, key: String, value: String): void
---- @overload fun(self: IsoGameCharacter, key: String, value: String): void
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: boolean, callbackGet: CallbackGetStrongTyped): void
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: float, callbackGet: CallbackGetStrongTyped): void
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: int, callbackGet: CallbackGetStrongTyped): void
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: String, callbackGet: CallbackGetStrongTyped): void
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: boolean, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): void
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: float, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): void
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: int, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): void
---- @overload fun(self: IsoGameCharacter, key: String, defaultVal: String, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, var: IAnimationVariableSlot): nil
+--- @overload fun(self: IsoGameCharacter, key: string, value: boolean): nil
+--- @overload fun(self: IsoGameCharacter, key: string, value: boolean): nil
+--- @overload fun(self: IsoGameCharacter, key: string, value: number): nil
+--- @overload fun(self: IsoGameCharacter, key: string, value: number): nil
+--- @overload fun(self: IsoGameCharacter, key: string, value: string): nil
+--- @overload fun(self: IsoGameCharacter, key: string, value: string): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: boolean, callbackGet: CallbackGetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: number, callbackGet: CallbackGetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: integer, callbackGet: CallbackGetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: string, callbackGet: CallbackGetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped, arg2: CallbackSetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped, arg2: CallbackSetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped, arg2: CallbackSetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: CallbackGetStrongTyped, arg2: CallbackSetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: boolean, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: number, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: integer, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): nil
+--- @overload fun(self: IsoGameCharacter, key: string, defaultVal: string, callbackGet: CallbackGetStrongTyped, callbackSet: CallbackSetStrongTyped): nil
 function IsoGameCharacter:setVariable(var) end
 
 --- @public
 --- @param v BaseVehicle
---- @return void
---- @overload fun(self: IsoGameCharacter, v: BaseVehicle): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, v: BaseVehicle): nil
 function IsoGameCharacter:setVehicle(v) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoGameCharacter:setVehicleCollision(arg0) end
+
+--- @public
 --- @param VisibleToNPCs boolean the VisibleToNPCs to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setVisibleToNPCs(VisibleToNPCs) end
 
 --- @public
---- @param location String
+--- @param location string
 --- @param item InventoryItem
---- @return void
---- @overload fun(self: IsoGameCharacter, location: String, item: InventoryItem, forceDropTooHeavy: boolean): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, location: string, item: InventoryItem, forceDropTooHeavy: boolean): nil
 function IsoGameCharacter:setWornItem(location, item) end
 
 --- @public
 --- @param other WornItems
---- @return void
+--- @return nil
 function IsoGameCharacter:setWornItems(other) end
 
 --- @public
 --- @param xp XP the xp to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setXp(xp) end
 
 --- @public
---- @param ZombieKills int the ZombieKills to set
---- @return void
+--- @param ZombieKills integer the ZombieKills to set
+--- @return nil
 function IsoGameCharacter:setZombieKills(ZombieKills) end
 
 --- @public
 --- @param bClimbing boolean the bClimbing to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setbClimbing(bClimbing) end
 
 --- @public
 --- @param bDoDefer boolean the bDoDefer to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setbDoDefer(bDoDefer) end
 
 --- @public
 --- @param bFalling boolean the bFalling to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setbFalling(bFalling) end
 
 --- @public
 --- @param bOnBed boolean the bOnBed to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setbOnBed(bOnBed) end
 
 --- @public
 --- @param bUseParts boolean the bUseParts to set
---- @return void
+--- @return nil
 function IsoGameCharacter:setbUseParts(bUseParts) end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:shouldBeFalling() end
 
 --- @public
 --- @return boolean
@@ -3817,45 +4948,64 @@ function IsoGameCharacter:shouldBecomeZombieAfterDeath() end
 function IsoGameCharacter:shouldDoInventory() end
 
 --- @public
+--- @param arg0 IsoGridSquare
+--- @return boolean
+function IsoGameCharacter:shouldIgnoreCollisionWithSquare(arg0) end
+
+--- @public
 --- @return boolean
 function IsoGameCharacter:shouldWaitToStartTimedAction() end
 
 --- @public
 --- @param part VehiclePart
---- @return void
---- @overload fun(self: IsoGameCharacter, part: VehiclePart): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, part: VehiclePart): nil
 function IsoGameCharacter:smashCarWindow(part) end
 
 --- @public
 --- @param w IsoWindow
---- @return void
---- @overload fun(self: IsoGameCharacter, w: IsoWindow): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, w: IsoWindow): nil
 function IsoGameCharacter:smashWindow(w) end
 
 --- @public
---- @param dist int
---- @param alpha float
---- @return void
+--- @param arg0 BodyPartType
+--- @return nil
+function IsoGameCharacter:spikePart(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return nil
+function IsoGameCharacter:spikePartIndex(arg0) end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:spinToZeroAllAnimNodes() end
+
+--- @public
+--- @param dist integer
+--- @param alpha number
+--- @return nil
 function IsoGameCharacter:splatBlood(dist, alpha) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:splatBloodFloor() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:splatBloodFloorBig() end
 
 --- @public
---- @param eventInstance long
+--- @param eventInstance integer
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
---- @return void
---- @overload fun(self: IsoGameCharacter, eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, eventInstance: integer, clip: GameSoundClip, parameterSet: BitSet): nil
 function IsoGameCharacter:startEvent(eventInstance, clip, parameterSet) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:startMuzzleFlash() end
 
 --- @public
@@ -3863,17 +5013,17 @@ function IsoGameCharacter:startMuzzleFlash() end
 function IsoGameCharacter:startPlaybackGameVariables() end
 
 --- @public
---- @param eventInstance long
+--- @param eventInstance integer
 --- @param clip GameSoundClip
 --- @param parameterSet BitSet
---- @return void
---- @overload fun(self: IsoGameCharacter, eventInstance: long, clip: GameSoundClip, parameterSet: BitSet): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, eventInstance: integer, clip: GameSoundClip, parameterSet: BitSet): nil
 function IsoGameCharacter:stopEvent(eventInstance, clip, parameterSet) end
 
 --- @public
---- @param eventInstance long
---- @return void
---- @overload fun(self: IsoGameCharacter, eventInstance: long): void
+--- @param eventInstance integer
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, eventInstance: integer): nil
 function IsoGameCharacter:stopOrTriggerSound(eventInstance) end
 
 --- @public
@@ -3887,55 +5037,143 @@ function IsoGameCharacter:testDefense(zomb) end
 
 --- @public
 --- @param target IsoMovingObject
---- @return String
+--- @return string
 function IsoGameCharacter:testDotSide(target) end
 
 --- @public
---- @return void
+--- @param arg0 IsoObject
+--- @return nil
+function IsoGameCharacter:throwGrappledTargetOutWindow(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, arg0: string): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: any): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: any): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: any, arg2: any): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: any, arg2: any): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: any, arg2: any, arg3: any): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: any, arg2: any, arg3: any): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
+--- @overload fun(self: IsoGameCharacter, arg0: string, arg1: any, arg2: any, arg3: any, arg4: any): nil
+function IsoGameCharacter:triggerContextualAction(arg0) end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:triggerCough() end
+
+--- @public
+--- @param arg0 string
+--- @return State
+function IsoGameCharacter:tryGetAIState(arg0) end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:update() end
 
 --- @public
---- @return void
+--- @return nil
+function IsoGameCharacter:updateAimingDelay() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:updateBallistics() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:updateDiscomfortModifiers() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:updateDisguisedState() end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:updateEmitter() end
 
 --- @public
---- @return void
+--- @return nil
+function IsoGameCharacter:updateEquippedItemSounds() end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:updateEquippedRadioFreq() end
 
 --- @public
---- @param eventInstance long
+--- @param eventInstance integer
 --- @param clip GameSoundClip
---- @return void
---- @overload fun(self: IsoGameCharacter, eventInstance: long, clip: GameSoundClip): void
+--- @return nil
+--- @overload fun(self: IsoGameCharacter, eventInstance: integer, clip: GameSoundClip): nil
 function IsoGameCharacter:updateEvent(eventInstance, clip) end
 
 --- @public
---- @return void
+--- @return nil
+function IsoGameCharacter:updateHandEquips() end
+
+--- @public
+--- @return nil
 function IsoGameCharacter:updateLightInfo() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:updateRecoilVar() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:updateSpeedModifiers() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:updateTextObjects() end
 
 --- @public
+--- @return nil
+function IsoGameCharacter:updateVisionEffectTargets() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:updateVisionEffects() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:updateWornItemsHearingModifier() end
+
+--- @public
+--- @return nil
+function IsoGameCharacter:updateWornItemsVisionModifier() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:useBallistics() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:usePhysicHitReaction() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:useRagdoll() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:useRagdollVehicleCollision() end
+
+--- @public
+--- @return boolean
+function IsoGameCharacter:wasLocal() end
+
+--- @public
 --- @param b ByteBuffer
---- @return void
+--- @return nil
 function IsoGameCharacter:writeInventory(b) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:zeroForwardDirectionX() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoGameCharacter:zeroForwardDirectionY() end
 
 
@@ -3945,8 +5183,8 @@ function IsoGameCharacter:zeroForwardDirectionY() end
 
 --- @public
 --- @param cell IsoCell
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @return IsoGameCharacter
 function IsoGameCharacter.new(cell, x, y, z) end

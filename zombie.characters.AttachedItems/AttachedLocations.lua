@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class AttachedLocations
 --- @field public class any
@@ -10,12 +10,12 @@ AttachedLocations = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function AttachedLocations.Reset() end
 
 --- @public
 --- @static
---- @param id String
+--- @param id string
 --- @return AttachedLocationGroup
 function AttachedLocations.getGroup(id) end
 

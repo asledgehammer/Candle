@@ -1,8 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class ClimbSheetRopeState: State
 --- @field public class any
---- @field public CLIMB_SPEED float
+--- @field public CLIMB_SLOWDOWN number
+--- @field public CLIMB_SPEED number
 ClimbSheetRopeState = {};
 
 ------------------------------------
@@ -21,23 +22,18 @@ function ClimbSheetRopeState.instance() end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbSheetRopeState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbSheetRopeState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbSheetRopeState:exit(owner) end
-
---- @public
---- @param owner IsoGameCharacter
---- @return float
-function ClimbSheetRopeState:getClimbSheetRopeSpeed(owner) end
 
 
 ------------------------------------

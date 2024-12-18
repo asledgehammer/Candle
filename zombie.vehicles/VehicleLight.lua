@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class VehicleLight
 --- @field public class any
@@ -21,39 +21,39 @@ function VehicleLight:canFocusingUp() end
 function VehicleLight:getActive() end
 
 --- @public
---- @return float
+--- @return number
 function VehicleLight:getDistanization() end
 
 --- @public
---- @return int
+--- @return integer
 function VehicleLight:getFocusing() end
 
 --- @public
---- @return float
+--- @return number
 function VehicleLight:getIntensity() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function VehicleLight:load(input, WorldVersion) end
 
 --- @public
 --- @param output ByteBuffer
---- @return void
+--- @return nil
 function VehicleLight:save(output) end
 
 --- @public
 --- @param active boolean
---- @return void
+--- @return nil
 function VehicleLight:setActive(active) end
 
 --- @public
---- @return void
+--- @return nil
 function VehicleLight:setFocusingDown() end
 
 --- @public
---- @return void
+--- @return nil
 function VehicleLight:setFocusingUp() end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ChatBase
 --- @field public class any
@@ -10,23 +10,23 @@ ChatBase = {};
 
 --- @public
 --- @param playerID short
---- @return void
+--- @return nil
 function ChatBase:addMember(playerID) end
 
 --- @public
---- @return void
+--- @return nil
 function ChatBase:close() end
 
 --- @public
 ---
 ---  Message creator. Every chat know how to create its own message
 ---
---- @param text String text of the message
+--- @param text string text of the message
 --- @return ChatMessage corresponding object to message
 function ChatBase:createMessage(text) end
 
 --- @public
---- @param text String
+--- @param text string
 --- @return ServerChatMessage
 function ChatBase:createServerMessage(text) end
 
@@ -35,7 +35,7 @@ function ChatBase:createServerMessage(text) end
 function ChatBase:getColor() end
 
 --- @public
---- @return int
+--- @return integer
 function ChatBase:getID() end
 
 --- @public
@@ -48,12 +48,12 @@ function ChatBase:getJustRemovedMembers() end
 
 --- @public
 --- @param msg ChatMessage
---- @return String
+--- @return string
 function ChatBase:getMessagePrefix(msg) end
 
 --- @public
 --- @param msg ChatMessage
---- @return String
+--- @return string
 function ChatBase:getMessageTextWithPrefix(msg) end
 
 --- @public
@@ -61,7 +61,7 @@ function ChatBase:getMessageTextWithPrefix(msg) end
 function ChatBase:getMode() end
 
 --- @public
---- @return float
+--- @return number
 function ChatBase:getRange() end
 
 --- @public
@@ -69,7 +69,7 @@ function ChatBase:getRange() end
 function ChatBase:getTabID() end
 
 --- @public
---- @return String
+--- @return string
 function ChatBase:getTitleID() end
 
 --- @public
@@ -77,7 +77,7 @@ function ChatBase:getTitleID() end
 function ChatBase:getType() end
 
 --- @public
---- @return float
+--- @return number
 function ChatBase:getZombieAttractionRange() end
 
 --- @public
@@ -90,79 +90,79 @@ function ChatBase:isSendingToRadio() end
 
 --- @public
 --- @param playerID Short
---- @return void
+--- @return nil
 function ChatBase:leaveMember(playerID) end
 
 --- @public
 --- @param b ByteBufferWriter
 --- @param msg ChatMessage
---- @return void
+--- @return nil
 function ChatBase:packMessage(b, msg) end
 
 --- @public
 --- @param playerID Short
---- @return void
+--- @return nil
 function ChatBase:removeMember(playerID) end
 
 --- @public
 --- @param msg ChatMessage
---- @return void
---- @overload fun(self: ChatBase, msg: ServerChatMessage): void
+--- @return nil
+--- @overload fun(self: ChatBase, msg: ServerChatMessage): nil
 function ChatBase:sendMessageToChatMembers(msg) end
 
 --- @public
 --- @param playerID short
 --- @param msg ChatMessage
---- @return void
---- @overload fun(self: ChatBase, connection: UdpConnection, msg: ChatMessage): void
+--- @return nil
+--- @overload fun(self: ChatBase, connection: UdpConnection, msg: ChatMessage): nil
 function ChatBase:sendMessageToPlayer(playerID, msg) end
 
 --- @public
 --- @param playerConnection UdpConnection
---- @return void
+--- @return nil
 function ChatBase:sendPlayerJoinChatPacket(playerConnection) end
 
 --- @public
 --- @param playerID short
---- @return void
---- @overload fun(self: ChatBase, connection: UdpConnection): void
+--- @return nil
+--- @overload fun(self: ChatBase, connection: UdpConnection): nil
 function ChatBase:sendPlayerLeaveChatPacket(playerID) end
 
 --- @public
 --- @param msg ChatMessage
 --- @param deviceData DeviceData
---- @return void
+--- @return nil
 function ChatBase:sendToServer(msg, deviceData) end
 
 --- @public
---- @param fontSize String
---- @return void
+--- @param fontSize string
+--- @return nil
 function ChatBase:setFontSize(fontSize) end
 
 --- @public
 --- @param settings ChatSettings
---- @return void
+--- @return nil
 function ChatBase:setSettings(settings) end
 
 --- @public
 --- @param showTimestamp boolean
---- @return void
+--- @return nil
 function ChatBase:setShowTimestamp(showTimestamp) end
 
 --- @public
 --- @param showTitle boolean
---- @return void
+--- @return nil
 function ChatBase:setShowTitle(showTitle) end
 
 --- @public
 --- @param msg ChatMessage
---- @return void
---- @overload fun(self: ChatBase, text: String, author: String): void
+--- @return nil
+--- @overload fun(self: ChatBase, text: string, author: string): nil
 function ChatBase:showMessage(msg) end
 
 --- @public
 --- @param players ArrayList
---- @return void
+--- @return nil
 function ChatBase:syncMembersByUsernames(players) end
 
 --- @public
@@ -179,7 +179,7 @@ function ChatBase:unpackMessage(bb) end
 ---
 ---  Should be called only on server side of chat system
 ---
---- @param id int
+--- @param id integer
 --- @param type ChatType
 --- @param tab ChatTab
 --- @return ChatBase

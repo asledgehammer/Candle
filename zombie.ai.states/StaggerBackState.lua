@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class StaggerBackState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function StaggerBackState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function StaggerBackState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function StaggerBackState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function StaggerBackState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function StaggerBackState:exit(owner) end
 
 

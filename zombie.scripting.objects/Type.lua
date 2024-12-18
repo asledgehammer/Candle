@@ -1,9 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class Type: Enum
 --- @field public class any
 --- @field public AlarmClock Type
 --- @field public AlarmClockClothing Type
+--- @field public Animal Type
 --- @field public Clothing Type
 --- @field public Container Type
 --- @field public Drainable Type
@@ -25,7 +26,7 @@ Type = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Type
 function Type.valueOf(arg0) end
 

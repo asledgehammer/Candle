@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ChannelCategory: Enum
 --- @field public class any
@@ -18,7 +18,7 @@ ChannelCategory = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ChannelCategory
 function ChannelCategory.valueOf(arg0) end
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Wheel
 --- @field public class any
@@ -9,7 +9,7 @@ Wheel = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Wheel:getId() end
 
 --- @public

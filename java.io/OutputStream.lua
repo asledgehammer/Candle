@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class OutputStream
 --- @field public class any
@@ -21,20 +21,20 @@ function OutputStream.nullOutputStream() end
 ------------------------------------
 
 --- @public
---- @return void
---- @overload fun(self: OutputStream): void
+--- @return nil
+--- @overload fun(self: OutputStream): nil
 function OutputStream:close() end
 
 --- @public
---- @return void
---- @overload fun(self: OutputStream): void
+--- @return nil
+--- @overload fun(self: OutputStream): nil
 function OutputStream:flush() end
 
 --- @public
 --- @param arg0 byte[]
---- @return void
---- @overload fun(self: OutputStream, arg0: int): void
---- @overload fun(self: OutputStream, arg0: byte[], arg1: int, arg2: int): void
+--- @return nil
+--- @overload fun(self: OutputStream, arg0: integer): nil
+--- @overload fun(self: OutputStream, arg0: byte[], arg1: integer, arg2: integer): nil
 function OutputStream:write(arg0) end
 
 

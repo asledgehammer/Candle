@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoFireplace: IsoObject
 --- @field public class any
@@ -9,16 +9,16 @@ IsoFireplace = {};
 ------------------------------------
 
 --- @public
---- @param units int
---- @return void
+--- @param units integer
+--- @return nil
 function IsoFireplace:addFuel(units) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFireplace:addToWorld() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFireplace:extinguish() end
 
 --- @public
@@ -27,16 +27,20 @@ function IsoFireplace:extinguish() end
 function IsoFireplace:getFacingPosition(pos) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoFireplace:getFuelAmount() end
 
 --- @public
---- @return String
+--- @return string
 function IsoFireplace:getObjectName() end
 
 --- @public
---- @return float
+--- @return number
 function IsoFireplace:getTemperature() end
+
+--- @public
+--- @return boolean
+function IsoFireplace:hasAnimatedAttachments() end
 
 --- @public
 --- @return boolean
@@ -52,62 +56,70 @@ function IsoFireplace:isSmouldering() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
+--- @param WorldVersion integer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoFireplace:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param change String
+--- @param change string
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoFireplace:loadChange(change, bb) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFireplace:removeFromWorld() end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param col ColorInfo
 --- @param bDoChild boolean
 --- @param bWallLightingPass boolean
 --- @param shader Shader
---- @return void
+--- @return nil
 function IsoFireplace:render(x, y, z, col, bDoChild, bWallLightingPass, shader) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 ColorInfo
+--- @return nil
+function IsoFireplace:renderAnimatedAttachments(arg0, arg1, arg2, arg3) end
 
 --- @public
 --- @param output ByteBuffer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoFireplace:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param change String
---- @param tbl KahluaTable
+--- @param change string
+--- @param tbl table
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoFireplace:saveChange(change, tbl, bb) end
 
 --- @public
---- @param units int
---- @return void
+--- @param units integer
+--- @return nil
 function IsoFireplace:setFuelAmount(units) end
 
 --- @public
 --- @param lit boolean
---- @return void
+--- @return nil
 function IsoFireplace:setLit(lit) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoFireplace:update() end
 
 --- @public
---- @param amount int
---- @return int
+--- @param amount integer
+--- @return integer
 function IsoFireplace:useFuel(amount) end
 
 

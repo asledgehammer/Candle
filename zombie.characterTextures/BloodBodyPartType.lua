@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BloodBodyPartType: Enum Created by LEMMY on 7/1/2016.
 --- @field public class any
@@ -29,31 +29,31 @@ BloodBodyPartType = {};
 
 --- @public
 --- @static
---- @param index int
+--- @param index integer
 --- @return BloodBodyPartType
 function BloodBodyPartType.FromIndex(index) end
 
 --- @public
 --- @static
---- @param str String
+--- @param str string
 --- @return BloodBodyPartType
 function BloodBodyPartType.FromString(str) end
 
 --- @public
 --- @static
 --- @param BPT BloodBodyPartType
---- @return int
+--- @return integer
 function BloodBodyPartType.ToIndex(BPT) end
 
 --- @public
 --- @static
 --- @param BPT BloodBodyPartType
---- @return String
+--- @return string
 function BloodBodyPartType.getDisplayName(BPT) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return BloodBodyPartType
 function BloodBodyPartType.valueOf(arg0) end
 
@@ -76,11 +76,11 @@ function BloodBodyPartType.values() end
 function BloodBodyPartType:getCharacterMaskParts() end
 
 --- @public
---- @return String
+--- @return string
 function BloodBodyPartType:getDisplayName() end
 
 --- @public
---- @return int
+--- @return integer
 function BloodBodyPartType:index() end
 
 

@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class IsoArea
 --- @field public class any
 --- @field public Doobo boolean
---- @field public version String
+--- @field public version string
 IsoArea = {};
 
 ------------------------------------
@@ -12,8 +12,8 @@ IsoArea = {};
 
 --- @public
 --- @static
---- @param filename String
---- @return String
+--- @param filename string
+--- @return string
 function IsoArea.Ardo(filename) end
 
 --- @public
@@ -23,20 +23,20 @@ function IsoArea.Thigglewhat() end
 
 --- @public
 --- @static
---- @param str String
---- @param gfgf String
+--- @param str string
+--- @param gfgf string
 --- @return boolean
 function IsoArea.Thigglewhat2(str, gfgf) end
 
 --- @public
 --- @static
---- @param str String
---- @return String
+--- @param str string
+--- @return string
 function IsoArea.Thigglewhat22(str) end
 
 --- @public
 --- @static
---- @param filename String
+--- @param filename string
 --- @return byte[]
 function IsoArea.asasa(filename) end
 

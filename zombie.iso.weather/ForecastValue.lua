@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ForecastValue
 --- @field public class any
@@ -9,39 +9,39 @@ ForecastValue = {};
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getDayMax() end
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getDayMean() end
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getDayMin() end
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getNightMax() end
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getNightMean() end
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getNightMin() end
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getTotalMax() end
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getTotalMean() end
 
 --- @public
---- @return float
+--- @return number
 function ForecastValue:getTotalMin() end
 
 

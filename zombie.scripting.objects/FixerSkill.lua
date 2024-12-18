@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class FixerSkill
 --- @field public class any
@@ -9,11 +9,11 @@ FixerSkill = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function FixerSkill:getSkillLevel() end
 
 --- @public
---- @return String
+--- @return string
 function FixerSkill:getSkillName() end
 
 
@@ -22,7 +22,7 @@ function FixerSkill:getSkillName() end
 ------------------------------------
 
 --- @public
---- @param skillName String
---- @param skillLvl int
+--- @param skillName string
+--- @param skillLvl integer
 --- @return FixerSkill
 function FixerSkill.new(skillName, skillLvl) end

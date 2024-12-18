@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class SearchMode TurboTuTone.
 --- @field public class any
@@ -15,7 +15,7 @@ function SearchMode.getInstance() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function SearchMode.reset() end
 
 
@@ -24,68 +24,79 @@ function SearchMode.reset() end
 ------------------------------------
 
 --- @public
---- @param plrIdx int
+--- @param plrIdx integer
 --- @return SearchModeFloat
 function SearchMode:getBlur(plrIdx) end
 
 --- @public
---- @param plrIdx int
+--- @param plrIdx integer
 --- @return SearchModeFloat
 function SearchMode:getDarkness(plrIdx) end
 
 --- @public
---- @param plrIdx int
+--- @param plrIdx integer
 --- @return SearchModeFloat
 function SearchMode:getDesat(plrIdx) end
 
 --- @public
---- @return float
+--- @return number
 function SearchMode:getFadeTime() end
 
 --- @public
---- @param plrIdx int
+--- @param plrIdx integer
 --- @return SearchModeFloat
 function SearchMode:getGradientWidth(plrIdx) end
 
 --- @public
---- @param plrIdx int
+--- @param plrIdx integer
 --- @return SearchModeFloat
 function SearchMode:getRadius(plrIdx) end
 
 --- @public
---- @param index int
+--- @param index integer
 --- @return PlayerSearchMode
 function SearchMode:getSearchModeForPlayer(index) end
 
 --- @public
---- @param plrIdx int
+--- @param plrIdx integer
 --- @return boolean
 function SearchMode:isEnabled(plrIdx) end
 
 --- @public
---- @param plrIdx int
+--- @param plrIdx integer
 --- @return boolean
 function SearchMode:isOverride(plrIdx) end
 
 --- @public
---- @param plrIdx int
+--- @param arg0 integer
+--- @return boolean
+function SearchMode:isOverrideSearchManager(arg0) end
+
+--- @public
+--- @param plrIdx integer
 --- @param b boolean
---- @return void
+--- @return nil
 function SearchMode:setEnabled(plrIdx, b) end
 
 --- @public
---- @param fadeTime float
---- @return void
+--- @param fadeTime number
+--- @return nil
 function SearchMode:setFadeTime(fadeTime) end
 
 --- @public
---- @param plrIdx int
+--- @param plrIdx integer
 --- @param enabled boolean
---- @return void
+--- @return nil
 function SearchMode:setOverride(plrIdx, enabled) end
 
 --- @public
---- @return void
+--- @param arg0 integer
+--- @param arg1 boolean
+--- @return nil
+function SearchMode:setOverrideSearchManager(arg0, arg1) end
+
+--- @public
+--- @return nil
 function SearchMode:update() end
 
 

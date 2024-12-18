@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class AttackState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function AttackState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function AttackState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function AttackState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function AttackState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function AttackState:exit(owner) end
 
 --- @public

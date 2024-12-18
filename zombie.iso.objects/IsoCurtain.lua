@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoCurtain: IsoObject
 --- @field public class any
@@ -31,11 +31,11 @@ function IsoCurtain:TestVision(from, to) end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
+--- @return nil
 function IsoCurtain:ToggleDoor(chr) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoCurtain:ToggleDoorSilent() end
 
 --- @public
@@ -57,7 +57,7 @@ function IsoCurtain:getNorth() end
 function IsoCurtain:getObjectAttachedTo() end
 
 --- @public
---- @return String
+--- @return string
 function IsoCurtain:getObjectName() end
 
 --- @public
@@ -65,7 +65,7 @@ function IsoCurtain:getObjectName() end
 function IsoCurtain:getOppositeSquare() end
 
 --- @public
---- @return String
+--- @return string
 function IsoCurtain:getSoundPrefix() end
 
 --- @public
@@ -76,50 +76,50 @@ function IsoCurtain:isAdjacentToSquare(square2) end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
+--- @param WorldVersion integer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoCurtain:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param x int
---- @param y int
+--- @param x integer
+--- @param y integer
 --- @return boolean
 function IsoCurtain:onMouseLeftClick(x, y) end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
+--- @return nil
 function IsoCurtain:removeSheet(chr) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param col ColorInfo
 --- @param bDoAttached boolean
 --- @param bWallLightingPass boolean
 --- @param shader Shader
---- @return void
+--- @return nil
 function IsoCurtain:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
 --- @param output ByteBuffer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoCurtain:save(output, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param bRemote boolean
---- @param val byte
+--- @param val integer
 --- @param source UdpConnection
---- @return void
---- @overload fun(self: IsoCurtain, bRemote: boolean, val: byte, source: UdpConnection, bb: ByteBuffer): void
+--- @return nil
+--- @overload fun(self: IsoCurtain, bRemote: boolean, val: integer, source: UdpConnection, bb: ByteBuffer): nil
 function IsoCurtain:syncIsoObject(bRemote, val, source) end
 
 --- @public
 --- @param b ByteBufferWriter
---- @return void
+--- @return nil
 function IsoCurtain:syncIsoObjectSend(b) end
 
 
@@ -130,6 +130,6 @@ function IsoCurtain:syncIsoObjectSend(b) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoCurtain
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean): IsoCurtain
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: string, north: boolean): IsoCurtain
 --- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean, spriteclosed: boolean): IsoCurtain
 function IsoCurtain.new(cell) end

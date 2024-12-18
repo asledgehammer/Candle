@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RZSBeachParty: RandomizedZoneStoryBase
 --- @field public class any
@@ -20,7 +20,7 @@ function RZSBeachParty.getBeachClutter() end
 
 --- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function RZSBeachParty:randomizeZoneStory(zone) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Fixer
 --- @field public class any
@@ -9,7 +9,7 @@ Fixer = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Fixer:getFixerName() end
 
 --- @public
@@ -17,7 +17,7 @@ function Fixer:getFixerName() end
 function Fixer:getFixerSkills() end
 
 --- @public
---- @return int
+--- @return integer
 function Fixer:getNumberOfUse() end
 
 
@@ -26,8 +26,8 @@ function Fixer:getNumberOfUse() end
 ------------------------------------
 
 --- @public
---- @param name String
+--- @param name string
 --- @param skills LinkedList
---- @param numberOfUse int
+--- @param numberOfUse integer
 --- @return Fixer
 function Fixer.new(name, skills, numberOfUse) end

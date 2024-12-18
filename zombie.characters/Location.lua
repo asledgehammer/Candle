@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Location
 --- @field public class any
@@ -9,26 +9,27 @@ Location = {};
 ------------------------------------
 
 --- @public
---- @param other Object
+--- @param other any
 --- @return boolean
+--- @overload fun(self: Location, arg0: integer, arg1: integer, arg2: integer): boolean
 function Location:equals(other) end
 
 --- @public
---- @return int
+--- @return integer
 function Location:getX() end
 
 --- @public
---- @return int
+--- @return integer
 function Location:getY() end
 
 --- @public
---- @return int
+--- @return integer
 function Location:getZ() end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return Location
 function Location:set(x, y, z) end
 
@@ -39,5 +40,5 @@ function Location:set(x, y, z) end
 
 --- @public
 --- @return Location
---- @overload fun(x: int, y: int, z: int): Location
+--- @overload fun(x: integer, y: integer, z: integer): Location
 function Location.new() end

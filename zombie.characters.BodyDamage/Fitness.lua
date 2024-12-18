@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Fitness
 --- @field public class any
@@ -9,17 +9,17 @@ Fitness = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function Fitness:exerciseRepeat() end
 
 --- @public
---- @param type String
---- @return float
+--- @param type string
+--- @return number
 function Fitness:getCurrentExeStiffnessInc(type) end
 
 --- @public
---- @param type String
---- @return int
+--- @param type string
+--- @return integer
 function Fitness:getCurrentExeStiffnessTimer(type) end
 
 --- @public
@@ -27,8 +27,8 @@ function Fitness:getCurrentExeStiffnessTimer(type) end
 function Fitness:getParent() end
 
 --- @public
---- @param type String
---- @return float
+--- @param type string
+--- @return number
 function Fitness:getRegularity(type) end
 
 --- @public
@@ -43,7 +43,7 @@ function Fitness:getRegularityMap() end
 ---  will depend on regularity, fatigue.  Numbers approx: At 0 regularity, 60min
 ---  should gives almost 4h of stiffness (gets additional pain)
 ---
---- @return void
+--- @return nil
 function Fitness:incFutureStiffness() end
 
 --- @public
@@ -52,25 +52,25 @@ function Fitness:incFutureStiffness() end
 ---  (using logarithm), the more fitness, the LESS regularity you get  Regularity
 ---  influence on the stiffness you get once you've finished an exercise
 ---
---- @return void
+--- @return nil
 function Fitness:incRegularity() end
 
 --- @public
---- @return void
+--- @return nil
 function Fitness:incStats() end
 
 --- @public
---- @return void
+--- @return nil
 function Fitness:init() end
 
 --- @public
---- @return void
+--- @return nil
 function Fitness:initRegularityMapProfession() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function Fitness:load(input, WorldVersion) end
 
 --- @public
@@ -82,43 +82,43 @@ function Fitness:onGoingStiffness() end
 ---  Reduce endurance, using metabolics (to know what kind of exercise it is, some
 ---  more exhausting than others), regularity, current carrying weight.
 ---
---- @return void
+--- @return nil
 function Fitness:reduceEndurance() end
 
 --- @public
---- @param type String
---- @return void
+--- @param type string
+--- @return nil
 function Fitness:removeStiffnessValue(type) end
 
 --- @public
---- @return void
+--- @return nil
 function Fitness:resetValues() end
 
 --- @public
 --- @param output ByteBuffer
---- @return void
+--- @return nil
 function Fitness:save(output) end
 
 --- @public
---- @param type String
---- @return void
+--- @param type string
+--- @return nil
 function Fitness:setCurrentExercise(type) end
 
 --- @public
 --- @param parent IsoGameCharacter
---- @return void
+--- @return nil
 function Fitness:setParent(parent) end
 
 --- @public
 --- @param regularityMap HashMap
---- @return void
+--- @return nil
 function Fitness:setRegularityMap(regularityMap) end
 
 --- @public
 ---
 ---  We update every 10 in game minutes to facilitate calculs
 ---
---- @return void
+--- @return nil
 function Fitness:update() end
 
 

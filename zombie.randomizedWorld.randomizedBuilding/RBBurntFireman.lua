@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBBurntFireman: RandomizedBuildingBase This building will be 70% burnt (no fire started tho)  Also spawn 1 to 3 fireman zombies inside it (65% of them to be male)
 --- @field public class any
@@ -16,7 +16,7 @@ function RBBurntFireman:isValid(arg0, arg1) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBBurntFireman:randomizeBuilding(def) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class MetaObject
 --- @field public class any
@@ -13,7 +13,7 @@ MetaObject = {};
 function MetaObject:getRoom() end
 
 --- @public
---- @return int
+--- @return integer
 function MetaObject:getType() end
 
 --- @public
@@ -21,16 +21,16 @@ function MetaObject:getType() end
 function MetaObject:getUsed() end
 
 --- @public
---- @return int
+--- @return integer
 function MetaObject:getX() end
 
 --- @public
---- @return int
+--- @return integer
 function MetaObject:getY() end
 
 --- @public
 --- @param bUsed boolean
---- @return void
+--- @return nil
 function MetaObject:setUsed(bUsed) end
 
 
@@ -39,9 +39,9 @@ function MetaObject:setUsed(bUsed) end
 ------------------------------------
 
 --- @public
---- @param type int
---- @param x int
---- @param y int
+--- @param type integer
+--- @param x integer
+--- @param y integer
 --- @param def RoomDef
 --- @return MetaObject
 function MetaObject.new(type, x, y, def) end

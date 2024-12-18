@@ -1,7 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class Key: InventoryItem
 --- @field public class any
+--- @field public doors ArrayList
 --- @field public highlightDoor Key[]
 Key = {};
 
@@ -11,9 +12,9 @@ Key = {};
 
 --- @public
 --- @static
---- @param playerNum int
+--- @param playerNum integer
 --- @param item InventoryItem
---- @return void
+--- @return nil
 function Key.setHighlightDoors(playerNum, item) end
 
 
@@ -22,19 +23,19 @@ function Key.setHighlightDoors(playerNum, item) end
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Key:getCategory() end
 
 --- @public
---- @return int
+--- @return integer
 function Key:getKeyId() end
 
 --- @public
---- @return int
+--- @return integer
 function Key:getNumberOfKey() end
 
 --- @public
---- @return int
+--- @return integer
 function Key:getSaveType() end
 
 --- @public
@@ -47,41 +48,41 @@ function Key:isPadlock() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function Key:load(input, WorldVersion) end
 
 --- @public
 --- @param output ByteBuffer
 --- @param net boolean
---- @return void
+--- @return nil
 function Key:save(output, net) end
 
 --- @public
 --- @param digitalPadlock boolean
---- @return void
+--- @return nil
 function Key:setDigitalPadlock(digitalPadlock) end
 
 --- @public
---- @param keyId int
---- @return void
+--- @param keyId integer
+--- @return nil
 function Key:setKeyId(keyId) end
 
 --- @public
---- @param numberOfKey int
---- @return void
+--- @param numberOfKey integer
+--- @return nil
 function Key:setNumberOfKey(numberOfKey) end
 
 --- @public
 --- @param padlock boolean
---- @return void
+--- @return nil
 function Key:setPadlock(padlock) end
 
 --- @public
 ---
 ---  Get the key number of the building and set it to the key
 ---
---- @return void
+--- @return nil
 function Key:takeKeyId() end
 
 
@@ -90,9 +91,9 @@ function Key:takeKeyId() end
 ------------------------------------
 
 --- @public
---- @param module String
---- @param name String
---- @param type String
---- @param tex String
+--- @param module string
+--- @param name string
+--- @param type string
+--- @param tex string
 --- @return Key
 function Key.new(module, name, type, tex) end

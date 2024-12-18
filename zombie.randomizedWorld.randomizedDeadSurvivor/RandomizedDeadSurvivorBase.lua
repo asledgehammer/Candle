@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RandomizedDeadSurvivorBase: RandomizedBuildingBase
 --- @field public class any
@@ -16,7 +16,7 @@ function RandomizedDeadSurvivorBase:isValid(arg0, arg1) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RandomizedDeadSurvivorBase:randomizeDeadSurvivor(def) end
 
 

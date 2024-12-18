@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ThumpState: State
 --- @field public class any
@@ -10,7 +10,7 @@ ThumpState = {};
 
 --- @public
 --- @static
---- @return int
+--- @return integer
 function ThumpState.getFastForwardDamageMultiplier() end
 
 --- @public
@@ -26,22 +26,22 @@ function ThumpState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function ThumpState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ThumpState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ThumpState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ThumpState:exit(owner) end
 
 

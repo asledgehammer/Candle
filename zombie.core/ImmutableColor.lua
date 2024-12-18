@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ImmutableColor
 --- @field public class any
@@ -27,15 +27,15 @@ ImmutableColor = {};
 
 --- @public
 --- @static
---- @param hue float
---- @param saturation float
---- @param brightness float
+--- @param hue number
+--- @param saturation number
+--- @param brightness number
 --- @return Integer[]
 function ImmutableColor.HSBtoRGB(hue, saturation, brightness) end
 
 --- @public
 --- @static
---- @param nm String
+--- @param nm string
 --- @return ImmutableColor
 function ImmutableColor.decode(nm) end
 
@@ -56,74 +56,74 @@ function ImmutableColor:add(c) end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(self: ImmutableColor, scale: float): ImmutableColor
+--- @overload fun(self: ImmutableColor, scale: number): ImmutableColor
 function ImmutableColor:brighter() end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(self: ImmutableColor, scale: float): ImmutableColor
+--- @overload fun(self: ImmutableColor, scale: number): ImmutableColor
 function ImmutableColor:darker() end
 
 --- @public
---- @param other Object
+--- @param other any
 --- @return boolean
 function ImmutableColor:equals(other) end
 
 --- @public
---- @return byte
+--- @return integer
 function ImmutableColor:getAlphaByte() end
 
 --- @public
---- @return float
+--- @return number
 function ImmutableColor:getAlphaFloat() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:getAlphaInt() end
 
 --- @public
---- @return byte
+--- @return integer
 function ImmutableColor:getBlueByte() end
 
 --- @public
---- @return float
+--- @return number
 function ImmutableColor:getBlueFloat() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:getBlueInt() end
 
 --- @public
---- @return byte
+--- @return integer
 function ImmutableColor:getGreenByte() end
 
 --- @public
---- @return float
+--- @return number
 function ImmutableColor:getGreenFloat() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:getGreenInt() end
 
 --- @public
---- @return byte
+--- @return integer
 function ImmutableColor:getRedByte() end
 
 --- @public
---- @return float
+--- @return number
 function ImmutableColor:getRedFloat() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:getRedInt() end
 
 --- @public
---- @return int
+--- @return integer
 function ImmutableColor:hashCode() end
 
 --- @public
 --- @param to ImmutableColor
---- @param delta float
+--- @param delta number
 --- @return ImmutableColor
 function ImmutableColor:interp(to, delta) end
 
@@ -133,7 +133,7 @@ function ImmutableColor:interp(to, delta) end
 function ImmutableColor:multiply(c) end
 
 --- @public
---- @param value float
+--- @param value number
 --- @return ImmutableColor
 function ImmutableColor:scale(value) end
 
@@ -142,7 +142,7 @@ function ImmutableColor:scale(value) end
 function ImmutableColor:toMutableColor() end
 
 --- @public
---- @return String
+--- @return string
 function ImmutableColor:toString() end
 
 
@@ -151,13 +151,13 @@ function ImmutableColor:toString() end
 ------------------------------------
 
 --- @public
---- @param value int
+--- @param value integer
 --- @return ImmutableColor
 --- @overload fun(color: Color): ImmutableColor
 --- @overload fun(color: ImmutableColor): ImmutableColor
---- @overload fun(r: float, g: float, b: float): ImmutableColor
---- @overload fun(r: int, g: int, b: int): ImmutableColor
---- @overload fun(A: Color, B: Color, delta: float): ImmutableColor
---- @overload fun(r: float, g: float, b: float, a: float): ImmutableColor
---- @overload fun(r: int, g: int, b: int, a: int): ImmutableColor
+--- @overload fun(r: number, g: number, b: number): ImmutableColor
+--- @overload fun(r: integer, g: integer, b: integer): ImmutableColor
+--- @overload fun(A: Color, B: Color, delta: number): ImmutableColor
+--- @overload fun(r: number, g: number, b: number, a: number): ImmutableColor
+--- @overload fun(r: integer, g: integer, b: integer, a: integer): ImmutableColor
 function ImmutableColor.new(value) end

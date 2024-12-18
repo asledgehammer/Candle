@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PlayerHitReactionPVPState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function PlayerHitReactionPVPState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function PlayerHitReactionPVPState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerHitReactionPVPState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerHitReactionPVPState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerHitReactionPVPState:exit(owner) end
 
 

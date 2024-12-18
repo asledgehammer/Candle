@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BooleanSandboxOption: BooleanConfigOption
 --- @field public class any
@@ -15,34 +15,34 @@ BooleanSandboxOption = {};
 function BooleanSandboxOption:asConfigOption() end
 
 --- @public
---- @param table KahluaTable
---- @return void
---- @overload fun(self: BooleanSandboxOption, table: KahluaTable): void
+--- @param table table
+--- @return nil
+--- @overload fun(self: BooleanSandboxOption, table: table): nil
 function BooleanSandboxOption:fromTable(table) end
 
 --- @public
---- @return String
---- @overload fun(self: BooleanSandboxOption): String
+--- @return string
+--- @overload fun(self: BooleanSandboxOption): string
 function BooleanSandboxOption:getPageName() end
 
 --- @public
---- @return String
---- @overload fun(self: BooleanSandboxOption): String
+--- @return string
+--- @overload fun(self: BooleanSandboxOption): string
 function BooleanSandboxOption:getShortName() end
 
 --- @public
---- @return String
---- @overload fun(self: BooleanSandboxOption): String
+--- @return string
+--- @overload fun(self: BooleanSandboxOption): string
 function BooleanSandboxOption:getTableName() end
 
 --- @public
---- @return String
---- @overload fun(self: BooleanSandboxOption): String
+--- @return string
+--- @overload fun(self: BooleanSandboxOption): string
 function BooleanSandboxOption:getTooltip() end
 
 --- @public
---- @return String
---- @overload fun(self: BooleanSandboxOption): String
+--- @return string
+--- @overload fun(self: BooleanSandboxOption): string
 function BooleanSandboxOption:getTranslatedName() end
 
 --- @public
@@ -51,26 +51,26 @@ function BooleanSandboxOption:getTranslatedName() end
 function BooleanSandboxOption:isCustom() end
 
 --- @public
---- @return void
---- @overload fun(self: BooleanSandboxOption): void
+--- @return nil
+--- @overload fun(self: BooleanSandboxOption): nil
 function BooleanSandboxOption:setCustom() end
 
 --- @public
---- @param pageName String
+--- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: BooleanSandboxOption, pageName: String): SandboxOption
+--- @overload fun(self: BooleanSandboxOption, pageName: string): SandboxOption
 function BooleanSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param translation String
+--- @param translation string
 --- @return SandboxOption
---- @overload fun(self: BooleanSandboxOption, translation: String): SandboxOption
+--- @overload fun(self: BooleanSandboxOption, translation: string): SandboxOption
 function BooleanSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param table KahluaTable
---- @return void
---- @overload fun(self: BooleanSandboxOption, table: KahluaTable): void
+--- @param table table
+--- @return nil
+--- @overload fun(self: BooleanSandboxOption, table: table): nil
 function BooleanSandboxOption:toTable(table) end
 
 
@@ -80,7 +80,7 @@ function BooleanSandboxOption:toTable(table) end
 
 --- @public
 --- @param owner SandboxOptions
---- @param name String
+--- @param name string
 --- @param defaultValue boolean
 --- @return BooleanSandboxOption
 function BooleanSandboxOption.new(owner, name, defaultValue) end

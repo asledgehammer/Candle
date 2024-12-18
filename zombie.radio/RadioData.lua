@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RadioData Turbo
 --- @field public class any
@@ -38,6 +38,6 @@ function RadioData:isVanilla() end
 ------------------------------------
 
 --- @public
---- @param xmlFile String
+--- @param xmlFile string
 --- @return RadioData
 function RadioData.new(xmlFile) end

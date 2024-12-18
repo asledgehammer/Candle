@@ -1,19 +1,20 @@
---- @meta
+--- @meta _
 
---- @class IsoObject
+--- @class IsoObject: GameEntity
 --- @field public class any
 --- @implement Serializable
 --- @implement Thumpable
---- @field public bmod float
---- @field public gmod float
+--- @field public bmod number
+--- @field public gmod number
 --- @field public lastRendered IsoObject
 --- @field public lastRenderedRendered IsoObject
 --- @field public LowLightingQualityHack boolean
---- @field public MAX_WALL_SPLATS int
---- @field public OBF_Blink byte
---- @field public OBF_Highlighted byte
---- @field public OBF_HighlightRenderOnce byte
---- @field public rmod float
+--- @field public MAX_WALL_SPLATS integer
+--- @field public OBF_Blink integer
+--- @field public OBF_Highlighted integer
+--- @field public OBF_HighlightRenderOnce integer
+--- @field public OBF_SatChair integer
+--- @field public rmod number
 IsoObject = {};
 
 ------------------------------------
@@ -24,7 +25,7 @@ IsoObject = {};
 --- @static
 --- @param square IsoGridSquare
 --- @return IsoObject
---- @overload fun(x: int, y: int, z: int): IsoObject
+--- @overload fun(x: integer, y: integer, z: integer): IsoObject
 function IsoObject.FindExternalWaterSource(square) end
 
 --- @public
@@ -36,14 +37,14 @@ function IsoObject.FindWaterSourceOnSquare(square) end
 --- @public
 --- @static
 --- @param cell IsoCell
---- @param classID int
+--- @param classID integer
 --- @return Class
 function IsoObject.factoryClassFromFileInput(cell, classID) end
 
 --- @public
 --- @static
 --- @param cell IsoCell
---- @param classID byte
+--- @param classID integer
 --- @return IsoObject
 --- @overload fun(cell: IsoCell, b: ByteBuffer): IsoObject
 function IsoObject.factoryFromFileInput(cell, classID) end
@@ -51,14 +52,14 @@ function IsoObject.factoryFromFileInput(cell, classID) end
 --- @public
 --- @static
 --- @param cell IsoCell
---- @param classID int
+--- @param classID integer
 --- @return IsoObject
 function IsoObject.factoryFromFileInput_OLD(cell, classID) end
 
 --- @public
 --- @static
---- @param name String
---- @return byte
+--- @param name string
+--- @return integer
 function IsoObject.factoryGetClassID(name) end
 
 --- @public
@@ -79,25 +80,25 @@ function IsoObject.getLastRenderedRendered() end
 --- @public
 --- @static
 --- @return IsoObject
---- @overload fun(sq: IsoGridSquare, spriteName: String, name: String, bShareTilesWithMap: boolean): IsoObject
+--- @overload fun(sq: IsoGridSquare, spriteName: string, name: string, bShareTilesWithMap: boolean): IsoObject
 function IsoObject.getNew() end
 
 --- @public
 --- @static
---- @param i int
---- @return void
+--- @param i integer
+--- @return nil
 function IsoObject.setDefaultCondition(i) end
 
 --- @public
 --- @static
 --- @param aLastRendered IsoObject the lastRendered to set
---- @return void
+--- @return nil
 function IsoObject.setLastRendered(aLastRendered) end
 
 --- @public
 --- @static
 --- @param aLastRenderedRendered IsoObject the lastRenderedRendered to set
---- @return void
+--- @return nil
 function IsoObject.setLastRenderedRendered(aLastRenderedRendered) end
 
 
@@ -106,66 +107,66 @@ function IsoObject.setLastRenderedRendered(aLastRenderedRendered) end
 ------------------------------------
 
 --- @public
---- @param ObjectName String
---- @param AnimName String
---- @param NumFrames int
---- @param frameIncrease float
---- @param OffsetX int
---- @param OffsetY int
+--- @param ObjectName string
+--- @param AnimName string
+--- @param NumFrames integer
+--- @param frameIncrease number
+--- @param OffsetX integer
+--- @param OffsetY integer
 --- @param Looping boolean
---- @param FinishHoldFrameIndex int
+--- @param FinishHoldFrameIndex integer
 --- @param DeleteWhenFinished boolean
---- @param zBias float
+--- @param zBias number
 --- @param TintMod ColorInfo
---- @return void
+--- @return nil
 function IsoObject:AttachAnim(ObjectName, AnimName, NumFrames, frameIncrease, OffsetX, OffsetY, Looping, FinishHoldFrameIndex, DeleteWhenFinished, zBias, TintMod) end
 
 --- @public
 --- @param spr IsoSprite
---- @param OffsetX int
---- @param OffsetY int
+--- @param OffsetX integer
+--- @param OffsetY integer
 --- @param Looping boolean
---- @param FinishHoldFrameIndex int
+--- @param FinishHoldFrameIndex integer
 --- @param DeleteWhenFinished boolean
---- @param zBias float
---- @return void
---- @overload fun(self: IsoObject, spr: IsoSprite, OffsetX: int, OffsetY: int, Looping: boolean, FinishHoldFrameIndex: int, DeleteWhenFinished: boolean, zBias: float, TintMod: ColorInfo): void
+--- @param zBias number
+--- @return nil
+--- @overload fun(self: IsoObject, spr: IsoSprite, OffsetX: integer, OffsetY: integer, Looping: boolean, FinishHoldFrameIndex: integer, DeleteWhenFinished: boolean, zBias: number, TintMod: ColorInfo): nil
 function IsoObject:AttachExistingAnim(spr, OffsetX, OffsetY, Looping, FinishHoldFrameIndex, DeleteWhenFinished, zBias) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function IsoObject:AttackObject(owner) end
 
 --- @public
 --- @param collision Vector2
 --- @param object IsoObject
---- @return void
+--- @return nil
 function IsoObject:Collision(collision, object) end
 
 --- @public
---- @param amount float
---- @return void
+--- @param amount number
+--- @return nil
 function IsoObject:Damage(amount) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:DirtySlice() end
 
 --- @public
 --- @param tooltipUI ObjectTooltip
 --- @param square IsoGridSquare
---- @return void
+--- @return nil
 function IsoObject:DoSpecialTooltip(tooltipUI, square) end
 
 --- @public
 --- @param tooltipUI ObjectTooltip
---- @return void
+--- @return nil
 function IsoObject:DoTooltip(tooltipUI) end
 
 --- @public
 --- @param vehicle BaseVehicle
---- @return float
+--- @return number
 function IsoObject:GetVehicleSlowFactor(vehicle) end
 
 --- @public
@@ -175,23 +176,23 @@ function IsoObject:HasTooltip() end
 --- @public
 --- @param collision Vector2
 --- @param obj IsoObject
---- @param damage float
---- @return void
+--- @param damage number
+--- @return nil
 function IsoObject:Hit(collision, obj, damage) end
 
 --- @public
 --- @param vehicle BaseVehicle
---- @param amount float
---- @return void
+--- @param amount number
+--- @return nil
 function IsoObject:HitByVehicle(vehicle, amount) end
 
 --- @public
---- @param index int
---- @return void
+--- @param index integer
+--- @return nil
 function IsoObject:RemoveAttachedAnim(index) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:RemoveAttachedAnims() end
 
 --- @public
@@ -199,8 +200,8 @@ function IsoObject:RemoveAttachedAnims() end
 function IsoObject:Serialize() end
 
 --- @public
---- @param name String
---- @return void
+--- @param name string
+--- @return nil
 function IsoObject:SetName(name) end
 
 --- @public
@@ -225,40 +226,61 @@ function IsoObject:TestVision(from, to) end
 
 --- @public
 --- @param thumper IsoMovingObject
---- @return void
---- @overload fun(self: IsoObject, thumper: IsoMovingObject): void
+--- @return nil
+--- @overload fun(self: IsoObject, thumper: IsoMovingObject): nil
 function IsoObject:Thump(thumper) end
 
 --- @public
 --- @param object IsoObject
---- @return void
+--- @return nil
 function IsoObject:UnCollision(object) end
 
 --- @public
 --- @param chr IsoGameCharacter
 --- @param weapon HandWeapon
---- @return void
---- @overload fun(self: IsoObject, chr: IsoGameCharacter, weapon: HandWeapon): void
+--- @return nil
+--- @overload fun(self: IsoObject, chr: IsoGameCharacter, weapon: HandWeapon): nil
 function IsoObject:WeaponHit(chr, weapon) end
 
 --- @public
+--- @param arg0 IsoSprite
+--- @return nil
+function IsoObject:addAttachedAnimSprite(arg0) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function IsoObject:addAttachedAnimSpriteByName(arg0) end
+
+--- @public
+--- @param arg0 IsoSpriteInstance
+--- @return nil
+function IsoObject:addAttachedAnimSpriteInstance(arg0) end
+
+--- @public
 --- @param child IsoObject
---- @return void
+--- @return nil
 function IsoObject:addChild(child) end
 
 --- @public
+--- @param arg0 string
+--- @return InventoryItem
+--- @overload fun(self: IsoObject, arg0: string, arg1: boolean): InventoryItem
+function IsoObject:addItemToObjectSurface(arg0) end
+
+--- @public
 --- @param container ItemContainer
---- @return void
+--- @return nil
 function IsoObject:addSecondaryContainer(container) end
 
 --- @public
 --- @param player IsoPlayer
---- @param itemType String
+--- @param itemType string
 --- @return boolean
 function IsoObject:addSheetRope(player, itemType) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:addToWorld() end
 
 --- @public
@@ -266,54 +288,66 @@ function IsoObject:addToWorld() end
 function IsoObject:canAddSheetRope() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:checkAmbientSound() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:checkHaveElectricity() end
 
 --- @public
---- @return void
+--- @return nil
+function IsoObject:checkLightSourceActive() end
+
+--- @public
+--- @return nil
 function IsoObject:cleanWallBlood() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:clearAttachedAnimSprite() end
 
 --- @public
---- @return int
+--- @return nil
+function IsoObject:clearOnOverlay() end
+
+--- @public
+--- @return integer
 function IsoObject:countAddSheetRope() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:createContainersFromSpriteProperties() end
 
 --- @public
---- @return long
+--- @return integer
 function IsoObject:customHashCode() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:debugPrintout() end
 
 --- @public
 --- @param dir IsoDirections
---- @return void
+--- @return nil
 function IsoObject:destroyFence(dir) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:doFindExternalWaterSource() end
 
 --- @public
---- @return float the alpha
---- @overload fun(self: IsoObject, playerIndex: int): float
+--- @return number the alpha
+--- @overload fun(self: IsoObject, playerIndex: integer): number
 function IsoObject:getAlpha() end
 
 --- @public
 --- @return ArrayList the AttachedAnimSprite
 function IsoObject:getAttachedAnimSprite() end
+
+--- @public
+--- @return integer
+function IsoObject:getAttachedAnimSpriteCount() end
 
 --- @public
 --- @return IsoCell the cell
@@ -332,29 +366,33 @@ function IsoObject:getChunk() end
 function IsoObject:getContainer() end
 
 --- @public
---- @param type1 String
---- @param type2 String
+--- @param type1 string
+--- @param type2 string
 --- @return ItemContainer
 function IsoObject:getContainerByEitherType(type1, type2) end
 
 --- @public
---- @param index int
+--- @param index integer
 --- @return ItemContainer
 function IsoObject:getContainerByIndex(index) end
 
 --- @public
---- @param type String
+--- @param type string
 --- @return ItemContainer
 function IsoObject:getContainerByType(type) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getContainerCount() end
 
 --- @public
 --- @param container ItemContainer
---- @return int
+--- @return integer
 function IsoObject:getContainerIndex(container) end
+
+--- @public
+--- @return Texture
+function IsoObject:getCurrentFrameTex() end
 
 --- @public
 --- @return ColorInfo
@@ -369,6 +407,14 @@ function IsoObject:getDamage() end
 function IsoObject:getDir() end
 
 --- @public
+--- @return integer
+function IsoObject:getEntityNetID() end
+
+--- @public
+--- @return IsoDirections
+function IsoObject:getFacing() end
+
+--- @public
 --- @param pos Vector2
 --- @return Vector2
 function IsoObject:getFacingPosition(pos) end
@@ -377,6 +423,14 @@ function IsoObject:getFacingPosition(pos) end
 --- @param pos Vector2
 --- @return Vector2
 function IsoObject:getFacingPositionAlt(pos) end
+
+--- @public
+--- @return IsoGridSquare
+function IsoObject:getFasciaAttachedSquare() end
+
+--- @public
+--- @return GameEntityType
+function IsoObject:getGameEntityType() end
 
 --- @public
 --- @return ColorInfo
@@ -391,34 +445,42 @@ function IsoObject:getIsSurfaceNormalOffset() end
 function IsoObject:getItemContainer() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getKeyId() end
 
 --- @public
---- @param x int
---- @param y int
+--- @return IsoLightSource
+function IsoObject:getLightSource() end
+
+--- @public
+--- @param x integer
+--- @param y integer
 --- @param flip boolean
---- @return float
+--- @return number
 function IsoObject:getMaskClickedY(x, y, flip) end
 
 --- @public
---- @return KahluaTable
+--- @return IsoObject
+function IsoObject:getMasterObject() end
+
+--- @public
+--- @return table
 function IsoObject:getModData() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getMovingObjectIndex() end
 
 --- @public
---- @return String
+--- @return string
 function IsoObject:getName() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getObjectIndex() end
 
 --- @public
---- @return String
+--- @return string
 function IsoObject:getObjectName() end
 
 --- @public
@@ -430,20 +492,24 @@ function IsoObject:getObjectRenderEffects() end
 function IsoObject:getObjectRenderEffectsToApply() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getOffsetX() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getOffsetY() end
 
 --- @public
---- @return int
---- @overload fun(self: IsoObject, playerIndex: int): int
+--- @return IsoSpriteInstance
+function IsoObject:getOnOverlay() end
+
+--- @public
+--- @return integer
+--- @overload fun(self: IsoObject, playerIndex: integer): integer
 function IsoObject:getOutlineHighlightCol() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getOutlineThickness() end
 
 --- @public
@@ -455,7 +521,7 @@ function IsoObject:getOverlaySprite() end
 function IsoObject:getOverlaySpriteColor() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getPipedFuelAmount() end
 
 --- @public
@@ -467,7 +533,25 @@ function IsoObject:getProperties() end
 function IsoObject:getRenderEffectMaster() end
 
 --- @public
---- @return float
+--- @param arg0 integer
+--- @return IsoObject
+function IsoObject:getRenderEffectObjectByIndex(arg0) end
+
+--- @public
+--- @return integer
+function IsoObject:getRenderEffectObjectCount() end
+
+--- @public
+--- @param arg0 integer
+--- @return ObjectRenderInfo
+function IsoObject:getRenderInfo(arg0) end
+
+--- @public
+--- @return IsoGridSquare
+function IsoObject:getRenderSquare() end
+
+--- @public
+--- @return number
 function IsoObject:getRenderYOffset() end
 
 --- @public
@@ -483,11 +567,11 @@ function IsoObject:getRerouteMask() end
 function IsoObject:getRerouteMaskObject() end
 
 --- @public
---- @return String
+--- @return string
 function IsoObject:getScriptName() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getSpecialObjectIndex() end
 
 --- @public
@@ -495,12 +579,31 @@ function IsoObject:getSpecialObjectIndex() end
 function IsoObject:getSprite() end
 
 --- @public
+--- @return IsoSpriteGrid
+function IsoObject:getSpriteGrid() end
+
+--- @public
 --- @param result ArrayList
---- @return void
+--- @return nil
+--- @overload fun(self: IsoObject, arg0: ArrayList, arg1: boolean): nil
 function IsoObject:getSpriteGridObjects(result) end
 
 --- @public
---- @return String
+--- @param arg0 ArrayList
+--- @return nil
+function IsoObject:getSpriteGridObjectsExcludingSelf(arg0) end
+
+--- @public
+--- @param arg0 ArrayList
+--- @return nil
+function IsoObject:getSpriteGridObjectsIncludingSelf(arg0) end
+
+--- @public
+--- @return SpriteModel
+function IsoObject:getSpriteModel() end
+
+--- @public
+--- @return string
 function IsoObject:getSpriteName() end
 
 --- @public
@@ -508,37 +611,37 @@ function IsoObject:getSpriteName() end
 function IsoObject:getSquare() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getStaticMovingObjectIndex() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getSurfaceNormalOffset() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getSurfaceOffset() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getSurfaceOffsetNoTable() end
 
 --- @public
---- @return KahluaTable the table
+--- @return table the table
 function IsoObject:getTable() end
 
 --- @public
---- @return float the targetAlpha
---- @overload fun(self: IsoObject, playerIndex: int): float
+--- @return number the targetAlpha
+--- @overload fun(self: IsoObject, playerIndex: integer): number
 function IsoObject:getTargetAlpha() end
 
 --- @public
---- @return String
+--- @return string
 function IsoObject:getTextureName() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoObject): float
+--- @return number
+--- @overload fun(self: IsoObject): number
 function IsoObject:getThumpCondition() end
 
 --- @public
@@ -548,8 +651,12 @@ function IsoObject:getThumpCondition() end
 function IsoObject:getThumpableFor(chr) end
 
 --- @public
---- @return String
+--- @return string
 function IsoObject:getTile() end
+
+--- @public
+--- @return string
+function IsoObject:getTileName() end
 
 --- @public
 --- @return IsoObjectType the type
@@ -560,11 +667,11 @@ function IsoObject:getType() end
 function IsoObject:getUsesExternalWaterSource() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getWaterAmount() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getWaterMax() end
 
 --- @public
@@ -572,20 +679,28 @@ function IsoObject:getWaterMax() end
 function IsoObject:getWindRenderEffects() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoObject:getWorldObjectIndex() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getX() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getY() end
 
 --- @public
---- @return float
+--- @return number
 function IsoObject:getZ() end
+
+--- @public
+--- @return boolean
+function IsoObject:hasAnimatedAttachments() end
+
+--- @public
+--- @return boolean
+function IsoObject:hasAttachedAnimSprites() end
 
 --- @public
 --- @return boolean
@@ -594,6 +709,14 @@ function IsoObject:hasExternalWaterSource() end
 --- @public
 --- @return boolean
 function IsoObject:hasModData() end
+
+--- @public
+--- @return boolean
+function IsoObject:hasOverlaySprite() end
+
+--- @public
+--- @return boolean
+function IsoObject:hasSpriteGrid() end
 
 --- @public
 --- @return boolean
@@ -608,11 +731,20 @@ function IsoObject:haveSheetRope() end
 function IsoObject:haveSpecialTooltip() end
 
 --- @public
+--- @param arg0 integer
+--- @return nil
+function IsoObject:invalidateRenderChunkLevel(arg0) end
+
+--- @public
+--- @return nil
+function IsoObject:invalidateVispolyChunkLevel() end
+
+--- @public
 ---
 ---  Returns TRUE if both Alpha nad TargetAlpha are transparent, or near-zero.
 ---
 --- @return boolean
---- @overload fun(self: IsoObject, playerIndex: int): boolean
+--- @overload fun(self: IsoObject, playerIndex: integer): boolean
 function IsoObject:isAlphaAndTargetZero() end
 
 --- @public
@@ -620,8 +752,12 @@ function IsoObject:isAlphaAndTargetZero() end
 ---  Returns TRUE if Alpha is transparent, or near-zero.
 ---
 --- @return boolean
---- @overload fun(self: IsoObject, playerIndex: int): boolean
+--- @overload fun(self: IsoObject, playerIndex: integer): boolean
 function IsoObject:isAlphaZero() end
+
+--- @public
+--- @return boolean
+function IsoObject:isAnimating() end
 
 --- @public
 --- @return boolean
@@ -629,7 +765,20 @@ function IsoObject:isBlink() end
 
 --- @public
 --- @return boolean
+function IsoObject:isBush() end
+
+--- @public
+--- @return boolean
+function IsoObject:isCanPath() end
+
+--- @public
+--- @return boolean
 function IsoObject:isCharacter() end
+
+--- @public
+--- @param arg0 IsoObject
+--- @return boolean
+function IsoObject:isConnectedSpriteGridObject(arg0) end
 
 --- @public
 --- @return boolean
@@ -638,11 +787,27 @@ function IsoObject:isDestroyed() end
 
 --- @public
 --- @return boolean
+function IsoObject:isEntityValid() end
+
+--- @public
+--- @return boolean
 function IsoObject:isExistInTheWorld() end
 
 --- @public
 --- @return boolean
+function IsoObject:isFascia() end
+
+--- @public
+--- @return boolean
 function IsoObject:isFloor() end
+
+--- @public
+--- @return boolean
+function IsoObject:isGenericCraftingSurface() end
+
+--- @public
+--- @return boolean
+function IsoObject:isGrave() end
 
 --- @public
 --- @return boolean
@@ -659,10 +824,10 @@ function IsoObject:isHoppable() end
 function IsoObject:isItemAllowedInContainer(container, item) end
 
 --- @public
---- @param x int
---- @param y int
+--- @param x integer
+--- @param y integer
 --- @return boolean
---- @overload fun(self: IsoObject, x: int, y: int, flip: boolean): boolean
+--- @overload fun(self: IsoObject, x: integer, y: integer, flip: boolean): boolean
 function IsoObject:isMaskClicked(x, y) end
 
 --- @public
@@ -679,17 +844,21 @@ function IsoObject:isNorthHoppable() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoObject, playerIndex: int): boolean
+function IsoObject:isOnScreen() end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: IsoObject, playerIndex: integer): boolean
 function IsoObject:isOutlineHighlight() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoObject, playerIndex: int): boolean
+--- @overload fun(self: IsoObject, playerIndex: integer): boolean
 function IsoObject:isOutlineHlAttached() end
 
 --- @public
 --- @return boolean
---- @overload fun(self: IsoObject, playerIndex: int): boolean
+--- @overload fun(self: IsoObject, playerIndex: integer): boolean
 function IsoObject:isOutlineHlBlink() end
 
 --- @public
@@ -701,6 +870,10 @@ function IsoObject:isOutlineOnMouseover() end
 --- @param item InventoryItem
 --- @return boolean
 function IsoObject:isRemoveItemAllowedFromContainer(container, item) end
+
+--- @public
+--- @return boolean
+function IsoObject:isSatChair() end
 
 --- @public
 --- @return boolean
@@ -731,9 +904,13 @@ function IsoObject:isTableTopObject() end
 function IsoObject:isTaintedWater() end
 
 --- @public
---- @param playerIndex int
+--- @param playerIndex integer
 --- @return boolean
 function IsoObject:isTargetAlphaZero(playerIndex) end
+
+--- @public
+--- @return boolean
+function IsoObject:isTent() end
 
 --- @public
 --- @return boolean
@@ -741,59 +918,67 @@ function IsoObject:isZombie() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
---- @overload fun(self: IsoObject, input: ByteBuffer, WorldVersion: int, IS_DEBUG_SAVE: boolean): void
+--- @param WorldVersion integer
+--- @return nil
+--- @overload fun(self: IsoObject, input: ByteBuffer, WorldVersion: integer, IS_DEBUG_SAVE: boolean): nil
 function IsoObject:load(input, WorldVersion) end
 
 --- @public
---- @param change String
+--- @param change string
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoObject:loadChange(change, bb) end
 
 --- @public
 --- @param b ByteBuffer
---- @return void
---- @overload fun(self: IsoObject, b: ByteBuffer, addToObjects: boolean): void
+--- @return nil
+--- @overload fun(self: IsoObject, b: ByteBuffer, addToObjects: boolean): nil
 function IsoObject:loadFromRemoteBuffer(b) end
 
 --- @public
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoObject:loadState(bb) end
 
 --- @public
---- @param x int
---- @param y int
+--- @return nil
+function IsoObject:onAnimationFinished() end
+
+--- @public
+--- @param x integer
+--- @param y integer
 --- @return boolean
 function IsoObject:onMouseLeftClick(x, y) end
 
 --- @public
---- @param lx int
---- @param ly int
---- @return void
+--- @param lx integer
+--- @param ly integer
+--- @return nil
 function IsoObject:onMouseRightClick(lx, ly) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:onMouseRightReleased() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:removeAllContainers() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:removeFromSquare() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:removeFromWorld() end
 
 --- @public
+--- @return nil
+function IsoObject:removeFromWorldToMeta() end
+
+--- @public
 --- @param o ObjectRenderEffects
---- @return void
+--- @return nil
 function IsoObject:removeRenderEffect(o) end
 
 --- @public
@@ -802,81 +987,107 @@ function IsoObject:removeRenderEffect(o) end
 function IsoObject:removeSheetRope(player) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param col ColorInfo
 --- @param bDoAttached boolean
 --- @param bWallLightingPass boolean
 --- @param shader Shader
---- @return void
+--- @return nil
 function IsoObject:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
---- @param col ColorInfo
---- @param bDoAttached boolean
---- @param bWallLightingPass boolean
---- @param shader Shader
---- @param texdModifier Consumer
---- @return void
-function IsoObject:renderAttachedAndOverlaySprites(x, y, z, col, bDoAttached, bWallLightingPass, shader, texdModifier) end
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 ColorInfo
+--- @return nil
+function IsoObject:renderAnimatedAttachments(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param arg0 IsoDirections
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 ColorInfo
+--- @param arg5 boolean
+--- @param arg6 boolean
+--- @param arg7 Shader
+--- @param arg8 Consumer
+--- @return nil
+function IsoObject:renderAttachedAndOverlaySprites(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param col ColorInfo
 --- @param bDoAttached boolean
 --- @param bWallLightingPass boolean
 --- @param shader Shader
 --- @param texdModifier Consumer
 --- @param attachedAndOverlayModifier Consumer
---- @return void
+--- @return nil
 function IsoObject:renderFloorTile(x, y, z, col, bDoAttached, bWallLightingPass, shader, texdModifier, attachedAndOverlayModifier) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param bDoAttached boolean
---- @return void
+--- @return nil
 function IsoObject:renderFxMask(x, y, z, bDoAttached) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param lightInfo ColorInfo
---- @return void
+--- @return nil
 function IsoObject:renderObjectPicker(x, y, z, lightInfo) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
---- @param col ColorInfo
---- @param bDoAttached boolean
---- @param bWallLightingPass boolean
---- @param shader Shader
---- @param texdModifier Consumer
---- @return void
-function IsoObject:renderWallTile(x, y, z, col, bDoAttached, bWallLightingPass, shader, texdModifier) end
+--- @param arg0 IsoDirections
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 ColorInfo
+--- @param arg5 boolean
+--- @param arg6 boolean
+--- @param arg7 Shader
+--- @param arg8 Consumer
+--- @return nil
+function IsoObject:renderWallTile(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
---- @param col ColorInfo
---- @param shader Shader
---- @param texdModifier Consumer
---- @return void
-function IsoObject:renderWallTileOnly(x, y, z, col, shader, texdModifier) end
+--- @param arg0 IsoDirections
+--- @param arg1 boolean
+--- @param arg2 boolean
+--- @param arg3 boolean
+--- @param arg4 integer
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 ColorInfo
+--- @param arg9 Shader
+--- @param arg10 Consumer
+--- @return nil
+function IsoObject:renderWallTileDepth(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) end
 
 --- @public
---- @return void
+--- @param arg0 IsoDirections
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 ColorInfo
+--- @param arg5 Shader
+--- @param arg6 Consumer
+--- @return nil
+function IsoObject:renderWallTileOnly(arg0, arg1, arg2, arg3, arg4, arg5, arg6) end
+
+--- @public
+--- @return nil
 function IsoObject:renderlast() end
 
 --- @public
@@ -885,331 +1096,383 @@ function IsoObject:renderlast() end
 function IsoObject:replaceItem(item) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:reset() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:reuseGridSquare() end
 
 --- @public
 --- @param output ByteBuffer
---- @return void
---- @overload fun(self: IsoObject, output: ByteBuffer, IS_DEBUG_SAVE: boolean): void
+--- @return nil
+--- @overload fun(self: IsoObject, output: ByteBuffer, IS_DEBUG_SAVE: boolean): nil
 function IsoObject:save(output) end
 
 --- @public
---- @param change String
---- @param tbl KahluaTable
+--- @param change string
+--- @param tbl table
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoObject:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoObject:saveState(bb) end
 
 --- @public
---- @param change String
---- @return void
---- @overload fun(self: IsoObject, arg0: String, arg1: Object[]): void
---- @overload fun(self: IsoObject, change: String, tbl: KahluaTable): void
+--- @param change string
+--- @return nil
+--- @overload fun(self: IsoObject, arg0: string, arg1: Object[]): nil
+--- @overload fun(self: IsoObject, change: string, tbl: table): nil
 function IsoObject:sendObjectChange(change) end
 
 --- @public
---- @param alpha float the alpha to set
---- @return void
---- @overload fun(self: IsoObject, playerIndex: int, alpha: float): void
+--- @param alpha number the alpha to set
+--- @return nil
+--- @overload fun(self: IsoObject, playerIndex: integer, alpha: number): nil
 function IsoObject:setAlpha(alpha) end
 
 --- @public
---- @param alpha float the alpha to set
---- @return void
---- @overload fun(self: IsoObject, playerIndex: int, alpha: float): void
+--- @param alpha number the alpha to set
+--- @return nil
+--- @overload fun(self: IsoObject, playerIndex: integer, alpha: number): nil
 function IsoObject:setAlphaAndTarget(alpha) end
 
 --- @public
---- @param playerIndex int The playerIndex to use
---- @return void
+--- @param playerIndex integer The playerIndex to use
+--- @return nil
 function IsoObject:setAlphaToTarget(playerIndex) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoObject:setAnimating(arg0) end
+
+--- @public
 --- @param AttachedAnimSprite ArrayList the AttachedAnimSprite to set
---- @return void
+--- @return nil
 function IsoObject:setAttachedAnimSprite(AttachedAnimSprite) end
 
 --- @public
 --- @param blink boolean
---- @return void
+--- @return nil
 function IsoObject:setBlink(blink) end
 
 --- @public
 --- @param AttachedAnimSprite ArrayList the AttachedAnimSprite to set
---- @return void
+--- @return nil
 function IsoObject:setChildSprites(AttachedAnimSprite) end
 
 --- @public
 --- @param container ItemContainer the container to set
---- @return void
+--- @return nil
 function IsoObject:setContainer(container) end
 
 --- @public
 --- @param col ColorInfo
---- @return void
---- @overload fun(self: IsoObject, r: float, g: float, b: float, a: float): void
+--- @return nil
+--- @overload fun(self: IsoObject, r: number, g: number, b: number, a: number): nil
 function IsoObject:setCustomColor(col) end
 
 --- @public
 --- @param Damage short the Damage to set
---- @return void
+--- @return nil
 function IsoObject:setDamage(Damage) end
 
 --- @public
---- @param dir int the dir to set
---- @return void
---- @overload fun(self: IsoObject, dir: IsoDirections): void
+--- @param dir integer the dir to set
+--- @return nil
+--- @overload fun(self: IsoObject, dir: IsoDirections): nil
 function IsoObject:setDir(dir) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoObject:setExplored(arg0) end
+
+--- @public
 --- @param highlightColor ColorInfo
---- @return void
---- @overload fun(self: IsoObject, r: float, g: float, b: float, a: float): void
+--- @return nil
+--- @overload fun(self: IsoObject, r: number, g: number, b: number, a: number): nil
 function IsoObject:setHighlightColor(highlightColor) end
 
 --- @public
 --- @param highlight boolean
---- @return void
---- @overload fun(self: IsoObject, highlight: boolean, renderOnce: boolean): void
+--- @return nil
+--- @overload fun(self: IsoObject, highlight: boolean, renderOnce: boolean): nil
 function IsoObject:setHighlighted(highlight) end
 
 --- @public
---- @param keyId int
---- @return void
+--- @param keyId integer
+--- @return nil
 function IsoObject:setKeyId(keyId) end
 
 --- @public
+--- @param arg0 IsoLightSource
+--- @return nil
+function IsoObject:setLightSource(arg0) end
+
+--- @public
+--- @param arg0 table
+--- @return nil
+function IsoObject:setModData(arg0) end
+
+--- @public
 --- @param movedThumpable boolean
---- @return void
+--- @return nil
 function IsoObject:setMovedThumpable(movedThumpable) end
 
 --- @public
---- @param name String the name to set
---- @return void
+--- @param name string the name to set
+--- @return nil
 function IsoObject:setName(name) end
 
 --- @public
 --- @param NoPicking boolean the NoPicking to set
---- @return void
+--- @return nil
 function IsoObject:setNoPicking(NoPicking) end
 
 --- @public
---- @param offsetX float the offsetX to set
---- @return void
+--- @param offsetX number the offsetX to set
+--- @return nil
 function IsoObject:setOffsetX(offsetX) end
 
 --- @public
---- @param offsetY float the offsetY to set
---- @return void
+--- @param offsetY number the offsetY to set
+--- @return nil
 function IsoObject:setOffsetY(offsetY) end
 
 --- @public
+--- @param arg0 IsoSpriteInstance
+--- @return nil
+function IsoObject:setOnOverlay(arg0) end
+
+--- @public
 --- @param isOutlineHighlight boolean
---- @return void
---- @overload fun(self: IsoObject, playerIndex: int, isOutlineHighlight: boolean): void
+--- @return nil
+--- @overload fun(self: IsoObject, playerIndex: integer, isOutlineHighlight: boolean): nil
 function IsoObject:setOutlineHighlight(isOutlineHighlight) end
 
 --- @public
 --- @param outlineHighlightCol ColorInfo
---- @return void
---- @overload fun(self: IsoObject, playerIndex: int, outlineHighlightCol: ColorInfo): void
---- @overload fun(self: IsoObject, r: float, g: float, b: float, a: float): void
---- @overload fun(self: IsoObject, playerIndex: int, r: float, g: float, b: float, a: float): void
+--- @return nil
+--- @overload fun(self: IsoObject, playerIndex: integer, outlineHighlightCol: ColorInfo): nil
+--- @overload fun(self: IsoObject, r: number, g: number, b: number, a: number): nil
+--- @overload fun(self: IsoObject, playerIndex: integer, r: number, g: number, b: number, a: number): nil
 function IsoObject:setOutlineHighlightCol(outlineHighlightCol) end
 
 --- @public
 --- @param isOutlineHlAttached boolean
---- @return void
---- @overload fun(self: IsoObject, playerIndex: int, isOutlineHlAttached: boolean): void
+--- @return nil
+--- @overload fun(self: IsoObject, playerIndex: integer, isOutlineHlAttached: boolean): nil
 function IsoObject:setOutlineHlAttached(isOutlineHlAttached) end
 
 --- @public
 --- @param isOutlineHlBlink boolean
---- @return void
---- @overload fun(self: IsoObject, playerIndex: int, isOutlineHlBlink: boolean): void
+--- @return nil
+--- @overload fun(self: IsoObject, playerIndex: integer, isOutlineHlBlink: boolean): nil
 function IsoObject:setOutlineHlBlink(isOutlineHlBlink) end
 
 --- @public
 --- @param OutlineOnMouseover boolean the OutlineOnMouseover to set
---- @return void
+--- @return nil
 function IsoObject:setOutlineOnMouseover(OutlineOnMouseover) end
 
 --- @public
---- @param outlineThickness float
---- @return void
+--- @param outlineThickness number
+--- @return nil
 function IsoObject:setOutlineThickness(outlineThickness) end
 
 --- @public
---- @param spriteName String
---- @return void
---- @overload fun(self: IsoObject, spriteName: String, bTransmit: boolean): void
---- @overload fun(self: IsoObject, spriteName: String, r: float, g: float, b: float, a: float): void
---- @overload fun(self: IsoObject, spriteName: String, r: float, g: float, b: float, a: float, bTransmit: boolean): boolean
+--- @param spriteName string
+--- @return nil
+--- @overload fun(self: IsoObject, spriteName: string, bTransmit: boolean): nil
+--- @overload fun(self: IsoObject, spriteName: string, r: number, g: number, b: number, a: number): nil
+--- @overload fun(self: IsoObject, spriteName: string, r: number, g: number, b: number, a: number, bTransmit: boolean): boolean
 function IsoObject:setOverlaySprite(spriteName) end
 
 --- @public
---- @param r float
---- @param g float
---- @param b float
---- @param a float
---- @return void
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function IsoObject:setOverlaySpriteColor(r, g, b, a) end
 
 --- @public
---- @param units int
---- @return void
+--- @param units integer
+--- @return nil
 function IsoObject:setPipedFuelAmount(units) end
 
 --- @public
 --- @param type RenderEffectType
---- @return void
---- @overload fun(self: IsoObject, type: RenderEffectType, reuseEqualType: boolean): void
+--- @return nil
+--- @overload fun(self: IsoObject, type: RenderEffectType, reuseEqualType: boolean): nil
 function IsoObject:setRenderEffect(type) end
 
 --- @public
---- @param f float
---- @return void
+--- @param f number
+--- @return nil
 function IsoObject:setRenderYOffset(f) end
 
 --- @public
 --- @param rerouteCollide IsoObject the rerouteCollide to set
---- @return void
+--- @return nil
 function IsoObject:setRerouteCollide(rerouteCollide) end
 
 --- @public
 --- @param rerouteMask IsoObject the rerouteMask to set
---- @return void
+--- @return nil
 function IsoObject:setRerouteMask(rerouteMask) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function IsoObject:setSatChair(arg0) end
+
+--- @public
 --- @param specialTooltip boolean
---- @return void
+--- @return nil
 function IsoObject:setSpecialTooltip(specialTooltip) end
 
 --- @public
---- @param name String
---- @return void
---- @overload fun(self: IsoObject, sprite: IsoSprite): void
+--- @param name string
+--- @return nil
+--- @overload fun(self: IsoObject, sprite: IsoSprite): nil
 function IsoObject:setSprite(name) end
 
 --- @public
---- @param name String
---- @return void
+--- @param name string
+--- @return nil
 function IsoObject:setSpriteFromName(name) end
 
 --- @public
+--- @param arg0 string
+--- @return nil
+function IsoObject:setSpriteModelName(arg0) end
+
+--- @public
 --- @param square IsoGridSquare the square to set
---- @return void
+--- @return nil
 function IsoObject:setSquare(square) end
 
 --- @public
---- @param table KahluaTable the table to set
---- @return void
+--- @param table table the table to set
+--- @return nil
 function IsoObject:setTable(table) end
 
 --- @public
 --- @param tainted boolean
---- @return void
+--- @return nil
 function IsoObject:setTaintedWater(tainted) end
 
 --- @public
---- @param targetAlpha float the targetAlpha to set
---- @return void
---- @overload fun(self: IsoObject, playerIndex: int, targetAlpha: float): void
+--- @param targetAlpha number the targetAlpha to set
+--- @return nil
+--- @overload fun(self: IsoObject, playerIndex: integer, targetAlpha: number): nil
 function IsoObject:setTargetAlpha(targetAlpha) end
 
 --- @public
 --- @param type IsoObjectType
---- @return void
+--- @return nil
 function IsoObject:setType(type) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function IsoObject:setUsesExternalWaterSource(b) end
 
 --- @public
---- @param units int
---- @return void
+--- @param units integer
+--- @return nil
 function IsoObject:setWaterAmount(units) end
 
 --- @public
---- @return void
+--- @return boolean
+function IsoObject:shouldShowOnOverlay() end
+
+--- @public
+--- @return nil
 function IsoObject:softReset() end
 
 --- @public
+--- @return nil
+function IsoObject:sync() end
+
+--- @public
 --- @param bRemote boolean
---- @param val byte
+--- @param val integer
 --- @param source UdpConnection
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoObject:syncIsoObject(bRemote, val, source, bb) end
 
 --- @public
+--- @param arg0 ByteBuffer
+--- @return nil
+function IsoObject:syncIsoObjectReceive(arg0) end
+
+--- @public
 --- @param bb ByteBufferWriter
---- @return void
+--- @return nil
 function IsoObject:syncIsoObjectSend(bb) end
 
 --- @public
---- @return void
+--- @return string
+function IsoObject:toString() end
+
+--- @public
+--- @return nil
 function IsoObject:transmitCompleteItemToClients() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:transmitCompleteItemToServer() end
 
 --- @public
---- @return void
-function IsoObject:transmitCustomColor() end
+--- @return nil
+function IsoObject:transmitCustomColorToClients() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:transmitModData() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:transmitUpdatedSprite() end
 
 --- @public
---- @return void
---- @overload fun(self: IsoObject, connection: UdpConnection): void
+--- @return nil
+--- @overload fun(self: IsoObject, connection: UdpConnection): nil
 function IsoObject:transmitUpdatedSpriteToClients() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:transmitUpdatedSpriteToServer() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:unsetOutlineHighlight() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoObject:update() end
 
 --- @public
 --- @param item InventoryItem
---- @return void
+--- @return nil
 function IsoObject:useItemOn(item) end
 
 --- @public
---- @param amount int
---- @return int
+--- @param amount integer
+--- @return integer
 function IsoObject:useWater(amount) end
 
 --- @public
 --- @param b ByteBufferWriter
---- @return void
+--- @return nil
 function IsoObject:writeToRemoteBuffer(b) end
 
 
@@ -1220,10 +1483,10 @@ function IsoObject:writeToRemoteBuffer(b) end
 --- @public
 --- @return IsoObject
 --- @overload fun(cell: IsoCell): IsoObject
---- @overload fun(square: IsoGridSquare, tile: String): IsoObject
---- @overload fun(cell: IsoCell, square: IsoGridSquare, gid: String): IsoObject
+--- @overload fun(square: IsoGridSquare, tile: string): IsoObject
+--- @overload fun(cell: IsoCell, square: IsoGridSquare, gid: string): IsoObject
 --- @overload fun(cell: IsoCell, square: IsoGridSquare, spr: IsoSprite): IsoObject
---- @overload fun(square: IsoGridSquare, tile: String, bShareTilesWithMap: boolean): IsoObject
---- @overload fun(square: IsoGridSquare, tile: String, name: String): IsoObject
---- @overload fun(square: IsoGridSquare, tile: String, name: String, bShareTilesWithMap: boolean): IsoObject
+--- @overload fun(square: IsoGridSquare, tile: string, bShareTilesWithMap: boolean): IsoObject
+--- @overload fun(square: IsoGridSquare, tile: string, name: string): IsoObject
+--- @overload fun(square: IsoGridSquare, tile: string, name: string, bShareTilesWithMap: boolean): IsoObject
 function IsoObject.new() end

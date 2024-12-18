@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ThunderCloud
 --- @field public class any
@@ -9,19 +9,19 @@ ThunderCloud = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function ThunderCloud:getCurrentX() end
 
 --- @public
---- @return int
+--- @return integer
 function ThunderCloud:getCurrentY() end
 
 --- @public
---- @return float
+--- @return number
 function ThunderCloud:getRadius() end
 
 --- @public
---- @return float
+--- @return number
 function ThunderCloud:getStrength() end
 
 --- @public
@@ -29,14 +29,14 @@ function ThunderCloud:getStrength() end
 function ThunderCloud:isRunning() end
 
 --- @public
---- @return double
+--- @return number
 function ThunderCloud:lifeTime() end
 
 --- @public
---- @param centerX int
---- @param centerY int
---- @param angle float
---- @return void
+--- @param centerX integer
+--- @param centerY integer
+--- @param angle number
+--- @return nil
 function ThunderCloud:setCenter(centerX, centerY, angle) end
 
 

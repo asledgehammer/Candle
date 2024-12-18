@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class SurvivorType: Enum
 --- @field public class any
@@ -13,7 +13,7 @@ SurvivorType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return SurvivorType
 function SurvivorType.valueOf(arg0) end
 

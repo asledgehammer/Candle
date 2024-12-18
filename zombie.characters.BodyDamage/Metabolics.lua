@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Metabolics: Enum TurboTuTone.
 --- @field public class any
@@ -34,25 +34,25 @@ Metabolics = {};
 
 --- @public
 --- @static
---- @param met float
---- @return float
+--- @param met number
+--- @return number
 function Metabolics.MetToBtuHr(met) end
 
 --- @public
 --- @static
---- @param met float
---- @return float
+--- @param met number
+--- @return number
 function Metabolics.MetToW(met) end
 
 --- @public
 --- @static
---- @param met float
---- @return float
+--- @param met number
+--- @return number
 function Metabolics.MetToWm2(met) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return Metabolics
 function Metabolics.valueOf(arg0) end
 
@@ -71,19 +71,19 @@ function Metabolics.values() end
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function Metabolics:getBtuHr() end
 
 --- @public
---- @return float
+--- @return number
 function Metabolics:getMet() end
 
 --- @public
---- @return float
+--- @return number
 function Metabolics:getW() end
 
 --- @public
---- @return float
+--- @return number
 function Metabolics:getWm2() end
 
 

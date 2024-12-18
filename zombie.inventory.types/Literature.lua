@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Literature: InventoryItem
 --- @field public class any
@@ -11,7 +11,7 @@ Literature = {};
 --- @public
 --- @param tooltipUI ObjectTooltip
 --- @param layout Layout
---- @return void
+--- @return nil
 function Literature:DoTooltip(tooltipUI, layout) end
 
 --- @public
@@ -19,9 +19,9 @@ function Literature:DoTooltip(tooltipUI, layout) end
 function Literature:IsLiterature() end
 
 --- @public
---- @param index Integer
---- @param text String
---- @return void
+--- @param index integer
+--- @param text string
+--- @return nil
 function Literature:addPage(index, text) end
 
 --- @public
@@ -33,19 +33,19 @@ function Literature:canBeWrite() end
 function Literature:finishupdate() end
 
 --- @public
---- @return int
+--- @return integer
 function Literature:getAlreadyReadPages() end
 
 --- @public
---- @return String
+--- @return string
 function Literature:getBookName() end
 
 --- @public
---- @return float the boredomChange
+--- @return number the boredomChange
 function Literature:getBoredomChange() end
 
 --- @public
---- @return String
+--- @return string
 function Literature:getCategory() end
 
 --- @public
@@ -53,39 +53,43 @@ function Literature:getCategory() end
 function Literature:getCustomPages() end
 
 --- @public
---- @return String
+--- @return string
 function Literature:getLockedBy() end
 
 --- @public
---- @return int
+--- @return integer
 function Literature:getLvlSkillTrained() end
 
 --- @public
---- @return int
+--- @return integer
 function Literature:getMaxLevelTrained() end
 
 --- @public
---- @return int
+--- @return integer
 function Literature:getNumLevelsTrained() end
 
 --- @public
---- @return int
+--- @return integer
 function Literature:getNumberOfPages() end
 
 --- @public
---- @return int
+--- @return integer
 function Literature:getPageToWrite() end
 
 --- @public
---- @return int
+--- @return string
+function Literature:getReadType() end
+
+--- @public
+--- @return integer
 function Literature:getSaveType() end
 
 --- @public
---- @return String
+--- @return string
 function Literature:getSkillTrained() end
 
 --- @public
---- @return float the stressChange
+--- @return number the stressChange
 function Literature:getStressChange() end
 
 --- @public
@@ -93,83 +97,87 @@ function Literature:getStressChange() end
 function Literature:getTeachedRecipes() end
 
 --- @public
---- @return float the unhappyChange
+--- @return number the unhappyChange
 function Literature:getUnhappyChange() end
 
 --- @public
+--- @return boolean
+function Literature:isEmptyPages() end
+
+--- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function Literature:load(input, WorldVersion) end
 
 --- @public
 --- @param output ByteBuffer
 --- @param net boolean
---- @return void
+--- @return nil
 function Literature:save(output, net) end
 
 --- @public
---- @param index Integer
---- @return String
+--- @param index integer
+--- @return string
 function Literature:seePage(index) end
 
 --- @public
---- @param alreadyReadPages int
---- @return void
+--- @param alreadyReadPages integer
+--- @return nil
 function Literature:setAlreadyReadPages(alreadyReadPages) end
 
 --- @public
---- @param bookName String
---- @return void
+--- @param bookName string
+--- @return nil
 function Literature:setBookName(bookName) end
 
 --- @public
 --- @param canBeWrite boolean
---- @return void
+--- @return nil
 function Literature:setCanBeWrite(canBeWrite) end
 
 --- @public
 --- @param customPages HashMap
---- @return void
+--- @return nil
 function Literature:setCustomPages(customPages) end
 
 --- @public
---- @param lockedBy String
---- @return void
+--- @param lockedBy string
+--- @return nil
 function Literature:setLockedBy(lockedBy) end
 
 --- @public
---- @param lvlSkillTrained int
---- @return void
+--- @param lvlSkillTrained integer
+--- @return nil
 function Literature:setLvlSkillTrained(lvlSkillTrained) end
 
 --- @public
---- @param numLevelsTrained int
---- @return void
+--- @param numLevelsTrained integer
+--- @return nil
 function Literature:setNumLevelsTrained(numLevelsTrained) end
 
 --- @public
---- @param numberOfPages int
---- @return void
+--- @param numberOfPages integer
+--- @return nil
 function Literature:setNumberOfPages(numberOfPages) end
 
 --- @public
---- @param pageToWrite int
---- @return void
+--- @param pageToWrite integer
+--- @return nil
 function Literature:setPageToWrite(pageToWrite) end
 
 --- @public
---- @param skillTrained String
---- @return void
+--- @param skillTrained string
+--- @return nil
 function Literature:setSkillTrained(skillTrained) end
 
 --- @public
 --- @param teachedRecipes List
---- @return void
+--- @return nil
 function Literature:setTeachedRecipes(teachedRecipes) end
 
 --- @public
---- @return void
+--- @return nil
 function Literature:update() end
 
 
@@ -178,10 +186,10 @@ function Literature:update() end
 ------------------------------------
 
 --- @public
---- @param module String
---- @param name String
---- @param itemType String
---- @param texName String
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return Literature
---- @overload fun(module: String, name: String, itemType: String, item: Item): Literature
+--- @overload fun(module: string, name: string, itemType: string, item: Item): Literature
 function Literature.new(module, name, itemType, texName) end

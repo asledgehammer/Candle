@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class StrLerpVal: Enum
 --- @field public class any
@@ -14,13 +14,13 @@ StrLerpVal = {};
 
 --- @public
 --- @static
---- @param id int
+--- @param id integer
 --- @return StrLerpVal
 function StrLerpVal.fromValue(id) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return StrLerpVal
 function StrLerpVal.valueOf(arg0) end
 
@@ -39,7 +39,7 @@ function StrLerpVal.values() end
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function StrLerpVal:getValue() end
 
 

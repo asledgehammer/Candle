@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RZSHunterCamp: RandomizedZoneStoryBase
 --- @field public class any
@@ -20,7 +20,7 @@ function RZSHunterCamp.getForestClutter() end
 
 --- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function RZSHunterCamp:randomizeZoneStory(zone) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BurntToDeath: State
 --- @field public class any
@@ -20,17 +20,17 @@ function BurntToDeath.instance() end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function BurntToDeath:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function BurntToDeath:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function BurntToDeath:exit(owner) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PlayerSitOnGroundState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function PlayerSitOnGroundState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function PlayerSitOnGroundState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerSitOnGroundState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerSitOnGroundState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerSitOnGroundState:exit(owner) end
 
 

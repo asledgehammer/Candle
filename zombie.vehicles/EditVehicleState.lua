@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class EditVehicleState: GameState
 --- @field public class any
@@ -20,40 +20,40 @@ function EditVehicleState.checkInstance() end
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:enter() end
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:exit() end
 
 --- @public
---- @param func String
---- @return Object
+--- @param func string
+--- @return any
 function EditVehicleState:fromLua0(func) end
 
 --- @public
---- @param func String
---- @param arg0 Object
---- @return Object
+--- @param func string
+--- @param arg0 any
+--- @return any
 function EditVehicleState:fromLua1(func, arg0) end
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:reenter() end
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:render() end
 
 --- @public
---- @param scriptName String
---- @return void
+--- @param scriptName string
+--- @return nil
 function EditVehicleState:setScript(scriptName) end
 
 --- @public
---- @param table KahluaTable
---- @return void
+--- @param table table
+--- @return nil
 function EditVehicleState:setTable(table) end
 
 --- @public
@@ -61,7 +61,7 @@ function EditVehicleState:setTable(table) end
 function EditVehicleState:update() end
 
 --- @public
---- @return void
+--- @return nil
 function EditVehicleState:yield() end
 
 

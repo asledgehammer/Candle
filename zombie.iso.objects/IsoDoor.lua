@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoDoor: IsoObject
 --- @field public class any
@@ -26,13 +26,13 @@ function IsoDoor.destroyGarageDoor(oneOfThree) end
 --- @public
 --- @static
 --- @param oneOfFour IsoObject
---- @return int
+--- @return integer
 function IsoDoor.getDoubleDoorIndex(oneOfFour) end
 
 --- @public
 --- @static
 --- @param oneOfFour IsoObject
---- @param index int
+--- @param index integer
 --- @return IsoObject
 function IsoDoor.getDoubleDoorObject(oneOfFour, index) end
 
@@ -45,7 +45,7 @@ function IsoDoor.getGarageDoorFirst(oneOfThree) end
 --- @public
 --- @static
 --- @param oneOfThree IsoObject
---- @return int
+--- @return integer
 function IsoDoor.getGarageDoorIndex(oneOfThree) end
 
 --- @public
@@ -76,14 +76,14 @@ function IsoDoor.isDoubleDoorObstructed(oneOfFour) end
 --- @static
 --- @param oneOfFour IsoObject
 --- @param doSync boolean
---- @return void
+--- @return nil
 function IsoDoor.toggleDoubleDoor(oneOfFour, doSync) end
 
 --- @public
 --- @static
 --- @param oneOfThree IsoObject
 --- @param doSync boolean
---- @return void
+--- @return nil
 function IsoDoor.toggleGarageDoor(oneOfThree, doSync) end
 
 
@@ -125,40 +125,44 @@ function IsoDoor:TestVision(from, to) end
 
 --- @public
 --- @param thumper IsoMovingObject
---- @return void
---- @overload fun(self: IsoDoor, thumper: IsoMovingObject): void
+--- @return nil
+--- @overload fun(self: IsoDoor, thumper: IsoMovingObject): nil
 function IsoDoor:Thump(thumper) end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
+--- @return nil
 function IsoDoor:ToggleDoor(chr) end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
+--- @return nil
 function IsoDoor:ToggleDoorActual(chr) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoDoor:ToggleDoorSilent() end
 
 --- @public
 --- @param owner IsoGameCharacter
 --- @param weapon HandWeapon
---- @return void
---- @overload fun(self: IsoDoor, owner: IsoGameCharacter, weapon: HandWeapon): void
+--- @return nil
+--- @overload fun(self: IsoDoor, owner: IsoGameCharacter, weapon: HandWeapon): nil
 function IsoDoor:WeaponHit(owner, weapon) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoDoor:addRandomBarricades() end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
---- @overload fun(self: IsoDoor, inside: boolean, chr: IsoGameCharacter): void
+--- @return nil
+--- @overload fun(self: IsoDoor, inside: boolean, chr: IsoGameCharacter): nil
 function IsoDoor:addSheet(chr) end
+
+--- @public
+--- @return nil
+function IsoDoor:addToWorld() end
 
 --- @public
 --- @param chr IsoGameCharacter
@@ -166,11 +170,25 @@ function IsoDoor:addSheet(chr) end
 function IsoDoor:canClimbOver(chr) end
 
 --- @public
---- @return int
+--- @param arg0 IsoDoor
+--- @return nil
+function IsoDoor:changeSprite(arg0) end
+
+--- @public
+--- @return nil
+function IsoDoor:checkKeyHighlight() end
+
+--- @public
+--- @return integer
 function IsoDoor:checkKeyId() end
 
 --- @public
---- @return void
+--- @param arg0 IsoGameCharacter
+--- @return boolean
+function IsoDoor:couldBeOpen(arg0) end
+
+--- @public
+--- @return nil
 function IsoDoor:destroy() end
 
 --- @public
@@ -214,15 +232,15 @@ function IsoDoor:getFacingPosition(pos) end
 function IsoDoor:getFacingPositionAlt(pos) end
 
 --- @public
---- @return int
+--- @return integer
 function IsoDoor:getHealth() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoDoor:getKeyId() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoDoor:getMaxHealth() end
 
 --- @public
@@ -231,7 +249,7 @@ function IsoDoor:getMaxHealth() end
 function IsoDoor:getNorth() end
 
 --- @public
---- @return String
+--- @return string
 function IsoDoor:getObjectName() end
 
 --- @public
@@ -253,6 +271,15 @@ function IsoDoor:getOtherSideOfDoor(chr) end
 function IsoDoor:getRenderEffectMaster() end
 
 --- @public
+--- @param arg0 integer
+--- @return IsoObject
+function IsoDoor:getRenderEffectObjectByIndex(arg0) end
+
+--- @public
+--- @return integer
+function IsoDoor:getRenderEffectObjectCount() end
+
+--- @public
 ---
 ---  Returns the square the player should stand on to open/close/remove a sheet.
 ---
@@ -265,16 +292,20 @@ function IsoDoor:getSheetSquare() end
 function IsoDoor:getSpriteEdge(ignoreOpen) end
 
 --- @public
+--- @return SpriteModel
+function IsoDoor:getSpriteModel() end
+
+--- @public
 --- @return IsoGridSquare
 function IsoDoor:getSquare() end
 
 --- @public
---- @return float
---- @overload fun(self: IsoDoor): float
+--- @return number
+--- @overload fun(self: IsoDoor): number
 function IsoDoor:getThumpCondition() end
 
 --- @public
---- @return String
+--- @return string
 function IsoDoor:getThumpSound() end
 
 --- @public
@@ -343,138 +374,148 @@ function IsoDoor:isObstructed() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
+--- @param WorldVersion integer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoDoor:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param change String
+--- @param change string
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoDoor:loadChange(change, bb) end
 
 --- @public
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoDoor:loadState(bb) end
 
 --- @public
---- @param x int
---- @param y int
+--- @param x integer
+--- @param y integer
 --- @return boolean
 function IsoDoor:onMouseLeftClick(x, y) end
 
 --- @public
+--- @return nil
+function IsoDoor:removeFromWorld() end
+
+--- @public
 --- @param chr IsoGameCharacter
---- @return void
+--- @return nil
 function IsoDoor:removeSheet(chr) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param info ColorInfo
 --- @param bDoAttached boolean
 --- @param bWallLightingPass boolean
 --- @param shader Shader
---- @return void
+--- @return nil
 function IsoDoor:render(x, y, z, info, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
---- @param col ColorInfo
---- @param bDoAttached boolean
---- @param bWallLightingPass boolean
---- @param shader Shader
---- @param texdModifier Consumer
---- @return void
-function IsoDoor:renderWallTile(x, y, z, col, bDoAttached, bWallLightingPass, shader, texdModifier) end
+--- @param arg0 IsoDirections
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 ColorInfo
+--- @param arg5 boolean
+--- @param arg6 boolean
+--- @param arg7 Shader
+--- @param arg8 Consumer
+--- @return nil
+function IsoDoor:renderWallTile(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
 
 --- @public
 --- @param output ByteBuffer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoDoor:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param change String
---- @param tbl KahluaTable
+--- @param change string
+--- @param tbl table
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoDoor:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoDoor:saveState(bb) end
 
 --- @public
 --- @param open boolean
---- @return void
+--- @return nil
 function IsoDoor:setCurtainOpen(open) end
 
 --- @public
 --- @param haveKey boolean
---- @return void
+--- @return nil
 function IsoDoor:setHaveKey(haveKey) end
 
 --- @public
---- @param Health int
---- @return void
+--- @param Health integer
+--- @return nil
 function IsoDoor:setHealth(Health) end
 
 --- @public
 --- @param lock boolean
---- @return void
+--- @return nil
 function IsoDoor:setIsLocked(lock) end
 
 --- @public
---- @param keyId int
---- @return void
+--- @param keyId integer
+--- @return nil
 function IsoDoor:setKeyId(keyId) end
 
 --- @public
 --- @param bLocked boolean
---- @return void
+--- @return nil
 function IsoDoor:setLocked(bLocked) end
 
 --- @public
 --- @param lockedByKey boolean
---- @return void
+--- @return nil
 function IsoDoor:setLockedByKey(lockedByKey) end
 
 --- @public
 --- @param sprite IsoSprite
---- @return void
+--- @return nil
 function IsoDoor:setOpenSprite(sprite) end
 
 --- @public
---- @return void
+--- @param arg0 ArrayList
+--- @return nil
+function IsoDoor:syncDoorGarage(arg0) end
+
+--- @public
+--- @return nil
 function IsoDoor:syncDoorKey() end
 
 --- @public
 --- @param bRemote boolean
---- @param val byte
+--- @param val integer
 --- @param source UdpConnection
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoDoor:syncIsoObject(bRemote, val, source, bb) end
 
 --- @public
 --- @param b ByteBufferWriter
---- @return void
+--- @return nil
 function IsoDoor:syncIsoObjectSend(b) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoDoor:toggleCurtain() end
 
 --- @public
 --- @param open boolean
---- @return void
+--- @return nil
 function IsoDoor:transmitSetCurtainOpen(open) end
 
 
@@ -485,7 +526,7 @@ function IsoDoor:transmitSetCurtainOpen(open) end
 --- @public
 --- @param cell IsoCell
 --- @return IsoDoor
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean): IsoDoor
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: string, north: boolean): IsoDoor
 --- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: IsoSprite, north: boolean): IsoDoor
---- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: String, north: boolean, table: KahluaTable): IsoDoor
+--- @overload fun(cell: IsoCell, gridSquare: IsoGridSquare, gid: string, north: boolean, table: table): IsoDoor
 function IsoDoor.new(cell) end

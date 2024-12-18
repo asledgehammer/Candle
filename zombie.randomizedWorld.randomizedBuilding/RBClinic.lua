@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBClinic: RandomizedBuildingBase Add some food on table
 --- @field public class any
@@ -19,7 +19,7 @@ function RBClinic:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBClinic:randomizeBuilding(def) end
 
 --- @public

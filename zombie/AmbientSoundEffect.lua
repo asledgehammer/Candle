@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class AmbientSoundEffect
 --- @field public class any
@@ -10,8 +10,8 @@ AmbientSoundEffect = {};
 ------------------------------------
 
 --- @public
---- @return String
---- @overload fun(self: AmbientSoundEffect): String
+--- @return string
+--- @overload fun(self: AmbientSoundEffect): string
 function AmbientSoundEffect:getName() end
 
 --- @public
@@ -20,34 +20,34 @@ function AmbientSoundEffect:getName() end
 function AmbientSoundEffect:isPlaying() end
 
 --- @public
---- @return void
---- @overload fun(self: AmbientSoundEffect): void
+--- @return nil
+--- @overload fun(self: AmbientSoundEffect): nil
 function AmbientSoundEffect:pause() end
 
 --- @public
---- @param choice String
---- @return void
---- @overload fun(self: AmbientSoundEffect, choice: String): void
+--- @param choice string
+--- @return nil
+--- @overload fun(self: AmbientSoundEffect, choice: string): nil
 function AmbientSoundEffect:setName(choice) end
 
 --- @public
---- @param volume float
---- @return void
---- @overload fun(self: AmbientSoundEffect, volume: float): void
+--- @param volume number
+--- @return nil
+--- @overload fun(self: AmbientSoundEffect, volume: number): nil
 function AmbientSoundEffect:setVolume(volume) end
 
 --- @public
---- @return void
---- @overload fun(self: AmbientSoundEffect): void
+--- @return nil
+--- @overload fun(self: AmbientSoundEffect): nil
 function AmbientSoundEffect:start() end
 
 --- @public
---- @return void
---- @overload fun(self: AmbientSoundEffect): void
+--- @return nil
+--- @overload fun(self: AmbientSoundEffect): nil
 function AmbientSoundEffect:stop() end
 
 --- @public
---- @return void
+--- @return nil
 function AmbientSoundEffect:update() end
 
 
@@ -56,6 +56,6 @@ function AmbientSoundEffect:update() end
 ------------------------------------
 
 --- @public
---- @param name String
+--- @param name string
 --- @return AmbientSoundEffect
 function AmbientSoundEffect.new(name) end

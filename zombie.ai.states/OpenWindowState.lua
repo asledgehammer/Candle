@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class OpenWindowState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function OpenWindowState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function OpenWindowState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function OpenWindowState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function OpenWindowState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function OpenWindowState:exit(owner) end
 
 --- @public
@@ -46,7 +46,7 @@ function OpenWindowState:isDoingActionThatCanBeCancelled() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param window IsoWindow
---- @return void
+--- @return nil
 function OpenWindowState:setParams(owner, window) end
 
 

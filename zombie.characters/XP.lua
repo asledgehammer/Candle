@@ -1,8 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class XP
 --- @field public class any
---- @field public MaxXPGrowthRate float
+--- @implement IAntiCheatUpdate
 XP = {};
 
 ------------------------------------
@@ -11,34 +11,41 @@ XP = {};
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 float
---- @return void
---- @overload fun(self: XP, arg0: HandWeapon, arg1: int): void
---- @overload fun(self: XP, arg0: Perk, arg1: float, arg2: boolean, arg3: boolean, arg4: boolean): void
+--- @param arg1 number
+--- @return nil
+--- @overload fun(self: XP, arg0: HandWeapon, arg1: integer): nil
+--- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean): nil
+--- @overload fun(self: XP, arg0: Perk, arg1: number, arg2: boolean, arg3: boolean, arg4: boolean): nil
 function XP:AddXP(arg0, arg1) end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 float
---- @return void
+--- @param arg1 number
+--- @return nil
 function XP:AddXPNoMultiplier(arg0, arg1) end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 float
---- @param arg2 int
---- @param arg3 int
---- @return void
+--- @param arg1 number
+--- @param arg2 integer
+--- @param arg3 integer
+--- @return nil
 function XP:addXpMultiplier(arg0, arg1, arg2, arg3) end
 
 --- @public
---- @return int
+--- @return number
+--- @overload fun(self: XP): number
+function XP:getGrowthRate() end
+
+--- @public
+--- @return integer
 function XP:getLevel() end
 
 --- @public
---- @param arg0 Perk
---- @return float
-function XP:getMultiplier(arg0) end
+--- @return number
+--- @overload fun(self: XP): number
+--- @overload fun(self: XP, arg0: Perk): number
+function XP:getMultiplier() end
 
 --- @public
 --- @return HashMap
@@ -46,58 +53,55 @@ function XP:getMultiplierMap() end
 
 --- @public
 --- @param arg0 Perk
---- @return int
+--- @return integer
 function XP:getPerkBoost(arg0) end
 
 --- @public
---- @return float
+--- @return number
 function XP:getTotalXp() end
 
 --- @public
 --- @param arg0 Perk
---- @return float
+--- @return number
 function XP:getXP(arg0) end
 
 --- @public
+--- @return boolean
+--- @overload fun(self: XP): boolean
+function XP:intervalCheck() end
+
+--- @public
 --- @param arg0 ByteBuffer
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function XP:load(arg0, arg1) end
 
 --- @public
---- @return void
-function XP:recalcSumm() end
-
---- @public
 --- @param arg0 ByteBuffer
---- @return void
+--- @return nil
 function XP:save(arg0) end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function XP:setLevel(arg0) end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function XP:setPerkBoost(arg0, arg1) end
 
 --- @public
---- @param arg0 float
---- @return void
+--- @param arg0 number
+--- @return nil
 function XP:setTotalXP(arg0) end
 
 --- @public
 --- @param arg0 Perk
---- @param arg1 int
---- @return void
+--- @param arg1 integer
+--- @return nil
 function XP:setXPToLevel(arg0, arg1) end
-
---- @public
---- @return void
-function XP:update() end
 
 
 ------------------------------------

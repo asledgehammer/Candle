@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Debug
 --- @field public class any
@@ -13,11 +13,11 @@ Debug = {};
 function Debug:getEnabled() end
 
 --- @public
---- @return int
+--- @return integer
 function Debug:getStartDay() end
 
 --- @public
---- @return int
+--- @return integer
 function Debug:getStartMonth() end
 
 

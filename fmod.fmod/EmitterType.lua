@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class EmitterType: Enum
 --- @field public class any
@@ -13,7 +13,7 @@ EmitterType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return EmitterType
 function EmitterType.valueOf(arg0) end
 

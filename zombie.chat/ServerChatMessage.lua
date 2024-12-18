@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ServerChatMessage: ChatMessage Messages which sent by server to any chat stream. This applied stream setting but author always Server
 --- @field public class any
@@ -9,12 +9,12 @@ ServerChatMessage = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ServerChatMessage:getAuthor() end
 
 --- @public
---- @param author String
---- @return void
+--- @param author string
+--- @return nil
 function ServerChatMessage:setAuthor(author) end
 
 
@@ -24,6 +24,6 @@ function ServerChatMessage:setAuthor(author) end
 
 --- @public
 --- @param chat ChatBase
---- @param text String
+--- @param text string
 --- @return ServerChatMessage
 function ServerChatMessage.new(chat, text) end

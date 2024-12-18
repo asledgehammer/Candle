@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Stash
 --- @field public class any
@@ -9,24 +9,24 @@ Stash = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function Stash:getBuildingX() end
 
 --- @public
---- @return int
+--- @return integer
 function Stash:getBuildingY() end
 
 --- @public
---- @return String
+--- @return string
 function Stash:getItem() end
 
 --- @public
---- @return String
+--- @return string
 function Stash:getName() end
 
 --- @public
---- @param stashDesc KahluaTableImpl
---- @return void
+--- @param stashDesc table
+--- @return nil
 function Stash:load(stashDesc) end
 
 
@@ -35,6 +35,6 @@ function Stash:load(stashDesc) end
 ------------------------------------
 
 --- @public
---- @param name String
+--- @param name string
 --- @return Stash
 function Stash.new(name) end

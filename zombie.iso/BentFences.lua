@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BentFences
 --- @field public class any
@@ -19,19 +19,19 @@ function BentFences.getInstance() end
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function BentFences:Reset() end
 
 --- @public
---- @param VERSION int
---- @param tiles KahluaTableImpl
---- @return void
+--- @param VERSION integer
+--- @param tiles table
+--- @return nil
 function BentFences:addFenceTiles(VERSION, tiles) end
 
 --- @public
 --- @param obj IsoObject
 --- @param dir IsoDirections
---- @return void
+--- @return nil
 function BentFences:bendFence(obj, dir) end
 
 --- @public
@@ -47,12 +47,12 @@ function BentFences:isUnbentObject(obj) end
 --- @public
 --- @param obj IsoObject
 --- @param dir IsoDirections
---- @return void
+--- @return nil
 function BentFences:swapTiles(obj, dir) end
 
 --- @public
 --- @param obj IsoObject
---- @return void
+--- @return nil
 function BentFences:unbendFence(obj) end
 
 

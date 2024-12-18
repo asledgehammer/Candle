@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RDSZombiesEating: RandomizedDeadSurvivorBase Create a dead survivor in the livingroom with zombies eating him
 --- @field public class any
@@ -19,7 +19,7 @@ function RDSZombiesEating:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RDSZombiesEating:randomizeDeadSurvivor(def) end
 
 

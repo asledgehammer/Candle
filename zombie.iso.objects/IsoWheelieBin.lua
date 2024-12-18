@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoWheelieBin: IsoPushableObject
 --- @field public class any
@@ -9,17 +9,17 @@ IsoWheelieBin = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function IsoWheelieBin:getObjectName() end
 
 --- @public
---- @param x float
---- @param y float
---- @return float
+--- @param x number
+--- @param y number
+--- @return number
 function IsoWheelieBin:getWeight(x, y) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoWheelieBin:update() end
 
 
@@ -30,5 +30,5 @@ function IsoWheelieBin:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoWheelieBin
---- @overload fun(cell: IsoCell, x: int, y: int, z: int): IsoWheelieBin
+--- @overload fun(cell: IsoCell, x: integer, y: integer, z: integer): IsoWheelieBin
 function IsoWheelieBin.new(cell) end

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Position
 --- @field public class any
@@ -9,11 +9,11 @@ Position = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function Position:getArea() end
 
 --- @public
---- @return String
+--- @return string
 function Position:getId() end
 
 --- @public

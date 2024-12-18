@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RDSHouseParty: RandomizedDeadSurvivorBase Zombies in party outfit, some food scattered around
 --- @field public class any
@@ -19,7 +19,7 @@ function RDSHouseParty:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RDSHouseParty:randomizeDeadSurvivor(def) end
 
 

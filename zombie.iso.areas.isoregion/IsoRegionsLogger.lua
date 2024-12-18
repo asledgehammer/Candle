@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoRegionsLogger TurboTuTone.
 --- @field public class any
@@ -17,7 +17,7 @@ function IsoRegionsLogger:getLogs() end
 function IsoRegionsLogger:isDirtyUI() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoRegionsLogger:unsetDirtyUI() end
 
 

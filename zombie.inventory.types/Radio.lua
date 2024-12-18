@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Radio: Moveable Turbo
 --- @field public class any
@@ -12,17 +12,17 @@ Radio = {};
 ------------------------------------
 
 --- @public
---- @param line String
---- @param r float
---- @param g float
---- @param b float
---- @param guid String
---- @param codes String
---- @param distance int
---- @return void
---- @overload fun(self: Radio, line: String, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
---- @overload fun(self: Radio, msg: ChatMessage, r: float, g: float, b: float, guid: String, codes: String, distance: int): void
---- @overload fun(self: Radio, arg0: IsoPlayer, arg1: String, arg2: float, arg3: float, arg4: float, arg5: String, arg6: String, arg7: int): void
+--- @param line string
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param guid string
+--- @param codes string
+--- @param distance integer
+--- @return nil
+--- @overload fun(self: Radio, line: string, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
+--- @overload fun(self: Radio, msg: ChatMessage, r: number, g: number, b: number, guid: string, codes: string, distance: integer): nil
+--- @overload fun(self: Radio, arg0: IsoPlayer, arg1: string, arg2: number, arg3: number, arg4: number, arg5: string, arg6: string, arg7: integer): nil
 function Radio:AddDeviceText(line, r, g, b, guid, codes, distance) end
 
 --- @public
@@ -36,24 +36,32 @@ function Radio:HasPlayerInRange() end
 function Radio:IsSpeaking() end
 
 --- @public
---- @param sprite String
+--- @param sprite string
 --- @return boolean
 function Radio:ReadFromWorldSprite(sprite) end
 
 --- @public
---- @param line String
---- @return void
---- @overload fun(self: Radio, line: String): void
+--- @param line string
+--- @return nil
+--- @overload fun(self: Radio, line: string): nil
 function Radio:Say(line) end
 
 --- @public
---- @param distance int
---- @return void
+--- @return string
+function Radio:canBeEquipped() end
+
+--- @public
+--- @param distance integer
+--- @return nil
 function Radio:doReceiveSignal(distance) end
 
 --- @public
---- @return float
---- @overload fun(self: Radio): float
+--- @return string
+function Radio:getClothingExtraSubmenu() end
+
+--- @public
+--- @return number
+--- @overload fun(self: Radio): number
 function Radio:getDelta() end
 
 --- @public
@@ -66,12 +74,12 @@ function Radio:getDeviceData() end
 function Radio:getPlayer() end
 
 --- @public
---- @return int
+--- @return integer
 function Radio:getSaveType() end
 
 --- @public
---- @return String
---- @overload fun(self: Radio): String
+--- @return string
+--- @overload fun(self: Radio): string
 function Radio:getSayLine() end
 
 --- @public
@@ -80,62 +88,67 @@ function Radio:getSayLine() end
 function Radio:getSquare() end
 
 --- @public
---- @return String
---- @overload fun(self: Radio): String
+--- @return string
+--- @overload fun(self: Radio): string
 function Radio:getTalkerType() end
 
 --- @public
---- @return float
---- @overload fun(self: Radio): float
+--- @return number
+--- @overload fun(self: Radio): number
 function Radio:getX() end
 
 --- @public
---- @return float
---- @overload fun(self: Radio): float
+--- @return number
+--- @overload fun(self: Radio): number
 function Radio:getY() end
 
 --- @public
---- @return float
---- @overload fun(self: Radio): float
+--- @return number
+--- @overload fun(self: Radio): number
 function Radio:getZ() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function Radio:load(input, WorldVersion) end
 
 --- @public
---- @return void
---- @overload fun(self: Radio): void
+--- @return nil
+--- @overload fun(self: Radio): nil
 function Radio:render() end
 
 --- @public
---- @return void
---- @overload fun(self: Radio): void
+--- @return nil
+--- @overload fun(self: Radio): nil
 function Radio:renderlast() end
 
 --- @public
 --- @param output ByteBuffer
 --- @param net boolean
---- @return void
+--- @return nil
 function Radio:save(output, net) end
 
 --- @public
---- @param delta float
---- @return void
---- @overload fun(self: Radio, delta: float): void
+--- @param arg0 string
+--- @return nil
+function Radio:setCanBeEquipped(arg0) end
+
+--- @public
+--- @param delta number
+--- @return nil
+--- @overload fun(self: Radio, delta: number): nil
 function Radio:setDelta(delta) end
 
 --- @public
 --- @param data DeviceData
---- @return void
---- @overload fun(self: Radio, data: DeviceData): void
+--- @return nil
+--- @overload fun(self: Radio, data: DeviceData): nil
 function Radio:setDeviceData(data) end
 
 --- @public
---- @return void
---- @overload fun(self: Radio): void
+--- @return nil
+--- @overload fun(self: Radio): nil
 function Radio:update() end
 
 
@@ -144,9 +157,9 @@ function Radio:update() end
 ------------------------------------
 
 --- @public
---- @param module String
---- @param name String
---- @param itemType String
---- @param texName String
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return Radio
 function Radio.new(module, name, itemType, texName) end

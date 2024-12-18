@@ -1,7 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RandomizedBuildingBase: RandomizedWorldBase
 --- @field public class any
+--- @field public maximumRoomCount integer
 RandomizedBuildingBase = {};
 
 ------------------------------------
@@ -11,12 +12,12 @@ RandomizedBuildingBase = {};
 --- @public
 --- @static
 --- @param building IsoBuilding
---- @return void
+--- @return nil
 function RandomizedBuildingBase.ChunkLoaded(building) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function RandomizedBuildingBase.initAllRBMapChance() end
 
 
@@ -26,8 +27,8 @@ function RandomizedBuildingBase.initAllRBMapChance() end
 
 --- @public
 --- @param sq IsoGridSquare
---- @param numPlanks int
---- @return void
+--- @param numPlanks integer
+--- @return nil
 function RandomizedBuildingBase:addBarricade(sq, numPlanks) end
 
 --- @public
@@ -39,12 +40,14 @@ function RandomizedBuildingBase:addBarricade(sq, numPlanks) end
 function RandomizedBuildingBase:addRandomRangedWeapon(container, addBulletsInGun, addBoxInContainer, attachPart) end
 
 --- @public
---- @param item String
+--- @param item string
 --- @param sq IsoGridSquare
 --- @param obj IsoObject
 --- @return InventoryItem
---- @overload fun(self: RandomizedBuildingBase, item: String, sq: IsoGridSquare, xoffset: float, yoffset: float, zoffset: float): InventoryItem
---- @overload fun(self: RandomizedBuildingBase, item: String, sq: IsoGridSquare, xoffset: float, yoffset: float, zoffset: float, worldZ: int): InventoryItem
+--- @overload fun(self: RandomizedBuildingBase, arg0: string, arg1: IsoGridSquare, arg2: IsoObject, arg3: boolean): InventoryItem
+--- @overload fun(self: RandomizedBuildingBase, item: string, sq: IsoGridSquare, xoffset: number, yoffset: number, zoffset: number): InventoryItem
+--- @overload fun(self: RandomizedBuildingBase, arg0: string, arg1: IsoGridSquare, arg2: number, arg3: number, arg4: number, arg5: boolean): InventoryItem
+--- @overload fun(self: RandomizedBuildingBase, item: string, sq: IsoGridSquare, xoffset: number, yoffset: number, zoffset: number, worldZ: integer): InventoryItem
 function RandomizedBuildingBase:addWorldItem(item, sq, obj) end
 
 --- @public
@@ -53,23 +56,24 @@ function RandomizedBuildingBase:addWorldItem(item, sq, obj) end
 ---  to 0 or 1 if it's gender-specific)
 ---
 --- @param def BuildingDef buildingDef
---- @param totalZombies int
---- @param outfit String
---- @param femaleChance Integer
+--- @param totalZombies integer
+--- @param outfit string
+--- @param femaleChance integer
 --- @param room RoomDef
 --- @return ArrayList
 function RandomizedBuildingBase:addZombies(def, totalZombies, outfit, femaleChance, room) end
 
 --- @public
---- @param totalZombies int
---- @param outfit String
---- @param femaleChance Integer
+--- @param totalZombies integer
+--- @param outfit string
+--- @param femaleChance integer
 --- @param square IsoGridSquare
 --- @return ArrayList
 function RandomizedBuildingBase:addZombiesOnSquare(totalZombies, outfit, femaleChance, square) end
 
 --- @public
---- @return int
+--- @return integer
+--- @overload fun(self: RandomizedBuildingBase, arg0: IsoGridSquare): integer
 function RandomizedBuildingBase:getChance() end
 
 --- @public
@@ -78,11 +82,11 @@ function RandomizedBuildingBase:getChance() end
 function RandomizedBuildingBase:getDoor(sq) end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedBuildingBase:getMinimumDays() end
 
 --- @public
---- @return int
+--- @return integer
 function RandomizedBuildingBase:getMinimumRooms() end
 
 --- @public
@@ -91,7 +95,7 @@ function RandomizedBuildingBase:getMinimumRooms() end
 function RandomizedBuildingBase:getWindow(sq) end
 
 --- @public
---- @return void
+--- @return nil
 function RandomizedBuildingBase:init() end
 
 --- @public
@@ -117,34 +121,34 @@ function RandomizedBuildingBase:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RandomizedBuildingBase:randomizeBuilding(def) end
 
 --- @public
 --- @param alwaysDo boolean
---- @return void
+--- @return nil
 function RandomizedBuildingBase:setAlwaysDo(alwaysDo) end
 
 --- @public
---- @param chance int
---- @return void
+--- @param chance integer
+--- @return nil
 function RandomizedBuildingBase:setChance(chance) end
 
 --- @public
---- @param minimumDays int
---- @return void
+--- @param minimumDays integer
+--- @return nil
 function RandomizedBuildingBase:setMinimumDays(minimumDays) end
 
 --- @public
---- @param minimumRooms int
---- @return void
+--- @param minimumRooms integer
+--- @return nil
 function RandomizedBuildingBase:setMinimumRooms(minimumRooms) end
 
 --- @public
 --- @param def BuildingDef
---- @param distribName String
---- @param chance int
---- @return void
+--- @param distribName string
+--- @param chance integer
+--- @return nil
 function RandomizedBuildingBase:spawnItemsInContainers(def, distribName, chance) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RVSCarCrashCorpse: RandomizedVehicleStoryBase
 --- @field public class any
@@ -18,13 +18,13 @@ function RVSCarCrashCorpse:initVehicleStorySpawner(zone, chunk, debug) end
 --- @public
 --- @param zone Zone
 --- @param chunk IsoChunk
---- @return void
+--- @return nil
 function RVSCarCrashCorpse:randomizeVehicleStory(zone, chunk) end
 
 --- @public
 --- @param spawner VehicleStorySpawner
 --- @param element Element
---- @return void
+--- @return nil
 function RVSCarCrashCorpse:spawnElement(spawner, element) end
 
 

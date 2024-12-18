@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class HumanVisual: BaseVisual
 --- @field public class any
@@ -20,46 +20,48 @@ function HumanVisual.GetMask(itemVisuals) end
 ------------------------------------
 
 --- @public
---- @param clothingItemName String
+--- @param clothingItemName string
 --- @return ItemVisual
 function HumanVisual:addBodyVisual(clothingItemName) end
 
 --- @public
---- @param clothingItemName String
+--- @param clothingItemName string
 --- @return ItemVisual
 function HumanVisual:addBodyVisualFromClothingItemName(clothingItemName) end
 
 --- @public
---- @param itemType String
+--- @param itemType string
 --- @return ItemVisual
 function HumanVisual:addBodyVisualFromItemType(itemType) end
 
 --- @public
---- @param itemVisuals ItemVisuals
---- @param scriptItem Item
+--- @param arg0 ItemVisuals
+--- @param arg1 ClothingItem
 --- @return ItemVisual
-function HumanVisual:addClothingItem(itemVisuals, scriptItem) end
+--- @overload fun(self: HumanVisual, itemVisuals: ItemVisuals, scriptItem: Item): ItemVisual
+function HumanVisual:addClothingItem(arg0, arg1) end
 
 --- @public
---- @return void
+--- @return nil
 function HumanVisual:clear() end
 
 --- @public
 --- @param other_ BaseVisual
---- @return void
+--- @return nil
 function HumanVisual:copyFrom(other_) end
 
 --- @public
---- @param itemGUID String
+--- @param itemGUID string
 --- @param itemVisuals ItemVisuals
---- @return void
---- @overload fun(self: HumanVisual, itemGUID: String, itemVisuals: ItemVisuals, clearCurrentVisuals: boolean): void
+--- @return nil
+--- @overload fun(self: HumanVisual, itemGUID: string, itemVisuals: ItemVisuals, clearCurrentVisuals: boolean): nil
 function HumanVisual:dressInClothingItem(itemGUID, itemVisuals) end
 
 --- @public
---- @param outfitName String
+--- @param outfitName string
 --- @param itemVisuals ItemVisuals
---- @return void
+--- @return nil
+--- @overload fun(self: HumanVisual, arg0: string, arg1: ItemVisuals, arg2: boolean): nil
 function HumanVisual:dressInNamedOutfit(outfitName, itemVisuals) end
 
 --- @public
@@ -67,16 +69,16 @@ function HumanVisual:dressInNamedOutfit(outfitName, itemVisuals) end
 function HumanVisual:getBeardColor() end
 
 --- @public
---- @return String
+--- @return string
 function HumanVisual:getBeardModel() end
 
 --- @public
 --- @param bodyPartType BloodBodyPartType
---- @return float
+--- @return number
 function HumanVisual:getBlood(bodyPartType) end
 
 --- @public
---- @return int
+--- @return integer
 function HumanVisual:getBodyHairIndex() end
 
 --- @public
@@ -85,7 +87,7 @@ function HumanVisual:getBodyVisuals() end
 
 --- @public
 --- @param bodyPartType BloodBodyPartType
---- @return float
+--- @return number
 function HumanVisual:getDirt(bodyPartType) end
 
 --- @public
@@ -93,16 +95,16 @@ function HumanVisual:getDirt(bodyPartType) end
 function HumanVisual:getHairColor() end
 
 --- @public
---- @return String
+--- @return string
 function HumanVisual:getHairModel() end
 
 --- @public
 --- @param bodyPartType BloodBodyPartType
---- @return float
+--- @return number
 function HumanVisual:getHole(bodyPartType) end
 
 --- @public
---- @return String
+--- @return string
 function HumanVisual:getLastStandString() end
 
 --- @public
@@ -122,7 +124,7 @@ function HumanVisual:getNaturalBeardColor() end
 function HumanVisual:getNaturalHairColor() end
 
 --- @public
---- @return String
+--- @return string
 function HumanVisual:getNonAttachedHair() end
 
 --- @public
@@ -134,19 +136,19 @@ function HumanVisual:getOutfit() end
 function HumanVisual:getSkinColor() end
 
 --- @public
---- @return String
+--- @return string
 function HumanVisual:getSkinTexture() end
 
 --- @public
---- @return int
+--- @return integer
 function HumanVisual:getSkinTextureIndex() end
 
 --- @public
---- @return float
+--- @return number
 function HumanVisual:getTotalBlood() end
 
 --- @public
---- @param itemType String
+--- @param itemType string
 --- @return boolean
 function HumanVisual:hasBodyVisualFromItemType(itemType) end
 
@@ -163,143 +165,143 @@ function HumanVisual:isSkeleton() end
 function HumanVisual:isZombie() end
 
 --- @public
---- @param start float
---- @param __end__ float
---- @param delta float
---- @return float
+--- @param start number
+--- @param __end__ number
+--- @param delta number
+--- @return number
 function HumanVisual:lerp(start, __end__, delta) end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function HumanVisual:load(input, WorldVersion) end
 
 --- @public
---- @param saveStr String
+--- @param saveStr string
 --- @return boolean
 function HumanVisual:loadLastStandString(saveStr) end
 
 --- @public
---- @return int
+--- @return integer
 function HumanVisual:pickRandomZombieRotStage() end
 
 --- @public
---- @return void
+--- @return nil
 function HumanVisual:randomBlood() end
 
 --- @public
---- @return void
+--- @return nil
 function HumanVisual:randomDirt() end
 
 --- @public
---- @return void
+--- @return nil
 function HumanVisual:removeBlood() end
 
 --- @public
---- @param itemType String
+--- @param itemType string
 --- @return ItemVisual
 function HumanVisual:removeBodyVisualFromItemType(itemType) end
 
 --- @public
---- @return void
+--- @return nil
 function HumanVisual:removeDirt() end
 
 --- @public
 --- @param output ByteBuffer
---- @return void
+--- @return nil
 function HumanVisual:save(output) end
 
 --- @public
 --- @param color ImmutableColor
---- @return void
+--- @return nil
 function HumanVisual:setBeardColor(color) end
 
 --- @public
---- @param model String
---- @return void
+--- @param model string
+--- @return nil
 function HumanVisual:setBeardModel(model) end
 
 --- @public
 --- @param bodyPartType BloodBodyPartType
---- @param amount float
---- @return void
+--- @param amount number
+--- @return nil
 function HumanVisual:setBlood(bodyPartType, amount) end
 
 --- @public
---- @param index int
---- @return void
+--- @param index integer
+--- @return nil
 function HumanVisual:setBodyHairIndex(index) end
 
 --- @public
 --- @param bodyPartType BloodBodyPartType
---- @param amount float
---- @return void
+--- @param amount number
+--- @return nil
 function HumanVisual:setDirt(bodyPartType, amount) end
 
 --- @public
 --- @param model Model
---- @return void
+--- @return nil
 function HumanVisual:setForceModel(model) end
 
 --- @public
---- @param modelScript String
---- @return void
+--- @param modelScript string
+--- @return nil
 function HumanVisual:setForceModelScript(modelScript) end
 
 --- @public
 --- @param color ImmutableColor
---- @return void
+--- @return nil
 function HumanVisual:setHairColor(color) end
 
 --- @public
---- @param model String
---- @return void
+--- @param model string
+--- @return nil
 function HumanVisual:setHairModel(model) end
 
 --- @public
 --- @param bodyPartType BloodBodyPartType
---- @return void
+--- @return nil
 function HumanVisual:setHole(bodyPartType) end
 
 --- @public
 --- @param color ImmutableColor
---- @return void
+--- @return nil
 function HumanVisual:setNaturalBeardColor(color) end
 
 --- @public
 --- @param color ImmutableColor
---- @return void
+--- @return nil
 function HumanVisual:setNaturalHairColor(color) end
 
 --- @public
---- @param nonAttachedHair String
---- @return void
+--- @param nonAttachedHair string
+--- @return nil
 function HumanVisual:setNonAttachedHair(nonAttachedHair) end
 
 --- @public
 --- @param outfit Outfit
---- @return void
+--- @return nil
 function HumanVisual:setOutfit(outfit) end
 
 --- @public
 --- @param color ImmutableColor
---- @return void
+--- @return nil
 function HumanVisual:setSkinColor(color) end
 
 --- @public
---- @param index int
---- @return void
+--- @param index integer
+--- @return nil
 function HumanVisual:setSkinTextureIndex(index) end
 
 --- @public
---- @param textureName String
---- @return void
+--- @param textureName string
+--- @return nil
 function HumanVisual:setSkinTextureName(textureName) end
 
 --- @public
 --- @param outfit Outfit
---- @return void
+--- @return nil
 function HumanVisual:synchWithOutfit(outfit) end
 
 

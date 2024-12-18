@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RZSBaseball: RandomizedZoneStoryBase
 --- @field public class any
@@ -10,7 +10,7 @@ RZSBaseball = {};
 
 --- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function RZSBaseball:randomizeZoneStory(zone) end
 
 

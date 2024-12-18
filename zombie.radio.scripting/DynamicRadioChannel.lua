@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class DynamicRadioChannel: RadioChannel TurboTuTone.
 --- @field public class any
@@ -9,9 +9,9 @@ DynamicRadioChannel = {};
 ------------------------------------
 
 --- @public
---- @param guid String
---- @param line int
---- @return void
+--- @param guid string
+--- @param line integer
+--- @return nil
 function DynamicRadioChannel:LoadAiringBroadcast(guid, line) end
 
 
@@ -20,9 +20,9 @@ function DynamicRadioChannel:LoadAiringBroadcast(guid, line) end
 ------------------------------------
 
 --- @public
---- @param n String
---- @param freq int
+--- @param n string
+--- @param freq integer
 --- @param c ChannelCategory
 --- @return DynamicRadioChannel
---- @overload fun(n: String, freq: int, c: ChannelCategory, guid: String): DynamicRadioChannel
+--- @overload fun(n: string, freq: integer, c: ChannelCategory, guid: string): DynamicRadioChannel
 function DynamicRadioChannel.new(n, freq, c) end

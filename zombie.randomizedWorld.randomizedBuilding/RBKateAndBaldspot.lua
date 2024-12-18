@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBKateAndBaldspot: RandomizedBuildingBase
 --- @field public class any
@@ -19,7 +19,7 @@ function RBKateAndBaldspot:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBKateAndBaldspot:randomizeBuilding(def) end
 
 

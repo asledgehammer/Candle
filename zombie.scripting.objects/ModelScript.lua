@@ -1,8 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class ModelScript: BaseScriptObject
 --- @field public class any
---- @field public DEFAULT_SHADER_NAME String
+--- @implement IModelAttachmentOwner
+--- @field public DEFAULT_SHADER_NAME string
 ModelScript = {};
 
 ------------------------------------
@@ -11,7 +12,7 @@ ModelScript = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ModelScript.ScriptsLoaded() end
 
 
@@ -20,9 +21,14 @@ function ModelScript.ScriptsLoaded() end
 ------------------------------------
 
 --- @public
---- @param name String
---- @param totalFile String
---- @return void
+--- @param arg0 string
+--- @return nil
+function ModelScript:InitLoadPP(arg0) end
+
+--- @public
+--- @param name string
+--- @param totalFile string
+--- @return nil
 function ModelScript:Load(name, totalFile) end
 
 --- @public
@@ -31,59 +37,80 @@ function ModelScript:Load(name, totalFile) end
 function ModelScript:addAttachment(attach) end
 
 --- @public
---- @param index int
+--- @param index integer
 --- @param attach ModelAttachment
 --- @return ModelAttachment
 function ModelScript:addAttachmentAt(index, attach) end
 
 --- @public
---- @param index int
+--- @param arg0 ModelAttachment
+--- @return nil
+--- @overload fun(self: ModelScript, arg0: ModelAttachment): nil
+function ModelScript:afterRenameAttachment(arg0) end
+
+--- @public
+--- @param arg0 ModelAttachment
+--- @return nil
+--- @overload fun(self: ModelScript, arg0: ModelAttachment): nil
+function ModelScript:beforeRenameAttachment(arg0) end
+
+--- @public
+--- @param index integer
 --- @return ModelAttachment
 function ModelScript:getAttachment(index) end
 
 --- @public
---- @param id String
+--- @param id string
 --- @return ModelAttachment
 function ModelScript:getAttachmentById(id) end
 
 --- @public
---- @return int
+--- @return integer
 function ModelScript:getAttachmentCount() end
 
 --- @public
---- @return String
+--- @return string
 function ModelScript:getFileName() end
 
 --- @public
---- @return String
+--- @return string
 function ModelScript:getFullType() end
 
 --- @public
---- @return String
+--- @return string
 function ModelScript:getMeshName() end
 
 --- @public
---- @return String
+--- @return string
 function ModelScript:getName() end
 
 --- @public
---- @return String
+--- @return string
 function ModelScript:getShaderName() end
 
 --- @public
---- @return String
---- @overload fun(self: ModelScript, allowNull: boolean): String
+--- @return string
+--- @overload fun(self: ModelScript, allowNull: boolean): string
 function ModelScript:getTextureName() end
 
 --- @public
---- @param index int
+--- @return boolean
+function ModelScript:isStatic() end
+
+--- @public
+--- @param index integer
 --- @return ModelAttachment
 --- @overload fun(self: ModelScript, attach: ModelAttachment): ModelAttachment
 function ModelScript:removeAttachment(index) end
 
 --- @public
---- @return void
+--- @return nil
 function ModelScript:reset() end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function ModelScript:scaleAttachmentOffset(arg0) end
 
 
 ------------------------------------

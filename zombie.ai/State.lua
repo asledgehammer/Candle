@@ -1,7 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class State
 --- @field public class any
+--- @implement IAnimEventListener
+--- @implement IAnimEventWrappedBroadcaster
 State = {};
 
 ------------------------------------
@@ -9,34 +11,51 @@ State = {};
 ------------------------------------
 
 --- @public
+--- @param arg0 IAnimEventListenerSetVariableString
+--- @return nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListener): nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListenerBoolean): nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListenerFloat): nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListenerNoParam): nil
+--- @overload fun(self: State, arg0: string, arg1: IAnimEventListenerString): nil
+function State:addAnimEventListener(arg0) end
+
+--- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
+--- @overload fun(self: State, owner: IsoGameCharacter, event: AnimEvent): nil
+--- @overload fun(self: State, owner: IsoGameCharacter, event: AnimEvent): nil
 function State:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function State:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function State:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function State:exit(owner) end
+
+--- @public
+--- @return AnimEventBroadcaster
+--- @overload fun(self: State): AnimEventBroadcaster
+function State:getAnimEventBroadcaster() end
 
 --- @public
 --- @param owner IsoGameCharacter
 --- @param modifiers MoveDeltaModifiers
---- @return void
+--- @return nil
 function State:getDeltaModifiers(owner, modifiers) end
 
 --- @public
---- @return String
+--- @return string
 function State:getName() end
 
 --- @public
@@ -61,12 +80,12 @@ function State:isDoingActionThatCanBeCancelled() end
 ---   Defaults to FALSE
 ---
 --- @param owner IsoGameCharacter
---- @param fromX int
---- @param fromY int
---- @param fromZ int
---- @param toX int
---- @param toY int
---- @param toZ int
+--- @param fromX integer
+--- @param fromY integer
+--- @param fromZ integer
+--- @param toX integer
+--- @param toY integer
+--- @param toZ integer
 --- @return boolean
 function State:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 

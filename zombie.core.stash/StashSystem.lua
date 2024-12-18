@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class StashSystem
 --- @field public class any
@@ -13,7 +13,7 @@ StashSystem = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function StashSystem.Reset() end
 
 --- @public
@@ -22,7 +22,7 @@ function StashSystem.Reset() end
 ---  check if the spawned item could be a stash item (map or note...)
 ---
 --- @param item InventoryItem
---- @return void
+--- @return nil
 function StashSystem.checkStashItem(item) end
 
 --- @public
@@ -32,7 +32,7 @@ function StashSystem.checkStashItem(item) end
 ---  we do the necessary stuff
 ---
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function StashSystem.doBuildingStash(def) end
 
 --- @public
@@ -42,7 +42,7 @@ function StashSystem.doBuildingStash(def) end
 ---
 --- @param stash Stash
 --- @param item InventoryItem
---- @return void
+--- @return nil
 function StashSystem.doStashItem(stash, item) end
 
 --- @public
@@ -52,13 +52,13 @@ function StashSystem.getPossibleStashes() end
 
 --- @public
 --- @static
---- @param stashName String
+--- @param stashName string
 --- @return Stash
 function StashSystem.getStash(stashName) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function StashSystem.init() end
 
 --- @public
@@ -66,14 +66,20 @@ function StashSystem.init() end
 ---
 ---  Load our different stashes description from lua files in
 ---
---- @return void
+--- @return nil
 function StashSystem.initAllStashes() end
 
 --- @public
 --- @static
+--- @param arg0 BuildingDef
+--- @return boolean
+function StashSystem.isStashBuilding(arg0) end
+
+--- @public
+--- @static
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function StashSystem.load(input, WorldVersion) end
 
 --- @public
@@ -81,19 +87,19 @@ function StashSystem.load(input, WorldVersion) end
 ---
 ---  Used when you read an annoted map
 ---
---- @param stashName String
---- @return void
+--- @param stashName string
+--- @return nil
 function StashSystem.prepareBuildingStash(stashName) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function StashSystem.reinit() end
 
 --- @public
 --- @static
 --- @param output ByteBuffer
---- @return void
+--- @return nil
 function StashSystem.save(output) end
 
 --- @public
@@ -103,7 +109,7 @@ function StashSystem.save(output) end
 ---  spawn any stash for this building
 ---
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function StashSystem.visitedBuilding(def) end
 
 

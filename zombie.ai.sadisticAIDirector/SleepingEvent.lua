@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class SleepingEvent
 --- @field public class any
@@ -12,19 +12,20 @@ SleepingEvent = {};
 
 --- @public
 --- @param chr IsoPlayer
---- @param sleepingTime int
---- @return void
+--- @param sleepingTime integer
+--- @return nil
+--- @overload fun(self: SleepingEvent, arg0: IsoPlayer, arg1: integer, arg2: boolean, arg3: boolean): nil
 function SleepingEvent:setPlayerFallAsleep(chr, sleepingTime) end
 
 --- @public
 --- @param chr IsoPlayer
---- @return void
+--- @return nil
 function SleepingEvent:update(chr) end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
---- @overload fun(self: SleepingEvent, chr: IsoGameCharacter, remote: boolean): void
+--- @return nil
+--- @overload fun(self: SleepingEvent, chr: IsoGameCharacter, remote: boolean): nil
 function SleepingEvent:wakeUp(chr) end
 
 

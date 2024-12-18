@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ActiveMods
 --- @field public class any
@@ -10,30 +10,30 @@ ActiveMods = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ActiveMods.Reset() end
 
 --- @public
 --- @static
---- @param id String
+--- @param id string
 --- @return ActiveMods
 function ActiveMods.getById(id) end
 
 --- @public
 --- @static
---- @param index int
+--- @param index integer
 --- @return ActiveMods
 function ActiveMods.getByIndex(index) end
 
 --- @public
 --- @static
---- @param id String
---- @return int
+--- @param id string
+--- @return integer
 function ActiveMods.indexOf(id) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function ActiveMods.renderUI() end
 
 --- @public
@@ -45,7 +45,7 @@ function ActiveMods.requiresResetLua(activeMods) end
 --- @public
 --- @static
 --- @param activeMods ActiveMods
---- @return void
+--- @return nil
 function ActiveMods.setLoadedMods(activeMods) end
 
 
@@ -54,20 +54,20 @@ function ActiveMods.setLoadedMods(activeMods) end
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function ActiveMods:checkMissingMaps() end
 
 --- @public
---- @return void
+--- @return nil
 function ActiveMods:checkMissingMods() end
 
 --- @public
---- @return void
+--- @return nil
 function ActiveMods:clear() end
 
 --- @public
 --- @param other ActiveMods
---- @return void
+--- @return nil
 function ActiveMods:copyFrom(other) end
 
 --- @public
@@ -79,24 +79,24 @@ function ActiveMods:getMapOrder() end
 function ActiveMods:getMods() end
 
 --- @public
---- @param modID String
+--- @param modID string
 --- @return boolean
 function ActiveMods:isModActive(modID) end
 
 --- @public
---- @param folder String
---- @return void
+--- @param folder string
+--- @return nil
 function ActiveMods:removeMapOrder(folder) end
 
 --- @public
---- @param modID String
---- @return void
+--- @param modID string
+--- @return nil
 function ActiveMods:removeMod(modID) end
 
 --- @public
---- @param modID String
+--- @param modID string
 --- @param active boolean
---- @return void
+--- @return nil
 function ActiveMods:setModActive(modID, active) end
 
 
@@ -105,6 +105,6 @@ function ActiveMods:setModActive(modID, active) end
 ------------------------------------
 
 --- @public
---- @param id String
+--- @param id string
 --- @return ActiveMods
 function ActiveMods.new(id) end

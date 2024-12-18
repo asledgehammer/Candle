@@ -1,9 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class SliceY
 --- @field public class any
 --- @field public SliceBuffer ByteBuffer
---- @field public SliceBufferLock Object
+--- @field public SliceBufferLock any
 SliceY = {};
 
 ------------------------------------

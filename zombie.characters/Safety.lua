@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Safety
 --- @field public class any
@@ -10,23 +10,23 @@ Safety = {};
 
 --- @public
 --- @param other Safety
---- @return void
+--- @return nil
 function Safety:copyFrom(other) end
 
 --- @public
---- @return Object
+--- @return any
 function Safety:getCharacter() end
 
 --- @public
---- @return float
+--- @return number
 function Safety:getCooldown() end
 
 --- @public
---- @return String
+--- @return string
 function Safety:getDescription() end
 
 --- @public
---- @return float
+--- @return number
 function Safety:getToggle() end
 
 --- @public
@@ -43,37 +43,37 @@ function Safety:isToggleAllowed() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function Safety:load(input, WorldVersion) end
 
 --- @public
 --- @param output ByteBuffer
---- @return void
+--- @return nil
 function Safety:save(output) end
 
 --- @public
---- @param cooldown float
---- @return void
+--- @param cooldown number
+--- @return nil
 function Safety:setCooldown(cooldown) end
 
 --- @public
 --- @param enabled boolean
---- @return void
+--- @return nil
 function Safety:setEnabled(enabled) end
 
 --- @public
 --- @param last boolean
---- @return void
+--- @return nil
 function Safety:setLast(last) end
 
 --- @public
---- @param toggle float
---- @return void
+--- @param toggle number
+--- @return nil
 function Safety:setToggle(toggle) end
 
 --- @public
---- @return void
+--- @return nil
 function Safety:toggleSafety() end
 
 

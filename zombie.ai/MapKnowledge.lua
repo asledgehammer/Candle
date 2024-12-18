@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class MapKnowledge
 --- @field public class any
@@ -9,55 +9,55 @@ MapKnowledge = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function MapKnowledge:forget() end
 
 --- @public
 --- @return ArrayList
---- @overload fun(self: MapKnowledge, x: int, y: int, z: int): KnownBlockedEdges
+--- @overload fun(self: MapKnowledge, x: integer, y: integer, z: integer): KnownBlockedEdges
 function MapKnowledge:getKnownBlockedEdges() end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return KnownBlockedEdges
 function MapKnowledge:getOrCreateKnownBlockedEdges(x, y, z) end
 
 --- @public
 --- @param object IsoDoor
 --- @param blocked boolean
---- @return void
---- @overload fun(self: MapKnowledge, object: IsoThumpable, blocked: boolean): void
+--- @return nil
+--- @overload fun(self: MapKnowledge, object: IsoThumpable, blocked: boolean): nil
 function MapKnowledge:setKnownBlockedDoor(object, blocked) end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @param blocked boolean
---- @return void
+--- @return nil
 function MapKnowledge:setKnownBlockedEdgeN(x, y, z, blocked) end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @param blocked boolean
---- @return void
+--- @return nil
 function MapKnowledge:setKnownBlockedEdgeW(x, y, z, blocked) end
 
 --- @public
 --- @param object IsoWindow
 --- @param blocked boolean
---- @return void
+--- @return nil
 function MapKnowledge:setKnownBlockedWindow(object, blocked) end
 
 --- @public
---- @param object IsoObject
---- @param blocked boolean
---- @return void
-function MapKnowledge:setKnownBlockedWindowFrame(object, blocked) end
+--- @param arg0 IsoWindowFrame
+--- @param arg1 boolean
+--- @return nil
+function MapKnowledge:setKnownBlockedWindowFrame(arg0, arg1) end
 
 
 ------------------------------------

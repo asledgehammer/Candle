@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class TemplateText TurboTuTone.
 --- @field public class any
@@ -10,37 +10,47 @@ TemplateText = {};
 
 --- @public
 --- @static
---- @param input String
---- @return String
---- @overload fun(input: String, table: KahluaTableImpl): String
---- @overload fun(input: String, replaceProvider: IReplaceProvider): String
+--- @param input string
+--- @return string
+--- @overload fun(input: string, table: table): string
+--- @overload fun(input: string, replaceProvider: IReplaceProvider): string
 function TemplateText.Build(input) end
 
 --- @public
 --- @static
---- @return void
+--- @return ITemplateBuilder
+function TemplateText.CreateBlanc() end
+
+--- @public
+--- @static
+--- @return ITemplateBuilder
+function TemplateText.CreateCopy() end
+
+--- @public
+--- @static
+--- @return nil
 function TemplateText.Initialize() end
 
 --- @public
 --- @static
---- @param bound float
---- @return float
---- @overload fun(bound: int): int
---- @overload fun(min: float, max: float): float
---- @overload fun(min: int, max: int): int
+--- @param bound number
+--- @return number
+--- @overload fun(bound: integer): integer
+--- @overload fun(min: number, max: number): number
+--- @overload fun(min: integer, max: integer): integer
 function TemplateText.RandNext(bound) end
 
 --- @public
 --- @static
---- @param key String
---- @param table KahluaTableImpl
---- @return void
---- @overload fun(key: String, replace: IReplace): void
+--- @param key string
+--- @param table table
+--- @return nil
+--- @overload fun(key: string, replace: IReplace): nil
 function TemplateText.RegisterKey(key, table) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function TemplateText.Reset() end
 
 

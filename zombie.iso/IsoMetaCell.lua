@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoMetaCell
 --- @field public class any
@@ -9,69 +9,140 @@ IsoMetaCell = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoMetaCell:Dispose() end
 
 --- @public
+--- @param arg0 AnimalZone
+--- @return nil
+function IsoMetaCell:addAnimalZone(arg0) end
+
+--- @public
 --- @param room RoomDef
---- @param cellX int
---- @param cellY int
---- @return void
+--- @param cellX integer
+--- @param cellY integer
+--- @return nil
 function IsoMetaCell:addRoom(room, cellX, cellY) end
 
 --- @public
+--- @param arg0 ArrayList
+--- @param arg1 integer
+--- @param arg2 integer
+--- @return nil
+function IsoMetaCell:addRooms(arg0, arg1, arg2) end
+
+--- @public
 --- @param def BuildingDef
---- @param triggerRange int
---- @param zombieExclusionRange int
---- @param type String
---- @return void
+--- @param triggerRange integer
+--- @param zombieExclusionRange integer
+--- @param type string
+--- @return nil
 function IsoMetaCell:addTrigger(def, triggerRange, zombieExclusionRange, type) end
 
 --- @public
 --- @param zone Zone
---- @param cellX int
---- @param cellY int
---- @return void
+--- @param cellX integer
+--- @param cellY integer
+--- @return nil
 function IsoMetaCell:addZone(zone, cellX, cellY) end
 
 --- @public
---- @return void
+--- @param arg0 integer
+--- @param arg1 integer
+--- @return nil
+function IsoMetaCell:checkAnimalZonesGenerated(arg0, arg1) end
+
+--- @public
+--- @return nil
 function IsoMetaCell:checkTriggers() end
 
 --- @public
---- @param x int
---- @param y int
---- @return IsoMetaChunk
-function IsoMetaCell:getChunk(x, y) end
+--- @return nil
+function IsoMetaCell:clearAnimalZones() end
 
 --- @public
---- @param x int
---- @param y int
---- @param w int
---- @param h int
+--- @param arg0 integer
+--- @return nil
+function IsoMetaCell:clearChunk(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return AnimalZone
+function IsoMetaCell:getAnimalZone(arg0) end
+
+--- @public
+--- @return integer
+function IsoMetaCell:getAnimalZonesSize() end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 integer
+--- @param arg2 integer
+--- @param arg3 integer
+--- @param arg4 ArrayList
+--- @return nil
+function IsoMetaCell:getBuildingsIntersecting(arg0, arg1, arg2, arg3, arg4) end
+
+--- @public
+--- @param arg0 integer
+--- @return IsoMetaChunk
+--- @overload fun(self: IsoMetaCell, x: integer, y: integer): IsoMetaChunk
+function IsoMetaCell:getChunk(arg0) end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param w integer
+--- @param h integer
 --- @param result ArrayList
---- @return void
+--- @return nil
 function IsoMetaCell:getRoomsIntersecting(x, y, w, h, result) end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
---- @param w int
---- @param h int
+--- @return integer
+function IsoMetaCell:getX() end
+
+--- @public
+--- @return integer
+function IsoMetaCell:getY() end
+
+--- @public
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param w integer
+--- @param h integer
 --- @param result ArrayList
---- @return void
+--- @return nil
 function IsoMetaCell:getZonesIntersecting(x, y, z, w, h, result) end
 
 --- @public
 --- @param result Set
---- @return void
+--- @return nil
 function IsoMetaCell:getZonesUnique(result) end
 
 --- @public
+--- @param arg0 integer
+--- @return boolean
+--- @overload fun(self: IsoMetaCell, arg0: integer, arg1: integer): boolean
+function IsoMetaCell:hasChunk(arg0) end
+
+--- @public
+--- @param arg0 IsoMetaGrid
+--- @param arg1 ByteBuffer
+--- @param arg2 integer
+--- @return nil
+function IsoMetaCell:load(arg0, arg1, arg2) end
+
+--- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function IsoMetaCell:removeZone(zone) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @return nil
+function IsoMetaCell:save(arg0) end
 
 
 ------------------------------------
@@ -79,7 +150,7 @@ function IsoMetaCell:removeZone(zone) end
 ------------------------------------
 
 --- @public
---- @param wx int
---- @param wy int
+--- @param wx integer
+--- @param wy integer
 --- @return IsoMetaCell
 function IsoMetaCell.new(wx, wy) end

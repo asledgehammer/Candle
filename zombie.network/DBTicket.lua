@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class DBTicket
 --- @field public class any
@@ -13,15 +13,15 @@ DBTicket = {};
 function DBTicket:getAnswer() end
 
 --- @public
---- @return String
+--- @return string
 function DBTicket:getAuthor() end
 
 --- @public
---- @return String
+--- @return string
 function DBTicket:getMessage() end
 
 --- @public
---- @return int
+--- @return integer
 function DBTicket:getTicketID() end
 
 --- @public
@@ -34,32 +34,32 @@ function DBTicket:isViewed() end
 
 --- @public
 --- @param answer DBTicket
---- @return void
+--- @return nil
 function DBTicket:setAnswer(answer) end
 
 --- @public
---- @param author String
---- @return void
+--- @param author string
+--- @return nil
 function DBTicket:setAuthor(author) end
 
 --- @public
 --- @param isAnswer boolean
---- @return void
+--- @return nil
 function DBTicket:setIsAnswer(isAnswer) end
 
 --- @public
---- @param message String
---- @return void
+--- @param message string
+--- @return nil
 function DBTicket:setMessage(message) end
 
 --- @public
---- @param ticketID int
---- @return void
+--- @param ticketID integer
+--- @return nil
 function DBTicket:setTicketID(ticketID) end
 
 --- @public
 --- @param viewed boolean
---- @return void
+--- @return nil
 function DBTicket:setViewed(viewed) end
 
 
@@ -68,8 +68,8 @@ function DBTicket:setViewed(viewed) end
 ------------------------------------
 
 --- @public
---- @param author String
---- @param message String
---- @param ticketID int
+--- @param author string
+--- @param message string
+--- @param ticketID integer
 --- @return DBTicket
 function DBTicket.new(author, message, ticketID) end

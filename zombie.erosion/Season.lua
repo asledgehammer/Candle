@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Season
 --- @field public class any

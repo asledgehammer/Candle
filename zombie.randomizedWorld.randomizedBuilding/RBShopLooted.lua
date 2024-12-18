@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBShopLooted: RandomizedBuildingBase Shop being looted by bandits + 2 cops and corpses inside the shop
 --- @field public class any
@@ -19,7 +19,7 @@ function RBShopLooted:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBShopLooted:randomizeBuilding(def) end
 
 

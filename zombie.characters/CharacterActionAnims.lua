@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class CharacterActionAnims: Enum TurboTuTone.
 --- @field public class any
@@ -33,7 +33,7 @@ CharacterActionAnims = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return CharacterActionAnims
 function CharacterActionAnims.valueOf(arg0) end
 

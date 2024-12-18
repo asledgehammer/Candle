@@ -1,9 +1,10 @@
---- @meta
+--- @meta _
 
 --- @class ItemType: Enum
 --- @field public class any
 --- @field public AlarmClock ItemType
 --- @field public AlarmClockClothing ItemType
+--- @field public Animal ItemType
 --- @field public Clothing ItemType
 --- @field public Drainable ItemType
 --- @field public Food ItemType
@@ -21,13 +22,13 @@ ItemType = {};
 
 --- @public
 --- @static
---- @param value int
+--- @param value integer
 --- @return ItemType
 function ItemType.fromIndex(value) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ItemType
 function ItemType.valueOf(arg0) end
 
@@ -46,7 +47,7 @@ function ItemType.values() end
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function ItemType:index() end
 
 

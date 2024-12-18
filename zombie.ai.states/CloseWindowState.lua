@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class CloseWindowState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function CloseWindowState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function CloseWindowState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function CloseWindowState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function CloseWindowState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function CloseWindowState:exit(owner) end
 
 --- @public

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Vector3
 --- @field public class any
@@ -11,29 +11,20 @@ Vector3 = {};
 
 --- @public
 --- @static
---- @param x float
---- @param y float
---- @param tx float
---- @param ty float
---- @return float
+--- @param x number
+--- @param y number
+--- @param tx number
+--- @param ty number
+--- @return number
 function Vector3.dot(x, y, tx, ty) end
-
---- @public
---- @static
----
----  Create a new vector from an AWT Point
----
---- @param p Point The java.awt.Point to convert
---- @return Vector2 A new Vector2 representing the Point
-function Vector3.fromAwtPoint(p) end
 
 --- @public
 --- @static
 ---
 ---  Create a new vector with a specified length and direction
 ---
---- @param length float
---- @param direction float The direction of the new vector, in radians
+--- @param length number
+--- @param direction number The direction of the new vector, in radians
 --- @return Vector2
 function Vector3.fromLengthDirection(length, direction) end
 
@@ -80,14 +71,14 @@ function Vector3:aimAt(other) end
 ---  Calculate the angle between this point and another
 ---
 --- @param other Vector2 The second point as vector
---- @return float The angle between them, in radians
+--- @return number The angle between them, in radians
 function Vector3:angleTo(other) end
 
 --- @public
 ---
 ---  Clone this vector
 ---
---- @return Object
+--- @return any
 --- @overload fun(self: Vector3): Vector3
 function Vector3:clone() end
 
@@ -96,29 +87,30 @@ function Vector3:clone() end
 ---  Calculate the distance between this point and another
 ---
 --- @param other Vector2 The second point as vector
---- @return float The distance between them
+--- @return number The distance between them
+--- @overload fun(self: Vector3, arg0: Vector3): number
 function Vector3:distanceTo(other) end
 
 --- @public
---- @param scalar float
+--- @param scalar number
 --- @return Vector3
 function Vector3:div(scalar) end
 
 --- @public
 --- @param other Vector2
---- @return float
+--- @return number
 function Vector3:dot(other) end
 
 --- @public
 --- @param other Vector3
---- @return float
+--- @return number
 function Vector3:dot3d(other) end
 
 --- @public
 ---
 ---  See if this vector is equal to another
 ---
---- @param other Object A Vector2 to compare this one to
+--- @param other any A Vector2 to compare this one to
 --- @return boolean true if other is a Vector2 equal to this one
 function Vector3:equals(other) end
 
@@ -126,35 +118,35 @@ function Vector3:equals(other) end
 ---
 ---  get the direction in which this vector is pointing
 ---
---- @return float The direction in which this vector is pointing in radians
+--- @return number The direction in which this vector is pointing in radians
 function Vector3:getDirection() end
 
 --- @public
 ---
 ---  get the length of this vector
 ---
---- @return float The length of this vector
+--- @return number The length of this vector
 function Vector3:getLength() end
 
 --- @public
 ---
 ---  get the length squared (L^2) of this vector
 ---
---- @return float The length squared of this vector
+--- @return number The length squared of this vector
 function Vector3:getLengthSq() end
 
 --- @public
---- @return void
+--- @return nil
 function Vector3:normalize() end
 
 --- @public
---- @param rad float
---- @return void
+--- @param rad number
+--- @return nil
 function Vector3:rotate(rad) end
 
 --- @public
---- @param rad float
---- @return void
+--- @param rad number
+--- @return nil
 function Vector3:rotatey(rad) end
 
 --- @public
@@ -163,14 +155,14 @@ function Vector3:rotatey(rad) end
 ---
 --- @param other Vector3 The Vector2 to copy
 --- @return Vector3
---- @overload fun(self: Vector3, x: float, y: float, z: float): Vector3
+--- @overload fun(self: Vector3, x: number, y: number, z: number): Vector3
 function Vector3:set(other) end
 
 --- @public
 ---
 ---  Set the direction of this vector, maintaining the length
 ---
---- @param direction float The new direction of this vector, in radians
+--- @param direction number The new direction of this vector, in radians
 --- @return Vector3
 function Vector3:setDirection(direction) end
 
@@ -178,7 +170,7 @@ function Vector3:setDirection(direction) end
 ---
 ---  Set the length of this vector, maintaining the direction
 ---
---- @param length float The length of this vector
+--- @param length number The length of this vector
 --- @return Vector3
 function Vector3:setLength(length) end
 
@@ -186,8 +178,8 @@ function Vector3:setLength(length) end
 ---
 ---  Set the length and direction of this vector
 ---
---- @param direction float The direction of this vector, in radians
---- @param length float
+--- @param direction number The direction of this vector, in radians
+--- @param length number
 --- @return Vector3
 function Vector3:setLengthAndDirection(direction, length) end
 
@@ -198,21 +190,7 @@ function Vector3:setLengthAndDirection(direction, length) end
 function Vector3:sub(val, out) end
 
 --- @public
----
----  Convert this vector to an AWT Dimension
----
---- @return Dimension a java.awt.Dimension
-function Vector3:toAwtDimension() end
-
---- @public
----
----  Convert this vector to an AWT Point
----
---- @return Point a java.awt.Point
-function Vector3:toAwtPoint() end
-
---- @public
---- @return String
+--- @return string
 function Vector3:toString() end
 
 
@@ -226,5 +204,5 @@ function Vector3:toString() end
 ---
 --- @return Vector3
 --- @overload fun(other: Vector3): Vector3
---- @overload fun(x: float, y: float, z: float): Vector3
+--- @overload fun(x: number, y: number, z: number): Vector3
 function Vector3.new() end

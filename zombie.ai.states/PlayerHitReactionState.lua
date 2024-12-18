@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PlayerHitReactionState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function PlayerHitReactionState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function PlayerHitReactionState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerHitReactionState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerHitReactionState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerHitReactionState:exit(owner) end
 
 

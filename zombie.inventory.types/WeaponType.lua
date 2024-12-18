@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class WeaponType: Enum
 --- @field public class any
@@ -23,11 +23,12 @@ WeaponType = {};
 --- @param chr IsoGameCharacter
 --- @return WeaponType
 --- @overload fun(weapon: HandWeapon): WeaponType
+--- @overload fun(arg0: IsoGameCharacter, arg1: InventoryItem, arg2: InventoryItem): WeaponType
 function WeaponType.getWeaponType(chr) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return WeaponType
 function WeaponType.valueOf(arg0) end
 
@@ -46,7 +47,7 @@ function WeaponType.values() end
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function WeaponType:getType() end
 
 

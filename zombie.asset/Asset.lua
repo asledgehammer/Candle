@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Asset
 --- @field public class any
@@ -10,7 +10,7 @@ Asset = {};
 
 --- @public
 --- @param dependent_asset Asset
---- @return void
+--- @return nil
 function Asset:addDependency(dependent_asset) end
 
 --- @public
@@ -26,7 +26,7 @@ function Asset:getObserverCb() end
 function Asset:getPath() end
 
 --- @public
---- @return int
+--- @return integer
 function Asset:getRefCount() end
 
 --- @public
@@ -51,17 +51,17 @@ function Asset:isReady() end
 
 --- @public
 --- @param state State
---- @return void
+--- @return nil
 function Asset:onCreated(state) end
 
 --- @public
 --- @param dependent_asset Asset
---- @return void
+--- @return nil
 function Asset:removeDependency(dependent_asset) end
 
 --- @public
 --- @param params AssetParams
---- @return void
+--- @return nil
 function Asset:setAssetParams(params) end
 
 

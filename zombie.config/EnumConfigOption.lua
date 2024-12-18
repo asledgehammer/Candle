@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class EnumConfigOption: IntegerConfigOption
 --- @field public class any
@@ -9,11 +9,11 @@ EnumConfigOption = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function EnumConfigOption:getNumValues() end
 
 --- @public
---- @return String
+--- @return string
 function EnumConfigOption:getType() end
 
 
@@ -22,8 +22,8 @@ function EnumConfigOption:getType() end
 ------------------------------------
 
 --- @public
---- @param name String
---- @param numValues int
---- @param defaultValue int
+--- @param name string
+--- @param numValues integer
+--- @param defaultValue integer
 --- @return EnumConfigOption
 function EnumConfigOption.new(name, numValues, defaultValue) end

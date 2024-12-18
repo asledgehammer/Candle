@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Reader
 --- @field public class any
@@ -21,13 +21,13 @@ function Reader.nullReader() end
 ------------------------------------
 
 --- @public
---- @return void
---- @overload fun(self: Reader): void
+--- @return nil
+--- @overload fun(self: Reader): nil
 function Reader:close() end
 
 --- @public
---- @param arg0 int
---- @return void
+--- @param arg0 integer
+--- @return nil
 function Reader:mark(arg0) end
 
 --- @public
@@ -35,11 +35,11 @@ function Reader:mark(arg0) end
 function Reader:markSupported() end
 
 --- @public
---- @return int
---- @overload fun(self: Reader, arg0: char[]): int
---- @overload fun(self: Reader, arg0: CharBuffer): int
---- @overload fun(self: Reader, arg0: CharBuffer): int
---- @overload fun(self: Reader, arg0: char[], arg1: int, arg2: int): int
+--- @return integer
+--- @overload fun(self: Reader, arg0: char[]): integer
+--- @overload fun(self: Reader, arg0: CharBuffer): integer
+--- @overload fun(self: Reader, arg0: CharBuffer): integer
+--- @overload fun(self: Reader, arg0: char[], arg1: integer, arg2: integer): integer
 function Reader:read() end
 
 --- @public
@@ -47,17 +47,17 @@ function Reader:read() end
 function Reader:ready() end
 
 --- @public
---- @return void
+--- @return nil
 function Reader:reset() end
 
 --- @public
---- @param arg0 long
---- @return long
+--- @param arg0 integer
+--- @return integer
 function Reader:skip(arg0) end
 
 --- @public
 --- @param arg0 Writer
---- @return long
+--- @return integer
 function Reader:transferTo(arg0) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoRegionLog
 --- @field public class any
@@ -13,7 +13,7 @@ IsoRegionLog = {};
 function IsoRegionLog:getColor() end
 
 --- @public
---- @return String
+--- @return string
 function IsoRegionLog:getStr() end
 
 --- @public

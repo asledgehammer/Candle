@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoSpriteInstance
 --- @field public class any
@@ -12,7 +12,7 @@ IsoSpriteInstance = {};
 --- @public
 --- @static
 --- @param isoSpriteInstance IsoSpriteInstance
---- @return void
+--- @return nil
 function IsoSpriteInstance.add(isoSpriteInstance) end
 
 --- @public
@@ -27,44 +27,44 @@ function IsoSpriteInstance.get(spr) end
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoSpriteInstance:Dispose() end
 
 --- @public
---- @param x int
---- @param y int
---- @param z int
---- @param r float
---- @param g float
---- @param b float
---- @param a float
---- @return void
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function IsoSpriteInstance:RenderGhostTileColor(x, y, z, r, g, b, a) end
 
 --- @public
---- @param f float
---- @return void
+--- @param f number
+--- @return nil
 function IsoSpriteInstance:SetAlpha(f) end
 
 --- @public
---- @param targetAlpha float
---- @return void
+--- @param targetAlpha number
+--- @return nil
 function IsoSpriteInstance:SetTargetAlpha(targetAlpha) end
 
 --- @public
---- @return float
+--- @return number
 function IsoSpriteInstance:getAlpha() end
 
 --- @public
---- @return float
+--- @return number
 function IsoSpriteInstance:getFrame() end
 
 --- @public
---- @return int
+--- @return integer
 function IsoSpriteInstance:getID() end
 
 --- @public
---- @return String
+--- @return string
 function IsoSpriteInstance:getName() end
 
 --- @public
@@ -72,27 +72,27 @@ function IsoSpriteInstance:getName() end
 function IsoSpriteInstance:getParentSprite() end
 
 --- @public
---- @return float
+--- @return number
 function IsoSpriteInstance:getScaleX() end
 
 --- @public
---- @return float
+--- @return number
 function IsoSpriteInstance:getScaleY() end
 
 --- @public
---- @return float
+--- @return number
 function IsoSpriteInstance:getTargetAlpha() end
 
 --- @public
---- @return float
+--- @return number
 function IsoSpriteInstance:getTintB() end
 
 --- @public
---- @return float
+--- @return number
 function IsoSpriteInstance:getTintG() end
 
 --- @public
---- @return float
+--- @return number
 function IsoSpriteInstance:getTintR() end
 
 --- @public
@@ -109,37 +109,39 @@ function IsoSpriteInstance:isMultiplyObjectAlpha() end
 
 --- @public
 --- @param obj IsoObject
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param dir IsoDirections
---- @param offsetX float
---- @param offsetY float
+--- @param offsetX number
+--- @param offsetY number
 --- @param info2 ColorInfo
---- @return void
+--- @return nil
+--- @overload fun(self: IsoSpriteInstance, arg0: IsoObject, arg1: number, arg2: number, arg3: number, arg4: IsoDirections, arg5: number, arg6: number, arg7: ColorInfo, arg8: boolean): nil
+--- @overload fun(self: IsoSpriteInstance, arg0: IsoObject, arg1: number, arg2: number, arg3: number, arg4: IsoDirections, arg5: number, arg6: number, arg7: ColorInfo, arg8: boolean, arg9: Consumer): nil
 function IsoSpriteInstance:render(obj, x, y, z, dir, offsetX, offsetY, info2) end
 
 --- @public
---- @param texW float
---- @param texH float
---- @param width float
---- @param height float
---- @return void
+--- @param texW number
+--- @param texH number
+--- @param width number
+--- @param height number
+--- @return nil
 function IsoSpriteInstance:scaleAspect(texW, texH, width, height) end
 
 --- @public
---- @param perSecond float
---- @return void
+--- @param perSecond number
+--- @return nil
 function IsoSpriteInstance:setFrameSpeedPerFrame(perSecond) end
 
 --- @public
---- @param scaleX float
---- @param scaleY float
---- @return void
+--- @param scaleX number
+--- @param scaleY number
+--- @return nil
 function IsoSpriteInstance:setScale(scaleX, scaleY) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoSpriteInstance:update() end
 
 

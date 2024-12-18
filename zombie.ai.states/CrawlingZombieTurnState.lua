@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class CrawlingZombieTurnState: State
 --- @field public class any
@@ -28,22 +28,22 @@ function CrawlingZombieTurnState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function CrawlingZombieTurnState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function CrawlingZombieTurnState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function CrawlingZombieTurnState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function CrawlingZombieTurnState:exit(owner) end
 
 

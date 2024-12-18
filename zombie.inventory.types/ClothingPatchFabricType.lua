@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ClothingPatchFabricType: Enum
 --- @field public class any
@@ -13,19 +13,19 @@ ClothingPatchFabricType = {};
 
 --- @public
 --- @static
---- @param index int
+--- @param index integer
 --- @return ClothingPatchFabricType
 function ClothingPatchFabricType.fromIndex(index) end
 
 --- @public
 --- @static
---- @param type String
+--- @param type string
 --- @return ClothingPatchFabricType
 function ClothingPatchFabricType.fromType(type) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return ClothingPatchFabricType
 function ClothingPatchFabricType.valueOf(arg0) end
 
@@ -44,7 +44,7 @@ function ClothingPatchFabricType.values() end
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ClothingPatchFabricType:getType() end
 
 

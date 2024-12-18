@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BooleanDebugOption: BooleanConfigOption
 --- @field public class any
@@ -6,11 +6,33 @@
 BooleanDebugOption = {};
 
 ------------------------------------
+---------- STATIC METHODS ----------
+------------------------------------
+
+--- @public
+--- @static
+--- @param arg0 IDebugOptionGroup
+--- @param arg1 string
+--- @param arg2 boolean
+--- @return BooleanDebugOption
+function BooleanDebugOption.newDebugOnlyOption(arg0, arg1, arg2) end
+
+--- @public
+--- @static
+--- @param arg0 IDebugOptionGroup
+--- @param arg1 string
+--- @param arg2 boolean
+--- @return BooleanDebugOption
+function BooleanDebugOption.newOption(arg0, arg1, arg2) end
+
+
+------------------------------------
 ------------- METHODS --------------
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
+--- @overload fun(self: BooleanDebugOption): string
 function BooleanDebugOption:getName() end
 
 --- @public
@@ -27,9 +49,14 @@ function BooleanDebugOption:getValue() end
 function BooleanDebugOption:isDebugOnly() end
 
 --- @public
+--- @return nil
+--- @overload fun(self: BooleanDebugOption): nil
+function BooleanDebugOption:onFullPathChanged() end
+
+--- @public
 --- @param parent IDebugOptionGroup
---- @return void
---- @overload fun(self: BooleanDebugOption, parent: IDebugOptionGroup): void
+--- @return nil
+--- @overload fun(self: BooleanDebugOption, parent: IDebugOptionGroup): nil
 function BooleanDebugOption:setParent(parent) end
 
 
@@ -38,7 +65,7 @@ function BooleanDebugOption:setParent(parent) end
 ------------------------------------
 
 --- @public
---- @param name String
+--- @param name string
 --- @param debugOnly boolean
 --- @param defaultValue boolean
 --- @return BooleanDebugOption

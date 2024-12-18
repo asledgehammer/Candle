@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IntegerServerOption: IntegerConfigOption
 --- @field public class any
@@ -15,8 +15,8 @@ IntegerServerOption = {};
 function IntegerServerOption:asConfigOption() end
 
 --- @public
---- @return String
---- @overload fun(self: IntegerServerOption): String
+--- @return string
+--- @overload fun(self: IntegerServerOption): string
 function IntegerServerOption:getTooltip() end
 
 
@@ -26,9 +26,9 @@ function IntegerServerOption:getTooltip() end
 
 --- @public
 --- @param owner ServerOptions
---- @param name String
---- @param min int
---- @param max int
---- @param defaultValue int
+--- @param name string
+--- @param min integer
+--- @param max integer
+--- @param defaultValue integer
 --- @return IntegerServerOption
 function IntegerServerOption.new(owner, name, min, max, defaultValue) end

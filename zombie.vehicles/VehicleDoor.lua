@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class VehicleDoor
 --- @field public class any
@@ -10,7 +10,7 @@ VehicleDoor = {};
 
 --- @public
 --- @param scriptDoor Door
---- @return void
+--- @return nil
 function VehicleDoor:init(scriptDoor) end
 
 --- @public
@@ -27,28 +27,28 @@ function VehicleDoor:isOpen() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function VehicleDoor:load(input, WorldVersion) end
 
 --- @public
 --- @param output ByteBuffer
---- @return void
+--- @return nil
 function VehicleDoor:save(output) end
 
 --- @public
 --- @param broken boolean
---- @return void
+--- @return nil
 function VehicleDoor:setLockBroken(broken) end
 
 --- @public
 --- @param locked boolean
---- @return void
+--- @return nil
 function VehicleDoor:setLocked(locked) end
 
 --- @public
 --- @param open boolean
---- @return void
+--- @return nil
 function VehicleDoor:setOpen(open) end
 
 

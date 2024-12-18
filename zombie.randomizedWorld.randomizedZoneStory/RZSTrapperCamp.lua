@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RZSTrapperCamp: RandomizedZoneStoryBase
 --- @field public class any
@@ -20,7 +20,7 @@ function RZSTrapperCamp.getTrapList() end
 
 --- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function RZSTrapperCamp:randomizeZoneStory(zone) end
 
 

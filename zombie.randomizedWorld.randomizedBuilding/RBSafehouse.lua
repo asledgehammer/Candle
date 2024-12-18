@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBSafehouse: RandomizedBuildingBase This building will be barricaded, have a lot of canned food but also lot of zombies inside it
 --- @field public class any
@@ -16,7 +16,7 @@ function RBSafehouse:isValid(arg0, arg1) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBSafehouse:randomizeBuilding(def) end
 
 

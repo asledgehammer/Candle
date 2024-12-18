@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class StorySound Turbo
 --- @field public class any
@@ -9,7 +9,7 @@ StorySound = {};
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function StorySound:getBaseVolume() end
 
 --- @public
@@ -17,24 +17,24 @@ function StorySound:getBaseVolume() end
 function StorySound:getClone() end
 
 --- @public
---- @return String
+--- @return string
 function StorySound:getName() end
 
 --- @public
---- @return long
---- @overload fun(self: StorySound, volumeOverride: float): long
---- @overload fun(self: StorySound, x: float, y: float, z: float, minRange: float, maxRange: float): long
---- @overload fun(self: StorySound, volumeMod: float, x: float, y: float, z: float, minRange: float, maxRange: float): long
+--- @return integer
+--- @overload fun(self: StorySound, volumeOverride: number): integer
+--- @overload fun(self: StorySound, x: number, y: number, z: number, minRange: number, maxRange: number): integer
+--- @overload fun(self: StorySound, volumeMod: number, x: number, y: number, z: number, minRange: number, maxRange: number): integer
 function StorySound:playSound() end
 
 --- @public
---- @param baseVolume float
---- @return void
+--- @param baseVolume number
+--- @return nil
 function StorySound:setBaseVolume(baseVolume) end
 
 --- @public
---- @param name String
---- @return void
+--- @param name string
+--- @return nil
 function StorySound:setName(name) end
 
 
@@ -43,7 +43,7 @@ function StorySound:setName(name) end
 ------------------------------------
 
 --- @public
---- @param name String
---- @param baseVol float
+--- @param name string
+--- @param baseVol number
 --- @return StorySound
 function StorySound.new(name, baseVol) end

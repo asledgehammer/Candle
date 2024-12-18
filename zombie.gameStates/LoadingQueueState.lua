@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class LoadingQueueState: GameState
 --- @field public class any
@@ -10,14 +10,15 @@ LoadingQueueState = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function LoadingQueueState.onConnectionImmediate() end
 
 --- @public
 --- @static
---- @param place int
---- @return void
-function LoadingQueueState.onPlaceInQueue(place) end
+--- @param arg0 integer
+--- @param arg1 HashMap
+--- @return nil
+function LoadingQueueState.onPlaceInQueue(arg0, arg1) end
 
 
 ------------------------------------
@@ -25,7 +26,7 @@ function LoadingQueueState.onPlaceInQueue(place) end
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function LoadingQueueState:enter() end
 
 --- @public
@@ -33,7 +34,7 @@ function LoadingQueueState:enter() end
 function LoadingQueueState:redirectState() end
 
 --- @public
---- @return void
+--- @return nil
 function LoadingQueueState:render() end
 
 --- @public

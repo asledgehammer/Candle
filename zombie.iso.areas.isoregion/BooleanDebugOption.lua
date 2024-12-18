@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BooleanDebugOption: BooleanConfigOption
 --- @field public class any
@@ -9,7 +9,7 @@ BooleanDebugOption = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function BooleanDebugOption:getIndex() end
 
 
@@ -19,8 +19,8 @@ function BooleanDebugOption:getIndex() end
 
 --- @public
 --- @param optionList ArrayList
---- @param name String
+--- @param name string
 --- @param defaultValue boolean
 --- @return BooleanDebugOption
---- @overload fun(optionList: ArrayList, name: String, defaultValue: boolean, zLevel: int): BooleanDebugOption
+--- @overload fun(optionList: ArrayList, name: string, defaultValue: boolean, zLevel: integer): BooleanDebugOption
 function BooleanDebugOption.new(optionList, name, defaultValue) end

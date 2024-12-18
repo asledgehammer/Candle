@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoLuaMover: IsoGameCharacter
 --- @field public class any
@@ -9,30 +9,30 @@ IsoLuaMover = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function IsoLuaMover:getObjectName() end
 
 --- @public
---- @param name String
---- @param seconds float
+--- @param name string
+--- @param seconds number
 --- @param looped boolean
 --- @param playing boolean
---- @return void
+--- @return nil
 function IsoLuaMover:playAnim(name, seconds, looped, playing) end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param col ColorInfo
 --- @param bDoAttached boolean
 --- @param bWallLightingPass boolean
 --- @param shader Shader
---- @return void
+--- @return nil
 function IsoLuaMover:render(x, y, z, col, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoLuaMover:update() end
 
 
@@ -41,6 +41,6 @@ function IsoLuaMover:update() end
 ------------------------------------
 
 --- @public
---- @param table KahluaTable
+--- @param table table
 --- @return IsoLuaMover
 function IsoLuaMover.new(table) end

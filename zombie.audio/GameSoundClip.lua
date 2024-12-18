@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class GameSoundClip
 --- @field public class any
@@ -15,35 +15,35 @@ GameSoundClip = {};
 function GameSoundClip:checkReloaded() end
 
 --- @public
---- @return float
+--- @return number
 function GameSoundClip:getEffectiveVolume() end
 
 --- @public
---- @return float
+--- @return number
 function GameSoundClip:getEffectiveVolumeInMenu() end
 
 --- @public
---- @return String
+--- @return string
 function GameSoundClip:getEvent() end
 
 --- @public
---- @return String
+--- @return string
 function GameSoundClip:getFile() end
 
 --- @public
---- @return float
+--- @return number
 function GameSoundClip:getMaxDistance() end
 
 --- @public
---- @return float
+--- @return number
 function GameSoundClip:getMinDistance() end
 
 --- @public
---- @return float
+--- @return number
 function GameSoundClip:getPitch() end
 
 --- @public
---- @return float
+--- @return number
 function GameSoundClip:getVolume() end
 
 --- @public

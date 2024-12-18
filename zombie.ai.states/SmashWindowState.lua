@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class SmashWindowState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function SmashWindowState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function SmashWindowState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function SmashWindowState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function SmashWindowState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function SmashWindowState:exit(owner) end
 
 --- @public

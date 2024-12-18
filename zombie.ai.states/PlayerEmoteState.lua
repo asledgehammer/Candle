@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PlayerEmoteState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function PlayerEmoteState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function PlayerEmoteState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerEmoteState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerEmoteState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerEmoteState:exit(owner) end
 
 --- @public

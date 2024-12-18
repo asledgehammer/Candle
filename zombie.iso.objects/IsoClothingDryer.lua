@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoClothingDryer: IsoObject
 --- @field public class any
@@ -9,11 +9,11 @@ IsoClothingDryer = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoClothingDryer:addToWorld() end
 
 --- @public
---- @return String
+--- @return string
 function IsoClothingDryer:getObjectName() end
 
 --- @public
@@ -34,41 +34,41 @@ function IsoClothingDryer:isRemoveItemAllowedFromContainer(container, item) end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
+--- @param WorldVersion integer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoClothingDryer:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
---- @param change String
+--- @param change string
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoClothingDryer:loadChange(change, bb) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoClothingDryer:removeFromWorld() end
 
 --- @public
 --- @param output ByteBuffer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoClothingDryer:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @param change String
---- @param tbl KahluaTable
+--- @param change string
+--- @param tbl table
 --- @param bb ByteBuffer
---- @return void
+--- @return nil
 function IsoClothingDryer:saveChange(change, tbl, bb) end
 
 --- @public
 --- @param activated boolean
---- @return void
+--- @return nil
 function IsoClothingDryer:setActivated(activated) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoClothingDryer:update() end
 
 

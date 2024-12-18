@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PlayerHomingPoint
 --- @field public class any
@@ -9,22 +9,22 @@ PlayerHomingPoint = {};
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function PlayerHomingPoint:getA() end
 
 --- @public
 ---
 ---  The lerp value for angle adjustment, can be tweaked to be more slowly or faster
 ---
---- @return float
+--- @return number
 function PlayerHomingPoint:getAngleLerpVal() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerHomingPoint:getB() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerHomingPoint:getG() end
 
 --- @public
@@ -32,11 +32,11 @@ function PlayerHomingPoint:getG() end
 ---  Offset the screen target point, for example to point to top of counter by
 ---  Y value
 ---
---- @return float
+--- @return number
 function PlayerHomingPoint:getHomeOnOffsetX() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerHomingPoint:getHomeOnOffsetY() end
 
 --- @public
@@ -44,11 +44,11 @@ function PlayerHomingPoint:getHomeOnOffsetY() end
 ---  The distance in tiles uppon which the pointer will jump to target (if
 ---  is enabled, and the target is onScreen)
 ---
---- @return int
+--- @return integer
 function PlayerHomingPoint:getHomeOnTargetDist() end
 
 --- @public
---- @return int
+--- @return integer
 function PlayerHomingPoint:getID() end
 
 --- @public
@@ -56,15 +56,15 @@ function PlayerHomingPoint:getID() end
 ---  The lerp value for jumping to target (homeOneTarget), can be tweaked to be more
 ---  or faster responding.
 ---
---- @return float
+--- @return number
 function PlayerHomingPoint:getMovementLerpVal() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerHomingPoint:getR() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerHomingPoint:getRenderHeight() end
 
 --- @public
@@ -72,40 +72,40 @@ function PlayerHomingPoint:getRenderHeight() end
 ---  The base render position for pointers is the center of the screen, adjust this
 ---  have it more at feet or head of character for example.
 ---
---- @return float
+--- @return number
 function PlayerHomingPoint:getRenderOffsetX() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerHomingPoint:getRenderOffsetY() end
 
 --- @public
 ---
 ---  Render width and height for the pointer texture.
 ---
---- @return float
+--- @return number
 function PlayerHomingPoint:getRenderWidth() end
 
 --- @public
 ---
 ---  The distance in pixels the pointer will hover around the character.
 ---
---- @return float
+--- @return number
 function PlayerHomingPoint:getStickToCharDist() end
 
 --- @public
---- @return float
+--- @return number
 function PlayerHomingPoint:getTargetAngle() end
 
 --- @public
 ---
 ---  The target position on the map for this pointer.
 ---
---- @return int
+--- @return integer
 function PlayerHomingPoint:getX() end
 
 --- @public
---- @return int
+--- @return integer
 function PlayerHomingPoint:getY() end
 
 --- @public
@@ -137,130 +137,130 @@ function PlayerHomingPoint:isRemoved() end
 ---
 ---  When called will remove the pointer next tick
 ---
---- @return void
+--- @return nil
 function PlayerHomingPoint:remove() end
 
 --- @public
---- @param a float
---- @return void
+--- @param a number
+--- @return nil
 function PlayerHomingPoint:setA(a) end
 
 --- @public
 --- @param active boolean
---- @return void
+--- @return nil
 function PlayerHomingPoint:setActive(active) end
 
 --- @public
---- @param angleLerpVal float
---- @return void
+--- @param angleLerpVal number
+--- @return nil
 function PlayerHomingPoint:setAngleLerpVal(angleLerpVal) end
 
 --- @public
---- @param b float
---- @return void
+--- @param b number
+--- @return nil
 function PlayerHomingPoint:setB(b) end
 
 --- @public
 --- @param customTargetAngle boolean
---- @return void
+--- @return nil
 function PlayerHomingPoint:setCustomTargetAngle(customTargetAngle) end
 
 --- @public
---- @param g float
---- @return void
+--- @param g number
+--- @return nil
 function PlayerHomingPoint:setG(g) end
 
 --- @public
---- @return void
+--- @return nil
 function PlayerHomingPoint:setHighCounter() end
 
 --- @public
---- @param homeOnOffsetX float
---- @return void
+--- @param homeOnOffsetX number
+--- @return nil
 function PlayerHomingPoint:setHomeOnOffsetX(homeOnOffsetX) end
 
 --- @public
---- @param homeOnOffsetY float
---- @return void
+--- @param homeOnOffsetY number
+--- @return nil
 function PlayerHomingPoint:setHomeOnOffsetY(homeOnOffsetY) end
 
 --- @public
---- @param homeOnTargetDist int
---- @return void
+--- @param homeOnTargetDist integer
+--- @return nil
 function PlayerHomingPoint:setHomeOnTargetDist(homeOnTargetDist) end
 
 --- @public
 --- @param homeOnTargetInView boolean
---- @return void
+--- @return nil
 function PlayerHomingPoint:setHomeOnTargetInView(homeOnTargetInView) end
 
 --- @public
---- @param movementLerpVal float
---- @return void
+--- @param movementLerpVal number
+--- @return nil
 function PlayerHomingPoint:setMovementLerpVal(movementLerpVal) end
 
 --- @public
---- @param r float
---- @return void
+--- @param r number
+--- @return nil
 function PlayerHomingPoint:setR(r) end
 
 --- @public
---- @param renderHeight float
---- @return void
+--- @param renderHeight number
+--- @return nil
 function PlayerHomingPoint:setRenderHeight(renderHeight) end
 
 --- @public
---- @param renderOffsetX float
---- @return void
+--- @param renderOffsetX number
+--- @return nil
 function PlayerHomingPoint:setRenderOffsetX(renderOffsetX) end
 
 --- @public
---- @param renderOffsetY float
---- @return void
+--- @param renderOffsetY number
+--- @return nil
 function PlayerHomingPoint:setRenderOffsetY(renderOffsetY) end
 
 --- @public
---- @param renderWidth float
---- @return void
+--- @param renderWidth number
+--- @return nil
 function PlayerHomingPoint:setRenderWidth(renderWidth) end
 
 --- @public
---- @param stickToCharDist float
---- @return void
+--- @param stickToCharDist number
+--- @return nil
 function PlayerHomingPoint:setStickToCharDist(stickToCharDist) end
 
 --- @public
---- @return void
+--- @return nil
 function PlayerHomingPoint:setTableSurface() end
 
 --- @public
---- @param targetAngle float
---- @return void
+--- @param targetAngle number
+--- @return nil
 function PlayerHomingPoint:setTargetAngle(targetAngle) end
 
 --- @public
---- @param texname String
---- @return void
+--- @param texname string
+--- @return nil
 function PlayerHomingPoint:setTexture(texname) end
 
 --- @public
---- @param x int
---- @return void
+--- @param x integer
+--- @return nil
 function PlayerHomingPoint:setX(x) end
 
 --- @public
---- @param offset float
---- @return void
+--- @param offset number
+--- @return nil
 function PlayerHomingPoint:setXOffsetScaled(offset) end
 
 --- @public
---- @param y int
---- @return void
+--- @param y integer
+--- @return nil
 function PlayerHomingPoint:setY(y) end
 
 --- @public
---- @param offset float
---- @return void
+--- @param offset number
+--- @return nil
 function PlayerHomingPoint:setYOffsetScaled(offset) end
 
 
@@ -269,6 +269,6 @@ function PlayerHomingPoint:setYOffsetScaled(offset) end
 ------------------------------------
 
 --- @public
---- @param plrIndex int
+--- @param plrIndex integer
 --- @return PlayerHomingPoint
 function PlayerHomingPoint.new(plrIndex) end

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class DrainableComboItem: InventoryItem
 --- @field public class any
@@ -20,7 +20,8 @@ function DrainableComboItem:CanStack(item) end
 function DrainableComboItem:IsDrainable() end
 
 --- @public
---- @return void
+--- @return nil
+--- @overload fun(self: DrainableComboItem, arg0: boolean, arg1: boolean, arg2: boolean): nil
 function DrainableComboItem:Use() end
 
 --- @public
@@ -32,73 +33,76 @@ function DrainableComboItem:canConsolidate() end
 function DrainableComboItem:finishupdate() end
 
 --- @public
---- @return float the delta
-function DrainableComboItem:getDelta() end
+--- @return number
+function DrainableComboItem:getCurrentUsesFloat() end
 
 --- @public
---- @return float
-function DrainableComboItem:getDrainableUsesFloat() end
+--- @return Energy
+function DrainableComboItem:getEnergy() end
 
 --- @public
---- @return int
-function DrainableComboItem:getDrainableUsesInt() end
-
---- @public
---- @return float
+--- @return number
 function DrainableComboItem:getHeat() end
 
 --- @public
---- @return float
+--- @return number
 function DrainableComboItem:getInvHeat() end
 
 --- @public
---- @return String the OnCooked
+--- @return integer
+function DrainableComboItem:getMaxUses() end
+
+--- @public
+--- @return string the OnCooked
 function DrainableComboItem:getOnCooked() end
 
 --- @public
---- @return float
-function DrainableComboItem:getRainFactor() end
-
---- @public
---- @return int
-function DrainableComboItem:getRemainingUses() end
+--- @return string
+function DrainableComboItem:getOnEat() end
 
 --- @public
 --- @return List the ReplaceOnCooked
 function DrainableComboItem:getReplaceOnCooked() end
 
 --- @public
---- @return String the ReplaceOnDeplete
+--- @return string the ReplaceOnDeplete
 function DrainableComboItem:getReplaceOnDeplete() end
 
 --- @public
---- @return String
+--- @return string
 function DrainableComboItem:getReplaceOnDepleteFullType() end
 
 --- @public
---- @return int
+--- @return integer
 function DrainableComboItem:getSaveType() end
 
 --- @public
---- @return float the ticks
+--- @return number the ticks
 function DrainableComboItem:getTicks() end
 
 --- @public
---- @return int the ticksPerEquipUse
+--- @return integer the ticksPerEquipUse
 function DrainableComboItem:getTicksPerEquipUse() end
 
 --- @public
---- @return float the useDelta
+--- @return number the useDelta
 function DrainableComboItem:getUseDelta() end
 
 --- @public
---- @return float
---- @overload fun(self: DrainableComboItem): float
-function DrainableComboItem:getUsedDelta() end
+--- @return number the EmptyWeight
+function DrainableComboItem:getWeightEmpty() end
 
 --- @public
---- @return float the EmptyWeight
-function DrainableComboItem:getWeightEmpty() end
+--- @return boolean
+function DrainableComboItem:isEmptyUses() end
+
+--- @public
+--- @return boolean
+function DrainableComboItem:isEnergy() end
+
+--- @public
+--- @return boolean
+function DrainableComboItem:isFullUses() end
 
 --- @public
 --- @return boolean the bUseWhileEquiped
@@ -109,84 +113,92 @@ function DrainableComboItem:isUseWhileEquiped() end
 function DrainableComboItem:isUseWhileUnequiped() end
 
 --- @public
---- @return void
---- @overload fun(self: DrainableComboItem): void
+--- @return nil
+function DrainableComboItem:randomizeUses() end
+
+--- @public
+--- @return nil
+--- @overload fun(self: DrainableComboItem): nil
 function DrainableComboItem:render() end
 
 --- @public
---- @return void
---- @overload fun(self: DrainableComboItem): void
+--- @return nil
+--- @overload fun(self: DrainableComboItem): nil
 function DrainableComboItem:renderlast() end
 
 --- @public
 --- @param canConsolidate boolean
---- @return void
+--- @return nil
 function DrainableComboItem:setCanConsolidate(canConsolidate) end
 
 --- @public
---- @param delta float the delta to set
---- @return void
-function DrainableComboItem:setDelta(delta) end
+--- @param arg0 integer
+--- @return nil
+function DrainableComboItem:setCurrentUses(arg0) end
 
 --- @public
---- @param heat float
---- @return void
+--- @param arg0 number
+--- @return nil
+function DrainableComboItem:setCurrentUsesFloat(arg0) end
+
+--- @public
+--- @param heat number
+--- @return nil
 function DrainableComboItem:setHeat(heat) end
 
 --- @public
---- @param onCooked String the onCooked to set
---- @return void
+--- @param onCooked string the onCooked to set
+--- @return nil
 function DrainableComboItem:setOnCooked(onCooked) end
 
 --- @public
---- @param rainFactor float
---- @return void
-function DrainableComboItem:setRainFactor(rainFactor) end
+--- @param arg0 string
+--- @return nil
+function DrainableComboItem:setOnEat(arg0) end
 
 --- @public
 --- @param replaceOnCooked List the ReplaceOnCooked to set
---- @return void
+--- @return nil
 function DrainableComboItem:setReplaceOnCooked(replaceOnCooked) end
 
 --- @public
---- @param ReplaceOnDeplete String
---- @return void
+--- @param ReplaceOnDeplete string
+--- @return nil
 function DrainableComboItem:setReplaceOnDeplete(ReplaceOnDeplete) end
 
 --- @public
---- @param ticks float the ticks to set
---- @return void
+--- @param ticks number the ticks to set
+--- @return nil
 function DrainableComboItem:setTicks(ticks) end
 
 --- @public
---- @param ticksPerEquipUse int the ticksPerEquipUse to set
---- @return void
+--- @param ticksPerEquipUse integer the ticksPerEquipUse to set
+--- @return nil
 function DrainableComboItem:setTicksPerEquipUse(ticksPerEquipUse) end
 
 --- @public
---- @param useDelta float the useDelta to set
---- @return void
+--- @param useDelta number the useDelta to set
+--- @return nil
 function DrainableComboItem:setUseDelta(useDelta) end
 
 --- @public
 --- @param bUseWhileEquiped boolean the bUseWhileEquiped to set
---- @return void
+--- @return nil
 function DrainableComboItem:setUseWhileEquiped(bUseWhileEquiped) end
 
 --- @public
 --- @param bUseWhileUnequiped boolean the bUseWhileUnequiped to set
---- @return void
+--- @return nil
 function DrainableComboItem:setUseWhileUnequiped(bUseWhileUnequiped) end
 
 --- @public
---- @param usedDelta float
---- @return void
---- @overload fun(self: DrainableComboItem, usedDelta: float): void
+--- @param usedDelta number
+--- @return nil
 function DrainableComboItem:setUsedDelta(usedDelta) end
 
 --- @public
---- @param weight float the EmptyWeight to set
---- @return void
+--- @param weight number the EmptyWeight to set
+--- @return nil
 function DrainableComboItem:setWeightEmpty(weight) end
 
 --- @public
@@ -194,12 +206,16 @@ function DrainableComboItem:setWeightEmpty(weight) end
 function DrainableComboItem:shouldUpdateInWorld() end
 
 --- @public
---- @return void
---- @overload fun(self: DrainableComboItem): void
+--- @return nil
+function DrainableComboItem:syncItemFields() end
+
+--- @public
+--- @return nil
+--- @overload fun(self: DrainableComboItem): nil
 function DrainableComboItem:update() end
 
 --- @public
---- @return void
+--- @return nil
 function DrainableComboItem:updateWeight() end
 
 
@@ -208,10 +224,10 @@ function DrainableComboItem:updateWeight() end
 ------------------------------------
 
 --- @public
---- @param module String
---- @param name String
---- @param itemType String
---- @param texName String
+--- @param module string
+--- @param name string
+--- @param itemType string
+--- @param texName string
 --- @return DrainableComboItem
---- @overload fun(module: String, name: String, itemType: String, item: Item): DrainableComboItem
+--- @overload fun(module: string, name: string, itemType: string, item: Item): DrainableComboItem
 function DrainableComboItem.new(module, name, itemType, texName) end

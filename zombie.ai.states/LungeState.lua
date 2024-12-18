@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class LungeState: State
 --- @field public class any
@@ -20,17 +20,17 @@ function LungeState.instance() end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function LungeState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function LungeState:execute(owner) end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
+--- @return nil
 function LungeState:exit(chr) end
 
 --- @public

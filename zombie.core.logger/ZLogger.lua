@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ZLogger
 --- @field public class any
@@ -10,17 +10,17 @@ ZLogger = {};
 
 --- @public
 --- @param ex Exception
---- @return void
---- @overload fun(self: ZLogger, logs: String): void
---- @overload fun(self: ZLogger, logs: String, level: String): void
---- @overload fun(self: ZLogger, arg0: String, arg1: String, arg2: boolean): void
+--- @return nil
+--- @overload fun(self: ZLogger, logs: string): nil
+--- @overload fun(self: ZLogger, logs: string, level: string): nil
+--- @overload fun(self: ZLogger, arg0: string, arg1: string, arg2: boolean): nil
 function ZLogger:write(ex) end
 
 --- @public
---- @param arg0 String
---- @param arg1 String
+--- @param arg0 string
+--- @param arg1 string
 --- @param arg2 boolean
---- @return void
+--- @return nil
 function ZLogger:writeUnsafe(arg0, arg1, arg2) end
 
 
@@ -32,7 +32,7 @@ function ZLogger:writeUnsafe(arg0, arg1, arg2) end
 ---
 ---  Write logs into file and console.
 ---
---- @param name String
+--- @param name string
 --- @param useConsole boolean
 --- @return ZLogger
 function ZLogger.new(name, useConsole) end

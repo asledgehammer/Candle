@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class UIFont: Enum
 --- @field public class any
@@ -21,6 +21,16 @@
 --- @field public NewLarge UIFont
 --- @field public NewMedium UIFont
 --- @field public NewSmall UIFont
+--- @field public SdfBold UIFont
+--- @field public SdfBoldItalic UIFont
+--- @field public SdfCaveat UIFont
+--- @field public SdfItalic UIFont
+--- @field public SdfOldBold UIFont
+--- @field public SdfOldBoldItalic UIFont
+--- @field public SdfOldItalic UIFont
+--- @field public SdfOldRegular UIFont
+--- @field public SdfRegular UIFont
+--- @field public SdfRobertoSans UIFont
 --- @field public Small UIFont
 --- @field public Title UIFont
 UIFont = {};
@@ -31,13 +41,13 @@ UIFont = {};
 
 --- @public
 --- @static
---- @param str String
+--- @param str string
 --- @return UIFont
 function UIFont.FromString(str) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return UIFont
 function UIFont.valueOf(arg0) end
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class VehicleType Contains all car model with their associated skin index
 --- @field public class any
@@ -12,31 +12,31 @@ VehicleType = {};
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function VehicleType.Reset() end
 
 --- @public
 --- @static
---- @param zoneName String
+--- @param zoneName string
 --- @return VehicleType
---- @overload fun(zoneName: String, doNormalWhenSpecific: Boolean): VehicleType
+--- @overload fun(zoneName: string, doNormalWhenSpecific: boolean): VehicleType
 function VehicleType.getRandomVehicleType(zoneName) end
 
 --- @public
 --- @static
---- @param name String
+--- @param name string
 --- @return VehicleType
 function VehicleType.getTypeFromName(name) end
 
 --- @public
 --- @static
---- @param zoneName String
+--- @param zoneName string
 --- @return boolean
 function VehicleType.hasTypeForZone(zoneName) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function VehicleType.init() end
 
 
@@ -45,20 +45,20 @@ function VehicleType.init() end
 ------------------------------------
 
 --- @public
---- @return float
+--- @return number
 function VehicleType:getBaseVehicleQuality() end
 
 --- @public
---- @return int
+--- @return integer
 function VehicleType:getChanceToSpawnKey() end
 
 --- @public
---- @return float
+--- @return number
 function VehicleType:getRandomBaseVehicleQuality() end
 
 --- @public
---- @param chanceToSpawnKey int
---- @return void
+--- @param chanceToSpawnKey integer
+--- @return nil
 function VehicleType:setChanceToSpawnKey(chanceToSpawnKey) end
 
 
@@ -67,6 +67,6 @@ function VehicleType:setChanceToSpawnKey(chanceToSpawnKey) end
 ------------------------------------
 
 --- @public
---- @param name String
+--- @param name string
 --- @return VehicleType
 function VehicleType.new(name) end

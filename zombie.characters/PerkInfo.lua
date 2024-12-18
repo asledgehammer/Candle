@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PerkInfo
 --- @field public class any
@@ -9,7 +9,7 @@ PerkInfo = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function PerkInfo:getLevel() end
 
 

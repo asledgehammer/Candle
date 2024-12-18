@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class TileOverlays
 --- @field public class any
@@ -10,18 +10,23 @@ TileOverlays = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function TileOverlays:Reset() end
 
 --- @public
---- @param overlayMap KahluaTableImpl
---- @return void
+--- @param overlayMap table
+--- @return nil
 function TileOverlays:addOverlays(overlayMap) end
 
 --- @public
 --- @param square IsoGridSquare
---- @return void
+--- @return nil
 function TileOverlays:fixTableTopOverlays(square) end
+
+--- @public
+--- @param arg0 string
+--- @return ArrayList
+function TileOverlays:getUnderlyingSpriteNames(arg0) end
 
 --- @public
 --- @param obj IsoObject
@@ -30,7 +35,7 @@ function TileOverlays:hasOverlays(obj) end
 
 --- @public
 --- @param obj IsoObject
---- @return void
+--- @return nil
 function TileOverlays:updateTileOverlaySprite(obj) end
 
 

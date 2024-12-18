@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Time
 --- @field public class any

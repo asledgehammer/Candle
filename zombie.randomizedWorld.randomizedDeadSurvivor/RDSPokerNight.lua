@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RDSPokerNight: RandomizedDeadSurvivorBase Create some zombies in varsity outfit + 2 naked zombies in bedroom
 --- @field public class any
@@ -19,7 +19,7 @@ function RDSPokerNight:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RDSPokerNight:randomizeDeadSurvivor(def) end
 
 

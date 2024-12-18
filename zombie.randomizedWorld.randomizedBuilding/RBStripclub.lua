@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBStripclub: RandomizedBuildingBase Add money/alcohol on table  Can also generate a rare male venue
 --- @field public class any
@@ -19,7 +19,7 @@ function RBStripclub:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBStripclub:randomizeBuilding(def) end
 
 

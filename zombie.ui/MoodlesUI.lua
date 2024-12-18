@@ -1,11 +1,7 @@
---- @meta
+--- @meta _
 
 --- @class MoodlesUI: UIElement
 --- @field public class any
---- @field public chevronDown Texture
---- @field public chevronDownBorder Texture
---- @field public chevronUp Texture
---- @field public chevronUpBorder Texture
 --- @field public minusGreen Texture
 --- @field public minusRed Texture
 --- @field public plusGreen Texture
@@ -32,41 +28,41 @@ function MoodlesUI:CurrentlyAnimating() end
 
 --- @public
 --- @param el UIElement
---- @param t int
---- @param r int
---- @param b int
---- @param l int
---- @return void
+--- @param t integer
+--- @param r integer
+--- @param b integer
+--- @param l integer
+--- @return nil
 function MoodlesUI:Nest(el, t, r, b, l) end
 
 --- @public
---- @param dx double
---- @param dy double
---- @return Boolean
+--- @param dx number
+--- @param dy number
+--- @return boolean
 function MoodlesUI:onMouseMove(dx, dy) end
 
 --- @public
---- @param dx double
---- @param dy double
---- @return void
+--- @param dx number
+--- @param dy number
+--- @return nil
 function MoodlesUI:onMouseMoveOutside(dx, dy) end
 
 --- @public
---- @return void
+--- @return nil
 function MoodlesUI:render() end
 
 --- @public
 --- @param chr IsoGameCharacter
---- @return void
+--- @return nil
 function MoodlesUI:setCharacter(chr) end
 
 --- @public
---- @return void
+--- @return nil
 function MoodlesUI:update() end
 
 --- @public
 --- @param Moodle MoodleType
---- @return void
+--- @return nil
 function MoodlesUI:wiggle(Moodle) end
 
 

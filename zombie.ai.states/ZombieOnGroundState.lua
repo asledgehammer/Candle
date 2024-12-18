@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ZombieOnGroundState: State
 --- @field public class any
@@ -27,17 +27,17 @@ function ZombieOnGroundState.isCharacterStandingOnOther(chrStanding, chrProne) e
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieOnGroundState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieOnGroundState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ZombieOnGroundState:exit(owner) end
 
 

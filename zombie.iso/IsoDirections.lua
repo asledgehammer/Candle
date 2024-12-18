@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoDirections: Enum
 --- @field public class any
@@ -37,10 +37,10 @@ function IsoDirections.cardinalFromAngle(angle) end
 
 --- @public
 --- @static
---- @param angleRadians float
+--- @param angleRadians number
 --- @return IsoDirections
 --- @overload fun(angle: Vector2): IsoDirections
---- @overload fun(angleX: float, angleY: float): IsoDirections
+--- @overload fun(angleX: number, angleY: number): IsoDirections
 function IsoDirections.fromAngle(angleRadians) end
 
 --- @public
@@ -51,13 +51,19 @@ function IsoDirections.fromAngleActual(angle) end
 
 --- @public
 --- @static
---- @param index int
+--- @param index integer
 --- @return IsoDirections
 function IsoDirections.fromIndex(index) end
 
 --- @public
 --- @static
---- @return void
+--- @param arg0 string
+--- @return IsoDirections
+function IsoDirections.fromString(arg0) end
+
+--- @public
+--- @static
+--- @return nil
 function IsoDirections.generateTables() end
 
 --- @public
@@ -73,7 +79,7 @@ function IsoDirections.reverse(dir) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoDirections
 function IsoDirections.valueOf(arg0) end
 
@@ -93,12 +99,16 @@ function IsoDirections.values() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(self: IsoDirections, time: int): IsoDirections
+function IsoDirections:Rot180() end
+
+--- @public
+--- @return IsoDirections
+--- @overload fun(self: IsoDirections, time: integer): IsoDirections
 function IsoDirections:RotLeft() end
 
 --- @public
 --- @return IsoDirections
---- @overload fun(self: IsoDirections, time: int): IsoDirections
+--- @overload fun(self: IsoDirections, time: integer): IsoDirections
 function IsoDirections:RotRight() end
 
 --- @public
@@ -106,15 +116,27 @@ function IsoDirections:RotRight() end
 function IsoDirections:ToVector() end
 
 --- @public
---- @return int
+--- @return integer
+function IsoDirections:dx() end
+
+--- @public
+--- @return integer
+function IsoDirections:dy() end
+
+--- @public
+--- @return integer
 function IsoDirections:index() end
 
 --- @public
---- @return float
+--- @return integer
+function IsoDirections:indexUnmodified() end
+
+--- @public
+--- @return number
 function IsoDirections:toAngle() end
 
 --- @public
---- @return String
+--- @return string
 function IsoDirections:toCompassString() end
 
 

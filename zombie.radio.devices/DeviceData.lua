@@ -1,8 +1,9 @@
---- @meta
+--- @meta _
 
 --- @class DeviceData Turbo  Stores shared data for devices (used in iso and item)
 --- @field public class any
 --- @implement Cloneable
+--- @implement IFMODParameterUpdater
 DeviceData = {};
 
 ------------------------------------
@@ -10,31 +11,31 @@ DeviceData = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function DeviceData:StartPlayMedia() end
 
 --- @public
---- @return void
+--- @return nil
 function DeviceData:StopPlayMedia() end
 
 --- @public
 --- @param listening boolean
---- @return void
+--- @return nil
 function DeviceData:TriggerPlayerListening(listening) end
 
 --- @public
 --- @param bat DrainableComboItem
---- @return void
+--- @return nil
 function DeviceData:addBattery(bat) end
 
 --- @public
 --- @param headphones InventoryItem
---- @return void
+--- @return nil
 function DeviceData:addHeadphones(headphones) end
 
 --- @public
 --- @param media InventoryItem
---- @return void
+--- @return nil
 function DeviceData:addMediaItem(media) end
 
 --- @public
@@ -42,30 +43,30 @@ function DeviceData:addMediaItem(media) end
 function DeviceData:canBePoweredHere() end
 
 --- @public
---- @return void
+--- @return nil
 function DeviceData:cleanSoundsAndEmitter() end
 
 --- @public
 --- @param p DevicePresets
---- @return void
+--- @return nil
 function DeviceData:cloneDevicePresets(p) end
 
 --- @public
---- @param distance float
---- @return void
+--- @param distance number
+--- @return nil
 function DeviceData:doReceiveMPSignal(distance) end
 
 --- @public
---- @param distance int
---- @return void
+--- @param distance integer
+--- @return nil
 function DeviceData:doReceiveSignal(distance) end
 
 --- @public
---- @return void
+--- @return nil
 function DeviceData:generatePresets() end
 
 --- @public
---- @return float
+--- @return number
 function DeviceData:getBaseVolumeRange() end
 
 --- @public
@@ -74,7 +75,7 @@ function DeviceData:getBaseVolumeRange() end
 function DeviceData:getBattery(inventory) end
 
 --- @public
---- @return int
+--- @return integer
 function DeviceData:getChannel() end
 
 --- @public
@@ -82,7 +83,7 @@ function DeviceData:getChannel() end
 function DeviceData:getClone() end
 
 --- @public
---- @return String
+--- @return string
 function DeviceData:getDeviceName() end
 
 --- @public
@@ -90,15 +91,15 @@ function DeviceData:getDeviceName() end
 function DeviceData:getDevicePresets() end
 
 --- @public
---- @return int
+--- @return integer
 function DeviceData:getDeviceSoundVolumeRange() end
 
 --- @public
---- @return float
+--- @return number
 function DeviceData:getDeviceVolume() end
 
 --- @public
---- @return int
+--- @return integer
 function DeviceData:getDeviceVolumeRange() end
 
 --- @public
@@ -106,11 +107,16 @@ function DeviceData:getDeviceVolumeRange() end
 function DeviceData:getEmitter() end
 
 --- @public
+--- @return FMODParameterList
+--- @overload fun(self: DeviceData): FMODParameterList
+function DeviceData:getFMODParameters() end
+
+--- @public
 --- @return boolean
 function DeviceData:getHasBattery() end
 
 --- @public
---- @return int
+--- @return integer
 function DeviceData:getHeadphoneType() end
 
 --- @public
@@ -143,11 +149,15 @@ function DeviceData:getIsTurnedOn() end
 function DeviceData:getIsTwoWay() end
 
 --- @public
---- @return int
+--- @return IsoObject
+function DeviceData:getIsoObject() end
+
+--- @public
+--- @return integer
 function DeviceData:getLastRecordedDistance() end
 
 --- @public
---- @return int
+--- @return integer
 function DeviceData:getMaxChannelRange() end
 
 --- @public
@@ -159,7 +169,7 @@ function DeviceData:getMediaData() end
 function DeviceData:getMediaIndex() end
 
 --- @public
---- @return byte
+--- @return integer
 function DeviceData:getMediaType() end
 
 --- @public
@@ -167,11 +177,11 @@ function DeviceData:getMediaType() end
 function DeviceData:getMicIsMuted() end
 
 --- @public
---- @return int
+--- @return integer
 function DeviceData:getMicRange() end
 
 --- @public
---- @return int
+--- @return integer
 function DeviceData:getMinChannelRange() end
 
 --- @public
@@ -179,20 +189,24 @@ function DeviceData:getMinChannelRange() end
 function DeviceData:getParent() end
 
 --- @public
---- @return float
+--- @return number
 function DeviceData:getPower() end
 
 --- @public
---- @return int
+--- @return integer
 function DeviceData:getTransmitRange() end
 
 --- @public
---- @return float
+--- @return number
 function DeviceData:getUseDelta() end
 
 --- @public
 --- @return boolean
 function DeviceData:hasMedia() end
+
+--- @public
+--- @return boolean
+function DeviceData:isEmergencyBroadcast() end
 
 --- @public
 --- @return boolean
@@ -220,34 +234,34 @@ function DeviceData:isVehicleDevice() end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
+--- @param WorldVersion integer
 --- @param net boolean
---- @return void
+--- @return nil
 function DeviceData:load(input, WorldVersion, net) end
 
 --- @public
---- @param soundname String
---- @param volume float
+--- @param soundname string
+--- @param volume number
 --- @param transmit boolean
---- @return void
+--- @return nil
 function DeviceData:playSound(soundname, volume, transmit) end
 
 --- @public
---- @param soundname String
+--- @param soundname string
 --- @param useDeviceVolume boolean
---- @return void
+--- @return nil
 function DeviceData:playSoundLocal(soundname, useDeviceVolume) end
 
 --- @public
---- @param soundname String
+--- @param soundname string
 --- @param useDeviceVolume boolean
---- @return void
+--- @return nil
 function DeviceData:playSoundSend(soundname, useDeviceVolume) end
 
 --- @public
 --- @param bb ByteBuffer
 --- @param ignoreConnection UdpConnection
---- @return void
+--- @return nil
 function DeviceData:receiveDeviceDataStatePacket(bb, ignoreConnection) end
 
 --- @public
@@ -258,173 +272,201 @@ function DeviceData:removeMediaItem(inventory) end
 --- @public
 --- @param output ByteBuffer
 --- @param net boolean
---- @return void
+--- @return nil
 function DeviceData:save(output, net) end
 
 --- @public
---- @param f float
---- @return void
+--- @param f number
+--- @return nil
 function DeviceData:setBaseVolumeRange(f) end
 
 --- @public
---- @param c int
---- @return void
---- @overload fun(self: DeviceData, chan: int, setislistening: boolean): void
+--- @param c integer
+--- @return nil
+--- @overload fun(self: DeviceData, chan: integer, setislistening: boolean): nil
 function DeviceData:setChannel(c) end
 
 --- @public
---- @param chan int
---- @return void
+--- @param chan integer
+--- @return nil
 function DeviceData:setChannelRaw(chan) end
 
 --- @public
---- @param name String
---- @return void
+--- @param name string
+--- @return nil
 function DeviceData:setDeviceName(name) end
 
 --- @public
 --- @param p DevicePresets
---- @return void
+--- @return nil
 function DeviceData:setDevicePresets(p) end
 
 --- @public
---- @param f float
---- @return void
+--- @param f number
+--- @return nil
 function DeviceData:setDeviceVolume(f) end
 
 --- @public
---- @param f float
---- @return void
+--- @param f number
+--- @return nil
 function DeviceData:setDeviceVolumeRaw(f) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setHasBattery(b) end
 
 --- @public
---- @param i int
---- @return void
+--- @param i integer
+--- @return nil
 function DeviceData:setHeadphoneType(i) end
 
 --- @public
---- @return void
+--- @return nil
 function DeviceData:setInitialPower() end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setIsBatteryPowered(b) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setIsHighTier(b) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setIsPortable(b) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setIsTelevision(b) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setIsTurnedOn(b) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setIsTwoWay(b) end
 
 --- @public
---- @param i int
---- @return void
+--- @param i integer
+--- @return nil
 function DeviceData:setMaxChannelRange(i) end
 
 --- @public
 --- @param mediaIndex short
---- @return void
+--- @return nil
 function DeviceData:setMediaIndex(mediaIndex) end
 
 --- @public
---- @param mediaType byte
---- @return void
+--- @param mediaType integer
+--- @return nil
 function DeviceData:setMediaType(mediaType) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setMicIsMuted(b) end
 
 --- @public
---- @param i int
---- @return void
+--- @param i integer
+--- @return nil
 function DeviceData:setMicRange(i) end
 
 --- @public
---- @param i int
---- @return void
+--- @param i integer
+--- @return nil
 function DeviceData:setMinChannelRange(i) end
 
 --- @public
 --- @param noTransmit boolean
---- @return void
+--- @return nil
 function DeviceData:setNoTransmit(noTransmit) end
 
 --- @public
 --- @param p WaveSignalDevice
---- @return void
+--- @return nil
 function DeviceData:setParent(p) end
 
 --- @public
---- @param p float
---- @return void
+--- @param p number
+--- @return nil
 function DeviceData:setPower(p) end
 
 --- @public
---- @return void
+--- @return nil
 function DeviceData:setRandomChannel() end
 
 --- @public
---- @param range int
---- @return void
+--- @param range integer
+--- @return nil
 function DeviceData:setTransmitRange(range) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function DeviceData:setTurnedOnRaw(b) end
 
 --- @public
---- @param f float
---- @return void
+--- @param f number
+--- @return nil
 function DeviceData:setUseDelta(f) end
 
 --- @public
---- @return void
+--- @param arg0 integer
+--- @param arg1 GameSoundClip
+--- @param arg2 BitSet
+--- @return nil
+--- @overload fun(self: DeviceData, arg0: integer, arg1: GameSoundClip, arg2: BitSet): nil
+function DeviceData:startEvent(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 GameSoundClip
+--- @param arg2 BitSet
+--- @return nil
+--- @overload fun(self: DeviceData, arg0: integer, arg1: GameSoundClip, arg2: BitSet): nil
+function DeviceData:stopEvent(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 string
+--- @return nil
+function DeviceData:stopOrTriggerSoundByName(arg0) end
+
+--- @public
+--- @return nil
 function DeviceData:transmitBattryChange() end
 
 --- @public
---- @return void
+--- @return nil
 function DeviceData:transmitPresets() end
 
 --- @public
 --- @param isIso boolean
 --- @param playerInRange boolean
---- @return void
+--- @return nil
 function DeviceData:update(isIso, playerInRange) end
 
 --- @public
---- @return void
+--- @param arg0 integer
+--- @param arg1 GameSoundClip
+--- @return nil
+--- @overload fun(self: DeviceData, arg0: integer, arg1: GameSoundClip): nil
+function DeviceData:updateEvent(arg0, arg1) end
+
+--- @public
+--- @return nil
 function DeviceData:updateMediaPlaying() end
 
 --- @public
---- @return void
+--- @return nil
 function DeviceData:updateSimple() end
 
 

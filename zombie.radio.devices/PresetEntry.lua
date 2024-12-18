@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PresetEntry turbo
 --- @field public class any
@@ -9,21 +9,21 @@ PresetEntry = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function PresetEntry:getFrequency() end
 
 --- @public
---- @return String
+--- @return string
 function PresetEntry:getName() end
 
 --- @public
---- @param f int
---- @return void
+--- @param f integer
+--- @return nil
 function PresetEntry:setFrequency(f) end
 
 --- @public
---- @param n String
---- @return void
+--- @param n string
+--- @return nil
 function PresetEntry:setName(n) end
 
 
@@ -33,5 +33,5 @@ function PresetEntry:setName(n) end
 
 --- @public
 --- @return PresetEntry
---- @overload fun(n: String, f: int): PresetEntry
+--- @overload fun(n: string, f: integer): PresetEntry
 function PresetEntry.new() end

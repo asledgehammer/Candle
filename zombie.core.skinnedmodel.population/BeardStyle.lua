@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BeardStyle
 --- @field public class any
@@ -9,11 +9,11 @@ BeardStyle = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function BeardStyle:getLevel() end
 
 --- @public
---- @return String
+--- @return string
 function BeardStyle:getName() end
 
 --- @public

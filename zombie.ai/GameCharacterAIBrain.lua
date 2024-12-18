@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class GameCharacterAIBrain
 --- @field public class any
@@ -9,19 +9,19 @@ GameCharacterAIBrain = {};
 ------------------------------------
 
 --- @public
---- @param ttx int
---- @param tty int
---- @param ttz int
---- @return void
+--- @param ttx integer
+--- @param tty integer
+--- @param ttz integer
+--- @return nil
 function GameCharacterAIBrain:AddBlockedMemory(ttx, tty, ttz) end
 
 --- @public
---- @param lx int
---- @param ly int
---- @param lz int
---- @param x int
---- @param y int
---- @param z int
+--- @param lx integer
+--- @param ly integer
+--- @param lz integer
+--- @param x integer
+--- @param y integer
+--- @param z integer
 --- @return boolean
 function GameCharacterAIBrain:HasBlockedMemory(lx, ly, lz, x, y, z) end
 
@@ -30,7 +30,7 @@ function GameCharacterAIBrain:HasBlockedMemory(lx, ly, lz, x, y, z) end
 function GameCharacterAIBrain:getCharacter() end
 
 --- @public
---- @return int
+--- @return integer
 function GameCharacterAIBrain:getCloseZombieCount() end
 
 --- @public
@@ -39,7 +39,7 @@ function GameCharacterAIBrain:getCloseZombieCount() end
 function GameCharacterAIBrain:getClosestChasingZombie() end
 
 --- @public
---- @param num int
+--- @param num integer
 --- @return ArrayList
 function GameCharacterAIBrain:getClosestChasingZombies(num) end
 
@@ -48,25 +48,25 @@ function GameCharacterAIBrain:getClosestChasingZombies(num) end
 function GameCharacterAIBrain:getGroup() end
 
 --- @public
---- @return String
+--- @return string
 function GameCharacterAIBrain:getOrder() end
 
 --- @public
 --- @param isoPlayer IsoPlayer
---- @return void
+--- @return nil
 function GameCharacterAIBrain:postUpdateHuman(isoPlayer) end
 
 --- @public
---- @return void
+--- @return nil
 function GameCharacterAIBrain:renderlast() end
 
 --- @public
---- @param order String
---- @return void
+--- @param order string
+--- @return nil
 function GameCharacterAIBrain:setOrder(order) end
 
 --- @public
---- @return void
+--- @return nil
 function GameCharacterAIBrain:update() end
 
 

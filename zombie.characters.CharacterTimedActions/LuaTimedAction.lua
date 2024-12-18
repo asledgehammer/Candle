@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class LuaTimedAction: BaseAction
 --- @field public class any
@@ -10,19 +10,19 @@ LuaTimedAction = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedAction:perform() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedAction:start() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedAction:stop() end
 
 --- @public
---- @return void
+--- @return nil
 function LuaTimedAction:update() end
 
 --- @public
@@ -35,7 +35,7 @@ function LuaTimedAction:valid() end
 ------------------------------------
 
 --- @public
---- @param table KahluaTable
+--- @param table table
 --- @param chr IsoGameCharacter
 --- @return LuaTimedAction
 function LuaTimedAction.new(table, chr) end

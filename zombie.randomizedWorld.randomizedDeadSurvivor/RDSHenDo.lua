@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RDSHenDo: RandomizedDeadSurvivorBase Create some zombies female zombies with 1 naked male, some alcohol around
 --- @field public class any
@@ -19,7 +19,7 @@ function RDSHenDo:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RDSHenDo:randomizeDeadSurvivor(def) end
 
 

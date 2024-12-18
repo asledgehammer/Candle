@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Clock: UIElement
 --- @field public class any
@@ -14,17 +14,17 @@ Clock = {};
 function Clock:isDateVisible() end
 
 --- @public
---- @param x double
---- @param y double
---- @return Boolean
+--- @param x number
+--- @param y number
+--- @return boolean
 function Clock:onMouseDown(x, y) end
 
 --- @public
---- @return void
+--- @return nil
 function Clock:render() end
 
 --- @public
---- @return void
+--- @return nil
 function Clock:resize() end
 
 
@@ -33,7 +33,7 @@ function Clock:resize() end
 ------------------------------------
 
 --- @public
---- @param x int
---- @param y int
+--- @param x integer
+--- @param y integer
 --- @return Clock
 function Clock.new(x, y) end

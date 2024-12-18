@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IdleState: State
 --- @field public class any
@@ -21,7 +21,7 @@ function IdleState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function IdleState:animEvent(owner, event) end
 
 

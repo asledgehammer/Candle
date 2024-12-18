@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BrokenFences
 --- @field public class any
@@ -19,23 +19,23 @@ function BrokenFences.getInstance() end
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function BrokenFences:Reset() end
 
 --- @public
---- @param tiles KahluaTableImpl
---- @return void
+--- @param tiles table
+--- @return nil
 function BrokenFences:addBrokenTiles(tiles) end
 
 --- @public
---- @param tiles KahluaTableImpl
---- @return void
+--- @param tiles table
+--- @return nil
 function BrokenFences:addDebrisTiles(tiles) end
 
 --- @public
 --- @param obj IsoObject
 --- @param dir IsoDirections
---- @return void
+--- @return nil
 function BrokenFences:destroyFence(obj, dir) end
 
 --- @public
@@ -45,24 +45,24 @@ function BrokenFences:isBreakableObject(obj) end
 
 --- @public
 --- @param obj IsoObject
---- @return void
+--- @return nil
 function BrokenFences:setDamagedLeft(obj) end
 
 --- @public
 --- @param obj IsoObject
---- @return void
+--- @return nil
 function BrokenFences:setDamagedRight(obj) end
 
 --- @public
 --- @param obj IsoObject
---- @return void
+--- @return nil
 function BrokenFences:setDestroyed(obj) end
 
 --- @public
 --- @param obj IsoObject
 --- @param brokenLeft boolean
 --- @param brokenRight boolean
---- @return void
+--- @return nil
 function BrokenFences:updateSprite(obj, brokenLeft, brokenRight) end
 
 

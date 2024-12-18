@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ModelAttachment
 --- @field public class any
@@ -9,7 +9,7 @@ ModelAttachment = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ModelAttachment:getBone() end
 
 --- @public
@@ -17,7 +17,7 @@ function ModelAttachment:getBone() end
 function ModelAttachment:getCanAttach() end
 
 --- @public
---- @return String
+--- @return string
 function ModelAttachment:getId() end
 
 --- @public
@@ -29,7 +29,11 @@ function ModelAttachment:getOffset() end
 function ModelAttachment:getRotate() end
 
 --- @public
---- @return float
+--- @return number
+function ModelAttachment:getScale() end
+
+--- @public
+--- @return number
 function ModelAttachment:getZOffset() end
 
 --- @public
@@ -37,28 +41,38 @@ function ModelAttachment:getZOffset() end
 function ModelAttachment:isUpdateConstraint() end
 
 --- @public
---- @param bone String
---- @return void
+--- @param bone string
+--- @return nil
 function ModelAttachment:setBone(bone) end
 
 --- @public
 --- @param canAttach ArrayList
---- @return void
+--- @return nil
 function ModelAttachment:setCanAttach(canAttach) end
 
 --- @public
---- @param id String
---- @return void
+--- @param id string
+--- @return nil
 function ModelAttachment:setId(id) end
 
 --- @public
+--- @param arg0 IModelAttachmentOwner
+--- @return nil
+function ModelAttachment:setOwner(arg0) end
+
+--- @public
+--- @param arg0 number
+--- @return nil
+function ModelAttachment:setScale(arg0) end
+
+--- @public
 --- @param updateConstraint boolean
---- @return void
+--- @return nil
 function ModelAttachment:setUpdateConstraint(updateConstraint) end
 
 --- @public
---- @param zoffset float
---- @return void
+--- @param zoffset number
+--- @return nil
 function ModelAttachment:setZOffset(zoffset) end
 
 
@@ -67,6 +81,6 @@ function ModelAttachment:setZOffset(zoffset) end
 ------------------------------------
 
 --- @public
---- @param id String
+--- @param id string
 --- @return ModelAttachment
 function ModelAttachment.new(id) end

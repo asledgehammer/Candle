@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class GameState
 --- @field public class any
@@ -9,11 +9,11 @@ GameState = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function GameState:enter() end
 
 --- @public
---- @return void
+--- @return nil
 function GameState:exit() end
 
 --- @public
@@ -21,11 +21,11 @@ function GameState:exit() end
 function GameState:redirectState() end
 
 --- @public
---- @return void
+--- @return nil
 function GameState:reenter() end
 
 --- @public
---- @return void
+--- @return nil
 function GameState:render() end
 
 --- @public
@@ -33,7 +33,7 @@ function GameState:render() end
 function GameState:update() end
 
 --- @public
---- @return void
+--- @return nil
 function GameState:yield() end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class StashBuilding
 --- @field public class any
@@ -9,7 +9,7 @@ StashBuilding = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function StashBuilding:getName() end
 
 
@@ -18,8 +18,8 @@ function StashBuilding:getName() end
 ------------------------------------
 
 --- @public
---- @param stashName String
---- @param buildingX int
---- @param buildingY int
+--- @param stashName string
+--- @param buildingX integer
+--- @param buildingY integer
 --- @return StashBuilding
 function StashBuilding.new(stashName, buildingX, buildingY) end

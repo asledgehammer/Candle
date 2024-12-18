@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class DoubleConfigOption: ConfigOption
 --- @field public class any
@@ -9,63 +9,67 @@ DoubleConfigOption = {};
 ------------------------------------
 
 --- @public
---- @return double
+--- @return number
 function DoubleConfigOption:getDefaultValue() end
 
 --- @public
---- @return double
+--- @return number
 function DoubleConfigOption:getMax() end
 
 --- @public
---- @return double
+--- @return number
 function DoubleConfigOption:getMin() end
 
 --- @public
---- @return String
+--- @return string
 function DoubleConfigOption:getTooltip() end
 
 --- @public
---- @return String
+--- @return string
 function DoubleConfigOption:getType() end
 
 --- @public
---- @return double
+--- @return number
 function DoubleConfigOption:getValue() end
 
 --- @public
---- @return Object
+--- @return any
 function DoubleConfigOption:getValueAsObject() end
 
 --- @public
---- @return String
+--- @return string
 function DoubleConfigOption:getValueAsString() end
 
 --- @public
---- @param s String
+--- @param s string
 --- @return boolean
 function DoubleConfigOption:isValidString(s) end
 
 --- @public
---- @param s String
---- @return void
+--- @return ConfigOption
+function DoubleConfigOption:makeCopy() end
+
+--- @public
+--- @param s string
+--- @return nil
 function DoubleConfigOption:parse(s) end
 
 --- @public
---- @return void
+--- @return nil
 function DoubleConfigOption:resetToDefault() end
 
 --- @public
---- @return void
+--- @return nil
 function DoubleConfigOption:setDefaultToCurrentValue() end
 
 --- @public
---- @param value double
---- @return void
+--- @param value number
+--- @return nil
 function DoubleConfigOption:setValue(value) end
 
 --- @public
---- @param o Object
---- @return void
+--- @param o any
+--- @return nil
 function DoubleConfigOption:setValueFromObject(o) end
 
 
@@ -74,9 +78,9 @@ function DoubleConfigOption:setValueFromObject(o) end
 ------------------------------------
 
 --- @public
---- @param name String
---- @param min double
---- @param max double
---- @param defaultValue double
+--- @param name string
+--- @param min number
+--- @param max number
+--- @param defaultValue number
 --- @return DoubleConfigOption
 function DoubleConfigOption.new(name, min, max, defaultValue) end

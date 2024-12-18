@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class FixingManager
 --- @field public class any
@@ -23,7 +23,7 @@ function FixingManager.fixItem(brokenItem, chr, fixing, fixer) end
 --- @param chr IsoGameCharacter
 --- @param fixing Fixing
 --- @param fixer Fixer
---- @return double
+--- @return number
 function FixingManager.getChanceOfFail(brokenItem, chr, fixing, fixer) end
 
 --- @public
@@ -32,7 +32,7 @@ function FixingManager.getChanceOfFail(brokenItem, chr, fixing, fixer) end
 --- @param chr IsoGameCharacter
 --- @param fixing Fixing
 --- @param fixer Fixer
---- @return double
+--- @return number
 function FixingManager.getCondRepaired(brokenItem, chr, fixing, fixer) end
 
 --- @public
@@ -46,7 +46,7 @@ function FixingManager.getFixes(item) end
 --- @param chr IsoGameCharacter
 --- @param fixer Fixer
 --- @param brokenItem InventoryItem
---- @return void
+--- @return nil
 function FixingManager.useFixer(chr, fixer, brokenItem) end
 
 

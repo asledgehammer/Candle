@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PlayerFallingState: State
 --- @field public class any
@@ -20,17 +20,17 @@ function PlayerFallingState.instance() end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerFallingState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerFallingState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerFallingState:exit(owner) end
 
 

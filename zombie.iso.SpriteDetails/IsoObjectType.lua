@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoObjectType: Enum
 --- @field public class any
@@ -40,19 +40,19 @@ IsoObjectType = {};
 
 --- @public
 --- @static
---- @param str String
+--- @param str string
 --- @return IsoObjectType
 function IsoObjectType.FromString(str) end
 
 --- @public
 --- @static
---- @param value int
+--- @param value integer
 --- @return IsoObjectType
 function IsoObjectType.fromIndex(value) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoObjectType
 function IsoObjectType.valueOf(arg0) end
 
@@ -71,7 +71,7 @@ function IsoObjectType.values() end
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function IsoObjectType:index() end
 
 

@@ -1,18 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class RZSBBQParty: RandomizedZoneStoryBase
 --- @field public class any
 RZSBBQParty = {};
-
-------------------------------------
----------- STATIC METHODS ----------
-------------------------------------
-
---- @public
---- @static
---- @return ArrayList
-function RZSBBQParty.getBeachClutter() end
-
 
 ------------------------------------
 ------------- METHODS --------------
@@ -20,7 +10,7 @@ function RZSBBQParty.getBeachClutter() end
 
 --- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function RZSBBQParty:randomizeZoneStory(zone) end
 
 

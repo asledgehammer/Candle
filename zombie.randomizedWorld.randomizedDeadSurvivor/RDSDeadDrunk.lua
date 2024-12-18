@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RDSDeadDrunk: RandomizedDeadSurvivorBase Create a dead survivor with alcohol bottles around him
 --- @field public class any
@@ -10,7 +10,7 @@ RDSDeadDrunk = {};
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RDSDeadDrunk:randomizeDeadSurvivor(def) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoRegionLogType: Enum TurboTuTone.
 --- @field public class any
@@ -12,7 +12,7 @@ IsoRegionLogType = {};
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return IsoRegionLogType
 function IsoRegionLogType.valueOf(arg0) end
 

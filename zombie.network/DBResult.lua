@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class DBResult
 --- @field public class any
@@ -13,11 +13,11 @@ DBResult = {};
 function DBResult:getColumns() end
 
 --- @public
---- @return String
+--- @return string
 function DBResult:getTableName() end
 
 --- @public
---- @return String
+--- @return string
 function DBResult:getType() end
 
 --- @public
@@ -26,17 +26,17 @@ function DBResult:getValues() end
 
 --- @public
 --- @param columns ArrayList
---- @return void
+--- @return nil
 function DBResult:setColumns(columns) end
 
 --- @public
---- @param tableName String
---- @return void
+--- @param tableName string
+--- @return nil
 function DBResult:setTableName(tableName) end
 
 --- @public
---- @param type String
---- @return void
+--- @param type string
+--- @return nil
 function DBResult:setType(type) end
 
 

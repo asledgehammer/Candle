@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBCafe: RandomizedBuildingBase Add some food on table
 --- @field public class any
@@ -19,7 +19,7 @@ function RBCafe:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBCafe:randomizeBuilding(def) end
 
 --- @public

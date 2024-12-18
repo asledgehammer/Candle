@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ItemRecipe
 --- @field public class any
@@ -9,24 +9,24 @@ ItemRecipe = {};
 ------------------------------------
 
 --- @public
---- @return String
+--- @return string
 function ItemRecipe:getFullType() end
 
 --- @public
---- @return String
+--- @return string
 function ItemRecipe:getModule() end
 
 --- @public
---- @return String
+--- @return string
 function ItemRecipe:getName() end
 
 --- @public
---- @return Integer
+--- @return integer
 function ItemRecipe:getUse() end
 
 --- @public
---- @param module String
---- @return void
+--- @param module string
+--- @return nil
 function ItemRecipe:setModule(module) end
 
 
@@ -35,8 +35,8 @@ function ItemRecipe:setModule(module) end
 ------------------------------------
 
 --- @public
---- @param name String
---- @param module String
---- @param use Integer
+--- @param name string
+--- @param module string
+--- @param use integer
 --- @return ItemRecipe
 function ItemRecipe.new(name, module, use) end

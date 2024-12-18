@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Faction
 --- @field public class any
@@ -17,20 +17,20 @@ function Faction.canCreateFaction(player) end
 
 --- @public
 --- @static
---- @param name String
---- @param owner String
+--- @param name string
+--- @param owner string
 --- @return Faction
 function Faction.createFaction(name, owner) end
 
 --- @public
 --- @static
---- @param name String
+--- @param name string
 --- @return boolean
 function Faction.factionExist(name) end
 
 --- @public
 --- @static
---- @param name String
+--- @param name string
 --- @return Faction
 function Faction.getFaction(name) end
 
@@ -41,21 +41,28 @@ function Faction.getFactions() end
 
 --- @public
 --- @static
---- @param username String
+--- @param username string
 --- @return Faction
 --- @overload fun(player: IsoPlayer): Faction
 function Faction.getPlayerFaction(username) end
 
 --- @public
 --- @static
---- @param username String
+--- @param username string
 --- @return boolean
 --- @overload fun(player: IsoPlayer): boolean
 function Faction.isAlreadyInFaction(username) end
 
 --- @public
 --- @static
---- @param name String
+--- @param arg0 IsoPlayer
+--- @param arg1 IsoPlayer
+--- @return boolean
+function Faction.isInSameFaction(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param name string
 --- @return boolean
 function Faction.tagExist(name) end
 
@@ -65,8 +72,8 @@ function Faction.tagExist(name) end
 ------------------------------------
 
 --- @public
---- @param pName String
---- @return void
+--- @param pName string
+--- @return nil
 function Faction:addPlayer(pName) end
 
 --- @public
@@ -74,11 +81,11 @@ function Faction:addPlayer(pName) end
 function Faction:canCreateTag() end
 
 --- @public
---- @return String
+--- @return string
 function Faction:getName() end
 
 --- @public
---- @return String
+--- @return string
 function Faction:getOwner() end
 
 --- @public
@@ -86,7 +93,7 @@ function Faction:getOwner() end
 function Faction:getPlayers() end
 
 --- @public
---- @return String
+--- @return string
 function Faction:getTag() end
 
 --- @public
@@ -94,68 +101,63 @@ function Faction:getTag() end
 function Faction:getTagColor() end
 
 --- @public
---- @param name String
+--- @param name string
 --- @return boolean
 function Faction:isMember(name) end
 
 --- @public
---- @param name String
+--- @param name string
 --- @return boolean
 function Faction:isOwner(name) end
 
 --- @public
---- @param player IsoPlayer
---- @return boolean
-function Faction:isPlayerMember(player) end
-
---- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
---- @return void
+--- @param WorldVersion integer
+--- @return nil
 function Faction:load(input, WorldVersion) end
 
 --- @public
---- @return void
+--- @return nil
 function Faction:removeFaction() end
 
 --- @public
---- @param player String
---- @return void
+--- @param player string
+--- @return nil
 function Faction:removePlayer(player) end
 
 --- @public
 --- @param output ByteBuffer
---- @return void
+--- @return nil
 function Faction:save(output) end
 
 --- @public
---- @param name String
---- @return void
+--- @param name string
+--- @return nil
 function Faction:setName(name) end
 
 --- @public
---- @param owner String
---- @return void
+--- @param owner string
+--- @return nil
 function Faction:setOwner(owner) end
 
 --- @public
---- @param tag String
---- @return void
+--- @param tag string
+--- @return nil
 function Faction:setTag(tag) end
 
 --- @public
 --- @param tagColor ColorInfo
---- @return void
+--- @return nil
 function Faction:setTagColor(tagColor) end
 
 --- @public
---- @return void
+--- @return nil
 function Faction:syncFaction() end
 
 --- @public
 --- @param bb ByteBufferWriter
 --- @param remove boolean
---- @return void
+--- @return nil
 function Faction:writeToBuffer(bb, remove) end
 
 
@@ -165,5 +167,5 @@ function Faction:writeToBuffer(bb, remove) end
 
 --- @public
 --- @return Faction
---- @overload fun(name: String, owner: String): Faction
+--- @overload fun(name: string, owner: string): Faction
 function Faction.new() end

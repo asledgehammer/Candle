@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RZSMusicFestStage: RandomizedZoneStoryBase
 --- @field public class any
@@ -10,7 +10,7 @@ RZSMusicFestStage = {};
 
 --- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function RZSMusicFestStage:randomizeZoneStory(zone) end
 
 

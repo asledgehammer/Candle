@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BarricadeAble
 --- @field public class any

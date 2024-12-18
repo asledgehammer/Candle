@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoSpriteManager
 --- @field public class any
@@ -10,25 +10,25 @@ IsoSpriteManager = {};
 ------------------------------------
 
 --- @public
---- @param tex String
+--- @param tex string
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, tex: String, ID: int): IsoSprite
+--- @overload fun(self: IsoSpriteManager, tex: string, ID: integer): IsoSprite
 function IsoSpriteManager:AddSprite(tex) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoSpriteManager:Dispose() end
 
 --- @public
---- @param tex String
+--- @param tex string
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, tex: String, col: Color): IsoSprite
+--- @overload fun(self: IsoSpriteManager, tex: string, col: Color): IsoSprite
 function IsoSpriteManager:getOrAddSpriteCache(tex) end
 
 --- @public
---- @param gid int
+--- @param gid integer
 --- @return IsoSprite
---- @overload fun(self: IsoSpriteManager, gid: String): IsoSprite
+--- @overload fun(self: IsoSpriteManager, gid: string): IsoSprite
 function IsoSpriteManager:getSprite(gid) end
 
 

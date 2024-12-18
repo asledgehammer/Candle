@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class BeardStyles
 --- @field public class any
@@ -11,23 +11,23 @@ BeardStyles = {};
 
 --- @public
 --- @static
---- @param filename String
+--- @param filename string
 --- @return BeardStyles
 function BeardStyles.Parse(filename) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function BeardStyles.Reset() end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function BeardStyles.init() end
 
 --- @public
 --- @static
---- @param filename String
+--- @param filename string
 --- @return BeardStyles
 function BeardStyles.parse(filename) end
 
@@ -37,7 +37,7 @@ function BeardStyles.parse(filename) end
 ------------------------------------
 
 --- @public
---- @param name String
+--- @param name string
 --- @return BeardStyle
 function BeardStyles:FindStyle(name) end
 
@@ -50,8 +50,8 @@ function BeardStyles:getAllStyles() end
 function BeardStyles:getInstance() end
 
 --- @public
---- @param outfitName String
---- @return String
+--- @param outfitName string
+--- @return string
 function BeardStyles:getRandomStyle(outfitName) end
 
 

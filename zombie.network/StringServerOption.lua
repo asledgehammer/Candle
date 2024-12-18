@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class StringServerOption: StringConfigOption
 --- @field public class any
@@ -15,8 +15,8 @@ StringServerOption = {};
 function StringServerOption:asConfigOption() end
 
 --- @public
---- @return String
---- @overload fun(self: StringServerOption): String
+--- @return string
+--- @overload fun(self: StringServerOption): string
 function StringServerOption:getTooltip() end
 
 
@@ -26,8 +26,8 @@ function StringServerOption:getTooltip() end
 
 --- @public
 --- @param owner ServerOptions
---- @param name String
---- @param defaultValue String
---- @param maxLength int
+--- @param name string
+--- @param defaultValue string
+--- @param maxLength integer
 --- @return StringServerOption
 function StringServerOption.new(owner, name, defaultValue, maxLength) end

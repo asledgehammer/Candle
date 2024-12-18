@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Userlog
 --- @field public class any
@@ -9,33 +9,38 @@ Userlog = {};
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function Userlog:getAmount() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getIssuedBy() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getLastUpdate() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getText() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getType() end
 
 --- @public
---- @return String
+--- @return string
 function Userlog:getUsername() end
 
 --- @public
---- @param amount int
---- @return void
+--- @param amount integer
+--- @return nil
 function Userlog:setAmount(amount) end
+
+--- @public
+--- @param arg0 ByteBuffer
+--- @return nil
+function Userlog:write(arg0) end
 
 
 ------------------------------------
@@ -43,11 +48,7 @@ function Userlog:setAmount(amount) end
 ------------------------------------
 
 --- @public
---- @param arg0 String
---- @param arg1 String
---- @param arg2 String
---- @param arg3 String
---- @param arg4 int
---- @param arg5 String
+--- @param arg0 ByteBuffer
 --- @return Userlog
-function Userlog.new(arg0, arg1, arg2, arg3, arg4, arg5) end
+--- @overload fun(arg0: string, arg1: string, arg2: string, arg3: string, arg4: integer, arg5: string): Userlog
+function Userlog.new(arg0) end

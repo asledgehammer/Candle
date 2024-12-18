@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RadioAPI
 --- @field public class any
@@ -20,28 +20,28 @@ function RadioAPI.hasInstance() end
 
 --- @public
 --- @static
---- @param stamp int
---- @return int
+--- @param stamp integer
+--- @return integer
 function RadioAPI.timeStampToDays(stamp) end
 
 --- @public
 --- @static
---- @param stamp int
---- @return int
+--- @param stamp integer
+--- @return integer
 function RadioAPI.timeStampToHours(stamp) end
 
 --- @public
 --- @static
---- @param stamp int
---- @return int
+--- @param stamp integer
+--- @return integer
 function RadioAPI.timeStampToMinutes(stamp) end
 
 --- @public
 --- @static
---- @param days int
---- @param hours int
---- @param minutes int
---- @return int
+--- @param days integer
+--- @param hours integer
+--- @param minutes integer
+--- @return integer
 function RadioAPI.timeToTimeStamp(days, hours, minutes) end
 
 
@@ -50,8 +50,8 @@ function RadioAPI.timeToTimeStamp(days, hours, minutes) end
 ------------------------------------
 
 --- @public
---- @param category String
---- @return KahluaTable
+--- @param category string
+--- @return table
 function RadioAPI:getChannels(category) end
 
 

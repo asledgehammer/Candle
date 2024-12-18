@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class TraitSlot
 --- @field public class any
@@ -9,7 +9,7 @@ TraitSlot = {};
 ------------------------------------
 
 --- @public
---- @param arg0 String
+--- @param arg0 string
 --- @return boolean
 function TraitSlot:isName(arg0) end
 
@@ -19,11 +19,11 @@ function TraitSlot:isSet() end
 
 --- @public
 --- @param arg0 boolean
---- @return void
+--- @return nil
 function TraitSlot:set(arg0) end
 
 --- @public
---- @return String
+--- @return string
 function TraitSlot:toString() end
 
 

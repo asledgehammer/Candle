@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class PlayerFallDownState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function PlayerFallDownState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function PlayerFallDownState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerFallDownState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerFallDownState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function PlayerFallDownState:exit(owner) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class HaloTextHelper TurboTuTone.
 --- @field public class any
@@ -13,29 +13,48 @@ HaloTextHelper = {};
 
 --- @public
 --- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @return nil
+function HaloTextHelper.addBadText(arg0, arg1) end
+
+--- @public
+--- @static
+--- @param arg0 IsoPlayer
+--- @param arg1 string
+--- @return nil
+function HaloTextHelper.addGoodText(arg0, arg1) end
+
+--- @public
+--- @static
 --- @param player IsoPlayer
---- @param text String
---- @return void
---- @overload fun(player: IsoPlayer, text: String, color: ColorRGB): void
---- @overload fun(player: IsoPlayer, text: String, r: int, g: int, b: int): void
+--- @param text string
+--- @return nil
+--- @overload fun(player: IsoPlayer, text: string, color: ColorRGB): nil
+--- @overload fun(player: IsoPlayer, text: string, r: integer, g: integer, b: integer): nil
 function HaloTextHelper.addText(player, text) end
 
 --- @public
 --- @static
 --- @param player IsoPlayer
---- @param text String
+--- @param text string
 --- @param arrowIsUp boolean
 --- @param color ColorRGB
---- @return void
---- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, color: ColorRGB, arrowColor: ColorRGB): void
---- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, r: int, g: int, b: int): void
---- @overload fun(player: IsoPlayer, text: String, arrowIsUp: boolean, r: int, g: int, b: int, aR: int, aG: int, aB: int): void
+--- @return nil
+--- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, color: ColorRGB, arrowColor: ColorRGB): nil
+--- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, r: integer, g: integer, b: integer): nil
+--- @overload fun(player: IsoPlayer, text: string, arrowIsUp: boolean, r: integer, g: integer, b: integer, aR: integer, aG: integer, aB: integer): nil
 function HaloTextHelper.addTextWithArrow(player, text, arrowIsUp, color) end
 
 --- @public
 --- @static
---- @return void
+--- @return nil
 function HaloTextHelper.forceNextAddText() end
+
+--- @public
+--- @static
+--- @return ColorRGB
+function HaloTextHelper.getBadColor() end
 
 --- @public
 --- @static
@@ -54,7 +73,12 @@ function HaloTextHelper.getColorWhite() end
 
 --- @public
 --- @static
---- @return void
+--- @return ColorRGB
+function HaloTextHelper.getGoodColor() end
+
+--- @public
+--- @static
+--- @return nil
 function HaloTextHelper.update() end
 
 

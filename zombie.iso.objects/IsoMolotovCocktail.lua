@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoMolotovCocktail: IsoPhysicsObject
 --- @field public class any
@@ -9,34 +9,34 @@ IsoMolotovCocktail = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoMolotovCocktail:collideCharacter() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoMolotovCocktail:collideGround() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoMolotovCocktail:collideWall() end
 
 --- @public
---- @return String
+--- @return string
 function IsoMolotovCocktail:getObjectName() end
 
 --- @public
---- @param x float
---- @param y float
---- @param z float
+--- @param x number
+--- @param y number
+--- @param z number
 --- @param info ColorInfo
 --- @param bDoAttached boolean
 --- @param bWallLightingPass boolean
 --- @param shader Shader
---- @return void
+--- @return nil
 function IsoMolotovCocktail:render(x, y, z, info, bDoAttached, bWallLightingPass, shader) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoMolotovCocktail:update() end
 
 
@@ -47,5 +47,5 @@ function IsoMolotovCocktail:update() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoMolotovCocktail
---- @overload fun(cell: IsoCell, x: float, y: float, z: float, xvel: float, yvel: float, weapon: HandWeapon, character: IsoGameCharacter): IsoMolotovCocktail
+--- @overload fun(cell: IsoCell, x: number, y: number, z: number, xvel: number, yvel: number, weapon: HandWeapon, character: IsoGameCharacter): IsoMolotovCocktail
 function IsoMolotovCocktail.new(cell) end

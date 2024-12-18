@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RZSBuryingCamp: RandomizedZoneStoryBase Align some graves with possible flower, possible clutter One grave open with  a zombie
 --- @field public class any
@@ -10,7 +10,7 @@ RZSBuryingCamp = {};
 
 --- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function RZSBuryingCamp:randomizeZoneStory(zone) end
 
 

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class AnimationViewerState: GameState
 --- @field public class any
@@ -20,68 +20,68 @@ function AnimationViewerState.checkInstance() end
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:enter() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:exit() end
 
 --- @public
---- @param func String
---- @return Object
+--- @param func string
+--- @return any
 function AnimationViewerState:fromLua0(func) end
 
 --- @public
---- @param func String
---- @param arg0 Object
---- @return Object
+--- @param func string
+--- @param arg0 any
+--- @return any
 function AnimationViewerState:fromLua1(func, arg0) end
 
 --- @public
---- @param name String
+--- @param name string
 --- @return boolean
 function AnimationViewerState:getBoolean(name) end
 
 --- @public
---- @param index int
+--- @param index integer
 --- @return ConfigOption
 function AnimationViewerState:getOptionByIndex(index) end
 
 --- @public
---- @param name String
+--- @param name string
 --- @return ConfigOption
 function AnimationViewerState:getOptionByName(name) end
 
 --- @public
---- @return int
+--- @return integer
 function AnimationViewerState:getOptionCount() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:load() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:reenter() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:render() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:save() end
 
 --- @public
---- @param name String
+--- @param name string
 --- @param value boolean
---- @return void
+--- @return nil
 function AnimationViewerState:setBoolean(name, value) end
 
 --- @public
---- @param table KahluaTable
---- @return void
+--- @param table table
+--- @return nil
 function AnimationViewerState:setTable(table) end
 
 --- @public
@@ -89,7 +89,7 @@ function AnimationViewerState:setTable(table) end
 function AnimationViewerState:update() end
 
 --- @public
---- @return void
+--- @return nil
 function AnimationViewerState:yield() end
 
 

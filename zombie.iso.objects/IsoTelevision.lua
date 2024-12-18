@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoTelevision: IsoWaveSignal
 --- @field public class any
@@ -10,15 +10,15 @@ IsoTelevision = {};
 
 --- @public
 --- @param sprite IsoSprite
---- @return void
+--- @return nil
 function IsoTelevision:addTvScreenSprite(sprite) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTelevision:clearTvScreenSprites() end
 
 --- @public
---- @return String
+--- @return string
 function IsoTelevision:getObjectName() end
 
 --- @public
@@ -28,28 +28,28 @@ function IsoTelevision:isFacing(player) end
 
 --- @public
 --- @param input ByteBuffer
---- @param WorldVersion int
+--- @param WorldVersion integer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoTelevision:load(input, WorldVersion, IS_DEBUG_SAVE) end
 
 --- @public
 --- @param sprite IsoSprite
---- @return void
+--- @return nil
 function IsoTelevision:removeTvScreenSprite(sprite) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTelevision:renderlast() end
 
 --- @public
 --- @param output ByteBuffer
 --- @param IS_DEBUG_SAVE boolean
---- @return void
+--- @return nil
 function IsoTelevision:save(output, IS_DEBUG_SAVE) end
 
 --- @public
---- @return void
+--- @return nil
 function IsoTelevision:update() end
 
 

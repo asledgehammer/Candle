@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class IsoSurvivor: IsoLivingCharacter
 --- @field public class any
@@ -9,15 +9,15 @@ IsoSurvivor = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function IsoSurvivor:Despawn() end
 
 --- @public
---- @return String
+--- @return string
 function IsoSurvivor:getObjectName() end
 
 --- @public
---- @return void
+--- @return nil
 function IsoSurvivor:reloadSpritePart() end
 
 
@@ -28,7 +28,7 @@ function IsoSurvivor:reloadSpritePart() end
 --- @public
 --- @param cell IsoCell
 --- @return IsoSurvivor
---- @overload fun(cell: IsoCell, x: int, y: int, z: int): IsoSurvivor
---- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: int, y: int, z: int): IsoSurvivor
---- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: int, y: int, z: int, bSetInstance: boolean): IsoSurvivor
+--- @overload fun(cell: IsoCell, x: integer, y: integer, z: integer): IsoSurvivor
+--- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: integer, y: integer, z: integer): IsoSurvivor
+--- @overload fun(desc: SurvivorDesc, cell: IsoCell, x: integer, y: integer, z: integer, bSetInstance: boolean): IsoSurvivor
 function IsoSurvivor.new(cell) end

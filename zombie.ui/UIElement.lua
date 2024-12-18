@@ -1,7 +1,8 @@
---- @meta
+--- @meta _
 
 --- @class UIElement
 --- @field public class any
+--- @implement UIElementInterface
 UIElement = {};
 
 ------------------------------------
@@ -10,328 +11,457 @@ UIElement = {};
 
 --- @public
 --- @param el UIElement
---- @return void
+--- @return nil
 function UIElement:AddChild(el) end
 
 --- @public
 --- @param el UIElement
---- @return void
+--- @return nil
 function UIElement:BringToTop(el) end
 
 --- @public
---- @param name String
---- @return void
+--- @param name string
+--- @return nil
 function UIElement:ButtonClicked(name) end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:ClearChildren() end
 
 --- @public
+--- @param arg0 InventoryItem
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @return nil
+function UIElement:DrawItemIcon(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @return nil
+function UIElement:DrawLine(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+
+--- @public
+--- @param arg0 Item
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @return nil
+function UIElement:DrawScriptItemIcon(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
 --- @param tex Texture
---- @param subX double
---- @param subY double
---- @param subW double
---- @param subH double
---- @param x double
---- @param y double
---- @param w double
---- @param h double
---- @param r double
---- @param g double
---- @param b double
---- @param a double
---- @return void
+--- @param subX number
+--- @param subY number
+--- @param subW number
+--- @param subH number
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function UIElement:DrawSubTextureRGBA(tex, subX, subY, subW, subH, x, y, w, h, r, g, b, a) end
 
 --- @public
---- @param text String
---- @param x double
---- @param y double
---- @param r double
---- @param g double
---- @param b double
---- @param alpha double
---- @return void
---- @overload fun(self: UIElement, font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
---- @overload fun(self: UIElement, text: String, x: double, y: double, width: double, height: double, r: double, g: double, b: double, alpha: double): void
---- @overload fun(self: UIElement, font: UIFont, text: String, x: double, y: double, zoom: double, r: double, g: double, b: double, alpha: double): void
+--- @param text string
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
+--- @return nil
+--- @overload fun(self: UIElement, font: UIFont, text: string, x: number, y: number, r: number, g: number, b: number, alpha: number): nil
+--- @overload fun(self: UIElement, text: string, x: number, y: number, width: number, height: number, r: number, g: number, b: number, alpha: number): nil
+--- @overload fun(self: UIElement, font: UIFont, text: string, x: number, y: number, zoom: number, r: number, g: number, b: number, alpha: number): nil
 function UIElement:DrawText(text, x, y, r, g, b, alpha) end
 
 --- @public
---- @param text String
---- @param x double
---- @param y double
---- @param r double
---- @param g double
---- @param b double
---- @param alpha double
---- @return void
---- @overload fun(self: UIElement, font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
+--- @param text string
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
+--- @return nil
+--- @overload fun(self: UIElement, font: UIFont, text: string, x: number, y: number, r: number, g: number, b: number, alpha: number): nil
 function UIElement:DrawTextCentre(text, x, y, r, g, b, alpha) end
 
 --- @public
---- @param text String
---- @param x double
---- @param y double
---- @param r double
---- @param g double
---- @param b double
---- @param alpha double
---- @return void
---- @overload fun(self: UIElement, font: UIFont, text: String, x: double, y: double, r: double, g: double, b: double, alpha: double): void
+--- @param text string
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
+--- @return nil
+--- @overload fun(self: UIElement, font: UIFont, text: string, x: number, y: number, r: number, g: number, b: number, alpha: number): nil
 function UIElement:DrawTextRight(text, x, y, r, g, b, alpha) end
 
 --- @public
 --- @param font UIFont
---- @param text String
---- @param x double
---- @param y double
---- @param r double
---- @param g double
---- @param b double
---- @param alpha double
---- @return void
+--- @param text string
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
+--- @return nil
 function UIElement:DrawTextUntrimmed(font, text, x, y, r, g, b, alpha) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param alpha double
---- @return void
---- @overload fun(self: UIElement, tex: Texture, tlx: double, tly: double, trx: double, try2: double, brx: double, bry: double, blx: double, bly: double, r: double, g: double, b: double, a: double): void
+--- @param x number
+--- @param y number
+--- @param alpha number
+--- @return nil
+--- @overload fun(self: UIElement, tex: Texture, tlx: number, tly: number, trx: number, try2: number, brx: number, bry: number, blx: number, bly: number, r: number, g: number, b: number, a: number): nil
 function UIElement:DrawTexture(tex, x, y, alpha) end
 
 --- @public
 --- @param tex Texture
---- @param centerX double
---- @param centerY double
---- @param angle double
---- @return void
---- @overload fun(self: UIElement, tex: Texture, centerX: double, centerY: double, angle: double, r: double, g: double, b: double, a: double): void
+--- @param centerX number
+--- @param centerY number
+--- @param angle number
+--- @return nil
+--- @overload fun(self: UIElement, tex: Texture, centerX: number, centerY: number, angle: number, r: number, g: number, b: number, a: number): nil
 function UIElement:DrawTextureAngle(tex, centerX, centerY, angle) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
+--- @param x number
+--- @param y number
 --- @param col Color
---- @return void
+--- @return nil
 function UIElement:DrawTextureCol(tex, x, y, col) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param r double
---- @param g double
---- @param b double
---- @param a double
---- @return void
+--- @param x number
+--- @param y number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function UIElement:DrawTextureColor(tex, x, y, r, g, b, a) end
 
 --- @public
---- @param tex Texture
---- @param x double
---- @param y double
---- @param width int
---- @param height int
---- @param col Color
---- @return void
-function UIElement:DrawTextureIgnoreOffset(tex, x, y, width, height, col) end
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @return nil
+function UIElement:DrawTextureIcon(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+
+--- @public
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @return nil
+function UIElement:DrawTextureIconMask(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param width double
---- @param height double
---- @param alpha double
---- @return void
+--- @param x number
+--- @param y number
+--- @param width integer
+--- @param height integer
+--- @param col Color
+--- @return nil
+function UIElement:DrawTextureIgnoreOffset(tex, x, y, width, height, col) end
+
+--- @public
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @return nil
+function UIElement:DrawTexturePercentage(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+
+--- @public
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @param arg9 number
+--- @return nil
+function UIElement:DrawTexturePercentageBottomUp(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) end
+
+--- @public
+--- @param tex Texture
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param alpha number
+--- @return nil
 function UIElement:DrawTextureScaled(tex, x, y, width, height, alpha) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param width double
---- @param height double
---- @param r double
---- @param g double
---- @param b double
---- @param alpha double
---- @return void
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
+--- @return nil
 function UIElement:DrawTextureScaledAspect(tex, x, y, width, height, r, g, b, alpha) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param width double
---- @param height double
---- @param r double
---- @param g double
---- @param b double
---- @param alpha double
---- @return void
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
+--- @return nil
 function UIElement:DrawTextureScaledAspect2(tex, x, y, width, height, r, g, b, alpha) end
 
 --- @public
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @return nil
+function UIElement:DrawTextureScaledAspect3(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+
+--- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param width double
---- @param height double
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
 --- @param col Color
---- @return void
---- @overload fun(self: UIElement, tex: Texture, x: double, y: double, width: double, height: double, r: double, g: double, b: double, a: double): void
+--- @return nil
+--- @overload fun(self: UIElement, tex: Texture, x: number, y: number, width: number, height: number, r: number, g: number, b: number, a: number): nil
 function UIElement:DrawTextureScaledCol(tex, x, y, width, height, col) end
 
 --- @public
 --- @param tex Texture
---- @param x Double
---- @param y Double
---- @param width Double
---- @param height Double
---- @param r Double
---- @param g Double
---- @param b Double
---- @param a Double
---- @return void
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function UIElement:DrawTextureScaledColor(tex, x, y, width, height, r, g, b, a) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param scale double
---- @param r double
---- @param g double
---- @param b double
---- @param alpha double
---- @return void
+--- @param x number
+--- @param y number
+--- @param scale number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param alpha number
+--- @return nil
 function UIElement:DrawTextureScaledUniform(tex, x, y, scale, r, g, b, alpha) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param w double
---- @param h double
---- @param r double
---- @param g double
---- @param b double
---- @param a double
---- @return void
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function UIElement:DrawTextureTiled(tex, x, y, w, h, r, g, b, a) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param w double
---- @param h double
---- @param r double
---- @param g double
---- @param b double
---- @param a double
---- @return void
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function UIElement:DrawTextureTiledX(tex, x, y, w, h, r, g, b, a) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param w double
---- @param h double
---- @param r double
---- @param g double
---- @param b double
---- @param a double
---- @return void
+--- @param x number
+--- @param y number
+--- @param w number
+--- @param h number
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return nil
 function UIElement:DrawTextureTiledY(tex, x, y, w, h, r, g, b, a) end
 
 --- @public
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @param arg6 number
+--- @param arg7 number
+--- @param arg8 number
+--- @return nil
+function UIElement:DrawTextureTiledYOffset(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) end
+
+--- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param width int
---- @param height int
+--- @param x number
+--- @param y number
+--- @param width integer
+--- @param height integer
 --- @param col Color
---- @return void
+--- @return nil
 function UIElement:DrawTexture_FlippedX(tex, x, y, width, height, col) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param width int
---- @param height int
+--- @param x number
+--- @param y number
+--- @param width integer
+--- @param height integer
 --- @param col Color
---- @return void
+--- @return nil
 function UIElement:DrawTexture_FlippedXIgnoreOffset(tex, x, y, width, height, col) end
 
 --- @public
 --- @param tex Texture
---- @param x double
---- @param y double
---- @param width double
---- @param height double
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
 --- @param col Color
---- @param xStart double
---- @param yStart double
---- @param xEnd double
---- @param yEnd double
---- @return void
+--- @param xStart number
+--- @param yStart number
+--- @param xEnd number
+--- @param yEnd number
+--- @return nil
 function UIElement:DrawUVSliceTexture(tex, x, y, width, height, col, xStart, yStart, xEnd, yEnd) end
 
 --- @public
+--- @return nil
+function UIElement:EndOutline() end
+
+--- @public
 --- @param el UIElement
---- @return void
+--- @return nil
 function UIElement:RemoveChild(el) end
 
 --- @public
 --- @param el UIElement
---- @return void
+--- @return nil
 function UIElement:RemoveControl(el) end
 
 --- @public
---- @return void
+--- @param arg0 Texture
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @param arg4 number
+--- @param arg5 number
+--- @return nil
+function UIElement:StartOutline(arg0, arg1, arg2, arg3, arg4, arg5) end
+
+--- @public
+--- @return nil
 function UIElement:backMost() end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:bringToTop() end
 
 --- @public
---- @param x double
---- @return Double
+--- @param x number
+--- @return number
 function UIElement:clampToParentX(x) end
 
 --- @public
---- @param y double
---- @return Double
+--- @param y number
+--- @return number
 function UIElement:clampToParentY(y) end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:clearMaxDrawHeight() end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:clearStencilRect() end
 
 --- @public
---- @return Double
+--- @return number
 function UIElement:getAbsoluteX() end
 
 --- @public
---- @return Double
+--- @return number
 function UIElement:getAbsoluteY() end
 
 --- @public
---- @return String
+--- @return string
 function UIElement:getClickedValue() end
 
 --- @public
@@ -339,93 +469,106 @@ function UIElement:getClickedValue() end
 function UIElement:getControls() end
 
 --- @public
---- @return Double the height
+--- @return number the height
+--- @overload fun(self: UIElement): number the height
 function UIElement:getHeight() end
 
 --- @public
---- @return Double
+--- @return number
+--- @overload fun(self: UIElement): number
 function UIElement:getMaxDrawHeight() end
 
 --- @public
---- @return UIElement the Parent
+--- @return UIElementInterface the Parent
+--- @overload fun(self: UIElement): UIElement the Parent
+--- @overload fun(self: UIElement): UIElementInterface the Parent
 function UIElement:getParent() end
 
 --- @public
---- @return int
+--- @return integer
 function UIElement:getPlayerContext() end
 
 --- @public
---- @return int
+--- @return integer
+--- @overload fun(self: UIElement): integer
 function UIElement:getRenderThisPlayerOnly() end
 
 --- @public
---- @return Boolean
+--- @return boolean
 function UIElement:getScrollChildren() end
 
 --- @public
---- @return Double
+--- @return number
 function UIElement:getScrollHeight() end
 
 --- @public
---- @return Boolean
+--- @return boolean
 function UIElement:getScrollWithParent() end
 
 --- @public
---- @return KahluaTable the table
+--- @return table the table
 function UIElement:getTable() end
 
 --- @public
---- @return String
+--- @return string
 function UIElement:getUIName() end
 
 --- @public
---- @return Double the width
+--- @return number the width
+--- @overload fun(self: UIElement): number the width
 function UIElement:getWidth() end
 
 --- @public
---- @return Double the x
+--- @return number the x
+--- @overload fun(self: UIElement): number the x
 function UIElement:getX() end
 
 --- @public
---- @return Double
+--- @return number
 function UIElement:getXScroll() end
 
 --- @public
 --- @param parent UIElement
---- @return Double
+--- @return number
 function UIElement:getXScrolled(parent) end
 
 --- @public
---- @return Double the y
+--- @return number the y
+--- @overload fun(self: UIElement): number the y
 function UIElement:getY() end
 
 --- @public
---- @return Double
+--- @return number
 function UIElement:getYScroll() end
 
 --- @public
 --- @param parent UIElement
---- @return Double
+--- @return number
 function UIElement:getYScrolled(parent) end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:ignoreHeightChange() end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:ignoreWidthChange() end
 
 --- @public
---- @return Boolean the anchorBottom
+--- @return boolean
+--- @overload fun(self: UIElement): boolean
+function UIElement:isAlwaysOnTop() end
+
+--- @public
+--- @return boolean the anchorBottom
 function UIElement:isAnchorBottom() end
 
 --- @public
---- @return Boolean the anchorLeft
+--- @return boolean the anchorLeft
 function UIElement:isAnchorLeft() end
 
 --- @public
---- @return Boolean the anchorRight
+--- @return boolean the anchorRight
 function UIElement:isAnchorRight() end
 
 --- @public
@@ -433,7 +576,13 @@ function UIElement:isAnchorRight() end
 function UIElement:isAnchorTop() end
 
 --- @public
---- @return Boolean the capture
+--- @return boolean
+--- @overload fun(self: UIElement): boolean
+function UIElement:isBackMost() end
+
+--- @public
+--- @return boolean the capture
+--- @overload fun(self: UIElement): boolean the capture
 function UIElement:isCapture() end
 
 --- @public
@@ -441,7 +590,8 @@ function UIElement:isCapture() end
 function UIElement:isConsumeMouseEvents() end
 
 --- @public
---- @return Boolean the defaultDraw
+--- @return boolean the defaultDraw
+--- @overload fun(self: UIElement): boolean the defaultDraw
 function UIElement:isDefaultDraw() end
 
 --- @public
@@ -449,320 +599,432 @@ function UIElement:isDefaultDraw() end
 function UIElement:isEnabled() end
 
 --- @public
---- @return Boolean the followGameWorld
+--- @return boolean the followGameWorld
+--- @overload fun(self: UIElement): boolean the followGameWorld
 function UIElement:isFollowGameWorld() end
 
 --- @public
 --- @return boolean
+--- @overload fun(self: UIElement): boolean
 function UIElement:isForceCursorVisible() end
 
 --- @public
---- @return Boolean the IgnoreLossControl
+--- @return boolean the IgnoreLossControl
+--- @overload fun(self: UIElement): boolean the IgnoreLossControl
 function UIElement:isIgnoreLossControl() end
 
 --- @public
---- @param key int
+--- @param key integer
 --- @return boolean
 function UIElement:isKeyConsumed(key) end
 
 --- @public
---- @return Boolean
+--- @return boolean
+--- @overload fun(self: UIElement): boolean
 function UIElement:isMouseOver() end
 
 --- @public
---- @param screenX double
---- @param screenY double
---- @return Boolean
+--- @param arg0 number
+--- @param arg1 number
+--- @return boolean
+--- @overload fun(self: UIElement, arg0: number, arg1: number): boolean
+function UIElement:isOverElement(arg0, arg1) end
+
+--- @public
+--- @param screenX number
+--- @param screenY number
+--- @return boolean
+--- @overload fun(self: UIElement, screenX: number, screenY: number): boolean
 function UIElement:isPointOver(screenX, screenY) end
 
 --- @public
---- @return Boolean the visible
+--- @return boolean
+function UIElement:isReallyVisible() end
+
+--- @public
+--- @return boolean the visible
+--- @overload fun(self: UIElement): boolean the visible
 function UIElement:isVisible() end
 
 --- @public
 --- @return boolean
+function UIElement:isWantExtraMouseEvents() end
+
+--- @public
+--- @return boolean
+--- @overload fun(self: UIElement): boolean
 function UIElement:isWantKeyEvents() end
 
 --- @public
---- @param key int
---- @return void
+--- @param arg0 integer
+--- @return boolean
+--- @overload fun(self: UIElement, arg0: integer): boolean
+function UIElement:onConsumeKeyPress(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+--- @overload fun(self: UIElement, arg0: integer): boolean
+function UIElement:onConsumeKeyRelease(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @return boolean
+--- @overload fun(self: UIElement, arg0: integer): boolean
+function UIElement:onConsumeKeyRepeat(arg0) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return boolean
+--- @overload fun(self: UIElement, arg0: integer, arg1: number, arg2: number): boolean
+function UIElement:onConsumeMouseButtonDown(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return boolean
+--- @overload fun(self: UIElement, arg0: integer, arg1: number, arg2: number): boolean
+function UIElement:onConsumeMouseButtonUp(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return boolean
+--- @overload fun(self: UIElement, arg0: number, arg1: number, arg2: number, arg3: number): boolean
+function UIElement:onConsumeMouseMove(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @return boolean
+--- @overload fun(self: UIElement, arg0: number, arg1: number, arg2: number): boolean
+function UIElement:onConsumeMouseWheel(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 number
+--- @param arg1 number
+--- @param arg2 number
+--- @param arg3 number
+--- @return nil
+--- @overload fun(self: UIElement, arg0: number, arg1: number, arg2: number, arg3: number): nil
+function UIElement:onExtendMouseMoveOutside(arg0, arg1, arg2, arg3) end
+
+--- @public
+--- @param key integer
+--- @return nil
 function UIElement:onKeyPress(key) end
 
 --- @public
---- @param key int
---- @return void
+--- @param key integer
+--- @return nil
 function UIElement:onKeyRelease(key) end
 
 --- @public
---- @param key int
---- @return void
+--- @param key integer
+--- @return nil
 function UIElement:onKeyRepeat(key) end
 
 --- @public
---- @param x double
---- @param y double
---- @return Boolean
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+function UIElement:onMouseButtonDown(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+--- @overload fun(self: UIElement, arg0: integer, arg1: number, arg2: number): nil
+function UIElement:onMouseButtonDownOutside(arg0, arg1, arg2) end
+
+--- @public
+--- @param arg0 integer
+--- @param arg1 number
+--- @param arg2 number
+--- @return nil
+--- @overload fun(self: UIElement, arg0: integer, arg1: number, arg2: number): nil
+function UIElement:onMouseButtonUpOutside(arg0, arg1, arg2) end
+
+--- @public
+--- @param x number
+--- @param y number
+--- @return boolean
 function UIElement:onMouseDown(x, y) end
 
 --- @public
---- @param dx double
---- @param dy double
---- @return Boolean
+--- @param dx number
+--- @param dy number
+--- @return boolean
 function UIElement:onMouseMove(dx, dy) end
 
 --- @public
---- @param dx double
---- @param dy double
---- @return void
+--- @param dx number
+--- @param dy number
+--- @return nil
 function UIElement:onMouseMoveOutside(dx, dy) end
 
 --- @public
---- @param x double
---- @param y double
---- @return Boolean
+--- @param x number
+--- @param y number
+--- @return boolean
 function UIElement:onMouseUp(x, y) end
 
 --- @public
---- @param x double
---- @param y double
---- @return void
+--- @param x number
+--- @param y number
+--- @return nil
 function UIElement:onMouseUpOutside(x, y) end
 
 --- @public
---- @param del double
---- @return Boolean
+--- @param del number
+--- @return boolean
 function UIElement:onMouseWheel(del) end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:onResize() end
 
 --- @public
---- @param x double
---- @param y double
---- @return Boolean
+--- @param x number
+--- @param y number
+--- @return boolean
 function UIElement:onRightMouseDown(x, y) end
 
 --- @public
---- @param x double
---- @param y double
---- @return Boolean
+--- @param x number
+--- @param y number
+--- @return boolean
 function UIElement:onRightMouseUp(x, y) end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:onresize() end
 
 --- @public
---- @return void
+--- @return nil
+--- @overload fun(self: UIElement): nil
 function UIElement:render() end
 
 --- @public
---- @param x double
---- @param y double
---- @param width double
---- @param height double
---- @return void
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @return nil
 function UIElement:repaintStencilRect(x, y, width, height) end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:resumeStencil() end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function UIElement:setAlwaysOnTop(b) end
 
 --- @public
 --- @param anchorBottom boolean the anchorBottom to set
---- @return void
+--- @return nil
 function UIElement:setAnchorBottom(anchorBottom) end
 
 --- @public
 --- @param anchorLeft boolean the anchorLeft to set
---- @return void
+--- @return nil
 function UIElement:setAnchorLeft(anchorLeft) end
 
 --- @public
 --- @param anchorRight boolean the anchorRight to set
---- @return void
+--- @return nil
 function UIElement:setAnchorRight(anchorRight) end
 
 --- @public
 --- @param anchorTop boolean the anchorTop to set
---- @return void
+--- @return nil
 function UIElement:setAnchorTop(anchorTop) end
 
 --- @public
 --- @param capture boolean the capture to set
---- @return void
+--- @return nil
 function UIElement:setCapture(capture) end
 
 --- @public
---- @param clickedValue String the clickedValue to set
---- @return void
+--- @param clickedValue string the clickedValue to set
+--- @return nil
 function UIElement:setClickedValue(clickedValue) end
 
 --- @public
 --- @param bConsume boolean
---- @return void
+--- @return nil
 function UIElement:setConsumeMouseEvents(bConsume) end
 
 --- @public
 --- @param Controls Vector the Controls to set
---- @return void
+--- @return nil
 function UIElement:setControls(Controls) end
 
 --- @public
 --- @param defaultDraw boolean the defaultDraw to set
---- @return void
+--- @return nil
 function UIElement:setDefaultDraw(defaultDraw) end
 
 --- @public
 --- @param en boolean
---- @return void
+--- @return nil
 function UIElement:setEnabled(en) end
 
 --- @public
 --- @param followGameWorld boolean the followGameWorld to set
---- @return void
+--- @return nil
 function UIElement:setFollowGameWorld(followGameWorld) end
 
 --- @public
 --- @param force boolean
---- @return void
+--- @return nil
 function UIElement:setForceCursorVisible(force) end
 
 --- @public
---- @param height double the height to set
---- @return void
+--- @param height number the height to set
+--- @return nil
 function UIElement:setHeight(height) end
 
 --- @public
---- @param height double
---- @return void
+--- @param height number
+--- @return nil
 function UIElement:setHeightOnly(height) end
 
 --- @public
---- @param height double
---- @return void
+--- @param height number
+--- @return nil
 function UIElement:setHeightSilent(height) end
 
 --- @public
 --- @param IgnoreLossControl boolean the IgnoreLossControl to set
---- @return void
+--- @return nil
 function UIElement:setIgnoreLossControl(IgnoreLossControl) end
 
 --- @public
---- @param height double
---- @return void
+--- @param height number
+--- @return nil
 function UIElement:setMaxDrawHeight(height) end
 
 --- @public
 --- @param Parent UIElement the Parent to set
---- @return void
+--- @return nil
 function UIElement:setParent(Parent) end
 
 --- @public
---- @param nPlayer int
---- @return void
+--- @param nPlayer integer
+--- @return nil
 function UIElement:setPlayerContext(nPlayer) end
 
 --- @public
 --- @param b boolean
---- @return void
+--- @return nil
 function UIElement:setRenderClippedChildren(b) end
 
 --- @public
---- @param playerIndex int
---- @return void
+--- @param playerIndex integer
+--- @return nil
 function UIElement:setRenderThisPlayerOnly(playerIndex) end
 
 --- @public
 --- @param bScroll boolean
---- @return void
+--- @return nil
 function UIElement:setScrollChildren(bScroll) end
 
 --- @public
---- @param h double
---- @return void
+--- @param h number
+--- @return nil
 function UIElement:setScrollHeight(h) end
 
 --- @public
 --- @param bScroll boolean
---- @return void
+--- @return nil
 function UIElement:setScrollWithParent(bScroll) end
 
 --- @public
---- @param x double
---- @param y double
---- @param width double
---- @param height double
---- @return void
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @return nil
 function UIElement:setStencilRect(x, y, width, height) end
 
 --- @public
---- @param table KahluaTable the table to set
---- @return void
+--- @param table table the table to set
+--- @return nil
 function UIElement:setTable(table) end
 
 --- @public
---- @param name String
---- @return void
+--- @param name string
+--- @return nil
 function UIElement:setUIName(name) end
 
 --- @public
 --- @param visible boolean the visible to set
---- @return void
+--- @return nil
 function UIElement:setVisible(visible) end
 
 --- @public
+--- @param arg0 boolean
+--- @return nil
+function UIElement:setWantExtraMouseEvents(arg0) end
+
+--- @public
 --- @param want boolean
---- @return void
+--- @return nil
 function UIElement:setWantKeyEvents(want) end
 
 --- @public
---- @param width double the width to set
---- @return void
+--- @param width number the width to set
+--- @return nil
 function UIElement:setWidth(width) end
 
 --- @public
---- @param width double
---- @return void
+--- @param width number
+--- @return nil
 function UIElement:setWidthOnly(width) end
 
 --- @public
---- @param width double
---- @return void
+--- @param width number
+--- @return nil
 function UIElement:setWidthSilent(width) end
 
 --- @public
---- @param x double the x to set
---- @return void
+--- @param x number the x to set
+--- @return nil
 function UIElement:setX(x) end
 
 --- @public
---- @param x double
---- @return void
+--- @param x number
+--- @return nil
 function UIElement:setXScroll(x) end
 
 --- @public
---- @param y double the y to set
---- @return void
+--- @param y number the y to set
+--- @return nil
 function UIElement:setY(y) end
 
 --- @public
---- @param y double
---- @return void
+--- @param y number
+--- @return nil
 function UIElement:setYScroll(y) end
 
 --- @public
---- @return void
+--- @return nil
 function UIElement:suspendStencil() end
 
 --- @public
---- @return void
+--- @return nil
+--- @overload fun(self: UIElement): nil
 function UIElement:update() end
 
 
@@ -772,5 +1034,5 @@ function UIElement:update() end
 
 --- @public
 --- @return UIElement
---- @overload fun(table: KahluaTable): UIElement
+--- @overload fun(table: table): UIElement
 function UIElement.new() end

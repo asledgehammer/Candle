@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBSpiffo: RandomizedBuildingBase Add some food on table
 --- @field public class any
@@ -19,7 +19,7 @@ function RBSpiffo:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBSpiffo:randomizeBuilding(def) end
 
 --- @public

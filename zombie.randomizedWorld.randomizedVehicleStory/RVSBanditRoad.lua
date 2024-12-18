@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RVSBanditRoad: RandomizedVehicleStoryBase
 --- @field public class any
@@ -18,13 +18,13 @@ function RVSBanditRoad:initVehicleStorySpawner(zone, chunk, debug) end
 --- @public
 --- @param zone Zone
 --- @param chunk IsoChunk
---- @return void
+--- @return nil
 function RVSBanditRoad:randomizeVehicleStory(zone, chunk) end
 
 --- @public
 --- @param spawner VehicleStorySpawner
 --- @param element Element
---- @return void
+--- @return nil
 function RVSBanditRoad:spawnElement(spawner, element) end
 
 

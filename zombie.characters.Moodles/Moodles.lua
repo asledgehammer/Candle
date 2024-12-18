@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class Moodles
 --- @field public class any
@@ -9,7 +9,7 @@ Moodles = {};
 ------------------------------------
 
 --- @public
---- @return void
+--- @return nil
 function Moodles:Randomise() end
 
 --- @public
@@ -17,57 +17,57 @@ function Moodles:Randomise() end
 function Moodles:UI_RefreshNeeded() end
 
 --- @public
---- @return void
+--- @return nil
 function Moodles:Update() end
 
 --- @public
---- @param MoodleIndex int
---- @return int
+--- @param MoodleIndex integer
+--- @return integer
 function Moodles:getGoodBadNeutral(MoodleIndex) end
 
 --- @public
---- @param moodleIndex int
+--- @param moodleIndex integer
 --- @return Color
 function Moodles:getMoodleChevronColor(moodleIndex) end
 
 --- @public
---- @param moodleIndex int
---- @return int
+--- @param moodleIndex integer
+--- @return integer
 function Moodles:getMoodleChevronCount(moodleIndex) end
 
 --- @public
---- @param moodleIndex int
+--- @param moodleIndex integer
 --- @return boolean
 function Moodles:getMoodleChevronIsUp(moodleIndex) end
 
 --- @public
---- @param MoodleIndex int
---- @return String
+--- @param MoodleIndex integer
+--- @return string
 function Moodles:getMoodleDescriptionString(MoodleIndex) end
 
 --- @public
---- @param MoodleIndex int
---- @return String
+--- @param MoodleIndex integer
+--- @return string
 function Moodles:getMoodleDisplayString(MoodleIndex) end
 
 --- @public
---- @param MoodleIndex int
---- @return int
---- @overload fun(self: Moodles, MType: MoodleType): int
+--- @param MoodleIndex integer
+--- @return integer
+--- @overload fun(self: Moodles, MType: MoodleType): integer
 function Moodles:getMoodleLevel(MoodleIndex) end
 
 --- @public
---- @param MoodleIndex int
+--- @param MoodleIndex integer
 --- @return MoodleType
 function Moodles:getMoodleType(MoodleIndex) end
 
 --- @public
---- @return int
+--- @return integer
 function Moodles:getNumMoodles() end
 
 --- @public
 --- @param refresh boolean
---- @return void
+--- @return nil
 function Moodles:setMoodlesStateChanged(refresh) end
 
 

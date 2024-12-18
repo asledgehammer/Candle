@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class DoubleSandboxOption: DoubleConfigOption
 --- @field public class any
@@ -15,34 +15,34 @@ DoubleSandboxOption = {};
 function DoubleSandboxOption:asConfigOption() end
 
 --- @public
---- @param table KahluaTable
---- @return void
---- @overload fun(self: DoubleSandboxOption, table: KahluaTable): void
+--- @param table table
+--- @return nil
+--- @overload fun(self: DoubleSandboxOption, table: table): nil
 function DoubleSandboxOption:fromTable(table) end
 
 --- @public
---- @return String
---- @overload fun(self: DoubleSandboxOption): String
+--- @return string
+--- @overload fun(self: DoubleSandboxOption): string
 function DoubleSandboxOption:getPageName() end
 
 --- @public
---- @return String
---- @overload fun(self: DoubleSandboxOption): String
+--- @return string
+--- @overload fun(self: DoubleSandboxOption): string
 function DoubleSandboxOption:getShortName() end
 
 --- @public
---- @return String
---- @overload fun(self: DoubleSandboxOption): String
+--- @return string
+--- @overload fun(self: DoubleSandboxOption): string
 function DoubleSandboxOption:getTableName() end
 
 --- @public
---- @return String
---- @overload fun(self: DoubleSandboxOption): String
+--- @return string
+--- @overload fun(self: DoubleSandboxOption): string
 function DoubleSandboxOption:getTooltip() end
 
 --- @public
---- @return String
---- @overload fun(self: DoubleSandboxOption): String
+--- @return string
+--- @overload fun(self: DoubleSandboxOption): string
 function DoubleSandboxOption:getTranslatedName() end
 
 --- @public
@@ -51,26 +51,26 @@ function DoubleSandboxOption:getTranslatedName() end
 function DoubleSandboxOption:isCustom() end
 
 --- @public
---- @return void
---- @overload fun(self: DoubleSandboxOption): void
+--- @return nil
+--- @overload fun(self: DoubleSandboxOption): nil
 function DoubleSandboxOption:setCustom() end
 
 --- @public
---- @param pageName String
+--- @param pageName string
 --- @return SandboxOption
---- @overload fun(self: DoubleSandboxOption, pageName: String): SandboxOption
+--- @overload fun(self: DoubleSandboxOption, pageName: string): SandboxOption
 function DoubleSandboxOption:setPageName(pageName) end
 
 --- @public
---- @param translation String
+--- @param translation string
 --- @return SandboxOption
---- @overload fun(self: DoubleSandboxOption, translation: String): SandboxOption
+--- @overload fun(self: DoubleSandboxOption, translation: string): SandboxOption
 function DoubleSandboxOption:setTranslation(translation) end
 
 --- @public
---- @param table KahluaTable
---- @return void
---- @overload fun(self: DoubleSandboxOption, table: KahluaTable): void
+--- @param table table
+--- @return nil
+--- @overload fun(self: DoubleSandboxOption, table: table): nil
 function DoubleSandboxOption:toTable(table) end
 
 
@@ -80,9 +80,9 @@ function DoubleSandboxOption:toTable(table) end
 
 --- @public
 --- @param owner SandboxOptions
---- @param name String
---- @param min double
---- @param max double
---- @param defaultValue double
+--- @param name string
+--- @param min number
+--- @param max number
+--- @param defaultValue number
 --- @return DoubleSandboxOption
 function DoubleSandboxOption.new(owner, name, min, max, defaultValue) end

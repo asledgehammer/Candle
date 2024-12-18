@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class UserlogType: Enum
 --- @field public class any
@@ -18,19 +18,19 @@ UserlogType = {};
 
 --- @public
 --- @static
---- @param str String
+--- @param str string
 --- @return UserlogType
 function UserlogType.FromString(str) end
 
 --- @public
 --- @static
---- @param value int
+--- @param value integer
 --- @return UserlogType
 function UserlogType.fromIndex(value) end
 
 --- @public
 --- @static
---- @param arg0 String
+--- @param arg0 string
 --- @return UserlogType
 function UserlogType.valueOf(arg0) end
 
@@ -49,7 +49,7 @@ function UserlogType.values() end
 ------------------------------------
 
 --- @public
---- @return int
+--- @return integer
 function UserlogType:index() end
 
 

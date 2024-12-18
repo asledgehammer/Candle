@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RZSFishingTrip: RandomizedZoneStoryBase
 --- @field public class any
@@ -25,7 +25,7 @@ function RZSFishingTrip.getFishingTools() end
 
 --- @public
 --- @param zone Zone
---- @return void
+--- @return nil
 function RZSFishingTrip:randomizeZoneStory(zone) end
 
 

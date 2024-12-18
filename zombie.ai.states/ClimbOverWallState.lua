@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class ClimbOverWallState: State
 --- @field public class any
@@ -21,22 +21,22 @@ function ClimbOverWallState.instance() end
 --- @public
 --- @param owner IsoGameCharacter
 --- @param event AnimEvent
---- @return void
+--- @return nil
 function ClimbOverWallState:animEvent(owner, event) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbOverWallState:enter(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbOverWallState:execute(owner) end
 
 --- @public
 --- @param owner IsoGameCharacter
---- @return void
+--- @return nil
 function ClimbOverWallState:exit(owner) end
 
 --- @public
@@ -44,19 +44,19 @@ function ClimbOverWallState:exit(owner) end
 ---  Description copied from class: State
 ---
 --- @param owner IsoGameCharacter
---- @param fromX int
---- @param fromY int
---- @param fromZ int
---- @param toX int
---- @param toY int
---- @param toZ int
+--- @param fromX integer
+--- @param fromY integer
+--- @param fromZ integer
+--- @param toX integer
+--- @param toY integer
+--- @param toZ integer
 --- @return boolean
 function ClimbOverWallState:isIgnoreCollide(owner, fromX, fromY, fromZ, toX, toY, toZ) end
 
 --- @public
 --- @param owner IsoGameCharacter
 --- @param dir IsoDirections
---- @return void
+--- @return nil
 function ClimbOverWallState:setParams(owner, dir) end
 
 

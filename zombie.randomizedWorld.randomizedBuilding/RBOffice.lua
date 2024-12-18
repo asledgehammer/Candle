@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RBOffice: RandomizedBuildingBase Random clutter in office
 --- @field public class any
@@ -19,7 +19,7 @@ function RBOffice:isValid(def, force) end
 
 --- @public
 --- @param def BuildingDef
---- @return void
+--- @return nil
 function RBOffice:randomizeBuilding(def) end
 
 --- @public

@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class EventSound Turbo
 --- @field public class any
@@ -17,7 +17,7 @@ function EventSound:getColor() end
 function EventSound:getDataPoints() end
 
 --- @public
---- @return String
+--- @return string
 function EventSound:getName() end
 
 --- @public
@@ -26,22 +26,22 @@ function EventSound:getStorySounds() end
 
 --- @public
 --- @param color Color
---- @return void
+--- @return nil
 function EventSound:setColor(color) end
 
 --- @public
 --- @param dataPoints ArrayList
---- @return void
+--- @return nil
 function EventSound:setDataPoints(dataPoints) end
 
 --- @public
---- @param name String
---- @return void
+--- @param name string
+--- @return nil
 function EventSound:setName(name) end
 
 --- @public
 --- @param storySounds ArrayList
---- @return void
+--- @return nil
 function EventSound:setStorySounds(storySounds) end
 
 
@@ -51,5 +51,5 @@ function EventSound:setStorySounds(storySounds) end
 
 --- @public
 --- @return EventSound
---- @overload fun(name: String): EventSound
+--- @overload fun(name: string): EventSound
 function EventSound.new() end

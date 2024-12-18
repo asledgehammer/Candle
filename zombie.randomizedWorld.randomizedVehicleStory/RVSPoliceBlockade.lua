@@ -1,4 +1,4 @@
---- @meta
+--- @meta _
 
 --- @class RVSPoliceBlockade: RandomizedVehicleStoryBase Police barricading a road, 2 police cars, some zombies police
 --- @field public class any
@@ -18,13 +18,13 @@ function RVSPoliceBlockade:initVehicleStorySpawner(zone, chunk, debug) end
 --- @public
 --- @param zone Zone
 --- @param chunk IsoChunk
---- @return void
+--- @return nil
 function RVSPoliceBlockade:randomizeVehicleStory(zone, chunk) end
 
 --- @public
 --- @param spawner VehicleStorySpawner
 --- @param element Element
---- @return void
+--- @return nil
 function RVSPoliceBlockade:spawnElement(spawner, element) end
 
 
